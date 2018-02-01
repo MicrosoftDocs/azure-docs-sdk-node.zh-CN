@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure PostgreSQL 模块"
 description: "用于 Node.js 的 Azure PostgreSQL 模块参考"
-keywords: "Azure, Node, SDK, API, nodejs, javascript, 数据库, PostgreSQL"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: postgresql
-ms.openlocfilehash: a5130c96b3ae922358b6898c15510282fbaa97f0
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: d8a2c7fe90746def7e50a7af3a0f470213eed197
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-postgresql-modules-for-nodejs"></a>用于 Node.js 的 Azure PostgreSQL 模块
-
-## <a name="overview"></a>概述
 
 建议用于访问 Azure Database for PostgreSQL 的客户端库是开源的[用于 Azure Database for PostgreSQL 的 Node.js 连接库](https://www.npmjs.com/package/pg)。 此库是适用于 Node.js 的非阻塞性 PostgreSQL 客户端，支持纯粹的 JavaScript 和可选的本机 libpq 绑定。
 

@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure 资源管理器模块"
 description: "用于 Node.js 的 Azure 资源管理器模块参考"
-keywords: "Azure,SDK,API,资源, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Resources
-ms.openlocfilehash: 9ccb49ff6de18afbd8409311364d42937c3a8651
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 219dae56dd42719d3e4d3584697d0157cb8d7458
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-resource-modules-for-nodejs"></a>用于 Node.js 的 Azure 资源模块
-
-## <a name="overview"></a>概述
 
 使用 Azure 资源管理器可以部署和管理 Azure 解决方案的基础结构。 可在资源组中组织相关的资源，并使用 JSON 模板部署资源。
 

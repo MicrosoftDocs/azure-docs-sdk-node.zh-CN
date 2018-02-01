@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure 中继模块"
 description: "用于 Node.js 的 Azure 中继模块参考"
-keywords: "Azure,SDK,API,中继, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Relay
-ms.openlocfilehash: 7e958433e0d3cc6b464bb5980d4f161323a18ab2
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 632e17f9169353ad9348b3b098b4a3e8d873238a
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-relay-modules-for-nodejs"></a>用于 Node.js 的 Azure 中继模块
-
-## <a name="overview"></a>概述
 
 Azure 中继服务通过允许安全地向公有云公开位于企业网络内的服务来创建混合应用程序，无需打开防火墙连接，也无需对企业网络基础结构进行彻底更改。 中继支持各种不同的传输协议和 Web 服务标准。
 

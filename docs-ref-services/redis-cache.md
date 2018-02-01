@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure Redis 缓存模块"
 description: "用于 Node.js 的 Azure Redis 缓存模块参考"
-keywords: "Azure,SDK,API,Redis 缓存, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Redis Cache
-ms.openlocfilehash: 8a10e522e39461697b740750b63fc82a6cc320ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 5d3a410fefcf6840181701763346fbfe08fe023b
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-redis-cache-modules-for-nodejs"></a>用于 Node.js 的 Azure Redis 缓存模块
-
-## <a name="overview"></a>概述
 
 Azure Redis 缓存基于流行的开源 Redis 项目。 使用它可以访问 Microsoft 管理的、可从 Azure 应用访问的安全专用 Redis 实例。
 

@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure 其他模块"
 description: "用于 Node.js 的 Azure 其他模块参考"
-keywords: "Azure,SDK,API,其他, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Other
-ms.openlocfilehash: deab8c06c7dbd88fee62de2366b7e6d85324f8cf
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 29a89faa57d295a3e157732efd612008b604fcdc
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-other-modules-for-nodejs"></a>用于 Node.js 的 Azure 其他模块
-
-## <a name="overview"></a>概述
 
 此模块在单个位置包含所有不同的 Azure Node.js 模块。
 
@@ -27,7 +24,7 @@ ms.lasthandoff: 08/17/2017
 
 使用 npm 安装用于 Node.js 的 Azure 模块
 
-### <a name="client"></a>客户端
+### <a name="client"></a>Client
 
 ```bash
 npm install azure

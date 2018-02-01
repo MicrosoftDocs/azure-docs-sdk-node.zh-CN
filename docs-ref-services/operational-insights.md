@@ -1,29 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure 操作见解模块"
 description: "用于 Node.js 的 Azure 操作见解模块参考"
-keywords: "Azure,SDK,API,操作见解, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Operational Insights
-ms.openlocfilehash: e7f7ee30509125a131346039c1245eb9fa6cb6b1
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 7baa7f2f976cec9d9592231f193eede87a122532
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-operational-insights-modules-for-nodejs"></a>用于 Node.js 的 Azure 操作见解模块
-
-## <a name="overview"></a>概述
-
-## <a name="management-package"></a>管理包
-
-### <a name="install-the-npm-module"></a>安装 npm 模块
 
 使用 npm 安装用于 Node.js 的 Azure 操作见解模块
 

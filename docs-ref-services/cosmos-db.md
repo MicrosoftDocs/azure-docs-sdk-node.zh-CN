@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure Cosmos DB 模块"
 description: "用于 Node.js 的 Azure Cosmos DB 模块参考"
-keywords: Azure,SDK,API,Cosmos DB, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cosmos DB
-ms.openlocfilehash: 1f545f89b5304b611dbe1ed9cb86052c112f13c1
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 575c276ec755dabe8e7b9ed76ba98ef8073c4f1b
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-cosmos-db-modules-for-nodejs"></a>用于 Node.js 的 Azure Cosmos DB 模块
-
-## <a name="overview"></a>概述
 
 Azure Cosmos DB 由 Microsoft 提供，是全球分布式多模型数据库。 使用 Azure Cosmos DB 可跨任意数量的 Azure 地理区域弹性且独立地缩放吞吐量和存储。 它通过综合服务级别协议 (SLA) 提供吞吐量、延迟、可用性和一致性保证，这是其他数据库服务无法提供的。
 

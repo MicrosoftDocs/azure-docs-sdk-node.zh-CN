@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure 容器注册表模块"
 description: "用于 Node.js 的 Azure 容器注册表模块参考"
-keywords: "Azure,SDK,API,容器注册表, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Container Registry
-ms.openlocfilehash: 6ded68c19971a8fe580f440862d0fe05a1def6a2
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: dda0e9bbfaa8a3e060f3b8f820d5bab315662629
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-container-registry-modules-for-nodejs"></a>用于 Node.js 的 Azure 容器注册表模块
-
-## <a name="overview"></a>概述
 
 Azure 容器注册表是基于开源 Docker 注册表 2.0 的托管 Docker 注册表服务。 可以创建和维护 Azure 容器注册表来存储与管理专用的 Docker 容器映像。 可将 Azure 中的容器注册表与现有的容器开发和部署管道配合使用，现成地吸收 Docker 社区的专业知识。
 

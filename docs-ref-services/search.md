@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure 搜索模块"
 description: "用于 Node.js 的 Azure 搜索模块参考"
-keywords: "Azure,SDK,API,搜索, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Search
-ms.openlocfilehash: dc9d4c5128c99a9518bd059e191bb11e4de4b78f
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: bf99013b4479548d07531358bc5103b4e6ac7977
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-search-modules-for-nodejs"></a>用于 Node.js 的 Azure 搜索模块
-
-## <a name="overview"></a>概述
 
 Azure 搜索是一种搜索即服务云解决方案，它将服务器和基础结构的管理委托给 Microsoft，提供随时可用的服务。可在填充数据后使用此服务将搜索添加到应用程序。
 

@@ -1,25 +1,23 @@
 ---
 title: "用于 Node.js 的 Azure 事件中心模块"
 description: "用于 Node.js 的 Azure 事件中心模块参考"
-keywords: "Azure,SDK,API,事件中心, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Event Hub
-ms.openlocfilehash: 5ac6fc3f86419602756c354393078b399a6cba23
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 043c34e5b352a786ebead986d05b18c8216d0c93
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-event-hub-modules-for-nodejs"></a>用于 Node.js 的 Azure 事件中心模块
 
-## <a name="overview"></a>概述
 Azure 事件中心是高度可缩放的数据流式处理平台和事件引入服务，能够每秒接收和处理数百万事件。 事件中心可以处理和存储分布式软件和设备生成的事件、数据或遥测。 可以使用任何实时分析提供程序或批处理/存储适配器转换和存储发送到数据中心的数据。 由于能够以较低的延迟和极高的规模提供发布订阅功能，事件中心可以充当大数据的“入口”。
 
 ## <a name="management-package"></a>管理包

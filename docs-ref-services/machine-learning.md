@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure 机器学习模块"
 description: "用于 Node.js 的 Azure 机器学习模块参考"
-keywords: "Azure,SDK,API,机器学习, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Machine Learning
-ms.openlocfilehash: 465b569d0eef53208211be2c2ff36d28bb28d107
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 82f731971505250f1d637ae32b4c7a83ff24fccf
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-machine-learning-modules-for-nodejs"></a>用于 Node.js 的 Azure 机器学习模块
-
-## <a name="overview"></a>概述
 
 机器学习是一项数据科研技术，可帮助计算机从现有的数据中学习，预测将来的行为、结果和趋势。 机器学习的这种预测可让应用和设备变得更聪明。 在网上购物时，机器学习可根据购买的产品帮助推荐其他产品。 刷信用卡时，机器学习可将这笔交易与交易数据库进行比较，帮助检测诈骗。 当吸尘器机器人打扫房间时，机器学习可帮助它确定作业是否已完成。
 

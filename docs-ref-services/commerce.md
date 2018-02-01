@@ -1,27 +1,26 @@
 ---
 title: "用于 Node.js 的 Azure 商务模块"
 description: "用于 Node.js 的 Azure 商务模块参考"
-keywords: "Azure,SDK,API,商务, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Commerce
-ms.openlocfilehash: b337e070ee7da0b852d8cad1d4e163d7f8130857
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 0597765543cd838049d3946b90ae128875edd4e5
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-commerce-modules-for-nodejs"></a>用于 Node.js 的 Azure 商务模块
 
 ## <a name="overview"></a>概述
 
-使用 Azure 商务 API 将用量和资源数据提取到偏好的数据分析工具中。 Azure 资源用量和 RateCard API 可以帮助你准确预测及管理成本。 这些 API 作为资源提供程序实现，属于 Azure Resource Manager 公开的 API 系列。
+使用 Azure 商务 API 将用量和资源数据提取到偏好的数据分析工具中。 Azure 资源用量和 RateCard API 可以帮助你准确预测及管理成本。 这些 API 作为资源提供程序实现，属于 Azure 资源管理器公开的 API 系列。
 
 ## <a name="management-package"></a>管理包
 

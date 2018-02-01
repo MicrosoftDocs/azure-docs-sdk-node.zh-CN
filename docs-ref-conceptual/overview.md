@@ -1,20 +1,19 @@
 ---
 title: "用于 Node.js 的 Azure 模块"
 description: "用于 Node.js 的 Azure 管理和服务模块概述"
-keywords: "Azure, Node.js, SDK, API, 管理, 客户端, 服务"
-author: TomArcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 06/17/2017
 ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 56dc4f4f36d4e0e9a2d40b38ff8f0b1f9690818c
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 6041303dcb8734cc17052756d291efa6b4c2269e
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-modules-for-nodejs"></a>用于 Node.js 的 Azure 模块
 
@@ -106,4 +105,4 @@ blobService.listBlobsSegmented('testcontainer', null, function(error, result, re
 - [Web 应用](node-samples-services-web-and-mobile.md)
 - [SQL 数据库](node-samples-services-database.md)
    
-我们针对服务和管理模块中的所有模块提供了[参考](https://docs.microsoft.com/nodejs/api)文档。 [发行说明](https://github.com/Azure/azure-sdk-for-node/releases)中介绍了新增功能、重大更改，并提供了有关如何从以前的版本迁移的说明。
+我们针对服务和管理模块中的所有模块提供了[参考](https://docs.microsoft.com/javascript/api)文档。 [发行说明](https://github.com/Azure/azure-sdk-for-node/releases)中介绍了新增功能、重大更改，并提供了有关如何从以前的版本迁移的说明。

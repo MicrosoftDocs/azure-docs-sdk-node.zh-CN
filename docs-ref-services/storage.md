@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure 存储模块"
 description: "用于 Node.js 的 Azure 存储模块参考"
-keywords: "Azure, Node, SDK, API, 存储, nodejs, javascript"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: storage
-ms.openlocfilehash: 61d3f3bb49d10e63a353c474067a155223bb6c76
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: b94c6fbb50e656e0dcc542236afe791c7ddc9be4
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-storage-modules-for-nodejs"></a>用于 Node.js 的 Azure 存储模块
-
-## <a name="overview"></a>概述
 
 使用 Azure 存储客户端模块可以：
 

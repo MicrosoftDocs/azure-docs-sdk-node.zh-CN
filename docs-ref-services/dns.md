@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure DNS 模块"
 description: "用于 Node.js 的 Azure DNS 模块参考"
-keywords: Azure,SDK,API,DNS, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: DNS
-ms.openlocfilehash: 679c2d494b99244961f2fee61b0813c81eb8a8de
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: c1ffacb3dd6b836303c5fcb2c18d7d68d2390ec7
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-dns-modules-for-nodejs"></a>用于 Node.js 的 Azure DNS 模块
-
-## <a name="overview"></a>概述
 
 使用 Azure DNS 在 Azure 中托管域名系统 (DNS) 域。 可使用与其他 Azure 服务相同的凭据、计费方式和支持合同来管理 DNS 记录。 可将基于 Azure 的服务与相应的 DNS 更新进行无缝集成，简化端到端部署过程。
 

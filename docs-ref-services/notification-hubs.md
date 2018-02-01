@@ -1,25 +1,22 @@
 ---
 title: "用于 Node.js 的 Azure 通知中心模块"
 description: "用于 Node.js 的 Azure 通知中心模块参考"
-keywords: "Azure,SDK,API,通知中心, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Notification Hubs
-ms.openlocfilehash: 0141760cb93c77faed4a04893fe1376e4e75c361
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: c353bdc0fff7784881b5cd4f1d3b4dda5268f1ea
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-notification-hubs-modules-for-nodejs"></a>用于 Node.js 的 Azure 通知中心模块
-
-## <a name="overview"></a>概述
 
 Azure 通知中心提供易用的多平台扩展式推送引擎。 使用单个跨平台 API 调用，即可轻松地从任意云或本地后端向任意移动平台发送有针对性的个性化推送通知。
 

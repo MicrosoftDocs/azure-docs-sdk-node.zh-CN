@@ -1,25 +1,23 @@
 ---
 title: "用于 Node.js 的 Azure 逻辑应用模块"
 description: "用于 Node.js 的 Azure 逻辑应用模块参考"
-keywords: "Azure,SDK,API,逻辑应用, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Logic Apps
-ms.openlocfilehash: 70380dbf1fd199ba4909975b05ade72efaa4e0ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 37e485bea316ebd7fb4a064e1919da5501d96eac
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-logic-apps-modules-for-nodejs"></a>用于 Node.js 的 Azure 逻辑应用模块
 
-## <a name="overview"></a>概述
 逻辑应用提供了用于在云中简化并实现可缩放的集成和工作流的方式。 它提供了可视化设计器，用于为流程建模并将流程作为一系列步骤（称为工作流）自动执行。 它在云中和本地提供多个连接器，可跨服务和协议快速集成。 逻辑应用以触发器开头（例如，“当将帐户添加到 Dynamics CRM 时”），在触发之后许多组合操作、转换和条件逻辑才能开始。
 
 使用逻辑应用的优点包括：
@@ -30,7 +28,7 @@ ms.lasthandoff: 08/17/2017
 - 可连接并同步跨本地和云的不同系统
 - 可利用一流集成支持从 BizTalk server、API 管理、Azure Functions 和 Azure 服务总线构建
 
-逻辑应用是完全托管的 iPaaS（集成平台即服务），使开发人员无需担心如何实现托管、可伸缩性、可用性和管理。 逻辑应用会自动扩大以满足需求。
+逻辑应用是完全托管的 iPaaS（集成平台即服务），使开发人员无需担心如何实现托管、可伸缩性、可用性和管理。 逻辑应用会自动纵向扩展以满足需求。
 
 ## <a name="management-package"></a>管理包
 

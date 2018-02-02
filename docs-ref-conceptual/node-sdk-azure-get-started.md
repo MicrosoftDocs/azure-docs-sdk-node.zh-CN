@@ -1,36 +1,35 @@
 ---
 title: "用于 Node.js 的 Azure 模块入门"
-description: "结合自己的 Azure 订阅开始了解用于 Node.js 的 Azure 模块的基本用法。"
-keywords: "Azure, Node, SDK, API, 入门, node.js"
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "使用适用于 Node.js 的 Azure 模块开始进行身份验证和资源管理"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: ec83d58585014cca05885af4de55473637c410e8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 4c001fce93ef4b83f9e790b4b9374690c3ac04ef
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="get-started-with-the-azure-modules-for-nodejs"></a><span data-ttu-id="64c40-104">用于 Node.js 的 Azure 模块入门</span><span class="sxs-lookup"><span data-stu-id="64c40-104">Get started with the Azure modules for Node.js</span></span>
+# <a name="get-started-with-the-azure-modules-for-nodejs"></a><span data-ttu-id="49888-103">用于 Node.js 的 Azure 模块入门</span><span class="sxs-lookup"><span data-stu-id="49888-103">Get started with the Azure modules for Node.js</span></span>
 
-<span data-ttu-id="64c40-105">本指南逐步讲解如何安装 Azure Node.js 模块，使用服务主体在 Azure 中进行身份验证，以及运行可在 Azure 订阅中创建资源并连接到 Azure 云服务的示例代码。</span><span class="sxs-lookup"><span data-stu-id="64c40-105">This guide walks you through installing Azure Node.js modules, authenticating to Azure with a service principal, and running sample code that creates resources in your Azure subscription and connects to Azure cloud services.</span></span>
+<span data-ttu-id="49888-104">本指南逐步讲解如何安装 Azure Node.js 模块，使用服务主体在 Azure 中进行身份验证，以及运行可在 Azure 订阅中创建资源并连接到 Azure 云服务的示例代码。</span><span class="sxs-lookup"><span data-stu-id="49888-104">This guide walks you through installing Azure Node.js modules, authenticating to Azure with a service principal, and running sample code that creates resources in your Azure subscription and connects to Azure cloud services.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="64c40-106">先决条件</span><span class="sxs-lookup"><span data-stu-id="64c40-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="49888-105">先决条件</span><span class="sxs-lookup"><span data-stu-id="49888-105">Prerequisites</span></span>
 
-- <span data-ttu-id="64c40-107">一个 Azure 帐户。</span><span class="sxs-lookup"><span data-stu-id="64c40-107">An Azure account.</span></span> <span data-ttu-id="64c40-108">如果没有帐户，可[获取一个免费试用帐户](https://azure.microsoft.com/free/)</span><span class="sxs-lookup"><span data-stu-id="64c40-108">If you don't have one , [get a free trial](https://azure.microsoft.com/free/)</span></span>
-- [<span data-ttu-id="64c40-109">Node.js</span><span class="sxs-lookup"><span data-stu-id="64c40-109">Node.js</span></span>](https://nodejs.org)
-- <span data-ttu-id="64c40-110">[Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) 或 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。</span><span class="sxs-lookup"><span data-stu-id="64c40-110">[Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
+- <span data-ttu-id="49888-106">一个 Azure 帐户。</span><span class="sxs-lookup"><span data-stu-id="49888-106">An Azure account.</span></span> <span data-ttu-id="49888-107">如果没有帐户，可[获取一个免费试用帐户](https://azure.microsoft.com/free/)</span><span class="sxs-lookup"><span data-stu-id="49888-107">If you don't have one , [get a free trial](https://azure.microsoft.com/free/)</span></span>
+- [<span data-ttu-id="49888-108">Node.js</span><span class="sxs-lookup"><span data-stu-id="49888-108">Node.js</span></span>](https://nodejs.org)
+- <span data-ttu-id="49888-109">[Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) 或 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。</span><span class="sxs-lookup"><span data-stu-id="49888-109">[Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
 
 [!INCLUDE [azure-cloud-shell](../docs-ref-conceptual/includes/cloud-shell-try-it.md)]
 
-## <a name="prepare-your-environment"></a><span data-ttu-id="64c40-111">准备环境</span><span class="sxs-lookup"><span data-stu-id="64c40-111">Prepare your environment</span></span>
+## <a name="prepare-your-environment"></a><span data-ttu-id="49888-110">准备环境</span><span class="sxs-lookup"><span data-stu-id="49888-110">Prepare your environment</span></span>
 
-<span data-ttu-id="64c40-112">在空目录中创建新项目并安装以下 npm 模块：</span><span class="sxs-lookup"><span data-stu-id="64c40-112">Create a new project in an empty directory and install the following npm modules:</span></span>
+<span data-ttu-id="49888-111">在空目录中创建新项目并安装以下 npm 模块：</span><span class="sxs-lookup"><span data-stu-id="49888-111">Create a new project in an empty directory and install the following npm modules:</span></span>
 
 ```bash
 cd azure-node-quickstart
@@ -38,11 +37,11 @@ npm init -y
 npm install --save azure ms-rest-azure azure-arm-compute azure-arm-network azure-storage azure-arm-storage
 ```
 
-## <a name="set-up-authentication"></a><span data-ttu-id="64c40-113">设置身份验证</span><span class="sxs-lookup"><span data-stu-id="64c40-113">Set up authentication</span></span>
+## <a name="set-up-authentication"></a><span data-ttu-id="49888-112">设置身份验证</span><span class="sxs-lookup"><span data-stu-id="49888-112">Set up authentication</span></span>
 
-<span data-ttu-id="64c40-114">Node.js 应用程序需要 Azure 订阅中的读取和创建权限才能运行本指南中的示例代码。</span><span class="sxs-lookup"><span data-stu-id="64c40-114">Your Node.js applications need read and create permissions in your Azure subscription to run the sample code in this guide.</span></span> <span data-ttu-id="64c40-115">创建一个服务主体，并将应用程序配置为使用该服务主体的凭据运行。</span><span class="sxs-lookup"><span data-stu-id="64c40-115">Create a service principal and configure your application to run with its credentials.</span></span> <span data-ttu-id="64c40-116">服务主体是与标识关联的非交互式帐户，该帐户仅拥有运行应用所需的特权。</span><span class="sxs-lookup"><span data-stu-id="64c40-116">Service principals are a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
+<span data-ttu-id="49888-113">Node.js 应用程序需要 Azure 订阅中的读取和创建权限才能运行本指南中的示例代码。</span><span class="sxs-lookup"><span data-stu-id="49888-113">Your Node.js applications need read and create permissions in your Azure subscription to run the sample code in this guide.</span></span> <span data-ttu-id="49888-114">创建一个服务主体，并将应用程序配置为使用该服务主体的凭据运行。</span><span class="sxs-lookup"><span data-stu-id="49888-114">Create a service principal and configure your application to run with its credentials.</span></span> <span data-ttu-id="49888-115">服务主体是与标识关联的非交互式帐户，该帐户仅拥有运行应用所需的特权。</span><span class="sxs-lookup"><span data-stu-id="49888-115">Service principals are a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
 
-<span data-ttu-id="64c40-117">[使用 Azure CLI 2.0 创建服务主体](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli)并捕获输出。</span><span class="sxs-lookup"><span data-stu-id="64c40-117">[Create a service principal using the Azure CLI 2.0](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli) and capture the output.</span></span> <span data-ttu-id="64c40-118">需要在密码参数而非 `MY_SECURE_PASSWORD` 中提供[安全密码](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)。</span><span class="sxs-lookup"><span data-stu-id="64c40-118">You'll need to provide a [secure password](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) in the password argument instead of `MY_SECURE_PASSWORD`.</span></span>
+<span data-ttu-id="49888-116">[使用 Azure CLI 2.0 创建服务主体](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli)并捕获输出。</span><span class="sxs-lookup"><span data-stu-id="49888-116">[Create a service principal using the Azure CLI 2.0](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli) and capture the output.</span></span> <span data-ttu-id="49888-117">需要在密码参数而非 `MY_SECURE_PASSWORD` 中提供[安全密码](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)。</span><span class="sxs-lookup"><span data-stu-id="49888-117">You'll need to provide a [secure password](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) in the password argument instead of `MY_SECURE_PASSWORD`.</span></span>
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name AzureNodeTest --password MY_SECURE_PASSWORD
@@ -58,7 +57,7 @@ az ad sp create-for-rbac --name AzureNodeTest --password MY_SECURE_PASSWORD
 }
 ```
 
-<span data-ttu-id="64c40-119">导出 *appId*、*password* 和 *tenant* 的值作为环境变量：</span><span class="sxs-lookup"><span data-stu-id="64c40-119">Export the values for *appId*, *password* and *tenant* as environment variables:</span></span>
+<span data-ttu-id="49888-118">导出 *appId*、*password* 和 *tenant* 的值作为环境变量：</span><span class="sxs-lookup"><span data-stu-id="49888-118">Export the values for *appId*, *password* and *tenant* as environment variables:</span></span>
 
 ```bash
 export AZURE_ID a487e0c1-82af-47d9-9a0b-af184eb87646d
@@ -66,7 +65,7 @@ export AZURE_PASS password
 export AZURE_TENANT XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
-<span data-ttu-id="64c40-120">使用 [az account show](https://docs.microsoft.com/cli/azure/account#show) 获取订阅的 ID</span><span class="sxs-lookup"><span data-stu-id="64c40-120">Get the ID for your subscription with [az account show](https://docs.microsoft.com/cli/azure/account#show)</span></span>
+<span data-ttu-id="49888-119">使用 [az account show](https://docs.microsoft.com/cli/azure/account#show) 获取订阅的 ID</span><span class="sxs-lookup"><span data-stu-id="49888-119">Get the ID for your subscription with [az account show](https://docs.microsoft.com/cli/azure/account#show)</span></span>
 
 ```azurecli-interactive
 az account show
@@ -80,15 +79,15 @@ az account show
 }
 ```
 
-<span data-ttu-id="64c40-121">导出订阅 ID 作为环境变量</span><span class="sxs-lookup"><span data-stu-id="64c40-121">Export the subscription ID as an environment variable</span></span>
+<span data-ttu-id="49888-120">导出订阅 ID 作为环境变量</span><span class="sxs-lookup"><span data-stu-id="49888-120">Export the subscription ID as an environment variable</span></span>
 
 ```bash
 export AZURE_SUB 306943934-0323-4ae4d-a42b-f6613d1664ac
 ```
 
-## <a name="create-a-linux-virtual-machine"></a><span data-ttu-id="64c40-122">创建 Linux 虚拟机</span><span class="sxs-lookup"><span data-stu-id="64c40-122">Create a Linux virtual machine</span></span>
+## <a name="create-a-linux-virtual-machine"></a><span data-ttu-id="49888-121">创建 Linux 虚拟机</span><span class="sxs-lookup"><span data-stu-id="49888-121">Create a Linux virtual machine</span></span>
 
-<span data-ttu-id="64c40-123">使用以下代码在当前目录中创建新文件 *createVM.js*。</span><span class="sxs-lookup"><span data-stu-id="64c40-123">Create a new file *createVM.js* in the current directory with the following code.</span></span> <span data-ttu-id="64c40-124">使用合理的密码更新 `adminPass` 的值。</span><span class="sxs-lookup"><span data-stu-id="64c40-124">Update the value of `adminPass` with a good password.</span></span>
+<span data-ttu-id="49888-122">使用以下代码在当前目录中创建新文件 *createVM.js*。</span><span class="sxs-lookup"><span data-stu-id="49888-122">Create a new file *createVM.js* in the current directory with the following code.</span></span> <span data-ttu-id="49888-123">使用合理的密码更新 `adminPass` 的值。</span><span class="sxs-lookup"><span data-stu-id="49888-123">Update the value of `adminPass` with a good password.</span></span>
 
 ```javascript
 'use strict';
@@ -179,13 +178,13 @@ MsRest.loginWithServicePrincipalSecret(
     });
 ```
 
-<span data-ttu-id="64c40-125">通过命令行运行以下代码：</span><span class="sxs-lookup"><span data-stu-id="64c40-125">Run the code from the command line:</span></span>
+<span data-ttu-id="49888-124">通过命令行运行以下代码：</span><span class="sxs-lookup"><span data-stu-id="49888-124">Run the code from the command line:</span></span>
 
 ```bash
 node createVM.js
 ```
 
-<span data-ttu-id="64c40-126">完成该代码后，请获取新虚拟机的 IP，并使用代码中 `adminPass` 的值通过 SSH 登录。</span><span class="sxs-lookup"><span data-stu-id="64c40-126">Once the code completes, get the IP of your new virtual machine and log in with SSH using the value for `adminPass` from your code.</span></span>
+<span data-ttu-id="49888-125">完成该代码后，请获取新虚拟机的 IP，并使用代码中 `adminPass` 的值通过 SSH 登录。</span><span class="sxs-lookup"><span data-stu-id="49888-125">Once the code completes, get the IP of your new virtual machine and log in with SSH using the value for `adminPass` from your code.</span></span>
 
 ```azurecli-interactive
 az vm list-ip-addresses --name newLinuxVM
@@ -195,9 +194,9 @@ az vm list-ip-addresses --name newLinuxVM
 ssh testadmin@*vm_ip_address*
 ```
 
-## <a name="write-a-blob-to-azure-storage"></a><span data-ttu-id="64c40-127">将 Blob 写入 Azure 存储</span><span class="sxs-lookup"><span data-stu-id="64c40-127">Write a blob to Azure Storage</span></span>
+## <a name="write-a-blob-to-azure-storage"></a><span data-ttu-id="49888-126">将 Blob 写入 Azure 存储</span><span class="sxs-lookup"><span data-stu-id="49888-126">Write a blob to Azure Storage</span></span>
 
-<span data-ttu-id="64c40-128">使用以下代码在当前目录中创建新文件 *uploadFile.js*。</span><span class="sxs-lookup"><span data-stu-id="64c40-128">Create a new file *uploadFile.js* in the current directory with the following code.</span></span>
+<span data-ttu-id="49888-127">使用以下代码在当前目录中创建新文件 *uploadFile.js*。</span><span class="sxs-lookup"><span data-stu-id="49888-127">Create a new file *uploadFile.js* in the current directory with the following code.</span></span>
 
 ```javascript
 'use strict'
@@ -244,29 +243,29 @@ MsRest.loginWithServicePrincipalSecret(process.env.AZURE_ID, process.env.AZURE_P
 });
 ```
 
-<span data-ttu-id="64c40-129">运行以下命令，并将输出中的 URL 复制并粘贴到 Web 浏览器，以查看 Azure 存储中的文件：</span><span class="sxs-lookup"><span data-stu-id="64c40-129">Run the command and then copy and paste the URL from the output into your web browser to view the file in Azure Storage:</span></span>
+<span data-ttu-id="49888-128">运行以下命令，并将输出中的 URL 复制并粘贴到 Web 浏览器，以查看 Azure 存储中的文件：</span><span class="sxs-lookup"><span data-stu-id="49888-128">Run the command and then copy and paste the URL from the output into your web browser to view the file in Azure Storage:</span></span>
 
 ```bash
 node uploadFile.js
 ```
 
-## <a name="clean-up-resources"></a><span data-ttu-id="64c40-130">清理资源</span><span class="sxs-lookup"><span data-stu-id="64c40-130">Clean up resources</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="49888-129">清理资源</span><span class="sxs-lookup"><span data-stu-id="49888-129">Clean up resources</span></span>
 
-<span data-ttu-id="64c40-131">删除资源组，以删除本指南中创建的资源。</span><span class="sxs-lookup"><span data-stu-id="64c40-131">Delete the resource group to remove the resources created in this guide.</span></span>
+<span data-ttu-id="49888-130">删除资源组，以删除本指南中创建的资源。</span><span class="sxs-lookup"><span data-stu-id="49888-130">Delete the resource group to remove the resources created in this guide.</span></span>
 
 ```azurecli-interactive
 az group delete --name myResourceGroup
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="64c40-132">后续步骤</span><span class="sxs-lookup"><span data-stu-id="64c40-132">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="49888-131">后续步骤</span><span class="sxs-lookup"><span data-stu-id="49888-131">Next steps</span></span>
 
-<span data-ttu-id="64c40-133">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="64c40-133">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="49888-132">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="49888-132">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
 
-## <a name="reference"></a><span data-ttu-id="64c40-134">引用</span><span class="sxs-lookup"><span data-stu-id="64c40-134">Reference</span></span> 
+## <a name="reference"></a><span data-ttu-id="49888-133">引用</span><span class="sxs-lookup"><span data-stu-id="49888-133">Reference</span></span> 
 
-<span data-ttu-id="64c40-135">我们为所有包提供了[参考](/nodejs/api/overview/azure/?view=azure-node-2.0.0)文档。</span><span class="sxs-lookup"><span data-stu-id="64c40-135">A [reference](/nodejs/api/overview/azure/?view=azure-node-2.0.0) is available for all packages.</span></span>
+<span data-ttu-id="49888-134">我们为所有包提供了[参考](/javascript/api/overview/azure/)文档。</span><span class="sxs-lookup"><span data-stu-id="49888-134">A [reference](/javascript/api/overview/azure/) is available for all packages.</span></span>
 
-## <a name="get-help-and-give-feedback"></a><span data-ttu-id="64c40-136">获取帮助和提供反馈</span><span class="sxs-lookup"><span data-stu-id="64c40-136">Get help and give feedback</span></span>
+## <a name="get-help-and-give-feedback"></a><span data-ttu-id="49888-135">获取帮助和提供反馈</span><span class="sxs-lookup"><span data-stu-id="49888-135">Get help and give feedback</span></span>
 
-<span data-ttu-id="64c40-137">在 [Stack Overflow](https://stackoverflow.com/questions/tagged/azure+node.js) 社区中提问。</span><span class="sxs-lookup"><span data-stu-id="64c40-137">Post questions to the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure+node.js).</span></span> <span data-ttu-id="64c40-138">在[项目 GitHub](https://github.com/Azure/azure-sdk-for-node) 中针对用于 Node.js 的 Azure 模块报告 bug 和反映问题。</span><span class="sxs-lookup"><span data-stu-id="64c40-138">Report bugs and open issues against the Azure modules for Node.js on the [project GitHub](https://github.com/Azure/azure-sdk-for-node).</span></span>
+<span data-ttu-id="49888-136">在 [Stack Overflow](https://stackoverflow.com/questions/tagged/azure+node.js) 社区中提问。</span><span class="sxs-lookup"><span data-stu-id="49888-136">Post questions to the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure+node.js).</span></span> <span data-ttu-id="49888-137">在[项目 GitHub](https://github.com/Azure/azure-sdk-for-node) 中针对用于 Node.js 的 Azure 模块报告 bug 和反映问题。</span><span class="sxs-lookup"><span data-stu-id="49888-137">Report bugs and open issues against the Azure modules for Node.js on the [project GitHub](https://github.com/Azure/azure-sdk-for-node).</span></span>
 

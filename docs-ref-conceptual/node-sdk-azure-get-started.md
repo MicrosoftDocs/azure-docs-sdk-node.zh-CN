@@ -1,20 +1,19 @@
 ---
 title: "用于 Node.js 的 Azure 模块入门"
-description: "结合自己的 Azure 订阅开始了解用于 Node.js 的 Azure 模块的基本用法。"
-keywords: "Azure, Node, SDK, API, 入门, node.js"
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "使用适用于 Node.js 的 Azure 模块开始进行身份验证和资源管理"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: ec83d58585014cca05885af4de55473637c410e8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 4c001fce93ef4b83f9e790b4b9374690c3ac04ef
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>用于 Node.js 的 Azure 模块入门
 
@@ -264,7 +263,7 @@ az group delete --name myResourceGroup
 
 ## <a name="reference"></a>引用 
 
-我们为所有包提供了[参考](/nodejs/api/overview/azure/?view=azure-node-2.0.0)文档。
+我们为所有包提供了[参考](/javascript/api/overview/azure/)文档。
 
 ## <a name="get-help-and-give-feedback"></a>获取帮助和提供反馈
 

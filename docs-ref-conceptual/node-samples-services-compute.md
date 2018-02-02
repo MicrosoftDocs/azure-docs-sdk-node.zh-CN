@@ -1,20 +1,20 @@
 ---
-title: "使用 Node.js 添加 Azure 计算功能的示例代码"
+title: "适用于 Node.js 的 Azure 计算代码示例"
 description: "演示如何使用 Node.js 添加 Azure 计算功能的示例代码。"
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 454c32463422eaaf06d83590f3aba149942773db
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 5ad0935349583a2db1d844bd5a1e0e58e3b3e039
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-adding-azure-compute-functionality-with-nodejs"></a>使用 Node.js 添加 Azure 计算功能的示例代码
+# <a name="azure-compute-with-nodejs-code-samples"></a>使用 Node.js 的 Azure 计算代码示例
 
 以下示例代码演示如何使用 Node.js 添加 Azure 计算功能。
 

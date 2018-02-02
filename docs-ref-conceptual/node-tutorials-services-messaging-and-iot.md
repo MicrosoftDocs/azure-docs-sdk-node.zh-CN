@@ -1,20 +1,20 @@
 ---
-title: "有关在 Node.js 中使用 Azure 消息传送和物联网 (IoT) 的教程"
+title: "使用 Node.js 的 Azure 消息传送和物联网 (IoT) 教程"
 description: "有关在 Node.js 中使用 Azure 消息传送和物联网 (IoT) 的教程。"
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: c16ae2fef8d33eedacd68c625992c28f4ab05e40
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 765b25e93b8af17bfcefcb77bd85ac8e35619cd1
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="tutorials-for-using-azure-messaging-and-internet-of-things-iot-with-nodejs"></a>有关在 Node.js 中使用 Azure 消息传送和物联网 (IoT) 的教程
+# <a name="azure-messaging-and-internet-of-things-iot-with-nodejs-tutorials"></a>使用 Node.js 的 Azure 消息传送和物联网 (IoT) 教程
 
 下表提供了有关在 Node.js 中使用 Azure 消息传送和物联网 (IoT) 的深入教程的链接。
 

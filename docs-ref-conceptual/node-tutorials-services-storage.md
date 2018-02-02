@@ -1,20 +1,20 @@
 ---
-title: "有关在 Node.js 中使用 Azure 存储的教程"
+title: "使用 Node.js 的 Azure 存储教程"
 description: "有关在 Node.js 中连接和使用 Azure 存储的教程。"
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 7c833fb41e4449f3eb014917cd6243316b007c87
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 797b1f2a1c4a5206e6b0c7234642e26f14f5a5d6
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="tutorials-for-using-azure-storage-with-nodejs"></a>有关在 Node.js 中使用 Azure 存储的教程
+# <a name="azure-storage-with-nodejs-tutorials"></a>使用 Node.js 的 Azure 存储教程
 
 下表提供了有关在 Node.js 中连接和使用 Azure 存储的深入教程的链接。
 

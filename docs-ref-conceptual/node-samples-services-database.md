@@ -1,22 +1,22 @@
 ---
-title: "有关在 Node.js 中使用 Azure 数据库的示例代码"
-description: "演示在 Node.js 中使用 Azure 数据库的示例代码。"
-author: tomarcher
-manager: douge
+title: "使用 Node.js 的 Azure 数据库代码示例"
+description: "演示如何在 Node.js 中使用 Azure 数据库的示例代码。"
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 8292a8fd0353ae84ac2b1622e5c622e60be04c9b
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: f721bb1c4d8a84009b850c52cb26eeb0a16abca9
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-databases-with-nodejs"></a>有关在 Node.js 中使用 Azure 数据库的示例代码
+# <a name="azure-databases-with-nodejs-code-samples"></a>使用 Node.js 的 Azure 数据库代码示例
 
-以下示例代码演示在 Node.js 中使用 Azure 数据库。
+以下示例代码演示如何在 Node.js 中使用 Azure 数据库。
 
 如需其他任务的代码，可以浏览 [Azure Node.js 示例](https://azure.microsoft.com/resources/samples/?term=nodejs)的完整列表。
 

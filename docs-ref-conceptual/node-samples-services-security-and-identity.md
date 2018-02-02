@@ -1,20 +1,20 @@
 ---
-title: "有关在 Node.js 中使用 Azure 安全和标识的示例代码"
-description: "演示在 Node.js 中使用 Azure 安全和标识的示例代码"
-author: tomarcher
-manager: douge
+title: "使用 Node.js 的 Azure 安全和标识示例代码"
+description: "演示如何在 Node.js 中使用 Azure 安全和标识的示例代码。"
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 9bd49a6daaee0abdac84a00c89ba326abcbe253f
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 860539cf309acf4c4dd09f0924700bf93193195f
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-security-and-identity-with-nodejs"></a>有关在 Node.js 中使用 Azure 安全和标识的示例代码
+# <a name="azure-security-and-identity-with-nodejs-code-samples"></a>使用 Node.js 的 Azure 安全和标识示例代码
 
 以下示例代码演示在 Node.js 中使用 Azure 安全和标识。
 

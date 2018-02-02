@@ -1,21 +1,20 @@
 ---
-title: "用于 Node.js 的 Azure 虚拟机模块"
-description: "用于 Node.js 的 Azure 虚拟机模块参考"
-keywords: "Azure, Node, SDK, API, 虚拟机, vm, nodejs, javascript"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+title: "用于 Node.js 的虚拟机模块 - Azure"
+description: "用于 Node.js 的 Azure 虚拟机模块参考指南"
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: compute
-ms.openlocfilehash: 816714f5c286ee82f61502978c5d811e9f283432
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 608a915499d7c32c2c8b04464f716fa4fd17243d
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-virtual-machine-modules-for-nodejs"></a>用于 Node.js 的 Azure 虚拟机模块
 
@@ -49,9 +48,9 @@ msRestAzure.interactiveLogin().then(credentials => {
   client.virtualMachineImages
     .list(
         'westus',                   // location
-        'MicrosoftWindowsServer',   // publisher name
-        'WindowsServer',            // offer
-        '2012-R2-Datacenter'        // sku
+        'Canonical',   // publisher name
+        'UbuntuServer',            // offer
+        '16.04-LTS'        // sku
     )
     .then(result => console.log(result));
 });

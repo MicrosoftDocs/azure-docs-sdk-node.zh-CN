@@ -10,15 +10,18 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: active-directory
-ms.openlocfilehash: 59ef5321db6e5e7f3ad0e3b63aaa6a107207d3c2
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: c91b8396dbfeb766887b650541044f7ce2e7bde6
+ms.sourcegitcommit: 79213a25192d8913bf8ec16c19fbec6a8eb691f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="azure-active-directory-modules-for-nodejs"></a>用于 Node.js 的 Azure Active Directory 模块
 
 ## <a name="overview"></a>概述
+
+> [!IMPORTANT]
+> 强烈建议使用 [Microsoft Graph](https://graph.microsoft.io/)（而非 Azure AD Graph API）访问 Azure Active Directory 资源。 目前，我们在集中开发 Microsoft Graph，未计划进一步改进 Azure AD Graph API。 Azure AD Graph API 仍可能适用的方案非常有限；有关详细信息，请参阅 Office 开发人员中心的 [Microsoft Graph or the Azure AD Graph](https://dev.office.com/blogs/microsoft-graph-or-azure-ad-graph)（Microsoft Graph 或 Azure AD Graph）博客文章。
 
 [用于 Node.js 的 Azure Active Directory 身份验证库 (ADAL)](https://www.npmjs.com/package/adal-node) 可让 Node.js 应用程序在 AAD 中进行身份验证，以访问 AAD 保护的 Web 资源。
 

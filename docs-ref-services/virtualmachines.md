@@ -1,6 +1,6 @@
 ---
-title: "用于 Node.js 的虚拟机模块 - Azure"
-description: "用于 Node.js 的 Azure 虚拟机模块参考指南"
+title: 用于 Node.js 的虚拟机模块 - Azure
+description: 用于 Node.js 的 Azure 虚拟机模块参考指南
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -10,11 +10,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: compute
-ms.openlocfilehash: 608a915499d7c32c2c8b04464f716fa4fd17243d
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 5ba40cb4c068b1af62aa8c654cbf2c3f66f83ff1
+ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="azure-virtual-machine-modules-for-nodejs"></a>用于 Node.js 的 Azure 虚拟机模块
 
@@ -58,6 +58,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 
 ## <a name="samples"></a>示例
 
-[!INCLUDE [node-storage-samples](../docs-ref-conceptual/includes/virtualmachines-samples.md)]
+[!INCLUDE [node-virtualmachines-samples](../docs-ref-conceptual/includes/virtualmachines-samples.md)]
 
 详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。

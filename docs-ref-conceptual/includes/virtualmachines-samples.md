@@ -1,4 +1,4 @@
 | | |
 |---|---|
-| <span data-ttu-id="900ca-101">**虚拟机管理**</span><span class="sxs-lookup"><span data-stu-id="900ca-101">**Virtual machine management**</span></span> ||
-| [<span data-ttu-id="900ca-102">Azure 虚拟机管理 Node.js 示例</span><span class="sxs-lookup"><span data-stu-id="900ca-102">Azure virtual machines management sample with Node.js</span></span>](https://github.com/Azure-Samples/storage-blob-node-getting-started) | <span data-ttu-id="900ca-103">演示如何创建、列出、重启和删除虚拟机。</span><span class="sxs-lookup"><span data-stu-id="900ca-103">Demonstrates how to create, list, restart, and delete virtual machines.</span></span> |
+| <span data-ttu-id="746a8-101">**虚拟机管理**</span><span class="sxs-lookup"><span data-stu-id="746a8-101">**Virtual machine management**</span></span> ||
+| [<span data-ttu-id="746a8-102">Azure 虚拟机管理 Node.js 示例</span><span class="sxs-lookup"><span data-stu-id="746a8-102">Azure virtual machines management sample with Node.js</span></span>](https://github.com/Azure-Samples/compute-node-manage-vm) | <span data-ttu-id="746a8-103">演示如何创建、列出、重启和删除虚拟机。</span><span class="sxs-lookup"><span data-stu-id="746a8-103">Demonstrates how to create, list, restart, and delete virtual machines.</span></span> |

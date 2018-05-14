@@ -1,4 +1,4 @@
-- [<span data-ttu-id="41b1a-101">Node.js 后端的应用服务移动应用完整快速入门</span><span class="sxs-lookup"><span data-stu-id="41b1a-101">App Service Mobile completed quickstart for Node.js backend</span></span>](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/)
-- [<span data-ttu-id="41b1a-102">使用 Node.js 管理 Azure 网站</span><span class="sxs-lookup"><span data-stu-id="41b1a-102">Manage Azure websites with Node.js</span></span>](https://azure.microsoft.com/resources/samples/app-service-web-nodejs-manage/)
-- [<span data-ttu-id="41b1a-103">Azure 应用服务的 MEAN.js 示例</span><span class="sxs-lookup"><span data-stu-id="41b1a-103">MEAN.js sample for Azure App Service</span></span>](https://azure.microsoft.com/resources/samples/meanjs/)
-- [<span data-ttu-id="41b1a-104">FoodTrucks - 适用于 Azure 应用服务 的 Node API 应用</span><span class="sxs-lookup"><span data-stu-id="41b1a-104">FoodTrucks - Node API App for Azure App Service</span></span>](https://azure.microsoft.com/resources/samples/app-service-api-node-food-trucks/)
+- [Node.js 后端的应用服务移动应用完整快速入门](https://azure.microsoft.com/resources/samples/app-service-mobile-nodejs-backend-quickstart/)
+- [使用 Node.js 管理 Azure 网站](https://azure.microsoft.com/resources/samples/app-service-web-nodejs-manage/)
+- [Azure 应用服务的 MEAN.js 示例](https://azure.microsoft.com/resources/samples/meanjs/)
+- [FoodTrucks - 适用于 Azure 应用服务 的 Node API 应用](https://azure.microsoft.com/resources/samples/app-service-api-node-food-trucks/)

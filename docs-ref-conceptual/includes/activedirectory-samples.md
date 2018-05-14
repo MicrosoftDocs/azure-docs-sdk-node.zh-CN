@@ -1,5 +1,5 @@
 | | |
 |---|---|
-| <span data-ttu-id="6fe3f-101">**Azure Active Directory**</span><span class="sxs-lookup"><span data-stu-id="6fe3f-101">**Azure Active Directory**</span></span> ||
-| [<span data-ttu-id="6fe3f-102">使用 Azure AD 保护 Web API</span><span class="sxs-lookup"><span data-stu-id="6fe3f-102">Securing a web API with Azure AD</span></span>](https://azure.microsoft.com/resources/samples/active-directory-node-webapi/) | <span data-ttu-id="6fe3f-103">使用 Azure AD 和 OAuth 2.0 访问令牌保护的 NodeJS Web API。</span><span class="sxs-lookup"><span data-stu-id="6fe3f-103">A NodeJS web API that is secured using Azure AD and OAuth 2.0 access tokens.</span></span> |
-| [<span data-ttu-id="6fe3f-104">将 Azure AD 集成到 NodeJS Web 应用程序</span><span class="sxs-lookup"><span data-stu-id="6fe3f-104">Integrating Azure AD into a NodeJS web application</span></span>](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) | <span data-ttu-id="6fe3f-105">使用 OpenID Connect 验证 Azure AD 用户身份的 NodeJS Web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="6fe3f-105">A NodeJS web application that authenticates Azure AD users with OpenID Connect.</span></span> |
+| **Azure Active Directory** ||
+| [使用 Azure AD 保护 Web API](https://azure.microsoft.com/resources/samples/active-directory-node-webapi/) | 使用 Azure AD 和 OAuth 2.0 访问令牌保护的 NodeJS Web API。 |
+| [将 Azure AD 集成到 NodeJS Web 应用程序](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) | 使用 OpenID Connect 验证 Azure AD 用户身份的 NodeJS Web 应用程序。 |

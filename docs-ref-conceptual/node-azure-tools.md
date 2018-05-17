@@ -1,20 +1,20 @@
 ---
-title: "Azure 中面向 Node.js 开发人员的工具 | Microsoft Docs"
-description: "在 Azure 上安装用于 Node.js 开发的单个工具"
+title: Azure 中面向 Node.js 开发人员的工具 | Microsoft Docs
+description: 在 Azure 上安装用于 Node.js 开发的单个工具
 services: multiple
-author: craigshoemaker
+author: rloutlaw
 manager: routlaw
 ms.service: azure-nodejs
 ms.tgt_pltfrm: na
 ms.devlang: nodejs
 ms.topic: article
 ms.date: 11/07/2017
-ms.author: cshoe
-ms.openlocfilehash: e9fe95ce6c02d50a70ea51284174c938796148fe
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.author: routlaw
+ms.openlocfilehash: 172cc3e1bff763cbf768dce5aa85065da0dd4927
+ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-tools-for-nodejs-developers"></a>面向 Node.js 开发人员的 Azure 工具
 建议使用以下工具在 Node.js 中进行 Azure 方面的开发。

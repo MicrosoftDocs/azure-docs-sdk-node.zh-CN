@@ -1,3 +1,3 @@
 | | |
 |--|--|
-| [使用 PostgreSQL 的 Node.js 代码片段](https://www.npmjs.com/package/pg) | 了解如何创建池、执行查询、获取独占客户端，等等。
+| [<span data-ttu-id="4fc4b-101">使用 PostgreSQL 的 Node.js 代码片段</span><span class="sxs-lookup"><span data-stu-id="4fc4b-101">Node.js code snippets using PostgreSQL</span></span>](https://www.npmjs.com/package/pg) | <span data-ttu-id="4fc4b-102">了解如何创建池、执行查询、获取独占客户端，等等。</span><span class="sxs-lookup"><span data-stu-id="4fc4b-102">Learn how to create a pool, execute a query, obtain an exclusive client, and more.</span></span>

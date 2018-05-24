@@ -1,20 +1,20 @@
 ---
-title: "用于 Node.js 的 Azure 媒体服务模块"
-description: "用于 Node.js 的 Azure 媒体服务模块参考"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: 用于 Node.js 的 Azure 媒体服务模块
+description: 用于 Node.js 的 Azure 媒体服务模块参考
+author: Juliako
+ms.author: juliako
+manager: cfowler
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Media Services
-ms.openlocfilehash: 77a6716d4ef0d566690325a86e85d66c5ac234d6
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: e8b2b4b994c25fadda7a37d05a12778d8c9970d8
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-media-services-modules-for-nodejs"></a>用于 Node.js 的 Azure 媒体服务模块
 

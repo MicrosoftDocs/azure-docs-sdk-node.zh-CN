@@ -1,20 +1,20 @@
 ---
-title: "用于 Node.js 的 Azure 服务总线模块"
-description: "用于 Node.js 的 Azure 服务总线模块参考"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: 用于 Node.js 的 Azure 服务总线模块
+description: 用于 Node.js 的 Azure 服务总线模块参考
+author: sethmanheim
+ms.author: sethm
+manager: timlt
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Bus
-ms.openlocfilehash: 792e51acf2577649432b26e4b840bc1d40b7abaf
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: fde02006fcf364071fcb866098dba7fcd3b1c07b
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-service-bus-modules-for-nodejs"></a>用于 Node.js 的 Azure 服务总线模块
 

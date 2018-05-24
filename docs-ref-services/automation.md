@@ -1,20 +1,20 @@
 ---
-title: "用于 Node.js 的 Azure 自动化模块"
-description: "用于 Node.js 的 Azure 自动化模块参考"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: 用于 Node.js 的 Azure 自动化模块
+description: 用于 Node.js 的 Azure 自动化模块参考
+author: eamonoreilly
+ms.author: eamono
+manager: nirb
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Automation
-ms.openlocfilehash: 09e9d2675d49b29881d332e7bbf251a5031e3483
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 5efe0c0633313bcf489b05b8a54f71bba9a00da5
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-automation-modules-for-nodejs"></a>用于 Node.js 的 Azure 自动化模块
 

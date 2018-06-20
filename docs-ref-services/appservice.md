@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34266608"
 ---
 # <a name="azure-app-service-modules-for-nodejs"></a><span data-ttu-id="d28a0-103">用于 Node.js 的 Azure 应用服务模块</span><span class="sxs-lookup"><span data-stu-id="d28a0-103">Azure App Service modules for Node.js</span></span>
 

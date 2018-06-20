@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220719"
 ---
 # <a name="tutorials-for-using-azure-enterprise-services-with-nodejs"></a><span data-ttu-id="d3e6d-103">有关在 Node.js 中使用 Azure 企业服务的教程</span><span class="sxs-lookup"><span data-stu-id="d3e6d-103">Tutorials for using Azure enterprise services with Node.js</span></span>
 

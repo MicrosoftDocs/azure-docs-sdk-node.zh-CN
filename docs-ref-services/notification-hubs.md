@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34261716"
 ---
 # <a name="azure-notification-hubs-modules-for-nodejs"></a><span data-ttu-id="a57aa-103">用于 Node.js 的 Azure 通知中心模块</span><span class="sxs-lookup"><span data-stu-id="a57aa-103">Azure Notification Hubs modules for Node.js</span></span>
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260300"
 ---
 # <a name="azure-service-bus-modules-for-nodejs"></a><span data-ttu-id="383de-103">用于 Node.js 的 Azure 服务总线模块</span><span class="sxs-lookup"><span data-stu-id="383de-103">Azure Service Bus Modules for Node.js</span></span>
 

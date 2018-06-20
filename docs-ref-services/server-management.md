@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260420"
 ---
 # <a name="azure-server-management-modules-for-nodejs"></a><span data-ttu-id="ddfe7-103">用于 Node.js 的 Azure 服务器管理模块</span><span class="sxs-lookup"><span data-stu-id="ddfe7-103">Azure Server Management modules for Node.js</span></span>
 

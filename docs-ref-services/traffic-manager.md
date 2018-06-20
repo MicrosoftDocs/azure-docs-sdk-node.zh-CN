@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34262701"
 ---
 # <a name="azure-traffic-manager-modules-for-nodejs"></a><span data-ttu-id="a7259-103">用于 Node.js 的 Azure 流量管理器模块</span><span class="sxs-lookup"><span data-stu-id="a7259-103">Azure Traffic Manager modules for Node.js</span></span>
 

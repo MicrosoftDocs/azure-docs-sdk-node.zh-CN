@@ -14,6 +14,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220509"
 ---
 # <a name="authenticate-with-the-azure-modules-for-nodejs"></a><span data-ttu-id="d9156-103">使用用于 Node.js 的 Azure 模块进行身份验证</span><span class="sxs-lookup"><span data-stu-id="d9156-103">Authenticate with the Azure modules for Node.js</span></span> 
 

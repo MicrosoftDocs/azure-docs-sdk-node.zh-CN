@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260380"
 ---
 # <a name="azure-event-hub-modules-for-nodejs"></a><span data-ttu-id="e5f6f-103">用于 Node.js 的 Azure 事件中心模块</span><span class="sxs-lookup"><span data-stu-id="e5f6f-103">Azure Event Hub modules for Node.js</span></span>
 

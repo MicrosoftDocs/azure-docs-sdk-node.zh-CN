@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259966"
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a><span data-ttu-id="52399-103">JavaScript Azure 认知服务模块</span><span class="sxs-lookup"><span data-stu-id="52399-103">JavaScript Azure Cognitive Services modules</span></span>
 

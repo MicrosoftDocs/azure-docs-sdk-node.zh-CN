@@ -14,6 +14,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220659"
 ---
 # <a name="nodejs-code-samples-for-azure-app-service-management-modules"></a><span data-ttu-id="fa949-103">Azure 应用服务管理模块的 Node.js 代码示例</span><span class="sxs-lookup"><span data-stu-id="fa949-103">Node.js Code samples for Azure App Service management modules</span></span>
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34266594"
 ---
 # <a name="azure-key-vault-modules-for-nodejs"></a><span data-ttu-id="cc2e1-103">用于 Node.js 的 Azure Key Vault 模块</span><span class="sxs-lookup"><span data-stu-id="cc2e1-103">Azure Key Vault modules for Node.js</span></span>
 

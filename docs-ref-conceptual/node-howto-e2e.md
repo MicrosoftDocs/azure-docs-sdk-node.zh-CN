@@ -1,6 +1,6 @@
 ---
-title: "使用 Visual Studio Code 和 Azure 进行 Node.js 开发"
-description: "演示如何创建、使用 Docker 容器化 Node.js 应用并将其部署到 Azure 的完整端到端教程"
+title: 使用 Visual Studio Code 和 Azure 进行 Node.js 开发
+description: 演示如何创建、使用 Docker 容器化 Node.js 应用并将其部署到 Azure 的完整端到端教程
 services: multiple
 author: tomarcher
 manager: douge
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "20908137"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a><span data-ttu-id="4e1e1-103">使用 Visual Studio Code 和 Azure 进行 Node.js 开发</span><span class="sxs-lookup"><span data-stu-id="4e1e1-103">Node.js development with Visual Studio Code and Azure</span></span>
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 08/17/2017
 
 1. <span data-ttu-id="4e1e1-141">输入 `.js` 显示项目中的所有 JavaScript/JSON 文件以及每个文件的父目录</span><span class="sxs-lookup"><span data-stu-id="4e1e1-141">Enter `.js` to display all the JavaScript/JSON files in the project along with each file's parent directory</span></span> 
 
-    ![显示所有 .js* 文件](./media/node-howto-e2e/git-output.png)
+    ![显示所有 .js\* 文件](./media/node-howto-e2e/git-output.png)
 
 1. <span data-ttu-id="4e1e1-143">选择 `server.js`，即应用的启动脚本。</span><span class="sxs-lookup"><span data-stu-id="4e1e1-143">Select `server.js`, which is the startup script for the app.</span></span> 
 

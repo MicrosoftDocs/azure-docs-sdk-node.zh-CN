@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34261989"
 ---
 # <a name="azure-media-services-modules-for-nodejs"></a><span data-ttu-id="1c96d-103">用于 Node.js 的 Azure 媒体服务模块</span><span class="sxs-lookup"><span data-stu-id="1c96d-103">Azure Media Services modules for Node.js</span></span>
 

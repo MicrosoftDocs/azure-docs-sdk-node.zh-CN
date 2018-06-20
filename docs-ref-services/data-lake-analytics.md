@@ -1,6 +1,6 @@
 ---
-title: "用于 Node.js 的 Azure Data Lake Analytics 模块"
-description: "用于 Node.js 的 Azure Data Lake Analytics 模块参考"
+title: 用于 Node.js 的 Azure Data Lake Analytics 模块
+description: 用于 Node.js 的 Azure Data Lake Analytics 模块参考
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/26/2018
+ms.locfileid: "28116962"
 ---
 # <a name="azure-data-lake-analytics-modules-for-nodejs"></a><span data-ttu-id="4cf67-103">用于 Node.js 的 Azure Data Lake Analytics 模块</span><span class="sxs-lookup"><span data-stu-id="4cf67-103">Azure Data Lake Analytics modules for Node.js</span></span>
 

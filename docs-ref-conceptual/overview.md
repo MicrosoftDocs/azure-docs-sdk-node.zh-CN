@@ -14,6 +14,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220529"
 ---
 # <a name="azure-modules-for-nodejs"></a><span data-ttu-id="c1d12-103">用于 Node.js 的 Azure 模块</span><span class="sxs-lookup"><span data-stu-id="c1d12-103">Azure modules for Node.js</span></span>
 

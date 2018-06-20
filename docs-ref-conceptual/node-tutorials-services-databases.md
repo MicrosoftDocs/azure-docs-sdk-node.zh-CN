@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220589"
 ---
 # <a name="tutorials-for-using-azure-databases-with-nodejs"></a>有关在 Node.js 中使用 Azure 数据库的教程
 

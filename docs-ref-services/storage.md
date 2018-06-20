@@ -1,6 +1,6 @@
 ---
-title: "用于 Node.js 的 Azure 存储模块"
-description: "用于 Node.js 的 Azure 存储模块参考"
+title: 用于 Node.js 的 Azure 存储模块
+description: 用于 Node.js 的 Azure 存储模块参考
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/26/2018
+ms.locfileid: "28116892"
 ---
 # <a name="azure-storage-modules-for-nodejs"></a>用于 Node.js 的 Azure 存储模块
 

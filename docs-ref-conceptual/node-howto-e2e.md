@@ -1,6 +1,6 @@
 ---
-title: "使用 Visual Studio Code 和 Azure 进行 Node.js 开发"
-description: "演示如何创建、使用 Docker 容器化 Node.js 应用并将其部署到 Azure 的完整端到端教程"
+title: 使用 Visual Studio Code 和 Azure 进行 Node.js 开发
+description: 演示如何创建、使用 Docker 容器化 Node.js 应用并将其部署到 Azure 的完整端到端教程
 services: multiple
 author: tomarcher
 manager: douge
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "20908137"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a>使用 Visual Studio Code 和 Azure 进行 Node.js 开发
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259300"
 ---
 # <a name="azure-monitor-modules-for-nodejs"></a>用于 Node.js 的 Azure Monitor 模块
 

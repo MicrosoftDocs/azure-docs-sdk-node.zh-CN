@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: fd0870f4b38928c23145a50d4c71456b4c94c3e9
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 7941d3850ef6c3518ff0ab13fe1b1ea239ab1828
+ms.sourcegitcommit: 99a36d08455760a0436fb6a8fffb542518e3cb2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259966"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39188993"
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a>JavaScript Azure 认知服务模块
 
@@ -29,7 +29,7 @@ ms.locfileid: "34259966"
 - 应用“成人/不雅”设置，以便自动限制成人内容。
 - 识别图片中的图像类型和配色方案。
 
-在浏览器中免费[试用计算机视觉](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/)。
+在浏览器中免费[试用计算机视觉](https://azure.microsoft.com/services/cognitive-services/computer-vision/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 获取 JavaScript 模块：
 
@@ -55,7 +55,7 @@ npm install azure-cognitiveservices-contentmoderator
 
 检测、识别、分析、组织和标记照片中的人脸。 
 
-在浏览器中[试用人脸 API](https://azure.microsoft.com/en-us/services/cognitive-services/face/)。
+在浏览器中[试用人脸 API](https://azure.microsoft.com/services/cognitive-services/face/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 获取 JavaScript 模块：
 
@@ -71,7 +71,7 @@ npm install azure-cognitiveservices-face
 
 检索必应 Web 搜索 API 索引的 Web 文档，并根据结果类型、新鲜度以及其他特征来缩小结果范围。 
 
-在浏览器中[试用 Web 搜索 API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/)。
+在浏览器中[试用 Web 搜索 API](https://azure.microsoft.com/services/cognitive-services/bing-web-search-api/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 获取 JavaScript 模块：
 
@@ -85,7 +85,7 @@ npm install azure-cognitiveservices-websearch
 
 搜索图像，在结果中获取缩略图、完整的图像 URL、图像元数据等。
 
-在浏览器中[试用图像搜索 API](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/)。
+在浏览器中[试用图像搜索 API](https://azure.microsoft.com/services/cognitive-services/bing-image-search-api/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 获取 JavaScript 模块：
 
@@ -162,7 +162,7 @@ npm install azure-cognitiveservices-newssearch
 - 关键短语提取
 - 语言检测
 
-在浏览器中[试用文本分析 API](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/)。
+在浏览器中[试用文本分析 API](https://azure.microsoft.com/services/cognitive-services/text-analytics/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 获取 JavaScript 模块：
 
@@ -177,7 +177,7 @@ npm install azure-cognitiveservices-textanalytics
 
 使用必应拼写检查 API 进行上下文语法和拼写检查。
 
-在浏览器中[试用拼写检查 API](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/)。
+在浏览器中[试用拼写检查 API](https://azure.microsoft.com/services/cognitive-services/spell-check/)。
 
 使用 [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 获取 JavaScript 模块：
 

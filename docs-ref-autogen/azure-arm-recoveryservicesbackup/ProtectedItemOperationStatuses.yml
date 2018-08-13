@@ -1,0 +1,235 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ac59113a4e21ca00c9b26de26ebb08038ca0645a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40054759"
+items:
+- uid: azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses
+  name: ProtectedItemOperationStatuses
+  fullName: ProtectedItemOperationStatuses
+  children:
+  - azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get
+  - azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get_1
+  - azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get_2
+  - azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.getWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="9b86e-101">提取状态的操作，例如触发备份，还原。</span><span class="sxs-lookup"><span data-stu-id="9b86e-101">Fetches the status of an operation such as triggering a backup, restore.</span></span> <span data-ttu-id="9b86e-102">状态可以是正在进行、 完成或失败。</span><span class="sxs-lookup"><span data-stu-id="9b86e-102">The status can be in progress, completed or failed.</span></span> <span data-ttu-id="9b86e-103">您可以参考该操作的所有可能状态的 OperationStatus 枚举。</span><span class="sxs-lookup"><span data-stu-id="9b86e-103">You can refer to the OperationStatus enum for all the possible states of the operation.</span></span> <span data-ttu-id="9b86e-104">某些操作创建作业。</span><span class="sxs-lookup"><span data-stu-id="9b86e-104">Some operations create jobs.</span></span> <span data-ttu-id="9b86e-105">此方法返回与操作关联的作业的列表。</span><span class="sxs-lookup"><span data-stu-id="9b86e-105">This method returns the list of jobs associated with the operation.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-106">恢复服务保管库的名称。</span><span class="sxs-lookup"><span data-stu-id="9b86e-106">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-107">存在其中恢复服务保管库的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9b86e-107">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-108">结构名称与备份项相关联。</span><span class="sxs-lookup"><span data-stu-id="9b86e-108">Fabric name associated with the backup item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-109">与备份项关联的容器名称。</span><span class="sxs-lookup"><span data-stu-id="9b86e-109">Container name associated with the backup item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-110">备份项名称要提取其详细信息。</span><span class="sxs-lookup"><span data-stu-id="9b86e-110">Backup item name whose details are to be fetched.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-111">OperationID 表示需要获取其状态的操作。</span><span class="sxs-lookup"><span data-stu-id="9b86e-111">OperationID represents the operation whose status needs to be fetched.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.OperationStatus>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get_1
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="9b86e-112">提取状态的操作，例如触发备份，还原。</span><span class="sxs-lookup"><span data-stu-id="9b86e-112">Fetches the status of an operation such as triggering a backup, restore.</span></span> <span data-ttu-id="9b86e-113">状态可以是正在进行、 完成或失败。</span><span class="sxs-lookup"><span data-stu-id="9b86e-113">The status can be in progress, completed or failed.</span></span> <span data-ttu-id="9b86e-114">您可以参考该操作的所有可能状态的 OperationStatus 枚举。</span><span class="sxs-lookup"><span data-stu-id="9b86e-114">You can refer to the OperationStatus enum for all the possible states of the operation.</span></span> <span data-ttu-id="9b86e-115">某些操作创建作业。</span><span class="sxs-lookup"><span data-stu-id="9b86e-115">Some operations create jobs.</span></span> <span data-ttu-id="9b86e-116">此方法返回与操作关联的作业的列表。</span><span class="sxs-lookup"><span data-stu-id="9b86e-116">This method returns the list of jobs associated with the operation.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, callback: ServiceCallback<OperationStatus>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.OperationStatus>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.OperationStatus>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get_2
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="9b86e-117">提取状态的操作，例如触发备份，还原。</span><span class="sxs-lookup"><span data-stu-id="9b86e-117">Fetches the status of an operation such as triggering a backup, restore.</span></span> <span data-ttu-id="9b86e-118">状态可以是正在进行、 完成或失败。</span><span class="sxs-lookup"><span data-stu-id="9b86e-118">The status can be in progress, completed or failed.</span></span> <span data-ttu-id="9b86e-119">您可以参考该操作的所有可能状态的 OperationStatus 枚举。</span><span class="sxs-lookup"><span data-stu-id="9b86e-119">You can refer to the OperationStatus enum for all the possible states of the operation.</span></span> <span data-ttu-id="9b86e-120">某些操作创建作业。</span><span class="sxs-lookup"><span data-stu-id="9b86e-120">Some operations create jobs.</span></span> <span data-ttu-id="9b86e-121">此方法返回与操作关联的作业的列表。</span><span class="sxs-lookup"><span data-stu-id="9b86e-121">This method returns the list of jobs associated with the operation.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options: function, callback: ServiceCallback<OperationStatus>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.OperationStatus>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.OperationStatus>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="9b86e-122">提取状态的操作，例如触发备份，还原。</span><span class="sxs-lookup"><span data-stu-id="9b86e-122">Fetches the status of an operation such as triggering a backup, restore.</span></span> <span data-ttu-id="9b86e-123">状态可以是正在进行、 完成或失败。</span><span class="sxs-lookup"><span data-stu-id="9b86e-123">The status can be in progress, completed or failed.</span></span> <span data-ttu-id="9b86e-124">您可以参考该操作的所有可能状态的 OperationStatus 枚举。</span><span class="sxs-lookup"><span data-stu-id="9b86e-124">You can refer to the OperationStatus enum for all the possible states of the operation.</span></span> <span data-ttu-id="9b86e-125">某些操作创建作业。</span><span class="sxs-lookup"><span data-stu-id="9b86e-125">Some operations create jobs.</span></span> <span data-ttu-id="9b86e-126">此方法返回与操作关联的作业的列表。</span><span class="sxs-lookup"><span data-stu-id="9b86e-126">This method returns the list of jobs associated with the operation.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-127">恢复服务保管库的名称。</span><span class="sxs-lookup"><span data-stu-id="9b86e-127">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-128">存在其中恢复服务保管库的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9b86e-128">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-129">结构名称与备份项相关联。</span><span class="sxs-lookup"><span data-stu-id="9b86e-129">Fabric name associated with the backup item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-130">与备份项关联的容器名称。</span><span class="sxs-lookup"><span data-stu-id="9b86e-130">Container name associated with the backup item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-131">备份项名称要提取其详细信息。</span><span class="sxs-lookup"><span data-stu-id="9b86e-131">Backup item name whose details are to be fetched.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="9b86e-132">OperationID 表示需要获取其状态的操作。</span><span class="sxs-lookup"><span data-stu-id="9b86e-132">OperationID represents the operation whose status needs to be fetched.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.OperationStatus>>
+  package: azure-arm-recoveryservicesbackup
+references:
+- uid: Promise<azure-arm-recoveryservicesbackup.OperationStatus>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: OperationStatus
+    fullName: OperationStatus
+    uid: azure-arm-recoveryservicesbackup.OperationStatus
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-recoveryservicesbackup.OperationStatus>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: OperationStatus
+    fullName: OperationStatus
+    uid: azure-arm-recoveryservicesbackup.OperationStatus
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.OperationStatus>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: OperationStatus
+    fullName: OperationStatus
+    uid: azure-arm-recoveryservicesbackup.OperationStatus
+  - name: '>>'
+    fullName: '>>'

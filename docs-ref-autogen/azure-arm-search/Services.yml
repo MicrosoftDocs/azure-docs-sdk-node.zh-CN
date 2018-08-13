@@ -1,0 +1,960 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 890e7fe1421add5c5cf8b5726ae17f00d92c614d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40055139"
+items:
+- uid: azure-arm-search.Services
+  name: Services
+  fullName: Services
+  children:
+  - azure-arm-search.Services.beginCreateOrUpdate
+  - azure-arm-search.Services.beginCreateOrUpdate_1
+  - azure-arm-search.Services.beginCreateOrUpdate_2
+  - azure-arm-search.Services.beginCreateOrUpdateWithHttpOperationResponse
+  - azure-arm-search.Services.checkNameAvailability
+  - azure-arm-search.Services.checkNameAvailability_1
+  - azure-arm-search.Services.checkNameAvailability_2
+  - azure-arm-search.Services.checkNameAvailabilityWithHttpOperationResponse
+  - azure-arm-search.Services.createOrUpdate
+  - azure-arm-search.Services.createOrUpdate_1
+  - azure-arm-search.Services.createOrUpdate_2
+  - azure-arm-search.Services.createOrUpdateWithHttpOperationResponse
+  - azure-arm-search.Services.deleteMethod
+  - azure-arm-search.Services.deleteMethod_1
+  - azure-arm-search.Services.deleteMethod_2
+  - azure-arm-search.Services.deleteMethodWithHttpOperationResponse
+  - azure-arm-search.Services.get_1
+  - azure-arm-search.Services.get_2
+  - azure-arm-search.Services.get
+  - azure-arm-search.Services.getWithHttpOperationResponse
+  - azure-arm-search.Services.listByResourceGroup
+  - azure-arm-search.Services.listByResourceGroup_1
+  - azure-arm-search.Services.listByResourceGroup_2
+  - azure-arm-search.Services.listByResourceGroupWithHttpOperationResponse
+  - azure-arm-search.Services.update
+  - azure-arm-search.Services.update_1
+  - azure-arm-search.Services.update_2
+  - azure-arm-search.Services.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-search
+- uid: azure-arm-search.Services.beginCreateOrUpdate
+  name: beginCreateOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-101">创建或更新给定的资源组中的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-101">Creates or updates a Search service in the given resource group.</span></span> <span data-ttu-id="527b0-102">如果搜索服务已存在，则将使用给定的值更新所有属性。</span><span class="sxs-lookup"><span data-stu-id="527b0-102">If the Search service already exists, all properties will be updated with the given values.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-103">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-103">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-104">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-105">要创建或更新的 Azure 搜索服务的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-105">The name of the Azure Search service to create or update.</span></span> <span data-ttu-id="527b0-106">搜索服务名称必须仅包含小写字母、 数字或短划线、 不能使用短划线作为前两个或最后一个字符，不能包含连续短划线和必须是长度为 2 到 60 个字符之间。</span><span class="sxs-lookup"><span data-stu-id="527b0-106">Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.</span></span> <span data-ttu-id="527b0-107">搜索服务名称必须是全局唯一，因为它们的服务 URI 的一部分 (https://<name>。 search.windows.net)。</span><span class="sxs-lookup"><span data-stu-id="527b0-107">Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net).</span></span> <span data-ttu-id="527b0-108">创建服务后，您无法更改服务名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-108">You cannot change the service name after the service is created.</span></span>
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: >
+        <span data-ttu-id="527b0-109">要创建或更新的搜索服务的定义。</span><span class="sxs-lookup"><span data-stu-id="527b0-109">The definition of the Search service to create or update.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.beginCreateOrUpdate_1
+  name: beginCreateOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-110">创建或更新给定的资源组中的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-110">Creates or updates a Search service in the given resource group.</span></span> <span data-ttu-id="527b0-111">如果搜索服务已存在，则将使用给定的值更新所有属性。</span><span class="sxs-lookup"><span data-stu-id="527b0-111">If the Search service already exists, all properties will be updated with the given values.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, searchServiceName: string, service: SearchService, callback: ServiceCallback<SearchService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.SearchService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.beginCreateOrUpdate_2
+  name: beginCreateOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-112">创建或更新给定的资源组中的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-112">Creates or updates a Search service in the given resource group.</span></span> <span data-ttu-id="527b0-113">如果搜索服务已存在，则将使用给定的值更新所有属性。</span><span class="sxs-lookup"><span data-stu-id="527b0-113">If the Search service already exists, all properties will be updated with the given values.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, searchServiceName: string, service: SearchService, options: function, callback: ServiceCallback<SearchService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.SearchService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.beginCreateOrUpdateWithHttpOperationResponse
+  name: beginCreateOrUpdateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-114">创建或更新给定的资源组中的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-114">Creates or updates a Search service in the given resource group.</span></span> <span data-ttu-id="527b0-115">如果搜索服务已存在，则将使用给定的值更新所有属性。</span><span class="sxs-lookup"><span data-stu-id="527b0-115">If the Search service already exists, all properties will be updated with the given values.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdateWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-116">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-116">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-117">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-117">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-118">要创建或更新的 Azure 搜索服务的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-118">The name of the Azure Search service to create or update.</span></span> <span data-ttu-id="527b0-119">搜索服务名称必须仅包含小写字母、 数字或短划线、 不能使用短划线作为前两个或最后一个字符，不能包含连续短划线和必须是长度为 2 到 60 个字符之间。</span><span class="sxs-lookup"><span data-stu-id="527b0-119">Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.</span></span> <span data-ttu-id="527b0-120">搜索服务名称必须是全局唯一，因为它们的服务 URI 的一部分 (https://<name>。 search.windows.net)。</span><span class="sxs-lookup"><span data-stu-id="527b0-120">Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net).</span></span> <span data-ttu-id="527b0-121">创建服务后，您无法更改服务名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-121">You cannot change the service name after the service is created.</span></span>
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: >
+        <span data-ttu-id="527b0-122">要创建或更新的搜索服务的定义。</span><span class="sxs-lookup"><span data-stu-id="527b0-122">The definition of the Search service to create or update.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-search.SearchService>>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.checkNameAvailability
+  name: checkNameAvailability
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="527b0-123">检查给定的搜索服务名称可供使用。</span><span class="sxs-lookup"><span data-stu-id="527b0-123">Checks whether or not the given Search service name is available for use.</span></span>
+
+    <span data-ttu-id="527b0-124">搜索服务名称必须是全局唯一，因为它们的服务 URI 的一部分 (https://<name>。 search.windows.net)。</span><span class="sxs-lookup"><span data-stu-id="527b0-124">Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net).</span></span>
+  syntax:
+    content: 'function checkNameAvailability(name: string, options?: function)'
+    parameters:
+    - id: name
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-125">要验证的搜索服务名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-125">The Search service name to validate.</span></span> <span data-ttu-id="527b0-126">搜索服务名称必须仅包含小写字母、 数字或短划线、 不能使用短划线作为前两个或最后一个字符，不能包含连续短划线和必须是长度为 2 到 60 个字符之间。</span><span class="sxs-lookup"><span data-stu-id="527b0-126">Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-search.CheckNameAvailabilityOutput>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.checkNameAvailability_1
+  name: checkNameAvailability
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="527b0-127">检查给定的搜索服务名称可供使用。</span><span class="sxs-lookup"><span data-stu-id="527b0-127">Checks whether or not the given Search service name is available for use.</span></span>
+
+    <span data-ttu-id="527b0-128">搜索服务名称必须是全局唯一，因为它们的服务 URI 的一部分 (https://<name>。 search.windows.net)。</span><span class="sxs-lookup"><span data-stu-id="527b0-128">Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net).</span></span>
+  syntax:
+    content: 'function checkNameAvailability(name: string, callback: ServiceCallback<CheckNameAvailabilityOutput>)'
+    parameters:
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.CheckNameAvailabilityOutput>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.CheckNameAvailabilityOutput>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.checkNameAvailability_2
+  name: checkNameAvailability
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="527b0-129">检查给定的搜索服务名称可供使用。</span><span class="sxs-lookup"><span data-stu-id="527b0-129">Checks whether or not the given Search service name is available for use.</span></span>
+
+    <span data-ttu-id="527b0-130">搜索服务名称必须是全局唯一，因为它们的服务 URI 的一部分 (https://<name>。 search.windows.net)。</span><span class="sxs-lookup"><span data-stu-id="527b0-130">Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net).</span></span>
+  syntax:
+    content: 'function checkNameAvailability(name: string, options: function, callback: ServiceCallback<CheckNameAvailabilityOutput>)'
+    parameters:
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.CheckNameAvailabilityOutput>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.CheckNameAvailabilityOutput>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.checkNameAvailabilityWithHttpOperationResponse
+  name: checkNameAvailabilityWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="527b0-131">检查给定的搜索服务名称可供使用。</span><span class="sxs-lookup"><span data-stu-id="527b0-131">Checks whether or not the given Search service name is available for use.</span></span>
+
+    <span data-ttu-id="527b0-132">搜索服务名称必须是全局唯一，因为它们的服务 URI 的一部分 (https://<name>。 search.windows.net)。</span><span class="sxs-lookup"><span data-stu-id="527b0-132">Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net).</span></span>
+  syntax:
+    content: 'function checkNameAvailabilityWithHttpOperationResponse(name: string, options?: function)'
+    parameters:
+    - id: name
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-133">要验证的搜索服务名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-133">The Search service name to validate.</span></span> <span data-ttu-id="527b0-134">搜索服务名称必须仅包含小写字母、 数字或短划线、 不能使用短划线作为前两个或最后一个字符，不能包含连续短划线和必须是长度为 2 到 60 个字符之间。</span><span class="sxs-lookup"><span data-stu-id="527b0-134">Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-search.CheckNameAvailabilityOutput>>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.createOrUpdate
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-135">创建或更新给定的资源组中的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-135">Creates or updates a Search service in the given resource group.</span></span> <span data-ttu-id="527b0-136">如果搜索服务已存在，则将使用给定的值更新所有属性。</span><span class="sxs-lookup"><span data-stu-id="527b0-136">If the Search service already exists, all properties will be updated with the given values.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-137">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-137">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-138">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-138">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-139">要创建或更新的 Azure 搜索服务的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-139">The name of the Azure Search service to create or update.</span></span> <span data-ttu-id="527b0-140">搜索服务名称必须仅包含小写字母、 数字或短划线、 不能使用短划线作为前两个或最后一个字符，不能包含连续短划线和必须是长度为 2 到 60 个字符之间。</span><span class="sxs-lookup"><span data-stu-id="527b0-140">Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.</span></span> <span data-ttu-id="527b0-141">搜索服务名称必须是全局唯一，因为它们的服务 URI 的一部分 (https://<name>。 search.windows.net)。</span><span class="sxs-lookup"><span data-stu-id="527b0-141">Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net).</span></span> <span data-ttu-id="527b0-142">创建服务后，您无法更改服务名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-142">You cannot change the service name after the service is created.</span></span>
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: >
+        <span data-ttu-id="527b0-143">要创建或更新的搜索服务的定义。</span><span class="sxs-lookup"><span data-stu-id="527b0-143">The definition of the Search service to create or update.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.createOrUpdate_1
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-144">创建或更新给定的资源组中的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-144">Creates or updates a Search service in the given resource group.</span></span> <span data-ttu-id="527b0-145">如果搜索服务已存在，则将使用给定的值更新所有属性。</span><span class="sxs-lookup"><span data-stu-id="527b0-145">If the Search service already exists, all properties will be updated with the given values.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, searchServiceName: string, service: SearchService, callback: ServiceCallback<SearchService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.SearchService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.createOrUpdate_2
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-146">创建或更新给定的资源组中的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-146">Creates or updates a Search service in the given resource group.</span></span> <span data-ttu-id="527b0-147">如果搜索服务已存在，则将使用给定的值更新所有属性。</span><span class="sxs-lookup"><span data-stu-id="527b0-147">If the Search service already exists, all properties will be updated with the given values.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, searchServiceName: string, service: SearchService, options: function, callback: ServiceCallback<SearchService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.SearchService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-148">创建或更新给定的资源组中的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-148">Creates or updates a Search service in the given resource group.</span></span> <span data-ttu-id="527b0-149">如果搜索服务已存在，则将使用给定的值更新所有属性。</span><span class="sxs-lookup"><span data-stu-id="527b0-149">If the Search service already exists, all properties will be updated with the given values.</span></span>
+  syntax:
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-150">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-150">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-151">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-151">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-152">要创建或更新的 Azure 搜索服务的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-152">The name of the Azure Search service to create or update.</span></span> <span data-ttu-id="527b0-153">搜索服务名称必须仅包含小写字母、 数字或短划线、 不能使用短划线作为前两个或最后一个字符，不能包含连续短划线和必须是长度为 2 到 60 个字符之间。</span><span class="sxs-lookup"><span data-stu-id="527b0-153">Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.</span></span> <span data-ttu-id="527b0-154">搜索服务名称必须是全局唯一，因为它们的服务 URI 的一部分 (https://<name>。 search.windows.net)。</span><span class="sxs-lookup"><span data-stu-id="527b0-154">Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net).</span></span> <span data-ttu-id="527b0-155">创建服务后，您无法更改服务名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-155">You cannot change the service name after the service is created.</span></span>
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: >
+        <span data-ttu-id="527b0-156">要创建或更新的搜索服务的定义。</span><span class="sxs-lookup"><span data-stu-id="527b0-156">The definition of the Search service to create or update.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-search.SearchService>>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.deleteMethod
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-157">删除搜索服务中的给定的资源组，以及其关联的资源。</span><span class="sxs-lookup"><span data-stu-id="527b0-157">Deletes a Search service in the given resource group, along with its associated resources.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-158">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-158">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-159">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-159">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-160">与指定的资源组关联的 Azure 搜索服务的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-160">The name of the Azure Search service associated with the specified resource group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.deleteMethod_1
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-161">删除搜索服务中的给定的资源组，以及其关联的资源。</span><span class="sxs-lookup"><span data-stu-id="527b0-161">Deletes a Search service in the given resource group, along with its associated resources.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.deleteMethod_2
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-162">删除搜索服务中的给定的资源组，以及其关联的资源。</span><span class="sxs-lookup"><span data-stu-id="527b0-162">Deletes a Search service in the given resource group, along with its associated resources.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-163">删除搜索服务中的给定的资源组，以及其关联的资源。</span><span class="sxs-lookup"><span data-stu-id="527b0-163">Deletes a Search service in the given resource group, along with its associated resources.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-164">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-164">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-165">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-165">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-166">与指定的资源组关联的 Azure 搜索服务的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-166">The name of the Azure Search service associated with the specified resource group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.get_1
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-167">给定的资源组中获取具有给定名称的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-167">Gets the Search service with the given name in the given resource group.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, searchServiceName: string, callback: ServiceCallback<SearchService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.SearchService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.get_2
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-168">给定的资源组中获取具有给定名称的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-168">Gets the Search service with the given name in the given resource group.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, searchServiceName: string, options: function, callback: ServiceCallback<SearchService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.SearchService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-169">给定的资源组中获取具有给定名称的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-169">Gets the Search service with the given name in the given resource group.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, searchServiceName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-170">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-170">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-171">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-171">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-172">与指定的资源组关联的 Azure 搜索服务的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-172">The name of the Azure Search service associated with the specified resource group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-173">给定的资源组中获取具有给定名称的搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-173">Gets the Search service with the given name in the given resource group.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-174">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-174">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-175">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-175">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-176">与指定的资源组关联的 Azure 搜索服务的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-176">The name of the Azure Search service associated with the specified resource group.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-search.SearchService>>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.listByResourceGroup
+  name: listByResourceGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-177">获取给定的资源组中的所有搜索服务的列表。</span><span class="sxs-lookup"><span data-stu-id="527b0-177">Gets a list of all Search services in the given resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-178">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-178">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-179">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-179">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-search.SearchServiceListResult>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.listByResourceGroup_1
+  name: listByResourceGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-180">获取给定的资源组中的所有搜索服务的列表。</span><span class="sxs-lookup"><span data-stu-id="527b0-180">Gets a list of all Search services in the given resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<SearchServiceListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.SearchServiceListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.SearchServiceListResult>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.listByResourceGroup_2
+  name: listByResourceGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-181">获取给定的资源组中的所有搜索服务的列表。</span><span class="sxs-lookup"><span data-stu-id="527b0-181">Gets a list of all Search services in the given resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options: function, callback: ServiceCallback<SearchServiceListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.SearchServiceListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.SearchServiceListResult>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.listByResourceGroupWithHttpOperationResponse
+  name: listByResourceGroupWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-182">获取给定的资源组中的所有搜索服务的列表。</span><span class="sxs-lookup"><span data-stu-id="527b0-182">Gets a list of all Search services in the given resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-183">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-183">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-184">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-184">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-search.SearchServiceListResult>>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.update
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-185">更新给定的资源组中的现有搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-185">Updates an existing Search service in the given resource group.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-186">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-186">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-187">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-187">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-188">要更新的 Azure 搜索服务的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-188">The name of the Azure Search service to update.</span></span>
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: >
+        <span data-ttu-id="527b0-189">要更新的搜索服务的定义。</span><span class="sxs-lookup"><span data-stu-id="527b0-189">The definition of the Search service to update.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.update_1
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-190">更新给定的资源组中的现有搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-190">Updates an existing Search service in the given resource group.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, searchServiceName: string, service: SearchService, callback: ServiceCallback<SearchService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.SearchService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.update_2
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-191">更新给定的资源组中的现有搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-191">Updates an existing Search service in the given resource group.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, searchServiceName: string, service: SearchService, options: function, callback: ServiceCallback<SearchService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.SearchService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.SearchService>
+  package: azure-arm-search
+- uid: azure-arm-search.Services.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="527b0-192">更新给定的资源组中的现有搜索服务。</span><span class="sxs-lookup"><span data-stu-id="527b0-192">Updates an existing Search service in the given resource group.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-193">当前订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-193">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="527b0-194">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="527b0-194">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="527b0-195">要更新的 Azure 搜索服务的名称。</span><span class="sxs-lookup"><span data-stu-id="527b0-195">The name of the Azure Search service to update.</span></span>
+    - id: service
+      type:
+      - azure-arm-search.SearchService
+      description: >
+        <span data-ttu-id="527b0-196">要更新的搜索服务的定义。</span><span class="sxs-lookup"><span data-stu-id="527b0-196">The definition of the Search service to update.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-search.SearchService>>
+  package: azure-arm-search
+references:
+- uid: azure-arm-search.SearchService
+  spec.typeScript:
+  - name: SearchService
+    fullName: SearchService
+    uid: azure-arm-search.SearchService
+- uid: Promise<azure-arm-search.SearchService>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: SearchService
+    fullName: SearchService
+    uid: azure-arm-search.SearchService
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-search.SearchService>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: SearchService
+    fullName: SearchService
+    uid: azure-arm-search.SearchService
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-search.SearchService>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: SearchService
+    fullName: SearchService
+    uid: azure-arm-search.SearchService
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-search.CheckNameAvailabilityOutput>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CheckNameAvailabilityOutput
+    fullName: CheckNameAvailabilityOutput
+    uid: azure-arm-search.CheckNameAvailabilityOutput
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-search.CheckNameAvailabilityOutput>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: CheckNameAvailabilityOutput
+    fullName: CheckNameAvailabilityOutput
+    uid: azure-arm-search.CheckNameAvailabilityOutput
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-search.CheckNameAvailabilityOutput>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: CheckNameAvailabilityOutput
+    fullName: CheckNameAvailabilityOutput
+    uid: azure-arm-search.CheckNameAvailabilityOutput
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-search.SearchServiceListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: SearchServiceListResult
+    fullName: SearchServiceListResult
+    uid: azure-arm-search.SearchServiceListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-search.SearchServiceListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: SearchServiceListResult
+    fullName: SearchServiceListResult
+    uid: azure-arm-search.SearchServiceListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-search.SearchServiceListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: SearchServiceListResult
+    fullName: SearchServiceListResult
+    uid: azure-arm-search.SearchServiceListResult
+  - name: '>>'
+    fullName: '>>'

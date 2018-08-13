@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bf6aedf3528cf423db94b2360bafd8ed15b181d3
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049413"
+items:
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: RecoverableDatabaseOperations
+  summary: >-
+    包含用于获取可恢复的 Azure SQL 数据库的操作。
+
+    __请注意__： 此类的实例自动创建的实例 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。
+
+    请参阅 [recoverableDatabases] {@link SqlManagementClient ~ SqlManagementClient #recoverableDatabases}。
+
+    初始化 RecoverableDatabaseOperations 类的新实例。
+  fullName: azure-asm-sql.RecoverableDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: RecoverableDatabaseOperations(client)
+  fullName: azure-asm-sql.RecoverableDatabaseOperations.RecoverableDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: 对服务客户端的引用。
+    content: new RecoverableDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: get(serverName, databaseName, callback)
+  summary: 返回有关可恢复的 Azure SQL 数据库的信息。
+  fullName: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.get(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Azure SQL 数据库服务器在其承载该数据库的名称。
+    - id: databaseName
+      type:
+      - string
+      description: 要获取的可恢复 Azure SQL 数据库的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 响应流中。
+    content: function get(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: list(serverName, callback)
+  summary: 返回可以从指定的服务器恢复的数据库的集合。
+  fullName: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Azure SQL 数据库服务器在其承载数据库的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 响应流中。
+    content: function list(serverName, callback)
+  langs:
+  - js

@@ -1,0 +1,667 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 07102ad61d689fe64b8deed07cbf15bcc4b6f4e4
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049341"
+items:
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: VirtualMachineDiskOperations
+  summary: >-
+    服务管理 API 包括用于管理你的订阅中的磁盘的操作。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157188.aspx有关详细信息)__注意__： 此类的实例自动创建的实例 [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}。
+
+    请参阅 [virtualMachineDisks] {@link ComputeManagementClient ~ ComputeManagementClient #virtualMachineDisks}。
+
+    初始化 VirtualMachineDiskOperations 类的新实例。
+  fullName: azure-asm-compute.VirtualMachineDiskOperations
+  type: Class
+  children:
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.#ctor
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize
+  langs:
+  - js
+- id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.#ctor
+  uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.#ctor
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: VirtualMachineDiskOperations(client)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations.VirtualMachineDiskOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: 对服务客户端的引用。
+    content: new VirtualMachineDiskOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: beginCreatingDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  summary: >-
+    创建数据磁盘操作将数据磁盘添加到虚拟机。
+
+    有三种方法来创建数据磁盘使用添加数据磁盘操作。 选项 1-将空数据磁盘附加到角色，通过指定磁盘标签和磁盘映像的位置。 请求正文中不包括 DiskName 和 SourceMediaLink 元素。 加入 MediaLink 元素并引用与角色相同的地理区域中的 blob。 您可以省略 MediaLink 元素。 在此使用情况，Azure 将创建为默认值为角色配置的存储帐户中的数据磁盘。 选项 2-附加的映像存储库中的现有数据磁盘。 请求正文中不包括 DiskName 和 SourceMediaLink 元素。 指定要通过加入 DiskName 元素使用的数据磁盘。 注意： 如果包含在响应正文的 MediaLink 和 LogicalDiskSizeInGB 元素将被忽略。 选项 3-指定包含要使用的磁盘映像的存储帐户中 blob 的位置。 加入 SourceMediaLink 元素。 注意： 如果 MediaLink 元素 isincluded，它是被忽略。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginCreatingDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 你的服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: roleName
+      type:
+      - string
+      description: 要向其添加数据磁盘的角色的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDataDiskCreateParameters
+      description: 提供创建虚拟机数据磁盘操作的参数。
+    - id: parameters.hostCaching
+      type:
+      - string
+      description: 指定针对读/写效率的数据磁盘 blob 的缓存行为的平台。 默认值为 ReadOnly。 可能的值为： None、 ReadOnly 或 ReadWrite。 警告： 将此属性设置会影响磁盘的一致性。
+    - id: parameters.label
+      type:
+      - string
+      description: 指定数据磁盘的说明。 当附加磁盘，方法是直接引用介质使用 MediaLink 元素或指定目标磁盘大小，可以使用 DiskLabel 元素自定义目标数据磁盘的名称属性。
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: 指定的磁盘的名称。 Azure 使用指定的磁盘来创建用于在计算机的数据磁盘，并使用磁盘名称填充此字段。
+      optional: true
+    - id: parameters.logicalUnitNumber
+      type:
+      - number
+      description: 指定磁盘的逻辑单元号 (LUN)。 LUN 指定装入的虚拟机使用情况时显示的数据驱动器的插槽。 有效的 LUN 值为 0 到 15。
+      optional: true
+    - id: parameters.logicalDiskSizeInGB
+      type:
+      - number
+      description: 指定大小，以 gb 为单位的空磁盘附加到角色。 附加磁盘的一部分，或通过指定此属性的值来创建 VM 角色调用，可创建磁盘。 Azure 创建空磁盘根据大小首选项，然后将新创建的磁盘附加到角色。
+      optional: true
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 指定磁盘介质所在的 Azure 存储中 blob 的位置。 Blob 位置必须属于操作调用中的订阅 Id 值指定的订阅中的存储帐户。 示例：http://example.blob.core.windows.net/disks/mydisk.vhd。
+    - id: parameters.sourceMediaLinkUri
+      type:
+      - string
+      description: 指定在创建虚拟机时作为数据磁盘装载的存储帐户中 blob 的位置。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginCreatingDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: beginDeletingDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  summary: 开始删除数据磁盘操作从虚拟机中删除指定的数据磁盘。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157179.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginDeletingDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 你的服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: roleName
+      type:
+      - string
+      description: 若要删除数据磁盘与角色的名称。
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: 磁盘的逻辑单元号。
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: 指定磁盘的源 blob 还应从存储删除。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginDeletingDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: beginUpdatingDisk(name, parameters, callback)
+  summary: 添加磁盘操作将磁盘添加到用户映像存储库。 磁盘可以是操作系统磁盘或数据磁盘。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginUpdatingDisk(name, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: 正在更新的磁盘的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskUpdateParameters
+      description: 提供给更新虚拟机磁盘操作的参数。
+    - id: parameters.hasOperatingSystem
+      type:
+      - boolean
+      description: 指定该磁盘是否包含操作系统。 注意： 仅安装了操作系统的磁盘可作为 OS 驱动器装载。
+      optional: true
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: 磁盘的操作系统类型。 可能的值为： Linux 或 Windows。
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: 指定磁盘的友好名称。
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 指定 Azure 存储中 blob 的位置。 Blob 位置必须属于操作调用中的订阅 Id 值指定的订阅中的存储帐户。 示例：http://example.blob.core.windows.net/disks/mydisk.vhd。
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: 指定磁盘的名称。 Azure 使用名称来标识的磁盘时从磁盘创建虚拟机。
+    - id: parameters.resizedSizeInGB
+      type:
+      - number
+      description: 基础 blob 调整为所指示的大小以 gb 为单位。若要使用 ResizedSizeInGB 属性，版本标头应至少 2014年-10-01。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginUpdatingDisk(name, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: createDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  summary: >-
+    创建数据磁盘操作将数据磁盘添加到虚拟机。
+
+    有三种方法来创建数据磁盘使用添加数据磁盘操作。 选项 1-将空数据磁盘附加到角色，通过指定磁盘标签和磁盘映像的位置。 请求正文中不包括 DiskName 和 SourceMediaLink 元素。 加入 MediaLink 元素并引用与角色相同的地理区域中的 blob。 您可以省略 MediaLink 元素。 在此使用情况，Azure 将创建为默认值为角色配置的存储帐户中的数据磁盘。 选项 2-附加的映像存储库中的现有数据磁盘。 请求正文中不包括 DiskName 和 SourceMediaLink 元素。 指定要通过加入 DiskName 元素使用的数据磁盘。 注意： 如果包含在响应正文的 MediaLink 和 LogicalDiskSizeInGB 元素将被忽略。 选项 3-指定包含要使用的磁盘映像的存储帐户中 blob 的位置。 加入 SourceMediaLink 元素。 注意： 如果 MediaLink 元素 isincluded，它是被忽略。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.createDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 你的服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: roleName
+      type:
+      - string
+      description: 要向其添加数据磁盘的角色的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDataDiskCreateParameters
+      description: 提供创建虚拟机数据磁盘操作的参数。
+    - id: parameters.hostCaching
+      type:
+      - string
+      description: 指定针对读/写效率的数据磁盘 blob 的缓存行为的平台。 默认值为 ReadOnly。 可能的值为： None、 ReadOnly 或 ReadWrite。 警告： 将此属性设置会影响磁盘的一致性。
+    - id: parameters.label
+      type:
+      - string
+      description: 指定数据磁盘的说明。 当附加磁盘，方法是直接引用介质使用 MediaLink 元素或指定目标磁盘大小，可以使用 DiskLabel 元素自定义目标数据磁盘的名称属性。
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: 指定的磁盘的名称。 Azure 使用指定的磁盘来创建用于在计算机的数据磁盘，并使用磁盘名称填充此字段。
+      optional: true
+    - id: parameters.logicalUnitNumber
+      type:
+      - number
+      description: 指定磁盘的逻辑单元号 (LUN)。 LUN 指定装入的虚拟机使用情况时显示的数据驱动器的插槽。 有效的 LUN 值为 0 到 15。
+      optional: true
+    - id: parameters.logicalDiskSizeInGB
+      type:
+      - number
+      description: 指定大小，以 gb 为单位的空磁盘附加到角色。 附加磁盘的一部分，或通过指定此属性的值来创建 VM 角色调用，可创建磁盘。 Azure 创建空磁盘根据大小首选项，然后将新创建的磁盘附加到角色。
+      optional: true
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 指定磁盘介质所在的 Azure 存储中 blob 的位置。 Blob 位置必须属于操作调用中的订阅 Id 值指定的订阅中的存储帐户。 示例：http://example.blob.core.windows.net/disks/mydisk.vhd。
+    - id: parameters.sourceMediaLinkUri
+      type:
+      - string
+      description: 指定在创建虚拟机时作为数据磁盘装载的存储帐户中 blob 的位置。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function createDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: createDisk(parameters, callback)
+  summary: 在创建磁盘操作将磁盘添加到用户映像存储库。 磁盘可以是操作系统磁盘或数据磁盘。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.createDisk(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskCreateParameters
+      description: 提供创建虚拟机磁盘操作的参数。
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: 磁盘的操作系统类型。 可能的值为： Linux 或 Windows。
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: 指定磁盘的友好名称。
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 指定 Azure 存储中 blob 的位置。 Blob 位置必须属于操作调用中的订阅 Id 值指定的订阅中的存储帐户。 示例：http://example.blob.core.windows.net/disks/mydisk.vhd。
+    - id: parameters.name
+      type:
+      - string
+      description: 指定磁盘的名称。 Azure 使用名称来标识的磁盘时从磁盘创建虚拟机。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function createDisk(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: deleteDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  summary: 删除数据磁盘操作从虚拟机中删除指定的数据磁盘。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157179.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.deleteDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 你的服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: roleName
+      type:
+      - string
+      description: 若要删除数据磁盘与角色的名称。
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: 磁盘的逻辑单元号。
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: 指定磁盘的源 blob 还应从存储删除。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function deleteDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: deleteDisk(name, deleteFromStorage, callback)
+  summary: 删除磁盘操作从映像存储库中删除指定的数据或操作系统磁盘。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157200.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.deleteDisk(name, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: 要删除的磁盘的名称。
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: 指定磁盘的源 blob 还应从存储删除。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function deleteDisk(name, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: getDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, callback)
+  summary: 获取数据磁盘操作检索指定的数据磁盘从虚拟机。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157180.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.getDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 你的服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: roleName
+      type:
+      - string
+      description: 角色的名称。
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: 磁盘的逻辑单元号。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function getDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: getDisk(name, callback)
+  summary: >-
+    获取磁盘操作从用户映像存储库中检索一个磁盘。
+
+    磁盘可以是操作系统磁盘或数据磁盘。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.getDisk(name, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: 磁盘的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function getDisk(name, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: listDisks(callback)
+  summary: 列出磁盘操作检索的映像存储库中磁盘的列表。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157176.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.listDisks(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function listDisks(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: updateDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, parameters, callback)
+  summary: 更新数据磁盘操作更新指定的数据磁盘附加到指定的虚拟机。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157190.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 你的服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: roleName
+      type:
+      - string
+      description: 要向其添加数据磁盘的角色的名称。
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: 磁盘的逻辑单元号。
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDataDiskUpdateParameters
+      description: 提供给更新虚拟机数据磁盘操作的参数。
+    - id: parameters.hostCaching
+      type:
+      - string
+      description: 指定针对读/写效率的数据磁盘 blob 的缓存行为的平台。 默认值为 ReadOnly。 可能的值为： None、 ReadOnly 或 ReadWrite。 警告： 将此属性设置会影响磁盘的一致性。
+    - id: parameters.label
+      type:
+      - string
+      description: 指定数据磁盘的说明。 当附加磁盘，方法是直接引用介质使用 MediaLink 元素或指定目标磁盘大小，可以使用 DiskLabel 元素自定义目标数据磁盘的名称属性。
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: 指定的磁盘的名称。 Azure 使用指定的磁盘来创建用于在计算机的数据磁盘，并使用磁盘名称填充此字段。
+      optional: true
+    - id: parameters.logicalUnitNumber
+      type:
+      - number
+      description: 指定磁盘的逻辑单元号 (LUN)。 LUN 指定装入的虚拟机使用情况时显示的数据驱动器的插槽。 有效的 LUN 值为 0 到 15。
+      optional: true
+    - id: parameters.logicalDiskSizeInGB
+      type:
+      - number
+      description: 指定大小，以 gb 为单位的空磁盘附加到角色。 附加磁盘的一部分，或通过指定此属性的值来创建 VM 角色调用，可创建磁盘。 Azure 创建空磁盘根据大小首选项，然后将新创建的磁盘附加到角色。
+      optional: true
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 指定磁盘介质所在的 Azure blob 存储区中的 blob 的位置。 Blob 位置必须属于操作调用中的订阅 Id 值指定的订阅中的存储帐户。 示例：http://example.blob.core.windows.net/disks/mydisk.vhd。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function updateDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: updateDisk(name, parameters, callback)
+  summary: 添加磁盘操作将磁盘添加到用户映像存储库。 磁盘可以是操作系统磁盘或数据磁盘。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDisk(name, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: 正在更新的磁盘的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskUpdateParameters
+      description: 提供给更新虚拟机磁盘操作的参数。
+    - id: parameters.hasOperatingSystem
+      type:
+      - boolean
+      description: 指定该磁盘是否包含操作系统。 注意： 仅安装了操作系统的磁盘可作为 OS 驱动器装载。
+      optional: true
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: 磁盘的操作系统类型。 可能的值为： Linux 或 Windows。
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: 指定磁盘的友好名称。
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 指定 Azure 存储中 blob 的位置。 Blob 位置必须属于操作调用中的订阅 Id 值指定的订阅中的存储帐户。 示例：http://example.blob.core.windows.net/disks/mydisk.vhd。
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: 指定磁盘的名称。 Azure 使用名称来标识的磁盘时从磁盘创建虚拟机。
+    - id: parameters.resizedSizeInGB
+      type:
+      - number
+      description: 基础 blob 调整为所指示的大小以 gb 为单位。若要使用 ResizedSizeInGB 属性，版本标头应至少 2014年-10-01。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function updateDisk(name, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: updateDiskSize(name, parameters, callback)
+  summary: 添加磁盘操作将磁盘添加到用户映像存储库。 磁盘可以是操作系统磁盘或数据磁盘。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDiskSize(name, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: 正在更新的磁盘的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskUpdateParameters
+      description: 提供给更新虚拟机磁盘操作的参数。
+    - id: parameters.hasOperatingSystem
+      type:
+      - boolean
+      description: 指定该磁盘是否包含操作系统。 注意： 仅安装了操作系统的磁盘可作为 OS 驱动器装载。
+      optional: true
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: 磁盘的操作系统类型。 可能的值为： Linux 或 Windows。
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: 指定磁盘的友好名称。
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 指定 Azure 存储中 blob 的位置。 Blob 位置必须属于操作调用中的订阅 Id 值指定的订阅中的存储帐户。 示例：http://example.blob.core.windows.net/disks/mydisk.vhd。
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: 指定磁盘的名称。 Azure 使用名称来标识的磁盘时从磁盘创建虚拟机。
+    - id: parameters.resizedSizeInGB
+      type:
+      - number
+      description: 基础 blob 调整为所指示的大小以 gb 为单位。若要使用 ResizedSizeInGB 属性，版本标头应至少 2014年-10-01。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function updateDiskSize(name, parameters, callback)
+  langs:
+  - js

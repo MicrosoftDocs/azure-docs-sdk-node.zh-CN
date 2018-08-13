@@ -1,0 +1,989 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2edf9f5bc2da7407d7a8e5e49124d9284317f648
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049492"
+items:
+- uid: azure-sb.MpnsService
+  id: azure-sb.MpnsService
+  name: MpnsService
+  summary: MpnsService 类用于使用发送通知[Microsoft 推送通知服务](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402558)。
+  fullName: azure-sb.MpnsService
+  type: Class
+  children:
+  - azure-sb.MpnsService.#ctor
+  - azure-sb.MpnsService#createNativeRegistration
+  - azure-sb.MpnsService#createOrUpdateNativeRegistration
+  - azure-sb.MpnsService#createFlipTileRegistration
+  - azure-sb.MpnsService#createTileRegistration
+  - azure-sb.MpnsService#createToastRegistration
+  - azure-sb.MpnsService#createRawTemplateRegistration
+  - azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  - azure-sb.MpnsService#updateFlipTileRegistration
+  - azure-sb.MpnsService#updateTileRegistration
+  - azure-sb.MpnsService#updatesToastRegistration
+  - azure-sb.MpnsService#updatesRawTemplateRegistration
+  - azure-sb.MpnsService#listRegistrationsByChannel
+  - azure-sb.MpnsService#sendFlipTile
+  - azure-sb.MpnsService#sendTile
+  - azure-sb.MpnsService#sendToast
+  - azure-sb.MpnsService#send
+  langs:
+  - js
+- id: azure-sb.MpnsService.#ctor
+  uid: azure-sb.MpnsService.#ctor
+  parent: azure-sb.MpnsService
+  name: MpnsService(notificationHubService)
+  fullName: azure-sb.MpnsService.MpnsService(notificationHubService)
+  summary: >-
+    创建新的 MpnsService 对象。
+
+
+    __请注意__： 当在自动创建此对象的实例<xref:azure-sb.NotificationHubService>创建对象。 请参阅 <xref:azure-sb.NotificationHubService%23gcm>。
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: 通知中心服务。
+    content: new MpnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createNativeRegistration
+  id: azure-sb.MpnsService#createNativeRegistration
+  parent: azure-sb.MpnsService
+  name: createNativeRegistration(channel, tags, options, callback)
+  summary: 创建本机 MPNS 注册。
+  fullName: azure-sb.MpnsService.createNativeRegistration(channel, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: 设备通道 uri。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 标记 （逗号分隔的列表，不含空格）。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNativeRegistration(channel, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createOrUpdateNativeRegistration
+  id: azure-sb.MpnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.MpnsService
+  name: createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  summary: 创建或更新本机 MPNS 注册。
+  fullName: azure-sb.MpnsService.createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 注册标识符。
+    - id: channel
+      type:
+      - string
+      description: 设备通道 uri。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 标记 （逗号分隔的列表，不含空格）。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createFlipTileRegistration
+  id: azure-sb.MpnsService#createFlipTileRegistration
+  parent: azure-sb.MpnsService
+  name: createFlipTileRegistration(channel, tags, template, options, callback)
+  summary: 使用 FlipTile 模板 （仅 Windows Phone 版本 7.8 或更高版本） 创建注册。 有关详细信息请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx。
+  fullName: azure-sb.MpnsService.createFlipTileRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: ChannelUri。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 标记 （逗号分隔的列表，不含空格）。
+    - id: template
+      type:
+      - object
+      description: 注册模板。
+    - id: template.backgroundImage
+      type:
+      - string
+      description: 该磁贴的背景图像的 URI。
+    - id: template.count
+      type:
+      - string
+      description: 在磁贴显示的数字。
+    - id: template.title
+      type:
+      - string
+      description: 磁贴的标题文本。
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: 磁贴背面显示的图像的 URI。
+    - id: template.backTitle
+      type:
+      - string
+      description: 该磁贴背面的标题。
+    - id: template.backContent
+      type:
+      - string
+      description: 该磁贴背面的文本。
+    - id: template.id
+      type:
+      - string
+      description: 相关辅助磁贴的 ID。
+    - id: template.smallBackgroundImage
+      type:
+      - string
+      description: 减少为其小尺寸时磁贴的背景图像 URI。
+    - id: template.wideBackgroundImage
+      type:
+      - string
+      description: 扩展到其大尺寸时磁贴的背景图像 URI。
+    - id: template.wideBackContent
+      type:
+      - string
+      description: 该磁贴扩展到其大尺寸时背面磁贴的内容。
+    - id: template.wideBackBackgroundImage
+      type:
+      - string
+      description: 磁贴扩展到其大尺寸时背面磁贴上为图像的 URI。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createFlipTileRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createTileRegistration
+  id: azure-sb.MpnsService#createTileRegistration
+  parent: azure-sb.MpnsService
+  name: createTileRegistration(channel, tags, template, options, callback)
+  summary: 使用磁贴模板创建注册。 有关详细信息请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx。
+  fullName: azure-sb.MpnsService.createTileRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: ChannelUri。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 标记 （逗号分隔的列表，不含空格）。
+    - id: template
+      type:
+      - object
+      description: 注册模板。
+    - id: template.backgroundImage
+      type:
+      - string
+      description: 该磁贴的背景图像的 URI。
+    - id: template.count
+      type:
+      - string
+      description: 在磁贴显示的数字。
+    - id: template.title
+      type:
+      - string
+      description: 磁贴的标题文本。
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: 磁贴背面显示的图像的 URI。
+    - id: template.backTitle
+      type:
+      - string
+      description: 该磁贴背面的标题。
+    - id: template.backContent
+      type:
+      - string
+      description: 该磁贴背面的文本。
+    - id: template.id
+      type:
+      - string
+      description: 相关辅助磁贴的 ID。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTileRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createToastRegistration
+  id: azure-sb.MpnsService#createToastRegistration
+  parent: azure-sb.MpnsService
+  name: createToastRegistration(channel, tags, template, options, callback)
+  summary: 使用详细信息，请参阅的 Toast 模板创建注册http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx。
+  fullName: azure-sb.MpnsService.createToastRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: ChannelUri。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 标记 （逗号分隔的列表，不含空格）。
+    - id: template
+      type:
+      - object
+      description: 注册模板。
+    - id: template.text1
+      type:
+      - string
+      description: 文本 1
+    - id: template.text2
+      type:
+      - string
+      description: Text2
+    - id: template.param
+      type:
+      - string
+      description: （可选）（仅适用于 Windows Phone 版本 7.5 或更高版本）
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createToastRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createRawTemplateRegistration
+  id: azure-sb.MpnsService#createRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: createRawTemplateRegistration(channel, tags, template, options, callback)
+  summary: 创建一个原始模板注册。
+  fullName: azure-sb.MpnsService.createRawTemplateRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: 设备通道 uri。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 标记 （逗号分隔的列表，不含空格）。
+    - id: template
+      type:
+      - json
+      description: 注册模板。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: 要包括的 mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRawTemplateRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  id: azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  summary: 创建一个原始模板注册。
+  fullName: azure-sb.MpnsService.createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 注册标识符。
+    - id: channel
+      type:
+      - string
+      description: 设备通道 uri。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 标记 （逗号分隔的列表，不含空格）。
+    - id: template
+      type:
+      - json
+      description: 注册模板。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: 要包括的 mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updateFlipTileRegistration
+  id: azure-sb.MpnsService#updateFlipTileRegistration
+  parent: azure-sb.MpnsService
+  name: updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  summary: FlipTile 模板 （仅 Windows Phone 版本 7.8 或更高版本） 使用更新注册。 有关详细信息请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx。
+  fullName: azure-sb.MpnsService.updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 注册标识符。
+    - id: channel
+      type:
+      - string
+      description: ChannelUri。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 标记 （逗号分隔的列表，不含空格）。
+    - id: template
+      type:
+      - object
+      description: 注册模板。
+    - id: template.backgroundImage
+      type:
+      - string
+      description: 该磁贴的背景图像的 URI。
+    - id: template.count
+      type:
+      - string
+      description: 在磁贴显示的数字。
+    - id: template.title
+      type:
+      - string
+      description: 磁贴的标题文本。
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: 磁贴背面显示的图像的 URI。
+    - id: template.backTitle
+      type:
+      - string
+      description: 该磁贴背面的标题。
+    - id: template.backContent
+      type:
+      - string
+      description: 该磁贴背面的文本。
+    - id: template.id
+      type:
+      - string
+      description: 相关辅助磁贴的 ID。
+    - id: template.smallBackgroundImage
+      type:
+      - string
+      description: 减少为其小尺寸时磁贴的背景图像 URI。
+    - id: template.wideBackgroundImage
+      type:
+      - string
+      description: 扩展到其大尺寸时磁贴的背景图像 URI。
+    - id: template.wideBackContent
+      type:
+      - string
+      description: 该磁贴扩展到其大尺寸时背面磁贴的内容。
+    - id: template.wideBackBackgroundImage
+      type:
+      - string
+      description: 磁贴扩展到其大尺寸时背面磁贴上为图像的 URI。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updateTileRegistration
+  id: azure-sb.MpnsService#updateTileRegistration
+  parent: azure-sb.MpnsService
+  name: updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  summary: 使用磁贴模板更新注册。 有关详细信息请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx。
+  fullName: azure-sb.MpnsService.updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 注册标识符。
+    - id: channel
+      type:
+      - string
+      description: ChannelUri。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 标记 （逗号分隔的列表，不含空格）。
+    - id: template
+      type:
+      - object
+      description: 注册模板。
+    - id: template.backgroundImage
+      type:
+      - string
+      description: 该磁贴的背景图像的 URI。
+    - id: template.count
+      type:
+      - string
+      description: 在磁贴显示的数字。
+    - id: template.title
+      type:
+      - string
+      description: 磁贴的标题文本。
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: 磁贴背面显示的图像的 URI。
+    - id: template.backTitle
+      type:
+      - string
+      description: 该磁贴背面的标题。
+    - id: template.backContent
+      type:
+      - string
+      description: 该磁贴背面的文本。
+    - id: template.id
+      type:
+      - string
+      description: 相关辅助磁贴的 ID。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updatesToastRegistration
+  id: azure-sb.MpnsService#updatesToastRegistration
+  parent: azure-sb.MpnsService
+  name: updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  summary: 使用 Toast 模板更新注册。 有关详细信息请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx。
+  fullName: azure-sb.MpnsService.updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 注册标识符。
+    - id: channel
+      type:
+      - string
+      description: ChannelUri。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 标记 （逗号分隔的列表，不含空格）。
+    - id: template
+      type:
+      - object
+      description: 注册模板。
+    - id: template.text1
+      type:
+      - string
+      description: 文本 1
+    - id: template.text2
+      type:
+      - string
+      description: Text2
+    - id: template.param
+      type:
+      - string
+      description: （可选）（仅适用于 Windows Phone 版本 7.5 或更高版本）
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updatesRawTemplateRegistration
+  id: azure-sb.MpnsService#updatesRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  summary: 更新原始模板注册。
+  fullName: azure-sb.MpnsService.updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: 注册标识符。
+    - id: channel
+      type:
+      - string
+      description: ChannelUri。
+    - id: tags
+      type:
+      - string
+      - array
+      description: 标记 （逗号分隔的列表，不含空格）。
+    - id: template
+      type:
+      - json
+      description: 注册模板。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: 要包括的 mpns 标头。
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: 要包含的 etag。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#listRegistrationsByChannel
+  id: azure-sb.MpnsService#listRegistrationsByChannel
+  parent: azure-sb.MpnsService
+  name: listRegistrationsByChannel(channel, options, callback)
+  summary: 由通道检索注册。
+  fullName: azure-sb.MpnsService.listRegistrationsByChannel(channel, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: ChannelUri。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。 其他属性将作为标头传递。
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: 指定注册，以从调用中获取的最大数目。
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: 指定注册的调用中跳过数。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRegistrationsByChannel(channel, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendFlipTile
+  id: azure-sb.MpnsService#sendFlipTile
+  parent: azure-sb.MpnsService
+  name: sendFlipTile(tags, payload, options, callback)
+  summary: 发送 FlipTile 通知 （仅 Windows Phone 版本 7.8 或更高版本）。 有关详细信息请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx。
+  fullName: azure-sb.MpnsService.sendFlipTile(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: 单个标记或标记表达式。
+    - id: payload
+      type:
+      - object
+      description: 消息的负载。
+    - id: payload.backgroundImage
+      type:
+      - string
+      description: 该磁贴的背景图像的 URI。
+    - id: payload.count
+      type:
+      - string
+      description: 在磁贴显示的数字。
+    - id: payload.title
+      type:
+      - string
+      description: 磁贴的标题文本。
+    - id: payload.backBackgroundImage
+      type:
+      - string
+      description: 磁贴背面显示的图像的 URI。
+    - id: payload.backTitle
+      type:
+      - string
+      description: 该磁贴背面的标题。
+    - id: payload.backContent
+      type:
+      - string
+      description: 该磁贴背面的文本。
+    - id: payload.id
+      type:
+      - string
+      description: 相关辅助磁贴的 ID。
+    - id: payload.smallBackgroundImage
+      type:
+      - string
+      description: 减少为其小尺寸时磁贴的背景图像 URI。
+    - id: payload.wideBackgroundImage
+      type:
+      - string
+      description: 扩展到其大尺寸时磁贴的背景图像 URI。
+    - id: payload.wideBackContent
+      type:
+      - string
+      description: 该磁贴扩展到其大尺寸时背面磁贴的内容。
+    - id: payload.wideBackBackgroundImage
+      type:
+      - string
+      description: 磁贴扩展到其大尺寸时背面磁贴上为图像的 URI。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendFlipTile(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendTile
+  id: azure-sb.MpnsService#sendTile
+  parent: azure-sb.MpnsService
+  name: sendTile(tags, payload, options, callback)
+  summary: 发送磁贴通知。 有关详细信息请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx。
+  fullName: azure-sb.MpnsService.sendTile(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: 单个标记或标记表达式。
+    - id: payload
+      type:
+      - object
+      description: 消息的负载。
+    - id: payload.backgroundImage
+      type:
+      - string
+      description: 该磁贴的背景图像的 URI。
+    - id: payload.count
+      type:
+      - string
+      description: 在磁贴显示的数字。
+    - id: payload.title
+      type:
+      - string
+      description: 磁贴的标题文本。
+    - id: payload.backBackgroundImage
+      type:
+      - string
+      description: 磁贴背面显示的图像的 URI。
+    - id: payload.backTitle
+      type:
+      - string
+      description: 该磁贴背面的标题。
+    - id: payload.backContent
+      type:
+      - string
+      description: 该磁贴背面的文本。
+    - id: payload.id
+      type:
+      - string
+      description: 相关辅助磁贴的 ID。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTile(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendToast
+  id: azure-sb.MpnsService#sendToast
+  parent: azure-sb.MpnsService
+  name: sendToast(tags, payload, options, callback)
+  summary: 发送 Toast 通知。 有关详细信息请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx。
+  fullName: azure-sb.MpnsService.sendToast(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: 单个标记或标记表达式。
+    - id: payload
+      type:
+      - object
+      description: 消息的负载。
+    - id: payload.text1
+      type:
+      - string
+      description: 文本 1
+    - id: payload.text2
+      type:
+      - string
+      description: Text2
+    - id: payload.param
+      type:
+      - string
+      description: （可选）（仅适用于 Windows Phone 版本 7.5 或更高版本）
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendToast(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#send
+  id: azure-sb.MpnsService#send
+  parent: azure-sb.MpnsService
+  name: send(tags, payload, targetName, notificationClass, options, callback)
+  summary: 发送自定义 MPNS 通知。 如果你想要具有完全控制权限有效负载，请使用此方法。
+  fullName: azure-sb.MpnsService.send(tags, payload, targetName, notificationClass, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: 单个标记或标记表达式。
+    - id: payload
+      type:
+      - string
+      description: 消息的 XML 有效负载。
+    - id: targetName
+      type:
+      - string
+      description: 目标名称。
+    - id: notificationClass
+      type:
+      - string
+      description: 通知类。
+    - id: options
+      type:
+      - object
+      description: 在请求选项。
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Mpns 标头。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: 回调函数中。
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function send(tags, payload, targetName, notificationClass, options, callback)
+  langs:
+  - js

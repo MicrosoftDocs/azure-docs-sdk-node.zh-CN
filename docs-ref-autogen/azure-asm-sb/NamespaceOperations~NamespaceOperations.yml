@@ -1,0 +1,466 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f8d4332e8e550322acec13e55dc8b09a55d188ab
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049326"
+items:
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations
+  summary: >-
+    服务总线管理 API 包括用于管理服务总线命名空间的操作。
+
+    __请注意__： 此类的实例自动创建的实例 [ServiceBusManagementClient] {@link ServiceBusManagementClient ~ ServiceBusManagementClient}。
+
+    请参阅 [命名空间] {@link ServiceBusManagementClient ~ ServiceBusManagementClient #namespaces}。
+
+    初始化 NamespaceOperations 类的新实例。
+  fullName: azure-asm-sb.NamespaceOperations
+  type: Class
+  children:
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  langs:
+  - js
+- id: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  uid: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations(client)
+  fullName: azure-asm-sb.NamespaceOperations.NamespaceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: 对服务客户端的引用。
+    content: new NamespaceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: checkAvailability(namespaceName, callback)
+  summary: 检查给定的服务命名空间的可用性，跨所有 Windows Azure 订阅。 这很有用，因为根据服务命名空间名称创建的域名。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj870968.aspx有关详细信息)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.checkAvailability(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空间名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function checkAvailability(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: create(namespaceName, region, callback)
+  summary: 创建新的服务命名空间。 创建后，此命名空间的资源清单不可变。 此操作是幂等。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx有关详细信息)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.create(namespaceName, region, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空间名称。
+    - id: region
+      type:
+      - string
+      description: 命名空间区域中。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function create(namespaceName, region, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createAuthorizationRule(namespaceName, rule, callback)
+  summary: 创建命名空间授权规则操作创建一个命名空间的授权规则
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空间名称。
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: 共享的访问授权规则。
+    - id: rule.keyName
+      type:
+      - string
+      description: 已用的密钥的名称。
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: 使用主键。
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: 使用辅助密钥。
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: 声明的类型。
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: 声明的值。
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: 与规则关联的权限。
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: 在其中创建授权规则的时间。
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: 规则更新的最新的时间。
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: 该规则修订号。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function createAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createNamespace(namespaceName, namespaceEntity, callback)
+  summary: 创建新的服务命名空间。 创建后，此命名空间的资源清单不可变。 此操作是幂等。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx有关详细信息)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createNamespace(namespaceName, namespaceEntity, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空间名称。
+    - id: namespaceEntity
+      type:
+      - azure-asm-sb.ServiceBusNamespaceCreateParameters
+      description: 服务总线命名空间。
+    - id: namespaceEntity.region
+      type:
+      - string
+      description: 命名空间区域中。
+    - id: namespaceEntity.createACSNamespace
+      type:
+      - boolean
+      description: ACS 身份验证是否需要为服务总线。
+      optional: true
+    - id: namespaceEntity.namespaceType
+      type:
+      - azure-asm-sb.NamespaceType
+      description: 获取或设置命名空间类型。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function createNamespace(namespaceName, namespaceEntity, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteMethod(namespaceName, callback)
+  summary: 删除现有的命名空间。 此操作还会删除所有关联的实体，包括队列、 主题、 中继点和存储在命名空间下的消息。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj856296.aspx有关详细信息)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteMethod(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空间名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function deleteMethod(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteAuthorizationRule(namespaceName, ruleName, callback)
+  summary: 删除命名空间授权规则操作中删除一个命名空间的授权规则
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteAuthorizationRule(namespaceName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空间名称。
+    - id: ruleName
+      type:
+      - string
+      description: 规则名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function deleteAuthorizationRule(namespaceName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: get(namespaceName, callback)
+  summary: 返回指定的命名空间的说明。  (请参阅http://msdn.microsoft.com/library/azure/dn140232.aspx有关详细信息)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.get(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空间名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function get(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getAuthorizationRule(namespaceName, entityName, callback)
+  summary: 获取授权规则操作按名称获取命名空间的授权规则。
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getAuthorizationRule(namespaceName, entityName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 要获取的授权规则的命名空间。
+    - id: entityName
+      type:
+      - string
+      description: 要获取的授权规则的实体名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function getAuthorizationRule(namespaceName, entityName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getNamespaceDescription(namespaceName, callback)
+  summary: 命名空间描述是 XML AtomPub 文档，用于定义一个服务命名空间所需的语义。 命名空间描述包含以下属性。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj873988.aspx有关详细信息)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getNamespaceDescription(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空间名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function getNamespaceDescription(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: list(callback)
+  summary: 列出了可用的命名空间。  (请参阅http://msdn.microsoft.com/en-us/library/azure/hh780759.aspx有关详细信息)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: listAuthorizationRules(namespaceName, callback)
+  summary: 获取授权规则操作获取命名空间的授权规则。
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.listAuthorizationRules(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 要获取的授权规则的命名空间。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function listAuthorizationRules(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: updateAuthorizationRule(namespaceName, rule, callback)
+  summary: 更新授权规则操作更新命名空间的授权规则。
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.updateAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: 命名空间名称。
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: 更新的访问授权规则。
+      optional: true
+    - id: rule.keyName
+      type:
+      - string
+      description: 已用的密钥的名称。
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: 使用主键。
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: 使用辅助密钥。
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: 声明的类型。
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: 声明的值。
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: 与规则关联的权限。
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: 在其中创建授权规则的时间。
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: 规则更新的最新的时间。
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: 该规则修订号。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: 响应流中。
+    content: function updateAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js

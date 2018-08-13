@@ -1,0 +1,649 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4d38827acb2346617b73ae6afad4c40d4452cd82
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049340"
+items:
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: HostedServiceOperations
+  summary: >-
+    服务管理 API 包括用于管理您的订阅下托管的服务操作。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460812.aspx有关详细信息)__注意__： 此类的实例自动创建的实例 [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}。
+
+    请参阅 [hostedServices] {@link ComputeManagementClient ~ ComputeManagementClient #hostedServices}。
+
+    初始化 HostedServiceOperations 类的新实例。
+  fullName: azure-asm-compute.HostedServiceOperations
+  type: Class
+  children:
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: HostedServiceOperations(client)
+  fullName: azure-asm-compute.HostedServiceOperations.HostedServiceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: 对服务客户端的引用。
+    content: new HostedServiceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: addExtension(serviceName, parameters, callback)
+  summary: >-
+    添加扩展操作向云服务添加可用扩展。 在 Azure 中，进程可作为云服务的扩展运行。
+
+    例如，远程桌面访问或 Azure 诊断代理可以作为运行扩展到云服务。 可以通过使用列出可用扩展操作查找可用扩展。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.addExtension(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceAddExtensionParameters
+      description: 提供给添加扩展操作的参数。
+    - id: parameters.providerNamespace
+      type:
+      - string
+      description: 扩展的提供程序命名空间。 Azure 扩展的提供程序命名空间是 Microsoft.Windows.Azure.Extensions。
+      optional: true
+    - id: parameters.type
+      type:
+      - string
+      description: 扩展的类型。
+    - id: parameters.id
+      type:
+      - string
+      description: 扩展的标识符。
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: 用于加密 PrivateConfiguration 中指定的配置的证书的指纹。 如果未指定此元素，可能会自动生成证书并添加到云服务。
+      optional: true
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: 用于加密 PrivateConfiguration 中指定的配置的证书的证书的指纹算法。
+      optional: true
+    - id: parameters.publicConfiguration
+      type:
+      - string
+      description: 使用返回列出可用扩展操作的架构定义中的公共配置。
+      optional: true
+    - id: parameters.privateConfiguration
+      type:
+      - string
+      description: 使用返回列出可用扩展操作的架构定义专用配置。
+      optional: true
+    - id: parameters.version
+      type:
+      - string
+      description: 指定扩展的版本。 如果未指定此元素或将星号 (*) 使用的值，该扩展的最新版本时使用。如果指定的值与主版本号和次版本号作为一个星号 (X.*)，选择指定的主版本的最新次要版本。 如果指定主版本号和次版本号 (X.Y)，则选择特定的扩展版本。 如果指定版本，则角色实例上执行自动升级。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function addExtension(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginAddingExtension(serviceName, parameters, callback)
+  summary: >-
+    开始添加扩展操作向云服务添加可用扩展。 在 Azure 中，进程可作为云服务的扩展运行。 例如，远程桌面访问或 Azure 诊断代理可以作为运行扩展到云服务。 可以通过使用列出可用扩展操作查找可用扩展。
+
+    (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginAddingExtension(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceAddExtensionParameters
+      description: 提供对开始添加扩展操作的参数。
+    - id: parameters.providerNamespace
+      type:
+      - string
+      description: 扩展的提供程序命名空间。 Azure 扩展的提供程序命名空间是 Microsoft.Windows.Azure.Extensions。
+      optional: true
+    - id: parameters.type
+      type:
+      - string
+      description: 扩展的类型。
+    - id: parameters.id
+      type:
+      - string
+      description: 扩展的标识符。
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: 用于加密 PrivateConfiguration 中指定的配置的证书的指纹。 如果未指定此元素，可能会自动生成证书并添加到云服务。
+      optional: true
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: 用于加密 PrivateConfiguration 中指定的配置的证书的证书的指纹算法。
+      optional: true
+    - id: parameters.publicConfiguration
+      type:
+      - string
+      description: 使用返回列出可用扩展操作的架构定义中的公共配置。
+      optional: true
+    - id: parameters.privateConfiguration
+      type:
+      - string
+      description: 使用返回列出可用扩展操作的架构定义专用配置。
+      optional: true
+    - id: parameters.version
+      type:
+      - string
+      description: 指定扩展的版本。 如果未指定此元素或将星号 (*) 使用的值，该扩展的最新版本时使用。如果指定的值与主版本号和次版本号作为一个星号 (X.*)，选择指定的主版本的最新次要版本。 如果指定主版本号和次版本号 (X.Y)，则选择特定的扩展版本。 如果指定版本，则角色实例上执行自动升级。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginAddingExtension(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginDeletingAll(serviceName, callback)
+  summary: DeleteAll 承载的服务操作从 Microsoft azure 存储中删除指定的云服务，以及操作系统磁盘、 附加的数据磁盘和磁盘的源 blob。 (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginDeletingAll(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginDeletingAll(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginDeletingExtension(serviceName, extensionId, callback)
+  summary: 开始删除扩展操作从云服务中删除指定的扩展。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginDeletingExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: extensionId
+      type:
+      - string
+      description: 标识符已分配给该扩展添加到云服务时
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginDeletingExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: checkNameAvailability(serviceName, callback)
+  summary: 检查托管服务名称可用性操作检查指定的云服务名称的可用性。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj154116.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.checkNameAvailability(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 你想要使用云服务名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function checkNameAvailability(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: create(parameters, callback)
+  summary: >-
+    创建托管服务操作在 Azure 中创建新的云服务。
+
+    (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/gg441304.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceCreateParameters
+      description: 创建托管服务操作提供的参数。
+    - id: parameters.serviceName
+      type:
+      - string
+      description: 在 Azure 中独一无二的云服务名称。 此名称是 DNS 前缀名称，可用于访问服务。
+    - id: parameters.label
+      type:
+      - string
+      description: 云服务的名称。 名称可以是长度最多 100 个字符。 名称可以用于标识存储帐户，以便进行跟踪。
+    - id: parameters.description
+      type:
+      - string
+      description: 云服务的说明。 说明可以有最多为 1024年个字符的长度。
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: 将创建云服务的位置。 如果不指定地缘组被必需。 指定位置或地缘组，但不是能同时指定。 若要列出可用位置，请使用列出位置操作。
+      optional: true
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: 与此订阅关联的现有地缘组的名称。 如果未指定位置被必需。 此名称是 GUID，并且可以通过检查列出地缘组操作返回的响应正文的 name 元素检索。 指定位置或地缘组，但不是能同时指定。 若要列出可用的地缘组，请使用列出地缘组操作。
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: 表示某个扩展的云服务属性的名称。 每个扩展的属性必须具有定义的名称和值。 您可以最多为 50 的扩展的属性名称 / 值对。 Name 元素的最大长度为 64 个字符，仅字母数字字符和下划线有效名称，并且它必须以字母开头。 尝试使用其他字符、 以非字母字符开头或输入名称等同于另一个扩展属性拥有相同的服务将导致状态代码 400 （错误请求） 错误。 每个扩展的属性值具有最大长度为 255 个字符。
+      optional: true
+    - id: parameters.reverseDnsFqdn
+      type:
+      - string
+      description: 使用反向 Dns 查询进行查询到的云服务的 IP 地址解析时 Dns 地址。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteMethod(serviceName, callback)
+  summary: 删除托管服务操作从 Azure 中删除指定的云服务。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteMethod(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function deleteMethod(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteAll(serviceName, callback)
+  summary: DeleteAll 承载的服务操作从 Microsoft azure 存储中删除指定的云服务，以及操作系统磁盘、 附加的数据磁盘和磁盘的源 blob。 (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteAll(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function deleteAll(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteExtension(serviceName, extensionId, callback)
+  summary: 删除扩展操作从云服务中删除指定的扩展。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: extensionId
+      type:
+      - string
+      description: 标识符已分配给该扩展添加到云服务时
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function deleteExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: get(serviceName, callback)
+  summary: >-
+    获取托管服务属性操作检索指定的云服务的系统属性。 这些属性包括服务名称和服务类型;和属于该服务的地缘组或其位置，如果它不属于地缘组的名称。
+
+    (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.get(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function get(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: getDetailed(serviceName, callback)
+  summary: 获取详细托管服务属性操作检索指定的云服务的系统属性。 这些属性包括服务名称和服务类型;属于该服务的地缘组或不属于地缘组; 如果其位置的名称有关服务的部署和信息。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.getDetailed(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function getDetailed(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: getExtension(serviceName, extensionId, callback)
+  summary: 获取扩展操作检索有关已添加到云服务的指定扩展的信息。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/dn169557.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.getExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: extensionId
+      type:
+      - string
+      description: 标识符已分配给该扩展添加到云服务时
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function getExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: list(callback)
+  summary: 列出托管服务操作可列出当前订阅下可用的云服务。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460781.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listAvailableExtensions(callback)
+  summary: 列出可用扩展操作列出可添加到你的云服务的扩展。 在 Windows Azure 中，进程可作为云服务的扩展运行。 例如，远程桌面访问或 Azure 诊断代理可以作为运行扩展到云服务。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listAvailableExtensions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function listAvailableExtensions(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listExtensions(serviceName, callback)
+  summary: 列出扩展操作列出所有已添加到云服务的扩展。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/dn169561.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listExtensions(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function listExtensions(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listExtensionVersions(providerNamespace, extensionType, callback)
+  summary: >-
+    列出扩展版本操作列出可添加到云服务的扩展版本。 在 Azure 中，进程可作为云服务的扩展运行。 例如，远程桌面访问或 Azure 诊断代理可以作为运行扩展到云服务。
+
+    (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/dn495437.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listExtensionVersions(providerNamespace, extensionType, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: 提供程序命名空间。
+    - id: extensionType
+      type:
+      - string
+      description: 扩展类型名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function listExtensionVersions(providerNamespace, extensionType, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listPublisherExtensions(callback)
+  summary: 列出可用扩展操作列出可添加到你的云服务的扩展。 在 Windows Azure 中，进程可作为云服务的扩展运行。 例如，远程桌面访问或 Azure 诊断代理可以作为运行扩展到云服务。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listPublisherExtensions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function listPublisherExtensions(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: update(serviceName, parameters, callback)
+  summary: 更新托管服务操作可以更新的标签或云服务在 Azure 中的说明。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/gg441303.aspx有关详细信息)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.update(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 云服务的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceUpdateParameters
+      description: 提供给更新托管服务操作参数。
+    - id: parameters.label
+      type:
+      - string
+      description: 云服务的名称。 名称可能最多 100 个字符的长度。 必须指定至少一个标签或说明的值。 建议该标签在订阅中唯一。 该名称可用于标识服务，以便进行跟踪。
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: 云服务的说明。 说明可能会有最多为 1024年个字符的长度。 必须指定至少一个标签或说明的值。
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: 表示某个扩展的云服务属性的名称。 每个扩展的属性必须具有定义的名称和值。 您可以最多为 50 的扩展的属性名称 / 值对。 Name 元素的最大长度为 64 个字符，仅字母数字字符和下划线有效名称，并且它必须以字母开头。 尝试使用其他字符、 以非字母字符开头或输入名称等同于另一个扩展属性拥有相同的服务将导致状态代码 400 （错误请求） 错误。 每个扩展的属性值具有最大长度为 255 个字符。
+      optional: true
+    - id: parameters.reverseDnsFqdn
+      type:
+      - string
+      description: 使用反向 Dns 查询进行查询到的云服务的 IP 地址解析时 Dns 地址。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function update(serviceName, parameters, callback)
+  langs:
+  - js

@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ebb7d1516cf3cb499347a00a6c6df67fde478c3a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049479"
+items:
+- uid: azure-monitoring.IncidentOperations~IncidentOperations
+  id: azure-monitoring.IncidentOperations~IncidentOperations
+  name: IncidentOperations
+  summary: >-
+    用于管理警报的事件的操作。
+
+    __请注意__： 此类的实例自动创建的实例 [AlertsClient] <xref:azure-monitoring.AlertsClient~AlertsClient>。
+
+    请参阅 [事件] <xref:azure-monitoring.AlertsClient~AlertsClient%23incidents>。
+
+    初始化 IncidentOperations 类的新实例。
+  fullName: azure-monitoring.IncidentOperations
+  type: Class
+  children:
+  - azure-monitoring.IncidentOperations~IncidentOperations.#ctor
+  - azure-monitoring.IncidentOperations~IncidentOperations#get
+  - azure-monitoring.IncidentOperations~IncidentOperations#listActiveForSubscription
+  - azure-monitoring.IncidentOperations~IncidentOperations#listForRule
+  langs:
+  - js
+- id: azure-monitoring.IncidentOperations~IncidentOperations.#ctor
+  uid: azure-monitoring.IncidentOperations~IncidentOperations.#ctor
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: IncidentOperations(client)
+  fullName: azure-monitoring.IncidentOperations.IncidentOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedAlertsClient
+      description: 对服务客户端的引用。
+    content: new IncidentOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.IncidentOperations~IncidentOperations#get
+  id: azure-monitoring.IncidentOperations~IncidentOperations#get
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: get(incidentId, callback)
+  summary: ''
+  fullName: azure-monitoring.IncidentOperations~IncidentOperations.get(incidentId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: incidentId
+      type:
+      - string
+      description: 若要检索的事件的 id。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 响应流中。
+    content: function get(incidentId, callback)
+  langs:
+  - js
+- uid: azure-monitoring.IncidentOperations~IncidentOperations#listActiveForSubscription
+  id: azure-monitoring.IncidentOperations~IncidentOperations#listActiveForSubscription
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: listActiveForSubscription(callback)
+  summary: ''
+  fullName: azure-monitoring.IncidentOperations~IncidentOperations.listActiveForSubscription(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 响应流中。
+    content: function listActiveForSubscription(callback)
+  langs:
+  - js
+- uid: azure-monitoring.IncidentOperations~IncidentOperations#listForRule
+  id: azure-monitoring.IncidentOperations~IncidentOperations#listForRule
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: listForRule(ruleId, isActive, callback)
+  summary: ''
+  fullName: azure-monitoring.IncidentOperations~IncidentOperations.listForRule(ruleId, isActive, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ruleId
+      type:
+      - string
+      description: 规则 id。
+    - id: isActive
+      type:
+      - boolean
+      description: 一个布尔值来检索仅活动或已解决事件。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 响应流中。
+    content: function listForRule(ruleId, isActive, callback)
+  langs:
+  - js

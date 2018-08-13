@@ -1,0 +1,144 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 86f2c13f450de06aeba44565b7910b979954a7cc
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049420"
+items:
+- uid: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  id: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  name: DefinitionOperations
+  summary: >-
+    流量管理器 API 包括用于管理指定的配置文件的定义的操作。
+
+    __请注意__： 此类的实例自动创建的实例 [TrafficManagerManagementClient] {@link TrafficManagerManagementClient ~ TrafficManagerManagementClient}。
+
+    请参阅 [定义] {@link TrafficManagerManagementClient ~ TrafficManagerManagementClient #definitions}。
+
+    初始化 DefinitionOperations 类的新实例。
+  fullName: azure-asm-trafficmanager.DefinitionOperations
+  type: Class
+  children:
+  - azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.#ctor
+  - azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#create
+  - azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#get
+  - azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#list
+  langs:
+  - js
+- id: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.#ctor
+  uid: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.#ctor
+  parent: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  name: DefinitionOperations(client)
+  fullName: azure-asm-trafficmanager.DefinitionOperations.DefinitionOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedTrafficManagerManagementClient
+      description: 对服务客户端的引用。
+    content: new DefinitionOperations(client)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#create
+  id: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#create
+  parent: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  name: create(profileName, parameters, callback)
+  summary: 创建指定的配置文件的新定义。  (请参阅http://msdn.microsoft.com/en-us/library/hh758257.aspx有关详细信息)
+  fullName: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.create(profileName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: profileName
+      type:
+      - string
+      description: 要创建的新定义的配置文件的名称。
+    - id: parameters
+      type:
+      - azure-asm-trafficmanager.DefinitionCreateParameters
+      description: 提供给创建定义操作的参数。
+    - id: parameters.dnsOptions
+      type:
+      - azure-asm-trafficmanager.DefinitionDnsOptions
+      description: ''
+    - id: parameters.dnsOptions.timeToLiveInSeconds
+      type:
+      - number
+      description: 指定 DNS 的生存时间 (TTL) 的通知本地 DNS 解析器到缓存 DNS 条目多长时间。 值为 30 到 999999 的整数。
+    - id: parameters.monitors
+      type:
+      - array
+      description: ''
+    - id: parameters.policy
+      type:
+      - azure-asm-trafficmanager.DefinitionPolicyCreateParameters
+      description: ''
+    - id: parameters.policy.loadBalancingMethod
+      type:
+      - azure-asm-trafficmanager.LoadBalancingMethod
+      description: 指定的负载平衡方法要用于分配连接。
+    - id: parameters.policy.endpoints
+      type:
+      - array
+      description: 封装 Windows Azure 流量管理器终结点的列表。 在列表中，可以定义最多 100 个终结点。 如果负载平衡方法设置为故障转移，到终结点的流量进行负载平衡终结点在其中定义的连续顺序中。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: 响应流中。
+    content: function create(profileName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#get
+  id: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#get
+  parent: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  name: get(profileName, callback)
+  summary: 返回现有的配置文件定义。  (请参阅http://msdn.microsoft.com/en-us/library/hh758248.aspx有关详细信息)
+  fullName: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.get(profileName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: profileName
+      type:
+      - string
+      description: 要获取从定义的配置文件的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: 响应流中。
+    content: function get(profileName, callback)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#list
+  id: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations#list
+  parent: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations
+  name: list(profileName, callback)
+  summary: 返回所有定义的配置文件 (请参阅http://msdn.microsoft.com/en-us/library/hh758252.aspx有关详细信息)
+  fullName: azure-asm-trafficmanager.DefinitionOperations~DefinitionOperations.list(profileName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: profileName
+      type:
+      - string
+      description: 要返回所有定义的配置文件的名称
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: 响应流中。
+    content: function list(profileName, callback)
+  langs:
+  - js

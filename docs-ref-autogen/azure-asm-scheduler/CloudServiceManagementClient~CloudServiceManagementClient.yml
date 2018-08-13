@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6a04037f15b27c25cdcef1beffe07ef3ce06d8a2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049306"
+items:
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: CloudServiceManagementClient
+  summary: 初始化 CloudServiceManagementClient 类的新实例。
+  fullName: azure-asm-scheduler.CloudServiceManagementClient
+  type: Class
+  children:
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.#ctor
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#cloudServices
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#entitleResource
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus
+  langs:
+  - js
+- id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.#ctor
+  uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.#ctor
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: CloudServiceManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-scheduler.CloudServiceManagementClient.CloudServiceManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: 获取唯一标识 Microsoft Azure 订阅的订阅凭据。 订阅 ID 格式为每个服务调用的 URI 的一部分。
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: 获取用于作为基础云服务的所有请求的 URI。
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new CloudServiceManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#cloudServices
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#cloudServices
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: cloudServices
+  summary: 提供的实例[CloudServiceOperations](-CloudServiceOperations.html)对象。
+  fullName: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.cloudServices
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: cloudServices
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#entitleResource
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#entitleResource
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: entitleResource(parameters, callback)
+  summary: EntitleResource 仅用于第三方存储提供程序。 在创建该特定类型的资源之前，每个订阅必须有资格的资源。
+  fullName: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.entitleResource(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-scheduler.EntitleResourceParameters
+      description: 提供给 EntitleResource 方法的参数。
+    - id: parameters.resourceNamespace
+      type:
+      - string
+      description: 资源提供程序所需的命名空间标识符。
+    - id: parameters.resourceType
+      type:
+      - string
+      description: 所需的资源的类型。
+    - id: parameters.registrationDate
+      type:
+      - date
+      description: 执行授权时，所需的数据。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 响应流中。
+    content: function entitleResource(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: getOperationStatus(requestId, callback)
+  summary: 获取操作状态操作将返回指定操作的状态。 调用异步操作之后, 可以调用 Get Operation Status 以确定操作是否已成功，失败，或仍在进行中。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx有关详细信息)
+  fullName: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.getOperationStatus(requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: 你想要跟踪请求的请求 ID。每个请求的 x ms 请求 id 响应标头中返回的请求 ID。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: 响应流中。
+    content: function getOperationStatus(requestId, callback)
+  langs:
+  - js

@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 82ac43fa4a47c8e1ec095e02ad0b2e021d2f53e4
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049596"
+items:
+- uid: documentdb.RangePartitionResolver
+  id: documentdb.RangePartitionResolver
+  name: RangePartitionResolver
+  summary: RangePartitionResolver 实现分区 Azure Cosmos DB 数据库服务中使用的范围值的集合链接到的分区映射。
+  fullName: documentdb.RangePartitionResolver
+  type: Class
+  children:
+  - documentdb.RangePartitionResolver.#ctor
+  - documentdb.RangePartitionResolver#getPartitionKey
+  - documentdb.RangePartitionResolver#resolveForCreate
+  - documentdb.RangePartitionResolver#resolveForRead
+  langs:
+  - js
+- id: documentdb.RangePartitionResolver.#ctor
+  uid: documentdb.RangePartitionResolver.#ctor
+  parent: documentdb.RangePartitionResolver
+  name: RangePartitionResolver(partitionKeyExtractor, partitionKeyMap, compareFunction)
+  fullName: documentdb.RangePartitionResolver.RangePartitionResolver(partitionKeyExtractor, partitionKeyMap, compareFunction)
+  summary: RangePartitionResolver 实现分区 Azure Cosmos DB 数据库服务中使用的范围值的集合链接到的分区映射。
+  type: Constructor
+  syntax:
+    parameters:
+    - id: partitionKeyExtractor
+      type:
+      - string
+      - function
+      description: >-
+        如果 partitionKeyExtractor 是一个字符串，则应在要执行哈希处理的文档属性的名称。
+
+        如果 partitionKeyExtractor 是函数，则应从对象提取分区键的函数。
+    - id: partitionKeyMap
+      type:
+      - Array
+      description: 用于分区请求的集合链接到范围中的映射。
+    - id: compareFunction
+      type:
+      - function
+      description: 接受两个参数的可选函数 x 和 y 以及返回负值如果 x < y，零，如果 x = y 或正值，如果 x > y。
+    content: new RangePartitionResolver(partitionKeyExtractor, partitionKeyMap, compareFunction)
+  langs:
+  - js
+- uid: documentdb.RangePartitionResolver#getPartitionKey
+  id: documentdb.RangePartitionResolver#getPartitionKey
+  parent: documentdb.RangePartitionResolver
+  name: getPartitionKey(document)
+  summary: 从指定的文档使用 partitionKeyExtractor 提取分区键
+  fullName: documentdb.RangePartitionResolver.getPartitionKey(document)
+  type: Function
+  syntax:
+    parameters:
+    - id: document
+      type:
+      - object
+      description: 要从中提取分区键文档。
+    return:
+      description: ''
+    content: function getPartitionKey(document)
+  langs:
+  - js
+- uid: documentdb.RangePartitionResolver#resolveForCreate
+  id: documentdb.RangePartitionResolver#resolveForCreate
+  parent: documentdb.RangePartitionResolver
+  name: resolveForCreate(partitionKey)
+  summary: 提供用于创建使用范围分区映射的文档的分区键，返回正确的集合链接。
+  fullName: documentdb.RangePartitionResolver.resolveForCreate(partitionKey)
+  type: Function
+  syntax:
+    parameters:
+    - id: partitionKey
+      type:
+      - documentdb.any
+      description: 用于确定创建的目标集合的分区键
+    return:
+      type:
+      - string
+      description: '- 将用于创建文档的目标集合链接。'
+    content: function resolveForCreate(partitionKey)
+  langs:
+  - js
+- uid: documentdb.RangePartitionResolver#resolveForRead
+  id: documentdb.RangePartitionResolver#resolveForRead
+  parent: documentdb.RangePartitionResolver
+  name: resolveForRead(partitionKey)
+  summary: 提供分区键，返回的集合的链接可阅读使用范围分区映射列表。
+  fullName: documentdb.RangePartitionResolver.resolveForRead(partitionKey)
+  type: Function
+  syntax:
+    parameters:
+    - id: partitionKey
+      type:
+      - documentdb.any
+      description: 用于确定查询的目标集合的分区键
+    return:
+      type:
+      - documentdb.Array.<string>
+      description: '- 目标集合链接的列表。'
+    content: function resolveForRead(partitionKey)
+  langs:
+  - js

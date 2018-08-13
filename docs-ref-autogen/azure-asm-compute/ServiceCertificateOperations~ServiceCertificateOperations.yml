@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: da3e7585cc8649d17699a945508b1a30766024a0
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049323"
+items:
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: ServiceCertificateOperations
+  summary: >-
+    用于管理你的订阅的服务证书操作。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee795178.aspx有关详细信息)__注意__： 此类的实例自动创建的实例 [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}。
+
+    请参阅 [serviceCertificates] {@link ComputeManagementClient ~ ComputeManagementClient #serviceCertificates}。
+
+    初始化 ServiceCertificateOperations 类的新实例。
+  fullName: azure-asm-compute.ServiceCertificateOperations
+  type: Class
+  children:
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  langs:
+  - js
+- id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: ServiceCertificateOperations(client)
+  fullName: azure-asm-compute.ServiceCertificateOperations.ServiceCertificateOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: 对服务客户端的引用。
+    content: new ServiceCertificateOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: beginCreating(serviceName, parameters, callback)
+  summary: 开始创建服务证书操作将证书添加到托管服务。 此操作是一个异步操作。 若要确定管理服务是否已完成处理请求，调用获取操作状态。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460817.aspx有关详细信息)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.beginCreating(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 你的服务的 DNS 前缀名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateCreateParameters
+      description: 提供对开始创建服务证书操作的参数。
+    - id: parameters.data
+      type:
+      - azure-asm-compute.buffer
+      description: Pfx 或 cer 文件。
+    - id: parameters.certificateFormat
+      type:
+      - azure-asm-compute.CertificateFormat
+      description: 服务证书的格式。 Azure 支持的 pfx 和 cer 文件格式。
+    - id: parameters.password
+      type:
+      - string
+      description: >-
+        Pfx 证书的密码。
+
+        Cer 证书不需要密码。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginCreating(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: beginDeleting(parameters, callback)
+  summary: 开始删除服务证书操作从托管服务的证书存储区中删除服务证书。 此操作是一个异步操作。 若要确定管理服务是否已完成处理请求，调用获取操作状态。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460803.aspx有关详细信息)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.beginDeleting(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateDeleteParameters
+      description: 提供对开始删除服务证书操作的参数。
+    - id: parameters.serviceName
+      type:
+      - string
+      description: 你的服务的 DNS 前缀名称。
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: 证书的指纹的的算法。
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: 指纹的十六进制表示形式。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginDeleting(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: create(serviceName, parameters, callback)
+  summary: 创建服务证书操作将证书添加到托管服务。 此操作是一个异步操作。 若要确定管理服务是否已完成处理请求，调用获取操作状态。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460817.aspx有关详细信息)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.create(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 你的服务的 DNS 前缀名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateCreateParameters
+      description: 创建服务证书操作提供的参数。
+    - id: parameters.data
+      type:
+      - azure-asm-compute.buffer
+      description: Pfx 或 cer 文件。
+    - id: parameters.certificateFormat
+      type:
+      - azure-asm-compute.CertificateFormat
+      description: 服务证书的格式。 Azure 支持的 pfx 和 cer 文件格式。
+    - id: parameters.password
+      type:
+      - string
+      description: >-
+        Pfx 证书的密码。
+
+        Cer 证书不需要密码。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function create(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: deleteMethod(parameters, callback)
+  summary: 删除服务证书操作从托管服务的证书存储区中删除服务证书。 此操作是一个异步操作。 若要确定管理服务是否已完成处理请求，调用获取操作状态。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460803.aspx有关详细信息)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.deleteMethod(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateDeleteParameters
+      description: 删除服务证书操作提供的参数。
+    - id: parameters.serviceName
+      type:
+      - string
+      description: 你的服务的 DNS 前缀名称。
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: 证书的指纹的的算法。
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: 指纹的十六进制表示形式。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function deleteMethod(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: get(parameters, callback)
+  summary: 获取服务证书操作将返回与托管服务关联的指定 X.509 证书的公共数据。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460792.aspx有关详细信息)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.get(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateGetParameters
+      description: 获取服务证书操作提供的参数。
+    - id: parameters.serviceName
+      type:
+      - string
+      description: 你的服务的 DNS 前缀名称。
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: 证书的指纹的的算法。
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: 指纹的十六进制表示形式。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function get(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: list(serviceName, callback)
+  summary: 列出服务证书操作列出所有与指定的托管服务关联的服务证书。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj154105.aspx有关详细信息)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.list(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 托管服务的 DNS 前缀名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function list(serviceName, callback)
+  langs:
+  - js

@@ -1,0 +1,190 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3433701b84a6eeb4afb19279ae12ec0bdc29c3da
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049321"
+items:
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: AffinityGroupOperations
+  summary: >-
+    用于管理你的订阅中的地缘组的操作。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460798.aspx有关详细信息)__注意__： 此类的实例自动创建的实例 [ManagementClient] {@link ManagementClient ~ ManagementClient}。
+
+    请参阅 [affinityGroups] {@link ManagementClient ~ ManagementClient #affinityGroups}。
+
+    初始化 AffinityGroupOperations 类的新实例。
+  fullName: azure-asm-mgmt.AffinityGroupOperations
+  type: Class
+  children:
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  langs:
+  - js
+- id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: AffinityGroupOperations(client)
+  fullName: azure-asm-mgmt.AffinityGroupOperations.AffinityGroupOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedManagementClient
+      description: 对服务客户端的引用。
+    content: new AffinityGroupOperations(client)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: create(parameters, callback)
+  summary: 创建地缘组操作将创建新的地缘组指定的订阅。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/gg715317.aspx有关详细信息)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-mgmt.AffinityGroupCreateParameters
+      description: 创建地缘组操作提供的参数。
+    - id: parameters.name
+      type:
+      - string
+      description: 仅适用于订阅的地缘组名称。
+    - id: parameters.label
+      type:
+      - string
+      description: 地缘组的 base-64 编码名称。 名称可以是长度最多 100 个字符。 如果未提供，则其值默认为地缘组的名称。
+    - id: parameters.description
+      type:
+      - string
+      description: 地缘组的说明。 说明可以有最多为 1024年个字符的长度。
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: 数据中心在其中创建地缘组的位置。 若要列出可用位置，请参阅列出位置操作。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: 响应流中。
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: deleteMethod(affinityGroupName, callback)
+  summary: 删除地缘组操作删除指定的订阅中的地缘组。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/gg715314.aspx有关详细信息)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.deleteMethod(affinityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: 地缘组的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: 响应流中。
+    content: function deleteMethod(affinityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: get(affinityGroupName, callback)
+  summary: 获取地缘组属性操作将返回与指定的地缘组关联的系统属性。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460789.aspx有关详细信息)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.get(affinityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: 返回列出地缘组操作的名称元素的所需的地缘组的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: 响应流中。
+    content: function get(affinityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: list(callback)
+  summary: 列出地缘组操作列出与指定的订阅关联的地缘组。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460797.aspx有关详细信息)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: 响应流中。
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: update(affinityGroupName, parameters, callback)
+  summary: 更新地缘组操作将更新标签和/或指定订阅的地缘组的说明。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/gg715316.aspx有关详细信息)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.update(affinityGroupName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: 地缘组的名称。
+    - id: parameters
+      type:
+      - azure-asm-mgmt.AffinityGroupUpdateParameters
+      description: 提供给更新地缘组操作的参数。
+    - id: parameters.label
+      type:
+      - string
+      description: 指定 base-64 编码字符串形式的地缘组名称。 标签可以是长度最多 100 个字符。
+    - id: parameters.description
+      type:
+      - string
+      description: 地缘组的说明。 说明可以有最多为 1024年个字符的长度。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: 响应流中。
+    content: function update(affinityGroupName, parameters, callback)
+  langs:
+  - js

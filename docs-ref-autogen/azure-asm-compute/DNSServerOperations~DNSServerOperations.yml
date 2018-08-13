@@ -1,0 +1,287 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 63f6d420f14e145be93264194c93b21fbf5288eb
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049327"
+items:
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: DNSServerOperations
+  summary: >-
+    计算管理 API 包括用于管理你的订阅的 dns 服务器的操作。
+
+    __请注意__： 此类的实例自动创建的实例 [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}。
+
+    请参阅 [dnsServer] {@link ComputeManagementClient ~ ComputeManagementClient #dnsServer}。
+
+    初始化 DNSServerOperations 类的新实例。
+  fullName: azure-asm-compute.DNSServerOperations
+  type: Class
+  children:
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  - azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  langs:
+  - js
+- id: azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  uid: azure-asm-compute.DNSServerOperations~DNSServerOperations.#ctor
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: DNSServerOperations(client)
+  fullName: azure-asm-compute.DNSServerOperations.DNSServerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: 对服务客户端的引用。
+    content: new DNSServerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#addDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: addDNSServer(serviceName, deploymentName, parameters, callback)
+  summary: 将 DNS 服务器的定义添加到现有部署。 在此部署中的 VM 将进行编程，以使用此 DNS 服务器进行所有的 DNS 解析
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.addDNSServer(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSAddParameters
+      description: 添加 DNS 服务器操作提供的参数。
+    - id: parameters.name
+      type:
+      - string
+      description: DNS 服务器的名称。
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: DNS 服务器 IP 地址
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function addDNSServer(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginAddingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  summary: 将 DNS 服务器的定义添加到现有部署。 在此部署中的 VM 将进行编程，以使用此 DNS 服务器进行所有的 DNS 解析
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSAddParameters
+      description: 添加 DNS 服务器操作提供的参数。
+    - id: parameters.name
+      type:
+      - string
+      description: DNS 服务器的名称。
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: DNS 服务器 IP 地址
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginAddingDNSServer(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginDeletingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  summary: 从部署中删除的现有 DNS 服务器的定义
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: dnsServerName
+      type:
+      - string
+      description: Dns 服务器的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginDeletingDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#beginUpdatingDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  summary: 更新的现有 DNS 服务器的定义。 更新以满足是允许的唯一更改。 不能更改 DNS 服务器名称
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: dnsServerName
+      type:
+      - string
+      description: Dns 服务器的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSUpdateParameters
+      description: 提供给更新 DNS 服务器操作的参数。
+    - id: parameters.name
+      type:
+      - string
+      description: DNS 服务器的名称。
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: DNS 服务器 IP 地址
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginUpdatingDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#deleteDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  summary: 从部署中删除的现有 DNS 服务器的定义
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: dnsServerName
+      type:
+      - string
+      description: Dns 服务器的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function deleteDNSServer(serviceName, deploymentName, dnsServerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  id: azure-asm-compute.DNSServerOperations~DNSServerOperations#updateDNSServer
+  parent: azure-asm-compute.DNSServerOperations~DNSServerOperations
+  name: updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  summary: 更新的现有 DNS 服务器的定义。 更新以满足是允许的唯一更改。 不能更改 DNS 服务器名称
+  fullName: azure-asm-compute.DNSServerOperations~DNSServerOperations.updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: 服务的名称。
+    - id: deploymentName
+      type:
+      - string
+      description: 部署的名称。
+    - id: dnsServerName
+      type:
+      - string
+      description: Dns 服务器的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.DNSUpdateParameters
+      description: 提供给更新 DNS 服务器操作的参数。
+    - id: parameters.name
+      type:
+      - string
+      description: DNS 服务器的名称。
+      optional: true
+    - id: parameters.address
+      type:
+      - string
+      description: DNS 服务器 IP 地址
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function updateDNSServer(serviceName, deploymentName, dnsServerName, parameters, callback)
+  langs:
+  - js

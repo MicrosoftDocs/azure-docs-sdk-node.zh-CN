@@ -1,0 +1,177 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 59656223c5a7cd2be8183dba49eeedd41c8bab1b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049481"
+items:
+- uid: azure-monitoring.RuleOperations~RuleOperations
+  id: azure-monitoring.RuleOperations~RuleOperations
+  name: RuleOperations
+  summary: >-
+    用于管理警报规则的操作。
+
+    __请注意__： 此类的实例自动创建的实例 [AlertsClient] <xref:azure-monitoring.AlertsClient~AlertsClient>。
+
+    请参阅 [规则] <xref:azure-monitoring.AlertsClient~AlertsClient%23rules>。
+
+    初始化 RuleOperations 类的新实例。
+  fullName: azure-monitoring.RuleOperations
+  type: Class
+  children:
+  - azure-monitoring.RuleOperations~RuleOperations.#ctor
+  - azure-monitoring.RuleOperations~RuleOperations#createOrUpdate
+  - azure-monitoring.RuleOperations~RuleOperations#deleteMethod
+  - azure-monitoring.RuleOperations~RuleOperations#get
+  - azure-monitoring.RuleOperations~RuleOperations#list
+  langs:
+  - js
+- id: azure-monitoring.RuleOperations~RuleOperations.#ctor
+  uid: azure-monitoring.RuleOperations~RuleOperations.#ctor
+  parent: azure-monitoring.RuleOperations~RuleOperations
+  name: RuleOperations(client)
+  fullName: azure-monitoring.RuleOperations.RuleOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedAlertsClient
+      description: 对服务客户端的引用。
+    content: new RuleOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.RuleOperations~RuleOperations#createOrUpdate
+  id: azure-monitoring.RuleOperations~RuleOperations#createOrUpdate
+  parent: azure-monitoring.RuleOperations~RuleOperations
+  name: createOrUpdate(parameters, callback)
+  summary: ''
+  fullName: azure-monitoring.RuleOperations~RuleOperations.createOrUpdate(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.RuleCreateOrUpdateParameters
+      description: 要创建或更新的规则。
+    - id: parameters.rule
+      type:
+      - azure-monitoring.Rule
+      description: 要创建或更新的规则。
+      optional: true
+    - id: parameters.rule.id
+      type:
+      - string
+      description: 规则标识符。
+      optional: true
+    - id: parameters.rule.name
+      type:
+      - string
+      description: 规则名称。
+      optional: true
+    - id: parameters.rule.description
+      type:
+      - string
+      description: 规则描述。
+      optional: true
+    - id: parameters.rule.isEnabled
+      type:
+      - boolean
+      description: 确定是启用还是禁用该规则的标志。
+      optional: true
+    - id: parameters.rule.condition
+      type:
+      - azure-monitoring.RuleCondition
+      description: 规则条件。
+      optional: true
+    - id: parameters.rule.actions
+      type:
+      - array
+      description: 规则操作。
+      optional: true
+    - id: parameters.rule.lastUpdatedTime
+      type:
+      - date
+      description: 规则上次更新时间。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 响应流中。
+    content: function createOrUpdate(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.RuleOperations~RuleOperations#deleteMethod
+  id: azure-monitoring.RuleOperations~RuleOperations#deleteMethod
+  parent: azure-monitoring.RuleOperations~RuleOperations
+  name: deleteMethod(ruleId, callback)
+  summary: ''
+  fullName: azure-monitoring.RuleOperations~RuleOperations.deleteMethod(ruleId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ruleId
+      type:
+      - string
+      description: 若要删除的规则的 id。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 响应流中。
+    content: function deleteMethod(ruleId, callback)
+  langs:
+  - js
+- uid: azure-monitoring.RuleOperations~RuleOperations#get
+  id: azure-monitoring.RuleOperations~RuleOperations#get
+  parent: azure-monitoring.RuleOperations~RuleOperations
+  name: get(ruleId, callback)
+  summary: ''
+  fullName: azure-monitoring.RuleOperations~RuleOperations.get(ruleId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ruleId
+      type:
+      - string
+      description: 若要检索的规则的 id。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 响应流中。
+    content: function get(ruleId, callback)
+  langs:
+  - js
+- uid: azure-monitoring.RuleOperations~RuleOperations#list
+  id: azure-monitoring.RuleOperations~RuleOperations#list
+  parent: azure-monitoring.RuleOperations~RuleOperations
+  name: list(callback)
+  summary: 列出订阅中的警报规则。
+  fullName: azure-monitoring.RuleOperations~RuleOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 响应流中。
+    content: function list(callback)
+  langs:
+  - js

@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e2c2a2dff10d9f4982076baa53a89601bba97741
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049410"
+items:
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations
+  id: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: QuotaOperations
+  summary: >-
+    Azure SQL 数据库管理 API 包括用于获取 Azure SQL 数据库服务器的配额的操作。 具体而言，使用 Api 就可以将特定配额或列表所有的配额为 Azure SQL 数据库服务器。
+
+    __请注意__： 此类的实例自动创建的实例 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。
+
+    请参阅 [配额] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23quotas>。
+
+    初始化 QuotaOperations 类的新实例。
+  fullName: azure-asm-sql.QuotaOperations
+  type: Class
+  children:
+  - azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  - azure-asm-sql.QuotaOperations~QuotaOperations#get
+  - azure-asm-sql.QuotaOperations~QuotaOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  uid: azure-asm-sql.QuotaOperations~QuotaOperations.#ctor
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: QuotaOperations(client)
+  fullName: azure-asm-sql.QuotaOperations.QuotaOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: 对服务客户端的引用。
+    content: new QuotaOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations#get
+  id: azure-asm-sql.QuotaOperations~QuotaOperations#get
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: get(serverName, quotaName, callback)
+  summary: 从服务器中检索指定的配额。
+  fullName: azure-asm-sql.QuotaOperations~QuotaOperations.get(serverName, quotaName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 要从其中检索配额 Azure SQL 数据库服务器的名称。
+    - id: quotaName
+      type:
+      - string
+      description: 要检索的配额的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 响应流中。
+    content: function get(serverName, quotaName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations#list
+  id: azure-asm-sql.QuotaOperations~QuotaOperations#list
+  parent: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: list(serverName, callback)
+  summary: 从服务器返回配额的列表。
+  fullName: azure-asm-sql.QuotaOperations~QuotaOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Azure SQL 数据库服务器从其获取配额的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: 响应流中。
+    content: function list(serverName, callback)
+  langs:
+  - js

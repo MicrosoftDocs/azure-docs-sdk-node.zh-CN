@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: cf3bdfc5b6306b16e367aae954b28649f09a5308
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049480"
+items:
+- uid: azure-monitoring.MetricValueOperations~MetricValueOperations
+  id: azure-monitoring.MetricValueOperations~MetricValueOperations
+  name: MetricValueOperations
+  summary: >-
+    __请注意__： 此类的实例自动创建的实例 [MetricsClient] <xref:azure-monitoring.MetricsClient~MetricsClient>。
+
+    请参阅 [metricValues] <xref:azure-monitoring.MetricsClient~MetricsClient%23metricValues>。
+
+    初始化 MetricValueOperations 类的新实例。
+  fullName: azure-monitoring.MetricValueOperations
+  type: Class
+  children:
+  - azure-monitoring.MetricValueOperations~MetricValueOperations.#ctor
+  - azure-monitoring.MetricValueOperations~MetricValueOperations#list
+  langs:
+  - js
+- id: azure-monitoring.MetricValueOperations~MetricValueOperations.#ctor
+  uid: azure-monitoring.MetricValueOperations~MetricValueOperations.#ctor
+  parent: azure-monitoring.MetricValueOperations~MetricValueOperations
+  name: MetricValueOperations(client)
+  fullName: azure-monitoring.MetricValueOperations.MetricValueOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedMetricsClient
+      description: 对服务客户端的引用。
+    content: new MetricValueOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.MetricValueOperations~MetricValueOperations#list
+  id: azure-monitoring.MetricValueOperations~MetricValueOperations#list
+  parent: azure-monitoring.MetricValueOperations~MetricValueOperations
+  name: list(resourceId, metricNames, metricNamespace, timeGrain, startTime, endTime, callback)
+  summary: 列表指标值操作用于列出资源指标的指标值集。
+  fullName: azure-monitoring.MetricValueOperations~MetricValueOperations.list(resourceId, metricNames, metricNamespace, timeGrain, startTime, endTime, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceId
+      type:
+      - string
+      description: 资源的 id。
+    - id: metricNames
+      type:
+      - Array
+      description: 度量值的名称。
+    - id: metricNamespace
+      type:
+      - string
+      description: 度量值的命名空间。
+      optional: true
+    - id: timeGrain
+      type:
+      - azure-monitoring.TimeSpan
+      description: 指标时间粒度。
+    - id: startTime
+      type:
+      - Date
+      description: 开始时间 （采用 UTC) 的度量值。
+    - id: endTime
+      type:
+      - Date
+      description: 结束时间 （采用 UTC) 的度量值。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: 响应流中。
+    content: function list(resourceId, metricNames, metricNamespace, timeGrain, startTime, endTime, callback)
+  langs:
+  - js

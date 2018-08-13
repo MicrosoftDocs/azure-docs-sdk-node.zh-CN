@@ -1,0 +1,150 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ef1453429407ca3e3ebea6b93b11c0054bdc3c0b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049324"
+items:
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: ManagementCertificateOperations
+  summary: >-
+    管理证书，也称为订阅证书，可用于对尝试连接到与你的 Azure 订阅关联的资源的客户端进行身份验证。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj154124.aspx有关详细信息)__注意__： 此类的实例自动创建的实例 [ManagementClient] {@link ManagementClient ~ ManagementClient}。
+
+    请参阅 [managementCertificates] {@link ManagementClient ~ ManagementClient #managementCertificates}。
+
+    初始化 ManagementCertificateOperations 类的新实例。
+  fullName: azure-asm-mgmt.ManagementCertificateOperations
+  type: Class
+  children:
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  langs:
+  - js
+- id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: ManagementCertificateOperations(client)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations.ManagementCertificateOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedManagementClient
+      description: 对服务客户端的引用。
+    content: new ManagementCertificateOperations(client)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: create(parameters, callback)
+  summary: 创建管理证书操作将证书添加到管理证书的列表。 管理证书，也称为订阅证书，对客户端尝试连接到与你的 Azure 订阅关联的资源进行身份验证。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj154123.aspx有关详细信息)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-mgmt.ManagementCertificateCreateParameters
+      description: 创建管理证书操作提供的参数。
+    - id: parameters.publicKey
+      type:
+      - azure-asm-mgmt.buffer
+      description: Base-64 的表示形式的管理证书公钥。
+      optional: true
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: 唯一地标识管理证书指纹。
+      optional: true
+    - id: parameters.data
+      type:
+      - azure-asm-mgmt.buffer
+      description: 证书的 base-64 编码 cer 格式的原始数据。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: 响应流中。
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: deleteMethod(thumbprint, callback)
+  summary: 删除管理证书操作从管理证书的列表中删除证书。 管理证书，也称为订阅证书，对客户端尝试连接到与你的 Azure 订阅关联的资源进行身份验证。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj154127.aspx有关详细信息)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.deleteMethod(thumbprint, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: thumbprint
+      type:
+      - string
+      description: 要删除的证书的指纹值。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: 响应流中。
+    content: function deleteMethod(thumbprint, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: get(thumbprint, callback)
+  summary: 获取管理证书操作检索有关指定指纹的管理证书的信息。 管理证书，也称为订阅证书，对客户端尝试连接到与你的 Azure 订阅关联的资源进行身份验证。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj154131.aspx有关详细信息)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.get(thumbprint, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: thumbprint
+      type:
+      - string
+      description: 要检索其信息的证书的指纹值。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: 响应流中。
+    content: function get(thumbprint, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: list(callback)
+  summary: 列出管理证书操作列出并返回有关所有与指定的订阅相关联的管理证书的基本信息。 管理证书，也称为订阅证书，对客户端尝试连接到与你的 Azure 订阅关联的资源进行身份验证。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj154105.aspx有关详细信息)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: 响应流中。
+    content: function list(callback)
+  langs:
+  - js

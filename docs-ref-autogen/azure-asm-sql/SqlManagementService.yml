@@ -1,0 +1,312 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 77aef5d0743a622fd3d80f0c573f3b211f9e89f8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049428"
+items:
+- uid: azure-asm-sql.SqlManagementService
+  id: azure-asm-sql.SqlManagementService
+  name: SqlManagementService
+  summary: SqlManagementService 对象允许您以 Microsoft Azure SQL 数据库服务器上执行管理操作。
+  fullName: azure-asm-sql.SqlManagementService
+  type: Class
+  children:
+  - azure-asm-sql.SqlManagementService.#ctor
+  - azure-asm-sql.SqlManagementService#listServers
+  - azure-asm-sql.SqlManagementService#deleteServer
+  - azure-asm-sql.SqlManagementService#createServer
+  - azure-asm-sql.SqlManagementService#listServerFirewallRules
+  - azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createServerFirewallRule
+  - azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createDatabase
+  langs:
+  - js
+- id: azure-asm-sql.SqlManagementService.#ctor
+  uid: azure-asm-sql.SqlManagementService.#ctor
+  parent: azure-asm-sql.SqlManagementService
+  name: SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  fullName: azure-asm-sql.SqlManagementService.SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  summary: 创建一个新的 SqlManagementService 对象
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrSubscriptionId
+      type:
+      - string
+      description: 配置中，该帐户或连接字符串的订阅 ID
+    - id: authentication
+      type:
+      - object
+      description: >-
+        客户端身份验证对象。
+
+        必须使用密钥文件/certfile 或 keyvalue/certvalue 提供管理证书服务请求进行身份验证。
+    - id: authentication.keyfile
+      type:
+      - string
+      description: 包含将 PEM 文件的路径编码密钥
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: 包含将 PEM 文件的路径编码的证书
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: 一个字符串，包含将 PEM 编码的密钥
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: 一个字符串，包含将 PEM 编码的证书
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: 要重写默认值的主机选项。
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: 管理终结点。
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: 若要使用 API 版本。
+      optional: true
+    content: new SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServers
+  id: azure-asm-sql.SqlManagementService#listServers
+  parent: azure-asm-sql.SqlManagementService
+  name: listServers(callback)
+  summary: 列出可用的 SQL 数据库服务器。
+  fullName: azure-asm-sql.SqlManagementService.listServers(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 如果出现错误; 将包含的信息否则为`results`将包含可用的 SQL 数据库服务器信息的列表。
+                                                               `response` 将包含与此操作相关的信息。
+    content: function listServers(callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServer
+  id: azure-asm-sql.SqlManagementService#deleteServer
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServer(name, callback)
+  summary: 删除 SQL 数据库服务器。
+  fullName: azure-asm-sql.SqlManagementService.deleteServer(name, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: SQL Server 名称。
+    - id: callback
+      type:
+      - function
+      description: '`error` 如果出现错误; 将包含的信息否则为`response`将包含与此操作相关的信息。'
+    content: function deleteServer(name, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServer
+  id: azure-asm-sql.SqlManagementService#createServer
+  parent: azure-asm-sql.SqlManagementService
+  name: createServer(administratorLogin, administratorLoginPassword, location, callback)
+  summary: 创建 SQL 数据库服务器。
+  fullName: azure-asm-sql.SqlManagementService.createServer(administratorLogin, administratorLoginPassword, location, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: administratorLogin
+      type:
+      - string
+      description: 管理员的登录名。
+    - id: administratorLoginPassword
+      type:
+      - string
+      description: 管理员的密码。
+    - id: location
+      type:
+      - string
+      description: 服务器的位置。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 如果出现错误; 将包含的信息否则为`server`将包含新的服务器信息。
+                                                                   `response` 将包含与此操作相关的信息。
+    content: function createServer(administratorLogin, administratorLoginPassword, location, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  id: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  parent: azure-asm-sql.SqlManagementService
+  name: listServerFirewallRules(serverName, callback)
+  summary: 列出了 SQL 数据库服务器防火墙规则。
+  fullName: azure-asm-sql.SqlManagementService.listServerFirewallRules(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 服务器名称。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 如果出现错误; 将包含的信息否则为`results`将包含防火墙规则。
+                                                                  `response` 将包含与此操作相关的信息。
+    content: function listServerFirewallRules(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServerFirewallRule(serverName, ruleName, callback)
+  summary: 删除 SQL 数据库服务器防火墙规则。
+  fullName: azure-asm-sql.SqlManagementService.deleteServerFirewallRule(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 服务器名称。
+    - id: ruleName
+      type:
+      - string
+      description: 规则名称。
+    - id: callback
+      type:
+      - function
+      description: '`error` 如果出现错误; 将包含的信息否则为`response`将包含与此操作相关的信息。'
+    content: function deleteServerFirewallRule(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: 创建 SQL 数据库服务器防火墙规则。
+  fullName: azure-asm-sql.SqlManagementService.createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 服务器名称。
+    - id: ruleName
+      type:
+      - string
+      description: 规则名称。
+    - id: startIPAddress
+      type:
+      - string
+      description: 规则的起始 IP 地址。
+    - id: endIPAddress
+      type:
+      - string
+      description: 该规则结束 IP 地址。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 如果出现错误; 将包含的信息否则为`rule`将包含新的规则信息。
+                                                               `response` 将包含与此操作相关的信息。
+    content: function createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: 更新 SQL 数据库服务器防火墙规则。
+  fullName: azure-asm-sql.SqlManagementService.updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 服务器名称。
+    - id: ruleName
+      type:
+      - string
+      description: 规则名称。
+    - id: startIPAddress
+      type:
+      - string
+      description: 规则的起始 IP 地址。
+    - id: endIPAddress
+      type:
+      - string
+      description: 该规则结束 IP 地址。
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 如果出现错误; 将包含的信息否则为`rule`将包含已更新的规则信息。
+                                                               `response` 将包含与此操作相关的信息。
+    content: function updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createDatabase
+  id: azure-asm-sql.SqlManagementService#createDatabase
+  parent: azure-asm-sql.SqlManagementService
+  name: createDatabase(serverName, databaseName, options, callback)
+  summary: 创建新的数据库。
+  fullName: azure-asm-sql.SqlManagementService.createDatabase(serverName, databaseName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: 服务器名称
+    - id: databaseName
+      type:
+      - string
+      description: 要创建数据库的名称
+    - id: options
+      type:
+      - object
+      description: 创建选项。
+      optional: true
+    - id: options.edition
+      type:
+      - string
+      description: Web 或者 Business。
+      optional: true
+    - id: options.maxsize
+      type:
+      - number
+      description: 以 GB 为单位的最大数据库大小的默认值为 1 表示 web、 业务的 10，仅限特定值是有效
+      optional: true
+    - id: options.collation
+      type:
+      - string
+      description: sql 排序规则名称
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` 如果出现错误; 将包含的信息否则为`createResult`将包含新的数据库信息。
+                                                                                       `response` 将包含与此操作相关的信息。
+    content: function createDatabase(serverName, databaseName, options, callback)
+  langs:
+  - js

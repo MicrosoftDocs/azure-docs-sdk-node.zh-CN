@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 345d4aba2a62e1299bfbc896e1d6304120aa5fc2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40052507"
+items:
+- uid: '@azure/cosmos.ConsistencyLevel'
+  name: ConsistencyLevel
+  fullName: ConsistencyLevel
+  children:
+  - '@azure/cosmos.ConsistencyLevel.BoundedStaleness'
+  - '@azure/cosmos.ConsistencyLevel.ConsistentPrefix'
+  - '@azure/cosmos.ConsistencyLevel.Eventual'
+  - '@azure/cosmos.ConsistencyLevel.Session'
+  - '@azure/cosmos.ConsistencyLevel.Strong'
+  langs:
+  - typeScript
+  type: enum
+  summary: >
+    表示支持 Azure Cosmos DB 客户端操作的一致性级别。<br>
+
+    请求的 ConsistencyLevel 必须匹配或可为数据库帐户预配比它更弱。
+
+    一致性级别。
+
+    按照强度的一致性级别是强、 BoundedStaleness、 会话、 一致前缀和最终。
+
+
+    请参阅https://aka.ms/cosmos-consistency的更详细的文档上的一致性级别。
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.BoundedStaleness'
+  name: BoundedStaleness
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    有限的过期保证读取不太过时。
+
+    这可以配置基于的操作 (MaxStalenessPrefix) 或时间 (MaxStalenessIntervalInSeconds) 数。
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.ConsistentPrefix'
+  name: ConsistentPrefix
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    ConsistentPrefix 一致性保证读取会返回不带间隔的所有写入一些前缀。
+
+    所有写入将都会最终都可供读取。
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Eventual'
+  name: Eventual
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    最终一致性保证读取会返回写入的子集。
+
+    所有写入将都会最终都可供读取。
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Session'
+  name: Session
+  children: []
+  langs:
+  - typeScript
+  summary: 会话一致性保证单调读取 (永远不会读取旧的数据，则新，则旧试)，（写入操作进行排序） 的单调写入和读取 （写入会对您读取立即可见） 内任何写入单一会话。
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Strong'
+  name: Strong
+  children: []
+  langs:
+  - typeScript
+  summary: 强一致性保证读取操作始终返回上次写入的值。
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'

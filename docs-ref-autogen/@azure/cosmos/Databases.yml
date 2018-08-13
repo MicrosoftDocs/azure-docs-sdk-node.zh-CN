@@ -1,0 +1,193 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e9c942e1c15d221260137950bb93d6df02a16008
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40050238"
+items:
+- uid: '@azure/cosmos.Databases'
+  name: Databases
+  fullName: Databases
+  children:
+  - '@azure/cosmos.Databases.create'
+  - '@azure/cosmos.Databases.createIfNotExists'
+  - '@azure/cosmos.Databases.constructor'
+  - '@azure/cosmos.Databases.query'
+  - '@azure/cosmos.Databases.readAll'
+  langs:
+  - typeScript
+  type: class
+  summary: 用于创建新数据库和读取/查询的所有数据库操作
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Databases.create'
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    发送请求用于创建数据库。
+
+    数据库管理用户、 权限和一组的容器。
+
+    每个 Azure Cosmos DB 数据库帐户是能够支持多个独立的命名数据库，使用的数据库的数据的逻辑容器。
+
+
+    每个数据库包含的一个或多个容器，其中每个又包含一个或多个文档。 由于数据库是一种管理资源，Service Master Key 将要求才能访问和成功完成使用用户 Api 的任何操作。
+  syntax:
+    content: 'function create(body: DatabaseDefinition, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - '@azure/cosmos.DatabaseDefinition'
+      description: <xref:DatabaseDefinition> ，它表示<xref:Database>创建。
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        用于设置选项，如响应页面大小、 继续标记，等等。
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.DatabaseResponse>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Databases.createIfNotExists'
+  name: createIfNotExists
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    检查是否存在的数据库，并不会创建它。
+
+    这将使基于中的 id 的读取的操作`body`，如果它找不到，创建操作。
+
+    数据库管理用户、 权限和一组的容器。
+
+    每个 Azure Cosmos DB 数据库帐户是能够支持多个独立的命名数据库，使用的数据库的数据的逻辑容器。
+
+
+    每个数据库包含的一个或多个容器，其中每个又包含一个或多个文档。 由于数据库是一种管理资源，Service Master Key 将要求才能访问和成功完成使用用户 Api 的任何操作。
+  syntax:
+    content: 'function createIfNotExists(body: DatabaseDefinition, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - '@azure/cosmos.DatabaseDefinition'
+      description: <xref:DatabaseDefinition> ，它表示<xref:Database>创建。
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: "\n"
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.DatabaseResponse>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Databases.constructor'
+  name: Databases
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new Databases(client: CosmosClient)'
+    parameters:
+    - id: client
+      type:
+      - '@azure/cosmos.CosmosClient'
+      description: ''
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Databases.query'
+  name: query
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 查询所有数据库。
+  syntax:
+    content: 'function query(query: string | SqlQuerySpec, options?: FeedOptions)'
+    parameters:
+    - id: query
+      type:
+      - string | @azure/cosmos.SqlQuerySpec
+      description: 查询操作的配置。 请参阅<xref:SqlQuerySpec>有关如何配置查询的详细信息。
+    - id: options
+      type:
+      - '@azure/cosmos.FeedOptions'
+      description: 用于设置选项，如响应页面大小、 继续标记，等等。
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.QueryIterator<@azure/cosmos.DatabaseDefinition>'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Databases.readAll'
+  name: readAll
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 读取所有数据库。
+  syntax:
+    content: 'function readAll(options?: FeedOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.FeedOptions'
+      description: 用于设置选项，如响应页面大小、 继续标记，等等。
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.QueryIterator<@azure/cosmos.DatabaseDefinition>'
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.CosmosClient'
+  spec.typeScript:
+  - name: CosmosClient
+    fullName: CosmosClient
+    uid: '@azure/cosmos.CosmosClient'
+- uid: '@azure/cosmos.DatabaseDefinition'
+  spec.typeScript:
+  - name: DatabaseDefinition
+    fullName: DatabaseDefinition
+    uid: '@azure/cosmos.DatabaseDefinition'
+- uid: '@azure/cosmos.RequestOptions'
+  spec.typeScript:
+  - name: RequestOptions
+    fullName: RequestOptions
+    uid: '@azure/cosmos.RequestOptions'
+- uid: Promise<@azure/cosmos.DatabaseResponse>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: DatabaseResponse
+    fullName: DatabaseResponse
+    uid: '@azure/cosmos.DatabaseResponse'
+  - name: '>'
+    fullName: '>'
+- uid: string | @azure/cosmos.SqlQuerySpec
+  spec.typeScript:
+  - name: 'string | '
+    fullName: 'string | '
+  - name: SqlQuerySpec
+    fullName: SqlQuerySpec
+    uid: '@azure/cosmos.SqlQuerySpec'
+- uid: '@azure/cosmos.FeedOptions'
+  spec.typeScript:
+  - name: FeedOptions
+    fullName: FeedOptions
+    uid: '@azure/cosmos.FeedOptions'
+- uid: '@azure/cosmos.QueryIterator<@azure/cosmos.DatabaseDefinition>'
+  spec.typeScript:
+  - name: QueryIterator
+    fullName: QueryIterator
+    uid: '@azure/cosmos.QueryIterator'
+  - name: <
+    fullName: <
+  - name: DatabaseDefinition
+    fullName: DatabaseDefinition
+    uid: '@azure/cosmos.DatabaseDefinition'
+  - name: '>'
+    fullName: '>'

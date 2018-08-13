@@ -1,0 +1,462 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 47fb552dc4e24e8539ed68bdaf36b926954e4978
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40049948"
+items:
+- uid: azure-arm-search.QueryKeys
+  name: QueryKeys
+  fullName: QueryKeys
+  children:
+  - azure-arm-search.QueryKeys.create
+  - azure-arm-search.QueryKeys.create_2
+  - azure-arm-search.QueryKeys.create_1
+  - azure-arm-search.QueryKeys.createWithHttpOperationResponse
+  - azure-arm-search.QueryKeys.deleteMethod
+  - azure-arm-search.QueryKeys.deleteMethod_1
+  - azure-arm-search.QueryKeys.deleteMethod_2
+  - azure-arm-search.QueryKeys.deleteMethodWithHttpOperationResponse
+  - azure-arm-search.QueryKeys.listBySearchService
+  - azure-arm-search.QueryKeys.listBySearchService_1
+  - azure-arm-search.QueryKeys.listBySearchService_2
+  - azure-arm-search.QueryKeys.listBySearchServiceWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 生成指定的搜索服务的新查询密钥。 你可以创建每个服务最多 50 个查询密钥。
+  syntax:
+    content: 'function create(resourceGroupName: string, searchServiceName: string, name: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        与指定的资源组关联的 Azure 搜索服务的名称。
+    - id: name
+      type:
+      - string
+      description: >
+        新的查询 API 密钥的名称。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-search.QueryKey>
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.create_2
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 生成指定的搜索服务的新查询密钥。 你可以创建每个服务最多 50 个查询密钥。
+  syntax:
+    content: 'function create(resourceGroupName: string, searchServiceName: string, name: string, options: function, callback: ServiceCallback<QueryKey>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.QueryKey>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.QueryKey>
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.create_1
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 生成指定的搜索服务的新查询密钥。 你可以创建每个服务最多 50 个查询密钥。
+  syntax:
+    content: 'function create(resourceGroupName: string, searchServiceName: string, name: string, callback: ServiceCallback<QueryKey>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.QueryKey>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.QueryKey>
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.createWithHttpOperationResponse
+  name: createWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 生成指定的搜索服务的新查询密钥。 你可以创建每个服务最多 50 个查询密钥。
+  syntax:
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, name: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        与指定的资源组关联的 Azure 搜索服务的名称。
+    - id: name
+      type:
+      - string
+      description: >
+        新的查询 API 密钥的名称。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-search.QueryKey>>
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.deleteMethod
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 删除指定的查询密钥。 与不同的管理密钥，不重新生成查询密钥。 正在重新生成查询密钥的过程是删除并重新创建它。
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, key: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        与指定的资源组关联的 Azure 搜索服务的名称。
+    - id: key
+      type:
+      - string
+      description: >
+        要删除查询密钥。 查询密钥是由值，不是按名称标识的。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.deleteMethod_1
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 删除指定的查询密钥。 与不同的管理密钥，不重新生成查询密钥。 正在重新生成查询密钥的过程是删除并重新创建它。
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, key: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: key
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.deleteMethod_2
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 删除指定的查询密钥。 与不同的管理密钥，不重新生成查询密钥。 正在重新生成查询密钥的过程是删除并重新创建它。
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, key: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: key
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 删除指定的查询密钥。 与不同的管理密钥，不重新生成查询密钥。 正在重新生成查询密钥的过程是删除并重新创建它。
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, key: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        与指定的资源组关联的 Azure 搜索服务的名称。
+    - id: key
+      type:
+      - string
+      description: >
+        要删除查询密钥。 查询密钥是由值，不是按名称标识的。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.listBySearchService
+  name: listBySearchService
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 返回给定的 Azure 搜索服务的查询 API 密钥的列表。
+  syntax:
+    content: 'function listBySearchService(resourceGroupName: string, searchServiceName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        与指定的资源组关联的 Azure 搜索服务的名称。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-search.ListQueryKeysResult>
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.listBySearchService_1
+  name: listBySearchService
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 返回给定的 Azure 搜索服务的查询 API 密钥的列表。
+  syntax:
+    content: 'function listBySearchService(resourceGroupName: string, searchServiceName: string, callback: ServiceCallback<ListQueryKeysResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.ListQueryKeysResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.ListQueryKeysResult>
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.listBySearchService_2
+  name: listBySearchService
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 返回给定的 Azure 搜索服务的查询 API 密钥的列表。
+  syntax:
+    content: 'function listBySearchService(resourceGroupName: string, searchServiceName: string, options: function, callback: ServiceCallback<ListQueryKeysResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: searchServiceName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-search.ListQueryKeysResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-search.ListQueryKeysResult>
+  package: azure-arm-search
+- uid: azure-arm-search.QueryKeys.listBySearchServiceWithHttpOperationResponse
+  name: listBySearchServiceWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 返回给定的 Azure 搜索服务的查询 API 密钥的列表。
+  syntax:
+    content: 'function listBySearchServiceWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+    - id: searchServiceName
+      type:
+      - string
+      description: >
+        与指定的资源组关联的 Azure 搜索服务的名称。
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-search.ListQueryKeysResult>>
+  package: azure-arm-search
+references:
+- uid: Promise<azure-arm-search.QueryKey>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: QueryKey
+    fullName: QueryKey
+    uid: azure-arm-search.QueryKey
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-search.QueryKey>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: QueryKey
+    fullName: QueryKey
+    uid: azure-arm-search.QueryKey
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-search.QueryKey>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: QueryKey
+    fullName: QueryKey
+    uid: azure-arm-search.QueryKey
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-search.ListQueryKeysResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ListQueryKeysResult
+    fullName: ListQueryKeysResult
+    uid: azure-arm-search.ListQueryKeysResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-search.ListQueryKeysResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ListQueryKeysResult
+    fullName: ListQueryKeysResult
+    uid: azure-arm-search.ListQueryKeysResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-search.ListQueryKeysResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ListQueryKeysResult
+    fullName: ListQueryKeysResult
+    uid: azure-arm-search.ListQueryKeysResult
+  - name: '>>'
+    fullName: '>>'

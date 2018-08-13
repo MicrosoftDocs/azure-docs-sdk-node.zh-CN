@@ -1,0 +1,345 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 62975cd56b2bf89e7158907fce365b3a6cebdf51
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40052630"
+items:
+- uid: azure-iothub.Client
+  name: Client
+  fullName: Client
+  children:
+  - azure-iothub.Client.Callback
+  - azure-iothub.Client.close
+  - azure-iothub.Client.fromConnectionString
+  - azure-iothub.Client.fromSharedAccessSignature
+  - azure-iothub.Client.getFeedbackReceiver
+  - azure-iothub.Client.getFileNotificationReceiver
+  - azure-iothub.Client.invokeDeviceMethod
+  - azure-iothub.Client.invokeDeviceMethod_1
+  - azure-iothub.Client.open
+  - azure-iothub.Client.send
+  - azure-iothub.Client.setRetryPolicy
+  - azure-iothub.Client.TransportCtor
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    IoT 中心服务客户端用于与通过 Azure IoT 中心的设备进行通信。
+
+    它允许 SDK 用户：
+      - 向设备发送设备到云 （也称为命令）： 命令在 IoT 中心排队，并仅在连接设备时以异步方式传递。 仅有 50 个命令可以将排入队列每台设备。
+      - 对设备调用直接方法 (可仅当当前连接的设备： 它是与设备通信的同步方法)
+      - 侦听由前面的命令的设备发送的反馈消息。
+      - 侦听来自设备的文件上传通知。
+    用户应创建新<xref:azure-iothub.Client>实例通过调用工厂方法之一[fromConnectionString](xref:azure-iothub.Client.fromConnectionString)或[fromSharedAccessSignature](xref:azure-iothub.Client.fromSharedAccessSignature)，以创建 IoT 中心服务客户端。
+  extends:
+    name: EventEmitter
+  package: azure-iothub
+- uid: azure-iothub.Client.Callback
+  name: Callback
+  fullName: Callback<T>
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n"
+  package: azure-iothub
+- uid: azure-iothub.Client.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 关闭到 IoT 中心的连接。
+  syntax:
+    content: 'function close(done?: Callback<Disconnected>)'
+    parameters:
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<Disconnected>
+      description: >
+        要完成该操作时调用的函数。 `done` 将传递的错误对象参数，将为 null，如果操作成功完成。
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Client.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 从使用默认传输协议 (Amqp) 或第二个参数中指定的给定的连接字符串创建 IoT 中心服务客户端。
+  syntax:
+    content: 'static function fromConnectionString(connStr: string, transportCtor?: Client.TransportCtor)'
+    parameters:
+    - id: connStr
+      type:
+      - string
+      description: 连接字符串，其中封装一个 IoT 中心的"设备连接"权限。
+    - id: transportCtor
+      type:
+      - azure-iothub.Client.TransportCtor
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-iothub.Client
+  package: azure-iothub
+- uid: azure-iothub.Client.fromSharedAccessSignature
+  name: fromSharedAccessSignature
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 从使用默认传输协议 (Amqp) 或其中一个指定第二个参数中给定的共享的访问签名创建 IoT 中心服务客户端。
+  syntax:
+    content: 'static function fromSharedAccessSignature(sharedAccessSignature: string, transportCtor?: Client.TransportCtor)'
+    parameters:
+    - id: sharedAccessSignature
+      type:
+      - string
+      description: 共享的访问签名，其中封装一个 IoT 中心的"服务连接"权限。
+    - id: transportCtor
+      type:
+      - azure-iothub.Client.TransportCtor
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-iothub.Client
+  package: azure-iothub
+- uid: azure-iothub.Client.getFeedbackReceiver
+  name: getFeedbackReceiver
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 返回一个 AmqpReceiver 对象用来发出事件时由客户端接收新反馈消息。
+  syntax:
+    content: 'function getFeedbackReceiver(done: Callback<ServiceReceiver>)'
+    parameters:
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<azure-iothub.Client.ServiceReceiver>
+      description: >
+        要完成该操作时调用的函数。 `done` 调用时将使用两个参数： 错误对象 （可以为 null） 和 AmqpReceiver 对象。
+  package: azure-iothub
+- uid: azure-iothub.Client.getFileNotificationReceiver
+  name: getFileNotificationReceiver
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 返回一个 AmqpReceiver 对象用来发出事件时由客户端接收新文件上传通知。
+  syntax:
+    content: 'function getFileNotificationReceiver(done: Callback<ServiceReceiver>)'
+    parameters:
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<azure-iothub.Client.ServiceReceiver>
+      description: >
+        要完成该操作时调用的函数。 `done` 调用时将使用两个参数： 错误对象 （可以为 null） 和 AmqpReceiver 对象。
+  package: azure-iothub
+- uid: azure-iothub.Client.invokeDeviceMethod
+  name: invokeDeviceMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 调用特定设备或模块上的方法。
+  syntax:
+    content: 'function invokeDeviceMethod(deviceId: string, methodParams: DeviceMethodParams, done?: Callback<any>)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: 为现有的设备标识的标识符。
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<any>
+      description: >
+        要使用方法执行的结果调用的回调。
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Client.invokeDeviceMethod_1
+  name: invokeDeviceMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 调用特定设备或模块上的方法。
+  syntax:
+    content: 'function invokeDeviceMethod(deviceId: string, moduleId: string, methodParams: DeviceMethodParams, done?: Callback<any>)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: ''
+    - id: moduleId
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<any>
+      description: ''
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Client.open
+  name: open
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 将打开与 IoT 中心的连接。
+  syntax:
+    content: 'function open(done?: Callback<Connected>)'
+    parameters:
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<Connected>
+      description: >
+        要完成该操作时调用的函数。 `done` 将传递的错误对象参数，将为 null，如果操作成功完成。
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Client.send
+  name: send
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 将消息发送到设备。
+  syntax:
+    content: 'function send(deviceId: string, message: Message | Message.BufferConvertible, done?: Callback<MessageEnqueued>)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: 为现有的设备标识的标识符。
+    - id: message
+      type:
+      - Message | Message.BufferConvertible
+      description: >-
+        要发送到设备的消息正文。
+
+        如果`message`的类型不是[消息](xref:azure-iot-common.Message)，会将其转换。
+    - id: done
+      type:
+      - azure-iothub.Client.Callback<MessageEnqueued>
+      description: >
+        要完成该操作时调用的函数。 `done` 调用时将使用两个参数： 错误对象 （可以为 null） 和适用于日志记录或调试特定于传输的响应对象。
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Client.setRetryPolicy
+  name: setRetryPolicy
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 设置客户端用来重试网络操作的策略。
+  syntax:
+    content: 'function setRetryPolicy(policy: RetryPolicy)'
+    parameters:
+    - id: policy
+      type:
+      - RetryPolicy
+      description: >
+        用来重试操作 （例如策略。 打开、 发送、 等等）。
+
+        SDK 随附了两个"内置"策略： ExponentialBackoffWithJitter （默认值） 和 NoRetry （若要取消任何形式的重试）。 只要它实现的两种方法，用户还可以传递其自己的对象:-shouldRetry(err: Error)： 布尔： 指示是否应根据错误类型-nextRetryTimeout 重试操作 (retryCount： 数量，限制： 布尔值): 数目： 返回在过去的尝试次数 (retryCount) 以及这一事实的错误是出现限制错误，还是不基于时间重试之前等待 （以毫秒为单位）。
+  package: azure-iothub
+- uid: azure-iothub.Client.TransportCtor
+  name: TransportCtor
+  fullName: TransportCtor
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n"
+  package: azure-iothub
+references:
+- uid: azure-iothub.Client.Callback<MessageAbandoned>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <MessageAbandoned>
+    fullName: <MessageAbandoned>
+- uid: azure-iothub.Client.Callback<MessageCompleted>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <MessageCompleted>
+    fullName: <MessageCompleted>
+- uid: azure-iothub.Client.Callback<MessageRejected>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <MessageRejected>
+    fullName: <MessageRejected>
+- uid: azure-iothub.Client.Callback<Connected>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <Connected>
+    fullName: <Connected>
+- uid: azure-iothub.Client.Callback<Disconnected>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <Disconnected>
+    fullName: <Disconnected>
+- uid: azure-iothub.Client.Callback<azure-iothub.Client.ServiceReceiver>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <
+    fullName: <
+  - name: ServiceReceiver
+    fullName: ServiceReceiver
+    uid: azure-iothub.Client.ServiceReceiver
+  - name: '>'
+    fullName: '>'
+- uid: azure-iothub.Client.Callback<MessageEnqueued>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <MessageEnqueued>
+    fullName: <MessageEnqueued>
+- uid: azure-iothub.DeviceMethodParams
+  spec.typeScript:
+  - name: DeviceMethodParams
+    fullName: DeviceMethodParams
+    uid: azure-iothub.DeviceMethodParams
+- uid: azure-iothub.Client.Callback<any>
+  spec.typeScript:
+  - name: Callback
+    fullName: Callback
+    uid: azure-iothub.Client.Callback
+  - name: <any>
+    fullName: <any>
+- uid: azure-iothub.Client.TransportCtor
+  spec.typeScript:
+  - name: TransportCtor
+    fullName: TransportCtor
+    uid: azure-iothub.Client.TransportCtor
+- uid: azure-iothub.Client
+  spec.typeScript:
+  - name: Client
+    fullName: Client
+    uid: azure-iothub.Client

@@ -1,0 +1,650 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c6ef9703a9adb8cdfbe177c9633b510ca7807f87
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049336"
+items:
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: VirtualMachineVMImageOperations
+  summary: >-
+    服务管理 API 包括用于管理你的订阅中的虚拟机模板的操作。
+
+    __请注意__： 此类的实例自动创建的实例 [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}。
+
+    请参阅 [virtualMachineVMImages] {@link ComputeManagementClient ~ ComputeManagementClient #virtualMachineVMImages}。
+
+    初始化 VirtualMachineVMImageOperations 类的新实例。
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations
+  type: Class
+  children:
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.#ctor
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginCreating
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginDeleting
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginSharing
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginUnreplicating
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#create
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#deleteMethod
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#getDetails
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#list
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#replicate
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#share
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#unreplicate
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.#ctor
+  uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.#ctor
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: VirtualMachineVMImageOperations(client)
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations.VirtualMachineVMImageOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: 对服务客户端的引用。
+    content: new VirtualMachineVMImageOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginCreating
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginCreating
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: beginCreating(parameters, callback)
+  summary: 创建 VM 映像的操作创建一个 VM 映像的映像存储库中。  (请参阅http://msdn.microsoft.com/en-us/library/azure/dn775054.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.beginCreating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineVMImageCreateParameters
+      description: 参数提供给虚拟机的 VM 映像创建操作。
+    - id: parameters.name
+      type:
+      - string
+      description: 获取或设置图像的名称。
+    - id: parameters.label
+      type:
+      - string
+      description: 获取或设置图像的标识符。
+    - id: parameters.description
+      type:
+      - string
+      description: 获取或设置图像的说明。
+      optional: true
+    - id: parameters.oSDiskConfiguration
+      type:
+      - azure-asm-compute.OSDiskConfigurationCreateParameters
+      description: 获取或设置与图像关联的操作系统磁盘的配置信息。
+    - id: parameters.oSDiskConfiguration.hostCaching
+      type:
+      - string
+      description: 获取或设置用于读/写效率的操作系统磁盘 blob 的平台缓存行为。
+      optional: true
+    - id: parameters.oSDiskConfiguration.oSState
+      type:
+      - string
+      description: 获取或设置在图像中的操作系统的状态。
+    - id: parameters.oSDiskConfiguration.os
+      type:
+      - string
+      description: 获取或设置在图像中的操作系统。
+    - id: parameters.oSDiskConfiguration.mediaLink
+      type:
+      - string
+      description: 获取或设置在 Windows Azure 存储中 blob 的位置。 Blob 位置属于操作调用中的 < n-i d > 值指定的订阅中的存储帐户。
+    - id: parameters.dataDiskConfigurations
+      type:
+      - array
+      description: 指定与映像关联的数据磁盘的配置信息。 VM 映像可能不具有与之关联的数据磁盘。
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: 获取或设置映像的语言。
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: 获取或设置一个值，可以使用组 VM 映像。
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: 获取或设置要用于从 VM 映像创建的虚拟机的大小。
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: 获取或设置与图像关联的最终用户许可协议。 此元素的值是一个字符串，但建议将值设置为指向 EULA 的 URL。
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: 获取或设置针对在管理门户中的映像显示的图标的 URI。
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: 获取或设置针对在管理门户中的映像显示的小图标的 URI。
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: 获取或设置指向包含隐私策略的文档与映像相关的 URI。
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: 获取或设置图像添加到映像存储库时的日期。
+      optional: true
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: 获取或设置是否应在门户中列出 VM 映像。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginCreating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginDeleting
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginDeleting
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: beginDeleting(vmImageName, deleteFromStorage, callback)
+  summary: 开始删除虚拟机映像操作删除指定的虚拟机映像。
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.beginDeleting(vmImageName, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: 要删除的虚拟机映像的名称。
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: 指定图像的源 blob 还应从存储删除。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginDeleting(vmImageName, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginSharing
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginSharing
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: beginSharing(vmImageName, permission, callback)
+  summary: 共享已复制的 VM 映像。 此操作仅适用于发布服务器。 您必须注册为使用 Windows Azure，以便能够调用此映像发布者。
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.beginSharing(vmImageName, permission, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: 若要共享的虚拟机映像的名称。
+    - id: permission
+      type:
+      - string
+      description: 共享权限： 公共、 msdn 或私有。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginSharing(vmImageName, permission, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginUnreplicating
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginUnreplicating
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: beginUnreplicating(vmImageName, callback)
+  summary: Unreplicate 向多个目标位置的 VM 映像。 此操作仅适用于发布服务器。 您必须注册为使用 Windows Azure，以便能够调用此映像发布者。 注意： 该操作中删除的用户 VM 映像已发布的副本。 它不会删除实际用户 VM 映像。 若要删除实际用户 VM 映像，发布服务器上将需要调用删除 VM 映像。
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.beginUnreplicating(vmImageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: 若要复制的虚拟机映像的名称。 注意： VM 映像名称应为用户 VM 映像，不是已发布的 VM 映像名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function beginUnreplicating(vmImageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#create
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#create
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: create(parameters, callback)
+  summary: 创建 VM 映像的操作创建一个 VM 映像的映像存储库中。  (请参阅http://msdn.microsoft.com/en-us/library/azure/dn775054.aspx有关详细信息)
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineVMImageCreateParameters
+      description: 提供对创建的虚拟机映像操作的参数。
+    - id: parameters.name
+      type:
+      - string
+      description: 获取或设置图像的名称。
+    - id: parameters.label
+      type:
+      - string
+      description: 获取或设置图像的标识符。
+    - id: parameters.description
+      type:
+      - string
+      description: 获取或设置图像的说明。
+      optional: true
+    - id: parameters.oSDiskConfiguration
+      type:
+      - azure-asm-compute.OSDiskConfigurationCreateParameters
+      description: 获取或设置与图像关联的操作系统磁盘的配置信息。
+    - id: parameters.oSDiskConfiguration.hostCaching
+      type:
+      - string
+      description: 获取或设置用于读/写效率的操作系统磁盘 blob 的平台缓存行为。
+      optional: true
+    - id: parameters.oSDiskConfiguration.oSState
+      type:
+      - string
+      description: 获取或设置在图像中的操作系统的状态。
+    - id: parameters.oSDiskConfiguration.os
+      type:
+      - string
+      description: 获取或设置在图像中的操作系统。
+    - id: parameters.oSDiskConfiguration.mediaLink
+      type:
+      - string
+      description: 获取或设置在 Windows Azure 存储中 blob 的位置。 Blob 位置属于操作调用中的 < n-i d > 值指定的订阅中的存储帐户。
+    - id: parameters.dataDiskConfigurations
+      type:
+      - array
+      description: 指定与映像关联的数据磁盘的配置信息。 VM 映像可能不具有与之关联的数据磁盘。
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: 获取或设置映像的语言。
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: 获取或设置一个值，可以使用组 VM 映像。
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: 获取或设置要用于从 VM 映像创建的虚拟机的大小。
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: 获取或设置与图像关联的最终用户许可协议。 此元素的值是一个字符串，但建议将值设置为指向 EULA 的 URL。
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: 获取或设置针对在管理门户中的映像显示的图标的 URI。
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: 获取或设置针对在管理门户中的映像显示的小图标的 URI。
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: 获取或设置指向包含隐私策略的文档与映像相关的 URI。
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: 获取或设置图像添加到映像存储库时的日期。
+      optional: true
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: 获取或设置是否应在门户中列出 VM 映像。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#deleteMethod
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#deleteMethod
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: deleteMethod(vmImageName, deleteFromStorage, callback)
+  summary: 删除虚拟机映像操作删除指定的虚拟机映像。
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.deleteMethod(vmImageName, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: 要删除的虚拟机映像的名称。
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: 指定图像的源 blob 还应从存储删除。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function deleteMethod(vmImageName, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#getDetails
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#getDetails
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: getDetails(vmImageName, callback)
+  summary: 获取 VMImage 的属性和它复制的详细信息。 此操作仅适用于发布服务器。 您必须注册为使用 Windows Azure，以便能够调用此映像发布者。
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.getDetails(vmImageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: 若要复制的虚拟机映像的名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function getDetails(vmImageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#list
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#list
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: list(callback)
+  summary: 列出虚拟机映像操作检索虚拟机映像的列表。
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#replicate
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#replicate
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: replicate(vmImageName, parameters, callback)
+  summary: 将 VM 映像复制到多个目标位置。 此操作仅适用于发布服务器。 您必须注册为使用 Windows Azure，以便能够调用此映像发布者。
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.replicate(vmImageName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: 若要复制的虚拟机映像的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineVMImageReplicateParameters
+      description: 提供对复制虚拟机映像操作的参数。
+    - id: parameters.targetLocations
+      type:
+      - array
+      description: 复制目标区域位置。注意： 在请求正文中的区域不是累加性的。 如果 VM 映像已复制到区域 A、 B 和 C，并发出请求以将复制到区域 A 和 D，虚拟机映像将保留在区域 A 中，将在区域 D 中，复制并将未复制从区域 B 和 c。
+    - id: parameters.computeImageAttributes
+      type:
+      - azure-asm-compute.ComputeImageAttributes
+      description: 计算映像属性。 此映像 useablein Microsoft.Compute Provider.The 组合的值提供的产品/服务、 Sku 和版本所需的元数据必须是唯一的发布服务器。
+    - id: parameters.computeImageAttributes.offer
+      type:
+      - string
+      description: 获取或设置产品/服务的定义的发布服务器名称。允许的字符是大写或小写字母、 数字、 hypen(-)，句点 （.）。允许的最大长度为 64 个字符。
+    - id: parameters.computeImageAttributes.sku
+      type:
+      - string
+      description: 获取或设置 Sku 的定义的发布服务器名称。 允许的字符是大写或小写字母、 数字、 hypen(-)，句点 （.）。 允许的最大长度为 64 个字符。
+    - id: parameters.computeImageAttributes.version
+      type:
+      - string
+      description: 获取或设置定义的发布服务器版本的映像。 允许的字符是数字和句点。 格式： <MajorVersion>。<MinorVersion>。<Patch>示例:"1.0.0"或"1.1.0"3 版本编号，以遵循标准的大部分 RPs.See http://semver.org/。
+    - id: parameters.marketplaceImageAttributes
+      type:
+      - azure-asm-compute.MarketplaceImageAttributes
+      description: 应用商店映像属性。元数据所必需的虚拟机 Marketplace 源自 imagesto 为 Microsoft.Compute 提供程序中。
+      optional: true
+    - id: parameters.marketplaceImageAttributes.publisherId
+      type:
+      - string
+      description: 获取或设置发布服务器 id。这是要用于映像的 Microsoft.Compute 提供程序发布者名称。
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan
+      type:
+      - azure-asm-compute.Plan
+      description: 获取或设置的任何第三方项目采购上下文。
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.name
+      type:
+      - string
+      description: 获取或设置第三方项目表示采购的用户定义的名称。
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.publisher
+      type:
+      - string
+      description: 获取或设置正在 bought.E.g 的第三方项目的发布服务器。 Contoso。
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.product
+      type:
+      - string
+      description: 获取或设置正在 procured.E.g 的第三方项目。 Northwind。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function replicate(vmImageName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#share
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#share
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: share(vmImageName, permission, callback)
+  summary: 共享已复制的 VM 映像。 此操作仅适用于发布服务器。 您必须注册为使用 Windows Azure，以便能够调用此映像发布者。
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.share(vmImageName, permission, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: 若要共享的虚拟机映像的名称。
+    - id: permission
+      type:
+      - string
+      description: 共享权限： 公共、 msdn 或私有。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function share(vmImageName, permission, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#unreplicate
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#unreplicate
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: unreplicate(vmImageName, callback)
+  summary: Unreplicate 向多个目标位置的 VM 映像。 此操作仅适用于发布服务器。 您必须注册为使用 Windows Azure，以便能够调用此映像发布者。 注意： 该操作中删除的用户 VM 映像已发布的副本。 它不会删除实际用户 VM 映像。 若要删除实际用户 VM 映像，发布服务器上将需要调用删除 VM 映像。
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.unreplicate(vmImageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: 若要复制的虚拟机映像的名称。 注意： VM 映像名称应为用户 VM 映像，不是已发布的 VM 映像名称。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function unreplicate(vmImageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#update
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#update
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: update(imageName, parameters, callback)
+  summary: 更新 VM 映像操作更新 VM 映像的映像存储库中。
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.update(imageName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: 要更新虚拟机映像的名称。
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineVMImageUpdateParameters
+      description: 提供给更新虚拟机映像操作的参数。
+    - id: parameters.label
+      type:
+      - string
+      description: 指定要更新的映像的友好名称。 此操作不能用于更新由 Azure 平台提供的映像。
+    - id: parameters.oSDiskConfiguration
+      type:
+      - azure-asm-compute.OSDiskConfigurationUpdateParameters
+      description: 可选。 OS 磁盘配置。
+      optional: true
+    - id: parameters.oSDiskConfiguration.hostCaching
+      type:
+      - string
+      description: 指定读/写效率的操作系统磁盘 blob 的平台缓存行为。
+      optional: true
+    - id: parameters.dataDiskConfigurations
+      type:
+      - array
+      description: 可选。 数据磁盘配置。
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: 指定 OS 映像的说明。
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: 指定映像的语言。
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: 指定一个值，可以使用 OS 映像进行分组。
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: 指定要用于从 OS 映像创建虚拟机的大小。
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: 指定与映像相关联的最终用户许可协议。 此元素的值是一个字符串，但建议将值设置为指向 EULA 的 URL。
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: 指定针对管理门户中的映像显示的图标的 URI。
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: 指定在 Azure 管理门户中呈现图像时显示的小图标的 URI。
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: 指定指向包含隐私策略的文档与 OS 映像相关的 URI。
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: 指定 OS 映像添加到映像存储库时的日期。
+      optional: true
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: 可选。 True 或 False。
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: 响应流中。
+    content: function update(imageName, parameters, callback)
+  langs:
+  - js

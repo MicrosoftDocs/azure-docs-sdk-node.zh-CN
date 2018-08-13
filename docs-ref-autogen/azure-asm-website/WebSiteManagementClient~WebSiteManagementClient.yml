@@ -1,0 +1,168 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f2b1902892f0ceca8dec5071fab2387fa7ac8172
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40049765"
+items:
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: WebSiteManagementClient
+  summary: 网站管理 API 提供了一组 RESTful 与 Windows Azure 网站服务来管理您的网站进行交互的 web 服务。 该 API 具有捕获最终用户与 Windows Azure 网站服务之间的关系的实体。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/dn166981.aspx有关详细信息) 初始化 WebSiteManagementClient 类的新实例。
+  fullName: azure-asm-website.WebSiteManagementClient
+  type: Class
+  children:
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.#ctor
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webHostingPlans
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSites
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSpaces
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#getOperationStatus
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#registerSubscription
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription
+  langs:
+  - js
+- id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.#ctor
+  uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.#ctor
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: WebSiteManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-website.WebSiteManagementClient.WebSiteManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: 获取唯一标识 Microsoft Azure 订阅的订阅凭据。 订阅 ID 格式为每个服务调用的 URI 的一部分。
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: 获取用于作为基础云服务的所有请求的 URI。
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new WebSiteManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webHostingPlans
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webHostingPlans
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: webHostingPlans
+  summary: 提供的实例[WebHostingPlanOperations](-WebHostingPlanOperations.html)对象。
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.webHostingPlans
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: webHostingPlans
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSites
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSites
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: webSites
+  summary: 提供的实例[WebSiteOperations](-WebSiteOperations.html)对象。
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.webSites
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: webSites
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSpaces
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSpaces
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: webSpaces
+  summary: 提供的实例[WebSpaceOperations](-WebSpaceOperations.html)对象。
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.webSpaces
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: webSpaces
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#getOperationStatus
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#getOperationStatus
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: getOperationStatus(webSpaceName, siteName, operationId, callback)
+  summary: 获取操作状态操作将返回指定操作的状态。 调用一个长时间运行的操作之后, 可以调用 Get Operation Status 以确定该操作具有成功、 失败，操作已超时，或仍在进行中。  (请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx有关详细信息)
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.getOperationStatus(webSpaceName, siteName, operationId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: 该操作的目标位置的网站的 web 空间的名称。
+    - id: siteName
+      type:
+      - string
+      description: 该操作的目标位置的站点的名称。
+    - id: operationId
+      type:
+      - string
+      description: 想要跟踪该操作的操作 ID。长时间运行操作的响应正文中的 ID 字段中返回的操作 ID。
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: 响应流中。
+    content: function getOperationStatus(webSpaceName, siteName, operationId, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#registerSubscription
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#registerSubscription
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: registerSubscription(callback)
+  summary: 注册订阅以使用 Azure 网站。
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.registerSubscription(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: 响应流中。
+    content: function registerSubscription(callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: unregisterSubscription(callback)
+  summary: 取消注册订阅以使用 Azure 网站。
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.unregisterSubscription(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: 响应流中。
+    content: function unregisterSubscription(callback)
+  langs:
+  - js

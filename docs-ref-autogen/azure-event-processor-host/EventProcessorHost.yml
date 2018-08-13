@@ -1,0 +1,366 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 903c391913659600a4f98ef1b3541f52745d7dfe
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40055077"
+items:
+- uid: azure-event-processor-host.EventProcessorHost
+  name: EventProcessorHost
+  fullName: EventProcessorHost
+  children:
+  - azure-event-processor-host.EventProcessorHost.autoCheckpoint
+  - azure-event-processor-host.EventProcessorHost.closed
+  - azure-event-processor-host.EventProcessorHost.consumerGroup
+  - azure-event-processor-host.EventProcessorHost.createFromAadTokenCredentials
+  - azure-event-processor-host.EventProcessorHost.createFromConnectionString
+  - azure-event-processor-host.EventProcessorHost.createHostName
+  - azure-event-processor-host.EventProcessorHost.error
+  - azure-event-processor-host.EventProcessorHost.constructor
+  - azure-event-processor-host.EventProcessorHost.getHubRuntimeInformation
+  - azure-event-processor-host.EventProcessorHost.getPartitionIds
+  - azure-event-processor-host.EventProcessorHost.getPartitionInformation
+  - azure-event-processor-host.EventProcessorHost.hostName
+  - azure-event-processor-host.EventProcessorHost.message
+  - azure-event-processor-host.EventProcessorHost.opened
+  - azure-event-processor-host.EventProcessorHost.start
+  - azure-event-processor-host.EventProcessorHost.stop
+  langs:
+  - typeScript
+  type: class
+  summary: 描述事件处理程序主机以处理从事件中心。
+  extends:
+    name: EventEmitter
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.autoCheckpoint
+  name: autoCheckpoint
+  fullName: autoCheckpoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'autoCheckpoint: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.closed
+  name: closed
+  fullName: closed
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 关闭： 触发只要一个分区将失去其租用和已停止接收，或者当主机关闭的情况下。 PartitionContext 和关闭原因被传递到事件侦听器。
+  syntax:
+    content: 'static closed: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.consumerGroup
+  name: consumerGroup
+  fullName: consumerGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 提供使用者的事件处理程序主机组名称。
+  syntax:
+    content: 'consumerGroup: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createFromAadTokenCredentials
+  name: createFromAadTokenCredentials
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 创建从事件中心处理事件的新主机。
+  syntax:
+    content: 'static function createFromAadTokenCredentials(hostName: string, storageConnectionString: string, namespace: string, eventHubPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: EventProcessorOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        处理器主机的名称。 必须是唯一的。
+
+        强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。 可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。
+    - id: storageConnectionString
+      type:
+      - string
+      description: 用于租用和检查点的 Azure 存储帐户的连接字符串。 示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net
+    - id: namespace
+      type:
+      - string
+      description: >-
+        事件中心的完全限定的域名。
+
+        示例:"{your sb namespace}。 servicebus.windows.net"
+    - id: eventHubPath
+      type:
+      - string
+      description: 事件中心的名称。
+    - id: credentials
+      type:
+      - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+      description: AAD 令牌凭据。 它可以是以下之一： ApplicationTokenCredentials |UserTokenCredentials |DeviceTokenCredentials |MSITokenCredentials。
+    - id: options
+      type:
+      - azure-event-processor-host.EventProcessorOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-processor-host.EventProcessorHost
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createFromConnectionString
+  name: createFromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 创建从事件中心处理事件的新主机。
+  syntax:
+    content: 'static function createFromConnectionString(hostName: string, storageConnectionString: string, eventHubConnectionString: string, options?: ConnectionStringBasedOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        处理器主机的名称。 必须是唯一的。
+
+        强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。 可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。
+    - id: storageConnectionString
+      type:
+      - string
+      description: 用于租用和检查点的 Azure 存储帐户的连接字符串。 示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net
+    - id: eventHubConnectionString
+      type:
+      - string
+      description: >-
+        要从接收的事件中心的连接字符串。
+
+        示例: Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = 我-SA 的名称;SharedAccessKey = 我 SA 密钥
+    - id: options
+      type:
+      - azure-event-processor-host.ConnectionStringBasedOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-processor-host.EventProcessorHost
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createHostName
+  name: createHostName
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 用于生成唯一的主机名称的便捷方法。
+  syntax:
+    content: 'static function createHostName(prefix?: string)'
+    parameters:
+    - id: prefix
+      type:
+      - string
+      description: ''
+      optional: true
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.error
+  name: error
+  fullName: error
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 在给定的接收者上发生错误时，将触发错误:。 EventHubsError 或一般的错误对象将传递的事件侦听器。
+  syntax:
+    content: 'static error: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.constructor
+  name: EventProcessorHost
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: 创建从事件中心处理事件的新主机。
+  syntax:
+    content: 'new EventProcessorHost(hostName: string, storageConnectionString: string, eventHubClient: EventHubClient, options?: EventProcessorOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        处理器主机的名称。 必须是唯一的。
+
+        强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。 可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。
+    - id: storageConnectionString
+      type:
+      - string
+      description: 用于租用和检查点的 Azure 存储帐户的连接字符串。 示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net
+    - id: eventHubClient
+      type:
+      - EventHubClient
+      description: 事件中心客户端
+    - id: options
+      type:
+      - azure-event-processor-host.EventProcessorOptions
+      description: ''
+      optional: true
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getHubRuntimeInformation
+  name: getHubRuntimeInformation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 提供事件中心运行时信息。
+  syntax:
+    content: function getHubRuntimeInformation()
+    parameters: []
+    return:
+      type:
+      - Promise<EventHubRuntimeInformation>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getPartitionIds
+  name: getPartitionIds
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 提供了一系列 partitionIds。
+  syntax:
+    content: function getPartitionIds()
+    parameters: []
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getPartitionInformation
+  name: getPartitionInformation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 提供有关指定的分区信息。
+  syntax:
+    content: 'function getPartitionInformation(partitionId: string | number)'
+    parameters:
+    - id: partitionId
+      type:
+      - string | number
+      description: >
+        分区的分区信息是必需的 ID。
+    return:
+      type:
+      - Promise<EventHubPartitionRuntimeInformation>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.hostName
+  name: hostName
+  fullName: hostName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 提供事件处理程序主机的主机名。
+  syntax:
+    content: 'hostName: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.message
+  name: message
+  fullName: message
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 每当在给定分区传入的消息，消息： 触发。 PartitionContext 和 EventData 将传递到事件侦听器。
+  syntax:
+    content: 'static message: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.opened
+  name: opened
+  fullName: opened
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 打开： 触发每当分区获取其租约。 PartitionContext 传递给事件侦听器。
+  syntax:
+    content: 'static opened: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.start
+  name: start
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 启动事件处理程序主机，提取分区的列表、 （可选） 筛选它们，以及尝试获取 （筛选） 集上的租约。 对于每个成功的租约，将从 blob 获取详细信息并开始接收方在离开的位置之前的点。
+  syntax:
+    content: 'function start(options?: StartEPHOptions)'
+    parameters:
+    - id: options
+      type:
+      - azure-event-processor-host.StartEPHOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.stop
+  name: stop
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 停止处理消息从 EventProcessorHost。
+  syntax:
+    content: function stop()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-processor-host
+references:
+- uid: azure-event-processor-host.EventProcessorOptions
+  spec.typeScript:
+  - name: EventProcessorOptions
+    fullName: EventProcessorOptions
+    uid: azure-event-processor-host.EventProcessorOptions
+- uid: azure-event-processor-host.StartEPHOptions
+  spec.typeScript:
+  - name: StartEPHOptions
+    fullName: StartEPHOptions
+    uid: azure-event-processor-host.StartEPHOptions
+- uid: azure-event-processor-host.EventProcessorHost
+  spec.typeScript:
+  - name: EventProcessorHost
+    fullName: EventProcessorHost
+    uid: azure-event-processor-host.EventProcessorHost
+- uid: azure-event-processor-host.ConnectionStringBasedOptions
+  spec.typeScript:
+  - name: ConnectionStringBasedOptions
+    fullName: ConnectionStringBasedOptions
+    uid: azure-event-processor-host.ConnectionStringBasedOptions

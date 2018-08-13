@@ -1,0 +1,195 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 73f78523bc9d6043fd2f037ef98f58f71c167428
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40055125"
+items:
+- uid: azure-iothub.Twin
+  name: Twin
+  fullName: Twin
+  children:
+  - azure-iothub.Twin.deviceId
+  - azure-iothub.Twin.etag
+  - azure-iothub.Twin.get
+  - azure-iothub.Twin.moduleId
+  - azure-iothub.Twin.properties
+  - azure-iothub.Twin.tags
+  - azure-iothub.Twin.toJSON
+  - azure-iothub.Twin.constructor
+  - azure-iothub.Twin.update
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    设备孪生是设备的文档，用于描述存储通过 Azure IoT 中心，即使设备处于脱机状态也是设备的可用的状态。
+
+    它构建大约 3 个部分：
+      - 标记： 键/值对从服务端只能访问
+      - 所需属性： 更新服务和接收的设备
+      - 报告的属性： 更新设备和服务接收。
+    请注意，尽管存在这种可能，但属性所需和报告属性并不一定要匹配的逻辑来同步这两个集合，如有必要，为从左到 SDK 的用户。
+
+
+    有关详细信息请参阅[了解设备孪生](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins)。
+
+
+    若要获取的建议<xref:azure-iothub.Twin>特定的设备是使用<xref:azure-iothub.Registry.getTwin>方法。
+  package: azure-iothub
+- uid: azure-iothub.Twin.deviceId
+  name: deviceId
+  fullName: deviceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 设备标识注册表中存在与孪生，关联的设备标识的唯一标识符。
+  syntax:
+    content: 'deviceId: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Twin.etag
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 在开放式并发用于避免多个并行版本的设备孪生的标记。
+  syntax:
+    content: 'etag: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Twin.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 从 IoT 中心服务获取此设备孪生的最新版本。
+  syntax:
+    content: 'function get(done: Callback<Twin>)'
+    parameters:
+    - id: done
+      type:
+      - Callback<azure-iothub.Twin>
+      description: >
+        要完成该操作时调用的函数。 `done` 调用时将使用三个参数： 错误对象 （可以为 null），[孪生](xref:azure-iothub.Twin)对象表示创建的设备标识和适用于日志记录或调试特定于传输的响应对象。
+  package: azure-iothub
+- uid: azure-iothub.Twin.moduleId
+  name: moduleId
+  fullName: moduleId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 设备标识注册表中存在关联和孪生的模块的模块标识符。
+  optional: true
+  syntax:
+    content: 'moduleId?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Twin.properties
+  name: properties
+  fullName: properties
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 属性所需和报告属性 dictionnaries (分别在`properties.desired`和`properties.reported`)。
+  syntax:
+    content: 'properties: function'
+    return:
+      type:
+      - function
+  package: azure-iothub
+- uid: azure-iothub.Twin.tags
+  name: tags
+  fullName: tags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 键/值对的集合，仅在服务端上可用，可在查询中使用以查找特定设备。
+  syntax:
+    content: 'tags: function'
+    return:
+      type:
+      - function
+  package: azure-iothub
+- uid: azure-iothub.Twin.toJSON
+  name: toJSON
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: function toJSON()
+    parameters: []
+    return:
+      type:
+      - object
+  package: azure-iothub
+- uid: azure-iothub.Twin.constructor
+  name: Twin
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: 实例化新<xref:azure-iothub.Twin>。 获取一个新的建议的方式<xref:azure-iothub.Twin>对象是使用<xref:azure-iothub.Registry.getTwin>方法。
+  syntax:
+    content: 'new Twin(device: DeviceIdentity | string, registryClient: Registry)'
+    parameters:
+    - id: device
+      type:
+      - DeviceIdentity | string
+      description: 设备标识符字符串或描述设备的对象。 如果一个对象，它必须包含 deviceId 属性。
+    - id: registryClient
+      type:
+      - azure-iothub.Registry
+      description: >
+        用于执行 REST API 调用的 HTTP 注册表客户端。
+  package: azure-iothub
+- uid: azure-iothub.Twin.update
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 使用作为参数提供的修补程序更新设备孪生。
+  syntax:
+    content: 'function update(patch: any, done: Callback<Twin>)'
+    parameters:
+    - id: patch
+      type:
+      - any
+      description: 对象，其中包含要应用到此设备孪生的新值。
+    - id: done
+      type:
+      - Callback<azure-iothub.Twin>
+      description: >
+        要完成该操作时调用的函数。 `done` 调用时将使用三个参数： 错误对象 （可以为 null），[孪生](xref:azure-iothub.Twin)对象表示创建的设备标识和适用于日志记录或调试特定于传输的响应对象。
+  package: azure-iothub
+references:
+- uid: azure-iothub.Registry
+  spec.typeScript:
+  - name: Registry
+    fullName: Registry
+    uid: azure-iothub.Registry
+- uid: Callback<azure-iothub.Twin>
+  spec.typeScript:
+  - name: Callback<
+    fullName: Callback<
+  - name: Twin
+    fullName: Twin
+    uid: azure-iothub.Twin
+  - name: '>'
+    fullName: '>'

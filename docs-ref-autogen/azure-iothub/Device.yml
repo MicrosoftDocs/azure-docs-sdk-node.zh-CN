@@ -1,0 +1,280 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 45e395057d348269fc6d7cab9409b08fccf3fc04
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40055082"
+items:
+- uid: azure-iothub.Device
+  name: Device
+  fullName: Device
+  children:
+  - azure-iothub.Device.authentication
+  - azure-iothub.Device.capabilities
+  - azure-iothub.Device.cloudToDeviceMessageCount
+  - azure-iothub.Device.ConnectionState
+  - azure-iothub.Device.connectionState
+  - azure-iothub.Device.connectionStateUpdatedTime
+  - azure-iothub.Device.constructor
+  - azure-iothub.Device.deviceId
+  - azure-iothub.Device.DeviceStatus
+  - azure-iothub.Device.etag
+  - azure-iothub.Device.generationId
+  - azure-iothub.Device.lastActivityTime
+  - azure-iothub.Device.status
+  - azure-iothub.Device.statusReason
+  - azure-iothub.Device.statusUpdatedTime
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    创建用于设备的表示形式[设备标识注册表](xref:azure-iothub.Registry)Api。
+
+    **此类已弃用**因为[设备标识注册表](xref:azure-iothub.Registry)可以直接使用 JSON 对象包含部分说明的设备，不一定是完整的对象。 最重要是最初此类还会附带有拼写错误上`symmetricKey`属性名称 （这是 pascal 大小写而不是混合使用大小写）。 SDK 为了不中断现有代码保持围绕此类，但这将在未来的主版本更新中删除，客户应改为使用纯 JSON 对象。
+  package: azure-iothub
+  deprecated:
+    content: ''
+- uid: azure-iothub.Device.authentication
+  name: authentication
+  fullName: authentication
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 包含用于此设备进行身份验证的对称密钥。
+  optional: true
+  syntax:
+    content: 'authentication?: Authentication'
+    return:
+      type:
+      - azure-iothub.Device.Authentication
+  package: azure-iothub
+- uid: azure-iothub.Device.capabilities
+  name: capabilities
+  fullName: capabilities
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 包含此设备的功能。
+  optional: true
+  syntax:
+    content: 'capabilities?: Capabilities'
+    return:
+      type:
+      - azure-iothub.Device.Capabilities
+  package: azure-iothub
+- uid: azure-iothub.Device.cloudToDeviceMessageCount
+  name: cloudToDeviceMessageCount
+  fullName: cloudToDeviceMessageCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 等待由传递到设备的 c2d 消息数。
+  optional: true
+  syntax:
+    content: 'cloudToDeviceMessageCount?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.ConnectionState
+  name: ConnectionState
+  fullName: ConnectionState
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n\"ConnectionState\"是类型别名。 它是指\"连接\"和\"断开连接\"。"
+  package: azure-iothub
+- uid: azure-iothub.Device.connectionState
+  name: connectionState
+  fullName: connectionState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    设备是否是连接或者断开连接。 建议不要使用此属性以确定是否在设备实际连接现在尽管，因为设备连接可能已超时，IoT 中心可能尚未检测到它，或如果设备使用 HTTPS 来连接。
+
+    如果有需要监视设备连接时，建议的方式是使用[操作监视](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-operations-monitoring)中心的功能。
+  optional: true
+  syntax:
+    content: 'connectionState?: Device.ConnectionState'
+    return:
+      type:
+      - azure-iothub.Device.ConnectionState
+  package: azure-iothub
+- uid: azure-iothub.Device.connectionStateUpdatedTime
+  name: connectionStateUpdatedTime
+  fullName: connectionStateUpdatedTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 时间戳，表示最后一次`connectionState`更改。
+  optional: true
+  syntax:
+    content: 'connectionStateUpdatedTime?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.constructor
+  name: Device
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: 实例化一个新<xref:azure-iothub.Device>对象。
+  syntax:
+    content: 'new Device(jsonData?: any)'
+    parameters:
+    - id: jsonData
+      type:
+      - any
+      description: >
+        设备将被映射到对象中属性的可选 JSON 表示形式。 如果未不提供任何参数，则会将设备属性分配了默认值。
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Device.deviceId
+  name: deviceId
+  fullName: deviceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Azure IoT 中心设备注册表中存在与它的唯一设备标识符。
+  syntax:
+    content: 'deviceId: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.DeviceStatus
+  name: DeviceStatus
+  fullName: DeviceStatus
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n\"DeviceStatus\"是类型别名。 它是指\"已启用\"和\"disabled\"。"
+  package: azure-iothub
+- uid: azure-iothub.Device.etag
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 分配给此设备标识描述的弱实体标记
+  optional: true
+  syntax:
+    content: 'etag?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.generationId
+  name: generationId
+  fullName: generationId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 用于消除歧义已被删除/重新创建具有相同的设备 `deviceId`
+  optional: true
+  syntax:
+    content: 'generationId?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.lastActivityTime
+  name: lastActivityTime
+  fullName: lastActivityTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 时间戳，表示设备的上次进行身份验证、 发送一条消息，或收到的消息。
+  optional: true
+  syntax:
+    content: 'lastActivityTime?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.status
+  name: status
+  fullName: status
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "'enabled' （设备有权连接，可以发送/接收消息） 或禁用。"
+  optional: true
+  syntax:
+    content: 'status?: Device.DeviceStatus'
+    return:
+      type:
+      - azure-iothub.Device.DeviceStatus
+  package: azure-iothub
+- uid: azure-iothub.Device.statusReason
+  name: statusReason
+  fullName: statusReason
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 设备已被禁用时设置 128 个字符的字符串。
+  optional: true
+  syntax:
+    content: 'statusReason?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.statusUpdatedTime
+  name: statusUpdatedTime
+  fullName: statusUpdatedTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 时间戳，表示最后一次`status`更改。
+  optional: true
+  syntax:
+    content: 'statusUpdatedTime?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+references:
+- uid: azure-iothub.Device.X509Thumbprints
+  spec.typeScript:
+  - name: X509Thumbprints
+    fullName: X509Thumbprints
+    uid: azure-iothub.Device.X509Thumbprints
+- uid: azure-iothub.Device.Authentication
+  spec.typeScript:
+  - name: Authentication
+    fullName: Authentication
+    uid: azure-iothub.Device.Authentication
+- uid: azure-iothub.Device.Capabilities
+  spec.typeScript:
+  - name: Capabilities
+    fullName: Capabilities
+    uid: azure-iothub.Device.Capabilities
+- uid: azure-iothub.Device.ConnectionState
+  spec.typeScript:
+  - name: ConnectionState
+    fullName: ConnectionState
+    uid: azure-iothub.Device.ConnectionState
+- uid: azure-iothub.Device.DeviceStatus
+  spec.typeScript:
+  - name: DeviceStatus
+    fullName: DeviceStatus
+    uid: azure-iothub.Device.DeviceStatus

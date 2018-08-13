@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b153f4bffb05f3df1f8560dcf62917df2f9fec9d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40054634"
+items:
+- uid: azure-iothub.create
+  name: create
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: 创建进行身份验证与 Azure IoT 中心的服务连接的共享的访问签名令牌。
+  syntax:
+    content: 'function create(host: string, policy: string, key: string, expiry: string | number)'
+    parameters:
+    - id: host
+      type:
+      - string
+      description: Azure IoT 中心主机名。
+    - id: policy
+      type:
+      - string
+      description: 要用于连接到 Azure IoT 中心的策略的名称 (通常`ServiceConnect`，`iothubowner`等。请参阅[控制对 Azure IoT 中心的访问](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security)。
+    - id: key
+      type:
+      - string
+      description: 要用于创建共享的访问签名令牌的对称密钥。
+    - id: expiry
+      type:
+      - string | number
+      description: >
+        将创建的令牌的到期时间。
+    return:
+      type:
+      - SharedAccessSignature
+  package: azure-iothub

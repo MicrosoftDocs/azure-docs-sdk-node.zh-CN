@@ -1,0 +1,820 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 58107b458c3ade33556cab3851a672621000f8a8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049495"
+items:
+- uid: azure-sb.WnsService
+  id: azure-sb.WnsService
+  name: WnsService
+  summary: <span data-ttu-id="7fcf8-101">创建新的 WnsService 对象。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-101">Creates a new WnsService object.</span></span>
+  fullName: azure-sb.WnsService
+  type: Class
+  children:
+  - azure-sb.WnsService.#ctor
+  - azure-sb.WnsService#sendBadge
+  - azure-sb.WnsService#sendTile*
+  - azure-sb.WnsService#sendToast*
+  - azure-sb.WnsService#sendRaw
+  - azure-sb.WnsService#send
+  - azure-sb.WnsService#createNativeRegistration
+  - azure-sb.WnsService#createOrUpdateNativeRegistration
+  - azure-sb.WnsService#createTile*Registration
+  - azure-sb.WnsService#createToast*Registration
+  - azure-sb.WnsService#createRawTemplateRegistration
+  - azure-sb.WnsService#createOrUpdateRawTemplateRegistration
+  - azure-sb.WnsService#updateTile*Registration
+  - azure-sb.WnsService#updateToast*Registration
+  - azure-sb.WnsService#updatesRawTemplateRegistration
+  - azure-sb.WnsService#listRegistrationsByChannel
+  langs:
+  - js
+- id: azure-sb.WnsService.#ctor
+  uid: azure-sb.WnsService.#ctor
+  parent: azure-sb.WnsService
+  name: WnsService(notificationHubService)
+  fullName: azure-sb.WnsService.WnsService(notificationHubService)
+  summary: <span data-ttu-id="7fcf8-102">创建新的 WnsService 对象。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-102">Creates a new WnsService object.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: <span data-ttu-id="7fcf8-103">通知中心服务。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-103">The notification hub service.</span></span>
+    content: new WnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendBadge
+  id: azure-sb.WnsService#sendBadge
+  parent: azure-sb.WnsService
+  name: sendBadge(tags, value, optionsOrCallback, callback)
+  summary: <span data-ttu-id="7fcf8-104">发送 wns/徽章 WNS 通知。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-104">Sends a wns/badge WNS notification.</span></span>
+  fullName: azure-sb.WnsService.sendBadge(tags, value, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - array
+      - string
+      description: <span data-ttu-id="7fcf8-105">以逗号分隔列表或标记标识符的数组。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-105">Comma-separated list or array of tag identifiers.</span></span>
+    - id: value
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="7fcf8-106">数字值或一个字符串值，指定预定义锁屏提醒字形。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-106">Either a numeric value or a string value that specifies a predefined badge glyph.</span></span> <span data-ttu-id="7fcf8-107">就数字而言，此值可接受任何有效的整数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-107">Numerically, this value can accept any valid integer.</span></span> <span data-ttu-id="7fcf8-108">值为 0 清除锁屏提醒、 1-99 显示给定中的值和任何大于 99 的显示值为 99 +。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-108">A value of 0 clears the badge, values from 1-99 display as given, and any value greater than 99 displays as 99+.</span></span>
+
+        <span data-ttu-id="7fcf8-109">请参阅http://msdn.microsoft.com/en-us/library/windowsazure/br212849.aspx的更多详细信息。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-109">See http://msdn.microsoft.com/en-us/library/windowsazure/br212849.aspx for more details.</span></span>
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-110">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-110">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-111">Wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-111">The wns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-112">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-112">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendBadge(tags, value, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendTile*
+  id: azure-sb.WnsService#sendTile*
+  parent: azure-sb.WnsService
+  name: sendTile*(tags, payload, options, callback)
+  summary: <span data-ttu-id="7fcf8-113">发送磁贴通知。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-113">Sends a Tile notification.</span></span> <span data-ttu-id="7fcf8-114">提供了一个方法，请参阅中每个磁贴模板http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx(例如 sendTileSquarePeekImageAndText01)。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-114">There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx (e.g. sendTileSquarePeekImageAndText01).</span></span>
+  fullName: azure-sb.WnsService.sendTile*(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-115">单个标记或标记表达式。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-115">A single tag or tag expression.</span></span>
+    - id: payload
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-116">消息的负载。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-116">The message's payload.</span></span> <span data-ttu-id="7fcf8-117">可以传递多个负载参数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-117">Multiple payload parameters can be passed.</span></span>
+    - id: payload.text{1..n}
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-118">具有指定 id （例如文本 1) 的文本元素的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-118">Value of the text element with id specified (e.g. text1).</span></span> <span data-ttu-id="7fcf8-119">文本 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-119">The number of text\* properties depends on the tile type.</span></span>
+    - id: payload.image{1..n}src
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-120">具有指定 id (例如 image1) 的图像元素的 src 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-120">Value of the src attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-121">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-121">The number of image\* properties depends on the tile type.</span></span>
+    - id: payload.image{1..n}alt
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-122">具有指定 id (例如 image1) 的图像元素的 alt 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-122">Value of the alt attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-123">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-123">The number of image\* properties depends on the tile type.</span></span>
+    - id: payload.lang
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-124">绑定元素的语言的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-124">The value of the language of the binding element.</span></span>
+    - id: payload.type
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-125">常规 sendTile 方法中使用。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-125">Used in the general sendTile method.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-126">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-126">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-127">Wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-127">The wns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-128">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-128">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTile*(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendToast*
+  id: azure-sb.WnsService#sendToast*
+  parent: azure-sb.WnsService
+  name: sendToast*(tags, payload, options, callback)
+  summary: <span data-ttu-id="7fcf8-129">发送 Toast 通知。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-129">Sends a Toast notification.</span></span> <span data-ttu-id="7fcf8-130">提供了一个方法，请参阅中每个磁贴模板http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx(例如 sendToastText01)。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-130">There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx (e.g. sendToastText01).</span></span>
+  fullName: azure-sb.WnsService.sendToast*(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-131">单个标记或标记表达式。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-131">A single tag or tag expression.</span></span>
+    - id: payload
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-132">消息的负载。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-132">The message's payload.</span></span>
+    - id: payload.text{1..n}
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-133">具有指定 id （例如文本 1) 的文本元素的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-133">Value of the text element with id specified (e.g. text1).</span></span> <span data-ttu-id="7fcf8-134">文本 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-134">The number of text\* properties depends on the tile type.</span></span>
+    - id: payload.image{1..n}src
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-135">具有指定 id (例如 image1) 的图像元素的 src 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-135">Value of the src attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-136">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-136">The number of image\* properties depends on the tile type.</span></span>
+    - id: payload.image{1..n}alt
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-137">具有指定 id (例如 image1) 的图像元素的 alt 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-137">Value of the alt attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-138">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-138">The number of image\* properties depends on the tile type.</span></span>
+    - id: payload.lang
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-139">绑定元素的语言的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-139">The value of the language of the binding element.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-140">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-140">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-141">Wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-141">The wns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-142">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-142">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendToast*(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#sendRaw
+  id: azure-sb.WnsService#sendRaw
+  parent: azure-sb.WnsService
+  name: sendRaw(tags, payload, optionsOrCallback, callback)
+  summary: <span data-ttu-id="7fcf8-143">发送 wns/原始 WNS 通知。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-143">Sends a wns/raw WNS notification.</span></span>
+  fullName: azure-sb.WnsService.sendRaw(tags, payload, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - array
+      - string
+      description: <span data-ttu-id="7fcf8-144">以逗号分隔列表或标记标识符的数组。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-144">Comma-separated list or array of tag identifiers.</span></span>
+    - id: payload
+      type:
+      - object
+      - string
+      description: <span data-ttu-id="7fcf8-145">原始负载。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-145">The raw payload.</span></span>
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-146">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-146">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-147">Wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-147">The wns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-148">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-148">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendRaw(tags, payload, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#send
+  id: azure-sb.WnsService#send
+  parent: azure-sb.WnsService
+  name: send(tags, payload, type, optionsOrCallback, callback)
+  summary: <span data-ttu-id="7fcf8-149">发送自定义 WNS 通知。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-149">Sends a custom WNS notification.</span></span> <span data-ttu-id="7fcf8-150">如果你想要具有完全控制权限有效负载，请使用此方法。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-150">Use this method if you want to have full control on the payload.</span></span>
+  fullName: azure-sb.WnsService.send(tags, payload, type, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - array
+      - string
+      description: <span data-ttu-id="7fcf8-151">以逗号分隔列表或标记标识符的数组。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-151">Comma-separated list or array of tag identifiers.</span></span>
+    - id: payload
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-152">消息的 XML 有效负载。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-152">The message's XML payload.</span></span>
+    - id: type
+      type:
+      - string
+      description: '<span data-ttu-id="7fcf8-153">消息类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-153">The message type.</span></span> <span data-ttu-id="7fcf8-154">对应于标头 X WNS 类型 (选项包括： wns/raw、 wns/磁贴和 wns/toast)。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-154">Corresponds to header X-WNS-Type (options are: wns/raw, wns/tile and wns/toast).</span></span>'
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-155">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-155">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-156">Wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-156">The wns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-157">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-157">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function send(tags, payload, type, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createNativeRegistration
+  id: azure-sb.WnsService#createNativeRegistration
+  parent: azure-sb.WnsService
+  name: createNativeRegistration(channel, tags, optionsOrCallback, callback)
+  summary: <span data-ttu-id="7fcf8-158">创建本机 WNS 注册。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-158">Creates a native WNS registration.</span></span>
+  fullName: azure-sb.WnsService.createNativeRegistration(channel, tags, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-159">设备通道 uri。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-159">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="7fcf8-160">标记。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-160">The tags.</span></span>
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-161">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-161">The request options or callback function.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-162">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-162">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNativeRegistration(channel, tags, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createOrUpdateNativeRegistration
+  id: azure-sb.WnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.WnsService
+  name: createOrUpdateNativeRegistration(registrationId, channel, tags, optionsOrCallback, callback)
+  summary: <span data-ttu-id="7fcf8-163">创建或更新本机 WNS 注册。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-163">Creates or updates a native WNS registration.</span></span>
+  fullName: azure-sb.WnsService.createOrUpdateNativeRegistration(registrationId, channel, tags, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-164">注册标识符。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-164">The registration identifier.</span></span>
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-165">设备通道 uri。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-165">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="7fcf8-166">标记。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-166">The tags.</span></span>
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-167">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-167">The request options or callback function.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-168">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-168">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateNativeRegistration(registrationId, channel, tags, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createTile*Registration
+  id: azure-sb.WnsService#createTile*Registration
+  parent: azure-sb.WnsService
+  name: createTile*Registration(channel, tags, template, options, callback)
+  summary: <span data-ttu-id="7fcf8-169">使用磁贴模板创建新注册。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-169">Creates a new registration with a Tile template.</span></span> <span data-ttu-id="7fcf8-170">提供了一个方法，请参阅中每个磁贴模板http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx(例如 createTileSquarePeekImageAndText01Registration)。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-170">There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx (e.g. createTileSquarePeekImageAndText01Registration).</span></span>
+  fullName: azure-sb.WnsService.createTile*Registration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-171">设备通道 uri。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-171">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="7fcf8-172">标记。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-172">The tags.</span></span>
+    - id: template
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-173">注册正文模板。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-173">The body template of the registration.</span></span>
+    - id: template.text{1..n}
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-174">具有指定 id （例如文本 1) 的文本元素的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-174">Value of the text element with id specified (e.g. text1).</span></span> <span data-ttu-id="7fcf8-175">文本 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-175">The number of text\* properties depends on the tile type.</span></span>
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-176">具有指定 id (例如 image1) 的图像元素的 src 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-176">Value of the src attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-177">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-177">The number of image\* properties depends on the tile type.</span></span>
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-178">具有指定 id (例如 image1) 的图像元素的 alt 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-178">Value of the alt attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-179">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-179">The number of image\* properties depends on the tile type.</span></span>
+    - id: template.lang
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-180">绑定元素的语言的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-180">The value of the language of the binding element.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-181">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-181">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-182">Wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-182">The wns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-183">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-183">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTile*Registration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createToast*Registration
+  id: azure-sb.WnsService#createToast*Registration
+  parent: azure-sb.WnsService
+  name: createToast*Registration(channel, tags, template, options, callback)
+  summary: <span data-ttu-id="7fcf8-184">使用 Toast 模板创建新注册。提供了一个方法，请参阅中每个磁贴模板http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx(例如 createToastText01Registration)。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-184">Creates a new registration with a Toast template.There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx (e.g. createToastText01Registration).</span></span>
+  fullName: azure-sb.WnsService.createToast*Registration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-185">设备通道 uri。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-185">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="7fcf8-186">标记。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-186">The tags.</span></span>
+    - id: template
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-187">注册正文模板。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-187">The body template of the registration.</span></span>
+    - id: template.text{1..n}
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-188">具有指定 id （例如文本 1) 的文本元素的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-188">Value of the text element with id specified (e.g. text1).</span></span> <span data-ttu-id="7fcf8-189">文本 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-189">The number of text\* properties depends on the tile type.</span></span>
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-190">具有指定 id (例如 image1) 的图像元素的 src 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-190">Value of the src attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-191">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-191">The number of image\* properties depends on the tile type.</span></span>
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-192">具有指定 id (例如 image1) 的图像元素的 alt 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-192">Value of the alt attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-193">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-193">The number of image\* properties depends on the tile type.</span></span>
+    - id: template.lang
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-194">绑定元素的语言的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-194">The value of the language of the binding element.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-195">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-195">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-196">Wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-196">The wns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-197">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-197">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createToast*Registration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createRawTemplateRegistration
+  id: azure-sb.WnsService#createRawTemplateRegistration
+  parent: azure-sb.WnsService
+  name: createRawTemplateRegistration(channel, tags, template, optionsOrCallback, callback)
+  summary: '<span data-ttu-id="7fcf8-198">创建自定义模板注册。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-198">Creates a custom template registration.</span></span> <span data-ttu-id="7fcf8-199">使用此方法可以全面控制模板格式。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-199">Use this method to have full control on the template format.</span></span> <span data-ttu-id="7fcf8-200">请记住，您需要指定的 X WNS 类型标头 (可能的值： wns/toast、 wns/磁贴、 wns/徽章、 wns/raw)。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-200">Remember that you have to specify the X-WNS-Type header (possible values: wns/toast, wns/tile, wns/badge, wns/raw).</span></span>'
+  fullName: azure-sb.WnsService.createRawTemplateRegistration(channel, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-201">设备通道 uri。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-201">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="7fcf8-202">标记。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-202">The tags.</span></span>
+    - id: template
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-203">注册模板。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-203">The template for the registration.</span></span>
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-204">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-204">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.pnsCredentialName
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-205">要使用的 pns 凭据。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-205">The pns credentials to use.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-206">要包括的 wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-206">The wns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-207">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-207">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRawTemplateRegistration(channel, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#createOrUpdateRawTemplateRegistration
+  id: azure-sb.WnsService#createOrUpdateRawTemplateRegistration
+  parent: azure-sb.WnsService
+  name: createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  summary: '<span data-ttu-id="7fcf8-208">创建自定义模板注册。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-208">Creates a custom template registration.</span></span> <span data-ttu-id="7fcf8-209">使用此方法可以全面控制模板格式。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-209">Use this method to have full control on the template format.</span></span> <span data-ttu-id="7fcf8-210">请记住，您需要指定的 X WNS 类型标头 (可能的值： wns/toast、 wns/磁贴、 wns/徽章、 wns/raw)。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-210">Remember that you have to specify the X-WNS-Type header (possible values: wns/toast, wns/tile, wns/badge, wns/raw).</span></span>'
+  fullName: azure-sb.WnsService.createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-211">注册标识符。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-211">The registration identifier.</span></span>
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-212">设备通道 uri。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-212">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="7fcf8-213">标记。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-213">The tags.</span></span>
+    - id: template
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-214">注册模板。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-214">The template for the registration.</span></span>
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-215">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-215">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.pnsCredentialName
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-216">要使用的 pns 凭据。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-216">The pns credentials to use.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-217">要包括的 wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-217">The wns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-218">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-218">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#updateTile*Registration
+  id: azure-sb.WnsService#updateTile*Registration
+  parent: azure-sb.WnsService
+  name: updateTile*Registration(registrationId, channel, tags, template, options, callback)
+  summary: <span data-ttu-id="7fcf8-219">使用磁贴模板更新新注册。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-219">Updates a new registration with a Tile template.</span></span> <span data-ttu-id="7fcf8-220">提供了一个方法，请参阅中每个磁贴模板http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx(例如 createTileSquarePeekImageAndText01Registration)。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-220">There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx (e.g. createTileSquarePeekImageAndText01Registration).</span></span>
+  fullName: azure-sb.WnsService.updateTile*Registration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-221">注册标识符。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-221">The registration identifier.</span></span>
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-222">设备通道 uri。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-222">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="7fcf8-223">标记。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-223">The tags.</span></span>
+    - id: template
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-224">注册正文模板。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-224">The body template of the registration.</span></span>
+    - id: template.text{1..n}
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-225">具有指定 id （例如文本 1) 的文本元素的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-225">Value of the text element with id specified (e.g. text1).</span></span> <span data-ttu-id="7fcf8-226">文本 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-226">The number of text\* properties depends on the tile type.</span></span>
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-227">具有指定 id (例如 image1) 的图像元素的 src 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-227">Value of the src attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-228">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-228">The number of image\* properties depends on the tile type.</span></span>
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-229">具有指定 id (例如 image1) 的图像元素的 alt 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-229">Value of the alt attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-230">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-230">The number of image\* properties depends on the tile type.</span></span>
+    - id: template.lang
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-231">绑定元素的语言的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-231">The value of the language of the binding element.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-232">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-232">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-233">Wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-233">The wns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-234">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-234">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateTile*Registration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#updateToast*Registration
+  id: azure-sb.WnsService#updateToast*Registration
+  parent: azure-sb.WnsService
+  name: updateToast*Registration(registrationId, channel, tags, template, options, callback)
+  summary: <span data-ttu-id="7fcf8-235">使用 Toast 模板更新新注册。提供了一个方法，请参阅中每个磁贴模板http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx(例如 updateToastText01Registration)。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-235">Updates a new registration with a Toast template.There is a method for each tile template in see http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx (e.g. updateToastText01Registration).</span></span>
+  fullName: azure-sb.WnsService.updateToast*Registration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-236">注册标识符。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-236">The registration identifier.</span></span>
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-237">设备通道 uri。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-237">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="7fcf8-238">标记。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-238">The tags.</span></span>
+    - id: template
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-239">注册正文模板。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-239">The body template of the registration.</span></span>
+    - id: template.text{1..n}
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-240">具有指定 id （例如文本 1) 的文本元素的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-240">Value of the text element with id specified (e.g. text1).</span></span> <span data-ttu-id="7fcf8-241">文本 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-241">The number of text\* properties depends on the tile type.</span></span>
+    - id: template.image{1..n}src
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-242">具有指定 id (例如 image1) 的图像元素的 src 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-242">Value of the src attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-243">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-243">The number of image\* properties depends on the tile type.</span></span>
+    - id: template.image{1..n}alt
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-244">具有指定 id (例如 image1) 的图像元素的 alt 属性的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-244">Value of the alt attribute of the image element with id specified (e.g. image1).</span></span> <span data-ttu-id="7fcf8-245">映像 \* 属性的数目取决于磁贴类型。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-245">The number of image\* properties depends on the tile type.</span></span>
+    - id: template.lang
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-246">绑定元素的语言的值。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-246">The value of the language of the binding element.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-247">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-247">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="7fcf8-248">Wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-248">The wns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-249">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-249">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateToast*Registration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#updatesRawTemplateRegistration
+  id: azure-sb.WnsService#updatesRawTemplateRegistration
+  parent: azure-sb.WnsService
+  name: updatesRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  summary: <span data-ttu-id="7fcf8-250">更新原始模板注册。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-250">Updates a raw template registration.</span></span>
+  fullName: azure-sb.WnsService.updatesRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-251">注册标识符。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-251">The registration identifier.</span></span>
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-252">设备通道 uri。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-252">The device channel uri.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="7fcf8-253">标记。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-253">The tags.</span></span>
+    - id: template
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-254">注册模板。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-254">The template for the registration.</span></span>
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-255">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-255">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.pnsCredentialName
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-256">要使用的 pns 凭据。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-256">The pns credentials to use.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-257">要包括的 wns 标头。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-257">The wns headers to include.</span></span>
+      optional: true
+    - id: optionsOrCallback.etag
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-258">要包含的 etag。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-258">The etag to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-259">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-259">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesRawTemplateRegistration(registrationId, channel, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.WnsService#listRegistrationsByChannel
+  id: azure-sb.WnsService#listRegistrationsByChannel
+  parent: azure-sb.WnsService
+  name: listRegistrationsByChannel(channel, optionsOrCallback, callback)
+  summary: <span data-ttu-id="7fcf8-260">由通道检索注册。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-260">Retrieves a registration by channel.</span></span>
+  fullName: azure-sb.WnsService.listRegistrationsByChannel(channel, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: <span data-ttu-id="7fcf8-261">注册标识符。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-261">The registration identifier.</span></span>
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-262">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-262">The request options or callback function.</span></span> <span data-ttu-id="7fcf8-263">其他属性将作为标头传递。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-263">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: optionsOrCallback.top
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-264">指定注册，以从调用中获取的最大数目。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-264">Specifies the maximum number of registration to obtain from the call.</span></span>
+      optional: true
+    - id: optionsOrCallback.skip
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="7fcf8-265">指定注册的调用中跳过数。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-265">Specifies the number of registrations to skip in the call.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="7fcf8-266">回调函数中。</span><span class="sxs-lookup"><span data-stu-id="7fcf8-266">The callback function.</span></span>
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRegistrationsByChannel(channel, optionsOrCallback, callback)
+  langs:
+  - js

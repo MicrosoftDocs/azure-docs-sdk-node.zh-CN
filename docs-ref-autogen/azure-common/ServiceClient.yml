@@ -1,0 +1,271 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e06222d0ec191b66b287ffe6fe9148fbe92ec6f7
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049482"
+items:
+- uid: azure-common.ServiceClient
+  id: azure-common.ServiceClient
+  name: ServiceClient
+  summary: <span data-ttu-id="b8ef9-101">创建新的 ServiceClient 对象。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-101">Creates a new ServiceClient object.</span></span>
+  fullName: azure-common.ServiceClient
+  type: Class
+  children:
+  - azure-common.ServiceClient.#ctor
+  - azure-common.ServiceClient#setHost
+  - azure-common.ServiceClient#performChunkedRequest
+  - azure-common.ServiceClient#performRequest
+  - azure-common.ServiceClient#performRequestOutputStream
+  - azure-common.ServiceClient#performRequestInputStream
+  - azure-common.ServiceClient#withFilter
+  - azure-common.ServiceClient#parseMetadataHeaders
+  - azure-common.ServiceClient.isEmulated
+  langs:
+  - js
+- id: azure-common.ServiceClient.#ctor
+  uid: azure-common.ServiceClient.#ctor
+  parent: azure-common.ServiceClient
+  name: ServiceClient(host, authenticationProvider)
+  fullName: azure-common.ServiceClient.ServiceClient(host, authenticationProvider)
+  summary: <span data-ttu-id="b8ef9-102">创建新的 ServiceClient 对象。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-102">Creates a new ServiceClient object.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: host
+      type:
+      - string
+      description: <span data-ttu-id="b8ef9-103">服务主机。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-103">The host for the service.</span></span>
+    - id: authenticationProvider
+      type:
+      - object
+      description: <span data-ttu-id="b8ef9-104">身份验证提供程序对象 (例如 sharedkey / sharedkeytable / sharedaccesssignature)。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-104">The authentication provider object (e.g. sharedkey / sharedkeytable / sharedaccesssignature).</span></span>
+    content: new ServiceClient(host, authenticationProvider)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#setHost
+  id: azure-common.ServiceClient#setHost
+  parent: azure-common.ServiceClient
+  name: setHost(host)
+  summary: <span data-ttu-id="b8ef9-105">设置服务主机。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-105">Sets a host for the service.</span></span>
+  fullName: azure-common.ServiceClient.setHost(host)
+  type: Function
+  syntax:
+    parameters:
+    - id: host
+      type:
+      - string
+      description: <span data-ttu-id="b8ef9-106">服务主机。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-106">The host for the service.</span></span>
+    content: function setHost(host)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performChunkedRequest
+  id: azure-common.ServiceClient#performChunkedRequest
+  parent: azure-common.ServiceClient
+  name: performChunkedRequest(webResource, outputData, options, callback)
+  summary: <span data-ttu-id="b8ef9-107">执行通过应为输入的流的 HTTP REST 服务请求。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-107">Performs a REST service request through HTTP expecting an input stream.</span></span>
+  fullName: azure-common.ServiceClient.performChunkedRequest(webResource, outputData, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: <span data-ttu-id="b8ef9-108">要对其执行请求 webresource。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-108">The webresource on which to perform the request.</span></span>
+    - id: outputData
+      type:
+      - string
+      description: <span data-ttu-id="b8ef9-109">原始字符串形式的传出请求数据。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-109">The outgoing request data as a raw string.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b8ef9-110">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-110">The request options.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: <span data-ttu-id="b8ef9-111">超时间隔，以毫秒为单位，要用于该请求。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-111">The timeout interval, in milliseconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b8ef9-112">分块的响应回调函数。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-112">The chunked response callback function.</span></span>
+    content: function performChunkedRequest(webResource, outputData, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performRequest
+  id: azure-common.ServiceClient#performRequest
+  parent: azure-common.ServiceClient
+  name: performRequest(webResource, outputData, options, callback)
+  summary: <span data-ttu-id="b8ef9-113">执行通过应为输入的流的 HTTP REST 服务请求。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-113">Performs a REST service request through HTTP expecting an input stream.</span></span>
+  fullName: azure-common.ServiceClient.performRequest(webResource, outputData, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: <span data-ttu-id="b8ef9-114">要对其执行请求 webresource。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-114">The webresource on which to perform the request.</span></span>
+    - id: outputData
+      type:
+      - string
+      description: <span data-ttu-id="b8ef9-115">原始字符串形式的传出请求数据。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-115">The outgoing request data as a raw string.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b8ef9-116">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-116">The request options.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: <span data-ttu-id="b8ef9-117">超时间隔，以毫秒为单位，要用于该请求。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-117">The timeout interval, in milliseconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b8ef9-118">响应的回调函数。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-118">The response callback function.</span></span>
+    content: function performRequest(webResource, outputData, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performRequestOutputStream
+  id: azure-common.ServiceClient#performRequestOutputStream
+  parent: azure-common.ServiceClient
+  name: performRequestOutputStream(webResource, outputStream, options, callback)
+  summary: <span data-ttu-id="b8ef9-119">执行通过应为输入的流的 HTTP REST 服务请求。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-119">Performs a REST service request through HTTP expecting an input stream.</span></span>
+  fullName: azure-common.ServiceClient.performRequestOutputStream(webResource, outputStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: <span data-ttu-id="b8ef9-120">要对其执行请求 webresource。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-120">The webresource on which to perform the request.</span></span>
+    - id: outputStream
+      type:
+      - azure-common.Stream
+      description: <span data-ttu-id="b8ef9-121">传出的请求数据以流的形式。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-121">The outgoing request data as a stream.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b8ef9-122">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-122">The request options.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: <span data-ttu-id="b8ef9-123">超时间隔，以毫秒为单位，要用于该请求。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-123">The timeout interval, in milliseconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b8ef9-124">响应的回调函数。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-124">The response callback function.</span></span>
+    content: function performRequestOutputStream(webResource, outputStream, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performRequestInputStream
+  id: azure-common.ServiceClient#performRequestInputStream
+  parent: azure-common.ServiceClient
+  name: performRequestInputStream(webResource, outputData, inputStream, options, callback)
+  summary: <span data-ttu-id="b8ef9-125">执行通过应为输入的流的 HTTP REST 服务请求。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-125">Performs a REST service request through HTTP expecting an input stream.</span></span>
+  fullName: azure-common.ServiceClient.performRequestInputStream(webResource, outputData, inputStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: <span data-ttu-id="b8ef9-126">要对其执行请求 webresource。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-126">The webresource on which to perform the request.</span></span>
+    - id: outputData
+      type:
+      - string
+      description: <span data-ttu-id="b8ef9-127">原始字符串形式的传出请求数据。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-127">The outgoing request data as a raw string.</span></span>
+    - id: inputStream
+      type:
+      - azure-common.Stream
+      description: <span data-ttu-id="b8ef9-128">以流的形式 ingoing 响应数据。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-128">The ingoing response data as a stream.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="b8ef9-129">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-129">The request options.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: <span data-ttu-id="b8ef9-130">超时间隔，以毫秒为单位，要用于该请求。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-130">The timeout interval, in milliseconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="b8ef9-131">响应的回调函数。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-131">The response callback function.</span></span>
+    content: function performRequestInputStream(webResource, outputData, inputStream, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#withFilter
+  id: azure-common.ServiceClient#withFilter
+  parent: azure-common.ServiceClient
+  name: withFilter(filter)
+  summary: >-
+    <span data-ttu-id="b8ef9-132">将与此 ServiceClient 关联筛选操作。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-132">Associate a filtering operation with this ServiceClient.</span></span> <span data-ttu-id="b8ef9-133">筛选操作可包括日志记录、自动重试等。筛选器的操作是实现具有签名的方法的对象：</span><span class="sxs-lookup"><span data-stu-id="b8ef9-133">Filtering operations can include logging, automatically retrying, etc. Filter operations are objects that implement a method with the signature:</span></span>
+
+        "function handle (requestOptions, next)".
+
+    <span data-ttu-id="b8ef9-134">后执行预处理请求选项上，该方法需要调用"next"并且传递具有以下签名的回调： 签名：</span><span class="sxs-lookup"><span data-stu-id="b8ef9-134">After doing its preprocessing on the request options, the method needs to call "next" passing a callback with the following signature: signature:</span></span>
+
+        "function (returnObject, finalCallback, next)"
+
+    <span data-ttu-id="b8ef9-135">在此回调中，在处理 returnObject（来自对服务器的请求的响应）后，回调需要调用 next（如果它已存在）以继续处理其他筛选器或只调用 finalCallback 以结束服务调用。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-135">In this callback, and after processing the returnObject (the response from the request to the server), the callback needs to either invoke next if it exists to continue processing other filters or simply invoke finalCallback otherwise to end up the service invocation.</span></span>
+  fullName: azure-common.ServiceClient.withFilter(filter)
+  type: Function
+  syntax:
+    parameters:
+    - id: filter
+      type:
+      - Object
+      description: <span data-ttu-id="b8ef9-136">新的筛选器对象。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-136">The new filter object.</span></span>
+    return:
+      type:
+      - azure-common.ServiceClient
+      description: <span data-ttu-id="b8ef9-137">新服务的客户端应用筛选器。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-137">A new service client with the filter applied.</span></span>
+    content: function withFilter(filter)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#parseMetadataHeaders
+  id: azure-common.ServiceClient#parseMetadataHeaders
+  parent: azure-common.ServiceClient
+  name: parseMetadataHeaders(headers)
+  summary: <span data-ttu-id="b8ef9-138">从响应标头中检索元数据标头。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-138">Retrieves the metadata headers from the response headers.</span></span>
+  fullName: azure-common.ServiceClient.parseMetadataHeaders(headers)
+  type: Function
+  syntax:
+    parameters:
+    - id: headers
+      type:
+      - object
+      description: <span data-ttu-id="b8ef9-139">元数据标头。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-139">The metadata headers.</span></span>
+    return:
+      type:
+      - object
+      description: <span data-ttu-id="b8ef9-140">具有 （不带"x-ms-"前缀） 的元数据标头的对象。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-140">An object with the metadata headers (without the "x-ms-" prefix).</span></span>
+    content: function parseMetadataHeaders(headers)
+  langs:
+  - js
+- uid: azure-common.ServiceClient.isEmulated
+  id: azure-common.ServiceClient.isEmulated
+  parent: azure-common.ServiceClient
+  name: isEmulated()
+  summary: <span data-ttu-id="b8ef9-141">获取模拟的环境变量的值。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-141">Gets the value of the environment variable for is emulated.</span></span>
+  fullName: azure-common.ServiceClient.isEmulated()
+  type: Function
+  syntax:
+    return:
+      type:
+      - azure-common.bool
+      description: <span data-ttu-id="b8ef9-142">如果服务客户端运行上的模拟环境; 则为 truefalse 否则为。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-142">True if the service client is running on an emulated environment; false otherwise.</span></span>
+    content: function isEmulated()
+  langs:
+  - js
+references:
+- uid: azure-common.WebResource
+  name: WebResource
+  fullName: azure-common.WebResource
+  isExternal: false

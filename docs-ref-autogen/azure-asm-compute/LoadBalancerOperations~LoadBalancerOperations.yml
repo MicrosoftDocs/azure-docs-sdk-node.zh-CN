@@ -1,0 +1,347 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: baf17532e911689324ff3b6a43fc6937bdf430d8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049325"
+items:
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations
+  summary: >-
+    <span data-ttu-id="41eef-101">计算管理 API 包括用于管理你的订阅的负载均衡器的操作。</span><span class="sxs-lookup"><span data-stu-id="41eef-101">The Compute Management API includes operations for managing the load balancers for your subscription.</span></span>
+
+    <span data-ttu-id="41eef-102">__请注意__： 此类的实例自动创建的实例 [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="41eef-102">__NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="41eef-103">请参阅 [使用负载均衡器] {@link ComputeManagementClient ~ ComputeManagementClient #loadBalancers}。</span><span class="sxs-lookup"><span data-stu-id="41eef-103">See [loadBalancers] {@link ComputeManagementClient~ComputeManagementClient#loadBalancers}.</span></span>
+
+    <span data-ttu-id="41eef-104">初始化 LoadBalancerOperations 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="41eef-104">Initializes a new instance of the LoadBalancerOperations class.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations
+  type: Class
+  children:
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations(client)
+  fullName: azure-asm-compute.LoadBalancerOperations.LoadBalancerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="41eef-105">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="41eef-105">Reference to the service client.</span></span>
+    content: new LoadBalancerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginCreating(serviceName, deploymentName, parameters, callback)
+  summary: <span data-ttu-id="41eef-106">添加到一个内部负载均衡器的现有部署。</span><span class="sxs-lookup"><span data-stu-id="41eef-106">Add an internal load balancer to a an existing deployment.</span></span> <span data-ttu-id="41eef-107">时使用的输入终结点，内部负载均衡器将提供可用于负载平衡到此部署中角色的其他专用 VIP。</span><span class="sxs-lookup"><span data-stu-id="41eef-107">When used by an input endpoint, the internal load balancer will provide an additional private VIP that can be used for load balancing to the roles in this deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginCreating(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-108">服务的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-108">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-109">部署的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-109">The name of the deployment.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: <span data-ttu-id="41eef-110">创建负载均衡器操作提供的参数。</span><span class="sxs-lookup"><span data-stu-id="41eef-110">Parameters supplied to the Create Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="41eef-111">负载均衡器的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-111">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="41eef-112">虚拟 IP 地址 (VIP) 此负载均衡器的配置提供。</span><span class="sxs-lookup"><span data-stu-id="41eef-112">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="41eef-113">提供此负载均衡器的 VIP 的类型。</span><span class="sxs-lookup"><span data-stu-id="41eef-113">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="41eef-114">目前，支持仅 Private。</span><span class="sxs-lookup"><span data-stu-id="41eef-114">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="41eef-115">这将创建负载均衡专用 VIP 上的服务。</span><span class="sxs-lookup"><span data-stu-id="41eef-115">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-116">如果部署存在于虚拟网络中，负载均衡器必须指定该虚拟网络的子网。</span><span class="sxs-lookup"><span data-stu-id="41eef-116">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="41eef-117">管理负载均衡器的 VIP 将超出此子网的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-117">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="41eef-118">如果部署存在于虚拟网络之外，可以指定任何子网和专用 VIP 将是来自常规专用地址池的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-118">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="41eef-119">如果部署存在于虚拟网络中，可以指定负载均衡器子网从一个特定地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-119">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="41eef-120">负载均衡器 VIP 然后将此特定的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-120">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="41eef-121">如果提供的静态虚拟网络 IP 地址，则必须还指定负载均衡器的 SubnetName 元素。</span><span class="sxs-lookup"><span data-stu-id="41eef-121">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="41eef-122">如果部署存在于虚拟网络之外，可以不指定任何静态虚拟网络 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-122">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="41eef-123">响应流中。</span><span class="sxs-lookup"><span data-stu-id="41eef-123">The response stream.</span></span>
+    content: function beginCreating(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  summary: <span data-ttu-id="41eef-124">从部署中删除内部负载均衡器。</span><span class="sxs-lookup"><span data-stu-id="41eef-124">Delete an internal load balancer from the deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-125">服务的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-125">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-126">部署的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-126">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-127">负载均衡器的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-127">The name of the load balancer.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="41eef-128">响应流中。</span><span class="sxs-lookup"><span data-stu-id="41eef-128">The response stream.</span></span>
+    content: function beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: <span data-ttu-id="41eef-129">更新与现有的部署相关联的内部负载均衡器。</span><span class="sxs-lookup"><span data-stu-id="41eef-129">Updates an internal load balancer associated with an existing deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-130">服务的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-130">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-131">部署的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-131">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-132">负载均衡器的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-132">The name of the loadBalancer.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: <span data-ttu-id="41eef-133">提供给更新负载均衡器操作的参数。</span><span class="sxs-lookup"><span data-stu-id="41eef-133">Parameters supplied to the Update Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="41eef-134">负载均衡器的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-134">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="41eef-135">虚拟 IP 地址 (VIP) 此负载均衡器的配置提供。</span><span class="sxs-lookup"><span data-stu-id="41eef-135">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="41eef-136">提供此负载均衡器的 VIP 的类型。</span><span class="sxs-lookup"><span data-stu-id="41eef-136">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="41eef-137">目前，支持仅 Private。</span><span class="sxs-lookup"><span data-stu-id="41eef-137">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="41eef-138">这将创建负载均衡专用 VIP 上的服务。</span><span class="sxs-lookup"><span data-stu-id="41eef-138">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-139">如果部署存在于虚拟网络中，负载均衡器必须指定该虚拟网络的子网。</span><span class="sxs-lookup"><span data-stu-id="41eef-139">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="41eef-140">管理负载均衡器的 VIP 将超出此子网的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-140">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="41eef-141">如果部署存在于虚拟网络之外，可以指定任何子网和专用 VIP 将是来自常规专用地址池的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-141">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="41eef-142">如果部署存在于虚拟网络中，可以指定负载均衡器子网从一个特定地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-142">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="41eef-143">负载均衡器 VIP 然后将此特定的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-143">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="41eef-144">如果提供的静态虚拟网络 IP 地址，则必须还指定负载均衡器的 SubnetName 元素。</span><span class="sxs-lookup"><span data-stu-id="41eef-144">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="41eef-145">如果部署存在于虚拟网络之外，可以不指定任何静态虚拟网络 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-145">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="41eef-146">响应流中。</span><span class="sxs-lookup"><span data-stu-id="41eef-146">The response stream.</span></span>
+    content: function beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: create(serviceName, deploymentName, parameters, callback)
+  summary: <span data-ttu-id="41eef-147">添加到一个内部负载均衡器的现有部署。</span><span class="sxs-lookup"><span data-stu-id="41eef-147">Add an internal load balancer to a an existing deployment.</span></span> <span data-ttu-id="41eef-148">时使用的输入终结点，内部负载均衡器将提供可用于负载平衡到此部署中角色的其他专用 VIP。</span><span class="sxs-lookup"><span data-stu-id="41eef-148">When used by an input endpoint, the internal load balancer will provide an additional private VIP that can be used for load balancing to the roles in this deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.create(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-149">服务的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-149">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-150">部署的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-150">The name of the deployment.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: <span data-ttu-id="41eef-151">创建负载均衡器操作提供的参数。</span><span class="sxs-lookup"><span data-stu-id="41eef-151">Parameters supplied to the Create Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="41eef-152">负载均衡器的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-152">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="41eef-153">虚拟 IP 地址 (VIP) 此负载均衡器的配置提供。</span><span class="sxs-lookup"><span data-stu-id="41eef-153">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="41eef-154">提供此负载均衡器的 VIP 的类型。</span><span class="sxs-lookup"><span data-stu-id="41eef-154">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="41eef-155">目前，支持仅 Private。</span><span class="sxs-lookup"><span data-stu-id="41eef-155">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="41eef-156">这将创建负载均衡专用 VIP 上的服务。</span><span class="sxs-lookup"><span data-stu-id="41eef-156">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-157">如果部署存在于虚拟网络中，负载均衡器必须指定该虚拟网络的子网。</span><span class="sxs-lookup"><span data-stu-id="41eef-157">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="41eef-158">管理负载均衡器的 VIP 将超出此子网的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-158">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="41eef-159">如果部署存在于虚拟网络之外，可以指定任何子网和专用 VIP 将是来自常规专用地址池的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-159">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="41eef-160">如果部署存在于虚拟网络中，可以指定负载均衡器子网从一个特定地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-160">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="41eef-161">负载均衡器 VIP 然后将此特定的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-161">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="41eef-162">如果提供的静态虚拟网络 IP 地址，则必须还指定负载均衡器的 SubnetName 元素。</span><span class="sxs-lookup"><span data-stu-id="41eef-162">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="41eef-163">如果部署存在于虚拟网络之外，可以不指定任何静态虚拟网络 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-163">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="41eef-164">响应流中。</span><span class="sxs-lookup"><span data-stu-id="41eef-164">The response stream.</span></span>
+    content: function create(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  summary: <span data-ttu-id="41eef-165">从部署中删除内部负载均衡器。</span><span class="sxs-lookup"><span data-stu-id="41eef-165">Delete an internal load balancer from the deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-166">服务的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-166">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-167">部署的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-167">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-168">负载均衡器的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-168">The name of the load balancer.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="41eef-169">响应流中。</span><span class="sxs-lookup"><span data-stu-id="41eef-169">The response stream.</span></span>
+    content: function deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: <span data-ttu-id="41eef-170">更新与现有的部署相关联的内部负载均衡器。</span><span class="sxs-lookup"><span data-stu-id="41eef-170">Updates an internal load balancer associated with an existing deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-171">服务的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-171">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-172">部署的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-172">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-173">负载均衡器的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-173">The name of the loadBalancer.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: <span data-ttu-id="41eef-174">提供给更新负载均衡器操作的参数。</span><span class="sxs-lookup"><span data-stu-id="41eef-174">Parameters supplied to the Update Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="41eef-175">负载均衡器的名称。</span><span class="sxs-lookup"><span data-stu-id="41eef-175">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="41eef-176">虚拟 IP 地址 (VIP) 此负载均衡器的配置提供。</span><span class="sxs-lookup"><span data-stu-id="41eef-176">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="41eef-177">提供此负载均衡器的 VIP 的类型。</span><span class="sxs-lookup"><span data-stu-id="41eef-177">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="41eef-178">目前，支持仅 Private。</span><span class="sxs-lookup"><span data-stu-id="41eef-178">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="41eef-179">这将创建负载均衡专用 VIP 上的服务。</span><span class="sxs-lookup"><span data-stu-id="41eef-179">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="41eef-180">如果部署存在于虚拟网络中，负载均衡器必须指定该虚拟网络的子网。</span><span class="sxs-lookup"><span data-stu-id="41eef-180">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="41eef-181">管理负载均衡器的 VIP 将超出此子网的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-181">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="41eef-182">如果部署存在于虚拟网络之外，可以指定任何子网和专用 VIP 将是来自常规专用地址池的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-182">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="41eef-183">如果部署存在于虚拟网络中，可以指定负载均衡器子网从一个特定地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-183">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="41eef-184">负载均衡器 VIP 然后将此特定的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-184">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="41eef-185">如果提供的静态虚拟网络 IP 地址，则必须还指定负载均衡器的 SubnetName 元素。</span><span class="sxs-lookup"><span data-stu-id="41eef-185">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="41eef-186">如果部署存在于虚拟网络之外，可以不指定任何静态虚拟网络 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="41eef-186">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="41eef-187">响应流中。</span><span class="sxs-lookup"><span data-stu-id="41eef-187">The response stream.</span></span>
+    content: function update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js

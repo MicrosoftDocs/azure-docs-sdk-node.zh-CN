@@ -1,0 +1,457 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 234c7d4787f94e746b51b21ae9c34f399226b55e
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049333"
+items:
+- uid: azure-asm-sb.TopicOperations~TopicOperations
+  id: azure-asm-sb.TopicOperations~TopicOperations
+  name: TopicOperations
+  summary: >-
+    <span data-ttu-id="cc840-101">服务总线管理 API 包括用于管理命名空间的服务总线主题操作。</span><span class="sxs-lookup"><span data-stu-id="cc840-101">The Service Bus Management API includes operations for managing Service Bus topics for a namespace.</span></span>
+
+    <span data-ttu-id="cc840-102">__请注意__： 此类的实例自动创建的实例 [ServiceBusManagementClient] {@link ServiceBusManagementClient ~ ServiceBusManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="cc840-102">__NOTE__: An instance of this class is automatically created for an instance of the [ServiceBusManagementClient] {@link ServiceBusManagementClient~ServiceBusManagementClient}.</span></span>
+
+    <span data-ttu-id="cc840-103">请参阅 [主题] {@link ServiceBusManagementClient ~ ServiceBusManagementClient #topics}。</span><span class="sxs-lookup"><span data-stu-id="cc840-103">See [topics] {@link ServiceBusManagementClient~ServiceBusManagementClient#topics}.</span></span>
+
+    <span data-ttu-id="cc840-104">初始化 TopicOperations 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="cc840-104">Initializes a new instance of the TopicOperations class.</span></span>
+  fullName: azure-asm-sb.TopicOperations
+  type: Class
+  children:
+  - azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  - azure-asm-sb.TopicOperations~TopicOperations#create
+  - azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  - azure-asm-sb.TopicOperations~TopicOperations#get
+  - azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  - azure-asm-sb.TopicOperations~TopicOperations#list
+  - azure-asm-sb.TopicOperations~TopicOperations#update
+  langs:
+  - js
+- id: azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  uid: azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: TopicOperations(client)
+  fullName: azure-asm-sb.TopicOperations.TopicOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: <span data-ttu-id="cc840-105">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="cc840-105">Reference to the service client.</span></span>
+    content: new TopicOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#create
+  id: azure-asm-sb.TopicOperations~TopicOperations#create
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: create(namespaceName, topic, callback)
+  summary: <span data-ttu-id="cc840-106">创建新主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-106">Creates a new topic.</span></span> <span data-ttu-id="cc840-107">创建后，此主题资源清单不可变。</span><span class="sxs-lookup"><span data-stu-id="cc840-107">Once created, this topic resource manifest is immutable.</span></span> <span data-ttu-id="cc840-108">此操作不是幂等。</span><span class="sxs-lookup"><span data-stu-id="cc840-108">This operation is not idempotent.</span></span> <span data-ttu-id="cc840-109">已成功，创建具有相同名称的主题之后，重复创建调用将导致 409 冲突错误消息。</span><span class="sxs-lookup"><span data-stu-id="cc840-109">Repeating the create call, after a topic with same name has been created successfully, will result in a 409 Conflict error message.</span></span>  <span data-ttu-id="cc840-110">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/hh780728.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="cc840-110">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh780728.aspx for more information)</span></span>
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.create(namespaceName, topic, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cc840-111">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="cc840-111">The namespace name.</span></span>
+    - id: topic
+      type:
+      - azure-asm-sb.ServiceBusTopic
+      description: <span data-ttu-id="cc840-112">服务总线主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-112">The Service Bus topic.</span></span>
+    - id: topic.name
+      type:
+      - string
+      description: <span data-ttu-id="cc840-113">该主题的名称。</span><span class="sxs-lookup"><span data-stu-id="cc840-113">The name of the topic.</span></span>
+      optional: true
+    - id: topic.defaultMessageTimeToLive
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cc840-114">确定多长时间消息相关联的订阅中。</span><span class="sxs-lookup"><span data-stu-id="cc840-114">Determines how long a message lives in the associated subscriptions.</span></span> <span data-ttu-id="cc840-115">订阅从主题继承 TTL，除非它们使用较小的 TTL 显式创建。</span><span class="sxs-lookup"><span data-stu-id="cc840-115">Subscriptions inherit the TTL from the topic unless they are created explicitly with a smaller TTL.</span></span>
+
+        <span data-ttu-id="cc840-116">根据是否启用死信，TTL 过期的消息将移动到订阅的相关 DeadLtterQueue，或将被永久删除。</span><span class="sxs-lookup"><span data-stu-id="cc840-116">Based on whether dead-lettering is enabled, a message whose TTL has expired will either be moved to the subscription's associated DeadLtterQueue or will be permanently deleted.</span></span> <span data-ttu-id="cc840-117">在主题创建时可设置以下值，是: * 范围： 1 秒-TimeSpan.MaxValue* 默认： TimeSpan.MaxValue</span><span class="sxs-lookup"><span data-stu-id="cc840-117">The following values are settable at topic creation time:* Range: 1 second - TimeSpan.MaxValue* Default: TimeSpan.MaxValue</span></span>
+      optional: true
+    - id: topic.maxSizeInMegabytes
+      type:
+      - number
+      description: '<span data-ttu-id="cc840-118">指定最大主题大小以兆字节为单位。</span><span class="sxs-lookup"><span data-stu-id="cc840-118">Specifies the maximum topic size in megabytes.</span></span> <span data-ttu-id="cc840-119">排入队列的消息会导致主题超出此值的任何尝试将失败。</span><span class="sxs-lookup"><span data-stu-id="cc840-119">Any attempt to enqueue a message that will cause the topic to exceed this value will fail.</span></span> <span data-ttu-id="cc840-120">存储在主题或任何其订阅会计入此值中的所有消息。</span><span class="sxs-lookup"><span data-stu-id="cc840-120">All messages that are stored in the topic or any of its subscriptions count towards this value.</span></span> <span data-ttu-id="cc840-121">多个消息的副本驻留在一个或多个订阅数为一条消息。</span><span class="sxs-lookup"><span data-stu-id="cc840-121">Multiple copies of a message that reside in one or multiple subscriptions count as a single messages.</span></span> <span data-ttu-id="cc840-122">例如，如果在订阅 s1 和 s2 订阅中两次，一次存在消息 m，m 被计为一条消息。</span><span class="sxs-lookup"><span data-stu-id="cc840-122">For example, if message m exists once in subscription s1 and twice in subscription s2, m is counted as a single message.</span></span> <span data-ttu-id="cc840-123">仅可以将此参数设置在主题创建时使用以下值: * 范围： 1-5*1024 MB*默认值： 1 * 1024</span><span class="sxs-lookup"><span data-stu-id="cc840-123">You can only set this parameter at topic creation time using the following values:* Range: 1 - 5*1024 MB* Default: 1*1024</span></span>'
+      optional: true
+    - id: topic.requiresDuplicateDetection
+      type:
+      - boolean
+      description: '<span data-ttu-id="cc840-124">如果启用，本主题将检测重复消息的 DuplicateDetectionHistoryTimeWindow 属性所指定的时间跨度。</span><span class="sxs-lookup"><span data-stu-id="cc840-124">If enabled, the topic will detect duplicate messages within the time span specified by the DuplicateDetectionHistoryTimeWindow property.</span></span> <span data-ttu-id="cc840-125">只可以在主题创建时间默认设置： false</span><span class="sxs-lookup"><span data-stu-id="cc840-125">Settable only at topic creation time.\* Default: false</span></span>'
+      optional: true
+    - id: topic.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: '<span data-ttu-id="cc840-126">指定服务总线将在此期间检测消息 duplication.* 范围的时间跨度： 默认值 1 秒-7 天 *: 10 分钟</span><span class="sxs-lookup"><span data-stu-id="cc840-126">Specifies the time span during which the Service Bus will detect message duplication.* Range: 1 second - 7 days* Default: 10 minutes</span></span>'
+      optional: true
+    - id: topic.enableBatchedOperations
+      type:
+      - boolean
+      description: <span data-ttu-id="cc840-127">启用或禁用服务端批处理行为，对特定队列执行操作时。</span><span class="sxs-lookup"><span data-stu-id="cc840-127">Enables or disables service side batching behavior when performing operations for the specific queue.</span></span> <span data-ttu-id="cc840-128">启用时，服务总线将收集/批处理到后端是连接更高效的多个操作。</span><span class="sxs-lookup"><span data-stu-id="cc840-128">When enabled, service bus will collect/batch multiple operations to the backend to be more connection efficient.</span></span> <span data-ttu-id="cc840-129">如果用户想要更低的操作延迟，它们可以禁用此功能。</span><span class="sxs-lookup"><span data-stu-id="cc840-129">If user wants lower operation latency then they can disable this feature.</span></span>
+      optional: true
+    - id: topic.sizeInBytes
+      type:
+      - number
+      description: '<span data-ttu-id="cc840-130">反映入主题配额的主题中消息当前占用的实际字节数。</span><span class="sxs-lookup"><span data-stu-id="cc840-130">Reflects the actual bytes toward the topic quota that messages in the topic currently occupy.</span></span> <span data-ttu-id="cc840-131">（只读） \* 范围： 0 MaxTopicSizeinMegaBytes</span><span class="sxs-lookup"><span data-stu-id="cc840-131">(read-only)\* Range: 0 -MaxTopicSizeinMegaBytes</span></span>'
+      optional: true
+    - id: topic.filteringMessagesBeforePublishing
+      type:
+      - boolean
+      description: <span data-ttu-id="cc840-132">获取或设置是否应在发布之前筛选消息。</span><span class="sxs-lookup"><span data-stu-id="cc840-132">Gets or sets whether messages should be filtered before publishing.</span></span>
+      optional: true
+    - id: topic.isAnonymousAccessible
+      type:
+      - boolean
+      description: <span data-ttu-id="cc840-133">获取是否允许匿名访问。</span><span class="sxs-lookup"><span data-stu-id="cc840-133">Gets whether anonymous access is allowed.</span></span>
+      optional: true
+    - id: topic.authorizationRules
+      type:
+      - array
+      description: <span data-ttu-id="cc840-134">获取描述授权规则。</span><span class="sxs-lookup"><span data-stu-id="cc840-134">Gets the authorization rules for the description.</span></span>
+      optional: true
+    - id: topic.status
+      type:
+      - string
+      description: <span data-ttu-id="cc840-135">获取或设置主题 （启用或禁用） 的当前状态。</span><span class="sxs-lookup"><span data-stu-id="cc840-135">Gets or sets the current status of the topic (enabled or disabled).</span></span> <span data-ttu-id="cc840-136">当禁用某个主题时，该主题不能发送或接收消息。</span><span class="sxs-lookup"><span data-stu-id="cc840-136">When a topic is disabled, that topic cannot send or receive messages.</span></span>
+      optional: true
+    - id: topic.createdAt
+      type:
+      - date
+      description: <span data-ttu-id="cc840-137">在创建队列的时间。</span><span class="sxs-lookup"><span data-stu-id="cc840-137">The time the queue was created at.</span></span>
+      optional: true
+    - id: topic.updatedAt
+      type:
+      - date
+      description: <span data-ttu-id="cc840-138">上次更新队列的时间。</span><span class="sxs-lookup"><span data-stu-id="cc840-138">The time the queue was last updated.</span></span>
+      optional: true
+    - id: topic.accessedAt
+      type:
+      - date
+      description: <span data-ttu-id="cc840-139">队列上次访问时间。</span><span class="sxs-lookup"><span data-stu-id="cc840-139">The time the queue was last accessed.</span></span>
+      optional: true
+    - id: topic.supportOrdering
+      type:
+      - boolean
+      description: <span data-ttu-id="cc840-140">获取或设置是否可排序的主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-140">Gets or sets whether the topics can be ordered.</span></span>
+      optional: true
+    - id: topic.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: <span data-ttu-id="cc840-141">当前队列的统计信息。</span><span class="sxs-lookup"><span data-stu-id="cc840-141">Current queue statistics.</span></span>
+      optional: true
+    - id: topic.countDetails.activeMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-142">当前的活动消息数。</span><span class="sxs-lookup"><span data-stu-id="cc840-142">The current number of active messages.</span></span>
+      optional: true
+    - id: topic.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-143">当前的死信字母数。</span><span class="sxs-lookup"><span data-stu-id="cc840-143">The current number of dead letters.</span></span>
+      optional: true
+    - id: topic.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-144">当前的计划的消息数。</span><span class="sxs-lookup"><span data-stu-id="cc840-144">The current number of scheduled messages.</span></span>
+      optional: true
+    - id: topic.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-145">当前的传输死信字母数。</span><span class="sxs-lookup"><span data-stu-id="cc840-145">The current number of transfer dead letters.</span></span>
+      optional: true
+    - id: topic.countDetails.transferMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-146">当前的传输的消息数。</span><span class="sxs-lookup"><span data-stu-id="cc840-146">The current number of transfer messages.</span></span>
+      optional: true
+    - id: topic.subscriptionCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-147">当前的主题的订阅数。</span><span class="sxs-lookup"><span data-stu-id="cc840-147">The current number of subscriptions to the topic.</span></span>
+      optional: true
+    - id: topic.autoDeleteOnIdle
+      type:
+      - string
+      description: <span data-ttu-id="cc840-148">实现。</span><span class="sxs-lookup"><span data-stu-id="cc840-148">Implemented.</span></span>
+      optional: true
+    - id: topic.entityAvailabilityStatus
+      type:
+      - string
+      description: <span data-ttu-id="cc840-149">本主题的当前可用性状态。</span><span class="sxs-lookup"><span data-stu-id="cc840-149">The current availability status of the topic.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cc840-150">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc840-150">The response stream.</span></span>
+    content: function create(namespaceName, topic, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  id: azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: deleteMethod(namespaceName, topicName, callback)
+  summary: <span data-ttu-id="cc840-151">删除现有主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-151">Deletes an existing topic.</span></span> <span data-ttu-id="cc840-152">此操作还将删除所有关联的状态包括相关联的订阅。</span><span class="sxs-lookup"><span data-stu-id="cc840-152">This operation will also remove all associated state including associated subscriptions.</span></span>  <span data-ttu-id="cc840-153">(请参阅http://msdn.microsoft.com/en-us/library/hh780721.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="cc840-153">(see http://msdn.microsoft.com/en-us/library/hh780721.aspx for more information)</span></span>
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.deleteMethod(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cc840-154">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="cc840-154">The namespace name.</span></span>
+    - id: topicName
+      type:
+      - string
+      description: <span data-ttu-id="cc840-155">本主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-155">The topic.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cc840-156">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc840-156">The response stream.</span></span>
+    content: function deleteMethod(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#get
+  id: azure-asm-sb.TopicOperations~TopicOperations#get
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: get(namespaceName, topicName, callback)
+  summary: <span data-ttu-id="cc840-157">主题描述是 XML AtomPub 文档，用于定义主题所需的语义。</span><span class="sxs-lookup"><span data-stu-id="cc840-157">The topic description is an XML AtomPub document that defines the desired semantics for a topic.</span></span> <span data-ttu-id="cc840-158">主题描述包含以下属性。</span><span class="sxs-lookup"><span data-stu-id="cc840-158">The topic description contains the following properties.</span></span> <span data-ttu-id="cc840-159">有关详细信息，请参阅 TopicDescription 属性主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-159">For more information, see the TopicDescription Properties topic.</span></span>  <span data-ttu-id="cc840-160">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/hh780749.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="cc840-160">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh780749.aspx for more information)</span></span>
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.get(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cc840-161">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="cc840-161">The namespace name.</span></span>
+    - id: topicName
+      type:
+      - string
+      description: <span data-ttu-id="cc840-162">本主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-162">The topic.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cc840-163">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc840-163">The response stream.</span></span>
+    content: function get(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  id: azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: getConnectionDetails(namespaceName, topicName, callback)
+  summary: <span data-ttu-id="cc840-164">获取主题的连接字符串集。</span><span class="sxs-lookup"><span data-stu-id="cc840-164">Gets the set of connection strings for a topic.</span></span>
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.getConnectionDetails(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cc840-165">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="cc840-165">The namespace name.</span></span>
+    - id: topicName
+      type:
+      - string
+      description: <span data-ttu-id="cc840-166">本主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-166">The topic.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cc840-167">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc840-167">The response stream.</span></span>
+    content: function getConnectionDetails(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#list
+  id: azure-asm-sb.TopicOperations~TopicOperations#list
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: list(namespaceName, callback)
+  summary: <span data-ttu-id="cc840-168">枚举服务命名空间中的主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-168">Enumerates the topics in the service namespace.</span></span> <span data-ttu-id="cc840-169">如果服务命名空间中不存在任何主题，则返回空源。</span><span class="sxs-lookup"><span data-stu-id="cc840-169">An empty feed is returned if no topic exists in the service namespace.</span></span>  <span data-ttu-id="cc840-170">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/hh780744.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="cc840-170">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh780744.aspx for more information)</span></span>
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.list(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cc840-171">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="cc840-171">The namespace name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cc840-172">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc840-172">The response stream.</span></span>
+    content: function list(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#update
+  id: azure-asm-sb.TopicOperations~TopicOperations#update
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: update(namespaceName, topic, callback)
+  summary: <span data-ttu-id="cc840-173">更新主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-173">Updates a topic.</span></span>  <span data-ttu-id="cc840-174">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj839740.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="cc840-174">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj839740.aspx for more information)</span></span>
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.update(namespaceName, topic, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="cc840-175">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="cc840-175">The namespace name.</span></span>
+    - id: topic
+      type:
+      - azure-asm-sb.ServiceBusTopic
+      description: <span data-ttu-id="cc840-176">服务总线主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-176">The Service Bus topic.</span></span>
+    - id: topic.name
+      type:
+      - string
+      description: <span data-ttu-id="cc840-177">该主题的名称。</span><span class="sxs-lookup"><span data-stu-id="cc840-177">The name of the topic.</span></span>
+      optional: true
+    - id: topic.defaultMessageTimeToLive
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="cc840-178">确定多长时间消息相关联的订阅中。</span><span class="sxs-lookup"><span data-stu-id="cc840-178">Determines how long a message lives in the associated subscriptions.</span></span> <span data-ttu-id="cc840-179">订阅从主题继承 TTL，除非它们使用较小的 TTL 显式创建。</span><span class="sxs-lookup"><span data-stu-id="cc840-179">Subscriptions inherit the TTL from the topic unless they are created explicitly with a smaller TTL.</span></span>
+
+        <span data-ttu-id="cc840-180">根据是否启用死信，TTL 过期的消息将移动到订阅的相关 DeadLtterQueue，或将被永久删除。</span><span class="sxs-lookup"><span data-stu-id="cc840-180">Based on whether dead-lettering is enabled, a message whose TTL has expired will either be moved to the subscription's associated DeadLtterQueue or will be permanently deleted.</span></span> <span data-ttu-id="cc840-181">在主题创建时可设置以下值，是: * 范围： 1 秒-TimeSpan.MaxValue* 默认： TimeSpan.MaxValue</span><span class="sxs-lookup"><span data-stu-id="cc840-181">The following values are settable at topic creation time:* Range: 1 second - TimeSpan.MaxValue* Default: TimeSpan.MaxValue</span></span>
+      optional: true
+    - id: topic.maxSizeInMegabytes
+      type:
+      - number
+      description: '<span data-ttu-id="cc840-182">指定最大主题大小以兆字节为单位。</span><span class="sxs-lookup"><span data-stu-id="cc840-182">Specifies the maximum topic size in megabytes.</span></span> <span data-ttu-id="cc840-183">排入队列的消息会导致主题超出此值的任何尝试将失败。</span><span class="sxs-lookup"><span data-stu-id="cc840-183">Any attempt to enqueue a message that will cause the topic to exceed this value will fail.</span></span> <span data-ttu-id="cc840-184">存储在主题或任何其订阅会计入此值中的所有消息。</span><span class="sxs-lookup"><span data-stu-id="cc840-184">All messages that are stored in the topic or any of its subscriptions count towards this value.</span></span> <span data-ttu-id="cc840-185">多个消息的副本驻留在一个或多个订阅数为一条消息。</span><span class="sxs-lookup"><span data-stu-id="cc840-185">Multiple copies of a message that reside in one or multiple subscriptions count as a single messages.</span></span> <span data-ttu-id="cc840-186">例如，如果在订阅 s1 和 s2 订阅中两次，一次存在消息 m，m 被计为一条消息。</span><span class="sxs-lookup"><span data-stu-id="cc840-186">For example, if message m exists once in subscription s1 and twice in subscription s2, m is counted as a single message.</span></span> <span data-ttu-id="cc840-187">仅可以将此参数设置在主题创建时使用以下值: * 范围： 1-5*1024 MB*默认值： 1 * 1024</span><span class="sxs-lookup"><span data-stu-id="cc840-187">You can only set this parameter at topic creation time using the following values:* Range: 1 - 5*1024 MB* Default: 1*1024</span></span>'
+      optional: true
+    - id: topic.requiresDuplicateDetection
+      type:
+      - boolean
+      description: '<span data-ttu-id="cc840-188">如果启用，本主题将检测重复消息的 DuplicateDetectionHistoryTimeWindow 属性所指定的时间跨度。</span><span class="sxs-lookup"><span data-stu-id="cc840-188">If enabled, the topic will detect duplicate messages within the time span specified by the DuplicateDetectionHistoryTimeWindow property.</span></span> <span data-ttu-id="cc840-189">只可以在主题创建时间默认设置： false</span><span class="sxs-lookup"><span data-stu-id="cc840-189">Settable only at topic creation time.\* Default: false</span></span>'
+      optional: true
+    - id: topic.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: '<span data-ttu-id="cc840-190">指定服务总线将在此期间检测消息 duplication.* 范围的时间跨度： 默认值 1 秒-7 天 *: 10 分钟</span><span class="sxs-lookup"><span data-stu-id="cc840-190">Specifies the time span during which the Service Bus will detect message duplication.* Range: 1 second - 7 days* Default: 10 minutes</span></span>'
+      optional: true
+    - id: topic.enableBatchedOperations
+      type:
+      - boolean
+      description: <span data-ttu-id="cc840-191">启用或禁用服务端批处理行为，对特定队列执行操作时。</span><span class="sxs-lookup"><span data-stu-id="cc840-191">Enables or disables service side batching behavior when performing operations for the specific queue.</span></span> <span data-ttu-id="cc840-192">启用时，服务总线将收集/批处理到后端是连接更高效的多个操作。</span><span class="sxs-lookup"><span data-stu-id="cc840-192">When enabled, service bus will collect/batch multiple operations to the backend to be more connection efficient.</span></span> <span data-ttu-id="cc840-193">如果用户想要更低的操作延迟，它们可以禁用此功能。</span><span class="sxs-lookup"><span data-stu-id="cc840-193">If user wants lower operation latency then they can disable this feature.</span></span>
+      optional: true
+    - id: topic.sizeInBytes
+      type:
+      - number
+      description: '<span data-ttu-id="cc840-194">反映入主题配额的主题中消息当前占用的实际字节数。</span><span class="sxs-lookup"><span data-stu-id="cc840-194">Reflects the actual bytes toward the topic quota that messages in the topic currently occupy.</span></span> <span data-ttu-id="cc840-195">（只读） \* 范围： 0 MaxTopicSizeinMegaBytes</span><span class="sxs-lookup"><span data-stu-id="cc840-195">(read-only)\* Range: 0 -MaxTopicSizeinMegaBytes</span></span>'
+      optional: true
+    - id: topic.filteringMessagesBeforePublishing
+      type:
+      - boolean
+      description: <span data-ttu-id="cc840-196">获取或设置是否应在发布之前筛选消息。</span><span class="sxs-lookup"><span data-stu-id="cc840-196">Gets or sets whether messages should be filtered before publishing.</span></span>
+      optional: true
+    - id: topic.isAnonymousAccessible
+      type:
+      - boolean
+      description: <span data-ttu-id="cc840-197">获取是否允许匿名访问。</span><span class="sxs-lookup"><span data-stu-id="cc840-197">Gets whether anonymous access is allowed.</span></span>
+      optional: true
+    - id: topic.authorizationRules
+      type:
+      - array
+      description: <span data-ttu-id="cc840-198">获取描述授权规则。</span><span class="sxs-lookup"><span data-stu-id="cc840-198">Gets the authorization rules for the description.</span></span>
+      optional: true
+    - id: topic.status
+      type:
+      - string
+      description: <span data-ttu-id="cc840-199">获取或设置主题 （启用或禁用） 的当前状态。</span><span class="sxs-lookup"><span data-stu-id="cc840-199">Gets or sets the current status of the topic (enabled or disabled).</span></span> <span data-ttu-id="cc840-200">当禁用某个主题时，该主题不能发送或接收消息。</span><span class="sxs-lookup"><span data-stu-id="cc840-200">When a topic is disabled, that topic cannot send or receive messages.</span></span>
+      optional: true
+    - id: topic.createdAt
+      type:
+      - date
+      description: <span data-ttu-id="cc840-201">在创建队列的时间。</span><span class="sxs-lookup"><span data-stu-id="cc840-201">The time the queue was created at.</span></span>
+      optional: true
+    - id: topic.updatedAt
+      type:
+      - date
+      description: <span data-ttu-id="cc840-202">上次更新队列的时间。</span><span class="sxs-lookup"><span data-stu-id="cc840-202">The time the queue was last updated.</span></span>
+      optional: true
+    - id: topic.accessedAt
+      type:
+      - date
+      description: <span data-ttu-id="cc840-203">队列上次访问时间。</span><span class="sxs-lookup"><span data-stu-id="cc840-203">The time the queue was last accessed.</span></span>
+      optional: true
+    - id: topic.supportOrdering
+      type:
+      - boolean
+      description: <span data-ttu-id="cc840-204">获取或设置是否可排序的主题。</span><span class="sxs-lookup"><span data-stu-id="cc840-204">Gets or sets whether the topics can be ordered.</span></span>
+      optional: true
+    - id: topic.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: <span data-ttu-id="cc840-205">当前队列的统计信息。</span><span class="sxs-lookup"><span data-stu-id="cc840-205">Current queue statistics.</span></span>
+      optional: true
+    - id: topic.countDetails.activeMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-206">当前的活动消息数。</span><span class="sxs-lookup"><span data-stu-id="cc840-206">The current number of active messages.</span></span>
+      optional: true
+    - id: topic.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-207">当前的死信字母数。</span><span class="sxs-lookup"><span data-stu-id="cc840-207">The current number of dead letters.</span></span>
+      optional: true
+    - id: topic.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-208">当前的计划的消息数。</span><span class="sxs-lookup"><span data-stu-id="cc840-208">The current number of scheduled messages.</span></span>
+      optional: true
+    - id: topic.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-209">当前的传输死信字母数。</span><span class="sxs-lookup"><span data-stu-id="cc840-209">The current number of transfer dead letters.</span></span>
+      optional: true
+    - id: topic.countDetails.transferMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-210">当前的传输的消息数。</span><span class="sxs-lookup"><span data-stu-id="cc840-210">The current number of transfer messages.</span></span>
+      optional: true
+    - id: topic.subscriptionCount
+      type:
+      - number
+      description: <span data-ttu-id="cc840-211">当前的主题的订阅数。</span><span class="sxs-lookup"><span data-stu-id="cc840-211">The current number of subscriptions to the topic.</span></span>
+      optional: true
+    - id: topic.autoDeleteOnIdle
+      type:
+      - string
+      description: <span data-ttu-id="cc840-212">实现。</span><span class="sxs-lookup"><span data-stu-id="cc840-212">Implemented.</span></span>
+      optional: true
+    - id: topic.entityAvailabilityStatus
+      type:
+      - string
+      description: <span data-ttu-id="cc840-213">本主题的当前可用性状态。</span><span class="sxs-lookup"><span data-stu-id="cc840-213">The current availability status of the topic.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="cc840-214">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc840-214">The response stream.</span></span>
+    content: function update(namespaceName, topic, callback)
+  langs:
+  - js

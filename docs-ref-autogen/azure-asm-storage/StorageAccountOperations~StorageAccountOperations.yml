@@ -1,0 +1,533 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 205aa019bf97d2699ccdd3695309082a90514a54
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049429"
+items:
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: StorageAccountOperations
+  summary: >-
+    <span data-ttu-id="6888f-101">服务管理 API 包括用于管理您的订阅下的存储帐户的操作。</span><span class="sxs-lookup"><span data-stu-id="6888f-101">The Service Management API includes operations for managing the storage accounts beneath your subscription.</span></span>  <span data-ttu-id="6888f-102">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460790.aspx有关详细信息)__注意__： 此类的实例自动创建的实例 [StorageManagementClient] {@link StorageManagementClient ~ StorageManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="6888f-102">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460790.aspx for more information) __NOTE__: An instance of this class is automatically created for an instance of the [StorageManagementClient] {@link StorageManagementClient~StorageManagementClient}.</span></span>
+
+    <span data-ttu-id="6888f-103">请参阅 [storageAccounts] {@link StorageManagementClient ~ StorageManagementClient #storageAccounts}。</span><span class="sxs-lookup"><span data-stu-id="6888f-103">See [storageAccounts] {@link StorageManagementClient~StorageManagementClient#storageAccounts}.</span></span>
+
+    <span data-ttu-id="6888f-104">初始化 StorageAccountOperations 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="6888f-104">Initializes a new instance of the StorageAccountOperations class.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations
+  type: Class
+  children:
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  langs:
+  - js
+- id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: StorageAccountOperations(client)
+  fullName: azure-asm-storage.StorageAccountOperations.StorageAccountOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedStorageManagementClient
+      description: <span data-ttu-id="6888f-105">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="6888f-105">Reference to the service client.</span></span>
+    content: new StorageAccountOperations(client)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: abortMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="6888f-106">中止存储帐户迁移 api 验证并中止给定的存储帐户对于 IaaS 从经典到 ARM 的迁移。</span><span class="sxs-lookup"><span data-stu-id="6888f-106">Abort storage account migration api validates and aborts the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.abortMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-107">要迁移的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-107">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-108">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-108">The response stream.</span></span>
+    content: function abortMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginAbortMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="6888f-109">中止存储帐户迁移 api 验证并中止给定的存储帐户对于 IaaS 从经典到 ARM 的迁移。</span><span class="sxs-lookup"><span data-stu-id="6888f-109">Abort storage account migration api validates and aborts the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginAbortMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-110">要迁移的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-110">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-111">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-111">The response stream.</span></span>
+    content: function beginAbortMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginCommitMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="6888f-112">提交存储帐户迁移 api 验证和提交给定的存储帐户对于 IaaS 从经典到 ARM 的迁移。</span><span class="sxs-lookup"><span data-stu-id="6888f-112">Commit storage account migration api validates and commits the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginCommitMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-113">要迁移的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-113">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-114">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-114">The response stream.</span></span>
+    content: function beginCommitMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginCreating(parameters, callback)
+  summary: <span data-ttu-id="6888f-115">开始创建存储帐户操作在 Azure 中创建新的存储帐户。</span><span class="sxs-lookup"><span data-stu-id="6888f-115">The Begin Creating Storage Account operation creates a new storage account in Azure.</span></span>  <span data-ttu-id="6888f-116">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="6888f-116">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginCreating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountCreateParameters
+      description: <span data-ttu-id="6888f-117">提供对开始创建存储帐户操作的参数。</span><span class="sxs-lookup"><span data-stu-id="6888f-117">Parameters supplied to the Begin Creating Storage Account operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: '<span data-ttu-id="6888f-118">在 Azure 中唯一的存储帐户名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-118">A name for the storage account, unique within Azure.</span></span> <span data-ttu-id="6888f-119">存储帐户名称必须是长度为 3 到 24 个字符之间，并且必须使用数字和小写字母。</span><span class="sxs-lookup"><span data-stu-id="6888f-119">Storage account names must be between 3 and 24 characters in length, and must use numbers and lower-case letters only.</span></span> <span data-ttu-id="6888f-120">此名称是 DNS 前缀名称，并可用于访问 blob、 队列和存储帐户中的表。</span><span class="sxs-lookup"><span data-stu-id="6888f-120">This name is the DNS prefix name and can be used to access blobs, queues, and tables in the storage account.</span></span> <span data-ttu-id="6888f-121">例如：http://ServiceName.blob.core.windows.net/mycontainer/。</span><span class="sxs-lookup"><span data-stu-id="6888f-121">For example: http://ServiceName.blob.core.windows.net/mycontainer/.</span></span>'
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="6888f-122">存储帐户的说明。</span><span class="sxs-lookup"><span data-stu-id="6888f-122">A description for the storage account.</span></span> <span data-ttu-id="6888f-123">说明可能会有最多为 1024年个字符的长度。</span><span class="sxs-lookup"><span data-stu-id="6888f-123">The description may be up to 1024 characters in length.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="6888f-124">Abase64 编码字符串形式指定的存储帐户名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-124">A name for the storage account, specified as abase64-encoded string.</span></span> <span data-ttu-id="6888f-125">名称可能最多 100 个字符的长度。</span><span class="sxs-lookup"><span data-stu-id="6888f-125">The name may be up to 100 characters in length.</span></span> <span data-ttu-id="6888f-126">该名称可用于标识存储帐户，以便进行跟踪。</span><span class="sxs-lookup"><span data-stu-id="6888f-126">The name can be used identify the storage account for your tracking purposes.</span></span>
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: <span data-ttu-id="6888f-127">指定的订阅中的现有地缘组的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-127">The name of an existing affinity group in the specified subscription.</span></span> <span data-ttu-id="6888f-128">如果未指定位置被必需。</span><span class="sxs-lookup"><span data-stu-id="6888f-128">Required if Location is not specified.</span></span> <span data-ttu-id="6888f-129">可以在请求正文中，但不是能同时包含位置或地缘组的元素。</span><span class="sxs-lookup"><span data-stu-id="6888f-129">You can include either a Location or AffinityGroup element in the request body, but not both.</span></span> <span data-ttu-id="6888f-130">若要列出可用的地缘组，请使用列出地缘组操作。</span><span class="sxs-lookup"><span data-stu-id="6888f-130">To list available affinity groups, use the List Affinity Groups operation.</span></span>
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: <span data-ttu-id="6888f-131">在其中创建存储帐户的位置。</span><span class="sxs-lookup"><span data-stu-id="6888f-131">The location where the storage account is created.</span></span> <span data-ttu-id="6888f-132">如果不指定地缘组被必需。</span><span class="sxs-lookup"><span data-stu-id="6888f-132">Required if AffinityGroup is not specified.</span></span> <span data-ttu-id="6888f-133">可以在请求正文中，但不是能同时包含位置或地缘组的元素。</span><span class="sxs-lookup"><span data-stu-id="6888f-133">You can include either a Location or AffinityGroup element in the request body, but not both.</span></span> <span data-ttu-id="6888f-134">若要列出可用位置，请使用列出位置操作。</span><span class="sxs-lookup"><span data-stu-id="6888f-134">To list available locations, use the List Locations operation.</span></span>
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: <span data-ttu-id="6888f-135">表示扩展的存储帐户属性的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-135">Represents the name of an extended storage account property.</span></span> <span data-ttu-id="6888f-136">每个扩展的属性必须具有定义的名称和值。</span><span class="sxs-lookup"><span data-stu-id="6888f-136">Each extended property must have a defined name and a value.</span></span> <span data-ttu-id="6888f-137">您可以最多 50 个扩展属性名称/值对。</span><span class="sxs-lookup"><span data-stu-id="6888f-137">You can have a maximum of 50 extended property name/value pairs.</span></span> <span data-ttu-id="6888f-138">Name 元素的最大长度为 64 个字符，仅字母数字字符和下划线有效名称，并且名称必须以字母开头。</span><span class="sxs-lookup"><span data-stu-id="6888f-138">The maximum length of the Name element is 64 characters, only alphanumeric characters and underscores are valid in the Name, and the name must start with a letter.</span></span> <span data-ttu-id="6888f-139">尝试使用其他字符，名称以非字母字符开头或输入等同于拥有的相同的存储帐户的另一个扩展属性的名称将导致状态代码 400 （错误请求） 错误。</span><span class="sxs-lookup"><span data-stu-id="6888f-139">Attempting to use other characters, starting the Name with a non-letter character, or entering a name that is identical to that of another extended property owned by the same storage account will result in a status code 400 (Bad Request) error.</span></span> <span data-ttu-id="6888f-140">每个扩展的属性值具有最大长度为 255 个字符。</span><span class="sxs-lookup"><span data-stu-id="6888f-140">Each extended property value has a maximum length of 255 characters.</span></span>
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "<span data-ttu-id=\"6888f-141\">指定帐户是否支持本地冗余存储、 异地冗余存储、 区域冗余存储或读取访问异地冗余存储。</span><span class=\"sxs-lookup\"><span data-stu-id=\"6888f-141\">Specifies whether the account supports locally-redundant storage, geo-redundant storage, zone-redundant storage, or read access geo-redundant storage.</span></span> <span data-ttu-id=\"6888f-142\">可能的值为: Standard_LRS、 Standard_ZRS、 Standard_GRS 和 Standard_RAGRS。</span><span class=\"sxs-lookup\"><span data-stu-id=\"6888f-142\">Possible values are:'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', and 'Standard_RAGRS'.</span></span>"
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-143">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-143">The response stream.</span></span>
+    content: function beginCreating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginPrepareMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="6888f-144">准备迁移 api 验证并准备在给定的存储帐户对于 IaaS 从经典到 ARM 的迁移存储帐户。</span><span class="sxs-lookup"><span data-stu-id="6888f-144">Prepare storage account migration api validates and prepares the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginPrepareMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-145">要迁移的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-145">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-146">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-146">The response stream.</span></span>
+    content: function beginPrepareMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: checkNameAvailability(accountName, callback)
+  summary: <span data-ttu-id="6888f-147">检查名称可用性操作检查存储帐户名称是否可在 Azure 中使用。</span><span class="sxs-lookup"><span data-stu-id="6888f-147">The Check Name Availability operation checks if a storage account name is available for use in Azure.</span></span>  <span data-ttu-id="6888f-148">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj154125.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="6888f-148">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj154125.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.checkNameAvailability(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-149">若要检查可用性所需的存储帐户名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-149">The desired storage account name to check for availability.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-150">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-150">The response stream.</span></span>
+    content: function checkNameAvailability(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: commitMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="6888f-151">提交存储帐户迁移 api 验证和提交给定的存储帐户对于 IaaS 从经典到 ARM 的迁移。</span><span class="sxs-lookup"><span data-stu-id="6888f-151">Commit storage account migration api validates and commits the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.commitMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-152">要迁移的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-152">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-153">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-153">The response stream.</span></span>
+    content: function commitMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: create(parameters, callback)
+  summary: <span data-ttu-id="6888f-154">创建存储帐户操作在 Azure 中创建新的存储帐户。</span><span class="sxs-lookup"><span data-stu-id="6888f-154">The Create Storage Account operation creates a new storage account in Azure.</span></span>  <span data-ttu-id="6888f-155">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="6888f-155">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountCreateParameters
+      description: <span data-ttu-id="6888f-156">创建存储帐户操作提供的参数。</span><span class="sxs-lookup"><span data-stu-id="6888f-156">Parameters supplied to the Create Storage Account operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: '<span data-ttu-id="6888f-157">在 Azure 中唯一的存储帐户名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-157">A name for the storage account, unique within Azure.</span></span> <span data-ttu-id="6888f-158">存储帐户名称必须是长度为 3 到 24 个字符之间，并且必须使用数字和小写字母。</span><span class="sxs-lookup"><span data-stu-id="6888f-158">Storage account names must be between 3 and 24 characters in length, and must use numbers and lower-case letters only.</span></span> <span data-ttu-id="6888f-159">此名称是 DNS 前缀名称，并可用于访问 blob、 队列和存储帐户中的表。</span><span class="sxs-lookup"><span data-stu-id="6888f-159">This name is the DNS prefix name and can be used to access blobs, queues, and tables in the storage account.</span></span> <span data-ttu-id="6888f-160">例如：http://ServiceName.blob.core.windows.net/mycontainer/。</span><span class="sxs-lookup"><span data-stu-id="6888f-160">For example: http://ServiceName.blob.core.windows.net/mycontainer/.</span></span>'
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="6888f-161">存储帐户的说明。</span><span class="sxs-lookup"><span data-stu-id="6888f-161">A description for the storage account.</span></span> <span data-ttu-id="6888f-162">说明可能会有最多为 1024年个字符的长度。</span><span class="sxs-lookup"><span data-stu-id="6888f-162">The description may be up to 1024 characters in length.</span></span>
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="6888f-163">Abase64 编码字符串形式指定的存储帐户名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-163">A name for the storage account, specified as abase64-encoded string.</span></span> <span data-ttu-id="6888f-164">名称可能最多 100 个字符的长度。</span><span class="sxs-lookup"><span data-stu-id="6888f-164">The name may be up to 100 characters in length.</span></span> <span data-ttu-id="6888f-165">该名称可用于标识存储帐户，以便进行跟踪。</span><span class="sxs-lookup"><span data-stu-id="6888f-165">The name can be used identify the storage account for your tracking purposes.</span></span>
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: <span data-ttu-id="6888f-166">指定的订阅中的现有地缘组的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-166">The name of an existing affinity group in the specified subscription.</span></span> <span data-ttu-id="6888f-167">如果未指定位置被必需。</span><span class="sxs-lookup"><span data-stu-id="6888f-167">Required if Location is not specified.</span></span> <span data-ttu-id="6888f-168">可以在请求正文中，但不是能同时包含位置或地缘组的元素。</span><span class="sxs-lookup"><span data-stu-id="6888f-168">You can include either a Location or AffinityGroup element in the request body, but not both.</span></span> <span data-ttu-id="6888f-169">若要列出可用的地缘组，请使用列出地缘组操作。</span><span class="sxs-lookup"><span data-stu-id="6888f-169">To list available affinity groups, use the List Affinity Groups operation.</span></span>
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: <span data-ttu-id="6888f-170">在其中创建存储帐户的位置。</span><span class="sxs-lookup"><span data-stu-id="6888f-170">The location where the storage account is created.</span></span> <span data-ttu-id="6888f-171">如果不指定地缘组被必需。</span><span class="sxs-lookup"><span data-stu-id="6888f-171">Required if AffinityGroup is not specified.</span></span> <span data-ttu-id="6888f-172">可以在请求正文中，但不是能同时包含位置或地缘组的元素。</span><span class="sxs-lookup"><span data-stu-id="6888f-172">You can include either a Location or AffinityGroup element in the request body, but not both.</span></span> <span data-ttu-id="6888f-173">若要列出可用位置，请使用列出位置操作。</span><span class="sxs-lookup"><span data-stu-id="6888f-173">To list available locations, use the List Locations operation.</span></span>
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: <span data-ttu-id="6888f-174">表示扩展的存储帐户属性的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-174">Represents the name of an extended storage account property.</span></span> <span data-ttu-id="6888f-175">每个扩展的属性必须具有定义的名称和值。</span><span class="sxs-lookup"><span data-stu-id="6888f-175">Each extended property must have a defined name and a value.</span></span> <span data-ttu-id="6888f-176">您可以最多 50 个扩展属性名称/值对。</span><span class="sxs-lookup"><span data-stu-id="6888f-176">You can have a maximum of 50 extended property name/value pairs.</span></span> <span data-ttu-id="6888f-177">Name 元素的最大长度为 64 个字符，仅字母数字字符和下划线有效名称，并且名称必须以字母开头。</span><span class="sxs-lookup"><span data-stu-id="6888f-177">The maximum length of the Name element is 64 characters, only alphanumeric characters and underscores are valid in the Name, and the name must start with a letter.</span></span> <span data-ttu-id="6888f-178">尝试使用其他字符，名称以非字母字符开头或输入等同于拥有的相同的存储帐户的另一个扩展属性的名称将导致状态代码 400 （错误请求） 错误。</span><span class="sxs-lookup"><span data-stu-id="6888f-178">Attempting to use other characters, starting the Name with a non-letter character, or entering a name that is identical to that of another extended property owned by the same storage account will result in a status code 400 (Bad Request) error.</span></span> <span data-ttu-id="6888f-179">每个扩展的属性值具有最大长度为 255 个字符。</span><span class="sxs-lookup"><span data-stu-id="6888f-179">Each extended property value has a maximum length of 255 characters.</span></span>
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "<span data-ttu-id=\"6888f-180\">指定帐户是否支持本地冗余存储、 异地冗余存储、 区域冗余存储或读取访问异地冗余存储。</span><span class=\"sxs-lookup\"><span data-stu-id=\"6888f-180\">Specifies whether the account supports locally-redundant storage, geo-redundant storage, zone-redundant storage, or read access geo-redundant storage.</span></span> <span data-ttu-id=\"6888f-181\">可能的值为: Standard_LRS、 Standard_ZRS、 Standard_GRS 和 Standard_RAGRS。</span><span class=\"sxs-lookup\"><span data-stu-id=\"6888f-181\">Possible values are:'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', and 'Standard_RAGRS'.</span></span>"
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-182">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-182">The response stream.</span></span>
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: deleteMethod(accountName, callback)
+  summary: <span data-ttu-id="6888f-183">删除存储帐户操作从 Azure 中删除指定的存储帐户。</span><span class="sxs-lookup"><span data-stu-id="6888f-183">The Delete Storage Account operation deletes the specified storage account from Azure.</span></span>  <span data-ttu-id="6888f-184">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/hh264517.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="6888f-184">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh264517.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.deleteMethod(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-185">要删除的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-185">The name of the storage account to be deleted.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-186">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-186">The response stream.</span></span>
+    content: function deleteMethod(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: get(accountName, callback)
+  summary: <span data-ttu-id="6888f-187">获取存储帐户属性操作返回指定的存储帐户的系统属性。</span><span class="sxs-lookup"><span data-stu-id="6888f-187">The Get Storage Account Properties operation returns system properties for the specified storage account.</span></span>  <span data-ttu-id="6888f-188">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460802.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="6888f-188">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460802.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.get(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-189">要获取属性的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-189">Name of the storage account to get properties for.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-190">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-190">The response stream.</span></span>
+    content: function get(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: getKeys(accountName, callback)
+  summary: <span data-ttu-id="6888f-191">获取存储密钥操作将返回指定的存储帐户的主要和辅助访问密钥。</span><span class="sxs-lookup"><span data-stu-id="6888f-191">The Get Storage Keys operation returns the primary and secondary access keys for the specified storage account.</span></span>  <span data-ttu-id="6888f-192">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460785.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="6888f-192">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460785.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.getKeys(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-193">所需的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-193">The name of the desired storage account.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-194">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-194">The response stream.</span></span>
+    content: function getKeys(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: list(callback)
+  summary: <span data-ttu-id="6888f-195">列出存储帐户操作可列出当前订阅下可用的存储帐户。</span><span class="sxs-lookup"><span data-stu-id="6888f-195">The List Storage Accounts operation lists the storage accounts available under the current subscription.</span></span>  <span data-ttu-id="6888f-196">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460787.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="6888f-196">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460787.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-197">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-197">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: prepareMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="6888f-198">准备迁移 api 验证并准备在给定的存储帐户对于 IaaS 从经典到 ARM 的迁移存储帐户。</span><span class="sxs-lookup"><span data-stu-id="6888f-198">Prepare storage account migration api validates and prepares the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.prepareMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-199">要迁移的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-199">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-200">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-200">The response stream.</span></span>
+    content: function prepareMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: regenerateKeys(parameters, callback)
+  summary: <span data-ttu-id="6888f-201">重新生成密钥操作将重新生成指定的存储帐户的主密钥或辅助访问密钥。</span><span class="sxs-lookup"><span data-stu-id="6888f-201">The Regenerate Keys operation regenerates the primary or secondary access key for the specified storage account.</span></span>  <span data-ttu-id="6888f-202">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/ee460795.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="6888f-202">(see http://msdn.microsoft.com/en-us/library/windowsazure/ee460795.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.regenerateKeys(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountRegenerateKeysParameters
+      description: <span data-ttu-id="6888f-203">重新生成密钥操作提供的参数。</span><span class="sxs-lookup"><span data-stu-id="6888f-203">Parameters supplied to the Regenerate Keys operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="6888f-204">所需的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-204">The name of the desired storage account.</span></span>
+    - id: parameters.keyType
+      type:
+      - azure-asm-storage.StorageKeyType
+      description: <span data-ttu-id="6888f-205">指定要重新生成哪个密钥。</span><span class="sxs-lookup"><span data-stu-id="6888f-205">Specifies which key to regenerate.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-206">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-206">The response stream.</span></span>
+    content: function regenerateKeys(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: update(accountName, parameters, callback)
+  summary: <span data-ttu-id="6888f-207">更新存储帐户的操作更新的标签和说明，以及启用或禁用 Azure 中的存储帐户的地域复制状态。</span><span class="sxs-lookup"><span data-stu-id="6888f-207">The Update Storage Account operation updates the label and the description, and enables or disables the geo-replication status for a storage account in Azure.</span></span>  <span data-ttu-id="6888f-208">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/hh264516.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="6888f-208">(see http://msdn.microsoft.com/en-us/library/windowsazure/hh264516.aspx for more information)</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.update(accountName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-209">要更新的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-209">Name of the storage account to update.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountUpdateParameters
+      description: <span data-ttu-id="6888f-210">提供给更新存储帐户的操作的参数。</span><span class="sxs-lookup"><span data-stu-id="6888f-210">Parameters supplied to the Update Storage Account operation.</span></span>
+    - id: parameters.description
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="6888f-211">Base64 编码的存储帐户名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-211">A name for the storage account, base64-encoded.</span></span> <span data-ttu-id="6888f-212">名称可能最多 100 个字符的长度。</span><span class="sxs-lookup"><span data-stu-id="6888f-212">The name may be up to 100 characters in length.</span></span> <span data-ttu-id="6888f-213">该名称可用于标识存储帐户，以便进行跟踪。</span><span class="sxs-lookup"><span data-stu-id="6888f-213">The name can be used identify the storage account for your tracking purposes.</span></span>
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: <span data-ttu-id="6888f-214">表示扩展的存储帐户属性的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-214">Represents the name of an extended storage account property.</span></span> <span data-ttu-id="6888f-215">每个扩展的属性必须具有定义的名称和值。</span><span class="sxs-lookup"><span data-stu-id="6888f-215">Each extended property must have a defined name and a value.</span></span> <span data-ttu-id="6888f-216">您可以最多 50 个扩展属性名称/值对。</span><span class="sxs-lookup"><span data-stu-id="6888f-216">You can have a maximum of 50 extended property name/value pairs.</span></span> <span data-ttu-id="6888f-217">Name 元素的最大长度为 64 个字符，仅字母数字字符和下划线有效名称，并且名称必须以字母开头。</span><span class="sxs-lookup"><span data-stu-id="6888f-217">The maximum length of the Name element is 64 characters, only alphanumeric characters and underscores are valid in the Name, and the name must start with a letter.</span></span> <span data-ttu-id="6888f-218">尝试使用其他字符，名称以非字母字符开头或输入等同于拥有的相同的存储帐户的另一个扩展属性的名称将导致状态代码 400 （错误请求） 错误。</span><span class="sxs-lookup"><span data-stu-id="6888f-218">Attempting to use other characters, starting the Name with a non-letter character, or entering a name that is identical to that of another extended property owned by the same storage account will result in a status code 400 (Bad Request) error.</span></span> <span data-ttu-id="6888f-219">每个扩展的属性值具有最大长度为 255 个字符。</span><span class="sxs-lookup"><span data-stu-id="6888f-219">Each extended property value has a maximum length of 255 characters.</span></span> <span data-ttu-id="6888f-220">你可以通过将值设置为 NULL，删除扩展的属性。</span><span class="sxs-lookup"><span data-stu-id="6888f-220">You can delete an extended property by setting the value to NULL.</span></span>
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "<span data-ttu-id=\"6888f-221\">指定帐户是否支持本地冗余存储、 异地冗余存储、 区域冗余存储或读取访问异地冗余存储。</span><span class=\"sxs-lookup\"><span data-stu-id=\"6888f-221\">Specifies whether the account supports locally-redundant storage, geo-redundant storage, zone-redundant storage, or read access geo-redundant storage.</span></span> <span data-ttu-id=\"6888f-222\">可能的值为: Standard_LRS、 Standard_ZRS、 Standard_GRS 和 Standard_RAGRS。</span><span class=\"sxs-lookup\"><span data-stu-id=\"6888f-222\">Possible values are:'Standard_LRS', 'Standard_ZRS', 'Standard_GRS', and 'Standard_RAGRS'.</span></span>"
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-223">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-223">The response stream.</span></span>
+    content: function update(accountName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: validateMigration(storageAccountName, callback)
+  summary: <span data-ttu-id="6888f-224">验证存储帐户迁移 api 验证给定的存储帐户对于 IaaS 从经典到 ARM 的迁移。</span><span class="sxs-lookup"><span data-stu-id="6888f-224">Validate storage account migration api validates the given storage account for IaaS Classic to ARM migration.</span></span>
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.validateMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="6888f-225">要迁移的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="6888f-225">Name of storage account to be migrated.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: <span data-ttu-id="6888f-226">响应流中。</span><span class="sxs-lookup"><span data-stu-id="6888f-226">The response stream.</span></span>
+    content: function validateMigration(storageAccountName, callback)
+  langs:
+  - js

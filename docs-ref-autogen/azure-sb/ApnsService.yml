@@ -1,0 +1,442 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 94474b9236dc6e17df2e02d3d799841deb9f8621
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049491"
+items:
+- uid: azure-sb.ApnsService
+  id: azure-sb.ApnsService
+  name: ApnsService
+  summary: >-
+    <span data-ttu-id="482af-101">ApnsService 类用于使用 Apple 推送通知服务 (APNS) 发送通知。</span><span class="sxs-lookup"><span data-stu-id="482af-101">The ApnsService class is used to send notifications using the Apple Push Notification Service (APNS).</span></span>
+
+    <span data-ttu-id="482af-102">使用此服务与 iOS 设备进行通信。</span><span class="sxs-lookup"><span data-stu-id="482af-102">This service is used to communicate with iOS device.</span></span>
+  fullName: azure-sb.ApnsService
+  type: Class
+  children:
+  - azure-sb.ApnsService.#ctor
+  - azure-sb.ApnsService#send
+  - azure-sb.ApnsService#createNativeRegistration
+  - azure-sb.ApnsService#createOrUpdateNativeRegistration
+  - azure-sb.ApnsService#createTemplateRegistration
+  - azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  - azure-sb.ApnsService#updateTemplateRegistration
+  - azure-sb.ApnsService#listRegistrationsByToken
+  langs:
+  - js
+- id: azure-sb.ApnsService.#ctor
+  uid: azure-sb.ApnsService.#ctor
+  parent: azure-sb.ApnsService
+  name: ApnsService(notificationHubService)
+  fullName: azure-sb.ApnsService.ApnsService(notificationHubService)
+  summary: >-
+    <span data-ttu-id="482af-103">创建新的 ApnsService 对象使用指定<xref:azure-sb.NotificationHubService>对象。</span><span class="sxs-lookup"><span data-stu-id="482af-103">Creates a new ApnsService object using the specified <xref:azure-sb.NotificationHubService> object.</span></span>
+
+
+
+    <span data-ttu-id="482af-104">__请注意__： 当在自动创建此对象的实例<xref:azure-sb.NotificationHubService>创建对象。</span><span class="sxs-lookup"><span data-stu-id="482af-104">__Note__: An instance of this object is created automatically when a <xref:azure-sb.NotificationHubService> object is created.</span></span> <span data-ttu-id="482af-105">请参阅 <xref:azure-sb.NotificationHubService%23apns>。</span><span class="sxs-lookup"><span data-stu-id="482af-105">See <xref:azure-sb.NotificationHubService%23apns>.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: <span data-ttu-id="482af-106">通知中心服务。</span><span class="sxs-lookup"><span data-stu-id="482af-106">The notification hub service.</span></span>
+    content: new ApnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#send
+  id: azure-sb.ApnsService#send
+  parent: azure-sb.ApnsService
+  name: send(tags, payload, optionsOrCallback, callback)
+  summary: <span data-ttu-id="482af-107">发送 APNS 通知。</span><span class="sxs-lookup"><span data-stu-id="482af-107">Sends an APNS notification.</span></span>
+  fullName: azure-sb.ApnsService.send(tags, payload, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="482af-108">单个标记或标记表达式。</span><span class="sxs-lookup"><span data-stu-id="482af-108">A single tag or tag expression.</span></span>
+
+        <span data-ttu-id="482af-109">如果为 null 将广播到此中心内的所有注册</span><span class="sxs-lookup"><span data-stu-id="482af-109">If null it will broadcast to all registrations in this hub</span></span>
+    - id: payload
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="482af-110">消息的 JSON 有效负载指定下面。</span><span class="sxs-lookup"><span data-stu-id="482af-110">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="482af-111">如果负载是一个字符串，请按照中的 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="482af-111">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: payload.expiry
+      type:
+      - date
+      description: '<span data-ttu-id="482af-112">到期日期。</span><span class="sxs-lookup"><span data-stu-id="482af-112">The expiration date.</span></span> <span data-ttu-id="482af-113">(在 W3C dtf 格式-MM-: Mmtzd (例如 1997年-07-16t19: 20 + 01:00))</span><span class="sxs-lookup"><span data-stu-id="482af-113">(in W3C DTF, YYYY-MM-DDThh:mmTZD (e.g. 1997-07-16T19:20+01:00))</span></span>'
+      optional: true
+    - id: payload.aps
+      type:
+      - object
+      description: <span data-ttu-id="482af-114">如果提供的 ap 成员，该对象传递到 APNS 作为-是处理到期后。</span><span class="sxs-lookup"><span data-stu-id="482af-114">If the 'aps' member is provided, the object is delivered to APNS as-is after expiry is processed.</span></span> <span data-ttu-id="482af-115">假定对象遵循在 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="482af-115">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: payload.badge
+      type:
+      - number
+      description: <span data-ttu-id="482af-116">如果 ap 成员未提供，应用程序图标上方显示的值。</span><span class="sxs-lookup"><span data-stu-id="482af-116">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: payload.alert
+      type:
+      - string
+      description: <span data-ttu-id="482af-117">如果 ap 成员未提供，警报文本。</span><span class="sxs-lookup"><span data-stu-id="482af-117">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: payload.sound
+      type:
+      - string
+      description: <span data-ttu-id="482af-118">如果未提供 ap 成员，声音文件名称。</span><span class="sxs-lookup"><span data-stu-id="482af-118">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: payload.payload
+      type:
+      - object
+      description: <span data-ttu-id="482af-119">如果 ap 成员未提供，包含通知文本的有效负载对象。</span><span class="sxs-lookup"><span data-stu-id="482af-119">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="482af-120">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="482af-120">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="482af-121">Apns 标头。</span><span class="sxs-lookup"><span data-stu-id="482af-121">The apns headers.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="482af-122">`error` 如果出现错误; 将包含的信息否则为`response`将包含与此操作相关的信息。</span><span class="sxs-lookup"><span data-stu-id="482af-122">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function send(tags, payload, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createNativeRegistration
+  id: azure-sb.ApnsService#createNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createNativeRegistration(token, tags, options, callback)
+  summary: <span data-ttu-id="482af-123">创建本机注册。</span><span class="sxs-lookup"><span data-stu-id="482af-123">Creates a native registration.</span></span>
+  fullName: azure-sb.ApnsService.createNativeRegistration(token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="482af-124">设备令牌。</span><span class="sxs-lookup"><span data-stu-id="482af-124">The device token.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="482af-125">标记 （逗号分隔的列表，不含空格）。</span><span class="sxs-lookup"><span data-stu-id="482af-125">The tags (comma-separated list, no spaces).</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="482af-126">请求选项</span><span class="sxs-lookup"><span data-stu-id="482af-126">The request options</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="482af-127">`error` 如果出现错误; 将包含的信息否则为`response`将包含与此操作相关的信息。</span><span class="sxs-lookup"><span data-stu-id="482af-127">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createNativeRegistration(token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  id: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  summary: <span data-ttu-id="482af-128">创建或更新本机注册。</span><span class="sxs-lookup"><span data-stu-id="482af-128">Creates or updates a native registration.</span></span>
+  fullName: azure-sb.ApnsService.createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="482af-129">注册标识符。</span><span class="sxs-lookup"><span data-stu-id="482af-129">The registration identifier.</span></span>
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="482af-130">设备令牌。</span><span class="sxs-lookup"><span data-stu-id="482af-130">The device token.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="482af-131">标记 （逗号分隔的列表，不含空格）。</span><span class="sxs-lookup"><span data-stu-id="482af-131">The tags (comma-separated list, no spaces).</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="482af-132">请求选项</span><span class="sxs-lookup"><span data-stu-id="482af-132">The request options</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="482af-133">`error` 如果出现错误; 将包含的信息否则为`response`将包含与此操作相关的信息。</span><span class="sxs-lookup"><span data-stu-id="482af-133">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createTemplateRegistration
+  id: azure-sb.ApnsService#createTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  summary: <span data-ttu-id="482af-134">创建模板注册。</span><span class="sxs-lookup"><span data-stu-id="482af-134">Creates a template registration.</span></span>
+  fullName: azure-sb.ApnsService.createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="482af-135">设备令牌。</span><span class="sxs-lookup"><span data-stu-id="482af-135">The device token.</span></span>
+    - id: tags
+      type:
+      - string
+      - array
+      description: <span data-ttu-id="482af-136">标记。</span><span class="sxs-lookup"><span data-stu-id="482af-136">The tags.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="482af-137">消息的 JSON 有效负载指定下面。</span><span class="sxs-lookup"><span data-stu-id="482af-137">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="482af-138">如果负载是一个字符串，请按照中的 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="482af-138">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: template.expiry
+      type:
+      - date
+      description: <span data-ttu-id="482af-139">到期日期。</span><span class="sxs-lookup"><span data-stu-id="482af-139">The expiration date.</span></span>
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: <span data-ttu-id="482af-140">如果提供的 ap 成员，则注册传递到作为 NotifcationHub-是处理到期后。</span><span class="sxs-lookup"><span data-stu-id="482af-140">If the 'aps' member is provided, the registration is delivered to NotifcationHub as-is after expiry is processed.</span></span> <span data-ttu-id="482af-141">假定对象遵循在 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="482af-141">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: <span data-ttu-id="482af-142">如果 ap 成员未提供，应用程序图标上方显示的值。</span><span class="sxs-lookup"><span data-stu-id="482af-142">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: <span data-ttu-id="482af-143">如果 ap 成员未提供，警报文本。</span><span class="sxs-lookup"><span data-stu-id="482af-143">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: <span data-ttu-id="482af-144">如果未提供 ap 成员，声音文件名称。</span><span class="sxs-lookup"><span data-stu-id="482af-144">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: <span data-ttu-id="482af-145">如果 ap 成员未提供，包含通知文本的有效负载对象。</span><span class="sxs-lookup"><span data-stu-id="482af-145">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="482af-146">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="482af-146">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="482af-147">要包括的 apns 标头。</span><span class="sxs-lookup"><span data-stu-id="482af-147">The apns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="482af-148">`error` 如果出现错误; 将包含的信息否则为`response`将包含与此操作相关的信息。</span><span class="sxs-lookup"><span data-stu-id="482af-148">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  id: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  summary: <span data-ttu-id="482af-149">创建或更新模板注册。</span><span class="sxs-lookup"><span data-stu-id="482af-149">Creates or updates a template registration.</span></span>
+  fullName: azure-sb.ApnsService.createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="482af-150">注册标识符。</span><span class="sxs-lookup"><span data-stu-id="482af-150">The registration identifier.</span></span>
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="482af-151">设备令牌。</span><span class="sxs-lookup"><span data-stu-id="482af-151">The device token.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="482af-152">消息的 JSON 有效负载指定下面。</span><span class="sxs-lookup"><span data-stu-id="482af-152">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="482af-153">如果负载是一个字符串，请按照中的 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="482af-153">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: template.expiry
+      type:
+      - date
+      description: <span data-ttu-id="482af-154">到期日期。</span><span class="sxs-lookup"><span data-stu-id="482af-154">The expiration date.</span></span>
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: <span data-ttu-id="482af-155">如果提供的 ap 成员，则注册传递到作为 NotifcationHub-是处理到期后。</span><span class="sxs-lookup"><span data-stu-id="482af-155">If the 'aps' member is provided, the registration is delivered to NotifcationHub as-is after expiry is processed.</span></span> <span data-ttu-id="482af-156">假定对象遵循在 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="482af-156">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: <span data-ttu-id="482af-157">如果 ap 成员未提供，应用程序图标上方显示的值。</span><span class="sxs-lookup"><span data-stu-id="482af-157">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: <span data-ttu-id="482af-158">如果 ap 成员未提供，警报文本。</span><span class="sxs-lookup"><span data-stu-id="482af-158">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: <span data-ttu-id="482af-159">如果未提供 ap 成员，声音文件名称。</span><span class="sxs-lookup"><span data-stu-id="482af-159">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: <span data-ttu-id="482af-160">如果 ap 成员未提供，包含通知文本的有效负载对象。</span><span class="sxs-lookup"><span data-stu-id="482af-160">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="482af-161">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="482af-161">The request options.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: <span data-ttu-id="482af-162">要包括的 apns 标头。</span><span class="sxs-lookup"><span data-stu-id="482af-162">The apns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="482af-163">`error` 如果出现错误; 将包含的信息否则为`response`将包含与此操作相关的信息。</span><span class="sxs-lookup"><span data-stu-id="482af-163">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#updateTemplateRegistration
+  id: azure-sb.ApnsService#updateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  summary: <span data-ttu-id="482af-164">更新模板注册。</span><span class="sxs-lookup"><span data-stu-id="482af-164">Updates a template registration.</span></span>
+  fullName: azure-sb.ApnsService.updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: <span data-ttu-id="482af-165">注册标识符。</span><span class="sxs-lookup"><span data-stu-id="482af-165">The registration identifier.</span></span>
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="482af-166">设备令牌。</span><span class="sxs-lookup"><span data-stu-id="482af-166">The device token.</span></span>
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        <span data-ttu-id="482af-167">消息的 JSON 有效负载指定下面。</span><span class="sxs-lookup"><span data-stu-id="482af-167">The message's JSON payload as specified below.</span></span>
+
+        <span data-ttu-id="482af-168">如果负载是一个字符串，请按照中的 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="482af-168">If the payload is a string, follow the APNS format as in https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+    - id: template.expiry
+      type:
+      - date
+      description: <span data-ttu-id="482af-169">到期日期。</span><span class="sxs-lookup"><span data-stu-id="482af-169">The expiration date.</span></span>
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: <span data-ttu-id="482af-170">如果提供的 ap 成员，则注册传递到作为 NotifcationHub-是处理到期后。</span><span class="sxs-lookup"><span data-stu-id="482af-170">If the 'aps' member is provided, the registration is delivered to NotifcationHub as-is after expiry is processed.</span></span> <span data-ttu-id="482af-171">假定对象遵循在 APNS 格式 https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span><span class="sxs-lookup"><span data-stu-id="482af-171">The object is assumed to follow the APNS format at https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1</span></span>
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: <span data-ttu-id="482af-172">如果 ap 成员未提供，应用程序图标上方显示的值。</span><span class="sxs-lookup"><span data-stu-id="482af-172">If the 'aps' member is not provided, the number to display over the app icon.</span></span>
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: <span data-ttu-id="482af-173">如果 ap 成员未提供，警报文本。</span><span class="sxs-lookup"><span data-stu-id="482af-173">If the 'aps' member is not provided, the alert text.</span></span>
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: <span data-ttu-id="482af-174">如果未提供 ap 成员，声音文件名称。</span><span class="sxs-lookup"><span data-stu-id="482af-174">If the 'aps' member is not provided, the sound file name.</span></span>
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: <span data-ttu-id="482af-175">如果 ap 成员未提供，包含通知文本的有效负载对象。</span><span class="sxs-lookup"><span data-stu-id="482af-175">If the 'aps' member is not provided, the payload object that contains the notification text.</span></span>
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="482af-176">请求选项或回调函数。</span><span class="sxs-lookup"><span data-stu-id="482af-176">The request options or callback function.</span></span>
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: <span data-ttu-id="482af-177">要包括的 apns 标头。</span><span class="sxs-lookup"><span data-stu-id="482af-177">The apns headers to include.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="482af-178">`error` 如果出现错误; 将包含的信息否则为`response`将包含与此操作相关的信息。</span><span class="sxs-lookup"><span data-stu-id="482af-178">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#listRegistrationsByToken
+  id: azure-sb.ApnsService#listRegistrationsByToken
+  parent: azure-sb.ApnsService
+  name: listRegistrationsByToken(token, options, callback)
+  summary: <span data-ttu-id="482af-179">按设备标记检索注册。</span><span class="sxs-lookup"><span data-stu-id="482af-179">Retrieves a registration by device token.</span></span>
+  fullName: azure-sb.ApnsService.listRegistrationsByToken(token, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: <span data-ttu-id="482af-180">设备令牌。</span><span class="sxs-lookup"><span data-stu-id="482af-180">The device token.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="482af-181">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="482af-181">The request options.</span></span> <span data-ttu-id="482af-182">其他属性将作为标头传递。</span><span class="sxs-lookup"><span data-stu-id="482af-182">Additional properties will be passed as headers.</span></span>
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: <span data-ttu-id="482af-183">指定注册，以从调用中获取的最大数目。</span><span class="sxs-lookup"><span data-stu-id="482af-183">Specifies the maximum number of registration to obtain from the call.</span></span>
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: <span data-ttu-id="482af-184">指定注册的调用中跳过数。</span><span class="sxs-lookup"><span data-stu-id="482af-184">Specifies the number of registrations to skip in the call.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="482af-185">`error` 如果出现错误; 将包含的信息否则为`response`将包含与此操作相关的信息。</span><span class="sxs-lookup"><span data-stu-id="482af-185">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function listRegistrationsByToken(token, options, callback)
+  langs:
+  - js

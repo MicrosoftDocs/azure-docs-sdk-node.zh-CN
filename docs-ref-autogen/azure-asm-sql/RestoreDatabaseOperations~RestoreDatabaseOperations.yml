@@ -1,0 +1,93 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b4a3fb9b551ea7ff8291a7c44c6d4958b18851cc
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049408"
+items:
+- uid: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  id: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  name: RestoreDatabaseOperations
+  summary: >-
+    <span data-ttu-id="bbd57-101">包含要为 Azure SQL 数据库创建还原请求的操作。</span><span class="sxs-lookup"><span data-stu-id="bbd57-101">Contains the operation to create restore requests for Azure SQL Databases.</span></span>
+
+    <span data-ttu-id="bbd57-102">__请注意__： 此类的实例自动创建的实例 [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="bbd57-102">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="bbd57-103">请参阅 [restoreDatabaseOperations] {@link SqlManagementClient ~ SqlManagementClient #restoreDatabaseOperations}。</span><span class="sxs-lookup"><span data-stu-id="bbd57-103">See [restoreDatabaseOperations] {@link SqlManagementClient~SqlManagementClient#restoreDatabaseOperations}.</span></span>
+
+    <span data-ttu-id="bbd57-104">初始化 RestoreDatabaseOperations 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="bbd57-104">Initializes a new instance of the RestoreDatabaseOperations class.</span></span>
+  fullName: azure-asm-sql.RestoreDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.#ctor
+  - azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations#create
+  langs:
+  - js
+- id: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.#ctor
+  uid: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.#ctor
+  parent: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  name: RestoreDatabaseOperations(client)
+  fullName: azure-asm-sql.RestoreDatabaseOperations.RestoreDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="bbd57-105">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="bbd57-105">Reference to the service client.</span></span>
+    content: new RestoreDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations#create
+  id: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations#create
+  parent: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  name: create(sourceServerName, parameters, callback)
+  summary: <span data-ttu-id="bbd57-106">Azure SQL 数据库发出还原请求。</span><span class="sxs-lookup"><span data-stu-id="bbd57-106">Issues a restore request for an Azure SQL Database.</span></span>
+  fullName: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations.create(sourceServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sourceServerName
+      type:
+      - string
+      description: <span data-ttu-id="bbd57-107">将源数据库，或，承载 Azure SQL 数据库服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="bbd57-107">The name of the Azure SQL Database Server where the source database is, or was, hosted.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.RestoreDatabaseOperationCreateParameters
+      description: <span data-ttu-id="bbd57-108">创建还原数据库操作请求的附加参数。</span><span class="sxs-lookup"><span data-stu-id="bbd57-108">Additional parameters for the Create Restore Database Operation request.</span></span>
+    - id: parameters.sourceDatabaseName
+      type:
+      - string
+      description: <span data-ttu-id="bbd57-109">获取或设置源 Azure SQL 数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="bbd57-109">Gets or sets the name of the source Azure SQL Database.</span></span>
+    - id: parameters.sourceDatabaseDeletionDate
+      type:
+      - date
+      description: <span data-ttu-id="bbd57-110">获取或设置源 Azure SQL 数据库的删除日期。</span><span class="sxs-lookup"><span data-stu-id="bbd57-110">Gets or sets the deletion date of the source Azure SQL Database.</span></span>
+      optional: true
+    - id: parameters.targetServerName
+      type:
+      - string
+      description: <span data-ttu-id="bbd57-111">获取或设置目标 Azure SQL 数据库服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="bbd57-111">Gets or sets the name of the target Azure SQL Database Server.</span></span>
+      optional: true
+    - id: parameters.targetDatabaseName
+      type:
+      - string
+      description: <span data-ttu-id="bbd57-112">获取或设置目标 Azure SQL 数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="bbd57-112">Gets or sets the name of the target Azure SQL Database.</span></span>
+    - id: parameters.pointInTime
+      type:
+      - date
+      description: <span data-ttu-id="bbd57-113">获取或设置要还原到时间点。</span><span class="sxs-lookup"><span data-stu-id="bbd57-113">Gets or sets the point in time to restore to.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="bbd57-114">响应流中。</span><span class="sxs-lookup"><span data-stu-id="bbd57-114">The response stream.</span></span>
+    content: function create(sourceServerName, parameters, callback)
+  langs:
+  - js

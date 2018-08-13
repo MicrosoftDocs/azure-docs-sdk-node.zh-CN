@@ -1,0 +1,325 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 15806f9b6bce4e4a7f5767f4db990555ca44ceb3
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049488"
+items:
+- uid: azure-monitoring.EventDataOperations~EventDataOperations
+  id: azure-monitoring.EventDataOperations~EventDataOperations
+  name: EventDataOperations
+  summary: >-
+    <span data-ttu-id="3228a-101">用于事件数据的操作。</span><span class="sxs-lookup"><span data-stu-id="3228a-101">Operations for event data.</span></span>
+
+    <span data-ttu-id="3228a-102">__请注意__： 此类的实例自动创建的实例 [EventsClient] <xref:azure-monitoring.EventsClient~EventsClient>。</span><span class="sxs-lookup"><span data-stu-id="3228a-102">__NOTE__: An instance of this class is automatically created for an instance of the [EventsClient] <xref:azure-monitoring.EventsClient~EventsClient>.</span></span>
+
+    <span data-ttu-id="3228a-103">请参阅 [eventData] <xref:azure-monitoring.EventsClient~EventsClient%23eventData>。</span><span class="sxs-lookup"><span data-stu-id="3228a-103">See [eventData] <xref:azure-monitoring.EventsClient~EventsClient%23eventData>.</span></span>
+
+    <span data-ttu-id="3228a-104">初始化 EventDataOperations 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="3228a-104">Initializes a new instance of the EventDataOperations class.</span></span>
+  fullName: azure-monitoring.EventDataOperations
+  type: Class
+  children:
+  - azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  langs:
+  - js
+- id: azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  uid: azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: EventDataOperations(client)
+  fullName: azure-monitoring.EventDataOperations.EventDataOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedEventsClient
+      description: <span data-ttu-id="3228a-105">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="3228a-105">Reference to the service client.</span></span>
+    content: new EventDataOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEvents(parameters, callback)
+  summary: <span data-ttu-id="3228a-106">列表事件值操作列出的事件。</span><span class="sxs-lookup"><span data-stu-id="3228a-106">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEvents(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsParameters
+      description: ''
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-107">事件的开始时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-107">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-108">事件结束时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-108">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="3228a-109">事件通道中。</span><span class="sxs-lookup"><span data-stu-id="3228a-109">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="3228a-110">下一步的链接标记。</span><span class="sxs-lookup"><span data-stu-id="3228a-110">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="3228a-111">响应流中。</span><span class="sxs-lookup"><span data-stu-id="3228a-111">The response stream.</span></span>
+    content: function listEvents(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForCorrelationId(parameters, callback)
+  summary: <span data-ttu-id="3228a-112">列表事件值操作列出的事件。</span><span class="sxs-lookup"><span data-stu-id="3228a-112">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForCorrelationId(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForCorrelationIdParameters
+      description: ''
+    - id: parameters.correlationId
+      type:
+      - string
+      description: <span data-ttu-id="3228a-113">事件相关 id。</span><span class="sxs-lookup"><span data-stu-id="3228a-113">The event correlation id.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-114">事件的开始时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-114">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-115">事件结束时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-115">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="3228a-116">事件通道中。</span><span class="sxs-lookup"><span data-stu-id="3228a-116">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="3228a-117">下一步的链接标记。</span><span class="sxs-lookup"><span data-stu-id="3228a-117">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="3228a-118">响应流中。</span><span class="sxs-lookup"><span data-stu-id="3228a-118">The response stream.</span></span>
+    content: function listEventsForCorrelationId(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForEventSource(parameters, callback)
+  summary: <span data-ttu-id="3228a-119">列表事件值操作列出的事件。</span><span class="sxs-lookup"><span data-stu-id="3228a-119">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForEventSource(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForEventSourceParameters
+      description: ''
+    - id: parameters.eventSource
+      type:
+      - string
+      description: <span data-ttu-id="3228a-120">事件源。</span><span class="sxs-lookup"><span data-stu-id="3228a-120">The event source.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-121">事件的开始时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-121">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-122">事件结束时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-122">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="3228a-123">事件通道中。</span><span class="sxs-lookup"><span data-stu-id="3228a-123">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="3228a-124">下一步的链接标记。</span><span class="sxs-lookup"><span data-stu-id="3228a-124">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="3228a-125">响应流中。</span><span class="sxs-lookup"><span data-stu-id="3228a-125">The response stream.</span></span>
+    content: function listEventsForEventSource(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResource(parameters, callback)
+  summary: <span data-ttu-id="3228a-126">列表事件值操作列出的事件。</span><span class="sxs-lookup"><span data-stu-id="3228a-126">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResource(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceParameters
+      description: ''
+    - id: parameters.resourceUri
+      type:
+      - string
+      description: <span data-ttu-id="3228a-127">资源的 id。</span><span class="sxs-lookup"><span data-stu-id="3228a-127">The id of the resource.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-128">事件的开始时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-128">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-129">事件结束时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-129">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="3228a-130">事件通道中。</span><span class="sxs-lookup"><span data-stu-id="3228a-130">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="3228a-131">下一步的链接标记。</span><span class="sxs-lookup"><span data-stu-id="3228a-131">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="3228a-132">响应流中。</span><span class="sxs-lookup"><span data-stu-id="3228a-132">The response stream.</span></span>
+    content: function listEventsForResource(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResourceGroup(parameters, callback)
+  summary: <span data-ttu-id="3228a-133">列表事件值操作列出的事件。</span><span class="sxs-lookup"><span data-stu-id="3228a-133">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResourceGroup(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceGroupParameters
+      description: ''
+    - id: parameters.resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="3228a-134">资源组名称。</span><span class="sxs-lookup"><span data-stu-id="3228a-134">The resource group name.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-135">事件的开始时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-135">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-136">事件结束时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-136">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="3228a-137">事件通道中。</span><span class="sxs-lookup"><span data-stu-id="3228a-137">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="3228a-138">下一步的链接标记。</span><span class="sxs-lookup"><span data-stu-id="3228a-138">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="3228a-139">响应流中。</span><span class="sxs-lookup"><span data-stu-id="3228a-139">The response stream.</span></span>
+    content: function listEventsForResourceGroup(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResourceProvider(parameters, callback)
+  summary: <span data-ttu-id="3228a-140">列表事件值操作列出的事件。</span><span class="sxs-lookup"><span data-stu-id="3228a-140">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResourceProvider(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceProviderParameters
+      description: ''
+    - id: parameters.resourceProvider
+      type:
+      - string
+      description: <span data-ttu-id="3228a-141">资源提供程序。</span><span class="sxs-lookup"><span data-stu-id="3228a-141">The resource provider.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-142">事件的开始时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-142">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="3228a-143">事件结束时间。</span><span class="sxs-lookup"><span data-stu-id="3228a-143">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="3228a-144">事件通道中。</span><span class="sxs-lookup"><span data-stu-id="3228a-144">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="3228a-145">下一步的链接标记。</span><span class="sxs-lookup"><span data-stu-id="3228a-145">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="3228a-146">响应流中。</span><span class="sxs-lookup"><span data-stu-id="3228a-146">The response stream.</span></span>
+    content: function listEventsForResourceProvider(parameters, callback)
+  langs:
+  - js

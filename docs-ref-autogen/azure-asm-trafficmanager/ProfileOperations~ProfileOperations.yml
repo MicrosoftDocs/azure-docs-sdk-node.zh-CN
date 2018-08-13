@@ -1,0 +1,199 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3c868c101ab224a55ed617f58210295e61ce49c7
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049424"
+items:
+- uid: azure-asm-trafficmanager.ProfileOperations~ProfileOperations
+  id: azure-asm-trafficmanager.ProfileOperations~ProfileOperations
+  name: ProfileOperations
+  summary: >-
+    <span data-ttu-id="9cc59-101">流量管理器 API 包括用于管理流量管理器配置文件的操作。</span><span class="sxs-lookup"><span data-stu-id="9cc59-101">The Traffic Manager API includes operations for managing Traffic Manager profiles.</span></span>
+
+    <span data-ttu-id="9cc59-102">__请注意__： 此类的实例自动创建的实例 [TrafficManagerManagementClient] {@link TrafficManagerManagementClient ~ TrafficManagerManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="9cc59-102">__NOTE__: An instance of this class is automatically created for an instance of the [TrafficManagerManagementClient] {@link TrafficManagerManagementClient~TrafficManagerManagementClient}.</span></span>
+
+    <span data-ttu-id="9cc59-103">请参阅 [配置文件] {@link TrafficManagerManagementClient ~ TrafficManagerManagementClient #profiles}。</span><span class="sxs-lookup"><span data-stu-id="9cc59-103">See [profiles] {@link TrafficManagerManagementClient~TrafficManagerManagementClient#profiles}.</span></span>
+
+    <span data-ttu-id="9cc59-104">初始化 ProfileOperations 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="9cc59-104">Initializes a new instance of the ProfileOperations class.</span></span>
+  fullName: azure-asm-trafficmanager.ProfileOperations
+  type: Class
+  children:
+  - azure-asm-trafficmanager.ProfileOperations~ProfileOperations.#ctor
+  - azure-asm-trafficmanager.ProfileOperations~ProfileOperations#checkDnsPrefixAvailability
+  - azure-asm-trafficmanager.ProfileOperations~ProfileOperations#create
+  - azure-asm-trafficmanager.ProfileOperations~ProfileOperations#deleteMethod
+  - azure-asm-trafficmanager.ProfileOperations~ProfileOperations#get
+  - azure-asm-trafficmanager.ProfileOperations~ProfileOperations#list
+  - azure-asm-trafficmanager.ProfileOperations~ProfileOperations#update
+  langs:
+  - js
+- id: azure-asm-trafficmanager.ProfileOperations~ProfileOperations.#ctor
+  uid: azure-asm-trafficmanager.ProfileOperations~ProfileOperations.#ctor
+  parent: azure-asm-trafficmanager.ProfileOperations~ProfileOperations
+  name: ProfileOperations(client)
+  fullName: azure-asm-trafficmanager.ProfileOperations.ProfileOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedTrafficManagerManagementClient
+      description: <span data-ttu-id="9cc59-105">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="9cc59-105">Reference to the service client.</span></span>
+    content: new ProfileOperations(client)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#checkDnsPrefixAvailability
+  id: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#checkDnsPrefixAvailability
+  parent: azure-asm-trafficmanager.ProfileOperations~ProfileOperations
+  name: checkDnsPrefixAvailability(dnsName, callback)
+  summary: <span data-ttu-id="9cc59-106">你想要使用 DNS 名称。</span><span class="sxs-lookup"><span data-stu-id="9cc59-106">The DNS name that you want to use.</span></span> <span data-ttu-id="9cc59-107">必须包括。 trafficmanager.net 名称中的。</span><span class="sxs-lookup"><span data-stu-id="9cc59-107">You must include .trafficmanager.net in the name.</span></span>  <span data-ttu-id="9cc59-108">(请参阅http://msdn.microsoft.com/en-us/library/dn510368.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="9cc59-108">(see http://msdn.microsoft.com/en-us/library/dn510368.aspx for more information)</span></span>
+  fullName: azure-asm-trafficmanager.ProfileOperations~ProfileOperations.checkDnsPrefixAvailability(dnsName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: dnsName
+      type:
+      - string
+      description: <span data-ttu-id="9cc59-109">你想要使用的 DNS 名称</span><span class="sxs-lookup"><span data-stu-id="9cc59-109">DNS name that you want to use</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: <span data-ttu-id="9cc59-110">响应流中。</span><span class="sxs-lookup"><span data-stu-id="9cc59-110">The response stream.</span></span>
+    content: function checkDnsPrefixAvailability(dnsName, callback)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#create
+  id: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#create
+  parent: azure-asm-trafficmanager.ProfileOperations~ProfileOperations
+  name: create(name, domainName, callback)
+  summary: <span data-ttu-id="9cc59-111">创建新的配置文件指定订阅拥有的域名。</span><span class="sxs-lookup"><span data-stu-id="9cc59-111">Creates a new profile for a domain name, owned by the specified subscription.</span></span>  <span data-ttu-id="9cc59-112">(请参阅http://msdn.microsoft.com/en-us/library/hh758254.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="9cc59-112">(see http://msdn.microsoft.com/en-us/library/hh758254.aspx for more information)</span></span>
+  fullName: azure-asm-trafficmanager.ProfileOperations~ProfileOperations.create(name, domainName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: <span data-ttu-id="9cc59-113">配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="9cc59-113">The name of the profile.</span></span>
+    - id: domainName
+      type:
+      - string
+      description: <span data-ttu-id="9cc59-114">正在为其创建配置文件的域的名称。</span><span class="sxs-lookup"><span data-stu-id="9cc59-114">The name of the domain that the profile is being created for.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: <span data-ttu-id="9cc59-115">响应流中。</span><span class="sxs-lookup"><span data-stu-id="9cc59-115">The response stream.</span></span>
+    content: function create(name, domainName, callback)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#deleteMethod
+  id: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#deleteMethod
+  parent: azure-asm-trafficmanager.ProfileOperations~ProfileOperations
+  name: deleteMethod(profileName, callback)
+  summary: <span data-ttu-id="9cc59-116">删除配置文件及其所有定义。</span><span class="sxs-lookup"><span data-stu-id="9cc59-116">Deletes a profile and all of its definitions.</span></span> <span data-ttu-id="9cc59-117">无法还原此操作。</span><span class="sxs-lookup"><span data-stu-id="9cc59-117">This operation cannot be reverted.</span></span>  <span data-ttu-id="9cc59-118">(请参阅http://msdn.microsoft.com/en-us/library/hh758256.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="9cc59-118">(see http://msdn.microsoft.com/en-us/library/hh758256.aspx for more information)</span></span>
+  fullName: azure-asm-trafficmanager.ProfileOperations~ProfileOperations.deleteMethod(profileName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: profileName
+      type:
+      - string
+      description: <span data-ttu-id="9cc59-119">配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="9cc59-119">The name of the profile.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: <span data-ttu-id="9cc59-120">响应流中。</span><span class="sxs-lookup"><span data-stu-id="9cc59-120">The response stream.</span></span>
+    content: function deleteMethod(profileName, callback)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#get
+  id: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#get
+  parent: azure-asm-trafficmanager.ProfileOperations~ProfileOperations
+  name: get(profileName, callback)
+  summary: <span data-ttu-id="9cc59-121">返回配置文件详细信息，包括所有定义版本及其状态。</span><span class="sxs-lookup"><span data-stu-id="9cc59-121">Returns profile details, including all definition versions and their statuses.</span></span>  <span data-ttu-id="9cc59-122">(请参阅http://msdn.microsoft.com/en-us/library/hh758248.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="9cc59-122">(see http://msdn.microsoft.com/en-us/library/hh758248.aspx for more information)</span></span>
+  fullName: azure-asm-trafficmanager.ProfileOperations~ProfileOperations.get(profileName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: profileName
+      type:
+      - string
+      description: <span data-ttu-id="9cc59-123">配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="9cc59-123">The name of the profile.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: <span data-ttu-id="9cc59-124">响应流中。</span><span class="sxs-lookup"><span data-stu-id="9cc59-124">The response stream.</span></span>
+    content: function get(profileName, callback)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#list
+  id: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#list
+  parent: azure-asm-trafficmanager.ProfileOperations~ProfileOperations
+  name: list(callback)
+  summary: <span data-ttu-id="9cc59-125">返回某一订阅拥有的所有配置文件。</span><span class="sxs-lookup"><span data-stu-id="9cc59-125">Returns all profiles owned by a subscription.</span></span>  <span data-ttu-id="9cc59-126">(请参阅http://msdn.microsoft.com/en-us/library/hh758249.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="9cc59-126">(see http://msdn.microsoft.com/en-us/library/hh758249.aspx for more information)</span></span>
+  fullName: azure-asm-trafficmanager.ProfileOperations~ProfileOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: <span data-ttu-id="9cc59-127">响应流中。</span><span class="sxs-lookup"><span data-stu-id="9cc59-127">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#update
+  id: azure-asm-trafficmanager.ProfileOperations~ProfileOperations#update
+  parent: azure-asm-trafficmanager.ProfileOperations~ProfileOperations
+  name: update(profileName, profileStatus, definitionVersionNumber, callback)
+  summary: <span data-ttu-id="9cc59-128">启用或禁用配置文件。</span><span class="sxs-lookup"><span data-stu-id="9cc59-128">Enables or disables a profile.</span></span>  <span data-ttu-id="9cc59-129">(请参阅http://msdn.microsoft.com/en-us/library/hh758250.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="9cc59-129">(see http://msdn.microsoft.com/en-us/library/hh758250.aspx for more information)</span></span>
+  fullName: azure-asm-trafficmanager.ProfileOperations~ProfileOperations.update(profileName, profileStatus, definitionVersionNumber, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: profileName
+      type:
+      - string
+      description: <span data-ttu-id="9cc59-130">配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="9cc59-130">The name of the profile.</span></span>
+    - id: profileStatus
+      type:
+      - azure-asm-trafficmanager.ProfileDefinitionStatus
+      description: <span data-ttu-id="9cc59-131">指定是否应启用或禁用配置文件。</span><span class="sxs-lookup"><span data-stu-id="9cc59-131">Specifies whether the profile should be enabled or disabled.</span></span>
+    - id: definitionVersionNumber
+      type:
+      - Number
+      description: <span data-ttu-id="9cc59-132">定义的配置文件的版本</span><span class="sxs-lookup"><span data-stu-id="9cc59-132">Version of the definition associated with the profile</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-trafficmanager.Stream
+      description: <span data-ttu-id="9cc59-133">响应流中。</span><span class="sxs-lookup"><span data-stu-id="9cc59-133">The response stream.</span></span>
+    content: function update(profileName, profileStatus, definitionVersionNumber, callback)
+  langs:
+  - js

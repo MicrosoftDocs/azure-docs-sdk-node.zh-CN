@@ -1,0 +1,466 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f8d4332e8e550322acec13e55dc8b09a55d188ab
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40049326"
+items:
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations
+  summary: >-
+    <span data-ttu-id="0e325-101">服务总线管理 API 包括用于管理服务总线命名空间的操作。</span><span class="sxs-lookup"><span data-stu-id="0e325-101">The Service Bus Management API includes operations for managing Service Bus namespaces.</span></span>
+
+    <span data-ttu-id="0e325-102">__请注意__： 此类的实例自动创建的实例 [ServiceBusManagementClient] {@link ServiceBusManagementClient ~ ServiceBusManagementClient}。</span><span class="sxs-lookup"><span data-stu-id="0e325-102">__NOTE__: An instance of this class is automatically created for an instance of the [ServiceBusManagementClient] {@link ServiceBusManagementClient~ServiceBusManagementClient}.</span></span>
+
+    <span data-ttu-id="0e325-103">请参阅 [命名空间] {@link ServiceBusManagementClient ~ ServiceBusManagementClient #namespaces}。</span><span class="sxs-lookup"><span data-stu-id="0e325-103">See [namespaces] {@link ServiceBusManagementClient~ServiceBusManagementClient#namespaces}.</span></span>
+
+    <span data-ttu-id="0e325-104">初始化 NamespaceOperations 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="0e325-104">Initializes a new instance of the NamespaceOperations class.</span></span>
+  fullName: azure-asm-sb.NamespaceOperations
+  type: Class
+  children:
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  langs:
+  - js
+- id: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  uid: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations(client)
+  fullName: azure-asm-sb.NamespaceOperations.NamespaceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: <span data-ttu-id="0e325-105">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="0e325-105">Reference to the service client.</span></span>
+    content: new NamespaceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: checkAvailability(namespaceName, callback)
+  summary: <span data-ttu-id="0e325-106">检查给定的服务命名空间的可用性，跨所有 Windows Azure 订阅。</span><span class="sxs-lookup"><span data-stu-id="0e325-106">Checks the availability of the given service namespace across all Windows Azure subscriptions.</span></span> <span data-ttu-id="0e325-107">这很有用，因为根据服务命名空间名称创建的域名。</span><span class="sxs-lookup"><span data-stu-id="0e325-107">This is useful because the domain name is created based on the service namespace name.</span></span>  <span data-ttu-id="0e325-108">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj870968.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="0e325-108">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj870968.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.checkAvailability(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-109">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-109">The namespace name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-110">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-110">The response stream.</span></span>
+    content: function checkAvailability(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: create(namespaceName, region, callback)
+  summary: <span data-ttu-id="0e325-111">创建新的服务命名空间。</span><span class="sxs-lookup"><span data-stu-id="0e325-111">Creates a new service namespace.</span></span> <span data-ttu-id="0e325-112">创建后，此命名空间的资源清单不可变。</span><span class="sxs-lookup"><span data-stu-id="0e325-112">Once created, this namespace's resource manifest is immutable.</span></span> <span data-ttu-id="0e325-113">此操作是幂等。</span><span class="sxs-lookup"><span data-stu-id="0e325-113">This operation is idempotent.</span></span>  <span data-ttu-id="0e325-114">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="0e325-114">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.create(namespaceName, region, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-115">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-115">The namespace name.</span></span>
+    - id: region
+      type:
+      - string
+      description: <span data-ttu-id="0e325-116">命名空间区域中。</span><span class="sxs-lookup"><span data-stu-id="0e325-116">The namespace region.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-117">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-117">The response stream.</span></span>
+    content: function create(namespaceName, region, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createAuthorizationRule(namespaceName, rule, callback)
+  summary: <span data-ttu-id="0e325-118">创建命名空间授权规则操作创建一个命名空间的授权规则</span><span class="sxs-lookup"><span data-stu-id="0e325-118">The create namespace authorization rule operation creates an authorization rule for a namespace</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-119">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-119">The namespace name.</span></span>
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: <span data-ttu-id="0e325-120">共享的访问授权规则。</span><span class="sxs-lookup"><span data-stu-id="0e325-120">The shared access authorization rule.</span></span>
+    - id: rule.keyName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-121">已用的密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-121">The name of the key that was used.</span></span>
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: <span data-ttu-id="0e325-122">使用主键。</span><span class="sxs-lookup"><span data-stu-id="0e325-122">The primary key that was used.</span></span>
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: <span data-ttu-id="0e325-123">使用辅助密钥。</span><span class="sxs-lookup"><span data-stu-id="0e325-123">The secondary key that was used.</span></span>
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: <span data-ttu-id="0e325-124">声明的类型。</span><span class="sxs-lookup"><span data-stu-id="0e325-124">The type of the claim.</span></span>
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: <span data-ttu-id="0e325-125">声明的值。</span><span class="sxs-lookup"><span data-stu-id="0e325-125">The value of the claim.</span></span>
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: <span data-ttu-id="0e325-126">与规则关联的权限。</span><span class="sxs-lookup"><span data-stu-id="0e325-126">The rights associated with the rule.</span></span>
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: <span data-ttu-id="0e325-127">在其中创建授权规则的时间。</span><span class="sxs-lookup"><span data-stu-id="0e325-127">The time at which the authorization rule was created.</span></span>
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: <span data-ttu-id="0e325-128">规则更新的最新的时间。</span><span class="sxs-lookup"><span data-stu-id="0e325-128">The most recent time the rule was updated.</span></span>
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: <span data-ttu-id="0e325-129">该规则修订号。</span><span class="sxs-lookup"><span data-stu-id="0e325-129">The revision number for the rule.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-130">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-130">The response stream.</span></span>
+    content: function createAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createNamespace(namespaceName, namespaceEntity, callback)
+  summary: <span data-ttu-id="0e325-131">创建新的服务命名空间。</span><span class="sxs-lookup"><span data-stu-id="0e325-131">Creates a new service namespace.</span></span> <span data-ttu-id="0e325-132">创建后，此命名空间的资源清单不可变。</span><span class="sxs-lookup"><span data-stu-id="0e325-132">Once created, this namespace's resource manifest is immutable.</span></span> <span data-ttu-id="0e325-133">此操作是幂等。</span><span class="sxs-lookup"><span data-stu-id="0e325-133">This operation is idempotent.</span></span>  <span data-ttu-id="0e325-134">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="0e325-134">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createNamespace(namespaceName, namespaceEntity, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-135">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-135">The namespace name.</span></span>
+    - id: namespaceEntity
+      type:
+      - azure-asm-sb.ServiceBusNamespaceCreateParameters
+      description: <span data-ttu-id="0e325-136">服务总线命名空间。</span><span class="sxs-lookup"><span data-stu-id="0e325-136">The service bus namespace.</span></span>
+    - id: namespaceEntity.region
+      type:
+      - string
+      description: <span data-ttu-id="0e325-137">命名空间区域中。</span><span class="sxs-lookup"><span data-stu-id="0e325-137">The namespace region.</span></span>
+    - id: namespaceEntity.createACSNamespace
+      type:
+      - boolean
+      description: <span data-ttu-id="0e325-138">ACS 身份验证是否需要为服务总线。</span><span class="sxs-lookup"><span data-stu-id="0e325-138">Whether or not ACS authentication is needed for ServiceBus.</span></span>
+      optional: true
+    - id: namespaceEntity.namespaceType
+      type:
+      - azure-asm-sb.NamespaceType
+      description: <span data-ttu-id="0e325-139">获取或设置命名空间类型。</span><span class="sxs-lookup"><span data-stu-id="0e325-139">Gets or sets the namespace type.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-140">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-140">The response stream.</span></span>
+    content: function createNamespace(namespaceName, namespaceEntity, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteMethod(namespaceName, callback)
+  summary: <span data-ttu-id="0e325-141">删除现有的命名空间。</span><span class="sxs-lookup"><span data-stu-id="0e325-141">Deletes an existing namespace.</span></span> <span data-ttu-id="0e325-142">此操作还会删除所有关联的实体，包括队列、 主题、 中继点和存储在命名空间下的消息。</span><span class="sxs-lookup"><span data-stu-id="0e325-142">This operation also removes all associated entities including queues, topics, relay points, and messages stored under the namespace.</span></span>  <span data-ttu-id="0e325-143">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj856296.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="0e325-143">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj856296.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteMethod(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-144">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-144">The namespace name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-145">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-145">The response stream.</span></span>
+    content: function deleteMethod(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteAuthorizationRule(namespaceName, ruleName, callback)
+  summary: <span data-ttu-id="0e325-146">删除命名空间授权规则操作中删除一个命名空间的授权规则</span><span class="sxs-lookup"><span data-stu-id="0e325-146">The delete namespace authorization rule operation deletes an authorization rule for a namespace</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteAuthorizationRule(namespaceName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-147">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-147">The namespace name.</span></span>
+    - id: ruleName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-148">规则名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-148">The rule name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-149">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-149">The response stream.</span></span>
+    content: function deleteAuthorizationRule(namespaceName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: get(namespaceName, callback)
+  summary: <span data-ttu-id="0e325-150">返回指定的命名空间的说明。</span><span class="sxs-lookup"><span data-stu-id="0e325-150">Returns the description for the specified namespace.</span></span>  <span data-ttu-id="0e325-151">(请参阅http://msdn.microsoft.com/library/azure/dn140232.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="0e325-151">(see http://msdn.microsoft.com/library/azure/dn140232.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.get(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-152">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-152">The namespace name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-153">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-153">The response stream.</span></span>
+    content: function get(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getAuthorizationRule(namespaceName, entityName, callback)
+  summary: <span data-ttu-id="0e325-154">获取授权规则操作按名称获取命名空间的授权规则。</span><span class="sxs-lookup"><span data-stu-id="0e325-154">The get authorization rule operation gets an authorization rule for a namespace by name.</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getAuthorizationRule(namespaceName, entityName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-155">要获取的授权规则的命名空间。</span><span class="sxs-lookup"><span data-stu-id="0e325-155">The namespace to get the authorization rule for.</span></span>
+    - id: entityName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-156">要获取的授权规则的实体名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-156">The entity name to get the authorization rule for.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-157">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-157">The response stream.</span></span>
+    content: function getAuthorizationRule(namespaceName, entityName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getNamespaceDescription(namespaceName, callback)
+  summary: <span data-ttu-id="0e325-158">命名空间描述是 XML AtomPub 文档，用于定义一个服务命名空间所需的语义。</span><span class="sxs-lookup"><span data-stu-id="0e325-158">The namespace description is an XML AtomPub document that defines the desired semantics for a service namespace.</span></span> <span data-ttu-id="0e325-159">命名空间描述包含以下属性。</span><span class="sxs-lookup"><span data-stu-id="0e325-159">The namespace description contains the following properties.</span></span>  <span data-ttu-id="0e325-160">(请参阅http://msdn.microsoft.com/en-us/library/windowsazure/jj873988.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="0e325-160">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj873988.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getNamespaceDescription(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-161">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-161">The namespace name.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-162">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-162">The response stream.</span></span>
+    content: function getNamespaceDescription(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: list(callback)
+  summary: <span data-ttu-id="0e325-163">列出了可用的命名空间。</span><span class="sxs-lookup"><span data-stu-id="0e325-163">Lists the available namespaces.</span></span>  <span data-ttu-id="0e325-164">(请参阅http://msdn.microsoft.com/en-us/library/azure/hh780759.aspx有关详细信息)</span><span class="sxs-lookup"><span data-stu-id="0e325-164">(see http://msdn.microsoft.com/en-us/library/azure/hh780759.aspx for more information)</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-165">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-165">The response stream.</span></span>
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: listAuthorizationRules(namespaceName, callback)
+  summary: <span data-ttu-id="0e325-166">获取授权规则操作获取命名空间的授权规则。</span><span class="sxs-lookup"><span data-stu-id="0e325-166">The get authorization rules operation gets the authorization rules for a namespace.</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.listAuthorizationRules(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-167">要获取的授权规则的命名空间。</span><span class="sxs-lookup"><span data-stu-id="0e325-167">The namespace to get the authorization rule for.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-168">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-168">The response stream.</span></span>
+    content: function listAuthorizationRules(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: updateAuthorizationRule(namespaceName, rule, callback)
+  summary: <span data-ttu-id="0e325-169">更新授权规则操作更新命名空间的授权规则。</span><span class="sxs-lookup"><span data-stu-id="0e325-169">The update authorization rule operation updates an authorization rule for a namespace.</span></span>
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.updateAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-170">命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-170">The namespace name.</span></span>
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: <span data-ttu-id="0e325-171">更新的访问授权规则。</span><span class="sxs-lookup"><span data-stu-id="0e325-171">Updated access authorization rule.</span></span>
+      optional: true
+    - id: rule.keyName
+      type:
+      - string
+      description: <span data-ttu-id="0e325-172">已用的密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="0e325-172">The name of the key that was used.</span></span>
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: <span data-ttu-id="0e325-173">使用主键。</span><span class="sxs-lookup"><span data-stu-id="0e325-173">The primary key that was used.</span></span>
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: <span data-ttu-id="0e325-174">使用辅助密钥。</span><span class="sxs-lookup"><span data-stu-id="0e325-174">The secondary key that was used.</span></span>
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: <span data-ttu-id="0e325-175">声明的类型。</span><span class="sxs-lookup"><span data-stu-id="0e325-175">The type of the claim.</span></span>
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: <span data-ttu-id="0e325-176">声明的值。</span><span class="sxs-lookup"><span data-stu-id="0e325-176">The value of the claim.</span></span>
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: <span data-ttu-id="0e325-177">与规则关联的权限。</span><span class="sxs-lookup"><span data-stu-id="0e325-177">The rights associated with the rule.</span></span>
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: <span data-ttu-id="0e325-178">在其中创建授权规则的时间。</span><span class="sxs-lookup"><span data-stu-id="0e325-178">The time at which the authorization rule was created.</span></span>
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: <span data-ttu-id="0e325-179">规则更新的最新的时间。</span><span class="sxs-lookup"><span data-stu-id="0e325-179">The most recent time the rule was updated.</span></span>
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: <span data-ttu-id="0e325-180">该规则修订号。</span><span class="sxs-lookup"><span data-stu-id="0e325-180">The revision number for the rule.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: <span data-ttu-id="0e325-181">响应流中。</span><span class="sxs-lookup"><span data-stu-id="0e325-181">The response stream.</span></span>
+    content: function updateAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js

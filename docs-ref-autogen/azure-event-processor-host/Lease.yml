@@ -1,0 +1,175 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6372d6412f2080ab5989793a57c7477d2efb00b4
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40053418"
+items:
+- uid: azure-event-processor-host.Lease
+  name: Lease
+  fullName: Lease
+  children:
+  - azure-event-processor-host.Lease.acquire
+  - azure-event-processor-host.Lease.getContent
+  - azure-event-processor-host.Lease.isHeld
+  - azure-event-processor-host.Lease.leaseId
+  - azure-event-processor-host.Lease.partitionId
+  - azure-event-processor-host.Lease.release
+  - azure-event-processor-host.Lease.renew
+  - azure-event-processor-host.Lease.updateContent
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="88302-101">介绍用于检查点的偏移量的数据接收到由接收方使用者组中给定分区 EventHub 的租约。</span><span class="sxs-lookup"><span data-stu-id="88302-101">Describes the lease used to checkpoint the offset of data received by a receiver for a given partition in a consumer group for an EventHub.</span></span>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.acquire
+  name: acquire
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="88302-102">获取租约。</span><span class="sxs-lookup"><span data-stu-id="88302-102">Acquires the lease.</span></span>
+  syntax:
+    content: 'function acquire(options: any)'
+    parameters:
+    - id: options
+      type:
+      - any
+      description: <span data-ttu-id="88302-103">需要传递来获得租约的任何选项。</span><span class="sxs-lookup"><span data-stu-id="88302-103">Any options that need to be passed to acquire the lease.</span></span>
+    return:
+      type:
+      - Promise<azure-event-processor-host.Lease>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.getContent
+  name: getContent
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="88302-104">获取的内容。</span><span class="sxs-lookup"><span data-stu-id="88302-104">Gets the content.</span></span>
+  syntax:
+    content: 'function getContent(options?: any)'
+    parameters:
+    - id: options
+      type:
+      - any
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<string>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.isHeld
+  name: isHeld
+  fullName: isHeld
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'isHeld: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.leaseId
+  name: leaseId
+  fullName: leaseId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'leaseId?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'partitionId?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.release
+  name: release
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="88302-105">释放的租约。</span><span class="sxs-lookup"><span data-stu-id="88302-105">Releases the lease.</span></span>
+  syntax:
+    content: 'function release(options: any)'
+    parameters:
+    - id: options
+      type:
+      - any
+      description: <span data-ttu-id="88302-106">需要传递以释放租约的任何选项。</span><span class="sxs-lookup"><span data-stu-id="88302-106">Any options that need to be passed to release the lease.</span></span>
+    return:
+      type:
+      - Promise<azure-event-processor-host.Lease>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.renew
+  name: renew
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="88302-107">续订租约。</span><span class="sxs-lookup"><span data-stu-id="88302-107">Renews the lease.</span></span>
+  syntax:
+    content: 'function renew(options: any)'
+    parameters:
+    - id: options
+      type:
+      - any
+      description: <span data-ttu-id="88302-108">需要将被传递以续订租约的任何选项。</span><span class="sxs-lookup"><span data-stu-id="88302-108">Any options that need to be passed to renew the lease.</span></span>
+    return:
+      type:
+      - Promise<azure-event-processor-host.Lease>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.Lease.updateContent
+  name: updateContent
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="88302-109">更新的内容</span><span class="sxs-lookup"><span data-stu-id="88302-109">Updates the content</span></span>
+  syntax:
+    content: 'function updateContent(text: string, options?: any)'
+    parameters:
+    - id: text
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - any
+      description: <span data-ttu-id="88302-110">任何需要传递以更新 blob 内容的选项。</span><span class="sxs-lookup"><span data-stu-id="88302-110">Any options that need to be passed to update the blob content.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<azure-event-processor-host.Lease>
+  package: azure-event-processor-host
+references:
+- uid: Promise<azure-event-processor-host.Lease>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Lease
+    fullName: Lease
+    uid: azure-event-processor-host.Lease
+  - name: '>'
+    fullName: '>'

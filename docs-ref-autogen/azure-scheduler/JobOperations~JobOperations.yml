@@ -1,0 +1,812 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6fa2e2901b7265c9426541584abde0d99339d194
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40049776"
+items:
+- uid: azure-scheduler.JobOperations~JobOperations
+  id: azure-scheduler.JobOperations~JobOperations
+  name: JobOperations
+  summary: >-
+    <span data-ttu-id="cc2f2-101">__请注意__： 此类的实例自动创建的实例 [SchedulerClient] <xref:azure-scheduler.SchedulerClient~SchedulerClient>。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-101">__NOTE__: An instance of this class is automatically created for an instance of the [SchedulerClient] <xref:azure-scheduler.SchedulerClient~SchedulerClient>.</span></span>
+
+    <span data-ttu-id="cc2f2-102">请参阅 [作业] <xref:azure-scheduler.SchedulerClient~SchedulerClient%23jobs>。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-102">See [jobs] <xref:azure-scheduler.SchedulerClient~SchedulerClient%23jobs>.</span></span>
+
+    <span data-ttu-id="cc2f2-103">初始化 JobOperations 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-103">Initializes a new instance of the JobOperations class.</span></span>
+  fullName: azure-scheduler.JobOperations
+  type: Class
+  children:
+  - azure-scheduler.JobOperations~JobOperations.#ctor
+  - azure-scheduler.JobOperations~JobOperations#create
+  - azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  - azure-scheduler.JobOperations~JobOperations#deleteMethod
+  - azure-scheduler.JobOperations~JobOperations#get
+  - azure-scheduler.JobOperations~JobOperations#getHistory
+  - azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  - azure-scheduler.JobOperations~JobOperations#list
+  - azure-scheduler.JobOperations~JobOperations#listWithFilter
+  - azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  - azure-scheduler.JobOperations~JobOperations#updateState
+  langs:
+  - js
+- id: azure-scheduler.JobOperations~JobOperations.#ctor
+  uid: azure-scheduler.JobOperations~JobOperations.#ctor
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: JobOperations(client)
+  fullName: azure-scheduler.JobOperations.JobOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSchedulerClient
+      description: <span data-ttu-id="cc2f2-104">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-104">Reference to the service client.</span></span>
+    content: new JobOperations(client)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#create
+  id: azure-scheduler.JobOperations~JobOperations#create
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: create(parameters, callback)
+  summary: <span data-ttu-id="cc2f2-105">创建新的作业，使服务能够生成作业 id。如果用户选择作业 id 是必需的请使用 CreateOrUpdate。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-105">Creates a new Job, allowing the service to generate a job id. Use CreateOrUpdate if a user-chosen job id is required.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobCreateParameters
+      description: <span data-ttu-id="cc2f2-106">指定创建作业操作的作业定义的参数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-106">Parameters specifying the job definition for a Create Job operation.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="cc2f2-107">作业的开始时间。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-107">Start time for the job.</span></span>  <span data-ttu-id="cc2f2-108">定义为 ISO 8601。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-108">Defined as ISO-8601.</span></span>
+      optional: true
+    - id: parameters.action
+      type:
+      - azure-scheduler.JobAction
+      description: <span data-ttu-id="cc2f2-109">要调用的作业的操作。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-109">Action to invoke for the job.</span></span>
+    - id: parameters.action.type
+      type:
+      - azure-scheduler.JobActionType
+      description: <span data-ttu-id="cc2f2-110">操作的类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-110">Type of action.</span></span> <span data-ttu-id="cc2f2-111">可以是 http、 https、 storageQueue 之一。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-111">Can be one of http, https, storageQueue.</span></span>
+    - id: parameters.action.retryPolicy
+      type:
+      - azure-scheduler.RetryPolicy
+      description: <span data-ttu-id="cc2f2-112">作业操作重试策略。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-112">Retry Policy for the job action.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryType
+      type:
+      - azure-scheduler.RetryType
+      description: <span data-ttu-id="cc2f2-113">重试的重试策略类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-113">The Retry Type of the Retry Policy.</span></span> <span data-ttu-id="cc2f2-114">可以是固定或 none。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-114">Can be either 'fixed' or 'none'.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryInterval
+      type:
+      - azure-scheduler.TimeSpan
+      description: <span data-ttu-id="cc2f2-115">重试间隔。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-115">The interval between retries.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryCount
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-116">应尝试重试次数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-116">Number of times a retry should be attempted.</span></span>
+      optional: true
+    - id: parameters.action.errorAction
+      type:
+      - azure-scheduler.JobErrorAction
+      description: <span data-ttu-id="cc2f2-117">作业的错误操作。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-117">Error Action for the job.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.type
+      type:
+      - azure-scheduler.JobActionType
+      description: <span data-ttu-id="cc2f2-118">操作的类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-118">Type of action.</span></span> <span data-ttu-id="cc2f2-119">可以是 http、 https、 storageQueue 之一。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-119">Can be one of http, https, storageQueue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: <span data-ttu-id="cc2f2-120">请求的 http 或 https 操作类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-120">Request for a http or https action type.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.uri
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-121">获取或设置要调用的终结点 Uri。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-121">Gets or sets Uri of the endpoint to invoke.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.method
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-122">获取或设置的 Http 方法如 GET、 PUT、 POST、 DELETE。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-122">Gets or sets Http method e.g. GET, PUT, POST, DELETE.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.headers
+      type:
+      - object
+      description: <span data-ttu-id="cc2f2-123">获取或设置标头名称/值对提供的 http/https 操作使用。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-123">Gets or sets Header name value pairs to supply with the http/https action.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.body
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-124">获取或设置请求正文。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-124">Gets or sets the request body.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: <span data-ttu-id="cc2f2-125">获取或设置请求身份验证。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-125">Gets or sets the request authentication.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: <span data-ttu-id="cc2f2-126">指定身份验证类型</span><span class="sxs-lookup"><span data-stu-id="cc2f2-126">Specifies the authentication type</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: <span data-ttu-id="cc2f2-127">队列和队列的消息操作的内容类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-127">Queue and content for a queue message action type.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-128">队列的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-128">Name of the storage account for the queue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.queueName
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-129">若要将发送到队列的名称。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-129">Name of the queue to send to.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.sasToken
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-130">要将消息发送到队列的存储帐户的 SAS 密钥。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-130">SAS key for the storage account to send message to the queue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.message
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-131">要发送到队列的消息的内容。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-131">Content of the message to send to the queue.</span></span>
+      optional: true
+    - id: parameters.action.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: <span data-ttu-id="cc2f2-132">请求的 http 或 https 操作类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-132">Request for a http or https action type.</span></span>
+      optional: true
+    - id: parameters.action.request.uri
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-133">获取或设置要调用的终结点 Uri。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-133">Gets or sets Uri of the endpoint to invoke.</span></span>
+      optional: true
+    - id: parameters.action.request.method
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-134">获取或设置的 Http 方法如 GET、 PUT、 POST、 DELETE。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-134">Gets or sets Http method e.g. GET, PUT, POST, DELETE.</span></span>
+      optional: true
+    - id: parameters.action.request.headers
+      type:
+      - object
+      description: <span data-ttu-id="cc2f2-135">获取或设置标头名称/值对提供的 http/https 操作使用。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-135">Gets or sets Header name value pairs to supply with the http/https action.</span></span>
+      optional: true
+    - id: parameters.action.request.body
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-136">获取或设置请求正文。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-136">Gets or sets the request body.</span></span>
+      optional: true
+    - id: parameters.action.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: <span data-ttu-id="cc2f2-137">获取或设置请求身份验证。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-137">Gets or sets the request authentication.</span></span>
+      optional: true
+    - id: parameters.action.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: <span data-ttu-id="cc2f2-138">指定身份验证类型</span><span class="sxs-lookup"><span data-stu-id="cc2f2-138">Specifies the authentication type</span></span>
+      optional: true
+    - id: parameters.action.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: <span data-ttu-id="cc2f2-139">队列和队列的消息操作的内容类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-139">Queue and content for a queue message action type.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-140">队列的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-140">Name of the storage account for the queue.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.queueName
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-141">若要将发送到队列的名称。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-141">Name of the queue to send to.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.sasToken
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-142">要将消息发送到队列的存储帐户的 SAS 密钥。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-142">SAS key for the storage account to send message to the queue.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.message
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-143">要发送到队列的消息的内容。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-143">Content of the message to send to the queue.</span></span>
+      optional: true
+    - id: parameters.recurrence
+      type:
+      - azure-scheduler.JobRecurrence
+      description: <span data-ttu-id="cc2f2-144">作业的重复计划。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-144">Recurrence schedule for the job.</span></span>
+      optional: true
+    - id: parameters.recurrence.frequency
+      type:
+      - azure-scheduler.JobRecurrenceFrequency
+      description: <span data-ttu-id="cc2f2-145">重复周期的频率。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-145">The frequency of recurrence.</span></span>
+      optional: true
+    - id: parameters.recurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-146">按给定频率的重复周期间隔。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-146">Interval of the recurrence at the given frequency.</span></span>
+      optional: true
+    - id: parameters.recurrence.count
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-147">将执行的匹配项的计数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-147">Count of occurrences that will execute.</span></span> <span data-ttu-id="cc2f2-148">可选。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-148">Optional.</span></span> <span data-ttu-id="cc2f2-149">默认将无限期重复</span><span class="sxs-lookup"><span data-stu-id="cc2f2-149">Default will recur infinitely</span></span>
+      optional: true
+    - id: parameters.recurrence.endTime
+      type:
+      - date
+      description: <span data-ttu-id="cc2f2-150">在没有更多匹配项将执行在其后的 ISO-8601 格式的时间。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-150">Time in ISO-8601 format after which no more occurrences will execute.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule
+      type:
+      - azure-scheduler.JobRecurrenceSchedule
+      description: <span data-ttu-id="cc2f2-151">作业的重复计划。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-151">Recurrence schedule for the job.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.minutes
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-152">应在执行作业的小时的分钟。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-152">Minutes of the hour that the job should execute at.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.hours
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-153">应在执行作业的日期的小时。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-153">Hours of the day that the job should execute at.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.days
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-154">作业应执行一周中的天。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-154">Days of the week that the job should execute on.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.months
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-155">应在执行作业的月份。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-155">Months that the job should execute in.</span></span>  <span data-ttu-id="cc2f2-156">必须是介于 1 和 12 之间。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-156">Must be between 1 and 12.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.monthDays
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-157">应在执行作业的月份日期。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-157">Days of the month that the job should execute on.</span></span>  <span data-ttu-id="cc2f2-158">必须是介于 1 和 31 之间。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-158">Must be between 1 and 31.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.monthlyOccurrences
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-159">一个月中的几天的出现次数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-159">Occurrences of days within a month.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="cc2f2-160">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-160">The response stream.</span></span>
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  id: azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: createOrUpdate(jobId, parameters, callback)
+  summary: <span data-ttu-id="cc2f2-161">使用用户提供的作业 id，创建一个新作业或更新现有作业，其定义替换为指定的。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-161">Creates a new Job with a user-provided job id, or updates an existing job, replacing its definition with that specified.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.createOrUpdate(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-162">若要创建或更新的作业 id。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-162">Id of the job to create or update.</span></span>
+    - id: parameters
+      type:
+      - azure-scheduler.JobCreateOrUpdateParameters
+      description: <span data-ttu-id="cc2f2-163">指定 CreateOrUpdate 作业操作的作业定义的参数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-163">Parameters specifying the job definition for a CreateOrUpdate Job operation.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="cc2f2-164">作业的开始时间。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-164">Start time for the job.</span></span> <span data-ttu-id="cc2f2-165">定义为 ISO 8601。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-165">Defined as ISO-8601.</span></span>
+      optional: true
+    - id: parameters.action
+      type:
+      - azure-scheduler.JobAction
+      description: <span data-ttu-id="cc2f2-166">要调用的作业的操作。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-166">Action to invoke for the job.</span></span>
+    - id: parameters.action.type
+      type:
+      - azure-scheduler.JobActionType
+      description: <span data-ttu-id="cc2f2-167">操作的类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-167">Type of action.</span></span> <span data-ttu-id="cc2f2-168">可以是 http、 https、 storageQueue 之一。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-168">Can be one of http, https, storageQueue.</span></span>
+    - id: parameters.action.retryPolicy
+      type:
+      - azure-scheduler.RetryPolicy
+      description: <span data-ttu-id="cc2f2-169">作业操作重试策略。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-169">Retry Policy for the job action.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryType
+      type:
+      - azure-scheduler.RetryType
+      description: <span data-ttu-id="cc2f2-170">重试的重试策略类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-170">The Retry Type of the Retry Policy.</span></span> <span data-ttu-id="cc2f2-171">可以是固定或 none。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-171">Can be either 'fixed' or 'none'.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryInterval
+      type:
+      - azure-scheduler.TimeSpan
+      description: <span data-ttu-id="cc2f2-172">重试间隔。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-172">The interval between retries.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryCount
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-173">应尝试重试次数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-173">Number of times a retry should be attempted.</span></span>
+      optional: true
+    - id: parameters.action.errorAction
+      type:
+      - azure-scheduler.JobErrorAction
+      description: <span data-ttu-id="cc2f2-174">作业的错误操作。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-174">Error Action for the job.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.type
+      type:
+      - azure-scheduler.JobActionType
+      description: <span data-ttu-id="cc2f2-175">操作的类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-175">Type of action.</span></span> <span data-ttu-id="cc2f2-176">可以是 http、 https、 storageQueue 之一。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-176">Can be one of http, https, storageQueue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: <span data-ttu-id="cc2f2-177">请求的 http 或 https 操作类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-177">Request for a http or https action type.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.uri
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-178">获取或设置要调用的终结点 Uri。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-178">Gets or sets Uri of the endpoint to invoke.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.method
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-179">获取或设置的 Http 方法如 GET、 PUT、 POST、 DELETE。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-179">Gets or sets Http method e.g. GET, PUT, POST, DELETE.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.headers
+      type:
+      - object
+      description: <span data-ttu-id="cc2f2-180">获取或设置标头名称/值对提供的 http/https 操作使用。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-180">Gets or sets Header name value pairs to supply with the http/https action.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.body
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-181">获取或设置请求正文。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-181">Gets or sets the request body.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: <span data-ttu-id="cc2f2-182">获取或设置请求身份验证。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-182">Gets or sets the request authentication.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: <span data-ttu-id="cc2f2-183">指定身份验证类型</span><span class="sxs-lookup"><span data-stu-id="cc2f2-183">Specifies the authentication type</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: <span data-ttu-id="cc2f2-184">队列和队列的消息操作的内容类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-184">Queue and content for a queue message action type.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-185">队列的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-185">Name of the storage account for the queue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.queueName
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-186">若要将发送到队列的名称。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-186">Name of the queue to send to.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.sasToken
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-187">要将消息发送到队列的存储帐户的 SAS 密钥。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-187">SAS key for the storage account to send message to the queue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.message
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-188">要发送到队列的消息的内容。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-188">Content of the message to send to the queue.</span></span>
+      optional: true
+    - id: parameters.action.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: <span data-ttu-id="cc2f2-189">请求的 http 或 https 操作类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-189">Request for a http or https action type.</span></span>
+      optional: true
+    - id: parameters.action.request.uri
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-190">获取或设置要调用的终结点 Uri。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-190">Gets or sets Uri of the endpoint to invoke.</span></span>
+      optional: true
+    - id: parameters.action.request.method
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-191">获取或设置的 Http 方法如 GET、 PUT、 POST、 DELETE。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-191">Gets or sets Http method e.g. GET, PUT, POST, DELETE.</span></span>
+      optional: true
+    - id: parameters.action.request.headers
+      type:
+      - object
+      description: <span data-ttu-id="cc2f2-192">获取或设置标头名称/值对提供的 http/https 操作使用。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-192">Gets or sets Header name value pairs to supply with the http/https action.</span></span>
+      optional: true
+    - id: parameters.action.request.body
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-193">获取或设置请求正文。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-193">Gets or sets the request body.</span></span>
+      optional: true
+    - id: parameters.action.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: <span data-ttu-id="cc2f2-194">获取或设置请求身份验证。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-194">Gets or sets the request authentication.</span></span>
+      optional: true
+    - id: parameters.action.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: <span data-ttu-id="cc2f2-195">指定身份验证类型</span><span class="sxs-lookup"><span data-stu-id="cc2f2-195">Specifies the authentication type</span></span>
+      optional: true
+    - id: parameters.action.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: <span data-ttu-id="cc2f2-196">队列和队列的消息操作的内容类型。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-196">Queue and content for a queue message action type.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-197">队列的存储帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-197">Name of the storage account for the queue.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.queueName
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-198">若要将发送到队列的名称。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-198">Name of the queue to send to.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.sasToken
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-199">要将消息发送到队列的存储帐户的 SAS 密钥。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-199">SAS key for the storage account to send message to the queue.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.message
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-200">要发送到队列的消息的内容。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-200">Content of the message to send to the queue.</span></span>
+      optional: true
+    - id: parameters.recurrence
+      type:
+      - azure-scheduler.JobRecurrence
+      description: <span data-ttu-id="cc2f2-201">作业的重复计划。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-201">Recurrence schedule for the job.</span></span>
+      optional: true
+    - id: parameters.recurrence.frequency
+      type:
+      - azure-scheduler.JobRecurrenceFrequency
+      description: <span data-ttu-id="cc2f2-202">重复周期的频率。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-202">The frequency of recurrence.</span></span>
+      optional: true
+    - id: parameters.recurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-203">按给定频率的重复周期间隔。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-203">Interval of the recurrence at the given frequency.</span></span>
+      optional: true
+    - id: parameters.recurrence.count
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-204">将执行的匹配项的计数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-204">Count of occurrences that will execute.</span></span> <span data-ttu-id="cc2f2-205">可选。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-205">Optional.</span></span> <span data-ttu-id="cc2f2-206">默认将无限期重复</span><span class="sxs-lookup"><span data-stu-id="cc2f2-206">Default will recur infinitely</span></span>
+      optional: true
+    - id: parameters.recurrence.endTime
+      type:
+      - date
+      description: <span data-ttu-id="cc2f2-207">在没有更多匹配项将执行在其后的 ISO-8601 格式的时间。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-207">Time in ISO-8601 format after which no more occurrences will execute.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule
+      type:
+      - azure-scheduler.JobRecurrenceSchedule
+      description: <span data-ttu-id="cc2f2-208">作业的重复计划。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-208">Recurrence schedule for the job.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.minutes
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-209">应在执行作业的小时的分钟。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-209">Minutes of the hour that the job should execute at.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.hours
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-210">应在执行作业的日期的小时。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-210">Hours of the day that the job should execute at.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.days
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-211">作业应执行一周中的天。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-211">Days of the week that the job should execute on.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.months
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-212">应在执行作业的月份。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-212">Months that the job should execute in.</span></span>  <span data-ttu-id="cc2f2-213">必须是介于 1 和 12 之间。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-213">Must be between 1 and 12.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.monthDays
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-214">应在执行作业的月份日期。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-214">Days of the month that the job should execute on.</span></span>  <span data-ttu-id="cc2f2-215">必须是介于 1 和 31 之间。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-215">Must be between 1 and 31.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.monthlyOccurrences
+      type:
+      - array
+      description: <span data-ttu-id="cc2f2-216">一个月中的几天的出现次数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-216">Occurrences of days within a month.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="cc2f2-217">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-217">The response stream.</span></span>
+    content: function createOrUpdate(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#deleteMethod
+  id: azure-scheduler.JobOperations~JobOperations#deleteMethod
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: deleteMethod(jobId, callback)
+  summary: <span data-ttu-id="cc2f2-218">删除的作业。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-218">Deletes a job.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.deleteMethod(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-219">若要删除的作业 id。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-219">Id of the job to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="cc2f2-220">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-220">The response stream.</span></span>
+    content: function deleteMethod(jobId, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#get
+  id: azure-scheduler.JobOperations~JobOperations#get
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: get(jobId, callback)
+  summary: <span data-ttu-id="cc2f2-221">获取定义和作业的状态。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-221">Get the definition and status of a job.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.get(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-222">若要获取的作业 id。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-222">Id of the job to get.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="cc2f2-223">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-223">The response stream.</span></span>
+    content: function get(jobId, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#getHistory
+  id: azure-scheduler.JobOperations~JobOperations#getHistory
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: getHistory(jobId, parameters, callback)
+  summary: <span data-ttu-id="cc2f2-224">获取作业的执行历史记录。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-224">Get the execution history of a Job.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.getHistory(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-225">若要获取的历史记录的作业 id。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-225">Id of the job to get the history of.</span></span>
+    - id: parameters
+      type:
+      - azure-scheduler.JobGetHistoryParameters
+      description: <span data-ttu-id="cc2f2-226">获取作业历史记录操作提供的参数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-226">Parameters supplied to the Get Job History operation.</span></span>
+    - id: parameters.skip
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-227">指定自其开始请求的项历史记录列表 （基于 0 的） 索引。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-227">Specify the (0-based) index of the history list from which to begin requesting entries.</span></span>
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-228">指定请求，在的历史记录条目数的范围 [1..100]。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-228">Specify the number of history entries to request, in the of range [1..100].</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="cc2f2-229">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-229">The response stream.</span></span>
+    content: function getHistory(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  id: azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: getHistoryWithFilter(jobId, parameters, callback)
+  summary: <span data-ttu-id="cc2f2-230">获取作业的执行历史记录作业状态中的筛选器。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-230">Get the execution history of a Job with a filter on the job Status.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.getHistoryWithFilter(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-231">若要获取的历史记录的作业 id。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-231">Id of the job to get the history of.</span></span>
+    - id: parameters
+      type:
+      - azure-scheduler.JobGetHistoryWithFilterParameters
+      description: <span data-ttu-id="cc2f2-232">获取作业历史记录与筛选器操作提供的参数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-232">Parameters supplied to the Get Job History With Filter operation.</span></span>
+    - id: parameters.status
+      type:
+      - azure-scheduler.JobHistoryStatus
+      description: <span data-ttu-id="cc2f2-233">作业历史记录以使其仅返回作业执行尝试具有特定状态，已完成或失败的筛选器。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-233">Filter the job history to have it only return job execution attempts having a particular Status, 'completed' or 'failed'.</span></span>
+    - id: parameters.skip
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-234">指定自其开始请求的项历史记录列表 （基于 0 的） 索引。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-234">Specify the (0-based) index of the history list from which to begin requesting entries.</span></span>
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-235">指定请求，在的历史记录条目数的范围 [1..100]。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-235">Specify the number of history entries to request, in the of range [1..100].</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="cc2f2-236">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-236">The response stream.</span></span>
+    content: function getHistoryWithFilter(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#list
+  id: azure-scheduler.JobOperations~JobOperations#list
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: list(parameters, callback)
+  summary: <span data-ttu-id="cc2f2-237">在某一作业集合中获取所有作业的列表。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-237">Get the list of all jobs in a job collection.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.list(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobListParameters
+      description: <span data-ttu-id="cc2f2-238">提供对列出作业操作的参数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-238">Parameters supplied to the List Jobs operation.</span></span>
+    - id: parameters.skip
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-239">指定自其开始请求的项的作业列表 （基于 0 的） 索引。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-239">Specify the (0-based) index of the job list from which to begin requesting entries.</span></span>
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-240">指定的请求，请在作业数的范围 [1..100]。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-240">Specify the number of jobs to request, in the of range [1..100].</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="cc2f2-241">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-241">The response stream.</span></span>
+    content: function list(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#listWithFilter
+  id: azure-scheduler.JobOperations~JobOperations#listWithFilter
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: listWithFilter(parameters, callback)
+  summary: <span data-ttu-id="cc2f2-242">作业状态筛选器匹配的作业集合中获取作业的列表。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-242">Get the list of jobs in a job collection matching a filter on job state.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.listWithFilter(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobListWithFilterParameters
+      description: <span data-ttu-id="cc2f2-243">提供对与筛选器操作列出作业的参数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-243">Parameters supplied to the List Jobs with filter operation.</span></span>
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: <span data-ttu-id="cc2f2-244">若要使其仅返回作业执行尝试具有特定状态，启用、 禁用、 出现故障，或已完成的作业历史记录的筛选器。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-244">Filter the job history to have it only return job execution attempts having a particular State, enabled, disabled, faulted, or completed.</span></span>
+    - id: parameters.skip
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-245">指定自其开始请求的项的作业列表 （基于 0 的） 索引。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-245">Specify the (0-based) index of the job list from which to begin requesting entries.</span></span>
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: <span data-ttu-id="cc2f2-246">指定的请求，请在作业数的范围 [1..100]。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-246">Specify the number of jobs to request, in the of range [1..100].</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="cc2f2-247">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-247">The response stream.</span></span>
+    content: function listWithFilter(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  id: azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: updateJobCollectionState(parameters, callback)
+  summary: <span data-ttu-id="cc2f2-248">更新作业集合中的所有作业的状态。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-248">Update the state of all jobs in a job collections.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.updateJobCollectionState(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobCollectionJobsUpdateStateParameters
+      description: <span data-ttu-id="cc2f2-249">提供给更新作业状态操作的参数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-249">Parameters supplied to the Update Jobs State operation.</span></span>
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: "<span data-ttu-id=\"cc2f2-250\">若要更新到新状态: 'enabled' 或 'disabled'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cc2f2-250\">New state to update to: 'enabled' or 'disabled'.</span></span>"
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="cc2f2-251">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-251">The response stream.</span></span>
+    content: function updateJobCollectionState(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#updateState
+  id: azure-scheduler.JobOperations~JobOperations#updateState
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: updateState(jobId, parameters, callback)
+  summary: <span data-ttu-id="cc2f2-252">更新作业的状态。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-252">Update the state of a job.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.updateState(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-253">若要更新的作业 id。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-253">Id of the job to update.</span></span>
+    - id: parameters
+      type:
+      - azure-scheduler.JobUpdateStateParameters
+      description: <span data-ttu-id="cc2f2-254">提供给更新作业状态操作的参数。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-254">Parameters supplied to the Update Job State operation.</span></span>
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: "<span data-ttu-id=\"cc2f2-255\">若要更新到新状态: 'enabled' 或 'disabled'。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cc2f2-255\">New state to update to: 'enabled' or 'disabled'.</span></span>"
+    - id: parameters.updateStateReason
+      type:
+      - string
+      description: <span data-ttu-id="cc2f2-256">与此作业状态更新关联的环境的说明。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-256">A description of the circumstances associated with this job state update.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="cc2f2-257">响应流中。</span><span class="sxs-lookup"><span data-stu-id="cc2f2-257">The response stream.</span></span>
+    content: function updateState(jobId, parameters, callback)
+  langs:
+  - js

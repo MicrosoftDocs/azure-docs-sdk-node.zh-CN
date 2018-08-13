@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8bff819eb4af3d06c65d4dd4ecc13349835e08f0
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40049764"
+items:
+- uid: azure-asm-website.ScmService
+  id: azure-asm-website.ScmService
+  name: ScmService
+  summary: <span data-ttu-id="7056a-101">ScmService 对象允许您以 Microsoft Azure 网站存储库上执行管理操作。</span><span class="sxs-lookup"><span data-stu-id="7056a-101">The ScmService object allows you to perform management operations on Microsoft Azure Web Sites Repositories.</span></span>
+  fullName: azure-asm-website.ScmService
+  type: Class
+  children:
+  - azure-asm-website.ScmService.#ctor
+  - azure-asm-website.ScmService#getDumpToStream
+  - azure-asm-website.ScmService#getLogStream
+  langs:
+  - js
+- id: azure-asm-website.ScmService.#ctor
+  uid: azure-asm-website.ScmService.#ctor
+  parent: azure-asm-website.ScmService
+  name: ScmService(authentication, hostOptions)
+  fullName: azure-asm-website.ScmService.ScmService(authentication, hostOptions)
+  summary: <span data-ttu-id="7056a-102">创建新的 ScmService 对象。</span><span class="sxs-lookup"><span data-stu-id="7056a-102">Creates a new ScmService object.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: authentication
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="7056a-103">客户端身份验证对象。</span><span class="sxs-lookup"><span data-stu-id="7056a-103">The authentication object for the client.</span></span>
+
+        <span data-ttu-id="7056a-104">对于基本身份验证，必须使用身份验证/密码。</span><span class="sxs-lookup"><span data-stu-id="7056a-104">You must use a auth/pass for basic authentication.</span></span>
+    - id: authentication.user
+      type:
+      - string
+      description: <span data-ttu-id="7056a-105">基本身份验证的用户名。</span><span class="sxs-lookup"><span data-stu-id="7056a-105">The basic authentication username.</span></span>
+      optional: true
+    - id: authentication.pass
+      type:
+      - string
+      description: <span data-ttu-id="7056a-106">基本身份验证的密码。</span><span class="sxs-lookup"><span data-stu-id="7056a-106">The basic authentication password.</span></span>
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: <span data-ttu-id="7056a-107">要重写默认值的主机选项。</span><span class="sxs-lookup"><span data-stu-id="7056a-107">The host options to override defaults.</span></span>
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: <span data-ttu-id="7056a-108">SCM 存储库终结点。</span><span class="sxs-lookup"><span data-stu-id="7056a-108">The SCM repository endpoint.</span></span>
+      optional: true
+    content: new ScmService(authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-website.ScmService#getDumpToStream
+  id: azure-asm-website.ScmService#getDumpToStream
+  parent: azure-asm-website.ScmService
+  name: getDumpToStream(callback)
+  summary: <span data-ttu-id="7056a-109">获取日志转储。</span><span class="sxs-lookup"><span data-stu-id="7056a-109">Get log dump.</span></span>
+  fullName: azure-asm-website.ScmService.getDumpToStream(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7056a-110">`error` 如果出现错误; 将包含的信息否则为`results`将包含 web 空间的列表。</span><span class="sxs-lookup"><span data-stu-id="7056a-110">`error` will contain information if an error occurs; otherwise `results` will contain the list of webspaces.</span></span>
+                                                              <span data-ttu-id="7056a-111">`response` 将包含与此操作相关的信息。</span><span class="sxs-lookup"><span data-stu-id="7056a-111">`response` will contain information related to this operation.</span></span>
+    content: function getDumpToStream(callback)
+  langs:
+  - js
+- uid: azure-asm-website.ScmService#getLogStream
+  id: azure-asm-website.ScmService#getLogStream
+  parent: azure-asm-website.ScmService
+  name: getLogStream(path, options, callback)
+  summary: <span data-ttu-id="7056a-112">获取一个日志流。</span><span class="sxs-lookup"><span data-stu-id="7056a-112">Get log stream.</span></span>
+  fullName: azure-asm-website.ScmService.getLogStream(path, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: path
+      type:
+      - object
+      description: <span data-ttu-id="7056a-113">日志流路径。</span><span class="sxs-lookup"><span data-stu-id="7056a-113">The log stream path.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="7056a-114">在请求选项。</span><span class="sxs-lookup"><span data-stu-id="7056a-114">The request options.</span></span>
+      optional: true
+    - id: options.filter
+      type:
+      - azure-asm-website.int
+      description: <span data-ttu-id="7056a-115">日志流筛选器。</span><span class="sxs-lookup"><span data-stu-id="7056a-115">The log stream filter.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="7056a-116">`error` 如果出现错误; 将包含的信息否则为`results`将包含 web 空间的列表。</span><span class="sxs-lookup"><span data-stu-id="7056a-116">`error` will contain information if an error occurs; otherwise `results` will contain the list of webspaces.</span></span>
+                                                              <span data-ttu-id="7056a-117">`response` 将包含与此操作相关的信息。</span><span class="sxs-lookup"><span data-stu-id="7056a-117">`response` will contain information related to this operation.</span></span>
+    content: function getLogStream(path, options, callback)
+  langs:
+  - js

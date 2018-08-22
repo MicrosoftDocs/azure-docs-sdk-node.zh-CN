@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: df0978f5755a00a7fae228f8baf46e67a73649a0
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 54207289a27f5cbe8c3ef496c1d11ec7bdce9f70
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40054987"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41694156"
 items:
 - uid: azure-cognitiveservices-face.PersonGroup
   name: PersonGroup
@@ -51,7 +51,7 @@ items:
   - typeScript
   summary: 包含指定的 personGroupId、 名称和用户提供的 userData 创建新的人员组。
   syntax:
-    content: 'function create(personGroupId: string, options?: function)'
+    content: 'function create(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -60,7 +60,7 @@ items:
         以字符串形式的用户提供 personGroupId。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -97,7 +97,7 @@ items:
   - typeScript
   summary: 包含指定的 personGroupId、 名称和用户提供的 userData 创建新的人员组。
   syntax:
-    content: 'function create(personGroupId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function create(personGroupId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: personGroupId
       type:
@@ -105,7 +105,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -123,7 +123,7 @@ items:
   - typeScript
   summary: 包含指定的 personGroupId、 名称和用户提供的 userData 创建新的人员组。
   syntax:
-    content: 'function createWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function createWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -132,7 +132,7 @@ items:
         以字符串形式的用户提供 personGroupId。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -147,7 +147,7 @@ items:
   - typeScript
   summary: 删除现有的人员组。 保存人脸的人员组中的所有人的图像也将被删除。
   syntax:
-    content: 'function deleteMethod(personGroupId: string, options?: function)'
+    content: 'function deleteMethod(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -156,7 +156,7 @@ items:
         要删除的用户组的 personGroupId。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -171,7 +171,7 @@ items:
   - typeScript
   summary: 删除现有的人员组。 保存人脸的人员组中的所有人的图像也将被删除。
   syntax:
-    content: 'function deleteMethod(personGroupId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(personGroupId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: personGroupId
       type:
@@ -179,7 +179,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -219,7 +219,7 @@ items:
   - typeScript
   summary: 删除现有的人员组。 保存人脸的人员组中的所有人的图像也将被删除。
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -228,7 +228,7 @@ items:
         要删除的用户组的 personGroupId。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -243,7 +243,7 @@ items:
   - typeScript
   summary: 检索一个人员组，包括其名称和用户数据的信息。
   syntax:
-    content: 'function get(personGroupId: string, options?: function)'
+    content: 'function get(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -252,7 +252,7 @@ items:
         目标用户组的 personGroupId。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -267,7 +267,7 @@ items:
   - typeScript
   summary: 检索一个人员组，包括其名称和用户数据的信息。
   syntax:
-    content: 'function get(personGroupId: string, options: function, callback: ServiceCallback<PersonGroupResult>)'
+    content: 'function get(personGroupId: string, options: Object, callback: ServiceCallback<PersonGroupResult>)'
     parameters:
     - id: personGroupId
       type:
@@ -275,7 +275,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -315,7 +315,7 @@ items:
   - typeScript
   summary: 检索 （已完成或正在进行） 的人员组定型状态。
   syntax:
-    content: 'function getTrainingStatus(personGroupId: string, options?: function)'
+    content: 'function getTrainingStatus(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -324,7 +324,7 @@ items:
         目标用户组的 personGroupId。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -361,7 +361,7 @@ items:
   - typeScript
   summary: 检索 （已完成或正在进行） 的人员组定型状态。
   syntax:
-    content: 'function getTrainingStatus(personGroupId: string, options: function, callback: ServiceCallback<TrainingStatus1>)'
+    content: 'function getTrainingStatus(personGroupId: string, options: Object, callback: ServiceCallback<TrainingStatus1>)'
     parameters:
     - id: personGroupId
       type:
@@ -369,7 +369,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -387,7 +387,7 @@ items:
   - typeScript
   summary: 检索 （已完成或正在进行） 的人员组定型状态。
   syntax:
-    content: 'function getTrainingStatusWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function getTrainingStatusWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -396,7 +396,7 @@ items:
         目标用户组的 personGroupId。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -411,7 +411,7 @@ items:
   - typeScript
   summary: 检索一个人员组，包括其名称和用户数据的信息。
   syntax:
-    content: 'function getWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -420,7 +420,7 @@ items:
         目标用户组的 personGroupId。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -453,11 +453,11 @@ items:
   - typeScript
   summary: 列出人员组和他们的信息。
   syntax:
-    content: 'function list(options: function, callback: ServiceCallback<PersonGroupResult[]>)'
+    content: 'function list(options: Object, callback: ServiceCallback<PersonGroupResult[]>)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -475,11 +475,11 @@ items:
   - typeScript
   summary: 列出人员组和他们的信息。
   syntax:
-    content: 'function list(options?: function)'
+    content: 'function list(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -494,11 +494,11 @@ items:
   - typeScript
   summary: 列出人员组和他们的信息。
   syntax:
-    content: 'function listWithHttpOperationResponse(options?: function)'
+    content: 'function listWithHttpOperationResponse(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -513,7 +513,7 @@ items:
   - typeScript
   summary: 任务排入队列人员组培训，培训任务可能不会立即启动。
   syntax:
-    content: 'function train(personGroupId: string, options?: function)'
+    content: 'function train(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -522,7 +522,7 @@ items:
         目标人员组定型。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -559,7 +559,7 @@ items:
   - typeScript
   summary: 任务排入队列人员组培训，培训任务可能不会立即启动。
   syntax:
-    content: 'function train(personGroupId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function train(personGroupId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: personGroupId
       type:
@@ -567,7 +567,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -585,7 +585,7 @@ items:
   - typeScript
   summary: 任务排入队列人员组培训，培训任务可能不会立即启动。
   syntax:
-    content: 'function trainWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function trainWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -594,7 +594,7 @@ items:
         目标人员组定型。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -609,7 +609,7 @@ items:
   - typeScript
   summary: 更新现有人员组的显示名称和 userData。 将更新它在请求正文中未显示的属性。
   syntax:
-    content: 'function update(personGroupId: string, options?: function)'
+    content: 'function update(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -618,7 +618,7 @@ items:
         要更新的人员组的 personGroupId。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -655,7 +655,7 @@ items:
   - typeScript
   summary: 更新现有人员组的显示名称和 userData。 将更新它在请求正文中未显示的属性。
   syntax:
-    content: 'function update(personGroupId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function update(personGroupId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: personGroupId
       type:
@@ -663,7 +663,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -681,7 +681,7 @@ items:
   - typeScript
   summary: 更新现有人员组的显示名称和 userData。 将更新它在请求正文中未显示的属性。
   syntax:
-    content: 'function updateWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function updateWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -690,7 +690,7 @@ items:
         要更新的人员组的 personGroupId。
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

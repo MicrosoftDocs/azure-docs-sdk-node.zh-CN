@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 6cb0f3f80bc511a0865f3a5609cf1784ff077b9b
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: ea79a2eb5c1197061788aa004ade361c3c84c160
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40050139"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41683456"
 items:
 - uid: azure-event-hubs.ErrorNameConditionMapper
   name: ErrorNameConditionMapper
@@ -27,8 +27,8 @@ items:
   - azure-event-hubs.ErrorNameConditionMapper.LinkRedirectError
   - azure-event-hubs.ErrorNameConditionMapper.MessageLockLostError
   - azure-event-hubs.ErrorNameConditionMapper.MessageTooLargeError
+  - azure-event-hubs.ErrorNameConditionMapper.MessagingEntityDisabledError
   - azure-event-hubs.ErrorNameConditionMapper.ArgumentOutOfRangeError
-  - azure-event-hubs.ErrorNameConditionMapper.NotImplementedError
   - azure-event-hubs.ErrorNameConditionMapper.OperationCancelledError
   - azure-event-hubs.ErrorNameConditionMapper.PreconditionFailedError
   - azure-event-hubs.ErrorNameConditionMapper.QuotaExceededError
@@ -42,13 +42,14 @@ items:
   - azure-event-hubs.ErrorNameConditionMapper.SessionCannotBeLockedError
   - azure-event-hubs.ErrorNameConditionMapper.SessionLockLostError
   - azure-event-hubs.ErrorNameConditionMapper.SessionWindowViolationError
+  - azure-event-hubs.ErrorNameConditionMapper.SystemError
   - azure-event-hubs.ErrorNameConditionMapper.TransferLimitExceededError
   - azure-event-hubs.ErrorNameConditionMapper.UnattachedHandleError
-  - azure-event-hubs.ErrorNameConditionMapper.MessagingEntityDisabledError
+  - azure-event-hubs.ErrorNameConditionMapper.NotImplementedError
   langs:
   - typeScript
   type: enum
-  summary: 将条件映射到错误名称。
+  summary: 错误名称映射到 amqp 错误条件。
   package: azure-event-hubs
 - uid: azure-event-hubs.ErrorNameConditionMapper.ArgumentError
   name: ArgumentError
@@ -203,21 +204,21 @@ items:
   type: field
   numericValue: 
   package: azure-event-hubs
+- uid: azure-event-hubs.ErrorNameConditionMapper.MessagingEntityDisabledError
+  name: MessagingEntityDisabledError
+  children: []
+  langs:
+  - typeScript
+  summary: 尝试访问/连接到已禁用的消息传送实体时，将引发错误。
+  type: field
+  numericValue: 
+  package: azure-event-hubs
 - uid: azure-event-hubs.ErrorNameConditionMapper.ArgumentOutOfRangeError
   name: ArgumentOutOfRangeError
   children: []
   langs:
   - typeScript
   summary: 当自变量的值的不在允许范围内时，将引发错误。
-  type: field
-  numericValue: 
-  package: azure-event-hubs
-- uid: azure-event-hubs.ErrorNameConditionMapper.NotImplementedError
-  name: NotImplementedError
-  children: []
-  langs:
-  - typeScript
-  summary: 当一项功能尚未实现，但占位符存在时，将引发错误。
   type: field
   numericValue: 
   package: azure-event-hubs
@@ -345,6 +346,18 @@ items:
   type: field
   numericValue: 
   package: azure-event-hubs
+- uid: azure-event-hubs.ErrorNameConditionMapper.SystemError
+  name: SystemError
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    Node.js 引发低级别系统错误时，将引发错误。
+
+    <xref:https%3A%2F%2Fnodejs.org%2Fapi%2Ferrors.html%23errors_class_systemerror>
+  type: field
+  numericValue: 
+  package: azure-event-hubs
 - uid: azure-event-hubs.ErrorNameConditionMapper.TransferLimitExceededError
   name: TransferLimitExceededError
   children: []
@@ -363,12 +376,12 @@ items:
   type: field
   numericValue: 
   package: azure-event-hubs
-- uid: azure-event-hubs.ErrorNameConditionMapper.MessagingEntityDisabledError
-  name: MessagingEntityDisabledError
+- uid: azure-event-hubs.ErrorNameConditionMapper.NotImplementedError
+  name: NotImplementedError
   children: []
   langs:
   - typeScript
-  summary: 尝试访问/连接到已禁用的消息传送实体时，将引发错误。
+  summary: 当一项功能尚未实现，但占位符存在时，将引发错误。
   type: field
   numericValue: 
   package: azure-event-hubs

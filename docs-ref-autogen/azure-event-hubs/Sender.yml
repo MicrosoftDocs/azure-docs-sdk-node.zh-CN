@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: d694f449078a8087f6e94153ea07a59681065ae8
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: dd9ce5d7e0c431f2655cbf469b0092b341b5c3b4
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40050124"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41692456"
 items:
 - uid: azure-event-hubs.Sender
   name: Sender
@@ -16,7 +16,11 @@ items:
   - azure-event-hubs.Sender.credit
   - azure-event-hubs.Sender.error
   - azure-event-hubs.Sender.getMaxListeners
+  - azure-event-hubs.Sender.isClosed
+  - azure-event-hubs.Sender.isItselfClosed
   - azure-event-hubs.Sender.isOpen
+  - azure-event-hubs.Sender.isSessionClosed
+  - azure-event-hubs.Sender.isSessionItselfClosed
   - azure-event-hubs.Sender.name
   - azure-event-hubs.Sender.properties
   - azure-event-hubs.Sender.registerHandler
@@ -121,6 +125,40 @@ items:
       type:
       - number
   package: azure-event-hubs
+- uid: azure-event-hubs.Sender.isClosed
+  name: isClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    确定是否关闭的链接或它的基础会话或它的基础连接的本地和远程终结点。
+
+    在"sender_close"，"session_close"事件处理程序，如果此方法返回`false`则意味着仍打开的本地结束。 它可用于确定是否关闭了此类情况下本地启动。
+  syntax:
+    content: function isClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Sender.isItselfClosed
+  name: isItselfClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    确定是否关闭的只是链接本身的本地和远程终结点。
+
+    在"sender_close"事件处理程序中，如果此方法返回`false`则意味着仍打开的本地结束。 它可用于确定是否关闭了此类情况下本地启动。
+  syntax:
+    content: function isItselfClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
 - uid: azure-event-hubs.Sender.isOpen
   name: isOpen
   children: []
@@ -130,6 +168,40 @@ items:
   summary: 确定发件人链接是否处于打开状态。
   syntax:
     content: function isOpen()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Sender.isSessionClosed
+  name: isSessionClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    确定是否关闭会话或它的基础连接本地和远程终结点。
+
+    在"session_close"事件处理程序中，如果此方法返回`false`则意味着仍打开的本地结束。 它可用于确定是否关闭了此类情况下本地启动。
+  syntax:
+    content: function isSessionClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Sender.isSessionItselfClosed
+  name: isSessionItselfClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    确定是否关闭的只是对会话本身的本地和远程终结点。
+
+    在"session_close"事件处理程序中，如果此方法返回`false`则意味着仍打开的本地结束。 它可用于确定是否关闭了此类情况下本地启动。
+  syntax:
+    content: function isSessionItselfClosed()
     parameters: []
     return:
       type:
@@ -207,7 +279,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: ''
+  summary: 发件人和它基础会话从内部映射中删除。
   syntax:
     content: function remove()
     parameters: []

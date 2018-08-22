@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 2bb39336cac3fe404366a95799522d14d6109f14
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 901fc90c47fe16e90f69b8410cc09468c127efb4
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40053243"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41690286"
 items:
 - uid: azure-event-hubs.EventPosition
   name: EventPosition
@@ -29,9 +29,9 @@ items:
   - typeScript
   type: class
   summary: >-
-    <span data-ttu-id="d8735-101">表示选项可以设置事件中心接收器的创建过程。</span><span class="sxs-lookup"><span data-stu-id="d8735-101">Represents options can be set during the creation of a event hub receiver.</span></span>
+    <span data-ttu-id="df2f3-101">表示选项可以设置事件中心接收器的创建过程。</span><span class="sxs-lookup"><span data-stu-id="df2f3-101">Represents options can be set during the creation of a event hub receiver.</span></span>
 
-    <span data-ttu-id="d8735-102">定义的位置@link~ EventData，事件中心分区中的。</span><span class="sxs-lookup"><span data-stu-id="d8735-102">Defines a position of an @link~EventData in the event hub partition.</span></span>
+    <span data-ttu-id="df2f3-102">定义的位置@link~ EventData，事件中心分区中的。</span><span class="sxs-lookup"><span data-stu-id="df2f3-102">Defines a position of an @link~EventData in the event hub partition.</span></span>
   package: azure-event-hubs
 - uid: azure-event-hubs.EventPosition.customFilter
   name: customFilter
@@ -40,7 +40,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="df2f3-103">{string}[customFilter]需要在接收方设置自定义筛选器表达式。</span><span class="sxs-lookup"><span data-stu-id="df2f3-103">{string} [customFilter] The custom filter expression that needs to be set on the receiver.</span></span>
   optional: true
   syntax:
     content: 'customFilter?: string'
@@ -69,7 +69,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="df2f3-104">{日期 | 数}[enqueuedTime]中的位置事件排入队列的时间。</span><span class="sxs-lookup"><span data-stu-id="df2f3-104">{Date|number} [enqueuedTime] The enqueued time of the event at the position.</span></span> <span data-ttu-id="df2f3-105">如果位置只是创建从一个序列号或偏移量，它可以是未定义。</span><span class="sxs-lookup"><span data-stu-id="df2f3-105">It can be undefined if the position is just created from a sequence number or an offset.</span></span>
   optional: true
   syntax:
     content: 'enqueuedTime?: Date | number'
@@ -89,7 +89,7 @@ items:
     parameters:
     - id: options
       type:
-      - azure-event-hubs.EventPositionOptions
+      - EventPositionOptions
       description: ''
       optional: true
   package: azure-event-hubs
@@ -99,7 +99,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d8735-103">返回流的末尾的位置。</span><span class="sxs-lookup"><span data-stu-id="d8735-103">Returns the position for the end of a stream.</span></span> <span data-ttu-id="d8735-104">提供接收方创建功能，以便开始接收来自在分区中的下一个可用事件后接收方创建的此位置处。</span><span class="sxs-lookup"><span data-stu-id="d8735-104">Provide this position in receiver creation to start receiving from the next available event in the partition after the receiver is created.</span></span>
+  summary: <span data-ttu-id="df2f3-106">返回流的末尾的位置。</span><span class="sxs-lookup"><span data-stu-id="df2f3-106">Returns the position for the end of a stream.</span></span> <span data-ttu-id="df2f3-107">提供接收方创建功能，以便开始接收来自在分区中的下一个可用事件后接收方创建的此位置处。</span><span class="sxs-lookup"><span data-stu-id="df2f3-107">Provide this position in receiver creation to start receiving from the next available event in the partition after the receiver is created.</span></span>
   syntax:
     content: static function fromEnd()
     parameters: []
@@ -113,14 +113,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d8735-105">在给定排入队列时创建一个位置。</span><span class="sxs-lookup"><span data-stu-id="d8735-105">Creates a position at the given enqueued time.</span></span>
+  summary: <span data-ttu-id="df2f3-108">在给定排入队列时创建一个位置。</span><span class="sxs-lookup"><span data-stu-id="df2f3-108">Creates a position at the given enqueued time.</span></span>
   syntax:
     content: 'static function fromEnqueuedTime(enqueuedTime: Date | number)'
     parameters:
     - id: enqueuedTime
       type:
       - Date | number
-      description: <span data-ttu-id="d8735-106">排入队列的时间。</span><span class="sxs-lookup"><span data-stu-id="d8735-106">The enqueue time.</span></span> <span data-ttu-id="d8735-107">此值表示排入队列消息的实际时间。</span><span class="sxs-lookup"><span data-stu-id="d8735-107">This value represents the actual time of enqueuing the message.</span></span>
+      description: <span data-ttu-id="df2f3-109">排入队列的时间。</span><span class="sxs-lookup"><span data-stu-id="df2f3-109">The enqueue time.</span></span> <span data-ttu-id="df2f3-110">此值表示排入队列消息的实际时间。</span><span class="sxs-lookup"><span data-stu-id="df2f3-110">This value represents the actual time of enqueuing the message.</span></span>
     return:
       type:
       - azure-event-hubs.EventPosition
@@ -131,7 +131,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d8735-108">创建给定的偏移量位置处的位置。</span><span class="sxs-lookup"><span data-stu-id="d8735-108">Creates a position at the given offset.</span></span>
+  summary: <span data-ttu-id="df2f3-111">创建给定的偏移量位置处的位置。</span><span class="sxs-lookup"><span data-stu-id="df2f3-111">Creates a position at the given offset.</span></span>
   syntax:
     content: 'static function fromOffset(offset: string, isInclusive?: boolean)'
     parameters:
@@ -139,15 +139,15 @@ items:
       type:
       - string
       description: >-
-        <span data-ttu-id="d8735-109">数据相对于事件中心分区流的偏移量。</span><span class="sxs-lookup"><span data-stu-id="d8735-109">The offset of the data relative to the Event Hub partition stream.</span></span>
+        <span data-ttu-id="df2f3-112">数据相对于事件中心分区流的偏移量。</span><span class="sxs-lookup"><span data-stu-id="df2f3-112">The offset of the data relative to the Event Hub partition stream.</span></span>
 
-        <span data-ttu-id="d8735-110">偏移量是事件中心流中的事件的标记或标识符。</span><span class="sxs-lookup"><span data-stu-id="d8735-110">The offset is a marker or identifier for an event within the Event Hubs stream.</span></span>
+        <span data-ttu-id="df2f3-113">偏移量是事件中心流中的事件的标记或标识符。</span><span class="sxs-lookup"><span data-stu-id="df2f3-113">The offset is a marker or identifier for an event within the Event Hubs stream.</span></span>
 
-        <span data-ttu-id="d8735-111">该标识符在事件中心流的分区中是惟一的。</span><span class="sxs-lookup"><span data-stu-id="d8735-111">The identifier is unique within a partition of the Event Hubs stream.</span></span>
+        <span data-ttu-id="df2f3-114">该标识符在事件中心流的分区中是惟一的。</span><span class="sxs-lookup"><span data-stu-id="df2f3-114">The identifier is unique within a partition of the Event Hubs stream.</span></span>
     - id: isInclusive
       type:
       - boolean
-      description: '<span data-ttu-id="d8735-112">如果为 true，则包含; 指定的事件否则，返回的下一个事件。</span><span class="sxs-lookup"><span data-stu-id="d8735-112">If true, the specified event is included; otherwise the next event is returned.</span></span> <span data-ttu-id="d8735-113">默认值：false。</span><span class="sxs-lookup"><span data-stu-id="d8735-113">Default: false.</span></span>'
+      description: '<span data-ttu-id="df2f3-115">如果为 true，则包含; 指定的事件否则，返回的下一个事件。</span><span class="sxs-lookup"><span data-stu-id="df2f3-115">If true, the specified event is included; otherwise the next event is returned.</span></span> <span data-ttu-id="df2f3-116">默认值：false。</span><span class="sxs-lookup"><span data-stu-id="df2f3-116">Default: false.</span></span>'
       optional: true
     return:
       type:
@@ -159,18 +159,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d8735-114">在给定的序列号创建一个位置。</span><span class="sxs-lookup"><span data-stu-id="d8735-114">Creates a position at the given sequence number.</span></span>
+  summary: <span data-ttu-id="df2f3-117">在给定的序列号创建一个位置。</span><span class="sxs-lookup"><span data-stu-id="df2f3-117">Creates a position at the given sequence number.</span></span>
   syntax:
     content: 'static function fromSequenceNumber(sequenceNumber: number, isInclusive?: boolean)'
     parameters:
     - id: sequenceNumber
       type:
       - number
-      description: <span data-ttu-id="d8735-115">事件在事件中心的分区流中的逻辑序列号。</span><span class="sxs-lookup"><span data-stu-id="d8735-115">The logical sequence number of the event within the partition stream of the Event Hub.</span></span>
+      description: <span data-ttu-id="df2f3-118">事件在事件中心的分区流中的逻辑序列号。</span><span class="sxs-lookup"><span data-stu-id="df2f3-118">The logical sequence number of the event within the partition stream of the Event Hub.</span></span>
     - id: isInclusive
       type:
       - boolean
-      description: <span data-ttu-id="d8735-116">如果为 true，则包含; 指定的事件否则，返回的下一个事件。</span><span class="sxs-lookup"><span data-stu-id="d8735-116">If true, the specified event is included; otherwise the next event is returned.</span></span> <span data-ttu-id="d8735-117">默认值为 false。</span><span class="sxs-lookup"><span data-stu-id="d8735-117">Default false.</span></span>
+      description: <span data-ttu-id="df2f3-119">如果为 true，则包含; 指定的事件否则，返回的下一个事件。</span><span class="sxs-lookup"><span data-stu-id="df2f3-119">If true, the specified event is included; otherwise the next event is returned.</span></span> <span data-ttu-id="df2f3-120">默认值为 false。</span><span class="sxs-lookup"><span data-stu-id="df2f3-120">Default false.</span></span>
       optional: true
     return:
       type:
@@ -182,7 +182,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d8735-118">返回流的开始处的位置。</span><span class="sxs-lookup"><span data-stu-id="d8735-118">Returns the position for the start of a stream.</span></span> <span data-ttu-id="d8735-119">提供接收方创建功能，以便开始接收来自在分区中的第一个可用事件的此位置处。</span><span class="sxs-lookup"><span data-stu-id="d8735-119">Provide this position in receiver creation to start receiving from the first available event in the partition.</span></span>
+  summary: <span data-ttu-id="df2f3-121">返回流的开始处的位置。</span><span class="sxs-lookup"><span data-stu-id="df2f3-121">Returns the position for the start of a stream.</span></span> <span data-ttu-id="df2f3-122">提供接收方创建功能，以便开始接收来自在分区中的第一个可用事件的此位置处。</span><span class="sxs-lookup"><span data-stu-id="df2f3-122">Provide this position in receiver creation to start receiving from the first available event in the partition.</span></span>
   syntax:
     content: static function fromStart()
     parameters: []
@@ -196,7 +196,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d8735-120">获取需要在源上设置的表达式 （筛选器子句）。</span><span class="sxs-lookup"><span data-stu-id="d8735-120">Gets the expression (filter clause) that needs to be set on the source.</span></span>
+  summary: <span data-ttu-id="df2f3-123">获取需要在源上设置的表达式 （筛选器子句）。</span><span class="sxs-lookup"><span data-stu-id="df2f3-123">Gets the expression (filter clause) that needs to be set on the source.</span></span>
   syntax:
     content: function getExpression()
     parameters: []
@@ -211,7 +211,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '<span data-ttu-id="df2f3-124">{布尔} isInclusive 指示指定的偏移量处的当前事件是否包含。</span><span class="sxs-lookup"><span data-stu-id="df2f3-124">{boolean} isInclusive Indicates if the current event at the specified offset is included or not.</span></span> <span data-ttu-id="df2f3-125">如果设置偏移量，它时才适用。</span><span class="sxs-lookup"><span data-stu-id="df2f3-125">It is only applicable if offset is set.</span></span> <span data-ttu-id="df2f3-126">默认值： false。</span><span class="sxs-lookup"><span data-stu-id="df2f3-126">Default value: false.</span></span>'
   syntax:
     content: 'isInclusive: boolean'
     return:
@@ -225,7 +225,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="df2f3-127">{string}[偏移量]事件位置处的偏移量。</span><span class="sxs-lookup"><span data-stu-id="df2f3-127">{string} [offset] The offset of the event at the position.</span></span> <span data-ttu-id="df2f3-128">如果从一个序列号或排入队列的时间只是创建位置，它可以是未定义。</span><span class="sxs-lookup"><span data-stu-id="df2f3-128">It can be undefined if the position is just created from a sequence number or an enqueued time.</span></span>
   optional: true
   syntax:
     content: 'offset?: string'
@@ -240,7 +240,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="df2f3-129">{number}[sequenceNumber]中的位置事件的序列号。</span><span class="sxs-lookup"><span data-stu-id="df2f3-129">{number} [sequenceNumber] The sequence number of the event at the position.</span></span> <span data-ttu-id="df2f3-130">如果位置只是创建从排入队列的时间或偏移量，它可以是未定义。</span><span class="sxs-lookup"><span data-stu-id="df2f3-130">It can be undefined if the position is just created from an enqueued time or an offset.</span></span>
   optional: true
   syntax:
     content: 'sequenceNumber?: number'
@@ -268,7 +268,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d8735-121">创建基于给定的自定义筛选器的位置。</span><span class="sxs-lookup"><span data-stu-id="d8735-121">Creates a position based on the given custom filter.</span></span>
+  summary: <span data-ttu-id="df2f3-131">创建基于给定的自定义筛选器的位置。</span><span class="sxs-lookup"><span data-stu-id="df2f3-131">Creates a position based on the given custom filter.</span></span>
   syntax:
     content: 'static function withCustomFilter(customFilter: string)'
     parameters:
@@ -276,17 +276,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="d8735-122">自定义筛选器表达式，需要在接收方应用。</span><span class="sxs-lookup"><span data-stu-id="d8735-122">The cutom filter expression that needs to be applied on the receiver.</span></span> <span data-ttu-id="d8735-123">仅当一个时，应使用这种其他方法`fromOffset()`， `fromSequenceNumber()`，`fromEnqueuedTime()`不适用于你的方案。</span><span class="sxs-lookup"><span data-stu-id="d8735-123">This should be used only when one of the other methods `fromOffset()`, `fromSequenceNumber()`, `fromEnqueuedTime()` is not applicable for your scenario.</span></span>
+        <span data-ttu-id="df2f3-132">自定义筛选器表达式，需要在接收方应用。</span><span class="sxs-lookup"><span data-stu-id="df2f3-132">The cutom filter expression that needs to be applied on the receiver.</span></span> <span data-ttu-id="df2f3-133">仅当一个时，应使用这种其他方法`fromOffset()`， `fromSequenceNumber()`，`fromEnqueuedTime()`不适用于你的方案。</span><span class="sxs-lookup"><span data-stu-id="df2f3-133">This should be used only when one of the other methods `fromOffset()`, `fromSequenceNumber()`, `fromEnqueuedTime()` is not applicable for your scenario.</span></span>
     return:
       type:
       - azure-event-hubs.EventPosition
   package: azure-event-hubs
 references:
-- uid: azure-event-hubs.EventPositionOptions
-  spec.typeScript:
-  - name: EventPositionOptions
-    fullName: EventPositionOptions
-    uid: azure-event-hubs.EventPositionOptions
 - uid: azure-event-hubs.EventPosition
   spec.typeScript:
   - name: EventPosition

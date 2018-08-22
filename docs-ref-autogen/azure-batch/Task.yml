@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 1dcbba7e8575caa287a8231750424cfa6e27c97a
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 9ccdf4537777be622414d11322befbe7666691a7
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40053410"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41689996"
 items:
 - uid: azure-batch.Task
   name: Task
@@ -63,21 +63,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function add(jobId: string, task: TaskAddParameter, options?: function)'
+    content: 'function add(jobId: string, task: TaskAddParameter, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-101">该任务是要添加的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-101">The ID of the job to which the task is to be added.</span></span>
+        <span data-ttu-id="bdcdc-101">该任务是要添加的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-101">The ID of the job to which the task is to be added.</span></span>
     - id: task
       type:
       - azure-batch.TaskAddParameter
       description: >
-        <span data-ttu-id="ad85e-102">要添加的任务。</span><span class="sxs-lookup"><span data-stu-id="ad85e-102">The task to be added.</span></span>
+        <span data-ttu-id="bdcdc-102">要添加的任务。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-102">The task to be added.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -118,7 +118,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function add(jobId: string, task: TaskAddParameter, options: function, callback: ServiceCallback<void>)'
+    content: 'function add(jobId: string, task: TaskAddParameter, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: jobId
       type:
@@ -130,7 +130,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -174,21 +174,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function addCollection(jobId: string, value: TaskAddParameter[], options?: function)'
+    content: 'function addCollection(jobId: string, value: TaskAddParameter[], options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-103">任务集合是要添加的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-103">The ID of the job to which the task collection is to be added.</span></span>
+        <span data-ttu-id="bdcdc-103">任务集合是要添加的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-103">The ID of the job to which the task collection is to be added.</span></span>
     - id: value
       type:
       - azure-batch.TaskAddParameter[]
       description: >
-        <span data-ttu-id="ad85e-104">要添加任务的集合。</span><span class="sxs-lookup"><span data-stu-id="ad85e-104">The collection of tasks to add.</span></span> <span data-ttu-id="ad85e-105">此集合的总序列化的大小必须小于 4 MB。</span><span class="sxs-lookup"><span data-stu-id="ad85e-105">The total serialized size of this collection must be less than 4MB.</span></span> <span data-ttu-id="ad85e-106">如果大于 4 MB （例如，如果每个任务具有 100 个资源文件或环境变量），请求将失败，代码 RequestBodyTooLarge，并应再次重试任务也较少。</span><span class="sxs-lookup"><span data-stu-id="ad85e-106">If it is greater than 4MB (for example if each task has 100's of resource files or environment variables), the request will fail with code 'RequestBodyTooLarge' and should be retried again with fewer tasks.</span></span>
+        <span data-ttu-id="bdcdc-104">要添加任务的集合。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-104">The collection of tasks to add.</span></span> <span data-ttu-id="bdcdc-105">此集合的总序列化的大小必须小于 4 MB。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-105">The total serialized size of this collection must be less than 4MB.</span></span> <span data-ttu-id="bdcdc-106">如果大于 4 MB （例如，如果每个任务具有 100 个资源文件或环境变量），请求将失败，代码 RequestBodyTooLarge，并应再次重试任务也较少。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-106">If it is greater than 4MB (for example if each task has 100's of resource files or environment variables), the request will fail with code 'RequestBodyTooLarge' and should be retried again with fewer tasks.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -203,7 +203,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function addCollection(jobId: string, value: TaskAddParameter[], options: function, callback: ServiceCallback<TaskAddCollectionResult>)'
+    content: 'function addCollection(jobId: string, value: TaskAddParameter[], options: Object, callback: ServiceCallback<TaskAddCollectionResult>)'
     parameters:
     - id: jobId
       type:
@@ -215,7 +215,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -233,21 +233,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function addCollectionWithHttpOperationResponse(jobId: string, value: TaskAddParameter[], options?: function)'
+    content: 'function addCollectionWithHttpOperationResponse(jobId: string, value: TaskAddParameter[], options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-107">任务集合是要添加的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-107">The ID of the job to which the task collection is to be added.</span></span>
+        <span data-ttu-id="bdcdc-107">任务集合是要添加的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-107">The ID of the job to which the task collection is to be added.</span></span>
     - id: value
       type:
       - azure-batch.TaskAddParameter[]
       description: >
-        <span data-ttu-id="ad85e-108">要添加任务的集合。</span><span class="sxs-lookup"><span data-stu-id="ad85e-108">The collection of tasks to add.</span></span> <span data-ttu-id="ad85e-109">此集合的总序列化的大小必须小于 4 MB。</span><span class="sxs-lookup"><span data-stu-id="ad85e-109">The total serialized size of this collection must be less than 4MB.</span></span> <span data-ttu-id="ad85e-110">如果大于 4 MB （例如，如果每个任务具有 100 个资源文件或环境变量），请求将失败，代码 RequestBodyTooLarge，并应再次重试任务也较少。</span><span class="sxs-lookup"><span data-stu-id="ad85e-110">If it is greater than 4MB (for example if each task has 100's of resource files or environment variables), the request will fail with code 'RequestBodyTooLarge' and should be retried again with fewer tasks.</span></span>
+        <span data-ttu-id="bdcdc-108">要添加任务的集合。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-108">The collection of tasks to add.</span></span> <span data-ttu-id="bdcdc-109">此集合的总序列化的大小必须小于 4 MB。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-109">The total serialized size of this collection must be less than 4MB.</span></span> <span data-ttu-id="bdcdc-110">如果大于 4 MB （例如，如果每个任务具有 100 个资源文件或环境变量），请求将失败，代码 RequestBodyTooLarge，并应再次重试任务也较少。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-110">If it is greater than 4MB (for example if each task has 100's of resource files or environment variables), the request will fail with code 'RequestBodyTooLarge' and should be retried again with fewer tasks.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -262,21 +262,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function addWithHttpOperationResponse(jobId: string, task: TaskAddParameter, options?: function)'
+    content: 'function addWithHttpOperationResponse(jobId: string, task: TaskAddParameter, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-111">该任务是要添加的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-111">The ID of the job to which the task is to be added.</span></span>
+        <span data-ttu-id="bdcdc-111">该任务是要添加的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-111">The ID of the job to which the task is to be added.</span></span>
     - id: task
       type:
       - azure-batch.TaskAddParameter
       description: >
-        <span data-ttu-id="ad85e-112">要添加的任务。</span><span class="sxs-lookup"><span data-stu-id="ad85e-112">The task to be added.</span></span>
+        <span data-ttu-id="bdcdc-112">要添加的任务。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-112">The task to be added.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -317,7 +317,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function deleteMethod(jobId: string, taskId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(jobId: string, taskId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: jobId
       type:
@@ -329,7 +329,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -347,21 +347,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function deleteMethod(jobId: string, taskId: string, options?: function)'
+    content: 'function deleteMethod(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-113">要从中删除该任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-113">The ID of the job from which to delete the task.</span></span>
+        <span data-ttu-id="bdcdc-113">要从中删除该任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-113">The ID of the job from which to delete the task.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-114">若要删除的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-114">The ID of the task to delete.</span></span>
+        <span data-ttu-id="bdcdc-114">若要删除的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-114">The ID of the task to delete.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -376,21 +376,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-115">要从中删除该任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-115">The ID of the job from which to delete the task.</span></span>
+        <span data-ttu-id="bdcdc-115">要从中删除该任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-115">The ID of the job from which to delete the task.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-116">若要删除的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-116">The ID of the task to delete.</span></span>
+        <span data-ttu-id="bdcdc-116">若要删除的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-116">The ID of the task to delete.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -431,7 +431,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function get(jobId: string, taskId: string, options: function, callback: ServiceCallback<CloudTask>)'
+    content: 'function get(jobId: string, taskId: string, options: Object, callback: ServiceCallback<CloudTask>)'
     parameters:
     - id: jobId
       type:
@@ -443,7 +443,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -461,21 +461,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function get(jobId: string, taskId: string, options?: function)'
+    content: 'function get(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-117">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-117">The ID of the job that contains the task.</span></span>
+        <span data-ttu-id="bdcdc-117">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-117">The ID of the job that contains the task.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-118">若要获取其相关信息的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-118">The ID of the task to get information about.</span></span>
+        <span data-ttu-id="bdcdc-118">若要获取其相关信息的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-118">The ID of the task to get information about.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -490,21 +490,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function getWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-119">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-119">The ID of the job that contains the task.</span></span>
+        <span data-ttu-id="bdcdc-119">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-119">The ID of the job that contains the task.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-120">若要获取其相关信息的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-120">The ID of the task to get information about.</span></span>
+        <span data-ttu-id="bdcdc-120">若要获取其相关信息的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-120">The ID of the task to get information about.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -519,16 +519,16 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function list(jobId: string, options?: function)'
+    content: 'function list(jobId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-121">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-121">The ID of the job.</span></span>
+        <span data-ttu-id="bdcdc-121">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-121">The ID of the job.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -565,7 +565,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function list(jobId: string, options: function, callback: ServiceCallback<CloudTaskListResult>)'
+    content: 'function list(jobId: string, options: Object, callback: ServiceCallback<CloudTaskListResult>)'
     parameters:
     - id: jobId
       type:
@@ -573,7 +573,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -591,16 +591,16 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listNext(nextPageLink: string, options?: function)'
+    content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-122">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="ad85e-122">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="bdcdc-122">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-122">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -637,7 +637,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<CloudTaskListResult>)'
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<CloudTaskListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -645,7 +645,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -663,16 +663,16 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-123">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="ad85e-123">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="bdcdc-123">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-123">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -713,7 +713,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listSubtasks(jobId: string, taskId: string, options: function, callback: ServiceCallback<CloudTaskListSubtasksResult>)'
+    content: 'function listSubtasks(jobId: string, taskId: string, options: Object, callback: ServiceCallback<CloudTaskListSubtasksResult>)'
     parameters:
     - id: jobId
       type:
@@ -725,7 +725,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -743,21 +743,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listSubtasks(jobId: string, taskId: string, options?: function)'
+    content: 'function listSubtasks(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-124">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-124">The ID of the job.</span></span>
+        <span data-ttu-id="bdcdc-124">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-124">The ID of the job.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-125">任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-125">The ID of the task.</span></span>
+        <span data-ttu-id="bdcdc-125">任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-125">The ID of the task.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -772,21 +772,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listSubtasksWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    content: 'function listSubtasksWithHttpOperationResponse(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-126">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-126">The ID of the job.</span></span>
+        <span data-ttu-id="bdcdc-126">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-126">The ID of the job.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-127">任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-127">The ID of the task.</span></span>
+        <span data-ttu-id="bdcdc-127">任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-127">The ID of the task.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -801,16 +801,16 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listWithHttpOperationResponse(jobId: string, options?: function)'
+    content: 'function listWithHttpOperationResponse(jobId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-128">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-128">The ID of the job.</span></span>
+        <span data-ttu-id="bdcdc-128">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-128">The ID of the job.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -825,21 +825,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function reactivate(jobId: string, taskId: string, options?: function)'
+    content: 'function reactivate(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-129">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-129">The ID of the job containing the task.</span></span>
+        <span data-ttu-id="bdcdc-129">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-129">The ID of the job containing the task.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-130">若要重新激活的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-130">The ID of the task to reactivate.</span></span>
+        <span data-ttu-id="bdcdc-130">若要重新激活的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-130">The ID of the task to reactivate.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -880,7 +880,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function reactivate(jobId: string, taskId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function reactivate(jobId: string, taskId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: jobId
       type:
@@ -892,7 +892,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -910,21 +910,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function reactivateWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    content: 'function reactivateWithHttpOperationResponse(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-131">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-131">The ID of the job containing the task.</span></span>
+        <span data-ttu-id="bdcdc-131">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-131">The ID of the job containing the task.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-132">若要重新激活的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-132">The ID of the task to reactivate.</span></span>
+        <span data-ttu-id="bdcdc-132">若要重新激活的任务 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-132">The ID of the task to reactivate.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -939,21 +939,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function terminate(jobId: string, taskId: string, options?: function)'
+    content: 'function terminate(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-133">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-133">The ID of the job containing the task.</span></span>
+        <span data-ttu-id="bdcdc-133">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-133">The ID of the job containing the task.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-134">要终止的任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-134">The ID of the task to terminate.</span></span>
+        <span data-ttu-id="bdcdc-134">要终止的任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-134">The ID of the task to terminate.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -994,7 +994,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function terminate(jobId: string, taskId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function terminate(jobId: string, taskId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: jobId
       type:
@@ -1006,7 +1006,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1024,21 +1024,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function terminateWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    content: 'function terminateWithHttpOperationResponse(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-135">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-135">The ID of the job containing the task.</span></span>
+        <span data-ttu-id="bdcdc-135">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-135">The ID of the job containing the task.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-136">要终止的任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-136">The ID of the task to terminate.</span></span>
+        <span data-ttu-id="bdcdc-136">要终止的任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-136">The ID of the task to terminate.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1051,23 +1051,23 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="ad85e-137">更新指定的任务的属性。</span><span class="sxs-lookup"><span data-stu-id="ad85e-137">Updates the properties of the specified task.</span></span>
+  summary: <span data-ttu-id="bdcdc-137">更新指定的任务的属性。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-137">Updates the properties of the specified task.</span></span>
   syntax:
-    content: 'function update(jobId: string, taskId: string, options?: function)'
+    content: 'function update(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-138">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-138">The ID of the job containing the task.</span></span>
+        <span data-ttu-id="bdcdc-138">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-138">The ID of the job containing the task.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-139">要更新任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-139">The ID of the task to update.</span></span>
+        <span data-ttu-id="bdcdc-139">要更新任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-139">The ID of the task to update.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1080,7 +1080,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="ad85e-140">更新指定的任务的属性。</span><span class="sxs-lookup"><span data-stu-id="ad85e-140">Updates the properties of the specified task.</span></span>
+  summary: <span data-ttu-id="bdcdc-140">更新指定的任务的属性。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-140">Updates the properties of the specified task.</span></span>
   syntax:
     content: 'function update(jobId: string, taskId: string, callback: ServiceCallback<void>)'
     parameters:
@@ -1106,9 +1106,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="ad85e-141">更新指定的任务的属性。</span><span class="sxs-lookup"><span data-stu-id="ad85e-141">Updates the properties of the specified task.</span></span>
+  summary: <span data-ttu-id="bdcdc-141">更新指定的任务的属性。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-141">Updates the properties of the specified task.</span></span>
   syntax:
-    content: 'function update(jobId: string, taskId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function update(jobId: string, taskId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: jobId
       type:
@@ -1120,7 +1120,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1136,23 +1136,23 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="ad85e-142">更新指定的任务的属性。</span><span class="sxs-lookup"><span data-stu-id="ad85e-142">Updates the properties of the specified task.</span></span>
+  summary: <span data-ttu-id="bdcdc-142">更新指定的任务的属性。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-142">Updates the properties of the specified task.</span></span>
   syntax:
-    content: 'function updateWithHttpOperationResponse(jobId: string, taskId: string, options?: function)'
+    content: 'function updateWithHttpOperationResponse(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-143">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-143">The ID of the job containing the task.</span></span>
+        <span data-ttu-id="bdcdc-143">包含任务的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-143">The ID of the job containing the task.</span></span>
     - id: taskId
       type:
       - string
       description: >
-        <span data-ttu-id="ad85e-144">要更新任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="ad85e-144">The ID of the task to update.</span></span>
+        <span data-ttu-id="bdcdc-144">要更新任务的 ID。</span><span class="sxs-lookup"><span data-stu-id="bdcdc-144">The ID of the task to update.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

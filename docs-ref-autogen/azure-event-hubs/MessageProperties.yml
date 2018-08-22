@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: bd874ce388034b805a320a89a740251dd509574f
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 9718d42180fa2fd371115cc08f2f96e837161b2e
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40054166"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41690091"
 items:
 - uid: azure-event-hubs.MessageProperties
   name: MessageProperties
@@ -28,8 +28,9 @@ items:
   langs:
   - typeScript
   type: module
-  summary: <span data-ttu-id="96c38-101">描述消息的标准属性将定义的集。</span><span class="sxs-lookup"><span data-stu-id="96c38-101">Describes the defined set of standard properties of the message.</span></span>
+  summary: <span data-ttu-id="c79ec-101">描述可在 amqp 消息属性执行的操作。</span><span class="sxs-lookup"><span data-stu-id="c79ec-101">Describes the operations that can be performed on the amqp message properties.</span></span>
   package: azure-event-hubs
+  module: MessageProperties
 - uid: azure-event-hubs.MessageProperties.absoluteExpiryTime
   name: absoluteExpiryTime
   fullName: absoluteExpiryTime
@@ -37,7 +38,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c79ec-102">{number}[absoluteExpiryTime]此消息将被视为时的时间已过。</span><span class="sxs-lookup"><span data-stu-id="c79ec-102">{number} [absoluteExpiryTime] The time when this message is considered expired.</span></span>
   optional: true
   syntax:
     content: 'absoluteExpiryTime?: number'
@@ -52,7 +53,10 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: >-
+    <span data-ttu-id="c79ec-103">{string}[contentEncoding]内容编码属性用作内容类型的修饰符。</span><span class="sxs-lookup"><span data-stu-id="c79ec-103">{string} [contentEncoding] The content-encoding property is used as a modifier to the content-type.</span></span>
+
+    <span data-ttu-id="c79ec-104">何时存在，其 valueindicates 到应用程序数据应用了哪些其他的内容编码。</span><span class="sxs-lookup"><span data-stu-id="c79ec-104">When present, its valueindicates what additional content encodings have been applied to the application-data.</span></span>
   optional: true
   syntax:
     content: 'contentEncoding?: string'
@@ -67,7 +71,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c79ec-105">{string}[contentType]消息的 MIME 类型。</span><span class="sxs-lookup"><span data-stu-id="c79ec-105">{string} [contentType] MIME type for the message.</span></span>
   optional: true
   syntax:
     content: 'contentType?: string'
@@ -82,7 +86,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c79ec-106">{字符串 | 数 |缓冲区} [correlationId] 可用于将标记或标识客户端之间的消息的 id。</span><span class="sxs-lookup"><span data-stu-id="c79ec-106">{string | number | Buffer} [correlationId] The id that can be used to mark or identify messages between clients.</span></span>
   optional: true
   syntax:
     content: 'correlationId?: string | number | Buffer'
@@ -97,7 +101,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c79ec-107">{number}[creationTime]创建此消息的时间。</span><span class="sxs-lookup"><span data-stu-id="c79ec-107">{number} [creationTime] The time this message was created.</span></span>
   optional: true
   syntax:
     content: 'creationTime?: number'
@@ -111,14 +115,14 @@ items:
   type: function
   langs:
   - typeScript
-  summary: ''
+  summary: <span data-ttu-id="c79ec-108">转换为 MessageProperties AmqpMessageProperties。</span><span class="sxs-lookup"><span data-stu-id="c79ec-108">Converts AmqpMessageProperties to MessageProperties.</span></span>
   syntax:
     content: 'function fromAmqpMessageProperties(props: AmqpMessageProperties)'
     parameters:
     - id: props
       type:
       - AmqpMessageProperties
-      description: ''
+      description: <span data-ttu-id="c79ec-109">Amqp 消息属性。</span><span class="sxs-lookup"><span data-stu-id="c79ec-109">Amqp message properties.</span></span>
     return:
       type:
       - azure-event-hubs.MessageProperties
@@ -130,7 +134,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c79ec-110">{string}[groupId]此消息所属的组。</span><span class="sxs-lookup"><span data-stu-id="c79ec-110">{string} [groupId] The group this message belongs to.</span></span>
   optional: true
   syntax:
     content: 'groupId?: string'
@@ -145,7 +149,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c79ec-111">{number}[groupSequence]与其组此消息的序列号。</span><span class="sxs-lookup"><span data-stu-id="c79ec-111">{number} [groupSequence] The sequence number of this message with its group.</span></span>
   optional: true
   syntax:
     content: 'groupSequence?: number'
@@ -160,7 +164,10 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: >-
+    <span data-ttu-id="c79ec-112">{字符串 | 数 |缓冲区} [messageId] 应用程序消息标识符唯一 idenitifes 一条消息。</span><span class="sxs-lookup"><span data-stu-id="c79ec-112">{string | number | Buffer} [messageId] The application message identifier that uniquely idenitifes a message.</span></span>
+
+    <span data-ttu-id="c79ec-113">用户负责确保这在给定的上下文中唯一。</span><span class="sxs-lookup"><span data-stu-id="c79ec-113">The user is responsible for making sure that this is unique in the given context.</span></span> <span data-ttu-id="c79ec-114">Guid 通常会使非常适合。</span><span class="sxs-lookup"><span data-stu-id="c79ec-114">Guids usually make a good fit.</span></span>
   optional: true
   syntax:
     content: 'messageId?: string | number | Buffer'
@@ -175,7 +182,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c79ec-115">{string}[replyTo]若要向发送答复的节点的地址。</span><span class="sxs-lookup"><span data-stu-id="c79ec-115">{string} [replyTo] The address of the node to send replies to.</span></span>
   optional: true
   syntax:
     content: 'replyTo?: string'
@@ -190,7 +197,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c79ec-116">{string}[replyToGroupId]属于组答复消息。</span><span class="sxs-lookup"><span data-stu-id="c79ec-116">{string} [replyToGroupId] The group the reply message belongs to.</span></span>
   optional: true
   syntax:
     content: 'replyToGroupId?: string'
@@ -205,7 +212,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c79ec-117">{string}[主题]有关消息内容和用途的摘要信息相同的字段。</span><span class="sxs-lookup"><span data-stu-id="c79ec-117">{string} [subject] A common field for summary information about the message content and purpose.</span></span>
   optional: true
   syntax:
     content: 'subject?: string'
@@ -220,7 +227,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c79ec-118">{string}[个]消息的目标的节点的地址。</span><span class="sxs-lookup"><span data-stu-id="c79ec-118">{string} [to] The address of the node the message is destined for.</span></span>
   optional: true
   syntax:
     content: 'to?: string'
@@ -234,14 +241,14 @@ items:
   type: function
   langs:
   - typeScript
-  summary: ''
+  summary: <span data-ttu-id="c79ec-119">将从中转换为 AmqpMessageProperties。</span><span class="sxs-lookup"><span data-stu-id="c79ec-119">Converts MessageProperties to AmqpMessageProperties.</span></span>
   syntax:
     content: 'function toAmqpMessageProperties(props: MessageProperties)'
     parameters:
     - id: props
       type:
       - azure-event-hubs.MessageProperties
-      description: ''
+      description: <span data-ttu-id="c79ec-120">消息属性。</span><span class="sxs-lookup"><span data-stu-id="c79ec-120">Message properties.</span></span>
     return:
       type:
       - AmqpMessageProperties
@@ -253,7 +260,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: <span data-ttu-id="c79ec-121">{string}[userId]负责生成消息的用户的标识。</span><span class="sxs-lookup"><span data-stu-id="c79ec-121">{string} [userId] The identity of the user responsible for producing the message.</span></span>
   optional: true
   syntax:
     content: 'userId?: string'

@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: baa267dcae0c9e16566c0fc2c3755af6e8c04c1a
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 7dc1dc2d86963610ee203568ed77ed233b3c1c81
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40052338"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41688536"
 items:
 - uid: azure-arm-cosmosdb.CollectionPartitionRegion
   name: CollectionPartitionRegion
@@ -27,7 +27,7 @@ items:
   - typeScript
   summary: 检索的度量值由给定集合的给定筛选器和区域，按分区划分。
   syntax:
-    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: function)'
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -61,7 +61,7 @@ items:
         OData 筛选器表达式，描述要返回度量值的子集。 可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。 支持的运算符是等于
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -118,7 +118,7 @@ items:
   - typeScript
   summary: 检索的度量值由给定集合的给定筛选器和区域，按分区划分。
   syntax:
-    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options: function, callback: ServiceCallback<PartitionMetricListResult>)'
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options: Object, callback: ServiceCallback<PartitionMetricListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -146,7 +146,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -164,7 +164,7 @@ items:
   - typeScript
   summary: 检索的度量值由给定集合的给定筛选器和区域，按分区划分。
   syntax:
-    content: 'function listMetricsWithHttpOperationResponse(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: function)'
+    content: 'function listMetricsWithHttpOperationResponse(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -198,7 +198,7 @@ items:
         OData 筛选器表达式，描述要返回度量值的子集。 可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。 支持的运算符是等于
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

@@ -1,81 +1,72 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 4eb9a12709b9428368e2dc4b5b2365c98a218fbe
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: dd5e988aeb76415ae642313842ad0efd1d26f68e
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40049962"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41646318"
 items:
 - uid: azure-arm-datafactory.ActivityRuns
   name: ActivityRuns
   fullName: ActivityRuns
   children:
-  - azure-arm-datafactory.ActivityRuns.listByPipelineRun
-  - azure-arm-datafactory.ActivityRuns.listByPipelineRun_1
-  - azure-arm-datafactory.ActivityRuns.listByPipelineRun_2
-  - azure-arm-datafactory.ActivityRuns.listByPipelineRunNext
-  - azure-arm-datafactory.ActivityRuns.listByPipelineRunNext_1
-  - azure-arm-datafactory.ActivityRuns.listByPipelineRunNext_2
-  - azure-arm-datafactory.ActivityRuns.listByPipelineRunNextWithHttpOperationResponse
-  - azure-arm-datafactory.ActivityRuns.listByPipelineRunWithHttpOperationResponse
+  - azure-arm-datafactory.ActivityRuns.queryByPipelineRun
+  - azure-arm-datafactory.ActivityRuns.queryByPipelineRun_1
+  - azure-arm-datafactory.ActivityRuns.queryByPipelineRun_2
+  - azure-arm-datafactory.ActivityRuns.queryByPipelineRunWithHttpOperationResponse
   langs:
   - typeScript
   type: interface
   summary: ''
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.ActivityRuns.listByPipelineRun
-  name: listByPipelineRun
+- uid: azure-arm-datafactory.ActivityRuns.queryByPipelineRun
+  name: queryByPipelineRun
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="0937c-101">列表活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="0937c-101">List activity runs based on input filter conditions.</span></span>
+  summary: <span data-ttu-id="6b376-101">查询活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="6b376-101">Query activity runs based on input filter conditions.</span></span>
   syntax:
-    content: 'function listByPipelineRun(resourceGroupName: string, factoryName: string, runId: string, startTime: Date | string, endTime: Date | string, options?: function)'
+    content: 'function queryByPipelineRun(resourceGroupName: string, factoryName: string, runId: string, filterParameters: RunFilterParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="0937c-102">资源组名称。</span><span class="sxs-lookup"><span data-stu-id="0937c-102">The resource group name.</span></span>
+        <span data-ttu-id="6b376-102">资源组名称。</span><span class="sxs-lookup"><span data-stu-id="6b376-102">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="0937c-103">工厂名称。</span><span class="sxs-lookup"><span data-stu-id="0937c-103">The factory name.</span></span>
+        <span data-ttu-id="6b376-103">工厂名称。</span><span class="sxs-lookup"><span data-stu-id="6b376-103">The factory name.</span></span>
     - id: runId
       type:
       - string
       description: >
-        <span data-ttu-id="0937c-104">管道运行标识符。</span><span class="sxs-lookup"><span data-stu-id="0937c-104">The pipeline run identifier.</span></span>
-    - id: startTime
+        <span data-ttu-id="6b376-104">管道运行标识符。</span><span class="sxs-lookup"><span data-stu-id="6b376-104">The pipeline run identifier.</span></span>
+    - id: filterParameters
       type:
-      - Date | string
+      - azure-arm-datafactory.RunFilterParameters
       description: >
-        <span data-ttu-id="0937c-105">活动的开始时间运行的 ISO8601 格式。</span><span class="sxs-lookup"><span data-stu-id="0937c-105">The start time of activity runs in ISO8601 format.</span></span>
-    - id: endTime
-      type:
-      - Date | string
-      description: >
-        <span data-ttu-id="0937c-106">ISO8601 格式运行活动的结束时间。</span><span class="sxs-lookup"><span data-stu-id="0937c-106">The end time of activity runs in ISO8601 format.</span></span>
+        <span data-ttu-id="6b376-105">若要筛选的活动运行的参数。</span><span class="sxs-lookup"><span data-stu-id="6b376-105">Parameters to filter the activity runs.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<azure-arm-datafactory.ActivityRunsListResponse>
+      - Promise<azure-arm-datafactory.ActivityRunsQueryResponse>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.ActivityRuns.listByPipelineRun_1
-  name: listByPipelineRun
+- uid: azure-arm-datafactory.ActivityRuns.queryByPipelineRun_1
+  name: queryByPipelineRun
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="0937c-107">列表活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="0937c-107">List activity runs based on input filter conditions.</span></span>
+  summary: <span data-ttu-id="6b376-106">查询活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="6b376-106">Query activity runs based on input filter conditions.</span></span>
   syntax:
-    content: 'function listByPipelineRun(resourceGroupName: string, factoryName: string, runId: string, startTime: Date | string, endTime: Date | string, callback: ServiceCallback<ActivityRunsListResponse>)'
+    content: 'function queryByPipelineRun(resourceGroupName: string, factoryName: string, runId: string, filterParameters: RunFilterParameters, callback: ServiceCallback<ActivityRunsQueryResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -89,31 +80,27 @@ items:
       type:
       - string
       description: ''
-    - id: startTime
+    - id: filterParameters
       type:
-      - Date | string
-      description: ''
-    - id: endTime
-      type:
-      - Date | string
+      - azure-arm-datafactory.RunFilterParameters
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-arm-datafactory.ActivityRunsListResponse>
+      - ServiceCallback<azure-arm-datafactory.ActivityRunsQueryResponse>
       description: ''
     return:
       type:
-      - Promise<azure-arm-datafactory.ActivityRunsListResponse>
+      - Promise<azure-arm-datafactory.ActivityRunsQueryResponse>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.ActivityRuns.listByPipelineRun_2
-  name: listByPipelineRun
+- uid: azure-arm-datafactory.ActivityRuns.queryByPipelineRun_2
+  name: queryByPipelineRun
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="0937c-108">列表活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="0937c-108">List activity runs based on input filter conditions.</span></span>
+  summary: <span data-ttu-id="6b376-107">查询活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="6b376-107">Query activity runs based on input filter conditions.</span></span>
   syntax:
-    content: 'function listByPipelineRun(resourceGroupName: string, factoryName: string, runId: string, startTime: Date | string, endTime: Date | string, options: function, callback: ServiceCallback<ActivityRunsListResponse>)'
+    content: 'function queryByPipelineRun(resourceGroupName: string, factoryName: string, runId: string, filterParameters: RunFilterParameters, options: Object, callback: ServiceCallback<ActivityRunsQueryResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -127,191 +114,91 @@ items:
       type:
       - string
       description: ''
-    - id: startTime
+    - id: filterParameters
       type:
-      - Date | string
-      description: ''
-    - id: endTime
-      type:
-      - Date | string
+      - azure-arm-datafactory.RunFilterParameters
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-arm-datafactory.ActivityRunsListResponse>
+      - ServiceCallback<azure-arm-datafactory.ActivityRunsQueryResponse>
       description: ''
     return:
       type:
-      - Promise<azure-arm-datafactory.ActivityRunsListResponse>
+      - Promise<azure-arm-datafactory.ActivityRunsQueryResponse>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.ActivityRuns.listByPipelineRunNext
-  name: listByPipelineRunNext
+- uid: azure-arm-datafactory.ActivityRuns.queryByPipelineRunWithHttpOperationResponse
+  name: queryByPipelineRunWithHttpOperationResponse
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="0937c-109">列表活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="0937c-109">List activity runs based on input filter conditions.</span></span>
+  summary: <span data-ttu-id="6b376-108">查询活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="6b376-108">Query activity runs based on input filter conditions.</span></span>
   syntax:
-    content: 'function listByPipelineRunNext(nextPageLink: string, options?: function)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: >
-        <span data-ttu-id="0937c-110">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="0937c-110">The NextLink from the previous successful call to List operation.</span></span>
-    - id: options
-      type:
-      - function
-      description: ''
-      optional: true
-    return:
-      type:
-      - Promise<azure-arm-datafactory.ActivityRunsListResponse>
-  package: azure-arm-datafactory
-- uid: azure-arm-datafactory.ActivityRuns.listByPipelineRunNext_1
-  name: listByPipelineRunNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: <span data-ttu-id="0937c-111">列表活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="0937c-111">List activity runs based on input filter conditions.</span></span>
-  syntax:
-    content: 'function listByPipelineRunNext(nextPageLink: string, callback: ServiceCallback<ActivityRunsListResponse>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-datafactory.ActivityRunsListResponse>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-datafactory.ActivityRunsListResponse>
-  package: azure-arm-datafactory
-- uid: azure-arm-datafactory.ActivityRuns.listByPipelineRunNext_2
-  name: listByPipelineRunNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: <span data-ttu-id="0937c-112">列表活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="0937c-112">List activity runs based on input filter conditions.</span></span>
-  syntax:
-    content: 'function listByPipelineRunNext(nextPageLink: string, options: function, callback: ServiceCallback<ActivityRunsListResponse>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: options
-      type:
-      - function
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-datafactory.ActivityRunsListResponse>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-datafactory.ActivityRunsListResponse>
-  package: azure-arm-datafactory
-- uid: azure-arm-datafactory.ActivityRuns.listByPipelineRunNextWithHttpOperationResponse
-  name: listByPipelineRunNextWithHttpOperationResponse
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: <span data-ttu-id="0937c-113">列表活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="0937c-113">List activity runs based on input filter conditions.</span></span>
-  syntax:
-    content: 'function listByPipelineRunNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: >
-        <span data-ttu-id="0937c-114">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="0937c-114">The NextLink from the previous successful call to List operation.</span></span>
-    - id: options
-      type:
-      - function
-      description: ''
-      optional: true
-    return:
-      type:
-      - Promise<HttpOperationResponse<azure-arm-datafactory.ActivityRunsListResponse>>
-  package: azure-arm-datafactory
-- uid: azure-arm-datafactory.ActivityRuns.listByPipelineRunWithHttpOperationResponse
-  name: listByPipelineRunWithHttpOperationResponse
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: <span data-ttu-id="0937c-115">列表活动根据运行输入的筛选条件。</span><span class="sxs-lookup"><span data-stu-id="0937c-115">List activity runs based on input filter conditions.</span></span>
-  syntax:
-    content: 'function listByPipelineRunWithHttpOperationResponse(resourceGroupName: string, factoryName: string, runId: string, startTime: Date | string, endTime: Date | string, options?: function)'
+    content: 'function queryByPipelineRunWithHttpOperationResponse(resourceGroupName: string, factoryName: string, runId: string, filterParameters: RunFilterParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="0937c-116">资源组名称。</span><span class="sxs-lookup"><span data-stu-id="0937c-116">The resource group name.</span></span>
+        <span data-ttu-id="6b376-109">资源组名称。</span><span class="sxs-lookup"><span data-stu-id="6b376-109">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="0937c-117">工厂名称。</span><span class="sxs-lookup"><span data-stu-id="0937c-117">The factory name.</span></span>
+        <span data-ttu-id="6b376-110">工厂名称。</span><span class="sxs-lookup"><span data-stu-id="6b376-110">The factory name.</span></span>
     - id: runId
       type:
       - string
       description: >
-        <span data-ttu-id="0937c-118">管道运行标识符。</span><span class="sxs-lookup"><span data-stu-id="0937c-118">The pipeline run identifier.</span></span>
-    - id: startTime
+        <span data-ttu-id="6b376-111">管道运行标识符。</span><span class="sxs-lookup"><span data-stu-id="6b376-111">The pipeline run identifier.</span></span>
+    - id: filterParameters
       type:
-      - Date | string
+      - azure-arm-datafactory.RunFilterParameters
       description: >
-        <span data-ttu-id="0937c-119">活动的开始时间运行的 ISO8601 格式。</span><span class="sxs-lookup"><span data-stu-id="0937c-119">The start time of activity runs in ISO8601 format.</span></span>
-    - id: endTime
-      type:
-      - Date | string
-      description: >
-        <span data-ttu-id="0937c-120">ISO8601 格式运行活动的结束时间。</span><span class="sxs-lookup"><span data-stu-id="0937c-120">The end time of activity runs in ISO8601 format.</span></span>
+        <span data-ttu-id="6b376-112">若要筛选的活动运行的参数。</span><span class="sxs-lookup"><span data-stu-id="6b376-112">Parameters to filter the activity runs.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<azure-arm-datafactory.ActivityRunsListResponse>>
+      - Promise<HttpOperationResponse<azure-arm-datafactory.ActivityRunsQueryResponse>>
   package: azure-arm-datafactory
 references:
-- uid: Promise<azure-arm-datafactory.ActivityRunsListResponse>
+- uid: azure-arm-datafactory.RunFilterParameters
+  spec.typeScript:
+  - name: RunFilterParameters
+    fullName: RunFilterParameters
+    uid: azure-arm-datafactory.RunFilterParameters
+- uid: Promise<azure-arm-datafactory.ActivityRunsQueryResponse>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
-  - name: ActivityRunsListResponse
-    fullName: ActivityRunsListResponse
-    uid: azure-arm-datafactory.ActivityRunsListResponse
+  - name: ActivityRunsQueryResponse
+    fullName: ActivityRunsQueryResponse
+    uid: azure-arm-datafactory.ActivityRunsQueryResponse
   - name: '>'
     fullName: '>'
-- uid: ServiceCallback<azure-arm-datafactory.ActivityRunsListResponse>
+- uid: ServiceCallback<azure-arm-datafactory.ActivityRunsQueryResponse>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
-  - name: ActivityRunsListResponse
-    fullName: ActivityRunsListResponse
-    uid: azure-arm-datafactory.ActivityRunsListResponse
+  - name: ActivityRunsQueryResponse
+    fullName: ActivityRunsQueryResponse
+    uid: azure-arm-datafactory.ActivityRunsQueryResponse
   - name: '>'
     fullName: '>'
-- uid: Promise<HttpOperationResponse<azure-arm-datafactory.ActivityRunsListResponse>>
+- uid: Promise<HttpOperationResponse<azure-arm-datafactory.ActivityRunsQueryResponse>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
-  - name: ActivityRunsListResponse
-    fullName: ActivityRunsListResponse
-    uid: azure-arm-datafactory.ActivityRunsListResponse
+  - name: ActivityRunsQueryResponse
+    fullName: ActivityRunsQueryResponse
+    uid: azure-arm-datafactory.ActivityRunsQueryResponse
   - name: '>>'
     fullName: '>>'

@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 903c391913659600a4f98ef1b3541f52745d7dfe
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 4ebb32f87ada52fdc7366c00a14156400684884b
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40055077"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41686106"
 items:
 - uid: azure-event-processor-host.EventProcessorHost
   name: EventProcessorHost
@@ -29,7 +29,7 @@ items:
   langs:
   - typeScript
   type: class
-  summary: <span data-ttu-id="97005-101">描述事件处理程序主机以处理从事件中心。</span><span class="sxs-lookup"><span data-stu-id="97005-101">Describes the Event Processor Host to process events from an EventHub.</span></span>
+  summary: <span data-ttu-id="8c2fd-101">描述事件处理程序主机以处理从事件中心。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-101">Describes the Event Processor Host to process events from an EventHub.</span></span>
   extends:
     name: EventEmitter
   package: azure-event-processor-host
@@ -40,7 +40,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: ''
+  summary: '<span data-ttu-id="8c2fd-102">{布尔} 自动检查点会自动检查点代表客户的偏移量。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-102">{boolean} autoCheckpoint Automatically checkpoint the offset on behalf of the customer.</span></span> <span data-ttu-id="8c2fd-103">默认值： `true`。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-103">Default value: `true`.</span></span>'
   syntax:
     content: 'autoCheckpoint: boolean'
     return:
@@ -54,7 +54,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: '<span data-ttu-id="97005-102">关闭： 触发只要一个分区将失去其租用和已停止接收，或者当主机关闭的情况下。</span><span class="sxs-lookup"><span data-stu-id="97005-102">Closed: Triggered whenever a partition loses its lease and has to stop receiving, or when the host is shut down.</span></span> <span data-ttu-id="97005-103">PartitionContext 和关闭原因被传递到事件侦听器。</span><span class="sxs-lookup"><span data-stu-id="97005-103">The PartitionContext and the closing reason is passed to the event listener.</span></span>'
+  summary: '<span data-ttu-id="8c2fd-104">关闭： 触发只要一个分区将失去其租用和已停止接收，或者当主机关闭的情况下。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-104">Closed: Triggered whenever a partition loses its lease and has to stop receiving, or when the host is shut down.</span></span> <span data-ttu-id="8c2fd-105">PartitionContext 和关闭原因被传递到事件侦听器。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-105">The PartitionContext and the closing reason is passed to the event listener.</span></span>'
   syntax:
     content: 'static closed: string'
     return:
@@ -68,7 +68,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="97005-104">提供使用者的事件处理程序主机组名称。</span><span class="sxs-lookup"><span data-stu-id="97005-104">Provides the consumer group name for the Event processor host.</span></span>
+  summary: <span data-ttu-id="8c2fd-106">提供使用者的事件处理程序主机组名称。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-106">Provides the consumer group name for the Event processor host.</span></span>
   syntax:
     content: 'consumerGroup: string'
     return:
@@ -81,7 +81,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="97005-105">创建从事件中心处理事件的新主机。</span><span class="sxs-lookup"><span data-stu-id="97005-105">Creates a new host to process events from an Event Hub.</span></span>
+  summary: <span data-ttu-id="8c2fd-107">创建从事件中心处理事件的新主机。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-107">Creates a new host to process events from an Event Hub.</span></span>
   syntax:
     content: 'static function createFromAadTokenCredentials(hostName: string, storageConnectionString: string, namespace: string, eventHubPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: EventProcessorOptions)'
     parameters:
@@ -89,28 +89,28 @@ items:
       type:
       - string
       description: >-
-        <span data-ttu-id="97005-106">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="97005-106">Name of the processor host.</span></span> <span data-ttu-id="97005-107">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="97005-107">MUST BE UNIQUE.</span></span>
+        <span data-ttu-id="8c2fd-108">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-108">Name of the processor host.</span></span> <span data-ttu-id="8c2fd-109">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-109">MUST BE UNIQUE.</span></span>
 
-        <span data-ttu-id="97005-108">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="97005-108">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="97005-109">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="97005-109">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+        <span data-ttu-id="8c2fd-110">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-110">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="8c2fd-111">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-111">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
     - id: storageConnectionString
       type:
       - string
-      description: <span data-ttu-id="97005-110">用于租用和检查点的 Azure 存储帐户的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="97005-110">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="97005-111">示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="97005-111">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
+      description: <span data-ttu-id="8c2fd-112">用于租用和检查点的 Azure 存储帐户的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-112">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="8c2fd-113">示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="8c2fd-113">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
     - id: namespace
       type:
       - string
       description: >-
-        <span data-ttu-id="97005-112">事件中心的完全限定的域名。</span><span class="sxs-lookup"><span data-stu-id="97005-112">Fully qualified domain name for Event Hubs.</span></span>
+        <span data-ttu-id="8c2fd-114">事件中心的完全限定的域名。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-114">Fully qualified domain name for Event Hubs.</span></span>
 
-        <span data-ttu-id="97005-113">示例:"{your sb namespace}。 servicebus.windows.net"</span><span class="sxs-lookup"><span data-stu-id="97005-113">Example: "{your-sb-namespace}.servicebus.windows.net"</span></span>
+        <span data-ttu-id="8c2fd-115">示例:"{your sb namespace}。 servicebus.windows.net"</span><span class="sxs-lookup"><span data-stu-id="8c2fd-115">Example: "{your-sb-namespace}.servicebus.windows.net"</span></span>
     - id: eventHubPath
       type:
       - string
-      description: <span data-ttu-id="97005-114">事件中心的名称。</span><span class="sxs-lookup"><span data-stu-id="97005-114">The name of the EventHub.</span></span>
+      description: <span data-ttu-id="8c2fd-116">事件中心的名称。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-116">The name of the EventHub.</span></span>
     - id: credentials
       type:
       - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
-      description: '<span data-ttu-id="97005-115">AAD 令牌凭据。</span><span class="sxs-lookup"><span data-stu-id="97005-115">The AAD Token credentials.</span></span> <span data-ttu-id="97005-116">它可以是以下之一： ApplicationTokenCredentials |UserTokenCredentials |DeviceTokenCredentials |MSITokenCredentials。</span><span class="sxs-lookup"><span data-stu-id="97005-116">It can be one of the following: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span></span>'
+      description: '<span data-ttu-id="8c2fd-117">AAD 令牌凭据。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-117">The AAD Token credentials.</span></span> <span data-ttu-id="8c2fd-118">它可以是以下之一： ApplicationTokenCredentials |UserTokenCredentials |DeviceTokenCredentials |MSITokenCredentials。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-118">It can be one of the following: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span></span>'
     - id: options
       type:
       - azure-event-processor-host.EventProcessorOptions
@@ -126,7 +126,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="97005-117">创建从事件中心处理事件的新主机。</span><span class="sxs-lookup"><span data-stu-id="97005-117">Creates a new host to process events from an Event Hub.</span></span>
+  summary: <span data-ttu-id="8c2fd-119">创建从事件中心处理事件的新主机。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-119">Creates a new host to process events from an Event Hub.</span></span>
   syntax:
     content: 'static function createFromConnectionString(hostName: string, storageConnectionString: string, eventHubConnectionString: string, options?: ConnectionStringBasedOptions)'
     parameters:
@@ -134,20 +134,20 @@ items:
       type:
       - string
       description: >-
-        <span data-ttu-id="97005-118">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="97005-118">Name of the processor host.</span></span> <span data-ttu-id="97005-119">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="97005-119">MUST BE UNIQUE.</span></span>
+        <span data-ttu-id="8c2fd-120">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-120">Name of the processor host.</span></span> <span data-ttu-id="8c2fd-121">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-121">MUST BE UNIQUE.</span></span>
 
-        <span data-ttu-id="97005-120">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="97005-120">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="97005-121">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="97005-121">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+        <span data-ttu-id="8c2fd-122">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-122">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="8c2fd-123">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-123">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
     - id: storageConnectionString
       type:
       - string
-      description: <span data-ttu-id="97005-122">用于租用和检查点的 Azure 存储帐户的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="97005-122">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="97005-123">示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="97005-123">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
+      description: <span data-ttu-id="8c2fd-124">用于租用和检查点的 Azure 存储帐户的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-124">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="8c2fd-125">示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="8c2fd-125">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
     - id: eventHubConnectionString
       type:
       - string
       description: >-
-        <span data-ttu-id="97005-124">要从接收的事件中心的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="97005-124">Connection string for the Event Hub to receive from.</span></span>
+        <span data-ttu-id="8c2fd-126">要从接收的事件中心的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-126">Connection string for the Event Hub to receive from.</span></span>
 
-        <span data-ttu-id="97005-125">示例: Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = 我-SA 的名称;SharedAccessKey = 我 SA 密钥</span><span class="sxs-lookup"><span data-stu-id="97005-125">Example: 'Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+        <span data-ttu-id="8c2fd-127">示例: Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = 我-SA 的名称;SharedAccessKey = 我 SA 密钥</span><span class="sxs-lookup"><span data-stu-id="8c2fd-127">Example: 'Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
     - id: options
       type:
       - azure-event-processor-host.ConnectionStringBasedOptions
@@ -163,7 +163,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="97005-126">用于生成唯一的主机名称的便捷方法。</span><span class="sxs-lookup"><span data-stu-id="97005-126">Convenience method for generating unique host name.</span></span>
+  summary: <span data-ttu-id="8c2fd-128">用于生成唯一的主机名称的便捷方法。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-128">Convenience method for generating unique host name.</span></span>
   syntax:
     content: 'static function createHostName(prefix?: string)'
     parameters:
@@ -183,7 +183,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: '<span data-ttu-id="97005-127">在给定的接收者上发生错误时，将触发错误:。</span><span class="sxs-lookup"><span data-stu-id="97005-127">Error: Triggered when an error occurs on a given receiver.</span></span> <span data-ttu-id="97005-128">EventHubsError 或一般的错误对象将传递的事件侦听器。</span><span class="sxs-lookup"><span data-stu-id="97005-128">The EventHubsError or a generic Error object is passed the event listener.</span></span>'
+  summary: '<span data-ttu-id="8c2fd-129">在给定的接收者上发生错误时，将触发错误:。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-129">Error: Triggered when an error occurs on a given receiver.</span></span> <span data-ttu-id="8c2fd-130">EventHubsError 或一般的错误对象将传递的事件侦听器。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-130">The EventHubsError or a generic Error object is passed the event listener.</span></span>'
   syntax:
     content: 'static error: string'
     return:
@@ -196,7 +196,7 @@ items:
   type: constructor
   langs:
   - typeScript
-  summary: <span data-ttu-id="97005-129">创建从事件中心处理事件的新主机。</span><span class="sxs-lookup"><span data-stu-id="97005-129">Creates a new host to process events from an Event Hub.</span></span>
+  summary: <span data-ttu-id="8c2fd-131">创建从事件中心处理事件的新主机。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-131">Creates a new host to process events from an Event Hub.</span></span>
   syntax:
     content: 'new EventProcessorHost(hostName: string, storageConnectionString: string, eventHubClient: EventHubClient, options?: EventProcessorOptions)'
     parameters:
@@ -204,17 +204,17 @@ items:
       type:
       - string
       description: >-
-        <span data-ttu-id="97005-130">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="97005-130">Name of the processor host.</span></span> <span data-ttu-id="97005-131">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="97005-131">MUST BE UNIQUE.</span></span>
+        <span data-ttu-id="8c2fd-132">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-132">Name of the processor host.</span></span> <span data-ttu-id="8c2fd-133">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-133">MUST BE UNIQUE.</span></span>
 
-        <span data-ttu-id="97005-132">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="97005-132">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="97005-133">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="97005-133">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+        <span data-ttu-id="8c2fd-134">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-134">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="8c2fd-135">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-135">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
     - id: storageConnectionString
       type:
       - string
-      description: <span data-ttu-id="97005-134">用于租用和检查点的 Azure 存储帐户的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="97005-134">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="97005-135">示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="97005-135">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
+      description: <span data-ttu-id="8c2fd-136">用于租用和检查点的 Azure 存储帐户的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-136">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="8c2fd-137">示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="8c2fd-137">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
     - id: eventHubClient
       type:
       - EventHubClient
-      description: <span data-ttu-id="97005-136">事件中心客户端</span><span class="sxs-lookup"><span data-stu-id="97005-136">The EventHub client</span></span>
+      description: <span data-ttu-id="8c2fd-138">事件中心客户端</span><span class="sxs-lookup"><span data-stu-id="8c2fd-138">The EventHub client</span></span>
     - id: options
       type:
       - azure-event-processor-host.EventProcessorOptions
@@ -227,7 +227,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="97005-137">提供事件中心运行时信息。</span><span class="sxs-lookup"><span data-stu-id="97005-137">Provides the eventhub runtime information.</span></span>
+  summary: <span data-ttu-id="8c2fd-139">提供事件中心运行时信息。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-139">Provides the eventhub runtime information.</span></span>
   syntax:
     content: function getHubRuntimeInformation()
     parameters: []
@@ -241,7 +241,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="97005-138">提供了一系列 partitionIds。</span><span class="sxs-lookup"><span data-stu-id="97005-138">Provides an array of partitionIds.</span></span>
+  summary: <span data-ttu-id="8c2fd-140">提供了一系列 partitionIds。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-140">Provides an array of partitionIds.</span></span>
   syntax:
     content: function getPartitionIds()
     parameters: []
@@ -255,7 +255,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="97005-139">提供有关指定的分区信息。</span><span class="sxs-lookup"><span data-stu-id="97005-139">Provides information about the specified partition.</span></span>
+  summary: <span data-ttu-id="8c2fd-141">提供有关指定的分区信息。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-141">Provides information about the specified partition.</span></span>
   syntax:
     content: 'function getPartitionInformation(partitionId: string | number)'
     parameters:
@@ -263,7 +263,7 @@ items:
       type:
       - string | number
       description: >
-        <span data-ttu-id="97005-140">分区的分区信息是必需的 ID。</span><span class="sxs-lookup"><span data-stu-id="97005-140">Partition ID for which partition information is required.</span></span>
+        <span data-ttu-id="8c2fd-142">分区的分区信息是必需的 ID。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-142">Partition ID for which partition information is required.</span></span>
     return:
       type:
       - Promise<EventHubPartitionRuntimeInformation>
@@ -275,7 +275,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="97005-141">提供事件处理程序主机的主机名。</span><span class="sxs-lookup"><span data-stu-id="97005-141">Provides the host name for the Event processor host.</span></span>
+  summary: <span data-ttu-id="8c2fd-143">提供事件处理程序主机的主机名。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-143">Provides the host name for the Event processor host.</span></span>
   syntax:
     content: 'hostName: string'
     return:
@@ -289,7 +289,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: '<span data-ttu-id="97005-142">每当在给定分区传入的消息，消息： 触发。</span><span class="sxs-lookup"><span data-stu-id="97005-142">Message: Triggered whenever a message comes in on a given partition.</span></span> <span data-ttu-id="97005-143">PartitionContext 和 EventData 将传递到事件侦听器。</span><span class="sxs-lookup"><span data-stu-id="97005-143">The PartitionContext and EventData is passed to the event listener.</span></span>'
+  summary: '<span data-ttu-id="8c2fd-144">每当在给定分区传入的消息，消息： 触发。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-144">Message: Triggered whenever a message comes in on a given partition.</span></span> <span data-ttu-id="8c2fd-145">PartitionContext 和 EventData 将传递到事件侦听器。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-145">The PartitionContext and EventData is passed to the event listener.</span></span>'
   syntax:
     content: 'static message: string'
     return:
@@ -303,7 +303,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: '<span data-ttu-id="97005-144">打开： 触发每当分区获取其租约。</span><span class="sxs-lookup"><span data-stu-id="97005-144">Opened: Triggered whenever a partition obtains its lease.</span></span> <span data-ttu-id="97005-145">PartitionContext 传递给事件侦听器。</span><span class="sxs-lookup"><span data-stu-id="97005-145">The PartitionContext is passed to the event listener.</span></span>'
+  summary: '<span data-ttu-id="8c2fd-146">打开： 触发每当分区获取其租约。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-146">Opened: Triggered whenever a partition obtains its lease.</span></span> <span data-ttu-id="8c2fd-147">PartitionContext 传递给事件侦听器。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-147">The PartitionContext is passed to the event listener.</span></span>'
   syntax:
     content: 'static opened: string'
     return:
@@ -316,7 +316,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="97005-146">启动事件处理程序主机，提取分区的列表、 （可选） 筛选它们，以及尝试获取 （筛选） 集上的租约。</span><span class="sxs-lookup"><span data-stu-id="97005-146">Starts the event processor host, fetching the list of partitions, (optionally) filtering them, and attempting to grab leases on the (filtered) set.</span></span> <span data-ttu-id="97005-147">对于每个成功的租约，将从 blob 获取详细信息并开始接收方在离开的位置之前的点。</span><span class="sxs-lookup"><span data-stu-id="97005-147">For each successful lease, will get the details from the blob and start a receiver at the point where it left off previously.</span></span>
+  summary: <span data-ttu-id="8c2fd-148">启动事件处理程序主机，提取分区的列表、 （可选） 筛选它们，以及尝试获取 （筛选） 集上的租约。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-148">Starts the event processor host, fetching the list of partitions, (optionally) filtering them, and attempting to grab leases on the (filtered) set.</span></span> <span data-ttu-id="8c2fd-149">对于每个成功的租约，将从 blob 获取详细信息并开始接收方在离开的位置之前的点。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-149">For each successful lease, will get the details from the blob and start a receiver at the point where it left off previously.</span></span>
   syntax:
     content: 'function start(options?: StartEPHOptions)'
     parameters:
@@ -335,7 +335,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="97005-148">停止处理消息从 EventProcessorHost。</span><span class="sxs-lookup"><span data-stu-id="97005-148">Stops the EventProcessorHost from processing messages.</span></span>
+  summary: <span data-ttu-id="8c2fd-150">停止处理消息从 EventProcessorHost。</span><span class="sxs-lookup"><span data-stu-id="8c2fd-150">Stops the EventProcessorHost from processing messages.</span></span>
   syntax:
     content: function stop()
     parameters: []

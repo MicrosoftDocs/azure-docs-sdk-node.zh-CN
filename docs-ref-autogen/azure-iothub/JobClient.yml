@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
 ms.openlocfilehash: 7cb17321fac415a5f2a5a07d198cddac0ebcfde8
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40054683"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41685730"
 items:
 - uid: azure-iothub.JobClient
   name: JobClient
@@ -22,11 +22,11 @@ items:
   - typeScript
   type: class
   summary: >
-    <span data-ttu-id="485d7-101">提供方法来创建、 更新、 监视和取消长时间运行的作业，IoT 中心实例，以及查询现有作业。</span><span class="sxs-lookup"><span data-stu-id="485d7-101">Provides methods to create, update, monitor and cancel long-running jobs on an IoT Hub instance, as well as query existing jobs.</span></span>
+    <span data-ttu-id="ef9fd-101">提供方法来创建、 更新、 监视和取消长时间运行的作业，IoT 中心实例，以及查询现有作业。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-101">Provides methods to create, update, monitor and cancel long-running jobs on an IoT Hub instance, as well as query existing jobs.</span></span>
 
-    <span data-ttu-id="485d7-102">Azure IoT 中心中的作业 API 允许计划直接方法调用和多个设备上的克隆更新。</span><span class="sxs-lookup"><span data-stu-id="485d7-102">The Jobs API in Azure IoT Hub allows to schedule direct method calls and twin updates on multiple devices.</span></span>
+    <span data-ttu-id="ef9fd-102">Azure IoT 中心中的作业 API 允许计划直接方法调用和多个设备上的克隆更新。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-102">The Jobs API in Azure IoT Hub allows to schedule direct method calls and twin updates on multiple devices.</span></span>
 
-    <span data-ttu-id="485d7-103">SDK 用户应创建<xref:azure-iothub.JobClient>实例的工厂方法<xref:azure-iothub.JobClient.fromConnectionString>和<xref:azure-iothub.JobClient.fromSharedAccessSignature>。</span><span class="sxs-lookup"><span data-stu-id="485d7-103">SDK users are expected to create <xref:azure-iothub.JobClient> instances using the factory methods <xref:azure-iothub.JobClient.fromConnectionString> and <xref:azure-iothub.JobClient.fromSharedAccessSignature>.</span></span>
+    <span data-ttu-id="ef9fd-103">SDK 用户应创建<xref:azure-iothub.JobClient>实例的工厂方法<xref:azure-iothub.JobClient.fromConnectionString>和<xref:azure-iothub.JobClient.fromSharedAccessSignature>。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-103">SDK users are expected to create <xref:azure-iothub.JobClient> instances using the factory methods <xref:azure-iothub.JobClient.fromConnectionString> and <xref:azure-iothub.JobClient.fromSharedAccessSignature>.</span></span>
   package: azure-iothub
 - uid: azure-iothub.JobClient.cancelJob
   name: cancelJob
@@ -34,19 +34,19 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="485d7-104">取消现有作业。</span><span class="sxs-lookup"><span data-stu-id="485d7-104">Cancels an existing job.</span></span>
+  summary: <span data-ttu-id="ef9fd-104">取消现有作业。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-104">Cancels an existing job.</span></span>
   syntax:
     content: 'function cancelJob(jobId: string | number, done: JobClient.JobCallback)'
     parameters:
     - id: jobId
       type:
       - string | number
-      description: <span data-ttu-id="485d7-105">现有的作业的标识符。</span><span class="sxs-lookup"><span data-stu-id="485d7-105">The identifier of an existing job.</span></span>
+      description: <span data-ttu-id="ef9fd-105">现有的作业的标识符。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-105">The identifier of an existing job.</span></span>
     - id: done
       type:
       - azure-iothub.JobClient.JobCallback
       description: >
-        <span data-ttu-id="485d7-106">要完成该操作时调用的函数。</span><span class="sxs-lookup"><span data-stu-id="485d7-106">The function to call when the operation is complete.</span></span> <span data-ttu-id="485d7-107">`done` 调用时将使用三个参数： 错误对象 （可以为 null）、 一个作业对象和特定于传输的响应对象用于日志记录或调试很有用。</span><span class="sxs-lookup"><span data-stu-id="485d7-107">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
+        <span data-ttu-id="ef9fd-106">要完成该操作时调用的函数。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-106">The function to call when the operation is complete.</span></span> <span data-ttu-id="ef9fd-107">`done` 调用时将使用三个参数： 错误对象 （可以为 null）、 一个作业对象和特定于传输的响应对象用于日志记录或调试很有用。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-107">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
   package: azure-iothub
 - uid: azure-iothub.JobClient.createQuery
   name: createQuery
@@ -54,25 +54,25 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="485d7-108">创建可用于将现有作业根据类型和状态的页返回的查询。</span><span class="sxs-lookup"><span data-stu-id="485d7-108">Creates a query that can be used to return pages of existing job based on type and status.</span></span>
+  summary: <span data-ttu-id="ef9fd-108">创建可用于将现有作业根据类型和状态的页返回的查询。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-108">Creates a query that can be used to return pages of existing job based on type and status.</span></span>
   syntax:
     content: 'function createQuery(jobType?: JobType, jobStatus?: JobStatus, pageSize?: number)'
     parameters:
     - id: jobType
       type:
       - azure-iothub.JobType
-      description: <span data-ttu-id="485d7-109">应使用以筛选结果的类型。</span><span class="sxs-lookup"><span data-stu-id="485d7-109">The type that should be used to filter results.</span></span>
+      description: <span data-ttu-id="ef9fd-109">应使用以筛选结果的类型。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-109">The type that should be used to filter results.</span></span>
       optional: true
     - id: jobStatus
       type:
       - azure-iothub.JobStatus
-      description: <span data-ttu-id="485d7-110">应该用于筛选结果状态。</span><span class="sxs-lookup"><span data-stu-id="485d7-110">The status that should be used to filter results.</span></span>
+      description: <span data-ttu-id="ef9fd-110">应该用于筛选结果状态。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-110">The status that should be used to filter results.</span></span>
       optional: true
     - id: pageSize
       type:
       - number
       description: >
-        <span data-ttu-id="485d7-111">要每页返回的元素数。</span><span class="sxs-lookup"><span data-stu-id="485d7-111">The number of elements to return per page.</span></span>
+        <span data-ttu-id="ef9fd-111">要每页返回的元素数。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-111">The number of elements to return per page.</span></span>
       optional: true
     return:
       type:
@@ -84,7 +84,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="485d7-112">构造一个 JobClient 对象从给定的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="485d7-112">Constructs a JobClient object from the given connection string.</span></span>
+  summary: <span data-ttu-id="ef9fd-112">构造一个 JobClient 对象从给定的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-112">Constructs a JobClient object from the given connection string.</span></span>
   syntax:
     content: 'static function fromConnectionString(connectionString: string)'
     parameters:
@@ -92,7 +92,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="485d7-113">连接字符串 （读取和/或写入） 封装的相应注册表权限。</span><span class="sxs-lookup"><span data-stu-id="485d7-113">A connection string which encapsulates the appropriate (read and/or write) Registry permissions.</span></span>
+        <span data-ttu-id="ef9fd-113">连接字符串 （读取和/或写入） 封装的相应注册表权限。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-113">A connection string which encapsulates the appropriate (read and/or write) Registry permissions.</span></span>
     return:
       type:
       - azure-iothub.JobClient
@@ -103,7 +103,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="485d7-114">构造一个 JobClient 对象从给定的共享的访问签名。</span><span class="sxs-lookup"><span data-stu-id="485d7-114">Constructs a JobClient object from the given shared access signature.</span></span>
+  summary: <span data-ttu-id="ef9fd-114">构造一个 JobClient 对象从给定的共享的访问签名。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-114">Constructs a JobClient object from the given shared access signature.</span></span>
   syntax:
     content: 'static function fromSharedAccessSignature(sharedAccessSignature: string)'
     parameters:
@@ -111,7 +111,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="485d7-115">共享的访问签名 （读取和/或写入） 封装的相应注册表权限。</span><span class="sxs-lookup"><span data-stu-id="485d7-115">A shared access signature which encapsulates the appropriate (read and/or write) Registry permissions.</span></span>
+        <span data-ttu-id="ef9fd-115">共享的访问签名 （读取和/或写入） 封装的相应注册表权限。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-115">A shared access signature which encapsulates the appropriate (read and/or write) Registry permissions.</span></span>
     return:
       type:
       - azure-iothub.JobClient
@@ -122,19 +122,19 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="485d7-116">有关现有作业的请求信息。</span><span class="sxs-lookup"><span data-stu-id="485d7-116">Requests information about an existing job.</span></span>
+  summary: <span data-ttu-id="ef9fd-116">有关现有作业的请求信息。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-116">Requests information about an existing job.</span></span>
   syntax:
     content: 'function getJob(jobId: string | number, done: JobClient.JobCallback)'
     parameters:
     - id: jobId
       type:
       - string | number
-      description: <span data-ttu-id="485d7-117">现有的作业的标识符。</span><span class="sxs-lookup"><span data-stu-id="485d7-117">The identifier of an existing job.</span></span>
+      description: <span data-ttu-id="ef9fd-117">现有的作业的标识符。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-117">The identifier of an existing job.</span></span>
     - id: done
       type:
       - azure-iothub.JobClient.JobCallback
       description: >
-        <span data-ttu-id="485d7-118">要完成该操作时调用的函数。</span><span class="sxs-lookup"><span data-stu-id="485d7-118">The function to call when the operation is complete.</span></span> <span data-ttu-id="485d7-119">`done` 调用时将使用三个参数： 错误对象 （可以为 null）、 一个作业对象和特定于传输的响应对象用于日志记录或调试很有用。</span><span class="sxs-lookup"><span data-stu-id="485d7-119">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
+        <span data-ttu-id="ef9fd-118">要完成该操作时调用的函数。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-118">The function to call when the operation is complete.</span></span> <span data-ttu-id="ef9fd-119">`done` 调用时将使用三个参数： 错误对象 （可以为 null）、 一个作业对象和特定于传输的响应对象用于日志记录或调试很有用。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-119">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
   package: azure-iothub
 - uid: azure-iothub.JobClient.JobCallback
   name: JobCallback
@@ -151,42 +151,42 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="485d7-120">计划的作业，将在一组设备上执行的设备方法。</span><span class="sxs-lookup"><span data-stu-id="485d7-120">Schedules a job that will execute a device method on a set of devices.</span></span>
+  summary: <span data-ttu-id="ef9fd-120">计划的作业，将在一组设备上执行的设备方法。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-120">Schedules a job that will execute a device method on a set of devices.</span></span>
   syntax:
     content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime?: Date | JobClient.JobCallback, maxExecutionTimeInSeconds?: number | JobClient.JobCallback, done?: JobClient.JobCallback)'
     parameters:
     - id: jobId
       type:
       - string | number
-      description: <span data-ttu-id="485d7-121">应使用此作业的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="485d7-121">The unique identifier that should be used for this job.</span></span>
+      description: <span data-ttu-id="ef9fd-121">应使用此作业的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-121">The unique identifier that should be used for this job.</span></span>
     - id: queryCondition
       type:
       - string
-      description: <span data-ttu-id="485d7-122">SQL 查询 WHERE 子句用于计算的设备在其运行该作业的列表。</span><span class="sxs-lookup"><span data-stu-id="485d7-122">A SQL query WHERE clause used to compute the list of devices on which this job should be run.</span></span>
+      description: <span data-ttu-id="ef9fd-122">SQL 查询 WHERE 子句用于计算的设备在其运行该作业的列表。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-122">A SQL query WHERE clause used to compute the list of devices on which this job should be run.</span></span>
     - id: methodParams
       type:
       - azure-iothub.DeviceMethodParams
       description: >-
-        <span data-ttu-id="485d7-123">描述该方法的对象，并且应具有以下属性:-m h o d 应调用的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="485d7-123">An object describing the method and shall have the following properties: - methodName          The name of the method that shall be invoked.</span></span>
+        <span data-ttu-id="ef9fd-123">描述该方法的对象，并且应具有以下属性:-m h o d 应调用的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-123">An object describing the method and shall have the following properties: - methodName          The name of the method that shall be invoked.</span></span>
 
-        <span data-ttu-id="485d7-124">-[可选] 的有效负载的有效负载使用方法调用。</span><span class="sxs-lookup"><span data-stu-id="485d7-124">- payload             [optional] The payload to use for the method call.</span></span>
+        <span data-ttu-id="ef9fd-124">-[可选] 的有效负载的有效负载使用方法调用。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-124">- payload             [optional] The payload to use for the method call.</span></span>
 
-        <span data-ttu-id="485d7-125">-[可选] responseTimeoutInSeconds IoT 中心的设备应等待的秒数</span><span class="sxs-lookup"><span data-stu-id="485d7-125">- responseTimeoutInSeconds [optional] The number of seconds IoT Hub shall wait for the device</span></span>
+        <span data-ttu-id="ef9fd-125">-[可选] responseTimeoutInSeconds IoT 中心的设备应等待的秒数</span><span class="sxs-lookup"><span data-stu-id="ef9fd-125">- responseTimeoutInSeconds [optional] The number of seconds IoT Hub shall wait for the device</span></span>
     - id: jobStartTime
       type:
       - Date | azure-iothub.JobClient.JobCallback
-      description: <span data-ttu-id="485d7-126">作业的开始时间时</span><span class="sxs-lookup"><span data-stu-id="485d7-126">Time time at which the job should start</span></span>
+      description: <span data-ttu-id="ef9fd-126">作业的开始时间时</span><span class="sxs-lookup"><span data-stu-id="ef9fd-126">Time time at which the job should start</span></span>
       optional: true
     - id: maxExecutionTimeInSeconds
       type:
       - number | azure-iothub.JobClient.JobCallback
-      description: <span data-ttu-id="485d7-127">在数秒内运行此作业的最长时间分配。</span><span class="sxs-lookup"><span data-stu-id="485d7-127">The maximum time alloted for this job to run in seconds.</span></span>
+      description: <span data-ttu-id="ef9fd-127">在数秒内运行此作业的最长时间分配。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-127">The maximum time alloted for this job to run in seconds.</span></span>
       optional: true
     - id: done
       type:
       - azure-iothub.JobClient.JobCallback
       description: >
-        <span data-ttu-id="485d7-128">要完成该操作时调用的函数。</span><span class="sxs-lookup"><span data-stu-id="485d7-128">The function to call when the operation is complete.</span></span> <span data-ttu-id="485d7-129">`done` 调用时将使用三个参数： 错误对象 （可以为 null）、 一个作业对象和特定于传输的响应对象用于日志记录或调试很有用。</span><span class="sxs-lookup"><span data-stu-id="485d7-129">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
+        <span data-ttu-id="ef9fd-128">要完成该操作时调用的函数。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-128">The function to call when the operation is complete.</span></span> <span data-ttu-id="ef9fd-129">`done` 调用时将使用三个参数： 错误对象 （可以为 null）、 一个作业对象和特定于传输的响应对象用于日志记录或调试很有用。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-129">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
       optional: true
   package: azure-iothub
 - uid: azure-iothub.JobClient.scheduleTwinUpdate
@@ -195,37 +195,37 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="485d7-130">计划的作业，将使用作为参数提供的修补程序更新孪生的一组。</span><span class="sxs-lookup"><span data-stu-id="485d7-130">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  summary: <span data-ttu-id="ef9fd-130">计划的作业，将使用作为参数提供的修补程序更新孪生的一组。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-130">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
   syntax:
     content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime?: Date | JobClient.JobCallback, maxExecutionTimeInSeconds?: number | JobClient.JobCallback, done?: JobClient.JobCallback)'
     parameters:
     - id: jobId
       type:
       - string | number
-      description: <span data-ttu-id="485d7-131">应使用此作业的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="485d7-131">The unique identifier that should be used for this job.</span></span>
+      description: <span data-ttu-id="ef9fd-131">应使用此作业的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-131">The unique identifier that should be used for this job.</span></span>
     - id: queryCondition
       type:
       - string
-      description: <span data-ttu-id="485d7-132">SQL 查询 WHERE 子句用于计算的设备在其运行该作业的列表。</span><span class="sxs-lookup"><span data-stu-id="485d7-132">A SQL query WHERE clause used to compute the list of devices on which this job should be run.</span></span>
+      description: <span data-ttu-id="ef9fd-132">SQL 查询 WHERE 子句用于计算的设备在其运行该作业的列表。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-132">A SQL query WHERE clause used to compute the list of devices on which this job should be run.</span></span>
     - id: patch
       type:
       - any
-      description: <span data-ttu-id="485d7-133">应将应用到孪生孪生修补程序。</span><span class="sxs-lookup"><span data-stu-id="485d7-133">The twin patch that should be applied to the twins.</span></span>
+      description: <span data-ttu-id="ef9fd-133">应将应用到孪生孪生修补程序。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-133">The twin patch that should be applied to the twins.</span></span>
     - id: jobStartTime
       type:
       - Date | azure-iothub.JobClient.JobCallback
-      description: <span data-ttu-id="485d7-134">作业的开始时间时</span><span class="sxs-lookup"><span data-stu-id="485d7-134">Time time at which the job should start</span></span>
+      description: <span data-ttu-id="ef9fd-134">作业的开始时间时</span><span class="sxs-lookup"><span data-stu-id="ef9fd-134">Time time at which the job should start</span></span>
       optional: true
     - id: maxExecutionTimeInSeconds
       type:
       - number | azure-iothub.JobClient.JobCallback
-      description: <span data-ttu-id="485d7-135">在数秒内运行此作业的最长时间分配。</span><span class="sxs-lookup"><span data-stu-id="485d7-135">The maximum time alloted for this job to run in seconds.</span></span>
+      description: <span data-ttu-id="ef9fd-135">在数秒内运行此作业的最长时间分配。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-135">The maximum time alloted for this job to run in seconds.</span></span>
       optional: true
     - id: done
       type:
       - azure-iothub.JobClient.JobCallback
       description: >
-        <span data-ttu-id="485d7-136">要完成该操作时调用的函数。</span><span class="sxs-lookup"><span data-stu-id="485d7-136">The function to call when the operation is complete.</span></span> <span data-ttu-id="485d7-137">`done` 调用时将使用三个参数： 错误对象 （可以为 null）、 一个作业对象和特定于传输的响应对象用于日志记录或调试很有用。</span><span class="sxs-lookup"><span data-stu-id="485d7-137">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
+        <span data-ttu-id="ef9fd-136">要完成该操作时调用的函数。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-136">The function to call when the operation is complete.</span></span> <span data-ttu-id="ef9fd-137">`done` 调用时将使用三个参数： 错误对象 （可以为 null）、 一个作业对象和特定于传输的响应对象用于日志记录或调试很有用。</span><span class="sxs-lookup"><span data-stu-id="ef9fd-137">`done` will be called with three arguments: an Error object (can be null), a job object, and a transport-specific response object useful for logging or debugging.</span></span>
       optional: true
   package: azure-iothub
 references:

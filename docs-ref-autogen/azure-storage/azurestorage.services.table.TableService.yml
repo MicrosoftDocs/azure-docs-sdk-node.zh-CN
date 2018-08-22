@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 1bf8678ca5a50438e997556ac0a1c023b91d75d1
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 7c456a5f550ea6d186446017dd9da1c7e295a888
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40050047"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41689216"
 items:
 - uid: azure-storage.azurestorage.services.table.TableService
   name: TableService
@@ -1292,7 +1292,7 @@ items:
   - typeScript
   summary: 更新表的 ACL。
   syntax:
-    content: 'function setTableAcl(table: string, signedIdentifiers: function, callback: ErrorOrResult<function>)'
+    content: 'function setTableAcl(table: string, signedIdentifiers: [key: string]: AccessPolicy, callback: ErrorOrResult<Object>)'
     parameters:
     - id: table
       type:
@@ -1300,11 +1300,11 @@ items:
       description: 表名称。
     - id: signedIdentifiers
       type:
-      - function
+      - '[key: string]: azure-storage.azurestorage.common.AccessPolicy'
       description: 已签名的标识符。 已签名的标识符必须是数组中。
     - id: callback
       type:
-      - azure-storage.azurestorage.ErrorOrResult<function>
+      - azure-storage.azurestorage.ErrorOrResult<Object>
       description: >
         `error` 如果出现错误; 将包含的信息否则为`result`将包含表的信息。
                                                                                  `response` 将包含与此操作相关的信息。
@@ -1317,7 +1317,7 @@ items:
   - typeScript
   summary: 更新表的 ACL。
   syntax:
-    content: 'function setTableAcl(table: string, signedIdentifiers: function, options: RequestOptions, callback: ErrorOrResult<function>)'
+    content: 'function setTableAcl(table: string, signedIdentifiers: [key: string]: AccessPolicy, options: RequestOptions, callback: ErrorOrResult<Object>)'
     parameters:
     - id: table
       type:
@@ -1325,7 +1325,7 @@ items:
       description: 表名称。
     - id: signedIdentifiers
       type:
-      - function
+      - '[key: string]: azure-storage.azurestorage.common.AccessPolicy'
       description: 已签名的标识符。 已签名的标识符必须是数组中。
     - id: options
       type:
@@ -1333,7 +1333,7 @@ items:
       description: ''
     - id: callback
       type:
-      - azure-storage.azurestorage.ErrorOrResult<function>
+      - azure-storage.azurestorage.ErrorOrResult<Object>
       description: >
         `error` 如果出现错误; 将包含的信息否则为`result`将包含表的信息。
                                                                                  `response` 将包含与此操作相关的信息。
@@ -1506,6 +1506,13 @@ references:
   - name: ContainerResult
     fullName: ContainerResult
     uid: azure-storage.azurestorage.services.blob.blobservice.BlobService.ContainerResult
+- uid: '[key: string]: azure-storage.azurestorage.common.AccessPolicy'
+  spec.typeScript:
+  - name: '[key: string]: '
+    fullName: '[key: string]: '
+  - name: AccessPolicy
+    fullName: AccessPolicy
+    uid: azure-storage.azurestorage.common.AccessPolicy
 - uid: azure-storage.azurestorage.services.blob.blobservice.BlobService.BlobRequestOptions
   spec.typeScript:
   - name: BlobRequestOptions
@@ -2239,13 +2246,13 @@ references:
     uid: azure-storage.azurestorage.ErrorOrResult
   - name: <T>
     fullName: <T>
-- uid: azure-storage.azurestorage.ErrorOrResult<function>
+- uid: azure-storage.azurestorage.ErrorOrResult<Object>
   spec.typeScript:
   - name: ErrorOrResult
     fullName: ErrorOrResult
     uid: azure-storage.azurestorage.ErrorOrResult
-  - name: <function>
-    fullName: <function>
+  - name: <Object>
+    fullName: <Object>
 - uid: azure-storage.azurestorage.services.table.TableService
   spec.typeScript:
   - name: TableService

@@ -12,36 +12,36 @@ ms.devlang: nodejs
 ms.service: cognitive-services
 ms.component: speech-service
 ms.openlocfilehash: 69167faa5b2677fc15561ed33beccf7925efbe39
-ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.sourcegitcommit: 0d439a88f38a085e2be0616c8bdb0ffcca2e54ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48458645"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49027431"
 ---
-# <a name="cognitive-services-speech-sdk-for-javascript"></a><span data-ttu-id="c08f0-103">用于 JavaScript 的认知服务语音 SDK</span><span class="sxs-lookup"><span data-stu-id="c08f0-103">Cognitive Services Speech SDK for JavaScript</span></span>
+# <a name="cognitive-services-speech-sdk-for-javascript"></a><span data-ttu-id="e4377-103">用于 JavaScript 的认知服务语音 SDK</span><span class="sxs-lookup"><span data-stu-id="e4377-103">Cognitive Services Speech SDK for JavaScript</span></span>
 
-## <a name="overview"></a><span data-ttu-id="c08f0-104">概述</span><span class="sxs-lookup"><span data-stu-id="c08f0-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="e4377-104">概述</span><span class="sxs-lookup"><span data-stu-id="e4377-104">Overview</span></span>
 
-<span data-ttu-id="c08f0-105">为了简化支持语音的应用程序的开发，Microsoft 提供了可以与[语音服务](https://aka.ms/csspeech)配合使用的语音 SDK。</span><span class="sxs-lookup"><span data-stu-id="c08f0-105">To simplify the development of speech-enabled applications, Microsoft provides the Speech SDK for use with the [Speech service](https://aka.ms/csspeech).</span></span>
-<span data-ttu-id="c08f0-106">语音 SDK 提供一致的本机语音转文本和语音翻译 API。</span><span class="sxs-lookup"><span data-stu-id="c08f0-106">The Speech SDK provides consistent native Speech-to-Text and Speech Translation APIs.</span></span>
+<span data-ttu-id="e4377-105">为了简化支持语音的应用程序的开发，Microsoft 提供了可以与[语音服务](https://aka.ms/csspeech)配合使用的语音 SDK。</span><span class="sxs-lookup"><span data-stu-id="e4377-105">To simplify the development of speech-enabled applications, Microsoft provides the Speech SDK for use with the [Speech service](https://aka.ms/csspeech).</span></span>
+<span data-ttu-id="e4377-106">语音 SDK 提供一致的本机语音转文本和语音翻译 API。</span><span class="sxs-lookup"><span data-stu-id="e4377-106">The Speech SDK provides consistent native Speech-to-Text and Speech Translation APIs.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c08f0-107">认知服务语音 SDK 目前仅适用于浏览器。</span><span class="sxs-lookup"><span data-stu-id="c08f0-107">The Cognitive Services Speech SDK is currently available only for browsers.</span></span>
-> <span data-ttu-id="c08f0-108">很快会推出 NPM 包。</span><span class="sxs-lookup"><span data-stu-id="c08f0-108">An NPM package will follow soon.</span></span>
+> <span data-ttu-id="e4377-107">认知服务语音 SDK 目前仅适用于浏览器。</span><span class="sxs-lookup"><span data-stu-id="e4377-107">The Cognitive Services Speech SDK is currently available only for browsers.</span></span>
+> <span data-ttu-id="e4377-108">很快会推出 NPM 包。</span><span class="sxs-lookup"><span data-stu-id="e4377-108">An NPM package will follow soon.</span></span>
 
-### <a name="install-the-speech-sdk"></a><span data-ttu-id="c08f0-109">安装语音 SDK</span><span class="sxs-lookup"><span data-stu-id="c08f0-109">Install the Speech SDK</span></span>
+### <a name="install-the-speech-sdk"></a><span data-ttu-id="e4377-109">安装语音 SDK</span><span class="sxs-lookup"><span data-stu-id="e4377-109">Install the Speech SDK</span></span>
 
-<span data-ttu-id="c08f0-110">下载 [.zip 包](https://aka.ms/csspeech/jsbrowserpackage)形式的语音 SDK，然后将其解压缩。</span><span class="sxs-lookup"><span data-stu-id="c08f0-110">Download the Speech SDK as a [.zip package](https://aka.ms/csspeech/jsbrowserpackage) and unpack it.</span></span>
-<span data-ttu-id="c08f0-111">这样会将多个文件解压缩，包括名为 `microsoft.cognitiveservices.speech.sdk.bundle.js` 的文件。</span><span class="sxs-lookup"><span data-stu-id="c08f0-111">This should result in a number of files being unpacked including a file named `microsoft.cognitiveservices.speech.sdk.bundle.js`.</span></span>
-<span data-ttu-id="c08f0-112">在网页中以脚本资源形式加载此文件，然后即可使用语音 SDK：</span><span class="sxs-lookup"><span data-stu-id="c08f0-112">Load this file as a script resource in your web page to start using the Speech SDK:</span></span>
+<span data-ttu-id="e4377-110">下载 [.zip 包](https://aka.ms/csspeech/jsbrowserpackage)形式的语音 SDK，然后将其解压缩。</span><span class="sxs-lookup"><span data-stu-id="e4377-110">Download the Speech SDK as a [.zip package](https://aka.ms/csspeech/jsbrowserpackage) and unpack it.</span></span>
+<span data-ttu-id="e4377-111">这样会将多个文件解压缩，包括名为 `microsoft.cognitiveservices.speech.sdk.bundle.js` 的文件。</span><span class="sxs-lookup"><span data-stu-id="e4377-111">This should result in a number of files being unpacked including a file named `microsoft.cognitiveservices.speech.sdk.bundle.js`.</span></span>
+<span data-ttu-id="e4377-112">在网页中以脚本资源形式加载此文件，然后即可使用语音 SDK：</span><span class="sxs-lookup"><span data-stu-id="e4377-112">Load this file as a script resource in your web page to start using the Speech SDK:</span></span>
 
 ```html
 <script src="microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
 ```
 
-### <a name="example"></a><span data-ttu-id="c08f0-113">示例</span><span class="sxs-lookup"><span data-stu-id="c08f0-113">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="e4377-113">示例</span><span class="sxs-lookup"><span data-stu-id="e4377-113">Example</span></span> 
 
-<span data-ttu-id="c08f0-114">以下代码片段演示如何在浏览器中进行简单的语音识别：</span><span class="sxs-lookup"><span data-stu-id="c08f0-114">The following code snippets illustrates how to do simple speech recognition from your browser:</span></span>
+<span data-ttu-id="e4377-114">以下代码片段演示如何在浏览器中进行简单的语音识别：</span><span class="sxs-lookup"><span data-stu-id="e4377-114">The following code snippets illustrates how to do simple speech recognition from your browser:</span></span>
 
 ```javascript 
 var SpeechSDK = window.SpeechSDK;
@@ -62,8 +62,8 @@ recognizer.recognizeOnceAsync(
 );
 ``` 
 
-<span data-ttu-id="c08f0-115">查看[分步快速入门](/azure/cognitive-services/speech-service/quickstart-js-browser)。</span><span class="sxs-lookup"><span data-stu-id="c08f0-115">Check out our [step-by-step quickstart](/azure/cognitive-services/speech-service/quickstart-js-browser).</span></span>
+<span data-ttu-id="e4377-115">查看[分步快速入门](/azure/cognitive-services/speech-service/quickstart-js-browser)。</span><span class="sxs-lookup"><span data-stu-id="e4377-115">Check out our [step-by-step quickstart](/azure/cognitive-services/speech-service/quickstart-js-browser).</span></span>
 
-## <a name="samples"></a><span data-ttu-id="c08f0-116">示例</span><span class="sxs-lookup"><span data-stu-id="c08f0-116">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="e4377-116">示例</span><span class="sxs-lookup"><span data-stu-id="e4377-116">Samples</span></span>
 
-<span data-ttu-id="c08f0-117">浏览[语音 SDK 示例存储库](https://aka.ms/csspeech/samples)中的更多示例。</span><span class="sxs-lookup"><span data-stu-id="c08f0-117">Explore more samples in our [Speech SDK sample repository](https://aka.ms/csspeech/samples).</span></span>
+<span data-ttu-id="e4377-117">浏览[语音 SDK 示例存储库](https://aka.ms/csspeech/samples)中的更多示例。</span><span class="sxs-lookup"><span data-stu-id="e4377-117">Explore more samples in our [Speech SDK sample repository](https://aka.ms/csspeech/samples).</span></span>

@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Analytics
-ms.openlocfilehash: 28dae604ae9977eb33470757e207ac12a592c676
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 97a846d9970310931e05e681b23b5787c97260b6
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2018
-ms.locfileid: "28116962"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49797452"
 ---
 # <a name="azure-data-lake-analytics-modules-for-nodejs"></a>用于 Node.js 的 Azure Data Lake Analytics 模块
 

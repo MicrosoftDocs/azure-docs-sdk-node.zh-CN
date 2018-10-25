@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Media Services
-ms.openlocfilehash: e8b2b4b994c25fadda7a37d05a12778d8c9970d8
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: bfd4402c215a81c9ed8753cfe9ad9dbfaa52bd6f
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34261989"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49795042"
 ---
 # <a name="azure-media-services-modules-for-nodejs"></a>用于 Node.js 的 Azure 媒体服务模块
 

@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Resources
-ms.openlocfilehash: 9c5eb1c2f8241d50bd459cda25216b4ed12535ce
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: ac82356f0f9f566e29cb2c89181a0cedf2f62f87
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34261646"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49748252"
 ---
 # <a name="azure-resource-modules-for-nodejs"></a>用于 Node.js 的 Azure 资源模块
 
@@ -33,8 +33,8 @@ ms.locfileid: "34261646"
 npm install azure-arm-resource
 ```
 
-##<a name="example"></a>示例
+## <a name="example"></a>示例
 
-##<a name="samples"></a>示例
+## <a name="samples"></a>示例
 
 详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。

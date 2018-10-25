@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Container Registry
-ms.openlocfilehash: ca83b97e94312498f4f93c587cf0c90485136841
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: f24fa268f9c471925a1bdf0cbae8044d97bc7679
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259936"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49728374"
 ---
 # <a name="azure-container-registry-modules-for-nodejs"></a>用于 Node.js 的 Azure 容器注册表模块
 

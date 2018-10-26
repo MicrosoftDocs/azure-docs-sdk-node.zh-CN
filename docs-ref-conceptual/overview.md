@@ -1,6 +1,6 @@
 ---
-title: 用于 Node.js 的 Azure 模块
-description: 用于 Node.js 的 Azure 管理和服务模块概述
+title: 用于 JavaScript 的 Azure 模块
+description: 用于 JavaScript 的 Azure 管理和服务模块概述
 author: rloutlaw
 ms.author: routlaw
 manager: routlaw
@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 165e1580e408b71b6147e51c41e22bc8fe7277a1
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 1d97df65f12c465cf6c790d1e3c016a9ff4aa5ba
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220529"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49672992"
 ---
-# <a name="azure-modules-for-nodejs"></a>用于 Node.js 的 Azure 模块
+# <a name="azure-modules-for-javascript"></a>用于 JavaScript 的 Azure 模块
 
-使用用于 Node.js 的 Azure 模块，通过 Node.js 应用程序管理 Azure 资源和连接到服务。 代码以 [npm 模块](node-sdk-azure-install.md)的形式提供，方便在项目中使用。 
+使用用于 JavaScript 的 Azure 模块，通过 JavaScript 应用程序管理 Azure 资源并连接到服务。 代码以 [npm 模块](node-sdk-azure-install.md)的形式提供，方便在项目中使用。 
 
 ## <a name="manage-azure-resources"></a>管理 Azure 资源
 
@@ -85,7 +85,7 @@ msRestAzure.loginWithServicePrincipalSecret(clientId, secret, domain, function (
 
 ## <a name="connect-to-azure-services"></a>连接到 Azure 服务
 
-除了使用 Azure 模块在 Azure 中创建和管理资源以外，还可以通过包在应用中连接和使用 Azure 云服务。 例如，可以更新表 SQL 数据库或者将文件上传到 Azure 存储。 从[完整列表](node-sdk-azure-install.md)中选择特定服务所需的包，并访问 [Node.js 开发人员中心](https://azure.microsoft.com/develop/nodejs/)获取教程和示例代码，了解如何在应用中使用这些模块。
+除了使用 Azure 模块在 Azure 中创建和管理资源以外，还可以通过包在应用中连接和使用 Azure 云服务。 例如，可以更新表 SQL 数据库或者将文件上传到 Azure 存储。 从[完整列表](node-sdk-azure-install.md)中选择特定服务所需的包，并访问 [JavaScript 开发人员中心](https://azure.microsoft.com/develop/nodejs/)获取教程和示例代码，了解如何在应用中使用这些模块。
 
 例如，若要输出 Azure 存储容器中每个 Blob 的内容：
 

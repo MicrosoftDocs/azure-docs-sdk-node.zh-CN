@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Notification Hubs
 ms.openlocfilehash: 18eae632b41b71bc64b052852b677507da2678e9
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49720682"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50287880"
 ---
 # <a name="azure-notification-hubs-modules-for-nodejs"></a>用于 Node.js 的 Azure 通知中心模块
 

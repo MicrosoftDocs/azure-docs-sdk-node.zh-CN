@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: PowerBI Embedded
 ms.openlocfilehash: 58251dd1cd3a672a5167193f74d311952d70e84e
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49656254"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50405753"
 ---
 # <a name="azure-powerbi-embedded-modules-for-nodejs"></a>用于 Node.js 的 Azure PowerBI Embedded 模块
 

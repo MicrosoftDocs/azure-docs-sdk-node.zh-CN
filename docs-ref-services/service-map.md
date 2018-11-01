@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Map
 ms.openlocfilehash: 494d948896d65dd67b06f455386f500346862beb
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49761892"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50330015"
 ---
-# <a name="azure-service-map-modules-for-nodejs"></a><span data-ttu-id="09a64-103">用于 Node.js 的 Azure 服务映射模块</span><span class="sxs-lookup"><span data-stu-id="09a64-103">Azure Service Map modules for Node.js</span></span>
+# <a name="azure-service-map-modules-for-nodejs"></a><span data-ttu-id="38b21-103">用于 Node.js 的 Azure 服务映射模块</span><span class="sxs-lookup"><span data-stu-id="38b21-103">Azure Service Map modules for Node.js</span></span>
 
-<span data-ttu-id="09a64-104">服务映射自动发现 Windows 和 Linux 系统上的应用程序组件并映射服务之间的通信。</span><span class="sxs-lookup"><span data-stu-id="09a64-104">Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services.</span></span> <span data-ttu-id="09a64-105">服务映射显示 TCP 连接的任何体系结构中服务器、进程和端口之间的连接，只需安装代理，无需任何其他配置。</span><span class="sxs-lookup"><span data-stu-id="09a64-105">Service Map shows connections between servers, processes, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.</span></span>
+<span data-ttu-id="38b21-104">服务映射自动发现 Windows 和 Linux 系统上的应用程序组件并映射服务之间的通信。</span><span class="sxs-lookup"><span data-stu-id="38b21-104">Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services.</span></span> <span data-ttu-id="38b21-105">服务映射显示 TCP 连接的任何体系结构中服务器、进程和端口之间的连接，只需安装代理，无需任何其他配置。</span><span class="sxs-lookup"><span data-stu-id="38b21-105">Service Map shows connections between servers, processes, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.</span></span>
 
-<span data-ttu-id="09a64-106">详细了解 [Azure 服务映射](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map)。</span><span class="sxs-lookup"><span data-stu-id="09a64-106">Learn more about [Azure Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map).</span></span>
+<span data-ttu-id="38b21-106">详细了解 [Azure 服务映射](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map)。</span><span class="sxs-lookup"><span data-stu-id="38b21-106">Learn more about [Azure Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="09a64-107">管理包</span><span class="sxs-lookup"><span data-stu-id="09a64-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="38b21-107">管理包</span><span class="sxs-lookup"><span data-stu-id="38b21-107">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="09a64-108">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="09a64-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="38b21-108">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="38b21-108">Install the npm module</span></span>
 
-<span data-ttu-id="09a64-109">安装 Azure 服务映射 npm 模块</span><span class="sxs-lookup"><span data-stu-id="09a64-109">Install the Azure Service Map npm module</span></span>
+<span data-ttu-id="38b21-109">安装 Azure 服务映射 npm 模块</span><span class="sxs-lookup"><span data-stu-id="38b21-109">Install the Azure Service Map npm module</span></span>
 
 ```bash
 npm install azure-arm-servicemap
 ```
 
-### <a name="example"></a><span data-ttu-id="09a64-110">示例</span><span class="sxs-lookup"><span data-stu-id="09a64-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="38b21-110">示例</span><span class="sxs-lookup"><span data-stu-id="38b21-110">Example</span></span>
 
-<span data-ttu-id="09a64-111">此示例列出指定的资源组和工作区的所有服务映射。</span><span class="sxs-lookup"><span data-stu-id="09a64-111">This example lists all service maps for the specified resource group and workspace.</span></span>
+<span data-ttu-id="38b21-111">此示例列出指定的资源组和工作区的所有服务映射。</span><span class="sxs-lookup"><span data-stu-id="38b21-111">This example lists all service maps for the specified resource group and workspace.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -54,6 +54,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="09a64-112">示例</span><span class="sxs-lookup"><span data-stu-id="09a64-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="38b21-112">示例</span><span class="sxs-lookup"><span data-stu-id="38b21-112">Samples</span></span>
 
-<span data-ttu-id="09a64-113">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="09a64-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="38b21-113">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="38b21-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

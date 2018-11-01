@@ -10,53 +10,53 @@ ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
 ms.openlocfilehash: 98d52e21332138512d40ff2de9f5d3388fa596e4
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49675942"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50406533"
 ---
-# <a name="create-an-azure-service-principal-with-nodejs"></a><span data-ttu-id="11e9c-103">使用 Node.js 创建 Azure 服务主体</span><span class="sxs-lookup"><span data-stu-id="11e9c-103">Create an Azure service principal with Node.js</span></span> 
+# <a name="create-an-azure-service-principal-with-nodejs"></a><span data-ttu-id="33983-103">使用 Node.js 创建 Azure 服务主体</span><span class="sxs-lookup"><span data-stu-id="33983-103">Create an Azure service principal with Node.js</span></span> 
 
-<span data-ttu-id="11e9c-104">当有某个应用需要访问资源时，可为应用设置一个标识，并使用其自身的凭据对应用进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="11e9c-104">When an app needs to access resources, you can set up an identity for the app and authenticate the app with its own credentials.</span></span> <span data-ttu-id="11e9c-105">此标识称为服务主体。</span><span class="sxs-lookup"><span data-stu-id="11e9c-105">This identity is known as a *service principal*.</span></span> <span data-ttu-id="11e9c-106">实质上，这是为 Azure Active Directory 帐户创建了要提供给 SDK 用于身份验证的密钥，这样就不需要用户的干预或提供用户名/密码。</span><span class="sxs-lookup"><span data-stu-id="11e9c-106">Essentially, you create keys for your Azure Active Directory account that you provide to the SDK to authenticate rather than requiring user intervention or username/password.</span></span>
+<span data-ttu-id="33983-104">当有某个应用需要访问资源时，可为应用设置一个标识，并使用其自身的凭据对应用进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="33983-104">When an app needs to access resources, you can set up an identity for the app and authenticate the app with its own credentials.</span></span> <span data-ttu-id="33983-105">此标识称为服务主体。</span><span class="sxs-lookup"><span data-stu-id="33983-105">This identity is known as a *service principal*.</span></span> <span data-ttu-id="33983-106">实质上，这是为 Azure Active Directory 帐户创建了要提供给 SDK 用于身份验证的密钥，这样就不需要用户的干预或提供用户名/密码。</span><span class="sxs-lookup"><span data-stu-id="33983-106">Essentially, you create keys for your Azure Active Directory account that you provide to the SDK to authenticate rather than requiring user intervention or username/password.</span></span>
 
-<span data-ttu-id="11e9c-107">使用服务主体方法可以：</span><span class="sxs-lookup"><span data-stu-id="11e9c-107">The service principal approach enables you to:</span></span>
-- <span data-ttu-id="11e9c-108">将权限分配给应用标识，这些权限不同于自己的权限。</span><span class="sxs-lookup"><span data-stu-id="11e9c-108">Assign permissions to the app identity that are different than your own permissions.</span></span> <span data-ttu-id="11e9c-109">通常情况下，这些权限仅限于应用需执行的操作。</span><span class="sxs-lookup"><span data-stu-id="11e9c-109">Typically, these permissions are restricted to exactly what the app needs to do.</span></span>
-- <span data-ttu-id="11e9c-110">运行无人参与的脚本时，使用证书进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="11e9c-110">Use a certificate for authentication when running an unattended script.</span></span>
+<span data-ttu-id="33983-107">使用服务主体方法可以：</span><span class="sxs-lookup"><span data-stu-id="33983-107">The service principal approach enables you to:</span></span>
+- <span data-ttu-id="33983-108">将权限分配给应用标识，这些权限不同于自己的权限。</span><span class="sxs-lookup"><span data-stu-id="33983-108">Assign permissions to the app identity that are different than your own permissions.</span></span> <span data-ttu-id="33983-109">通常情况下，这些权限仅限于应用需执行的操作。</span><span class="sxs-lookup"><span data-stu-id="33983-109">Typically, these permissions are restricted to exactly what the app needs to do.</span></span>
+- <span data-ttu-id="33983-110">运行无人参与的脚本时，使用证书进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="33983-110">Use a certificate for authentication when running an unattended script.</span></span>
 
-<span data-ttu-id="11e9c-111">本主题介绍三种创建服务主体的方法。</span><span class="sxs-lookup"><span data-stu-id="11e9c-111">This topic shows you three techniques for creating a service principal.</span></span>
+<span data-ttu-id="33983-111">本主题介绍三种创建服务主体的方法。</span><span class="sxs-lookup"><span data-stu-id="33983-111">This topic shows you three techniques for creating a service principal.</span></span>
 
-- <span data-ttu-id="11e9c-112">Azure 门户</span><span class="sxs-lookup"><span data-stu-id="11e9c-112">Azure portal</span></span>
-- <span data-ttu-id="11e9c-113">Azure CLI 2.0</span><span class="sxs-lookup"><span data-stu-id="11e9c-113">Azure CLI 2.0</span></span>
-- <span data-ttu-id="11e9c-114">用于 Node.js 的 Azure SDK</span><span class="sxs-lookup"><span data-stu-id="11e9c-114">Azure SDK for Node.js</span></span>
+- <span data-ttu-id="33983-112">Azure 门户</span><span class="sxs-lookup"><span data-stu-id="33983-112">Azure portal</span></span>
+- <span data-ttu-id="33983-113">Azure CLI 2.0</span><span class="sxs-lookup"><span data-stu-id="33983-113">Azure CLI 2.0</span></span>
+- <span data-ttu-id="33983-114">用于 Node.js 的 Azure SDK</span><span class="sxs-lookup"><span data-stu-id="33983-114">Azure SDK for Node.js</span></span>
 
-## <a name="create-a-service-principal-using-the-azure-portal"></a><span data-ttu-id="11e9c-115">使用 Azure 门户创建服务主体</span><span class="sxs-lookup"><span data-stu-id="11e9c-115">Create a service principal using the Azure portal</span></span>
+## <a name="create-a-service-principal-using-the-azure-portal"></a><span data-ttu-id="33983-115">使用 Azure 门户创建服务主体</span><span class="sxs-lookup"><span data-stu-id="33983-115">Create a service principal using the Azure portal</span></span>
 
-<span data-ttu-id="11e9c-116">请遵循[使用门户创建可访问资源的 Azure Active Directory 应用程序和服务主体](https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/)主题中所述的步骤来生成服务主体。</span><span class="sxs-lookup"><span data-stu-id="11e9c-116">Follow the steps outlined in the topic, [Use portal to create an Azure Active Directory application and service principal that can access resources](https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/), to generate the service principal.</span></span>
+<span data-ttu-id="33983-116">请遵循[使用门户创建可访问资源的 Azure Active Directory 应用程序和服务主体](https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/)主题中所述的步骤来生成服务主体。</span><span class="sxs-lookup"><span data-stu-id="33983-116">Follow the steps outlined in the topic, [Use portal to create an Azure Active Directory application and service principal that can access resources](https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/), to generate the service principal.</span></span>
 
-## <a name="create-a-service-principal-using-the-azure-cli-20"></a><span data-ttu-id="11e9c-117">使用 Azure CLI 2.0 创建服务主体</span><span class="sxs-lookup"><span data-stu-id="11e9c-117">Create a service principal using the Azure CLI 2.0</span></span>
+## <a name="create-a-service-principal-using-the-azure-cli-20"></a><span data-ttu-id="33983-117">使用 Azure CLI 2.0 创建服务主体</span><span class="sxs-lookup"><span data-stu-id="33983-117">Create a service principal using the Azure CLI 2.0</span></span>
 
-<span data-ttu-id="11e9c-118">可执行以下步骤，使用 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2) 创建服务主体：</span><span class="sxs-lookup"><span data-stu-id="11e9c-118">Creating a service principal using the [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2) can be accomplished with the following steps:</span></span>
+<span data-ttu-id="33983-118">可执行以下步骤，使用 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2) 创建服务主体：</span><span class="sxs-lookup"><span data-stu-id="33983-118">Creating a service principal using the [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2) can be accomplished with the following steps:</span></span>
 
-1. <span data-ttu-id="11e9c-119">下载 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。</span><span class="sxs-lookup"><span data-stu-id="11e9c-119">Download the [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
+1. <span data-ttu-id="33983-119">下载 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。</span><span class="sxs-lookup"><span data-stu-id="33983-119">Download the [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
 
-2. <span data-ttu-id="11e9c-120">打开终端窗口。</span><span class="sxs-lookup"><span data-stu-id="11e9c-120">Open a terminal window.</span></span>
+2. <span data-ttu-id="33983-120">打开终端窗口。</span><span class="sxs-lookup"><span data-stu-id="33983-120">Open a terminal window.</span></span>
 
-3. <span data-ttu-id="11e9c-121">键入以下命令启动登录过程：</span><span class="sxs-lookup"><span data-stu-id="11e9c-121">Type the following command to start the login process:</span></span>
+3. <span data-ttu-id="33983-121">键入以下命令启动登录过程：</span><span class="sxs-lookup"><span data-stu-id="33983-121">Type the following command to start the login process:</span></span>
 
     ```shell
     $ az login
     ```
 
-4. <span data-ttu-id="11e9c-122">调用 `az login` 可生成一个 URL 和一个代码。</span><span class="sxs-lookup"><span data-stu-id="11e9c-122">Calling `az login` results in a URL and a code.</span></span> <span data-ttu-id="11e9c-123">浏览到指定的 URL，输入该代码，使用 Azure 标识登录（如果已登录，则此过程可自动完成）。</span><span class="sxs-lookup"><span data-stu-id="11e9c-123">Browse to the specified URL, enter the code, and login with your Azure identity (this may happen automatically if you're already logged in).</span></span> <span data-ttu-id="11e9c-124">然后，即可通过 CLI 访问帐户。</span><span class="sxs-lookup"><span data-stu-id="11e9c-124">You'll then be able to access your account via the CLI.</span></span>
+4. <span data-ttu-id="33983-122">调用 `az login` 可生成一个 URL 和一个代码。</span><span class="sxs-lookup"><span data-stu-id="33983-122">Calling `az login` results in a URL and a code.</span></span> <span data-ttu-id="33983-123">浏览到指定的 URL，输入该代码，使用 Azure 标识登录（如果已登录，则此过程可自动完成）。</span><span class="sxs-lookup"><span data-stu-id="33983-123">Browse to the specified URL, enter the code, and login with your Azure identity (this may happen automatically if you're already logged in).</span></span> <span data-ttu-id="33983-124">然后，即可通过 CLI 访问帐户。</span><span class="sxs-lookup"><span data-stu-id="33983-124">You'll then be able to access your account via the CLI.</span></span>
 
-5. <span data-ttu-id="11e9c-125">获取订阅和租户 ID：</span><span class="sxs-lookup"><span data-stu-id="11e9c-125">Get your subscription and tenant id:</span></span>
+5. <span data-ttu-id="33983-125">获取订阅和租户 ID：</span><span class="sxs-lookup"><span data-stu-id="33983-125">Get your subscription and tenant id:</span></span>
 
     ```shell
     $ az account list
     ```
 
-    <span data-ttu-id="11e9c-126">下面显示了输出示例：</span><span class="sxs-lookup"><span data-stu-id="11e9c-126">The following shows an example of the output:</span></span>
+    <span data-ttu-id="33983-126">下面显示了输出示例：</span><span class="sxs-lookup"><span data-stu-id="33983-126">The following shows an example of the output:</span></span>
 
     ```shell
     {
@@ -74,15 +74,15 @@ ms.locfileid: "49675942"
     }
     ```
 
-    <span data-ttu-id="11e9c-127">**记下订阅 ID，因为步骤 7 中需要用到。**</span><span class="sxs-lookup"><span data-stu-id="11e9c-127">**Note the subscription ID as it will be used in Step 7.**</span></span>
+    <span data-ttu-id="33983-127">**记下订阅 ID，因为步骤 7 中需要用到。**</span><span class="sxs-lookup"><span data-stu-id="33983-127">**Note the subscription ID as it will be used in Step 7.**</span></span>
 
-6. <span data-ttu-id="11e9c-128">创建一个服务主体用于获取 JSON 对象，其中包含在 Azure 中进行身份验证时所需的其他信息片段。</span><span class="sxs-lookup"><span data-stu-id="11e9c-128">Create a service principal to get a JSON object containing the other pieces of information you need to authenticate with Azure.</span></span>
+6. <span data-ttu-id="33983-128">创建一个服务主体用于获取 JSON 对象，其中包含在 Azure 中进行身份验证时所需的其他信息片段。</span><span class="sxs-lookup"><span data-stu-id="33983-128">Create a service principal to get a JSON object containing the other pieces of information you need to authenticate with Azure.</span></span>
 
     ```shell
     $ az ad sp create-for-rbac
     ```
 
-    <span data-ttu-id="11e9c-129">下面显示了输出示例：</span><span class="sxs-lookup"><span data-stu-id="11e9c-129">The following shows an example of the output:</span></span>
+    <span data-ttu-id="33983-129">下面显示了输出示例：</span><span class="sxs-lookup"><span data-stu-id="33983-129">The following shows an example of the output:</span></span>
 
     ```shell
     {
@@ -94,11 +94,11 @@ ms.locfileid: "49675942"
     }
     ```
 
-    <span data-ttu-id="11e9c-130">**记下租户、名称和密码值，因为在步骤 7 中需要用到。**</span><span class="sxs-lookup"><span data-stu-id="11e9c-130">**Note the tenant, name, and password values as they'll be used in Step 7.**</span></span>
+    <span data-ttu-id="33983-130">**记下租户、名称和密码值，因为在步骤 7 中需要用到。**</span><span class="sxs-lookup"><span data-stu-id="33983-130">**Note the tenant, name, and password values as they'll be used in Step 7.**</span></span>
 
-7. <span data-ttu-id="11e9c-131">设置环境变量 - 将 &lt;subscriptionId>、&lt;tenant>、&lt;name> 和 &lt;password> 占位符替换为在步骤 4 和 5 中获取的值。</span><span class="sxs-lookup"><span data-stu-id="11e9c-131">Set up the environment variables - replacing the &lt;subscriptionId>, &lt;tenant>, &lt;name>, and &lt;password> placeholders with the values you obtained in steps 4 and 5.</span></span> 
+7. <span data-ttu-id="33983-131">设置环境变量 - 将 &lt;subscriptionId>、&lt;tenant>、&lt;name> 和 &lt;password> 占位符替换为在步骤 4 和 5 中获取的值。</span><span class="sxs-lookup"><span data-stu-id="33983-131">Set up the environment variables - replacing the &lt;subscriptionId>, &lt;tenant>, &lt;name>, and &lt;password> placeholders with the values you obtained in steps 4 and 5.</span></span> 
 
-    <span data-ttu-id="11e9c-132">**使用 Bash**</span><span class="sxs-lookup"><span data-stu-id="11e9c-132">**Using bash**</span></span>
+    <span data-ttu-id="33983-132">**使用 Bash**</span><span class="sxs-lookup"><span data-stu-id="33983-132">**Using bash**</span></span>
 
     ```shell
     export azureSubId='<subscriptionId>'
@@ -107,7 +107,7 @@ ms.locfileid: "49675942"
     export azureServicePrincipalPassword='<password>'
     ```
 
-    <span data-ttu-id="11e9c-133">**使用 PowerShell**</span><span class="sxs-lookup"><span data-stu-id="11e9c-133">**Using PowerShell**</span></span>
+    <span data-ttu-id="33983-133">**使用 PowerShell**</span><span class="sxs-lookup"><span data-stu-id="33983-133">**Using PowerShell**</span></span>
 
     ```shell
     $env:azureSubId='<subscriptionId>'
@@ -116,13 +116,13 @@ ms.locfileid: "49675942"
     $env:azureServicePrincipalPassword='<password>'
     ```
 
-## <a name="create-a-service-principal-using-the-azure-sdk-for-nodejs"></a><span data-ttu-id="11e9c-134">使用用于 Node.js 的 Azure SDK 创建服务主体</span><span class="sxs-lookup"><span data-stu-id="11e9c-134">Create a service principal using the Azure SDK for Node.js</span></span>
+## <a name="create-a-service-principal-using-the-azure-sdk-for-nodejs"></a><span data-ttu-id="33983-134">使用用于 Node.js 的 Azure SDK 创建服务主体</span><span class="sxs-lookup"><span data-stu-id="33983-134">Create a service principal using the Azure SDK for Node.js</span></span>
 
-<span data-ttu-id="11e9c-135">若要使用 JavaScript 以编程方式创建服务主体，请使用 [ServicePrincipal 脚本](https://github.com/Azure/azure-sdk-for-node/tree/master/Documentation/ServicePrincipal)。</span><span class="sxs-lookup"><span data-stu-id="11e9c-135">To programmatically create a service principal using JavaScript, use the [ServicePrincipal script](https://github.com/Azure/azure-sdk-for-node/tree/master/Documentation/ServicePrincipal).</span></span>   
+<span data-ttu-id="33983-135">若要使用 JavaScript 以编程方式创建服务主体，请使用 [ServicePrincipal 脚本](https://github.com/Azure/azure-sdk-for-node/tree/master/Documentation/ServicePrincipal)。</span><span class="sxs-lookup"><span data-stu-id="33983-135">To programmatically create a service principal using JavaScript, use the [ServicePrincipal script](https://github.com/Azure/azure-sdk-for-node/tree/master/Documentation/ServicePrincipal).</span></span>   
 
-## <a name="using-the-service-principal"></a><span data-ttu-id="11e9c-136">使用服务主体</span><span class="sxs-lookup"><span data-stu-id="11e9c-136">Using the service principal</span></span>
+## <a name="using-the-service-principal"></a><span data-ttu-id="33983-136">使用服务主体</span><span class="sxs-lookup"><span data-stu-id="33983-136">Using the service principal</span></span>
 
-<span data-ttu-id="11e9c-137">以下 JavaScript 代码片段演示在创建服务主体后，如何使用服务主体密钥通过用于 Node.js 的 Azure SDK 进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="11e9c-137">Once you have a service principal, the following JavaScript code snippet illustrates how to use the service principal keys to authenticate with the Azure SDK for Node.js.</span></span> <span data-ttu-id="11e9c-138">修改以下占位符：&lt;clientId or appId>、&lt;secret or password> 和 &lt;domain or tenant>。</span><span class="sxs-lookup"><span data-stu-id="11e9c-138">Modify the following placeholders: &lt;clientId or appId>, &lt;secret or password>, and &lt;domain or tenant>,</span></span>
+<span data-ttu-id="33983-137">以下 JavaScript 代码片段演示在创建服务主体后，如何使用服务主体密钥通过用于 Node.js 的 Azure SDK 进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="33983-137">Once you have a service principal, the following JavaScript code snippet illustrates how to use the service principal keys to authenticate with the Azure SDK for Node.js.</span></span> <span data-ttu-id="33983-138">修改以下占位符：&lt;clientId or appId>、&lt;secret or password> 和 &lt;domain or tenant>。</span><span class="sxs-lookup"><span data-stu-id="33983-138">Modify the following placeholders: &lt;clientId or appId>, &lt;secret or password>, and &lt;domain or tenant>,</span></span>
 
 ```javascript
 const Azure = require('azure');

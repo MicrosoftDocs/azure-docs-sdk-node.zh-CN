@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Monitor
 ms.openlocfilehash: fb2cc5ba927fe03fb5fe3114919ed1b0b6e969ae
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50346345"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51141306"
 ---
 # <a name="azure-monitor-modules-for-nodejs"></a>用于 Node.js 的 Azure Monitor 模块
 

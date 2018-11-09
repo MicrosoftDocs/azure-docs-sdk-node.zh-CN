@@ -12,11 +12,11 @@ ms.devlang: nodejs
 ms.service: event-grid
 ms.custom: devcenter
 ms.openlocfilehash: bddf4efc1eda186aee92d30af24125823c7a8f7b
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50339915"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51173119"
 ---
 # <a name="azure-event-grid-libraries-for-nodejs"></a>用于 Node.js 的 Azure 事件网格库
 

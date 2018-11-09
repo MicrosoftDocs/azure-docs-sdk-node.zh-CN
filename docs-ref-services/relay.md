@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Relay
 ms.openlocfilehash: e0bb24ac422d71bd8c957e94cceffd57bf121e48
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50406373"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51062066"
 ---
-# <a name="azure-relay-modules-for-nodejs"></a><span data-ttu-id="13ab1-103">用于 Node.js 的 Azure 中继模块</span><span class="sxs-lookup"><span data-stu-id="13ab1-103">Azure Relay modules for Node.js</span></span>
+# <a name="azure-relay-modules-for-nodejs"></a><span data-ttu-id="8c6ea-103">用于 Node.js 的 Azure 中继模块</span><span class="sxs-lookup"><span data-stu-id="8c6ea-103">Azure Relay modules for Node.js</span></span>
 
-<span data-ttu-id="13ab1-104">Azure 中继服务通过允许安全地向公有云公开位于企业网络内的服务来创建混合应用程序，无需打开防火墙连接，也无需对企业网络基础结构进行彻底更改。</span><span class="sxs-lookup"><span data-stu-id="13ab1-104">The Azure Relay service creates hybrid applications by enabling you to securely expose services that reside within a corporate enterprise network to the public cloud, without having to open a firewall connection, or require intrusive changes to a corporate network infrastructure.</span></span> <span data-ttu-id="13ab1-105">中继支持各种不同的传输协议和 Web 服务标准。</span><span class="sxs-lookup"><span data-stu-id="13ab1-105">Relay supports a variety of different transport protocols and web services standards.</span></span>
+<span data-ttu-id="8c6ea-104">Azure 中继服务通过允许安全地向公有云公开位于企业网络内的服务来创建混合应用程序，无需打开防火墙连接，也无需对企业网络基础结构进行彻底更改。</span><span class="sxs-lookup"><span data-stu-id="8c6ea-104">The Azure Relay service creates hybrid applications by enabling you to securely expose services that reside within a corporate enterprise network to the public cloud, without having to open a firewall connection, or require intrusive changes to a corporate network infrastructure.</span></span> <span data-ttu-id="8c6ea-105">中继支持各种不同的传输协议和 Web 服务标准。</span><span class="sxs-lookup"><span data-stu-id="8c6ea-105">Relay supports a variety of different transport protocols and web services standards.</span></span>
 
-<span data-ttu-id="13ab1-106">[详细了解 Azure 中继](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it)。</span><span class="sxs-lookup"><span data-stu-id="13ab1-106">Learn more about [Azure Relay](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it).</span></span>
+<span data-ttu-id="8c6ea-106">[详细了解 Azure 中继](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it)。</span><span class="sxs-lookup"><span data-stu-id="8c6ea-106">Learn more about [Azure Relay](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="13ab1-107">管理包</span><span class="sxs-lookup"><span data-stu-id="13ab1-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="8c6ea-107">管理包</span><span class="sxs-lookup"><span data-stu-id="8c6ea-107">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="13ab1-108">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="13ab1-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="8c6ea-108">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="8c6ea-108">Install the npm module</span></span>
 
-<span data-ttu-id="13ab1-109">安装 Azure 中继 npm 模块</span><span class="sxs-lookup"><span data-stu-id="13ab1-109">Install the Azure Relay npm module</span></span>
+<span data-ttu-id="8c6ea-109">安装 Azure 中继 npm 模块</span><span class="sxs-lookup"><span data-stu-id="8c6ea-109">Install the Azure Relay npm module</span></span>
 
 ```bash
 npm install azure-arm-relay
 ```
 
-### <a name="example"></a><span data-ttu-id="13ab1-110">示例</span><span class="sxs-lookup"><span data-stu-id="13ab1-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="8c6ea-110">示例</span><span class="sxs-lookup"><span data-stu-id="8c6ea-110">Example</span></span>
 
-<span data-ttu-id="13ab1-111">此示例列出中继客户端的命名空间。</span><span class="sxs-lookup"><span data-stu-id="13ab1-111">This example lists the namespaces for a Relay client.</span></span>
+<span data-ttu-id="8c6ea-111">此示例列出中继客户端的命名空间。</span><span class="sxs-lookup"><span data-stu-id="8c6ea-111">This example lists the namespaces for a Relay client.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -55,6 +55,6 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a><span data-ttu-id="13ab1-112">示例</span><span class="sxs-lookup"><span data-stu-id="13ab1-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="8c6ea-112">示例</span><span class="sxs-lookup"><span data-stu-id="8c6ea-112">Samples</span></span>
 
-<span data-ttu-id="13ab1-113">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="13ab1-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="8c6ea-113">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="8c6ea-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

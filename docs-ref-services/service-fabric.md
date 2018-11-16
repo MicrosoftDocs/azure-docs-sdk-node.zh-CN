@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Fabric
 ms.openlocfilehash: 3fd2f73bc6fddf01548bbb92cce540775d4c7c76
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51083516"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51438401"
 ---
-# <a name="azure-service-fabric-modules-for-nodejs"></a><span data-ttu-id="6c3e1-103">用于 Node.js 的 Azure Service Fabric 模块</span><span class="sxs-lookup"><span data-stu-id="6c3e1-103">Azure Service Fabric modules for Node.js</span></span>
+# <a name="azure-service-fabric-modules-for-nodejs"></a><span data-ttu-id="df29d-103">用于 Node.js 的 Azure Service Fabric 模块</span><span class="sxs-lookup"><span data-stu-id="df29d-103">Azure Service Fabric modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="6c3e1-104">概述</span><span class="sxs-lookup"><span data-stu-id="6c3e1-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="df29d-104">概述</span><span class="sxs-lookup"><span data-stu-id="df29d-104">Overview</span></span>
 
-<span data-ttu-id="6c3e1-105">Azure Service Fabric 是一款分布式系统平台，可方便用户轻松打包、部署和管理可缩放的可靠微服务和容器。</span><span class="sxs-lookup"><span data-stu-id="6c3e1-105">Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.</span></span>
+<span data-ttu-id="df29d-105">Azure Service Fabric 是一款分布式系统平台，可方便用户轻松打包、部署和管理可缩放的可靠微服务和容器。</span><span class="sxs-lookup"><span data-stu-id="df29d-105">Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.</span></span>
 
-<span data-ttu-id="6c3e1-106">详细了解 [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)。</span><span class="sxs-lookup"><span data-stu-id="6c3e1-106">Learn more about [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview).</span></span>
+<span data-ttu-id="df29d-106">详细了解 [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)。</span><span class="sxs-lookup"><span data-stu-id="df29d-106">Learn more about [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="6c3e1-107">管理包</span><span class="sxs-lookup"><span data-stu-id="6c3e1-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="df29d-107">管理包</span><span class="sxs-lookup"><span data-stu-id="df29d-107">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="6c3e1-108">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="6c3e1-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="df29d-108">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="df29d-108">Install the npm module</span></span>
 
-<span data-ttu-id="6c3e1-109">安装 Azure Service Fabric npm 模块</span><span class="sxs-lookup"><span data-stu-id="6c3e1-109">Install the Azure Service Fabric npm module</span></span>
+<span data-ttu-id="df29d-109">安装 Azure Service Fabric npm 模块</span><span class="sxs-lookup"><span data-stu-id="df29d-109">Install the Azure Service Fabric npm module</span></span>
 
 ```bash
 npm install azure-arm-servicefabric
 ```
 
-### <a name="example"></a><span data-ttu-id="6c3e1-110">示例</span><span class="sxs-lookup"><span data-stu-id="6c3e1-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="df29d-110">示例</span><span class="sxs-lookup"><span data-stu-id="df29d-110">Example</span></span>
 
-<span data-ttu-id="6c3e1-111">此示例演示如何列出 Azure 订阅的群集。</span><span class="sxs-lookup"><span data-stu-id="6c3e1-111">This example shows how you can list the clusters for an Azure subscription.</span></span>
+<span data-ttu-id="df29d-111">此示例演示如何列出 Azure 订阅的群集。</span><span class="sxs-lookup"><span data-stu-id="df29d-111">This example shows how you can list the clusters for an Azure subscription.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -60,6 +60,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="6c3e1-112">示例</span><span class="sxs-lookup"><span data-stu-id="6c3e1-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="df29d-112">示例</span><span class="sxs-lookup"><span data-stu-id="df29d-112">Samples</span></span>
 
-<span data-ttu-id="6c3e1-113">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="6c3e1-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="df29d-113">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="df29d-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

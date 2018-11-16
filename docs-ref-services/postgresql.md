@@ -9,31 +9,31 @@ ms.topic: article
 ms.devlang: nodejs
 ms.service: postgresql
 ms.openlocfilehash: ed9373b767684e4893ca84de1030d062178b7ea4
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51098716"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51465691"
 ---
-# <a name="azure-postgresql-modules-for-nodejs"></a><span data-ttu-id="c8ec1-103">用于 Node.js 的 Azure PostgreSQL 模块</span><span class="sxs-lookup"><span data-stu-id="c8ec1-103">Azure PostgreSQL modules for Node.js</span></span>
+# <a name="azure-postgresql-modules-for-nodejs"></a><span data-ttu-id="f8955-103">用于 Node.js 的 Azure PostgreSQL 模块</span><span class="sxs-lookup"><span data-stu-id="f8955-103">Azure PostgreSQL modules for Node.js</span></span>
 
-<span data-ttu-id="c8ec1-104">建议用于访问 Azure Database for PostgreSQL 的客户端库是开源的[用于 Azure Database for PostgreSQL 的 Node.js 连接库](https://www.npmjs.com/package/pg)。</span><span class="sxs-lookup"><span data-stu-id="c8ec1-104">The recommended client library for accessing Azure Database for PostgreSQL is the open-source [Node.js connection library for Azure Database for PostgreSQL](https://www.npmjs.com/package/pg).</span></span> <span data-ttu-id="c8ec1-105">此库是适用于 Node.js 的非阻塞性 PostgreSQL 客户端，支持纯粹的 JavaScript 和可选的本机 libpq 绑定。</span><span class="sxs-lookup"><span data-stu-id="c8ec1-105">This library is a non-blocking PostgreSQL client for Node.js, supporting pure JavaScript and optional native libpq bindings.</span></span>
+<span data-ttu-id="f8955-104">建议用于访问 Azure Database for PostgreSQL 的客户端库是开源的[用于 Azure Database for PostgreSQL 的 Node.js 连接库](https://www.npmjs.com/package/pg)。</span><span class="sxs-lookup"><span data-stu-id="f8955-104">The recommended client library for accessing Azure Database for PostgreSQL is the open-source [Node.js connection library for Azure Database for PostgreSQL](https://www.npmjs.com/package/pg).</span></span> <span data-ttu-id="f8955-105">此库是适用于 Node.js 的非阻塞性 PostgreSQL 客户端，支持纯粹的 JavaScript 和可选的本机 libpq 绑定。</span><span class="sxs-lookup"><span data-stu-id="f8955-105">This library is a non-blocking PostgreSQL client for Node.js, supporting pure JavaScript and optional native libpq bindings.</span></span>
 
-<span data-ttu-id="c8ec1-106">详细了解 [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)</span><span class="sxs-lookup"><span data-stu-id="c8ec1-106">Learn more about [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)</span></span>
+<span data-ttu-id="f8955-106">详细了解 [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)</span><span class="sxs-lookup"><span data-stu-id="f8955-106">Learn more about [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)</span></span>
 
-## <a name="client-package"></a><span data-ttu-id="c8ec1-107">客户端程序包</span><span class="sxs-lookup"><span data-stu-id="c8ec1-107">Client package</span></span>
+## <a name="client-package"></a><span data-ttu-id="f8955-107">客户端程序包</span><span class="sxs-lookup"><span data-stu-id="f8955-107">Client package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="c8ec1-108">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="c8ec1-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="f8955-108">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="f8955-108">Install the npm module</span></span>
 
-<span data-ttu-id="c8ec1-109">使用 npm 安装 PostgreSQL 客户端模块。</span><span class="sxs-lookup"><span data-stu-id="c8ec1-109">Use npm to install the PostgreSQL client module.</span></span>
+<span data-ttu-id="f8955-109">使用 npm 安装 PostgreSQL 客户端模块。</span><span class="sxs-lookup"><span data-stu-id="f8955-109">Use npm to install the PostgreSQL client module.</span></span>
 
 ```bash
 npm install pg
 ```   
 
-### <a name="example"></a><span data-ttu-id="c8ec1-110">示例</span><span class="sxs-lookup"><span data-stu-id="c8ec1-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="f8955-110">示例</span><span class="sxs-lookup"><span data-stu-id="f8955-110">Example</span></span>
 
-<span data-ttu-id="c8ec1-111">此示例打开客户端连接并执行简单查询。</span><span class="sxs-lookup"><span data-stu-id="c8ec1-111">This example opens a client connection and executes a simple query.</span></span>
+<span data-ttu-id="f8955-111">此示例打开客户端连接并执行简单查询。</span><span class="sxs-lookup"><span data-stu-id="f8955-111">This example opens a client connection and executes a simple query.</span></span>
 
 ```javascript
 const pg = require('pg');
@@ -50,8 +50,8 @@ client.query(query, (err, res) => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="c8ec1-112">示例</span><span class="sxs-lookup"><span data-stu-id="c8ec1-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="f8955-112">示例</span><span class="sxs-lookup"><span data-stu-id="f8955-112">Samples</span></span>
 
 [!INCLUDE [node-postgresql-samples](../docs-ref-conceptual/includes/postgresql-samples.md)]
 
-<span data-ttu-id="c8ec1-113">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="c8ec1-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="f8955-113">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="f8955-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

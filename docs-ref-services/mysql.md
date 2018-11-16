@@ -8,31 +8,31 @@ ms.topic: article
 ms.devlang: nodejs
 ms.service: mysql
 ms.openlocfilehash: 557645774ecb0ea5e774f99d03251a303ad19660
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51134166"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51354141"
 ---
-# <a name="azure-mysql-modules-for-nodejs"></a><span data-ttu-id="8ac02-103">用于 Node.js 的 Azure MySQL 模块</span><span class="sxs-lookup"><span data-stu-id="8ac02-103">Azure MySQL modules for Node.js</span></span>
+# <a name="azure-mysql-modules-for-nodejs"></a><span data-ttu-id="25bbb-103">用于 Node.js 的 Azure MySQL 模块</span><span class="sxs-lookup"><span data-stu-id="25bbb-103">Azure MySQL modules for Node.js</span></span>
 
-<span data-ttu-id="8ac02-104">建议用于访问 Azure Database for MySQL 的客户端库是开源的[用于 Azure Database for MySQL 的 Node.js 连接库](https://github.com/sidorares/node-mysql2)。</span><span class="sxs-lookup"><span data-stu-id="8ac02-104">The recommended client library for accessing Azure Database for MySQL is the open-source [Node.js connection library for Azure Database for MySQL](https://github.com/sidorares/node-mysql2).</span></span> 
+<span data-ttu-id="25bbb-104">建议用于访问 Azure Database for MySQL 的客户端库是开源的[用于 Azure Database for MySQL 的 Node.js 连接库](https://github.com/sidorares/node-mysql2)。</span><span class="sxs-lookup"><span data-stu-id="25bbb-104">The recommended client library for accessing Azure Database for MySQL is the open-source [Node.js connection library for Azure Database for MySQL](https://github.com/sidorares/node-mysql2).</span></span> 
 
-<span data-ttu-id="8ac02-105">详细了解 [Azure Database for MySQL](https://docs.microsoft.com/azure/MySQL/)</span><span class="sxs-lookup"><span data-stu-id="8ac02-105">Learn more about [Azure Database for MySQL](https://docs.microsoft.com/azure/MySQL/)</span></span>
+<span data-ttu-id="25bbb-105">详细了解 [Azure Database for MySQL](https://docs.microsoft.com/azure/MySQL/)</span><span class="sxs-lookup"><span data-stu-id="25bbb-105">Learn more about [Azure Database for MySQL](https://docs.microsoft.com/azure/MySQL/)</span></span>
 
-## <a name="client-package"></a><span data-ttu-id="8ac02-106">客户端包</span><span class="sxs-lookup"><span data-stu-id="8ac02-106">Client Package</span></span>
+## <a name="client-package"></a><span data-ttu-id="25bbb-106">客户端包</span><span class="sxs-lookup"><span data-stu-id="25bbb-106">Client Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="8ac02-107">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="8ac02-107">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="25bbb-107">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="25bbb-107">Install the npm module</span></span>
 
-<span data-ttu-id="8ac02-108">使用 npm 安装 MySQL 客户端模块。</span><span class="sxs-lookup"><span data-stu-id="8ac02-108">Use npm to install the MySQL client module.</span></span>
+<span data-ttu-id="25bbb-108">使用 npm 安装 MySQL 客户端模块。</span><span class="sxs-lookup"><span data-stu-id="25bbb-108">Use npm to install the MySQL client module.</span></span>
 
 ```bash
 npm install mysql2
 ```   
 
-### <a name="example"></a><span data-ttu-id="8ac02-109">示例</span><span class="sxs-lookup"><span data-stu-id="8ac02-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="25bbb-109">示例</span><span class="sxs-lookup"><span data-stu-id="25bbb-109">Example</span></span>
 
-<span data-ttu-id="8ac02-110">此示例连接到 MySQL 数据库，并执行一个简单的查询来检索所有客户。</span><span class="sxs-lookup"><span data-stu-id="8ac02-110">This example connects to a MySQL database and performs a simple query to retrieve all customers.</span></span>
+<span data-ttu-id="25bbb-110">此示例连接到 MySQL 数据库，并执行一个简单的查询来检索所有客户。</span><span class="sxs-lookup"><span data-stu-id="25bbb-110">This example connects to a MySQL database and performs a simple query to retrieve all customers.</span></span>
 
 ```javascript
 const mysql = require('mysql2');
@@ -55,8 +55,8 @@ connection.query(query, (err, res) =>
 connection.end();
 ```
 
-## <a name="samples"></a><span data-ttu-id="8ac02-111">示例</span><span class="sxs-lookup"><span data-stu-id="8ac02-111">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="25bbb-111">示例</span><span class="sxs-lookup"><span data-stu-id="25bbb-111">Samples</span></span>
 
 [!INCLUDE [node-mysql-samples](../docs-ref-conceptual/includes/mysql-samples.md)]
 
-<span data-ttu-id="8ac02-112">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="8ac02-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="25bbb-112">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="25bbb-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

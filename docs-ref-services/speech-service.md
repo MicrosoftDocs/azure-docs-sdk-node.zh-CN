@@ -12,11 +12,11 @@ ms.devlang: nodejs
 ms.service: cognitive-services
 ms.component: speech-service
 ms.openlocfilehash: 69167faa5b2677fc15561ed33beccf7925efbe39
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51134229"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51487901"
 ---
 # <a name="cognitive-services-speech-sdk-for-javascript"></a>用于 JavaScript 的认知服务语音 SDK
 

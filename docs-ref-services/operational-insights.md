@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Operational Insights
 ms.openlocfilehash: c8a137c4759982e0551d9048ac271780e6a68afe
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51185526"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51497501"
 ---
 # <a name="azure-operational-insights-modules-for-nodejs"></a>用于 Node.js 的 Azure 操作见解模块
 

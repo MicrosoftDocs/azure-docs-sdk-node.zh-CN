@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Key Vault
 ms.openlocfilehash: 36bc5e97a5eea6e821f66bff9b3e8f610baa2dd0
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51121846"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51388541"
 ---
 # <a name="azure-key-vault-modules-for-nodejs"></a>用于 Node.js 的 Azure Key Vault 模块
 

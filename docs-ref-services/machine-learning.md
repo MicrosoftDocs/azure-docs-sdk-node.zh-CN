@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Machine Learning
 ms.openlocfilehash: 7e39084c65a40e47ed61cc01daf994aff447690e
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51071696"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51439101"
 ---
 # <a name="azure-machine-learning-modules-for-nodejs"></a>用于 Node.js 的 Azure 机器学习模块
 

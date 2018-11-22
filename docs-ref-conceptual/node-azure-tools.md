@@ -11,11 +11,11 @@ ms.topic: article
 ms.date: 11/07/2017
 ms.author: routlaw
 ms.openlocfilehash: 1c676b1f31fde7b14a16031b78f767a2c59edd5a
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51502031"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52117972"
 ---
 # <a name="azure-tools-for-javascript-developers"></a>面向 JavaScript 开发人员的 Azure 工具
 建议使用以下工具在 Azure 上开发 JavaScript 应用。

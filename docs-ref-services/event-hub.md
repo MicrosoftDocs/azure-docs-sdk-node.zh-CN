@@ -11,29 +11,29 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Event Hub
 ms.openlocfilehash: cf50d0e69e336dac9addc85625599fbbefd1902e
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51425161"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52127542"
 ---
-# <a name="azure-event-hub-modules-for-nodejs"></a><span data-ttu-id="f3557-103">用于 Node.js 的 Azure 事件中心模块</span><span class="sxs-lookup"><span data-stu-id="f3557-103">Azure Event Hub modules for Node.js</span></span>
+# <a name="azure-event-hub-modules-for-nodejs"></a><span data-ttu-id="149c8-103">用于 Node.js 的 Azure 事件中心模块</span><span class="sxs-lookup"><span data-stu-id="149c8-103">Azure Event Hub modules for Node.js</span></span>
 
-<span data-ttu-id="f3557-104">Azure 事件中心是高度可缩放的数据流式处理平台和事件引入服务，能够每秒接收和处理数百万事件。</span><span class="sxs-lookup"><span data-stu-id="f3557-104">Azure Event Hubs is a highly scalable data streaming platform and event ingestion service capable of receiving and processing millions of events per second.</span></span> <span data-ttu-id="f3557-105">事件中心可以处理和存储分布式软件和设备生成的事件、数据或遥测。</span><span class="sxs-lookup"><span data-stu-id="f3557-105">Event Hubs can process and store events, data, or telemetry produced by distributed software and devices.</span></span> <span data-ttu-id="f3557-106">可以使用任何实时分析提供程序或批处理/存储适配器转换和存储发送到数据中心的数据。</span><span class="sxs-lookup"><span data-stu-id="f3557-106">Data sent to an event hub can be transformed and stored using any real-time analytics provider or batching/storage adapters.</span></span> <span data-ttu-id="f3557-107">由于能够以较低的延迟和极高的规模提供发布订阅功能，事件中心可以充当大数据的“入口”。</span><span class="sxs-lookup"><span data-stu-id="f3557-107">With the ability to provide publish-subscribe capabilities with low latency and at massive scale, Event Hubs serves as the "on ramp" for Big Data.</span></span>
+<span data-ttu-id="149c8-104">Azure 事件中心是高度可缩放的数据流式处理平台和事件引入服务，能够每秒接收和处理数百万事件。</span><span class="sxs-lookup"><span data-stu-id="149c8-104">Azure Event Hubs is a highly scalable data streaming platform and event ingestion service capable of receiving and processing millions of events per second.</span></span> <span data-ttu-id="149c8-105">事件中心可以处理和存储分布式软件和设备生成的事件、数据或遥测。</span><span class="sxs-lookup"><span data-stu-id="149c8-105">Event Hubs can process and store events, data, or telemetry produced by distributed software and devices.</span></span> <span data-ttu-id="149c8-106">可以使用任何实时分析提供程序或批处理/存储适配器转换和存储发送到数据中心的数据。</span><span class="sxs-lookup"><span data-stu-id="149c8-106">Data sent to an event hub can be transformed and stored using any real-time analytics provider or batching/storage adapters.</span></span> <span data-ttu-id="149c8-107">由于能够以较低的延迟和极高的规模提供发布订阅功能，事件中心可以充当大数据的“入口”。</span><span class="sxs-lookup"><span data-stu-id="149c8-107">With the ability to provide publish-subscribe capabilities with low latency and at massive scale, Event Hubs serves as the "on ramp" for Big Data.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="f3557-108">管理包</span><span class="sxs-lookup"><span data-stu-id="f3557-108">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="149c8-108">管理包</span><span class="sxs-lookup"><span data-stu-id="149c8-108">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="f3557-109">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="f3557-109">Install the npm module</span></span> 
+### <a name="install-the-npm-module"></a><span data-ttu-id="149c8-109">安装 npm 模块</span><span class="sxs-lookup"><span data-stu-id="149c8-109">Install the npm module</span></span> 
 
-<span data-ttu-id="f3557-110">使用 npm 安装用于 Node.js 的 Azure 事件中心模块</span><span class="sxs-lookup"><span data-stu-id="f3557-110">Use npm to install the Azure Event Hub modules for Node.js</span></span>
+<span data-ttu-id="149c8-110">使用 npm 安装用于 Node.js 的 Azure 事件中心模块</span><span class="sxs-lookup"><span data-stu-id="149c8-110">Use npm to install the Azure Event Hub modules for Node.js</span></span>
 
 ```bash
 npm install azure-arm-eventhub
 ```
 
-### <a name="example"></a><span data-ttu-id="f3557-111">示例</span><span class="sxs-lookup"><span data-stu-id="f3557-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="149c8-111">示例</span><span class="sxs-lookup"><span data-stu-id="149c8-111">Example</span></span>
 
-<span data-ttu-id="f3557-112">此示例检索有关现有事件中心的信息。</span><span class="sxs-lookup"><span data-stu-id="f3557-112">This example retrieves information about an existing event hub.</span></span>
+<span data-ttu-id="149c8-112">此示例检索有关现有事件中心的信息。</span><span class="sxs-lookup"><span data-stu-id="149c8-112">This example retrieves information about an existing event hub.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -54,6 +54,6 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a><span data-ttu-id="f3557-113">示例</span><span class="sxs-lookup"><span data-stu-id="f3557-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="149c8-113">示例</span><span class="sxs-lookup"><span data-stu-id="149c8-113">Samples</span></span>
 
-<span data-ttu-id="f3557-114">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="f3557-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="149c8-114">详细了解可在应用中使用的[示例 Node.js 代码](https://azure.microsoft.com/resources/samples/?platform=nodejs)。</span><span class="sxs-lookup"><span data-stu-id="149c8-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

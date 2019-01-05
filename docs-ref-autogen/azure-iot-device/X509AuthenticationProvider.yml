@@ -1,0 +1,118 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e5f81e27713e4bcf7f882fe032f5c0c05908acb8
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53667401"
+items:
+- uid: azure-iot-device.X509AuthenticationProvider
+  name: X509AuthenticationProvider
+  fullName: X509AuthenticationProvider
+  children:
+  - azure-iot-device.X509AuthenticationProvider.fromX509Options
+  - azure-iot-device.X509AuthenticationProvider.getDeviceCredentials_1
+  - azure-iot-device.X509AuthenticationProvider.getDeviceCredentials
+  - azure-iot-device.X509AuthenticationProvider.setX509Options
+  - azure-iot-device.X509AuthenticationProvider.type
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    <span data-ttu-id="f8398-101">提供了`AuthenticationProvider`对象，它可以创建只需使用 X509 证书和密钥，然后由设备客户端和传输进行身份验证与 Azure IoT 中心实例。</span><span class="sxs-lookup"><span data-stu-id="f8398-101">Provides an `AuthenticationProvider` object that can be created simply with an X509 certificate and key and is then used by the device client and transports to authenticate with the Azure IoT hub instance.</span></span>
+
+    <span data-ttu-id="f8398-102">与不同`SharedAccessSignatureAuthenticationProvider`并`SharedAccessKeyAuthenticationProvider`对象，`X509AuthenticationProvider`不会发出`newTokenAvailable`事件因为涉及的 X509 有没有令牌身份验证。</span><span class="sxs-lookup"><span data-stu-id="f8398-102">Unlike the `SharedAccessSignatureAuthenticationProvider` and `SharedAccessKeyAuthenticationProvider` objects, the `X509AuthenticationProvider` does not emit a `newTokenAvailable` event since there are no token involved in X509 authentication.</span></span> <span data-ttu-id="f8398-103">传输会使用的凭据`getDeviceCredentials`方法。</span><span class="sxs-lookup"><span data-stu-id="f8398-103">The transports will get the credentials using the `getDeviceCredentials` method.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.X509AuthenticationProvider.fromX509Options
+  name: fromX509Options(string, string, X509)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f8398-104">创建一个新`X509AuthenticationProvider`从`X509`对象，其中包含证书和密钥。</span><span class="sxs-lookup"><span data-stu-id="f8398-104">Creates a new `X509AuthenticationProvider` from an `X509` object containing a certificate and key.</span></span>
+  syntax:
+    content: 'static function fromX509Options(deviceId: string, iotHubHostname: string, x509info: X509)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: <span data-ttu-id="f8398-105">设备标识符。</span><span class="sxs-lookup"><span data-stu-id="f8398-105">The device identifier.</span></span>
+    - id: iotHubHostname
+      type:
+      - string
+      description: <span data-ttu-id="f8398-106">Azure IoT 中心实例设备的主机名应连接到。</span><span class="sxs-lookup"><span data-stu-id="f8398-106">The host name of the Azure IoT hub instance the device should connect to.</span></span>
+    - id: x509info
+      type:
+      - X509
+      description: >
+        <span data-ttu-id="f8398-107">`X509`对象，其中包含一个证书和设备可用于使用 Azure IoT 中心实例进行身份验证的密钥。</span><span class="sxs-lookup"><span data-stu-id="f8398-107">An `X509` object containing a certificate and key that the device can use to authenticate with the Azure IoT hub instance.</span></span>
+    return:
+      type:
+      - azure-iot-device.X509AuthenticationProvider
+  package: azure-iot-device
+- uid: azure-iot-device.X509AuthenticationProvider.getDeviceCredentials_1
+  name: getDeviceCredentials()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f8398-108">此方法使用由传输到获取最新的设备凭据格式为`TransportConfig`对象。</span><span class="sxs-lookup"><span data-stu-id="f8398-108">This method is used by the transports to gets the most current device credentials in the form of a `TransportConfig` object.</span></span>
+  syntax:
+    content: function getDeviceCredentials()
+    parameters: []
+    return:
+      type:
+      - Promise<TransportConfig>
+  package: azure-iot-device
+- uid: azure-iot-device.X509AuthenticationProvider.getDeviceCredentials
+  name: getDeviceCredentials(Callback<TransportConfig>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f8398-109">此方法使用由传输到获取最新的设备凭据格式为`TransportConfig`对象。</span><span class="sxs-lookup"><span data-stu-id="f8398-109">This method is used by the transports to gets the most current device credentials in the form of a `TransportConfig` object.</span></span>
+  syntax:
+    content: 'function getDeviceCredentials(callback: Callback<TransportConfig>)'
+    parameters:
+    - id: callback
+      type:
+      - Callback<TransportConfig>
+      description: ''
+  package: azure-iot-device
+- uid: azure-iot-device.X509AuthenticationProvider.setX509Options
+  name: setX509Options(X509)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f8398-110">更新证书和设备用来连接并使用 Azure IoT 中心实例进行身份验证密钥。</span><span class="sxs-lookup"><span data-stu-id="f8398-110">Updates the certificate and key used by the device to connect and authenticate with an Azure IoT hub instance.</span></span>
+  syntax:
+    content: 'function setX509Options(x509: X509)'
+    parameters:
+    - id: x509
+      type:
+      - X509
+      description: >
+        <span data-ttu-id="f8398-111">`X509`对象，其中包含的证书和密钥。</span><span class="sxs-lookup"><span data-stu-id="f8398-111">The `X509` object containing the certificate and key.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.X509AuthenticationProvider.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'type: AuthenticationType'
+    return:
+      type:
+      - AuthenticationType
+  package: azure-iot-device
+references:
+- uid: azure-iot-device.X509AuthenticationProvider
+  name: X509AuthenticationProvider
+  spec.typeScript:
+  - name: X509AuthenticationProvider
+    fullName: X509AuthenticationProvider
+    uid: azure-iot-device.X509AuthenticationProvider

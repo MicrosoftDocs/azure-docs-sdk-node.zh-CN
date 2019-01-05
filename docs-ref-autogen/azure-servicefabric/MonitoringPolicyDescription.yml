@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ee04e77a8c318cb4cf7acc03e58f315348bc500b
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52084022"
+items:
+- uid: azure-servicefabric.MonitoringPolicyDescription
+  name: MonitoringPolicyDescription
+  fullName: MonitoringPolicyDescription
+  children:
+  - azure-servicefabric.MonitoringPolicyDescription.failureAction
+  - azure-servicefabric.MonitoringPolicyDescription.healthCheckRetryTimeoutInMilliseconds
+  - azure-servicefabric.MonitoringPolicyDescription.healthCheckStableDurationInMilliseconds
+  - azure-servicefabric.MonitoringPolicyDescription.healthCheckWaitDurationInMilliseconds
+  - azure-servicefabric.MonitoringPolicyDescription.upgradeDomainTimeoutInMilliseconds
+  - azure-servicefabric.MonitoringPolicyDescription.upgradeTimeoutInMilliseconds
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="2822f-101">介绍用于监视以监视模式升级的参数。</span><span class="sxs-lookup"><span data-stu-id="2822f-101">Describes the parameters for monitoring an upgrade in Monitored mode.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.failureAction
+  name: failureAction
+  fullName: failureAction
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="2822f-102">要监视的升级违反监视策略或健康策略时执行的补偿操作。</span><span class="sxs-lookup"><span data-stu-id="2822f-102">The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations.</span></span>
+
+    <span data-ttu-id="2822f-103">无效指示失败操作无效。</span><span class="sxs-lookup"><span data-stu-id="2822f-103">Invalid indicates the failure action is invalid.</span></span> <span data-ttu-id="2822f-104">回滚指定升级将启动自动回滚。</span><span class="sxs-lookup"><span data-stu-id="2822f-104">Rollback specifies that the upgrade will start rolling back automatically.</span></span>
+
+    <span data-ttu-id="2822f-105">手动指示升级将切换到 UnmonitoredManual 升级模式。</span><span class="sxs-lookup"><span data-stu-id="2822f-105">Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.</span></span> <span data-ttu-id="2822f-106">可能的值包括：Invalid、 Rollback 和手动</span><span class="sxs-lookup"><span data-stu-id="2822f-106">Possible values include: 'Invalid', 'Rollback', 'Manual'</span></span>
+  optional: true
+  syntax:
+    content: 'failureAction?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.healthCheckRetryTimeoutInMilliseconds
+  name: healthCheckRetryTimeoutInMilliseconds
+  fullName: healthCheckRetryTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2822f-107">若要重试运行状况评估，当执行 FailureAction 前，应用程序或群集不正常时的时间量。</span><span class="sxs-lookup"><span data-stu-id="2822f-107">The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed.</span></span> <span data-ttu-id="2822f-108">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="2822f-108">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="2822f-109">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="2822f-109">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckRetryTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.healthCheckStableDurationInMilliseconds
+  name: healthCheckStableDurationInMilliseconds
+  fullName: healthCheckStableDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2822f-110">升级继续到下一升级域之前，应用程序或群集必须保持正常的时长。</span><span class="sxs-lookup"><span data-stu-id="2822f-110">The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain.</span></span> <span data-ttu-id="2822f-111">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="2822f-111">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="2822f-112">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="2822f-112">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckStableDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.healthCheckWaitDurationInMilliseconds
+  name: healthCheckWaitDurationInMilliseconds
+  fullName: healthCheckWaitDurationInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="2822f-113">应用运行状况策略之前，完成升级域后等待的时间长度。</span><span class="sxs-lookup"><span data-stu-id="2822f-113">The amount of time to wait after completing an upgrade domain before applying health policies.</span></span>
+
+    <span data-ttu-id="2822f-114">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="2822f-114">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="2822f-115">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="2822f-115">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'healthCheckWaitDurationInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.upgradeDomainTimeoutInMilliseconds
+  name: upgradeDomainTimeoutInMilliseconds
+  fullName: upgradeDomainTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2822f-116">执行 FailureAction 前，每个升级域需等待的时长。</span><span class="sxs-lookup"><span data-stu-id="2822f-116">The amount of time each upgrade domain has to complete before FailureAction is executed.</span></span> <span data-ttu-id="2822f-117">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="2822f-117">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="2822f-118">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="2822f-118">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeDomainTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.MonitoringPolicyDescription.upgradeTimeoutInMilliseconds
+  name: upgradeTimeoutInMilliseconds
+  fullName: upgradeTimeoutInMilliseconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2822f-119">执行 FailureAction 前，完成整个升级需等待的时长。</span><span class="sxs-lookup"><span data-stu-id="2822f-119">The amount of time the overall upgrade has to complete before FailureAction is executed.</span></span> <span data-ttu-id="2822f-120">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="2822f-120">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="2822f-121">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="2822f-121">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeTimeoutInMilliseconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

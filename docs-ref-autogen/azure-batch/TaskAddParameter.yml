@@ -1,0 +1,339 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f39c3e44ea8b33e988416b84f96bef83caec3d92
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53680503"
+items:
+- uid: azure-batch.TaskAddParameter
+  name: TaskAddParameter
+  fullName: TaskAddParameter
+  children:
+  - azure-batch.TaskAddParameter.affinityInfo
+  - azure-batch.TaskAddParameter.applicationPackageReferences
+  - azure-batch.TaskAddParameter.authenticationTokenSettings
+  - azure-batch.TaskAddParameter.commandLine
+  - azure-batch.TaskAddParameter.constraints
+  - azure-batch.TaskAddParameter.containerSettings
+  - azure-batch.TaskAddParameter.dependsOn
+  - azure-batch.TaskAddParameter.displayName
+  - azure-batch.TaskAddParameter.environmentSettings
+  - azure-batch.TaskAddParameter.exitConditions
+  - azure-batch.TaskAddParameter.id
+  - azure-batch.TaskAddParameter.multiInstanceSettings
+  - azure-batch.TaskAddParameter.outputFiles
+  - azure-batch.TaskAddParameter.resourceFiles
+  - azure-batch.TaskAddParameter.userIdentity
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="26dba-101">在计算节点上触发恢复操作时，batch 将重试任务。</span><span class="sxs-lookup"><span data-stu-id="26dba-101">Batch will retry tasks when a recovery operation is triggered on a compute node.</span></span>
+
+    <span data-ttu-id="26dba-102">恢复操作的示例包括 （但不限于） 时重启不正常的计算节点或计算节点因主机故障消失。</span><span class="sxs-lookup"><span data-stu-id="26dba-102">Examples of recovery operations include (but are not limited to) when an unhealthy compute node is rebooted or a compute node disappeared due to host failure.</span></span> <span data-ttu-id="26dba-103">由于恢复操作是独立的不会根据 maxTaskRetryCount 计数会重试。</span><span class="sxs-lookup"><span data-stu-id="26dba-103">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span> <span data-ttu-id="26dba-104">即使 maxTaskRetryCount 为 0，恢复操作由于内部重试可能会发生。</span><span class="sxs-lookup"><span data-stu-id="26dba-104">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span> <span data-ttu-id="26dba-105">因此，所有任务应都是幂等。</span><span class="sxs-lookup"><span data-stu-id="26dba-105">Because of this, all tasks should be idempotent.</span></span> <span data-ttu-id="26dba-106">这意味着任务需要允许正在中断并重新启动而不会导致任何损坏或重复的数据。</span><span class="sxs-lookup"><span data-stu-id="26dba-106">This means tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="26dba-107">最佳实践长时间运行的任务是使用某种形式的检查点。</span><span class="sxs-lookup"><span data-stu-id="26dba-107">The best practice for long running tasks is to use some form of checkpointing.</span></span>
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.affinityInfo
+  name: affinityInfo
+  fullName: affinityInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'affinityInfo?: AffinityInformation'
+    return:
+      type:
+      - azure-batch.AffinityInformation
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.applicationPackageReferences
+  name: applicationPackageReferences
+  fullName: applicationPackageReferences
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-108">应用程序包下载并部署到共享目录，不工作目录的任务。</span><span class="sxs-lookup"><span data-stu-id="26dba-108">Application packages are downloaded and deployed to a shared directory, not the task working directory.</span></span> <span data-ttu-id="26dba-109">因此，如果引用的包已在计算节点上，并且是最新，然后不重新下载;使用计算节点上的现有副本。</span><span class="sxs-lookup"><span data-stu-id="26dba-109">Therefore, if a referenced package is already on the compute node, and is up to date, then it is not re-downloaded; the existing copy on the compute node is used.</span></span> <span data-ttu-id="26dba-110">如果引用的应用程序无法安装包，例如因为包已被删除或下载失败，因为该任务将失败。</span><span class="sxs-lookup"><span data-stu-id="26dba-110">If a referenced application package cannot be installed, for example because the package has been deleted or because download failed, the task fails.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+    return:
+      type:
+      - azure-batch.ApplicationPackageReference[]
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.authenticationTokenSettings
+  name: authenticationTokenSettings
+  fullName: authenticationTokenSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-111">如果设置此属性，Batch 服务提供了用于批处理服务操作不需要帐户访问密钥进行身份验证的身份验证令牌的任务。</span><span class="sxs-lookup"><span data-stu-id="26dba-111">If this property is set, the Batch service provides the task with an authentication token which can be used to authenticate Batch service operations without requiring an account access key.</span></span> <span data-ttu-id="26dba-112">通过 AZ_BATCH_AUTHENTICATION_TOKEN 环境变量提供的标记。</span><span class="sxs-lookup"><span data-stu-id="26dba-112">The token is provided via the AZ_BATCH_AUTHENTICATION_TOKEN environment variable.</span></span> <span data-ttu-id="26dba-113">该任务可使用该令牌在执行的操作取决于设置。</span><span class="sxs-lookup"><span data-stu-id="26dba-113">The operations that the task can carry out using the token depend on the settings.</span></span> <span data-ttu-id="26dba-114">例如，任务可以请求以便将其他任务添加到作业，或检查状态的作业或作业下的其他任务的作业权限。</span><span class="sxs-lookup"><span data-stu-id="26dba-114">For example, a task can request job permissions in order to add other tasks to the job, or check the status of the job or of other tasks under the job.</span></span>
+  optional: true
+  syntax:
+    content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+    return:
+      type:
+      - azure-batch.AuthenticationTokenSettings
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-115">对于多实例任务命令行后的主要任务和所有子任务完成执行协调命令行作为主要任务执行。</span><span class="sxs-lookup"><span data-stu-id="26dba-115">For multi-instance tasks, the command line is executed as the primary task, after the primary task and all subtasks have finished executing the coordination command line.</span></span> <span data-ttu-id="26dba-116">命令行不会在 shell 下运行，并因此不能充分利用 shell 功能，例如环境变量扩展。</span><span class="sxs-lookup"><span data-stu-id="26dba-116">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="26dba-117">如果你想要利用此类功能，您应中调用 shell 命令行中，例如使用"cmd /c MyCommand"在 Windows 中或"/ bin/sh-c MyCommand"在 Linux 中。</span><span class="sxs-lookup"><span data-stu-id="26dba-117">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="26dba-118">如果命令行所引用的文件路径，它应使用相对路径 （相对于任务工作目录），或使用批处理提供的环境变量 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。</span><span class="sxs-lookup"><span data-stu-id="26dba-118">If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>
+  syntax:
+    content: 'commandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-119">如果未指定约束，maxTaskRetryCount 是为作业指定的 maxTaskRetryCount、 maxWallClockTime 是无限的和 retentionTime 为 7 天。</span><span class="sxs-lookup"><span data-stu-id="26dba-119">If you do not specify constraints, the maxTaskRetryCount is the maxTaskRetryCount specified for the job, the maxWallClockTime is infinite, and the retentionTime is 7 days.</span></span>
+  optional: true
+  syntax:
+    content: 'constraints?: TaskConstraints'
+    return:
+      type:
+      - azure-batch.TaskConstraints
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-120">如果将运行此任务的池没有设置 containerConfiguration，则必须也设置。</span><span class="sxs-lookup"><span data-stu-id="26dba-120">If the pool that will run this task has containerConfiguration set, this must be set as well.</span></span> <span data-ttu-id="26dba-121">如果将运行此任务的池没有设置 containerConfiguration，这不能设置。</span><span class="sxs-lookup"><span data-stu-id="26dba-121">If the pool that will run this task doesn't have containerConfiguration set, this must not be set.</span></span> <span data-ttu-id="26dba-122">当指定此选项时，如下 AZ_BATCH_NODE_ROOT_DIR （在节点上的 Azure Batch 目录的根） 的所有目录以递归方式都映射到容器、 所有任务的环境变量都都映射到容器中，和是任务命令行在容器中执行。</span><span class="sxs-lookup"><span data-stu-id="26dba-122">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.</span></span>
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.dependsOn
+  name: dependsOn
+  fullName: dependsOn
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-123">此任务将不会计划，直到它依赖于的所有任务已成功都完成。</span><span class="sxs-lookup"><span data-stu-id="26dba-123">This task will not be scheduled until all tasks that it depends on have completed successfully.</span></span> <span data-ttu-id="26dba-124">如果任何这些任务故障并耗尽其重试计数，此任务将永远不会安排。</span><span class="sxs-lookup"><span data-stu-id="26dba-124">If any of those tasks fail and exhaust their retry counts, this task will never be scheduled.</span></span> <span data-ttu-id="26dba-125">如果作业不具有 usesTaskDependencies 设置为 true，且此元素存在，则请求会失败，错误代码为 TaskDependenciesNotSpecifiedOnJob。</span><span class="sxs-lookup"><span data-stu-id="26dba-125">If the job does not have usesTaskDependencies set to true, and this element is present, the request fails with error code TaskDependenciesNotSpecifiedOnJob.</span></span>
+  optional: true
+  syntax:
+    content: 'dependsOn?: TaskDependencies'
+    return:
+      type:
+      - azure-batch.TaskDependencies
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.displayName
+  name: displayName
+  fullName: displayName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-126">显示名称不需要是唯一，并且可以包含最大长度为 1024年的任何 Unicode 字符。</span><span class="sxs-lookup"><span data-stu-id="26dba-126">The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+  optional: true
+  syntax:
+    content: 'displayName?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.exitConditions
+  name: exitConditions
+  fullName: exitConditions
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-127">Batch 服务应如何响应在任务完成时。</span><span class="sxs-lookup"><span data-stu-id="26dba-127">How the Batch service should respond when the task completes.</span></span>
+  optional: true
+  syntax:
+    content: 'exitConditions?: ExitConditions'
+    return:
+      type:
+      - azure-batch.ExitConditions
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-128">ID 可以包含字母数字字符，包括连字符和下划线的任意组合，并且不能包含超过 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="26dba-128">The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters.</span></span> <span data-ttu-id="26dba-129">该 ID 是保留大小写，不区分大小写 （即，您可能没有在作业中仅大小写不同的两个 Id）。</span><span class="sxs-lookup"><span data-stu-id="26dba-129">The ID is case-preserving and case-insensitive (that is, you may not have two IDs within a job that differ only by case).</span></span>
+  syntax:
+    content: 'id: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.multiInstanceSettings
+  name: multiInstanceSettings
+  fullName: multiInstanceSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'multiInstanceSettings?: MultiInstanceSettings'
+    return:
+      type:
+      - azure-batch.MultiInstanceSettings
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.outputFiles
+  name: outputFiles
+  fullName: outputFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-130">对于多实例任务，才会在其执行的主要任务的计算节点从上载文件。</span><span class="sxs-lookup"><span data-stu-id="26dba-130">For multi-instance tasks, the files will only be uploaded from the compute node on which the primary task is executed.</span></span>
+  optional: true
+  syntax:
+    content: 'outputFiles?: OutputFile[]'
+    return:
+      type:
+      - azure-batch.OutputFile[]
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-131">多实例任务的资源文件仅会下载到在其执行的主要任务的计算节点。</span><span class="sxs-lookup"><span data-stu-id="26dba-131">For multi-instance tasks, the resource files will only be downloaded to the compute node on which the primary task is executed.</span></span> <span data-ttu-id="26dba-132">没有资源文件的列表的最大大小。</span><span class="sxs-lookup"><span data-stu-id="26dba-132">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="26dba-133">当超过最大大小时，则请求将失败，并且响应错误代码将是 RequestEntityTooLarge。</span><span class="sxs-lookup"><span data-stu-id="26dba-133">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="26dba-134">如果发生这种情况，必须在大小减少的 ResourceFiles 集合。</span><span class="sxs-lookup"><span data-stu-id="26dba-134">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="26dba-135">这可以实现使用.zip 文件、 应用程序包或 Docker 容器。</span><span class="sxs-lookup"><span data-stu-id="26dba-135">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.TaskAddParameter.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="26dba-136">如果省略，该任务运行作为唯一的非管理用户的任务。</span><span class="sxs-lookup"><span data-stu-id="26dba-136">If omitted, the task runs as a non-administrative user unique to the task.</span></span>
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+references:
+- uid: azure-batch.AffinityInformation
+  name: AffinityInformation
+  spec.typeScript:
+  - name: AffinityInformation
+    fullName: AffinityInformation
+    uid: azure-batch.AffinityInformation
+- uid: azure-batch.ApplicationPackageReference[]
+  name: ApplicationPackageReference[]
+  spec.typeScript:
+  - name: ApplicationPackageReference
+    fullName: ApplicationPackageReference
+    uid: azure-batch.ApplicationPackageReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.AuthenticationTokenSettings
+  name: AuthenticationTokenSettings
+  spec.typeScript:
+  - name: AuthenticationTokenSettings
+    fullName: AuthenticationTokenSettings
+    uid: azure-batch.AuthenticationTokenSettings
+- uid: azure-batch.TaskConstraints
+  name: TaskConstraints
+  spec.typeScript:
+  - name: TaskConstraints
+    fullName: TaskConstraints
+    uid: azure-batch.TaskConstraints
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.TaskDependencies
+  name: TaskDependencies
+  spec.typeScript:
+  - name: TaskDependencies
+    fullName: TaskDependencies
+    uid: azure-batch.TaskDependencies
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ExitConditions
+  name: ExitConditions
+  spec.typeScript:
+  - name: ExitConditions
+    fullName: ExitConditions
+    uid: azure-batch.ExitConditions
+- uid: azure-batch.MultiInstanceSettings
+  name: MultiInstanceSettings
+  spec.typeScript:
+  - name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    uid: azure-batch.MultiInstanceSettings
+- uid: azure-batch.OutputFile[]
+  name: OutputFile[]
+  spec.typeScript:
+  - name: OutputFile
+    fullName: OutputFile
+    uid: azure-batch.OutputFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity

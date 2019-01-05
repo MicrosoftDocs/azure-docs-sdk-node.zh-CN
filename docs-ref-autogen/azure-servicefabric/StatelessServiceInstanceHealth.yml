@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7ee2030edfb8d3fd7e62c662828dd18a49186c00
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52072915"
+items:
+- uid: azure-servicefabric.StatelessServiceInstanceHealth
+  name: StatelessServiceInstanceHealth
+  fullName: StatelessServiceInstanceHealth
+  children:
+  - azure-servicefabric.StatelessServiceInstanceHealth.instanceId
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="5022c-101">表示无状态服务实例的运行状况。</span><span class="sxs-lookup"><span data-stu-id="5022c-101">Represents the health of the stateless service instance.</span></span>
+
+    <span data-ttu-id="5022c-102">包含的实例聚合运行状况状态、 运行状况事件和不正常评估。</span><span class="sxs-lookup"><span data-stu-id="5022c-102">Contains the instance aggregated health state, the health events and the unhealthy evaluations.</span></span>
+  extends:
+    name: azure-servicefabric.ReplicaHealth
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatelessServiceInstanceHealth.instanceId
+  name: instanceId
+  fullName: instanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="5022c-103">无状态服务实例的 id。</span><span class="sxs-lookup"><span data-stu-id="5022c-103">Id of a stateless service instance.</span></span> <span data-ttu-id="5022c-104">Service Fabric 使用实例 Id 来唯一标识的无状态服务分区的实例。</span><span class="sxs-lookup"><span data-stu-id="5022c-104">InstanceId is used by Service Fabric to uniquely identify an instance of a partition of a stateless service.</span></span> <span data-ttu-id="5022c-105">它是唯一在分区中并不会更改实例的生存期内。</span><span class="sxs-lookup"><span data-stu-id="5022c-105">It is unique within a partition and does not change for the lifetime of the instance.</span></span> <span data-ttu-id="5022c-106">如果该实例具有相同或不同节点上故障转移，它将获取实例 Id 不同的值。</span><span class="sxs-lookup"><span data-stu-id="5022c-106">If the instance has failed over on the same or different node, it will get a different value for the InstanceId.</span></span>
+  optional: true
+  syntax:
+    content: 'instanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ReplicaHealth
+  name: ReplicaHealth
+  spec.typeScript:
+  - name: ReplicaHealth
+    fullName: ReplicaHealth
+    uid: azure-servicefabric.ReplicaHealth

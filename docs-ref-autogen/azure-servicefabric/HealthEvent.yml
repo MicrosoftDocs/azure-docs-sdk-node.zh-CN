@@ -1,0 +1,144 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c83147093121e6d6da6f78ed362246e879f6c40f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52083912"
+items:
+- uid: azure-servicefabric.HealthEvent
+  name: HealthEvent
+  fullName: HealthEvent
+  children:
+  - azure-servicefabric.HealthEvent.isExpired
+  - azure-servicefabric.HealthEvent.lastErrorTransitionAt
+  - azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+  - azure-servicefabric.HealthEvent.lastOkTransitionAt
+  - azure-servicefabric.HealthEvent.lastWarningTransitionAt
+  - azure-servicefabric.HealthEvent.sourceUtcTimestamp
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="95f2c-101">表示报告运行状况实体，例如群集、 应用程序或节点中，添加通过运行状况管理器中的其他元数据的运行状况信息。</span><span class="sxs-lookup"><span data-stu-id="95f2c-101">Represents health information reported on a health entity, such as cluster, application or node, with additional metadata added by the Health Manager.</span></span>
+  extends:
+    name: azure-servicefabric.HealthInformation
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.isExpired
+  name: isExpired
+  fullName: isExpired
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="95f2c-102">如果运行状况事件已过期，否则为 false，则返回 true。</span><span class="sxs-lookup"><span data-stu-id="95f2c-102">Returns true if the health event is expired, otherwise false.</span></span>
+  optional: true
+  syntax:
+    content: 'isExpired?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastErrorTransitionAt
+  name: lastErrorTransitionAt
+  fullName: lastErrorTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="95f2c-103">如果当前的运行状况状态为 Error，此属性返回的运行状况报表第一次使用错误报告的时间。</span><span class="sxs-lookup"><span data-stu-id="95f2c-103">If the current health state is 'Error', this property returns the time at which the health report was first reported with 'Error'.</span></span> <span data-ttu-id="95f2c-104">针对定期报告具有相同状态的多个报表可能生成的但是，此属性返回的日期和时间接收运行状况报表的第一个错误。</span><span class="sxs-lookup"><span data-stu-id="95f2c-104">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Error' health report was received.</span></span>
+
+    <span data-ttu-id="95f2c-105">如果当前的运行状况状态为确定或警告，将返回的日期和时间的运行状况状态在错误，最后一个之前转换到不同的状态。</span><span class="sxs-lookup"><span data-stu-id="95f2c-105">If the current health state is 'Ok' or 'Warning', returns the date and time at which the health state was last in 'Error', before transitioning to a different state.</span></span>
+
+
+    <span data-ttu-id="95f2c-106">如果运行状况状态永远不会为 Error，值将是零个日期时间。</span><span class="sxs-lookup"><span data-stu-id="95f2c-106">If the health state was never 'Error', the value will be zero date-time.</span></span>
+  optional: true
+  syntax:
+    content: 'lastErrorTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+  name: lastModifiedUtcTimestamp
+  fullName: lastModifiedUtcTimestamp
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="95f2c-107">日期和时间的运行状况报告上次修改时由运行状况存储中。</span><span class="sxs-lookup"><span data-stu-id="95f2c-107">The date and time when the health report was last modified by the health store.</span></span>
+  optional: true
+  syntax:
+    content: 'lastModifiedUtcTimestamp?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastOkTransitionAt
+  name: lastOkTransitionAt
+  fullName: lastOkTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="95f2c-108">如果当前的运行状况状态为确定，此属性返回的运行状况报告被首先报告正常的时间。</span><span class="sxs-lookup"><span data-stu-id="95f2c-108">If the current health state is 'Ok', this property returns the time at which the health report was first reported with 'Ok'.</span></span>
+
+    <span data-ttu-id="95f2c-109">针对定期报告具有相同状态的多个报表可能生成。</span><span class="sxs-lookup"><span data-stu-id="95f2c-109">For periodic reporting, many reports with the same state may have been generated.</span></span>
+
+    <span data-ttu-id="95f2c-110">此属性返回的日期和时间收到第一个确定运行状况报告。</span><span class="sxs-lookup"><span data-stu-id="95f2c-110">This property returns the date and time when the first 'Ok' health report was received.</span></span>
+
+    <span data-ttu-id="95f2c-111">如果当前的运行状况状态为 Error 或警告，将返回的日期和时间的运行状况状态上次之前转换到不同的状态确定。</span><span class="sxs-lookup"><span data-stu-id="95f2c-111">If the current health state is 'Error' or 'Warning', returns the date and time at which the health state was last in 'Ok', before transitioning to a different state.</span></span>
+
+
+    <span data-ttu-id="95f2c-112">如果运行状况状态为永远不会确定，值将是零个日期时间。</span><span class="sxs-lookup"><span data-stu-id="95f2c-112">If the health state was never 'Ok', the value will be zero date-time.</span></span>
+  optional: true
+  syntax:
+    content: 'lastOkTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastWarningTransitionAt
+  name: lastWarningTransitionAt
+  fullName: lastWarningTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="95f2c-113">如果当前的运行状况状态为警告，此属性返回的运行状况报告被首先报告警告的时间。</span><span class="sxs-lookup"><span data-stu-id="95f2c-113">If the current health state is 'Warning', this property returns the time at which the health report was first reported with 'Warning'.</span></span> <span data-ttu-id="95f2c-114">针对定期报告具有相同状态的多个报表可能生成的但是，此属性返回收到的日期和时间的第一个警告运行状况报告。</span><span class="sxs-lookup"><span data-stu-id="95f2c-114">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Warning' health report was received.</span></span>
+
+    <span data-ttu-id="95f2c-115">如果当前的运行状况状态为确定或错误，将返回的日期和时间的运行状况状态上次警告之前转换到不同的状态。</span><span class="sxs-lookup"><span data-stu-id="95f2c-115">If the current health state is 'Ok' or 'Error', returns the date and time at which the health state was last in 'Warning', before transitioning to a different state.</span></span>
+
+
+    <span data-ttu-id="95f2c-116">如果运行状况状态已永远不会警告，值将为零的日期时间。</span><span class="sxs-lookup"><span data-stu-id="95f2c-116">If the health state was never 'Warning', the value will be zero date-time.</span></span>
+  optional: true
+  syntax:
+    content: 'lastWarningTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.sourceUtcTimestamp
+  name: sourceUtcTimestamp
+  fullName: sourceUtcTimestamp
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="95f2c-117">日期和时间时由源发送运行状况报告。</span><span class="sxs-lookup"><span data-stu-id="95f2c-117">The date and time when the health report was sent by the source.</span></span>
+  optional: true
+  syntax:
+    content: 'sourceUtcTimestamp?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthInformation
+  name: HealthInformation
+  spec.typeScript:
+  - name: HealthInformation
+    fullName: HealthInformation
+    uid: azure-servicefabric.HealthInformation

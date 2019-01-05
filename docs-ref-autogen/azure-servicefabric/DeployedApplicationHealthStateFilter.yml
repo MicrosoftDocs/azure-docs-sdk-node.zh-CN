@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0fbf83409e62f7acedc3729ce9102713395482bd
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52083892"
+items:
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter
+  name: DeployedApplicationHealthStateFilter
+  fullName: DeployedApplicationHealthStateFilter
+  children:
+  - azure-servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters
+  - azure-servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter
+  - azure-servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="1aed5-101">定义匹配条件以确定是否已部署的应用程序应包括作为群集运行状况区块中的应用程序的子级。</span><span class="sxs-lookup"><span data-stu-id="1aed5-101">Defines matching criteria to determine whether a deployed application should be included as a child of an application in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="1aed5-102">如果父应用程序与群集运行状况区块查询说明中指定的筛选器相匹配，仅返回已部署应用程序。</span><span class="sxs-lookup"><span data-stu-id="1aed5-102">The deployed applications are only returned if the parent application matches a filter specified in the cluster health chunk query description.</span></span>
+
+    <span data-ttu-id="1aed5-103">一个筛选器可以匹配零个、 一个或多个部署的应用程序，具体取决于其属性。</span><span class="sxs-lookup"><span data-stu-id="1aed5-103">One filter can match zero, one or multiple deployed applications, depending on its properties.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters
+  name: deployedServicePackageFilters
+  fullName: deployedServicePackageFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="1aed5-104">定义的已部署的服务包要作为子级的父级已部署应用程序包含在返回的群集运行状况区块中指定的筛选器的列表。</span><span class="sxs-lookup"><span data-stu-id="1aed5-104">Defines a list of filters that specify which deployed service packages to be included in the returned cluster health chunk as children of the parent deployed application.</span></span> <span data-ttu-id="1aed5-105">仅当父部署应用程序匹配筛选器返回的已部署的服务包。</span><span class="sxs-lookup"><span data-stu-id="1aed5-105">The deployed service packages are returned only if the parent deployed application matches a filter.</span></span>
+
+    <span data-ttu-id="1aed5-106">如果列表为空，则不返回任何已部署的服务包。</span><span class="sxs-lookup"><span data-stu-id="1aed5-106">If the list is empty, no deployed service packages are returned.</span></span> <span data-ttu-id="1aed5-107">所有已部署的服务包都用于评估父部署应用程序聚合运行状况状态，而不考虑输入筛选器。</span><span class="sxs-lookup"><span data-stu-id="1aed5-107">All the deployed service packages are used to evaluate the parent deployed application aggregated health state, regardless of the input filters.</span></span>
+
+    <span data-ttu-id="1aed5-108">部署的应用程序筛选器可以指定多个已部署的服务包筛选器。</span><span class="sxs-lookup"><span data-stu-id="1aed5-108">The deployed application filter may specify multiple deployed service package filters.</span></span>
+
+    <span data-ttu-id="1aed5-109">例如，它可以指定一个筛选器以返回所有已部署的服务包具有运行状况状态错误和另一个筛选器以始终包括在节点上的已部署的服务包。</span><span class="sxs-lookup"><span data-stu-id="1aed5-109">For example, it can specify a filter to return all deployed service packages with health state Error and another filter to always include a deployed service package on a node.</span></span>
+  optional: true
+  syntax:
+    content: 'deployedServicePackageFilters?: DeployedServicePackageHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.DeployedServicePackageHealthStateFilter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="1aed5-110">部署的应用程序的运行状况状态筛选器。</span><span class="sxs-lookup"><span data-stu-id="1aed5-110">The filter for the health state of the deployed applications.</span></span> <span data-ttu-id="1aed5-111">它允许选择已部署应用程序，如果它们匹配所需的运行状况状态。</span><span class="sxs-lookup"><span data-stu-id="1aed5-111">It allows selecting deployed applications if they match the desired health states.</span></span>
+
+    <span data-ttu-id="1aed5-112">可能值包括以下运行状况状态之一的整数值。</span><span class="sxs-lookup"><span data-stu-id="1aed5-112">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="1aed5-113">返回仅已部署的应用程序的筛选器匹配。</span><span class="sxs-lookup"><span data-stu-id="1aed5-113">Only deployed applications that match the filter are returned.</span></span> <span data-ttu-id="1aed5-114">所有已部署应用程序用于评估聚合的群集运行状况状态。</span><span class="sxs-lookup"><span data-stu-id="1aed5-114">All deployed applications are used to evaluate the cluster aggregated health state.</span></span>
+
+    <span data-ttu-id="1aed5-115">如果未指定，默认值的为 None、，除非另有指定的节点名称。</span><span class="sxs-lookup"><span data-stu-id="1aed5-115">If not specified, default value is None, unless the node name is specified.</span></span> <span data-ttu-id="1aed5-116">如果筛选器都有默认值并指定节点名称，则返回匹配的已部署应用程序。</span><span class="sxs-lookup"><span data-stu-id="1aed5-116">If the filter has default value and node name is specified, the matching deployed application is returned.</span></span>
+
+    <span data-ttu-id="1aed5-117">状态值为基于标志的枚举，因此该值可是使用按位“OR”运算符获取的值的组合。</span><span class="sxs-lookup"><span data-stu-id="1aed5-117">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="1aed5-118">例如，如果提供的值为 6，它可匹配已部署应用程序与 HealthState 值为 OK (2) 和 Warning (4)。</span><span class="sxs-lookup"><span data-stu-id="1aed5-118">For example, if the provided value is 6, it matches deployed applications with HealthState value of OK (2) and Warning (4).</span></span>
+
+    - <span data-ttu-id="1aed5-119">Default-默认值。</span><span class="sxs-lookup"><span data-stu-id="1aed5-119">Default - Default value.</span></span> <span data-ttu-id="1aed5-120">匹配任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="1aed5-120">Matches any HealthState.</span></span> <span data-ttu-id="1aed5-121">值为 0。</span><span class="sxs-lookup"><span data-stu-id="1aed5-121">The value is zero.</span></span>
+
+    - <span data-ttu-id="1aed5-122">无-不与任何 HealthState 值匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="1aed5-122">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="1aed5-123">未返回有关给定状态集合的结果时使用。</span><span class="sxs-lookup"><span data-stu-id="1aed5-123">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="1aed5-124">值为 1。</span><span class="sxs-lookup"><span data-stu-id="1aed5-124">The value is 1.</span></span>
+
+    - <span data-ttu-id="1aed5-125">Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。</span><span class="sxs-lookup"><span data-stu-id="1aed5-125">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="1aed5-126">值为 2。</span><span class="sxs-lookup"><span data-stu-id="1aed5-126">The value is 2.</span></span>
+
+    - <span data-ttu-id="1aed5-127">警告-筛选器的输入匹配与 HealthState 值为 Warning。</span><span class="sxs-lookup"><span data-stu-id="1aed5-127">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="1aed5-128">值为 4。</span><span class="sxs-lookup"><span data-stu-id="1aed5-128">The value is 4.</span></span>
+
+    - <span data-ttu-id="1aed5-129">Error-与 HealthState 值为 Error 的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="1aed5-129">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="1aed5-130">值为 8。</span><span class="sxs-lookup"><span data-stu-id="1aed5-130">The value is 8.</span></span>
+
+    - <span data-ttu-id="1aed5-131">All-与具有任意 HealthState 值的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="1aed5-131">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="1aed5-132">值为 65535。</span><span class="sxs-lookup"><span data-stu-id="1aed5-132">The value is 65535.</span></span>
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter
+  name: nodeNameFilter
+  fullName: nodeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="1aed5-133">部署应用程序是其中，这样的筛选器匹配的节点的名称。</span><span class="sxs-lookup"><span data-stu-id="1aed5-133">The name of the node where the application is deployed in order to match the filter.</span></span>
+
+    <span data-ttu-id="1aed5-134">如果指定，该筛选器只应用到指定节点上部署的应用程序。</span><span class="sxs-lookup"><span data-stu-id="1aed5-134">If specified, the filter is applied only to the application deployed on the specified node.</span></span>
+
+    <span data-ttu-id="1aed5-135">如果没有具有指定名称的节点上部署应用程序，没有任何已部署的应用程序返回群集运行状况区块根据此筛选器。</span><span class="sxs-lookup"><span data-stu-id="1aed5-135">If the application is not deployed on the node with the specified name, no deployed application is returned in the cluster health chunk based on this filter.</span></span>
+
+    <span data-ttu-id="1aed5-136">否则，部署的应用程序包括在群集运行状况区块，如果它尊重其他筛选器属性。</span><span class="sxs-lookup"><span data-stu-id="1aed5-136">Otherwise, the deployed application is included in the cluster health chunk if it respects the other filter properties.</span></span>
+
+    <span data-ttu-id="1aed5-137">如果未指定，则所有已部署的应用程序与父筛选器匹配 （如果有） 纳入考虑范围，与其他筛选器成员，如运行状况状态筛选器相匹配。</span><span class="sxs-lookup"><span data-stu-id="1aed5-137">If not specified, all deployed applications that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+  optional: true
+  syntax:
+    content: 'nodeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter[]
+  name: DeployedServicePackageHealthStateFilter[]
+  spec.typeScript:
+  - name: DeployedServicePackageHealthStateFilter
+    fullName: DeployedServicePackageHealthStateFilter
+    uid: azure-servicefabric.DeployedServicePackageHealthStateFilter
+  - name: '[]'
+    fullName: '[]'

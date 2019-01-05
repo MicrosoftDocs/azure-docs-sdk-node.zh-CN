@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: aaa8b6196d68deb789376b3075812c12ee5b5104
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52017452"
+items:
+- uid: ms-rest-azure.loginWithAuthFile
+  name: loginWithAuthFile(AuthFileOptions)
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: >
+    使用此方法之前请安装 az cli 从https://github.com/Azure/azure-cli/releases。 然后执行`az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`。
+
+    如果你想要创建针对不同的云/环境 sp 然后请执行：
+
+    1. az 云列表
+
+    2. az 云设置 – n <name of the environment>
+
+    3. az ad sp 为 rbac 创建-sdk 身份验证 > auth.json 如果服务主体已创建然后登录使用服务主体信息：
+
+    3. az 登录名-服务主体-u <clientId> -p <clientSecret> -t <tenantId>
+
+    4. az 帐户会显示-sdk 身份验证 > auth.json
+
+
+    使用身份验证文件中提供的服务主体信息进行身份验证。 为用户提供的环境变量的 options 参数或默认值 AZURE_SUBSCRIPTION_ID 中，此方法将从身份验证文件设置订阅 Id。
+  syntax:
+    content: 'function loginWithAuthFile(options?: AuthFileOptions)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest-azure.AuthFileOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<ms-rest-azure.ApplicationTokenCredentials>
+  package: ms-rest-azure
+references:
+- uid: ms-rest-azure.AuthFileOptions
+  name: AuthFileOptions
+  spec.typeScript:
+  - name: AuthFileOptions
+    fullName: AuthFileOptions
+    uid: ms-rest-azure.AuthFileOptions
+- uid: Promise<ms-rest-azure.ApplicationTokenCredentials>
+  name: ApplicationTokenCredentials>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ApplicationTokenCredentials
+    fullName: ApplicationTokenCredentials
+    uid: ms-rest-azure.ApplicationTokenCredentials
+  - name: '>'
+    fullName: '>'

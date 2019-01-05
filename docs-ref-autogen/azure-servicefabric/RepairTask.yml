@@ -1,0 +1,358 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5777e998a9726c2c811e04d5dc0efbc786c7eacd
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52141242"
+items:
+- uid: azure-servicefabric.RepairTask
+  name: RepairTask
+  fullName: RepairTask
+  children:
+  - azure-servicefabric.RepairTask.action
+  - azure-servicefabric.RepairTask.description
+  - azure-servicefabric.RepairTask.executor
+  - azure-servicefabric.RepairTask.executorData
+  - azure-servicefabric.RepairTask.flags
+  - azure-servicefabric.RepairTask.history
+  - azure-servicefabric.RepairTask.impact
+  - azure-servicefabric.RepairTask.performPreparingHealthCheck
+  - azure-servicefabric.RepairTask.performRestoringHealthCheck
+  - azure-servicefabric.RepairTask.preparingHealthCheckState
+  - azure-servicefabric.RepairTask.restoringHealthCheckState
+  - azure-servicefabric.RepairTask.resultCode
+  - azure-servicefabric.RepairTask.resultDetails
+  - azure-servicefabric.RepairTask.resultStatus
+  - azure-servicefabric.RepairTask.state
+  - azure-servicefabric.RepairTask.target
+  - azure-servicefabric.RepairTask.taskId
+  - azure-servicefabric.RepairTask.version
+  langs:
+  - typeScript
+  type: interface
+  summary: >
+    表示修复任务，其中包括有关请求的修复类型，其进度是其最终结果是什么的信息。
+
+    此类型支持的 Service Fabric 平台;不应在代码中直接使用。
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.action
+  name: action
+  fullName: action
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 请求的修复操作。 创建的修复任务，并将不可变的一次设置时，必须指定。
+  syntax:
+    content: 'action: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.description
+  name: description
+  fullName: description
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    修复任务或其他信息性的详细信息的用途的说明。
+
+    可能时设置的修复任务创建的并且是不可变一次设置。
+  optional: true
+  syntax:
+    content: 'description?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.executor
+  name: executor
+  fullName: executor
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 修复执行程序的名称。 必须指定处于索取和更高版本的状态，并且是不可变的一次设置。
+  optional: true
+  syntax:
+    content: 'executor?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.executorData
+  name: executorData
+  fullName: executorData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 可以使用的修复执行程序来存储其内部状态数据字符串。
+  optional: true
+  syntax:
+    content: 'executorData?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.flags
+  name: flags
+  fullName: flags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    按位或的以下值，提供有关修复任务的状态的其他详细信息。
+
+    - 1-已请求取消的修复
+
+    - 2-中止的修复已请求
+
+    - 4-审批修复的强制通过客户端请求
+  optional: true
+  syntax:
+    content: 'flags?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.history
+  name: history
+  fullName: history
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    一个包含时间戳的修复任务的状态转换的对象。
+
+    这些时间戳系统更新，并且无法直接进行修改。
+  optional: true
+  syntax:
+    content: 'history?: RepairTaskHistory'
+    return:
+      type:
+      - azure-servicefabric.RepairTaskHistory
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.impact
+  name: impact
+  fullName: impact
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    影响对象确定系统将执行准备所产生的影响的修复之前批准的修复执行哪些操作。
+
+    转换到准备状态时，必须通过的修复执行程序指定影响和不可变的一次设置。
+  optional: true
+  syntax:
+    content: 'impact?: RepairImpactDescriptionBase'
+    return:
+      type:
+      - azure-servicefabric.RepairImpactDescriptionBase
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.performPreparingHealthCheck
+  name: performPreparingHealthCheck
+  fullName: performPreparingHealthCheck
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 要确定修复任务进入准备状态时，是否将执行运行状况检查的值。
+  optional: true
+  syntax:
+    content: 'performPreparingHealthCheck?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.performRestoringHealthCheck
+  name: performRestoringHealthCheck
+  fullName: performRestoringHealthCheck
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 要确定时修复任务将进入 Restoring 状态，是否将执行运行状况检查的值。
+  optional: true
+  syntax:
+    content: 'performRestoringHealthCheck?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.preparingHealthCheckState
+  name: preparingHealthCheckState
+  fullName: preparingHealthCheckState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    运行状况检查的修复任务处于准备状态时的工作流状态。
+
+    可能的值包括：NotStarted、 正在进行已成功，跳过，超时
+  optional: true
+  syntax:
+    content: 'preparingHealthCheckState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.restoringHealthCheckState
+  name: restoringHealthCheckState
+  fullName: restoringHealthCheckState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    运行状况检查的修复任务处于 Restoring 状态时的工作流状态。
+
+    可能的值包括：NotStarted、 正在进行已成功，跳过，超时
+  optional: true
+  syntax:
+    content: 'restoringHealthCheckState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultCode
+  name: resultCode
+  fullName: resultCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    数字值提供的修复任务执行结果有关的其他详细信息。
+
+    可以指定在还原和更高版本的状态，并且是不可变的一次设置。
+  optional: true
+  syntax:
+    content: 'resultCode?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultDetails
+  name: resultDetails
+  fullName: resultDetails
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    提供的修复任务执行结果有关的其他详细信息的字符串。
+
+    可以指定在还原和更高版本的状态，并且是不可变的一次设置。
+  optional: true
+  syntax:
+    content: 'resultDetails?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultStatus
+  name: resultStatus
+  fullName: resultStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 描述总体的修复任务执行结果的值。 必须指定处于正在还原和更高版本的状态，并且是不可变的一次设置。 可能的值包括：Invalid、 已成功，取消、 中断、 失败，挂起
+  optional: true
+  syntax:
+    content: 'resultStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 修复任务工作流状态。 有效的初始状态为已创建、 索取和准备。 可能的值包括：Invalid、 创建，已声明，准备，批准，执行、 还原，已完成
+  syntax:
+    content: 'state: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.target
+  name: target
+  fullName: target
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    目标对象确定系统将执行准备所产生的影响的修复之前批准的修复执行哪些操作。
+
+    可能时设置的修复任务创建的并且是不可变一次设置。
+  optional: true
+  syntax:
+    content: 'target?: RepairTargetDescriptionBase'
+    return:
+      type:
+      - azure-servicefabric.RepairTargetDescriptionBase
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.taskId
+  name: taskId
+  fullName: taskId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 修复任务的 ID。
+  syntax:
+    content: 'taskId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.version
+  name: version
+  fullName: version
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    修复任务的版本。
+
+    创建新的修复任务时，版本必须设置为零。  当更新修复任务时，是进行开放式并发检查使用的版本。  如果版本设置为零，更新将不检查写入冲突。  如果版本设置为非零值，然后更新才会成功的修复任务的实际当前版本与此值匹配。
+  optional: true
+  syntax:
+    content: 'version?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.RepairTaskHistory
+  name: RepairTaskHistory
+  spec.typeScript:
+  - name: RepairTaskHistory
+    fullName: RepairTaskHistory
+    uid: azure-servicefabric.RepairTaskHistory
+- uid: azure-servicefabric.RepairImpactDescriptionBase
+  name: RepairImpactDescriptionBase
+  spec.typeScript:
+  - name: RepairImpactDescriptionBase
+    fullName: RepairImpactDescriptionBase
+    uid: azure-servicefabric.RepairImpactDescriptionBase
+- uid: azure-servicefabric.RepairTargetDescriptionBase
+  name: RepairTargetDescriptionBase
+  spec.typeScript:
+  - name: RepairTargetDescriptionBase
+    fullName: RepairTargetDescriptionBase
+    uid: azure-servicefabric.RepairTargetDescriptionBase

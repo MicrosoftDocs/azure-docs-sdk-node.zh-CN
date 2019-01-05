@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 87bc4cfb3b8e0175a58f47841351bf089100a9d2
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53674421"
+items:
+- uid: azure-batch.JobConstraints
+  name: JobConstraints
+  fullName: JobConstraints
+  children:
+  - azure-batch.JobConstraints.maxTaskRetryCount
+  - azure-batch.JobConstraints.maxWallClockTime
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobConstraints.maxTaskRetryCount
+  name: maxTaskRetryCount
+  fullName: maxTaskRetryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 请注意，此值专门用于控制重试的次数。 批处理服务将尝试一次，每个任务，然后重试，直至达到此限制。 例如，如果最大重试计数为 3，则批处理任务最多尝试任务 4 次（一次是初始尝试，其余 3 次是重试）。 如果最大重试计数为 0，则批处理服务不会重试任务。 如果最大重试计数为 -1，则批处理服务会无限制地重试任务。 默认值为 0（不重试）。
+  optional: true
+  syntax:
+    content: 'maxTaskRetryCount?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.JobConstraints.maxWallClockTime
+  name: maxWallClockTime
+  fullName: maxWallClockTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果作业未完成的时间限制内，Batch 服务将终止它和仍在运行任何任务。 在这种情况下，终止的原因为 MaxWallClockTimeExpiry。 如果未指定此属性，则没有时间限制上对作业可能运行多长时间。
+  optional: true
+  syntax:
+    content: 'maxWallClockTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch

@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b8c41bfe89c1c4cc827663b8c0d1876afe8470e2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52099702"
+items:
+- uid: azure-servicefabric.ClusterHealthChunk
+  name: ClusterHealthChunk
+  fullName: ClusterHealthChunk
+  children:
+  - azure-servicefabric.ClusterHealthChunk.applicationHealthStateChunks
+  - azure-servicefabric.ClusterHealthChunk.healthState
+  - azure-servicefabric.ClusterHealthChunk.nodeHealthStateChunks
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    表示群集的运行状况区块。
+
+    包含聚合的群集运行状况状态，并采用输入筛选器的群集实体。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.applicationHealthStateChunks
+  name: applicationHealthStateChunks
+  fullName: applicationHealthStateChunks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 群集运行状况区块查询说明中与筛选器在群集中分割应用程序运行状况状态的列表。
+  optional: true
+  syntax:
+    content: 'applicationHealthStateChunks?: ApplicationHealthStateChunkList'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthStateChunkList
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    表示计算运行状况管理器通过在群集的聚合运行状况状态 HealthState。
+
+    实体的运行状况评估反映了在实体和 （如果有） 及其子级上报告的所有事件。
+
+    聚合是通过应用所需的群集运行状况策略和应用程序运行状况策略。 可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+  optional: true
+  syntax:
+    content: 'healthState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.nodeHealthStateChunks
+  name: nodeHealthStateChunks
+  fullName: nodeHealthStateChunks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 群集运行状况区块查询说明中与筛选器在群集中分块节点运行状况状态的列表。
+  optional: true
+  syntax:
+    content: 'nodeHealthStateChunks?: NodeHealthStateChunkList'
+    return:
+      type:
+      - azure-servicefabric.NodeHealthStateChunkList
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthStateChunkList
+  name: ApplicationHealthStateChunkList
+  spec.typeScript:
+  - name: ApplicationHealthStateChunkList
+    fullName: ApplicationHealthStateChunkList
+    uid: azure-servicefabric.ApplicationHealthStateChunkList
+- uid: azure-servicefabric.NodeHealthStateChunkList
+  name: NodeHealthStateChunkList
+  spec.typeScript:
+  - name: NodeHealthStateChunkList
+    fullName: NodeHealthStateChunkList
+    uid: azure-servicefabric.NodeHealthStateChunkList

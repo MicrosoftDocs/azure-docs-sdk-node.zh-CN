@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 212961c9b7831a4c38c55e53e6b86675552138a6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52096421"
+items:
+- uid: azure-servicefabric.PartitionHealthEvaluation
+  name: PartitionHealthEvaluation
+  fullName: PartitionHealthEvaluation
+  children:
+  - azure-servicefabric.PartitionHealthEvaluation.partitionId
+  - azure-servicefabric.PartitionHealthEvaluation.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: 表示运行状况评估针对分区，其中包含有关数据和运行状况存储用于评估运行状况的算法的信息。 仅当聚合运行状况状态为错误或警告时，才返回计算。
+  extends:
+    name: azure-servicefabric.HealthEvaluation
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionHealthEvaluation.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 由此对象描述的运行状况评估的分区的 id。
+  optional: true
+  syntax:
+    content: 'partitionId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionHealthEvaluation.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 导致当前分区的聚合的运行状态的不正常评估的列表。 ReplicasHealthEvaluation 或 EventHealthEvaluation，可以是类型的不正常评估。
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvaluation
+  name: HealthEvaluation
+  spec.typeScript:
+  - name: HealthEvaluation
+    fullName: HealthEvaluation
+    uid: azure-servicefabric.HealthEvaluation
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'

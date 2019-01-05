@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ae5e92e8b861f900a9d2364bbb1fc70519d0fabf
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48550295"
+items:
+- uid: '@azure/event-hubs.RetryConfig'
+  name: RetryConfig
+  fullName: RetryConfig<T>
+  children:
+  - '@azure/event-hubs.RetryConfig.connectionId'
+  - '@azure/event-hubs.RetryConfig.delayInSeconds'
+  - '@azure/event-hubs.RetryConfig.operation'
+  - '@azure/event-hubs.RetryConfig.operationType'
+  - '@azure/event-hubs.RetryConfig.times'
+  langs:
+  - typeScript
+  type: interface
+  summary: 介绍需要配置重试操作的参数。
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.connectionId'
+  name: connectionId
+  fullName: connectionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {string} connectionId 的连接标识符。 用于日志记录信息。
+
+    在同一文件中所记录的多个连接时非常有用。
+  syntax:
+    content: 'connectionId: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.delayInSeconds'
+  name: delayInSeconds
+  fullName: delayInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number}[delayInSeconds]以秒为单位进行下一次尝试之前等待的时间量。 默认值：15.'
+  optional: true
+  syntax:
+    content: 'delayInSeconds?: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.operation'
+  name: operation
+  fullName: operation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{承诺<T>} 操作需要重试该操作。'
+  syntax:
+    content: 'operation: () => Promise<T>'
+    return:
+      type:
+      - () => Promise<T>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.operationType'
+  name: operationType
+  fullName: operationType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {RetryOperationType} operationType 要执行的操作名称/类型。
+
+    中提供更好的调试日志非常有用。
+  syntax:
+    content: 'operationType: RetryOperationType'
+    return:
+      type:
+      - '@azure/event-hubs.RetryOperationType'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.times'
+  name: times
+  fullName: times
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number}[时间]该操作需要在出错时重试次数。 默认值：3.'
+  optional: true
+  syntax:
+    content: 'times?: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.RetryOperationType'
+  name: RetryOperationType
+  spec.typeScript:
+  - name: RetryOperationType
+    fullName: RetryOperationType
+    uid: '@azure/event-hubs.RetryOperationType'

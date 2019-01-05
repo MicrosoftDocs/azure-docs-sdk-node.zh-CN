@@ -1,0 +1,181 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a9b7f6544194a1f83e2552de130e6fab8f1cf9c0
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52099572"
+items:
+- uid: azure-servicefabric.ApplicationUpgradeDescription
+  name: ApplicationUpgradeDescription
+  fullName: ApplicationUpgradeDescription
+  children:
+  - azure-servicefabric.ApplicationUpgradeDescription.applicationHealthPolicy
+  - azure-servicefabric.ApplicationUpgradeDescription.forceRestart
+  - azure-servicefabric.ApplicationUpgradeDescription.monitoringPolicy
+  - azure-servicefabric.ApplicationUpgradeDescription.name
+  - azure-servicefabric.ApplicationUpgradeDescription.parameters
+  - azure-servicefabric.ApplicationUpgradeDescription.rollingUpgradeMode
+  - azure-servicefabric.ApplicationUpgradeDescription.targetApplicationTypeVersion
+  - azure-servicefabric.ApplicationUpgradeDescription.upgradeKind
+  - azure-servicefabric.ApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds
+  langs:
+  - typeScript
+  type: interface
+  summary: 介绍为应用程序升级参数。 请注意，升级说明将替换现有应用程序说明。 这意味着，如果未指定参数，应用程序的现有参数将替换为空的参数列表。 这会导致应用程序使用应用程序清单中的默认参数值。 如果您不想要更改任何现有的参数值，请获取首次使用 GetApplicationInfo 查询的应用程序参数，然后作为此 ApplicationUpgradeDescription 中的参数将提供这些值。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.applicationHealthPolicy
+  name: applicationHealthPolicy
+  fullName: applicationHealthPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 定义用于评估应用程序或其中一个及其子实体的运行状况的运行状况策略。
+  optional: true
+  syntax:
+    content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthPolicy
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.forceRestart
+  name: forceRestart
+  fullName: forceRestart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果为 true，然后强制重启进程在升级期间即使代码版本没有改变 （升级仅更改配置或数据）。
+  optional: true
+  syntax:
+    content: 'forceRestart?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.monitoringPolicy
+  name: monitoringPolicy
+  fullName: monitoringPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 介绍用于监视以监视模式升级的参数。
+  optional: true
+  syntax:
+    content: 'monitoringPolicy?: MonitoringPolicyDescription'
+    return:
+      type:
+      - azure-servicefabric.MonitoringPolicyDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 目标应用程序的名称包括 fabric:应用程序全名。
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.parameters
+  name: parameters
+  fullName: parameters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 从应用程序清单中指定其默认值重写的值与应用程序参数的列表。
+  syntax:
+    content: 'parameters: ApplicationParameter[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationParameter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.rollingUpgradeMode
+  name: rollingUpgradeMode
+  fullName: rollingUpgradeMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 在滚动升级期间用于监视运行状况的模式。 值是 UnmonitoredAuto、 UnmonitoredManual，和 Monitored。 可能的值包括：Invalid、 UnmonitoredAuto、 UnmonitoredManual、 监视
+  optional: true
+  syntax:
+    content: 'rollingUpgradeMode?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.targetApplicationTypeVersion
+  name: targetApplicationTypeVersion
+  fullName: targetApplicationTypeVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 应用程序升级的目标应用程序类型版本（在应用程序清单中找到）。
+  syntax:
+    content: 'targetApplicationTypeVersion: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.upgradeKind
+  name: upgradeKind
+  fullName: upgradeKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 升级以下可能值的类型。 可能的值包括：Invalid，则滚动
+  syntax:
+    content: 'upgradeKind: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds
+  name: upgradeReplicaSetCheckTimeoutInSeconds
+  fullName: upgradeReplicaSetCheckTimeoutInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    出现意外问题时，阻止处理升级域并防止可用性丢失的最大时长。 当此超时到期时，无论是否存在可用性丢失问题，都将继续处理升级域。 每个升级域启动时重置超时。 有效值介于 0 和 42949672925（含）之间。
+
+    （无符号的 32 位整数）。
+  optional: true
+  syntax:
+    content: 'upgradeReplicaSetCheckTimeoutInSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthPolicy
+  name: ApplicationHealthPolicy
+  spec.typeScript:
+  - name: ApplicationHealthPolicy
+    fullName: ApplicationHealthPolicy
+    uid: azure-servicefabric.ApplicationHealthPolicy
+- uid: azure-servicefabric.MonitoringPolicyDescription
+  name: MonitoringPolicyDescription
+  spec.typeScript:
+  - name: MonitoringPolicyDescription
+    fullName: MonitoringPolicyDescription
+    uid: azure-servicefabric.MonitoringPolicyDescription
+- uid: azure-servicefabric.ApplicationParameter[]
+  name: ApplicationParameter[]
+  spec.typeScript:
+  - name: ApplicationParameter
+    fullName: ApplicationParameter
+    uid: azure-servicefabric.ApplicationParameter
+  - name: '[]'
+    fullName: '[]'

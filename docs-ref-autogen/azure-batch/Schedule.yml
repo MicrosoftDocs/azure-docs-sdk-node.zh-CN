@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 06b60b35e92b1bdb78fb167cb73a13f659ab965c
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53658921"
+items:
+- uid: azure-batch.Schedule
+  name: Schedule
+  fullName: Schedule
+  children:
+  - azure-batch.Schedule.doNotRunAfter
+  - azure-batch.Schedule.doNotRunUntil
+  - azure-batch.Schedule.recurrenceInterval
+  - azure-batch.Schedule.startWindow
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.Schedule.doNotRunAfter
+  name: doNotRunAfter
+  fullName: doNotRunAfter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果不指定 doNotRunAfter 时间，并且要创建重复作业计划，作业计划将保持活动状态，直到显式终止。
+  optional: true
+  syntax:
+    content: 'doNotRunAfter?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.Schedule.doNotRunUntil
+  name: doNotRunUntil
+  fullName: doNotRunUntil
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果不指定 doNotRunUntil 时间，计划将准备好立即创建作业。
+  optional: true
+  syntax:
+    content: 'doNotRunUntil?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.Schedule.recurrenceInterval
+  name: recurrenceInterval
+  fullName: recurrenceInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 因为如果就可以创建新的作业下的作业计划，但仍在运行前一个作业，作业计划可以在任何给定时间，有最多一个活动的作业在其下，Batch 服务不会创建新的作业，直到上一个作业完成。 如果新 recurrenceInterval 的 startwindow，与期限内未完成上一个作业，然后针对该时间间隔内没有新的作业来计划。 对于定期作业，通常应 jobSpecification 中指定 jobManagerTask。 如果不使用 jobManagerTask，则需要外部进程来监视创建作业时，将任务添加到作业并终止作业准备好进行下一个周期。 默认值是计划不重复执行： 创建一个作业，doNotRunUntil 时间之后, startWindow 内和计划是： 在完成该作业完成。 最小值为 1 分钟。 如果指定较低的值，Batch 服务会拒绝并出错; 计划如果你正在直接调用 REST API，HTTP 状态代码为 400 （错误请求）。
+  optional: true
+  syntax:
+    content: 'recurrenceInterval?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.Schedule.startWindow
+  name: startWindow
+  fullName: startWindow
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果不在的 startwindow，与间隔中创建一个作业，则丢失; 机会直到下一个周期的计划，将不创建任何作业。 如果计划重复进行的并且 startwindow，与长于重复间隔，然后这相当于无限的 startWindow，因为在一个 recurrenceInterval 到期的作业将不会传递到下一步的重复间隔。 默认值为 infinite。 最小值为 1 分钟。 如果指定较低的值，Batch 服务会拒绝并出错; 计划如果你正在直接调用 REST API，HTTP 状态代码为 400 （错误请求）。
+  optional: true
+  syntax:
+    content: 'startWindow?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch

@@ -1,0 +1,173 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b0266aeafd1b03a205eb770e7f390592b64d13cf
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53660451"
+items:
+- uid: azure-servicefabric.HealthInformation
+  name: HealthInformation
+  fullName: HealthInformation
+  children:
+  - azure-servicefabric.HealthInformation.description
+  - azure-servicefabric.HealthInformation.healthState
+  - azure-servicefabric.HealthInformation.property
+  - azure-servicefabric.HealthInformation.removeWhenExpired
+  - azure-servicefabric.HealthInformation.sequenceNumber
+  - azure-servicefabric.HealthInformation.sourceId
+  - azure-servicefabric.HealthInformation.timeToLiveInMilliSeconds
+  langs:
+  - typeScript
+  type: interface
+  summary: 表示常见的运行状况报表信息。 它是包含在所有运行状况报告发送至运行状况存储中，在运行状况查询返回的所有运行状况事件。
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.description
+  name: description
+  fullName: description
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    运行状况信息的说明。 它表示用于添加有关该报告的用户可读信息的自定义文本。
+
+    该说明的最大字符串长度为 4096 个字符。
+
+    如果所提供字符串的长度大于该值，它将被自动截断。
+
+    截断时，该说明的末尾字符包含一个标记“[Truncated]”，并且总字符串大小为 4096 个字符。
+
+    该标记的存在向用户指示截断已发生。
+
+    请注意，当截断时，该说明包含来自原始字符串的 4096 个以内的字符。
+  optional: true
+  syntax:
+    content: 'description?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+  syntax:
+    content: 'healthState: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.property
+  name: property
+  fullName: property
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    运行状况信息的属性。 一个实体可以有不同属性的运行状况报告。
+
+    该属性是一个字符串，不是固定的枚举，因此可使报告器灵活地对触发报告的状态条件进行分类。
+
+    例如，SourceId 为“LocalWatchdog”的报告器可以监视节点上的可用磁盘的状态，因此它可以报告该节点的“AvailableDisk”属性。
+
+    同一报告器可以监视节点连接，因此它可以报告同一节点的“Connectivity”属性。
+
+    在运行状况存储中，这些报告均被视为指定节点的单独运行状况事件。
+
+    与 SourceId 一起，该属性唯一地标识运行状况信息。
+  syntax:
+    content: 'property: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.removeWhenExpired
+  name: removeWhenExpired
+  fullName: removeWhenExpired
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    该值指示是否在报告过期时从运行状况存储删除该报告。
+
+    如果设置为 true，报告在过期后将从运行状况存储中删除。
+
+    如果设置为 false，报告在过期时将被视为错误。 此属性的值在默认情况下为 false。
+
+    当客户端定期报告时，它们应将 RemoveWhenExpired 设置为 false（默认值）。
+
+    这样一来，如果报告器有问题 （例如死锁），并且不能报告，是错误地评估实体运行状况报告过期时。
+
+    这会将该实体标记为处于“Error”运行状况状态。
+  optional: true
+  syntax:
+    content: 'removeWhenExpired?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.sequenceNumber
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    此运行状况报告的序列号（采用数字字符串形式）。
+
+    报告序列号由运行状况存储用来检测过时的报告。
+
+    如果未指定，序列号将在报告被添加时由运行状况客户端自动生成。
+  optional: true
+  syntax:
+    content: 'sequenceNumber?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.sourceId
+  name: sourceId
+  fullName: sourceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 标识已生成运行状况信息的客户端/监视程序/系统组件的源名称。
+  syntax:
+    content: 'sourceId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.timeToLiveInMilliSeconds
+  name: timeToLiveInMilliSeconds
+  fullName: timeToLiveInMilliSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    此运行状况报告保持有效的持续时间。 此字段将 ISO8601 格式用于指定该持续时间。
+
+    当客户端定期报告时，它们应以高于生存时间的频率发送报告。
+
+    如果客户端以非定期的方式报告，它们可以将生存时间设置为无限。
+
+    生存时间过期时，包含运行状况信息的运行状况事件将从运行状况存储中删除（如果 RemoveWhenExpired 为 true），或者将会评估为处于错误状态（如果 RemoveWhenExpired 为 false）。
+
+    如果未指定，生存时间将默认为无限值。
+  optional: true
+  syntax:
+    content: 'timeToLiveInMilliSeconds?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-servicefabric

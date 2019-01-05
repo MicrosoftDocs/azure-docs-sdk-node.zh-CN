@@ -1,0 +1,288 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ed7f92526f273477e153fad3fe0ab03db0704f34
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52104222"
+items:
+- uid: '@azure/event-processor-host.LeaseManager'
+  name: LeaseManager
+  fullName: LeaseManager
+  children:
+  - '@azure/event-processor-host.LeaseManager.acquireLease'
+  - '@azure/event-processor-host.LeaseManager.createAllLeasesIfNotExists'
+  - '@azure/event-processor-host.LeaseManager.createLeaseStoreIfNotExists'
+  - '@azure/event-processor-host.LeaseManager.deleteLease'
+  - '@azure/event-processor-host.LeaseManager.deleteLeaseStore'
+  - '@azure/event-processor-host.LeaseManager.getAllLeases'
+  - '@azure/event-processor-host.LeaseManager.getLease'
+  - '@azure/event-processor-host.LeaseManager.leaseDuration'
+  - '@azure/event-processor-host.LeaseManager.leaseRenewInterval'
+  - '@azure/event-processor-host.LeaseManager.leaseStoreExists'
+  - '@azure/event-processor-host.LeaseManager.releaseLease'
+  - '@azure/event-processor-host.LeaseManager.renewLease'
+  - '@azure/event-processor-host.LeaseManager.updateLease'
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.acquireLease'
+  name: acquireLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    为此 EventProcessorHost 获取所需的分区上的租约。
+
+    请注意，法律以获取已拥有的另一台主机的租约。
+
+    租约窃取是如何分区会重新分发时启动其他主机。
+
+
+    现有的 Azure 存储实现，可能会尝试获取或窃取该租约在同一时间的两个主机实例之间的资源争用。 若要避免其中两个主机实例的情况下同时相信他们所拥有租约，采集可能会失败且未出错返回 false 和应执行此操作没有主机实例时无法确定--可能发生的最坏情况是，拥有在短时间的租约。 这与质量不同，例如，基础存储区引发的访问异常，这是一个错误。
+  syntax:
+    content: 'function acquireLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: 租用信息从以前获取的所需分区`getLease()`。
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.createAllLeasesIfNotExists'
+  name: createAllLeasesIfNotExists(string[])
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 在存储中创建的给定分区的租约信息如果不存在。 如果确实存储区中已存在，不执行任何操作。
+  syntax:
+    content: 'function createAllLeasesIfNotExists(partitionIds: string[])'
+    parameters:
+    - id: partitionIds
+      type:
+      - string[]
+      description: 要创建租约信息的分区的 id
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.createLeaseStoreIfNotExists'
+  name: createLeaseStoreIfNotExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 如果不存在，请创建租约存储。 如果存在，不执行任何操作。
+  syntax:
+    content: function createLeaseStoreIfNotExists()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.deleteLease'
+  name: deleteLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 从存储中删除给定分区的租约信息。 如果没有存储对于给定的分区，被视为成功的租约。
+  syntax:
+    content: 'function deleteLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: 租用信息从以前获取的所需分区`getLease()`。
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.deleteLeaseStore'
+  name: deleteLeaseStore()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 删除租约存储。
+  syntax:
+    content: function deleteLeaseStore()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.getAllLeases'
+  name: getAllLeases()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 返回所有租用，轻型的 BaseLease，其中包括拥有主机和是否过期租约的名称。 实现返回 CompleteLease 或其自己的类派生自 CompleteLease，但务必 getAllLeases 尽可能快运行。 如果是更快地获取仅 BaseLease 所需的信息，我们很大程度建议执行该操作。
+  syntax:
+    content: function getAllLeases()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/event-processor-host.BaseLease[]>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.getLease'
+  name: getLease(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 获取指定的分区的租约信息。 可以返回`undefined`如果指定的分区的存储区中创建了没有租约。
+  syntax:
+    content: 'function getLease(partitionId: string)'
+    parameters:
+    - id: partitionId
+      type:
+      - string
+      description: 要获取的租约的分区 id。
+    return:
+      type:
+      - Promise<@azure/event-processor-host.CompleteLease | undefined>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseDuration'
+  name: leaseDuration
+  fullName: leaseDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number} leaseDuration 的租约持续时间**以秒为单位**除非续订过期之前。'
+  syntax:
+    content: 'leaseDuration: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseRenewInterval'
+  name: leaseRenewInterval
+  fullName: leaseRenewInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {number} leaseRenewInterval 的休眠时间间隔**以秒为单位**扫描之间。
+
+
+    允许指定到 PartitionManager 何种频率应扫描租约并续订其租约管理器实现。 若要重新分发及时的租约，主机将停止运行后，我们建议相对较短的时间间隔，如十秒。 显然它应该是不到一半的租约时间，以防止意外过期。
+  syntax:
+    content: 'leaseRenewInterval: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseStoreExists'
+  name: leaseStoreExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 是否存在租约应用商店？
+  syntax:
+    content: function leaseStoreExists()
+    parameters: []
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.releaseLease'
+  name: releaseLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    放弃当前持有此主机的租约。
+
+    如果已被盗或已过期租约，释放它是不必要的并且如果尝试将失败。
+  syntax:
+    content: 'function releaseLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: 租用信息从以前获取的所需分区`getLease()`。
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.renewLease'
+  name: renewLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    续订当前持有此主机的租约。
+
+    如果已执行的另一个主机实例 （被盗或到期后） 或显式释放租约，renewLease 必须返回 false。 使用基于 Azure 存储的实现中，则可以续订已过期的租约不已被另一台主机，因此您的实现，可允许的两者中较方便。 如果未显示，renewLease 应返回 false。
+  syntax:
+    content: 'function renewLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: 若要续订的租约。
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.updateLease'
+  name: updateLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    更新存储区中提供的租用的信息。
+
+    它是当前保留租约来更新它所需。 如果该租约已经被盗，或已过期或已发布，因此无法对其进行更新。 租约管理器实现应在执行更新，以避免在过程中的租约过期之前续订租约。
+  syntax:
+    content: 'function updateLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: 要存储的新租约信息。
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+- uid: Promise<@azure/event-processor-host.BaseLease[]>
+  name: BaseLease[]>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: BaseLease
+    fullName: BaseLease
+    uid: '@azure/event-processor-host.BaseLease'
+  - name: '[]>'
+    fullName: '[]>'
+- uid: Promise<@azure/event-processor-host.CompleteLease | undefined>
+  name: CompleteLease | undefined>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+  - name: " | undefined>"
+    fullName: " | undefined>"

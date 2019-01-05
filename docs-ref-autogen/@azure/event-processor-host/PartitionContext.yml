@@ -1,0 +1,185 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 21f210c813372698536df44230040a4089b09700
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52169462"
+items:
+- uid: '@azure/event-processor-host.PartitionContext'
+  name: PartitionContext
+  fullName: PartitionContext
+  children:
+  - '@azure/event-processor-host.PartitionContext.checkpoint'
+  - '@azure/event-processor-host.PartitionContext.checkpointFromEventData'
+  - '@azure/event-processor-host.PartitionContext.consumerGroup'
+  - '@azure/event-processor-host.PartitionContext.eventhubPath'
+  - '@azure/event-processor-host.PartitionContext.lease'
+  - '@azure/event-processor-host.PartitionContext.owner'
+  - '@azure/event-processor-host.PartitionContext.constructor'
+  - '@azure/event-processor-host.PartitionContext.partitionId'
+  - '@azure/event-processor-host.PartitionContext.setOffsetAndSequenceNumber'
+  langs:
+  - typeScript
+  type: class
+  summary: 描述分区上下文。
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.checkpoint'
+  name: checkpoint()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    写入检查点存储通过检查点管理器的当前偏移量和序列号。
+
+    检查点数据结构化数据作为 JSON 有效负载 （例如）： `{ "partitionId":"0","owner":"ephtest","token":"48e209e3-55f0-41b8-a8dd-d9c09ff6c35a",
+
+    "epoch":1,"offset":"","SequenceNumber":0 }`。
+  syntax:
+    content: function checkpoint()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.checkpointFromEventData'
+  name: checkpointFromEventData(EventData)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    写入检查点存储通过检查点管理器的当前偏移量和序列号。
+
+    检查点数据结构化数据作为 JSON 有效负载 （例如）： `{ "partitionId":"0","owner":"ephtest","token":"48e209e3-55f0-41b8-a8dd-d9c09ff6c35a",
+
+    "epoch":1,"offset":"","SequenceNumber":0 }`。
+  syntax:
+    content: 'function checkpointFromEventData(eventData: EventData)'
+    parameters:
+    - id: eventData
+      type:
+      - EventData
+      description: 从 EventHubReceiver 接收的事件数据。
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.consumerGroup'
+  name: consumerGroup
+  fullName: consumerGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} consumerGroup 的使用者组的名称。'
+  syntax:
+    content: 'consumerGroup: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.eventhubPath'
+  name: eventhubPath
+  fullName: eventhubPath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} eventhubPath 事件中心的路径'
+  syntax:
+    content: 'eventhubPath: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.lease'
+  name: lease
+  fullName: lease
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{租约} 租约大多数 partitionid recdent 检查点的租约。'
+  syntax:
+    content: 'lease: CompleteLease'
+    return:
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.owner'
+  name: owner
+  fullName: owner
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} 所有者主机/所有者的分区。'
+  syntax:
+    content: 'owner: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.constructor'
+  name: PartitionContext(HostContextWithCheckpointLeaseManager, string, CompleteLease)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: 创建新 PartitionContext。
+  syntax:
+    content: 'new PartitionContext(context: HostContextWithCheckpointLeaseManager, partitionId: string, lease: CompleteLease)'
+    parameters:
+    - id: context
+      type:
+      - HostContextWithCheckpointLeaseManager
+      description: ''
+    - id: partitionId
+      type:
+      - string
+      description: Eventhub 分区 id。
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: >
+        租约对象中。
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.partitionId'
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} partitionId eventhub 分区 id。'
+  syntax:
+    content: 'partitionId: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.setOffsetAndSequenceNumber'
+  name: setOffsetAndSequenceNumber(EventData)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 从提供的 EventData 设置分区上下文的偏移量和序列号。
+  syntax:
+    content: 'function setOffsetAndSequenceNumber(eventData: EventData)'
+    parameters:
+    - id: eventData
+      type:
+      - EventData
+      description: >
+        事件数据`received`从 EventHubReceiver。
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'

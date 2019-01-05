@@ -1,0 +1,630 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6ba5ac3c693177f8af42e6a22afe2d7805016620
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52095622"
+items:
+- uid: '@azure/event-processor-host.EventProcessorHost'
+  name: EventProcessorHost
+  fullName: EventProcessorHost
+  children:
+  - '@azure/event-processor-host.EventProcessorHost.consumerGroup'
+  - '@azure/event-processor-host.EventProcessorHost.createFromAadTokenCredentials'
+  - '@azure/event-processor-host.EventProcessorHost.createFromAadTokenCredentialsWithCustomCheckpointAndLeaseManager'
+  - '@azure/event-processor-host.EventProcessorHost.createFromConnectionString'
+  - '@azure/event-processor-host.EventProcessorHost.createFromConnectionStringWithCustomCheckpointAndLeaseManager'
+  - '@azure/event-processor-host.EventProcessorHost.createFromIotHubConnectionString'
+  - '@azure/event-processor-host.EventProcessorHost.createFromIotHubConnectionStringWithCustomCheckpointAndLeaseManager'
+  - '@azure/event-processor-host.EventProcessorHost.createFromTokenProvider'
+  - '@azure/event-processor-host.EventProcessorHost.createFromTokenProviderWithCustomCheckpointAndLeaseManager'
+  - '@azure/event-processor-host.EventProcessorHost.createHostName'
+  - '@azure/event-processor-host.EventProcessorHost.constructor'
+  - '@azure/event-processor-host.EventProcessorHost.getHubRuntimeInformation'
+  - '@azure/event-processor-host.EventProcessorHost.getPartitionIds'
+  - '@azure/event-processor-host.EventProcessorHost.getPartitionInformation'
+  - '@azure/event-processor-host.EventProcessorHost.hostName'
+  - '@azure/event-processor-host.EventProcessorHost.receivingFromPartitions'
+  - '@azure/event-processor-host.EventProcessorHost.start'
+  - '@azure/event-processor-host.EventProcessorHost.stop'
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="e9250-101">描述事件处理程序主机以处理从事件中心。</span><span class="sxs-lookup"><span data-stu-id="e9250-101">Describes the Event Processor Host to process events from an EventHub.</span></span>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.consumerGroup'
+  name: consumerGroup
+  fullName: consumerGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="e9250-102">提供使用者的事件处理程序主机组名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-102">Provides the consumer group name for the Event processor host.</span></span>
+  syntax:
+    content: 'consumerGroup: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.createFromAadTokenCredentials'
+  name: createFromAadTokenCredentials(string, string, string, string, string, ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, FromTokenProviderOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-103">从 AAD 令牌凭据创建 EventProcessorHost 实例。</span><span class="sxs-lookup"><span data-stu-id="e9250-103">Creates an EventProcessorHost instance from AAD token credentials.</span></span>
+  syntax:
+    content: 'static function createFromAadTokenCredentials(hostName: string, storageConnectionString: string, storageContainerName: string, namespace: string, eventHubPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: FromTokenProviderOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-104">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-104">Name of the processor host.</span></span> <span data-ttu-id="e9250-105">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e9250-105">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="e9250-106">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="e9250-106">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="e9250-107">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="e9250-107">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: storageConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="e9250-108">用于租用和检查点的 Azure 存储帐户的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="e9250-108">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="e9250-109">示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="e9250-109">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
+    - id: storageContainerName
+      type:
+      - string
+      description: <span data-ttu-id="e9250-110">通过内置的租约和检查点管理器使用的 azure 存储容器名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-110">Azure Storage container name for use by built-in lease and checkpoint manager.</span></span>
+    - id: namespace
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-111">事件中心的完全限定的域名。</span><span class="sxs-lookup"><span data-stu-id="e9250-111">Fully qualified domain name for Event Hubs.</span></span>
+
+        <span data-ttu-id="e9250-112">示例:"{your sb namespace}。 servicebus.windows.net"</span><span class="sxs-lookup"><span data-stu-id="e9250-112">Example: "{your-sb-namespace}.servicebus.windows.net"</span></span>
+    - id: eventHubPath
+      type:
+      - string
+      description: <span data-ttu-id="e9250-113">事件中心的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-113">The name of the EventHub.</span></span>
+    - id: credentials
+      type:
+      - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+      description: '<span data-ttu-id="e9250-114">AAD 令牌凭据。</span><span class="sxs-lookup"><span data-stu-id="e9250-114">The AAD Token credentials.</span></span> <span data-ttu-id="e9250-115">它可以是以下值之一：ApplicationTokenCredentials |UserTokenCredentials |DeviceTokenCredentials |MSITokenCredentials。</span><span class="sxs-lookup"><span data-stu-id="e9250-115">It can be one of the following: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span></span>'
+    - id: options
+      type:
+      - '@azure/event-processor-host.FromTokenProviderOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - '@azure/event-processor-host.EventProcessorHost'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.createFromAadTokenCredentialsWithCustomCheckpointAndLeaseManager'
+  name: createFromAadTokenCredentialsWithCustomCheckpointAndLeaseManager(string, string, string, ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, CheckpointManager, LeaseManager, FromTokenProviderOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-116">从 AAD 令牌凭据与给定的检查点管理器和租约管理器创建 EventProcessorHost 实例。</span><span class="sxs-lookup"><span data-stu-id="e9250-116">Creates an EventProcessorHost instance from AAD token credentials with the given checkpoint manager and lease manager.</span></span>
+  syntax:
+    content: 'static function createFromAadTokenCredentialsWithCustomCheckpointAndLeaseManager(hostName: string, namespace: string, eventHubPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, checkpointManager: CheckpointManager, leaseManager: LeaseManager, options?: FromTokenProviderOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-117">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-117">Name of the processor host.</span></span> <span data-ttu-id="e9250-118">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e9250-118">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="e9250-119">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="e9250-119">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="e9250-120">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="e9250-120">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: namespace
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-121">事件中心的完全限定的域名。</span><span class="sxs-lookup"><span data-stu-id="e9250-121">Fully qualified domain name for Event Hubs.</span></span>
+
+        <span data-ttu-id="e9250-122">示例:"{your sb namespace}。 servicebus.windows.net"</span><span class="sxs-lookup"><span data-stu-id="e9250-122">Example: "{your-sb-namespace}.servicebus.windows.net"</span></span>
+    - id: eventHubPath
+      type:
+      - string
+      description: <span data-ttu-id="e9250-123">事件中心的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-123">The name of the EventHub.</span></span>
+    - id: credentials
+      type:
+      - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+      description: '<span data-ttu-id="e9250-124">AAD 令牌凭据。</span><span class="sxs-lookup"><span data-stu-id="e9250-124">The AAD Token credentials.</span></span> <span data-ttu-id="e9250-125">它可以是以下值之一：ApplicationTokenCredentials |UserTokenCredentials |DeviceTokenCredentials |MSITokenCredentials。</span><span class="sxs-lookup"><span data-stu-id="e9250-125">It can be one of the following: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span></span>'
+    - id: checkpointManager
+      type:
+      - '@azure/event-processor-host.CheckpointManager'
+      description: <span data-ttu-id="e9250-126">若要管理检查点管理器。</span><span class="sxs-lookup"><span data-stu-id="e9250-126">A manager to manage checkpoints.</span></span>
+    - id: leaseManager
+      type:
+      - '@azure/event-processor-host.LeaseManager'
+      description: <span data-ttu-id="e9250-127">若要管理租约管理器。</span><span class="sxs-lookup"><span data-stu-id="e9250-127">A manager to manage leases.</span></span>
+    - id: options
+      type:
+      - '@azure/event-processor-host.FromTokenProviderOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - '@azure/event-processor-host.EventProcessorHost'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.createFromConnectionString'
+  name: createFromConnectionString(string, string, string, string, FromConnectionStringOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-128">从事件中心连接字符串创建 EventProcessorHost 实例。</span><span class="sxs-lookup"><span data-stu-id="e9250-128">Creates an EventProcessorHost instance from the EventHub connection string.</span></span>
+  syntax:
+    content: 'static function createFromConnectionString(hostName: string, storageConnectionString: string, storageContainerName: string, eventHubConnectionString: string, options?: FromConnectionStringOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-129">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-129">Name of the processor host.</span></span> <span data-ttu-id="e9250-130">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e9250-130">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="e9250-131">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="e9250-131">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="e9250-132">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="e9250-132">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: storageConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="e9250-133">用于租用和检查点的 Azure 存储帐户的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="e9250-133">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="e9250-134">示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="e9250-134">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
+    - id: storageContainerName
+      type:
+      - string
+      description: <span data-ttu-id="e9250-135">通过内置的租约和检查点管理器使用的 azure 存储容器名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-135">Azure Storage container name for use by built-in lease and checkpoint manager.</span></span>
+    - id: eventHubConnectionString
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-136">要从接收的事件中心的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="e9250-136">Connection string for the Event Hub to receive from.</span></span>
+
+        <span data-ttu-id="e9250-137">示例：Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = 我-SA 的名称;SharedAccessKey = 我 SA 密钥</span><span class="sxs-lookup"><span data-stu-id="e9250-137">Example: 'Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+    - id: options
+      type:
+      - '@azure/event-processor-host.FromConnectionStringOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - '@azure/event-processor-host.EventProcessorHost'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.createFromConnectionStringWithCustomCheckpointAndLeaseManager'
+  name: createFromConnectionStringWithCustomCheckpointAndLeaseManager(string, string, CheckpointManager, LeaseManager, FromConnectionStringOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-138">从事件中心连接字符串使用提供的检查点管理器和租约管理器创建 EventProcessorHost 实例。</span><span class="sxs-lookup"><span data-stu-id="e9250-138">Creates an EventProcessorHost instance from the EventHub connection string with the provided checkpoint manager and lease manager.</span></span>
+  syntax:
+    content: 'static function createFromConnectionStringWithCustomCheckpointAndLeaseManager(hostName: string, eventHubConnectionString: string, checkpointManager: CheckpointManager, leaseManager: LeaseManager, options?: FromConnectionStringOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-139">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-139">Name of the processor host.</span></span> <span data-ttu-id="e9250-140">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e9250-140">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="e9250-141">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="e9250-141">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="e9250-142">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="e9250-142">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: eventHubConnectionString
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-143">要从接收的事件中心的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="e9250-143">Connection string for the Event Hub to receive from.</span></span>
+
+        <span data-ttu-id="e9250-144">示例：Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = 我-SA 的名称;SharedAccessKey = 我 SA 密钥</span><span class="sxs-lookup"><span data-stu-id="e9250-144">Example: 'Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+    - id: checkpointManager
+      type:
+      - '@azure/event-processor-host.CheckpointManager'
+      description: <span data-ttu-id="e9250-145">若要管理检查点管理器。</span><span class="sxs-lookup"><span data-stu-id="e9250-145">A manager to manage checkpoints.</span></span>
+    - id: leaseManager
+      type:
+      - '@azure/event-processor-host.LeaseManager'
+      description: <span data-ttu-id="e9250-146">若要管理租约管理器。</span><span class="sxs-lookup"><span data-stu-id="e9250-146">A manager to manage leases.</span></span>
+    - id: options
+      type:
+      - '@azure/event-processor-host.FromConnectionStringOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - '@azure/event-processor-host.EventProcessorHost'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.createFromIotHubConnectionString'
+  name: createFromIotHubConnectionString(string, string, string, string, FromIotHubConnectionStringOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-147">从 iot 中心连接字符串创建 EventProcessorHost 实例。</span><span class="sxs-lookup"><span data-stu-id="e9250-147">Creates an EventProcessorHost instance from the IotHub connection string.</span></span>
+  syntax:
+    content: 'static function createFromIotHubConnectionString(hostName: string, storageConnectionString: string, storageContainerName: string, iotHubConnectionString: string, options?: FromIotHubConnectionStringOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-148">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-148">Name of the processor host.</span></span> <span data-ttu-id="e9250-149">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e9250-149">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="e9250-150">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="e9250-150">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="e9250-151">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="e9250-151">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: storageConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="e9250-152">用于租用和检查点的 Azure 存储帐户的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="e9250-152">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="e9250-153">示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="e9250-153">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
+    - id: storageContainerName
+      type:
+      - string
+      description: <span data-ttu-id="e9250-154">通过内置的租约和检查点管理器使用的 azure 存储容器名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-154">Azure Storage container name for use by built-in lease and checkpoint manager.</span></span>
+    - id: iotHubConnectionString
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-155">Iot 中心的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="e9250-155">Connection string for the IotHub.</span></span>
+
+        <span data-ttu-id="e9250-156">示例：终结点 = iot 主机名;SharedAccessKeyName = 我-SA 的名称;SharedAccessKey = 我 SA 密钥</span><span class="sxs-lookup"><span data-stu-id="e9250-156">Example: 'Endpoint=iot-host-name;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+    - id: options
+      type:
+      - '@azure/event-processor-host.FromIotHubConnectionStringOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/event-processor-host.EventProcessorHost>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.createFromIotHubConnectionStringWithCustomCheckpointAndLeaseManager'
+  name: createFromIotHubConnectionStringWithCustomCheckpointAndLeaseManager(string, string, CheckpointManager, LeaseManager, FromIotHubConnectionStringOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-157">从 iot 中心连接字符串使用给定的检查点管理器和租约管理器创建 EventProcessorHost 实例。</span><span class="sxs-lookup"><span data-stu-id="e9250-157">Creates an EventProcessorHost instance from the IotHub connection string with the given checkpoint manager and lease manager.</span></span>
+  syntax:
+    content: 'static function createFromIotHubConnectionStringWithCustomCheckpointAndLeaseManager(hostName: string, iotHubConnectionString: string, checkpointManager: CheckpointManager, leaseManager: LeaseManager, options?: FromIotHubConnectionStringOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-158">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-158">Name of the processor host.</span></span> <span data-ttu-id="e9250-159">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e9250-159">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="e9250-160">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="e9250-160">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="e9250-161">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="e9250-161">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: iotHubConnectionString
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-162">Iot 中心的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="e9250-162">Connection string for the IotHub.</span></span>
+
+        <span data-ttu-id="e9250-163">示例：终结点 = iot 主机名;SharedAccessKeyName = 我-SA 的名称;SharedAccessKey = 我 SA 密钥</span><span class="sxs-lookup"><span data-stu-id="e9250-163">Example: 'Endpoint=iot-host-name;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+    - id: checkpointManager
+      type:
+      - '@azure/event-processor-host.CheckpointManager'
+      description: <span data-ttu-id="e9250-164">若要管理检查点管理器。</span><span class="sxs-lookup"><span data-stu-id="e9250-164">A manager to manage checkpoints.</span></span>
+    - id: leaseManager
+      type:
+      - '@azure/event-processor-host.LeaseManager'
+      description: <span data-ttu-id="e9250-165">若要管理租约管理器。</span><span class="sxs-lookup"><span data-stu-id="e9250-165">A manager to manage leases.</span></span>
+    - id: options
+      type:
+      - '@azure/event-processor-host.FromIotHubConnectionStringOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/event-processor-host.EventProcessorHost>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.createFromTokenProvider'
+  name: createFromTokenProvider(string, string, string, string, string, TokenProvider, FromTokenProviderOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-166">创建从 TokenProvider EventProcessorHost 实例。</span><span class="sxs-lookup"><span data-stu-id="e9250-166">Creates an EventProcessorHost instance from a TokenProvider.</span></span>
+  syntax:
+    content: 'static function createFromTokenProvider(hostName: string, storageConnectionString: string, storageContainerName: string, namespace: string, eventHubPath: string, tokenProvider: TokenProvider, options?: FromTokenProviderOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-167">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-167">Name of the processor host.</span></span> <span data-ttu-id="e9250-168">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e9250-168">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="e9250-169">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="e9250-169">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="e9250-170">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="e9250-170">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: storageConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="e9250-171">用于租用和检查点的 Azure 存储帐户的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="e9250-171">Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="e9250-172">示例 DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net</span><span class="sxs-lookup"><span data-stu-id="e9250-172">Example DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net</span></span>
+    - id: storageContainerName
+      type:
+      - string
+      description: <span data-ttu-id="e9250-173">通过内置的租约和检查点管理器使用的 azure 存储容器名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-173">Azure Storage container name for use by built-in lease and checkpoint manager.</span></span>
+    - id: namespace
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-174">事件中心的完全限定的域名。</span><span class="sxs-lookup"><span data-stu-id="e9250-174">Fully qualified domain name for Event Hubs.</span></span>
+
+        <span data-ttu-id="e9250-175">示例:"{your sb namespace}。 servicebus.windows.net"</span><span class="sxs-lookup"><span data-stu-id="e9250-175">Example: "{your-sb-namespace}.servicebus.windows.net"</span></span>
+    - id: eventHubPath
+      type:
+      - string
+      description: <span data-ttu-id="e9250-176">事件中心的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-176">The name of the EventHub.</span></span>
+    - id: tokenProvider
+      type:
+      - TokenProvider
+      description: <span data-ttu-id="e9250-177">实现 TokenProvider 接口将令牌提供程序。</span><span class="sxs-lookup"><span data-stu-id="e9250-177">Your token provider that implements the TokenProvider interface.</span></span>
+    - id: options
+      type:
+      - '@azure/event-processor-host.FromTokenProviderOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - '@azure/event-processor-host.EventProcessorHost'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.createFromTokenProviderWithCustomCheckpointAndLeaseManager'
+  name: createFromTokenProviderWithCustomCheckpointAndLeaseManager(string, string, string, TokenProvider, CheckpointManager, LeaseManager, FromTokenProviderOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-178">从 TokenProvider 租约管理器，提供检查点管理器创建 EventProcessorHost 实例。</span><span class="sxs-lookup"><span data-stu-id="e9250-178">Creates an EventProcessorHost instance from a TokenProvider with the provided checkpoint manager and lease manager.</span></span>
+  syntax:
+    content: 'static function createFromTokenProviderWithCustomCheckpointAndLeaseManager(hostName: string, namespace: string, eventHubPath: string, tokenProvider: TokenProvider, checkpointManager: CheckpointManager, leaseManager: LeaseManager, options?: FromTokenProviderOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-179">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-179">Name of the processor host.</span></span> <span data-ttu-id="e9250-180">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e9250-180">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="e9250-181">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="e9250-181">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="e9250-182">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="e9250-182">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: namespace
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-183">事件中心的完全限定的域名。</span><span class="sxs-lookup"><span data-stu-id="e9250-183">Fully qualified domain name for Event Hubs.</span></span>
+
+        <span data-ttu-id="e9250-184">示例:"{your sb namespace}。 servicebus.windows.net"</span><span class="sxs-lookup"><span data-stu-id="e9250-184">Example: "{your-sb-namespace}.servicebus.windows.net"</span></span>
+    - id: eventHubPath
+      type:
+      - string
+      description: <span data-ttu-id="e9250-185">事件中心的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-185">The name of the EventHub.</span></span>
+    - id: tokenProvider
+      type:
+      - TokenProvider
+      description: <span data-ttu-id="e9250-186">实现 TokenProvider 接口将令牌提供程序。</span><span class="sxs-lookup"><span data-stu-id="e9250-186">Your token provider that implements the TokenProvider interface.</span></span>
+    - id: checkpointManager
+      type:
+      - '@azure/event-processor-host.CheckpointManager'
+      description: <span data-ttu-id="e9250-187">若要管理检查点管理器。</span><span class="sxs-lookup"><span data-stu-id="e9250-187">A manager to manage checkpoints.</span></span>
+    - id: leaseManager
+      type:
+      - '@azure/event-processor-host.LeaseManager'
+      description: <span data-ttu-id="e9250-188">若要管理租约管理器。</span><span class="sxs-lookup"><span data-stu-id="e9250-188">A manager to manage leases.</span></span>
+    - id: options
+      type:
+      - '@azure/event-processor-host.FromTokenProviderOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - '@azure/event-processor-host.EventProcessorHost'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.createHostName'
+  name: createHostName(undefined | string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-189">用于生成唯一的主机名称的便捷方法。</span><span class="sxs-lookup"><span data-stu-id="e9250-189">Convenience method for generating unique host name.</span></span>
+  syntax:
+    content: 'static function createHostName(prefix?: undefined | string)'
+    parameters:
+    - id: prefix
+      type:
+      - undefined | string
+      description: ''
+      optional: true
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.constructor'
+  name: EventProcessorHost(string, EventProcessorHostOptions)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-190">创建从事件中心处理事件的新主机。</span><span class="sxs-lookup"><span data-stu-id="e9250-190">Creates a new host to process events from an Event Hub.</span></span>
+  syntax:
+    content: 'new EventProcessorHost(hostName: string, options?: EventProcessorHostOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="e9250-191">处理器主机的名称。</span><span class="sxs-lookup"><span data-stu-id="e9250-191">Name of the processor host.</span></span> <span data-ttu-id="e9250-192">必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="e9250-192">MUST BE UNIQUE.</span></span>
+
+        <span data-ttu-id="e9250-193">强烈建议包括 Guid 或 guid 的前缀，以确保唯一性。</span><span class="sxs-lookup"><span data-stu-id="e9250-193">Strongly recommend including a Guid or a prefix with a guid to ensure uniqueness.</span></span> <span data-ttu-id="e9250-194">可以使用`EventProcessorHost.createHostName("your-prefix")`;默认值： `js-host-${uuid()}`。</span><span class="sxs-lookup"><span data-stu-id="e9250-194">You can use `EventProcessorHost.createHostName("your-prefix")`; Default: `js-host-${uuid()}`.</span></span>
+    - id: options
+      type:
+      - '@azure/event-processor-host.EventProcessorHostOptions'
+      description: ''
+      optional: true
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.getHubRuntimeInformation'
+  name: getHubRuntimeInformation()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-195">提供事件中心运行时信息。</span><span class="sxs-lookup"><span data-stu-id="e9250-195">Provides the eventhub runtime information.</span></span>
+  syntax:
+    content: function getHubRuntimeInformation()
+    parameters: []
+    return:
+      type:
+      - Promise<EventHubRuntimeInformation>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.getPartitionIds'
+  name: getPartitionIds()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-196">提供了一系列 partitionIds。</span><span class="sxs-lookup"><span data-stu-id="e9250-196">Provides an array of partitionIds.</span></span>
+  syntax:
+    content: function getPartitionIds()
+    parameters: []
+    return:
+      type:
+      - Promise<string[]>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.getPartitionInformation'
+  name: getPartitionInformation(string | number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-197">提供有关指定的分区信息。</span><span class="sxs-lookup"><span data-stu-id="e9250-197">Provides information about the specified partition.</span></span>
+  syntax:
+    content: 'function getPartitionInformation(partitionId: string | number)'
+    parameters:
+    - id: partitionId
+      type:
+      - string | number
+      description: >
+        <span data-ttu-id="e9250-198">分区的分区信息是必需的 ID。</span><span class="sxs-lookup"><span data-stu-id="e9250-198">Partition ID for which partition information is required.</span></span>
+    return:
+      type:
+      - Promise<EventHubPartitionRuntimeInformation>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.hostName'
+  name: hostName
+  fullName: hostName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="e9250-199">提供事件处理程序主机的主机名。</span><span class="sxs-lookup"><span data-stu-id="e9250-199">Provides the host name for the Event processor host.</span></span>
+  syntax:
+    content: 'hostName: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.receivingFromPartitions'
+  name: receivingFromPartitions
+  fullName: receivingFromPartitions
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="e9250-200">提供了一系列 EPH 当前正在接收来自消息的分区。</span><span class="sxs-lookup"><span data-stu-id="e9250-200">Provides a list of partitions the EPH is currently receiving messages from.</span></span>
+
+    <span data-ttu-id="e9250-201">EPH 将尝试出现一次，每个 （配置） 租约续订秒每次扫描期间获取更多分区的租约。</span><span class="sxs-lookup"><span data-stu-id="e9250-201">The EPH will try to grab leases for more partitions during each scan that happens once every (configured) lease renew seconds.</span></span> <span data-ttu-id="e9250-202">正在同时运行在事件中心内的相同使用者组从接收消息的各个 EPH 实例数也会影响此实例的 EPH 主动接收来自消息的分区数。</span><span class="sxs-lookup"><span data-stu-id="e9250-202">The number of EPH instances that are being run simultaneously to receive messages from the same consumer group within an event hub also influences the number of partitions that this instance of EPH is actively receiving messages from.</span></span>
+  syntax:
+    content: 'receivingFromPartitions: string[]'
+    return:
+      type:
+      - string[]
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.start'
+  name: start(OnReceivedMessage, OnReceivedError)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-203">启动事件处理程序主机，提取列表的分区，并尝试获取每个成功的租约的租约时，它将从 blob 获取详细信息并启动接收方在离开的位置之前的点。</span><span class="sxs-lookup"><span data-stu-id="e9250-203">Starts the event processor host, fetching the list of partitions, and attempting to grab leases For each successful lease, it will get the details from the blob and start a receiver at the point where it left off previously.</span></span>
+  syntax:
+    content: 'function start(onMessage: OnReceivedMessage, onError: OnReceivedError)'
+    parameters:
+    - id: onMessage
+      type:
+      - '@azure/event-processor-host.OnReceivedMessage'
+      description: ''
+    - id: onError
+      type:
+      - '@azure/event-processor-host.OnReceivedError'
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHost.stop'
+  name: stop()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e9250-204">停止处理消息从 EventProcessorHost。</span><span class="sxs-lookup"><span data-stu-id="e9250-204">Stops the EventProcessorHost from processing messages.</span></span>
+  syntax:
+    content: function stop()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.EventProcessorHostOptions'
+  name: EventProcessorHostOptions
+  spec.typeScript:
+  - name: EventProcessorHostOptions
+    fullName: EventProcessorHostOptions
+    uid: '@azure/event-processor-host.EventProcessorHostOptions'
+- uid: '@azure/event-processor-host.OnReceivedMessage'
+  name: OnReceivedMessage
+  spec.typeScript:
+  - name: OnReceivedMessage
+    fullName: OnReceivedMessage
+    uid: '@azure/event-processor-host.OnReceivedMessage'
+- uid: '@azure/event-processor-host.OnReceivedError'
+  name: OnReceivedError
+  spec.typeScript:
+  - name: OnReceivedError
+    fullName: OnReceivedError
+    uid: '@azure/event-processor-host.OnReceivedError'
+- uid: '@azure/event-processor-host.FromTokenProviderOptions'
+  name: FromTokenProviderOptions
+  spec.typeScript:
+  - name: FromTokenProviderOptions
+    fullName: FromTokenProviderOptions
+    uid: '@azure/event-processor-host.FromTokenProviderOptions'
+- uid: '@azure/event-processor-host.EventProcessorHost'
+  name: EventProcessorHost
+  spec.typeScript:
+  - name: EventProcessorHost
+    fullName: EventProcessorHost
+    uid: '@azure/event-processor-host.EventProcessorHost'
+- uid: '@azure/event-processor-host.CheckpointManager'
+  name: CheckpointManager
+  spec.typeScript:
+  - name: CheckpointManager
+    fullName: CheckpointManager
+    uid: '@azure/event-processor-host.CheckpointManager'
+- uid: '@azure/event-processor-host.LeaseManager'
+  name: LeaseManager
+  spec.typeScript:
+  - name: LeaseManager
+    fullName: LeaseManager
+    uid: '@azure/event-processor-host.LeaseManager'
+- uid: '@azure/event-processor-host.FromConnectionStringOptions'
+  name: FromConnectionStringOptions
+  spec.typeScript:
+  - name: FromConnectionStringOptions
+    fullName: FromConnectionStringOptions
+    uid: '@azure/event-processor-host.FromConnectionStringOptions'
+- uid: '@azure/event-processor-host.FromIotHubConnectionStringOptions'
+  name: FromIotHubConnectionStringOptions
+  spec.typeScript:
+  - name: FromIotHubConnectionStringOptions
+    fullName: FromIotHubConnectionStringOptions
+    uid: '@azure/event-processor-host.FromIotHubConnectionStringOptions'
+- uid: Promise<@azure/event-processor-host.EventProcessorHost>
+  name: EventProcessorHost>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventProcessorHost
+    fullName: EventProcessorHost
+    uid: '@azure/event-processor-host.EventProcessorHost'
+  - name: '>'
+    fullName: '>'

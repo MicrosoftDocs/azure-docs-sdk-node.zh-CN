@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d919e9b399ab20a50ad0baee6d93ec7a00182dbd
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52141002"
+items:
+- uid: azure-servicefabric.PagedBackupInfoList
+  name: PagedBackupInfoList
+  fullName: PagedBackupInfoList
+  children:
+  - azure-servicefabric.PagedBackupInfoList.continuationToken
+  - azure-servicefabric.PagedBackupInfoList.items
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="ed044-101">备份的列表。</span><span class="sxs-lookup"><span data-stu-id="ed044-101">The list of backups.</span></span> <span data-ttu-id="ed044-102">当所有结果不能放入单个消息中时分页列表。</span><span class="sxs-lookup"><span data-stu-id="ed044-102">The list is paged when all of the results cannot fit in a single message.</span></span>
+
+    <span data-ttu-id="ed044-103">可以通过执行相同的查询，并显示此列表中提供的继续标记获取下一步的结果集。</span><span class="sxs-lookup"><span data-stu-id="ed044-103">The next set of results can be obtained by executing the same query with the continuation token provided in this list.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedBackupInfoList.continuationToken
+  name: continuationToken
+  fullName: continuationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="ed044-104">继续标记参数用于获取下一组结果。</span><span class="sxs-lookup"><span data-stu-id="ed044-104">The continuation token parameter is used to obtain next set of results.</span></span> <span data-ttu-id="ed044-105">从系统的结果无法容纳在单个响应中，则 API 响应中包含继续标记。</span><span class="sxs-lookup"><span data-stu-id="ed044-105">The continuation token is included in the response of the API when the results from the system do not fit in a single response.</span></span> <span data-ttu-id="ed044-106">当此值传递到下一个 API 调用时，API 返回下一组结果。</span><span class="sxs-lookup"><span data-stu-id="ed044-106">When this value is passed to the next API call, the API returns next set of results.</span></span>
+
+    <span data-ttu-id="ed044-107">如果没有更多结果，则继续标记在响应中不包括。</span><span class="sxs-lookup"><span data-stu-id="ed044-107">If there are no further results, then the continuation token is not included in the response.</span></span>
+  optional: true
+  syntax:
+    content: 'continuationToken?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedBackupInfoList.items
+  name: items
+  fullName: items
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="ed044-108">备份信息的列表。</span><span class="sxs-lookup"><span data-stu-id="ed044-108">List of backup information.</span></span>
+  optional: true
+  syntax:
+    content: 'items?: BackupInfo[]'
+    return:
+      type:
+      - azure-servicefabric.BackupInfo[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.BackupInfo[]
+  name: BackupInfo[]
+  spec.typeScript:
+  - name: BackupInfo
+    fullName: BackupInfo
+    uid: azure-servicefabric.BackupInfo
+  - name: '[]'
+    fullName: '[]'

@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: aaa8b6196d68deb789376b3075812c12ee5b5104
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52017452"
+items:
+- uid: ms-rest-azure.loginWithAuthFile
+  name: loginWithAuthFile(AuthFileOptions)
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="e0963-101">使用此方法之前请安装 az cli 从https://github.com/Azure/azure-cli/releases。</span><span class="sxs-lookup"><span data-stu-id="e0963-101">Before using this method please install az cli from https://github.com/Azure/azure-cli/releases.</span></span> <span data-ttu-id="e0963-102">然后执行`az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`。</span><span class="sxs-lookup"><span data-stu-id="e0963-102">Then execute `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.</span></span>
+
+    <span data-ttu-id="e0963-103">如果你想要创建针对不同的云/环境 sp 然后请执行：</span><span class="sxs-lookup"><span data-stu-id="e0963-103">If you want to create the sp for a different cloud/environment then please execute:</span></span>
+
+    1. <span data-ttu-id="e0963-104">az 云列表</span><span class="sxs-lookup"><span data-stu-id="e0963-104">az cloud list</span></span>
+
+    2. <span data-ttu-id="e0963-105">az 云设置 – n <name of the environment></span><span class="sxs-lookup"><span data-stu-id="e0963-105">az cloud set –n <name of the environment></span></span>
+
+    3. <span data-ttu-id="e0963-106">az ad sp 为 rbac 创建-sdk 身份验证 > auth.json 如果服务主体已创建然后登录使用服务主体信息：</span><span class="sxs-lookup"><span data-stu-id="e0963-106">az ad sp create-for-rbac --sdk-auth > auth.json If the service principal is already created then login with service principal info:</span></span>
+
+    3. <span data-ttu-id="e0963-107">az 登录名-服务主体-u <clientId> -p <clientSecret> -t <tenantId></span><span class="sxs-lookup"><span data-stu-id="e0963-107">az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId></span></span>
+
+    4. <span data-ttu-id="e0963-108">az 帐户会显示-sdk 身份验证 > auth.json</span><span class="sxs-lookup"><span data-stu-id="e0963-108">az account show --sdk-auth > auth.json</span></span>
+
+
+    <span data-ttu-id="e0963-109">使用身份验证文件中提供的服务主体信息进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="e0963-109">Authenticates using the service principal information provided in the auth file.</span></span> <span data-ttu-id="e0963-110">为用户提供的环境变量的 options 参数或默认值 AZURE_SUBSCRIPTION_ID 中，此方法将从身份验证文件设置订阅 Id。</span><span class="sxs-lookup"><span data-stu-id="e0963-110">This method will set the subscriptionId from the auth file to the user provided environment variable in the options parameter or the default 'AZURE_SUBSCRIPTION_ID'.</span></span>
+  syntax:
+    content: 'function loginWithAuthFile(options?: AuthFileOptions)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest-azure.AuthFileOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<ms-rest-azure.ApplicationTokenCredentials>
+  package: ms-rest-azure
+references:
+- uid: ms-rest-azure.AuthFileOptions
+  name: AuthFileOptions
+  spec.typeScript:
+  - name: AuthFileOptions
+    fullName: AuthFileOptions
+    uid: ms-rest-azure.AuthFileOptions
+- uid: Promise<ms-rest-azure.ApplicationTokenCredentials>
+  name: ApplicationTokenCredentials>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ApplicationTokenCredentials
+    fullName: ApplicationTokenCredentials
+    uid: ms-rest-azure.ApplicationTokenCredentials
+  - name: '>'
+    fullName: '>'

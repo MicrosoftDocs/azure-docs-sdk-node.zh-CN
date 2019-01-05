@@ -1,0 +1,99 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2d60ce38f0f08cc69c94d3b4cbd1054f859e27ac
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53688779"
+items:
+- uid: '@azure/cosmos.ChangeFeedIterator'
+  name: ChangeFeedIterator
+  fullName: ChangeFeedIterator<T>
+  children:
+  - '@azure/cosmos.ChangeFeedIterator.executeNext'
+  - '@azure/cosmos.ChangeFeedIterator.getAsyncIterator'
+  - '@azure/cosmos.ChangeFeedIterator.hasMoreResults'
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    <span data-ttu-id="1f87c-101">有关更改源提供迭代器。</span><span class="sxs-lookup"><span data-stu-id="1f87c-101">Provides iterator for change feed.</span></span>
+
+    <span data-ttu-id="1f87c-102">使用`Items.readChangeFeed()`来获取迭代器的实例。</span><span class="sxs-lookup"><span data-stu-id="1f87c-102">Use `Items.readChangeFeed()` to get an instance of the iterator.</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedIterator.executeNext'
+  name: executeNext()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="1f87c-103">读取源并检索 Azure Cosmos DB 中的结果的下一页面。</span><span class="sxs-lookup"><span data-stu-id="1f87c-103">Read feed and retrieves the next page of results in Azure Cosmos DB.</span></span>
+  syntax:
+    content: function executeNext()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.ChangeFeedResponse<Array<T & @azure/cosmos.Resource>>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedIterator.getAsyncIterator'
+  name: getAsyncIterator()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="1f87c-104">获取一个异步迭代器，这将从 Azure Cosmos DB 生成结果页。</span><span class="sxs-lookup"><span data-stu-id="1f87c-104">Gets an async iterator which will yield pages of results from Azure Cosmos DB.</span></span>
+  syntax:
+    content: function getAsyncIterator()
+    parameters: []
+    return:
+      type:
+      - AsyncIterable<@azure/cosmos.ChangeFeedResponse<Array<T & @azure/cosmos.Resource>>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedIterator.hasMoreResults'
+  name: hasMoreResults
+  fullName: hasMoreResults
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="1f87c-105">获取一个值，该值指示是否可以检索到的可能其他结果。</span><span class="sxs-lookup"><span data-stu-id="1f87c-105">Gets a value indicating whether there are potentially additional results that can be retrieved.</span></span>
+
+    <span data-ttu-id="1f87c-106">最初，则返回 true。</span><span class="sxs-lookup"><span data-stu-id="1f87c-106">Initially returns true.</span></span> <span data-ttu-id="1f87c-107">此值将根据上次执行是否返回继续标记。</span><span class="sxs-lookup"><span data-stu-id="1f87c-107">This value is set based on whether the last execution returned a continuation token.</span></span>
+  syntax:
+    content: 'hasMoreResults: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+references:
+- uid: Promise<@azure/cosmos.ChangeFeedResponse<Array<T & @azure/cosmos.Resource>>>
+  name: Resource>>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ChangeFeedResponse
+    fullName: ChangeFeedResponse
+    uid: '@azure/cosmos.ChangeFeedResponse'
+  - name: '<Array<T & '
+    fullName: '<Array<T & '
+  - name: Resource
+    fullName: Resource
+    uid: '@azure/cosmos.Resource'
+  - name: '>>>'
+    fullName: '>>>'
+- uid: AsyncIterable<@azure/cosmos.ChangeFeedResponse<Array<T & @azure/cosmos.Resource>>>
+  name: Resource>>>
+  spec.typeScript:
+  - name: AsyncIterable<
+    fullName: AsyncIterable<
+  - name: ChangeFeedResponse
+    fullName: ChangeFeedResponse
+    uid: '@azure/cosmos.ChangeFeedResponse'
+  - name: '<Array<T & '
+    fullName: '<Array<T & '
+  - name: Resource
+    fullName: Resource
+    uid: '@azure/cosmos.Resource'
+  - name: '>>>'
+    fullName: '>>>'

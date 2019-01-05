@@ -1,0 +1,118 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7a55bfad209d93fe98f11203a59ba00fff267717
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53663001"
+items:
+- uid: azure-batch.JobPatchParameter
+  name: JobPatchParameter
+  fullName: JobPatchParameter
+  children:
+  - azure-batch.JobPatchParameter.constraints
+  - azure-batch.JobPatchParameter.metadata
+  - azure-batch.JobPatchParameter.onAllTasksComplete
+  - azure-batch.JobPatchParameter.poolInfo
+  - azure-batch.JobPatchParameter.priority
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobPatchParameter.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果省略，现有的执行约束会保留不变。
+  optional: true
+  syntax:
+    content: 'constraints?: JobConstraints'
+    return:
+      type:
+      - azure-batch.JobConstraints
+  package: azure-batch
+- uid: azure-batch.JobPatchParameter.metadata
+  name: metadata
+  fullName: metadata
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果省略，现有的作业元数据将保持不变。
+  optional: true
+  syntax:
+    content: 'metadata?: MetadataItem[]'
+    return:
+      type:
+      - azure-batch.MetadataItem[]
+  package: azure-batch
+- uid: azure-batch.JobPatchParameter.onAllTasksComplete
+  name: onAllTasksComplete
+  fullName: onAllTasksComplete
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '如果省略，完成行为将保持不变。 您可能不将值从更改 terminatejob 到 noaction-也就是说，一旦已啮合自动作业终止，您不能将其再次关闭。 如果你尝试执行此操作，则请求失败时出现无效的属性值错误响应;如果你正在直接调用 REST API，HTTP 状态代码为 400 （错误请求）。 可能的值包括: noAction，terminatejob 改'
+  optional: true
+  syntax:
+    content: 'onAllTasksComplete?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPatchParameter.poolInfo
+  name: poolInfo
+  fullName: poolInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 仅当已禁用的作业时，可能会更改作业的池。 如果包括 poolInfo 元素，并且未禁用的作业，修补程序作业调用将失败。 如果您 poolInfo 中指定了 autoPoolSpecification 规范，可以更新 keepAlive 属性，然后仅当自动池 poollifetimeoption 作业。 如果省略，该作业将继续在其当前的池上运行。
+  optional: true
+  syntax:
+    content: 'poolInfo?: PoolInformation'
+    return:
+      type:
+      - azure-batch.PoolInformation
+  package: azure-batch
+- uid: azure-batch.JobPatchParameter.priority
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 优先级值的范围为-1000 到 1000，-1000年为最低优先级，1000年表示最高优先级。 如果省略，该作业的优先级将保持不变。
+  optional: true
+  syntax:
+    content: 'priority?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+references:
+- uid: azure-batch.JobConstraints
+  name: JobConstraints
+  spec.typeScript:
+  - name: JobConstraints
+    fullName: JobConstraints
+    uid: azure-batch.JobConstraints
+- uid: azure-batch.MetadataItem[]
+  name: MetadataItem[]
+  spec.typeScript:
+  - name: MetadataItem
+    fullName: MetadataItem
+    uid: azure-batch.MetadataItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.PoolInformation
+  name: PoolInformation
+  spec.typeScript:
+  - name: PoolInformation
+    fullName: PoolInformation
+    uid: azure-batch.PoolInformation

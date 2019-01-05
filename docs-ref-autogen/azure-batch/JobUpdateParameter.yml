@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: af32c4a39fd7e794559661f55c43f5ee3c48b89e
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53662873"
+items:
+- uid: azure-batch.JobUpdateParameter
+  name: JobUpdateParameter
+  fullName: JobUpdateParameter
+  children:
+  - azure-batch.JobUpdateParameter.constraints
+  - azure-batch.JobUpdateParameter.metadata
+  - azure-batch.JobUpdateParameter.onAllTasksComplete
+  - azure-batch.JobUpdateParameter.poolInfo
+  - azure-batch.JobUpdateParameter.priority
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果省略，将清除约束。
+  optional: true
+  syntax:
+    content: 'constraints?: JobConstraints'
+    return:
+      type:
+      - azure-batch.JobConstraints
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.metadata
+  name: metadata
+  fullName: metadata
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果省略，将采用空列表; 默认值实际上，删除所有现有元数据。
+  optional: true
+  syntax:
+    content: 'metadata?: MetadataItem[]'
+    return:
+      type:
+      - azure-batch.MetadataItem[]
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.onAllTasksComplete
+  name: onAllTasksComplete
+  fullName: onAllTasksComplete
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    如果省略，则将完成行为设置为 noaction。 如果当前值为 terminatejob，这是一个错误，因为作业的完成行为可能不会更改从 terminatejob 为 noaction。 您可能不将值从更改 terminatejob 到 noaction-也就是说，一旦已啮合自动作业终止，您不能将其再次关闭。 如果您尝试执行此操作，请求失败和批处理返回状态代码 400 （错误请求） 和属性值无效错误响应。 如果不在 PUT 请求中指定此元素，它相当于传递 noaction。 如果当前值为 terminatejob，这是一个错误。
+
+    可能的值包括: noAction，terminatejob 改
+  optional: true
+  syntax:
+    content: 'onAllTasksComplete?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.poolInfo
+  name: poolInfo
+  fullName: poolInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 仅当已禁用的作业时，可能会更改作业的池。 如果包括 poolInfo 元素，并且未禁用的作业，更新作业调用将失败。 如果您 poolInfo 中指定了 autoPoolSpecification 规范，可以更新 keepAlive 属性，然后仅当自动池 poollifetimeoption 作业。
+  syntax:
+    content: 'poolInfo: PoolInformation'
+    return:
+      type:
+      - azure-batch.PoolInformation
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.priority
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 优先级值的范围为-1000 到 1000，-1000年为最低优先级，1000年表示最高优先级。 如果省略，则将它设置为默认值 0。
+  optional: true
+  syntax:
+    content: 'priority?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+references:
+- uid: azure-batch.JobConstraints
+  name: JobConstraints
+  spec.typeScript:
+  - name: JobConstraints
+    fullName: JobConstraints
+    uid: azure-batch.JobConstraints
+- uid: azure-batch.MetadataItem[]
+  name: MetadataItem[]
+  spec.typeScript:
+  - name: MetadataItem
+    fullName: MetadataItem
+    uid: azure-batch.MetadataItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.PoolInformation
+  name: PoolInformation
+  spec.typeScript:
+  - name: PoolInformation
+    fullName: PoolInformation
+    uid: azure-batch.PoolInformation

@@ -1,0 +1,236 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8b46ae10839a1c4a139f43171342de9de15802e4
+ms.sourcegitcommit: 094b6aa16c2ee9aa1418d36ce033f1d99151d913
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45856561"
+items:
+- uid: azure-event-hubs.RequestResponseLink
+  name: RequestResponseLink
+  fullName: RequestResponseLink
+  children:
+  - azure-event-hubs.RequestResponseLink.close
+  - azure-event-hubs.RequestResponseLink.connection
+  - azure-event-hubs.RequestResponseLink.create
+  - azure-event-hubs.RequestResponseLink.isOpen
+  - azure-event-hubs.RequestResponseLink.receiver
+  - azure-event-hubs.RequestResponseLink.constructor
+  - azure-event-hubs.RequestResponseLink.sender
+  - azure-event-hubs.RequestResponseLink.sendRequest
+  - azure-event-hubs.RequestResponseLink.session
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="7d89a-101">介绍通过 amqp 会话创建的 amqp request(sender)-response(receiver) 链接。</span><span class="sxs-lookup"><span data-stu-id="7d89a-101">Describes an amqp request(sender)-response(receiver) link that is created over an amqp session.</span></span>
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7d89a-102">发送方、 接收方链接和基础会话将关闭。</span><span class="sxs-lookup"><span data-stu-id="7d89a-102">Closes the sender, receiver link and the underlying session.</span></span>
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.connection
+  name: connection
+  fullName: connection
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7d89a-103">提供了基础的 amqp 连接对象。</span><span class="sxs-lookup"><span data-stu-id="7d89a-103">Provides the underlying amqp connection object.</span></span>
+  syntax:
+    content: 'connection: Connection'
+    return:
+      type:
+      - azure-event-hubs.Connection
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7d89a-104">创建 amqp 请求/响应链接。</span><span class="sxs-lookup"><span data-stu-id="7d89a-104">Creates an amqp request/response link.</span></span>
+  syntax:
+    content: 'static function create(connection: Connection, senderOptions: SenderOptions, receiverOptions: ReceiverOptions)'
+    parameters:
+    - id: connection
+      type:
+      - azure-event-hubs.Connection
+      description: <span data-ttu-id="7d89a-105">Amqp 连接进行连接。</span><span class="sxs-lookup"><span data-stu-id="7d89a-105">The amqp connection.</span></span>
+    - id: senderOptions
+      type:
+      - azure-event-hubs.SenderOptions
+      description: <span data-ttu-id="7d89a-106">必须提供可在创建发送方链接的选项。</span><span class="sxs-lookup"><span data-stu-id="7d89a-106">Options that must be provided to create the sender link.</span></span>
+    - id: receiverOptions
+      type:
+      - azure-event-hubs.ReceiverOptions
+      description: <span data-ttu-id="7d89a-107">必须提供要创建的接收方链接的选项。</span><span class="sxs-lookup"><span data-stu-id="7d89a-107">Options that must be provided to create the receiver link.</span></span>
+    return:
+      type:
+      - Promise<azure-event-hubs.RequestResponseLink>
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.isOpen
+  name: isOpen
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="7d89a-108">指示是否所有打开或关闭会话和发送方和接收方链接。</span><span class="sxs-lookup"><span data-stu-id="7d89a-108">Indicates whether the session and the sender and receiver links are all open or closed.</span></span>
+  syntax:
+    content: function isOpen()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.receiver
+  name: receiver
+  fullName: receiver
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'receiver: Receiver'
+    return:
+      type:
+      - azure-event-hubs.Receiver
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.constructor
+  name: RequestResponseLink
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new RequestResponseLink(session: Session, sender: Sender, receiver: Receiver)'
+    parameters:
+    - id: session
+      type:
+      - azure-event-hubs.Session
+      description: <span data-ttu-id="7d89a-109">Amqp 会话中。</span><span class="sxs-lookup"><span data-stu-id="7d89a-109">The amqp session.</span></span>
+    - id: sender
+      type:
+      - azure-event-hubs.Sender
+      description: <span data-ttu-id="7d89a-110">Amqp 在发送方链接。</span><span class="sxs-lookup"><span data-stu-id="7d89a-110">The amqp sender link.</span></span>
+    - id: receiver
+      type:
+      - azure-event-hubs.Receiver
+      description: >
+        <span data-ttu-id="7d89a-111">Amqp 接收方链接。</span><span class="sxs-lookup"><span data-stu-id="7d89a-111">The amqp receiver link.</span></span>
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.sender
+  name: sender
+  fullName: sender
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'sender: Sender'
+    return:
+      type:
+      - azure-event-hubs.Sender
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.sendRequest
+  name: sendRequest
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: '<span data-ttu-id="7d89a-112">发送给定的请求消息并返回接收到的响应。</span><span class="sxs-lookup"><span data-stu-id="7d89a-112">Sends the given request message and returns the received response.</span></span> <span data-ttu-id="7d89a-113">如果该操作未在数秒内完成中提供的超时`default: 10`，然后将重试请求以线性方式提供重试次数`default: 3`具有以秒为单位的延迟提供`default: 15`每次尝试之间。</span><span class="sxs-lookup"><span data-stu-id="7d89a-113">If the operation is not completed in the provided timeout in seconds `default: 10`, then the request will be retried linearly for the provided number of times `default: 3` with the provided delay in seconds `default: 15` between each attempt.</span></span>'
+  syntax:
+    content: 'function sendRequest<T>(request: Message, options?: SendRequestOptions)'
+    parameters:
+    - id: request
+      type:
+      - Message
+      description: <span data-ttu-id="7d89a-114">AMQP 消息中。</span><span class="sxs-lookup"><span data-stu-id="7d89a-114">The AMQP message.</span></span>
+    - id: options
+      type:
+      - azure-event-hubs.SendRequestOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<T>
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.session
+  name: session
+  fullName: session
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'session: Session'
+    return:
+      type:
+      - azure-event-hubs.Session
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.Session
+  name: Session
+  spec.typeScript:
+  - name: Session
+    fullName: Session
+    uid: azure-event-hubs.Session
+- uid: azure-event-hubs.Sender
+  name: Sender
+  spec.typeScript:
+  - name: Sender
+    fullName: Sender
+    uid: azure-event-hubs.Sender
+- uid: azure-event-hubs.Receiver
+  name: Receiver
+  spec.typeScript:
+  - name: Receiver
+    fullName: Receiver
+    uid: azure-event-hubs.Receiver
+- uid: azure-event-hubs.Connection
+  name: Connection
+  spec.typeScript:
+  - name: Connection
+    fullName: Connection
+    uid: azure-event-hubs.Connection
+- uid: azure-event-hubs.SendRequestOptions
+  name: SendRequestOptions
+  spec.typeScript:
+  - name: SendRequestOptions
+    fullName: SendRequestOptions
+    uid: azure-event-hubs.SendRequestOptions
+- uid: azure-event-hubs.SenderOptions
+  name: SenderOptions
+  spec.typeScript:
+  - name: SenderOptions
+    fullName: SenderOptions
+    uid: azure-event-hubs.SenderOptions
+- uid: azure-event-hubs.ReceiverOptions
+  name: ReceiverOptions
+  spec.typeScript:
+  - name: ReceiverOptions
+    fullName: ReceiverOptions
+    uid: azure-event-hubs.ReceiverOptions
+- uid: Promise<azure-event-hubs.RequestResponseLink>
+  name: RequestResponseLink>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: RequestResponseLink
+    fullName: RequestResponseLink
+    uid: azure-event-hubs.RequestResponseLink
+  - name: '>'
+    fullName: '>'

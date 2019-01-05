@@ -1,0 +1,179 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1c5d4291ffe02ac8f86bc6d6aca1109c397d9195
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48514785"
+items:
+- uid: '@azure/event-hubs.CbsClient'
+  name: CbsClient
+  fullName: CbsClient
+  children:
+  - '@azure/event-hubs.CbsClient.constructor'
+  - '@azure/event-hubs.CbsClient.cbsLock'
+  - '@azure/event-hubs.CbsClient.close'
+  - '@azure/event-hubs.CbsClient.connection'
+  - '@azure/event-hubs.CbsClient.connectionLock'
+  - '@azure/event-hubs.CbsClient.endpoint'
+  - '@azure/event-hubs.CbsClient.init'
+  - '@azure/event-hubs.CbsClient.negotiateClaim'
+  - '@azure/event-hubs.CbsClient.replyTo'
+  langs:
+  - typeScript
+  type: class
+  summary: ''
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.constructor'
+  name: CbsClient
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new CbsClient(connection: Connection, connectionLock: string)'
+    parameters:
+    - id: connection
+      type:
+      - '@azure/event-hubs.Connection'
+      description: AMQP 连接。
+    - id: connectionLock
+      type:
+      - string
+      description: >
+        每个连接一个唯一字符串 (通常是 guid)。
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.cbsLock'
+  name: cbsLock
+  fullName: cbsLock
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} cbsLock 每个每个连接用于获取建立 cbs 会话，如果不存在 aqmp 连接的锁定 $cbs 会话的唯一锁名。'
+  syntax:
+    content: 'cbsLock: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.close'
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 关闭此客户端，返回的 promise 的断开连接完成时将解析连接到事件中心/服务总线的 AMQP cbs 会话。
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.connection'
+  name: connection
+  fullName: connection
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{连接} 连接的 AMQP 连接。'
+  syntax:
+    content: 'connection: Connection'
+    return:
+      type:
+      - '@azure/event-hubs.Connection'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.connectionLock'
+  name: connectionLock
+  fullName: connectionLock
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} connectionLock 每个用来获取建立 amqp 连接，如果不存在的锁定的连接的唯一锁名。'
+  syntax:
+    content: 'connectionLock: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.endpoint'
+  name: endpoint
+  fullName: endpoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} 终结点 CBS 终结点的"$cbs"'
+  syntax:
+    content: 'endpoint: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.init'
+  name: init
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 如果尚未对给定的连接之前初始化它，请创建 CBS 会话的单一实例。
+  syntax:
+    content: function init()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.negotiateClaim'
+  name: negotiateClaim
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 协商 CBS 声明与服务总线事件中心/服务。
+  syntax:
+    content: 'function negotiateClaim(audience: string, tokenObject: TokenInfo)'
+    parameters:
+    - id: audience
+      type:
+      - string
+      description: 为其请求令牌的受众。
+    - id: tokenObject
+      type:
+      - '@azure/event-hubs.TokenInfo'
+      description: 需要在 put 令牌请求中发送的令牌对象。
+    return:
+      type:
+      - Promise<any>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.CbsClient.replyTo'
+  name: replyTo
+  fullName: replyTo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} replyTo CBS replyTo-服务应回复到的接收器链接名称。'
+  syntax:
+    content: 'replyTo: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.Connection'
+  name: Connection
+  spec.typeScript:
+  - name: Connection
+    fullName: Connection
+    uid: '@azure/event-hubs.Connection'
+- uid: '@azure/event-hubs.TokenInfo'
+  name: TokenInfo
+  spec.typeScript:
+  - name: TokenInfo
+    fullName: TokenInfo
+    uid: '@azure/event-hubs.TokenInfo'

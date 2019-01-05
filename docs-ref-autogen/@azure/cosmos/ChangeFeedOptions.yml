@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 23728e9820412b40379ec6addffb3fc8fa84affd
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53688786"
+items:
+- uid: '@azure/cosmos.ChangeFeedOptions'
+  name: ChangeFeedOptions
+  fullName: ChangeFeedOptions
+  children:
+  - '@azure/cosmos.ChangeFeedOptions.continuation'
+  - '@azure/cosmos.ChangeFeedOptions.maxItemCount'
+  - '@azure/cosmos.ChangeFeedOptions.sessionToken'
+  - '@azure/cosmos.ChangeFeedOptions.startFromBeginning'
+  - '@azure/cosmos.ChangeFeedOptions.startTime'
+  langs:
+  - typeScript
+  type: interface
+  summary: >
+    指定选项的更改源的这些选项控制某些位置和时间更改源中开始读取。 优先顺序是：
+
+    - 继续符
+
+    - startTime
+
+    - startFromBeginning
+
+
+    如果设置了任何这些选项，它将开始从第一个读取更改`ChangeFeedIterator.executeNext()`调用。
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.continuation'
+  name: continuation
+  fullName: continuation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    用于从启动的继续标记。
+
+    这相当于从 etag 和继续符的值 `ChangeFeedResponse`
+  optional: true
+  syntax:
+    content: 'continuation?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.maxItemCount'
+  name: maxItemCount
+  fullName: maxItemCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 要每页返回项的最大数量
+  optional: true
+  syntax:
+    content: 'maxItemCount?: number'
+    return:
+      type:
+      - number
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.sessionToken'
+  name: sessionToken
+  fullName: sessionToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 要使用的会话令牌。 如果未指定，将开始使用最新的捕获的会话令牌。
+  optional: true
+  syntax:
+    content: 'sessionToken?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.startFromBeginning'
+  name: startFromBeginning
+  fullName: startFromBeginning
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 指示是否要从头开始或未。
+  optional: true
+  syntax:
+    content: 'startFromBeginning?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.startTime'
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 指定的开始时间开始读取中的更改。
+  optional: true
+  syntax:
+    content: 'startTime?: Date'
+    return:
+      type:
+      - Date
+  package: '@azure/cosmos'

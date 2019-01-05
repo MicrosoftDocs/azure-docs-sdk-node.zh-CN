@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 9e3f638b19d4ce0c2761dfaa54950d6187dabe66
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52012901"
+items:
+- uid: '@azure/event-processor-host.EventProcessorHostOptions'
+  name: EventProcessorHostOptions
+  fullName: EventProcessorHostOptions
+  children:
+  - '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+  - '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+  - '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+  - '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+  - '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+  - '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+  langs:
+  - typeScript
+  type: interface
+  summary: 描述可提供用于创建 EventProcessorHost 的可选参数。
+  extends:
+    name: '@azure/event-processor-host.FromConnectionStringOptions'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+  name: checkpointManager
+  fullName: checkpointManager
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {CheckpointManager}[checkpointManager]若要管理检查点管理器。
+
+    默认值： ** `AzureStorageCheckpointLeaseManager` **。
+  optional: true
+  syntax:
+    content: 'checkpointManager?: CheckpointManager'
+    return:
+      type:
+      - '@azure/event-processor-host.CheckpointManager'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+  name: eventHubConnectionString
+  fullName: eventHubConnectionString
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string}[eventHubConnectionString]要从接收的事件中心的连接字符串。 示例："Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = 我-SA 的名称;SharedAccessKey = 我 SA 密钥"。'
+  optional: true
+  syntax:
+    content: 'eventHubConnectionString?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+  name: leaseManager
+  fullName: leaseManager
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{LeaseManager}[LeaseManager]若要管理租约管理器。 默认值： ** `AzureStorageCheckpointLeaseManager` **。'
+  optional: true
+  syntax:
+    content: 'leaseManager?: LeaseManager'
+    return:
+      type:
+      - '@azure/event-processor-host.LeaseManager'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+  name: storageConnectionString
+  fullName: storageConnectionString
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string}[storageConnectionString]用于租用和检查点的 Azure 存储帐户的连接字符串。 示例"DefaultEndpointsProtocol = https;AccountName = < 帐户名称 >;AccountKey = < 帐户密钥 >;EndpointSuffix=core.windows.net"'
+  optional: true
+  syntax:
+    content: 'storageConnectionString?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+  name: storageContainerName
+  fullName: storageContainerName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string}[storageContainerName]通过内置的租约和检查点管理器使用的 azure 存储容器名称。'
+  optional: true
+  syntax:
+    content: 'storageContainerName?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+  name: tokenProvider
+  fullName: tokenProvider
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{TokenProvider}[tokenProvider]提供用于身份验证令牌的令牌提供程序接口的实例。 默认值： ** `SasTokenProvider` **。'
+  optional: true
+  syntax:
+    content: 'tokenProvider?: TokenProvider'
+    return:
+      type:
+      - TokenProvider
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.FromConnectionStringOptions'
+  name: FromConnectionStringOptions
+  spec.typeScript:
+  - name: FromConnectionStringOptions
+    fullName: FromConnectionStringOptions
+    uid: '@azure/event-processor-host.FromConnectionStringOptions'
+- uid: '@azure/event-processor-host.CheckpointManager'
+  name: CheckpointManager
+  spec.typeScript:
+  - name: CheckpointManager
+    fullName: CheckpointManager
+    uid: '@azure/event-processor-host.CheckpointManager'
+- uid: '@azure/event-processor-host.LeaseManager'
+  name: LeaseManager
+  spec.typeScript:
+  - name: LeaseManager
+    fullName: LeaseManager
+    uid: '@azure/event-processor-host.LeaseManager'

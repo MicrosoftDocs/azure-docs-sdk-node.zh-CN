@@ -1,0 +1,231 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1170452791677275d567768cac21a4eb151a4f2d
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53671961"
+items:
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  name: SpeechTranslationConfig
+  fullName: SpeechTranslationConfig
+  children:
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.addTargetLanguage
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.authorizationToken
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.close
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromAuthorizationToken
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromEndpoint
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromSubscription
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.setProperty
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.speechRecognitionLanguage
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.targetLanguages
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.voiceName
+  langs:
+  - typeScript
+  type: class
+  summary: 语音翻译配置。
+  extends:
+    name: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.addTargetLanguage
+  name: addTargetLanguage(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 添加要转换为 （文本） 目标语言。
+  syntax:
+    content: 'function addTargetLanguage(value: string)'
+    parameters:
+    - id: value
+      type:
+      - string
+      description: >
+        例如 DE-DE 的语言
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.authorizationToken
+  name: authorizationToken
+  fullName: authorizationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    设置授权令牌。
+
+    如果此设置，则忽略订阅密钥。
+
+    用户需要确保提供的授权令牌有效且未过期。
+  syntax:
+    content: 'public authorizationToken: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.close
+  name: close()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 释放关联的资源。
+  syntax:
+    content: function close()
+    parameters: []
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromAuthorizationToken
+  name: fromAuthorizationToken(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    返回表示通过授权令牌和服务区域 SpeechTranslationConfig 静态实例。
+
+    注意：调用方需要确保授权令牌的有效期。 授权令牌过期之前，调用方需要通过设置新的有效令牌属性 authorizationToken 刷新。 否则，此 SpeechTranslationConfig 实例创建的所有识别器将识别过程中会遇到错误。
+  syntax:
+    content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
+    parameters:
+    - id: authorizationToken
+      type:
+      - string
+      description: 授权令牌。
+    - id: region
+      type:
+      - string
+      description: 区域名称 (请参阅<a href="https://aka.ms/csspeech/region">区域页</a>)。
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromEndpoint
+  name: fromEndpoint(URL, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    使用指定的终结点和订阅密钥创建语音翻译配置的实例。
+
+    此方法仅用于使用非标准的服务终结点或参数的用户。
+
+    注意：终结点 URL 中指定的查询属性不会更改，即使它们设置的任何其他 Api。 例如，如果在 uri 查询参数的形式定义语言"语言 = DE-DE"，并还设置 speechRecognitionLanguage 属性，在 uri 中的语言设置将优先，并且有效的语言为"DE-DE"。
+
+    未指定终结点中的属性可以通过其他 Api 设置 URL。
+  syntax:
+    content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
+    parameters:
+    - id: endpoint
+      type:
+      - URL
+      description: 若要连接到服务终结点。
+    - id: subscriptionKey
+      type:
+      - string
+      description: 订阅密钥。
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromSubscription
+  name: fromSubscription(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: SpeechTranslationConfig 的静态实例返回通过将传递订阅密钥和服务区域。
+  syntax:
+    content: 'static function fromSubscription(subscriptionKey: string, region: string)'
+    parameters:
+    - id: subscriptionKey
+      type:
+      - string
+      description: 订阅密钥。
+    - id: region
+      type:
+      - string
+      description: 区域名称 (请参阅<a href="https://aka.ms/csspeech/region">区域页</a>)。
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.setProperty
+  name: setProperty(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 将命名的属性设置为值
+  syntax:
+    content: 'function setProperty(name: string, value: string)'
+    parameters:
+    - id: name
+      type:
+      - string
+      description: 属性的名称。
+    - id: value
+      type:
+      - string
+      description: >
+        值。
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.speechRecognitionLanguage
+  name: speechRecognitionLanguage
+  fullName: speechRecognitionLanguage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    设置授权令牌。
+
+    如果此设置，则忽略订阅密钥。
+
+    用户需要确保提供的授权令牌有效且未过期。
+  syntax:
+    content: 'public speechRecognitionLanguage: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.targetLanguages
+  name: targetLanguages
+  fullName: targetLanguages
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 添加要转换为 （文本） 目标语言。
+  syntax:
+    content: 'public targetLanguages: string[]'
+    return:
+      type:
+      - string[]
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.voiceName
+  name: voiceName
+  fullName: voiceName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 设置语音的已翻译的语言中，启用语音合成输出。
+  syntax:
+    content: 'public voiceName: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+references:
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  name: SpeechConfig
+  spec.typeScript:
+  - name: SpeechConfig
+    fullName: SpeechConfig
+    uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  name: SpeechTranslationConfig
+  spec.typeScript:
+  - name: SpeechTranslationConfig
+    fullName: SpeechTranslationConfig
+    uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig

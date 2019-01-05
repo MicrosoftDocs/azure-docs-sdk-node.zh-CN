@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b5e677e6562e3636f6003ba382cb8461c02a87c9
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53678081"
+items:
+- uid: azure-servicefabric.ServiceTypeHealthPolicy
+  name: ServiceTypeHealthPolicy
+  fullName: ServiceTypeHealthPolicy
+  children:
+  - azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService
+  - azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition
+  - azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices
+  langs:
+  - typeScript
+  type: interface
+  summary: 代表的运行状况策略用于评估属于某个服务类型的服务的运行状况。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService
+  name: maxPercentUnhealthyPartitionsPerService
+  fullName: maxPercentUnhealthyPartitionsPerService
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    允许的最大的每个服务不正常分区的百分比。 允许的值为字节值从 0 到 100 的百分比表示的最大容忍百分比可以不正常之前该服务的分区被视为错误。
+
+    如果未超过该百分比，但至少一个不正常的分区，则将运行状况评估为 Warning。
+
+    百分比的计算方式的不正常分区数除以在服务中的分区总数。
+
+    计算结果调容忍数量较少的分区上一次失败。 默认百分比为零。
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyPartitionsPerService?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition
+  name: maxPercentUnhealthyReplicasPerPartition
+  fullName: maxPercentUnhealthyReplicasPerPartition
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    允许的最大不正常副本的每个分区的百分比。 允许的值是从 0 到 100 的字节值。
+
+    该百分比表示分区视为出错之前可处于不正常状态的副本的最大容忍的的百分比。
+
+    如果未超过该百分比，但至少一个不正常的副本，运行状况评估为 Warning。
+
+    百分比的计算方式是不正常的副本数除以在分区中副本总数。
+
+    计算结果调容忍发生一次故障数量较少的副本。 默认百分比为零。
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyReplicasPerPartition?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices
+  name: maxPercentUnhealthyServices
+  fullName: maxPercentUnhealthyServices
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    允许的最大不正常服务数的百分比。 允许的值是从 0 到 100 的字节值。
+
+    该百分比表示应用程序视为出错之前可处于不正常状态的服务的最大容忍的的百分比。
+
+    如果未超过该百分比，但至少一个不正常的服务，运行状况评估为 Warning。
+
+    这被计算方式的特定服务类型的不正常服务数除以特定服务类型的服务的总数。
+
+    计算结果调容忍少量服务一次失败。 默认百分比为零。
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyServices?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric

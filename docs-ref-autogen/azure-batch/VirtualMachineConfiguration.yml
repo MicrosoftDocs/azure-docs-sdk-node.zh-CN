@@ -1,0 +1,150 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 63ee004180274b4619233edcade16560a27d89f3
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53672730"
+items:
+- uid: azure-batch.VirtualMachineConfiguration
+  name: VirtualMachineConfiguration
+  fullName: VirtualMachineConfiguration
+  children:
+  - azure-batch.VirtualMachineConfiguration.containerConfiguration
+  - azure-batch.VirtualMachineConfiguration.dataDisks
+  - azure-batch.VirtualMachineConfiguration.imageReference
+  - azure-batch.VirtualMachineConfiguration.licenseType
+  - azure-batch.VirtualMachineConfiguration.nodeAgentSKUId
+  - azure-batch.VirtualMachineConfiguration.windowsConfiguration
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.VirtualMachineConfiguration.containerConfiguration
+  name: containerConfiguration
+  fullName: containerConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果指定，以允许在容器中运行任务在池中每个节点上执行安装程序。 所有常规任务和此池上运行的作业管理器任务必须指定中的 containerSettings 属性，而所有其他任务可以指定它。
+  optional: true
+  syntax:
+    content: 'containerConfiguration?: ContainerConfiguration'
+    return:
+      type:
+      - azure-batch.ContainerConfiguration
+  package: azure-batch
+- uid: azure-batch.VirtualMachineConfiguration.dataDisks
+  name: dataDisks
+  fullName: dataDisks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    此属性必须是指定池中的计算节点需要能够空数据磁盘附加到它们。 这不能更新。 每个节点获取自己的磁盘 （磁盘不是文件共享）。 无法附加现有磁盘，每个附加的磁盘为空。
+
+    从池中删除节点后，也将删除该磁盘并与之关联的所有数据。 磁盘格式不附加后，请使用-有关详细信息，请参阅之前必须进行格式化https://docs.microsoft.com/en-us/azure/virtual-machines/linux/classic/attach-disk#initialize-a-new-data-disk-in-linux和https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-disk-ps#add-an-empty-data-disk-to-a-virtual-machine。
+  optional: true
+  syntax:
+    content: 'dataDisks?: DataDisk[]'
+    return:
+      type:
+      - azure-batch.DataDisk[]
+  package: azure-batch
+- uid: azure-batch.VirtualMachineConfiguration.imageReference
+  name: imageReference
+  fullName: imageReference
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'imageReference: ImageReference'
+    return:
+      type:
+      - azure-batch.ImageReference
+  package: azure-batch
+- uid: azure-batch.VirtualMachineConfiguration.licenseType
+  name: licenseType
+  fullName: licenseType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    这仅适用于包含 Windows 操作系统，并且应该仅当您将部署的节点的有效的本地许可证时使用的映像。 如果省略，没有本地许可折扣。 值为：
+
+
+    Windows_Server-适用于 Windows Server 的本地许可证。
+
+    Windows_Client-适用于 Windows 客户端的本地许可证。
+  optional: true
+  syntax:
+    content: 'licenseType?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.VirtualMachineConfiguration.nodeAgentSKUId
+  name: nodeAgentSKUId
+  fullName: nodeAgentSKUId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Batch 节点代理是在池中，每个节点上运行，并提供节点与 Batch 服务之间的命令和控制接口的程序。 节点代理对于不同操作系统有不同的实现（称为 SKU）。
+
+    必须指定节点代理 SKU 相匹配的所选的图像引用。 若要获取支持的节点代理 Sku 和其清单，其中已验证的图像引用的列表，请参阅支持的节点代理 Sku 的列表操作。
+  syntax:
+    content: 'nodeAgentSKUId: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.VirtualMachineConfiguration.windowsConfiguration
+  name: windowsConfiguration
+  fullName: windowsConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 此属性不能指定是否 imageReference 属性指定 Linux OS 映像。
+  optional: true
+  syntax:
+    content: 'windowsConfiguration?: WindowsConfiguration'
+    return:
+      type:
+      - azure-batch.WindowsConfiguration
+  package: azure-batch
+references:
+- uid: azure-batch.ContainerConfiguration
+  name: ContainerConfiguration
+  spec.typeScript:
+  - name: ContainerConfiguration
+    fullName: ContainerConfiguration
+    uid: azure-batch.ContainerConfiguration
+- uid: azure-batch.DataDisk[]
+  name: DataDisk[]
+  spec.typeScript:
+  - name: DataDisk
+    fullName: DataDisk
+    uid: azure-batch.DataDisk
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ImageReference
+  name: ImageReference
+  spec.typeScript:
+  - name: ImageReference
+    fullName: ImageReference
+    uid: azure-batch.ImageReference
+- uid: azure-batch.WindowsConfiguration
+  name: WindowsConfiguration
+  spec.typeScript:
+  - name: WindowsConfiguration
+    fullName: WindowsConfiguration
+    uid: azure-batch.WindowsConfiguration

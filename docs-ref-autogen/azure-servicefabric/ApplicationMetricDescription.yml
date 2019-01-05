@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b36a02de9e3b728340dd4350cec66428479ae8c7
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52035440"
+items:
+- uid: azure-servicefabric.ApplicationMetricDescription
+  name: ApplicationMetricDescription
+  fullName: ApplicationMetricDescription
+  children:
+  - azure-servicefabric.ApplicationMetricDescription.maximumCapacity
+  - azure-servicefabric.ApplicationMetricDescription.name
+  - azure-servicefabric.ApplicationMetricDescription.reservationCapacity
+  - azure-servicefabric.ApplicationMetricDescription.totalApplicationCapacity
+  langs:
+  - typeScript
+  type: interface
+  summary: 介绍自定义资源平衡指标的容量信息。 这可用来限制此指标的总消耗量的此应用程序的服务。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationMetricDescription.maximumCapacity
+  name: maximumCapacity
+  fullName: maximumCapacity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Service Fabric 应用程序最大节点容量。
+
+    这是在单个节点上的此应用程序的实例的最大负载。 即使节点的容量大于此值，则 Service Fabric 将限制每个节点上为此值的应用程序中的服务的总负载。
+
+    如果设置为零，此指标容量，不受限制每个节点上。
+
+    当创建新的应用程序具有定义的应用程序容量，小于或等于 TotalApplicationCapacity 必须始终为 MaximumNodes 和此值的乘积。
+
+    当更新现有的应用程序包含应用程序容量，小于或等于 TotalApplicationCapacity 必须始终为 MaximumNodes 和此值的乘积。
+  optional: true
+  syntax:
+    content: 'maximumCapacity?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationMetricDescription.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 指标的名称。
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationMetricDescription.reservationCapacity
+  name: reservationCapacity
+  fullName: reservationCapacity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Service Fabric 应用程序节点保留容量。
+
+    这是负荷的具有此应用程序的实例的节点上保留量。
+
+    如果指定 MinimumNodes，这些值的乘积将应用程序在群集中保留的容量。
+
+    如果设置为零，没有容量保留为此度量值。
+
+    设置应用程序容量时，或更新应用程序容量; 时此值必须小于或等于每个指标可。
+  optional: true
+  syntax:
+    content: 'reservationCapacity?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationMetricDescription.totalApplicationCapacity
+  name: totalApplicationCapacity
+  fullName: totalApplicationCapacity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Service Fabric 应用程序总指标容量。
+
+    这是此应用程序在群集中的总指标容量。 Service Fabric 将尝试为此值的应用程序中的服务负载总计限制。
+
+    当创建新的应用程序具有定义的应用程序容量，小于或等于此值必须始终为 MaximumNodes 和可的产品。
+  optional: true
+  syntax:
+    content: 'totalApplicationCapacity?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric

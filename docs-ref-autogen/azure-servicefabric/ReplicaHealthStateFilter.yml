@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f0cfdbf2404b8afd8fc089d17b5f9c895a0dfced
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52008101"
+items:
+- uid: azure-servicefabric.ReplicaHealthStateFilter
+  name: ReplicaHealthStateFilter
+  fullName: ReplicaHealthStateFilter
+  children:
+  - azure-servicefabric.ReplicaHealthStateFilter.healthStateFilter
+  - azure-servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    定义匹配条件以确定是否应包括作为群集运行状况区块中的一个分区的子副本。
+
+    如果父实体匹配群集运行状况区块查询说明中指定的筛选器仅返回副本。 父分区、 服务和应用程序必须包括在群集运行状况区块。
+
+    一个筛选器可以匹配零个、 一个或多个副本，具体取决于其属性。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    副本的运行状况状态筛选器。 它允许选择副本，如果它们匹配所需的运行状况状态。
+
+    可能值包括以下运行状况状态之一的整数值。 仅返回与筛选器匹配的副本。 所有副本都用于评估的父分区聚合运行状况状态。
+
+    如果未指定，默认值的为 None、，除非另有指定的副本 ID。 如果筛选器默认值，指定副本 ID，则返回匹配的副本。
+
+    状态值为基于标志的枚举，因此该值可是使用按位“OR”运算符获取的值的组合。
+
+    例如，如果提供的值为 6，它可匹配与 HealthState 值为 OK (2) 和 Warning (4) 的副本。
+
+    - Default-默认值。 匹配任何 HealthState。 值为 0。
+
+    - 无-不与任何 HealthState 值匹配的筛选器。 未返回有关给定状态集合的结果时使用。 值为 1。
+
+    - Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。 值为 2。
+
+    - 警告-筛选器的输入匹配与 HealthState 值为 Warning。 值为 4。
+
+    - Error-与 HealthState 值为 Error 的输入匹配的筛选器。 值为 8。
+
+    - All-与具有任意 HealthState 值的输入匹配的筛选器。 值为 65535。
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaHealthStateFilter.replicaOrInstanceIdFilter
+  name: replicaOrInstanceIdFilter
+  fullName: replicaOrInstanceIdFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    有状态服务副本或无状态服务实例与筛选器匹配的 id。 筛选器仅应用于指定的副本，如果它存在。
+
+    如果在副本不存在，没有副本是在群集运行状况区块根据此筛选器中返回。
+
+    如果副本存在，它包含在群集运行状况区块中，如果它尊重其他筛选器属性。
+
+    如果未指定，与父筛选器匹配 （如果有） 的所有副本都纳入考虑范围，并与其他筛选器成员，如运行状况状态筛选器相匹配。
+  optional: true
+  syntax:
+    content: 'replicaOrInstanceIdFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

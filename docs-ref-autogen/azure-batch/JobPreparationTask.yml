@@ -1,0 +1,207 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3feb423c429ae16cad12fcaa2b6cc97c0ca2e24a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53660532"
+items:
+- uid: azure-batch.JobPreparationTask
+  name: JobPreparationTask
+  fullName: JobPreparationTask
+  children:
+  - azure-batch.JobPreparationTask.commandLine
+  - azure-batch.JobPreparationTask.constraints
+  - azure-batch.JobPreparationTask.containerSettings
+  - azure-batch.JobPreparationTask.environmentSettings
+  - azure-batch.JobPreparationTask.id
+  - azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+  - azure-batch.JobPreparationTask.resourceFiles
+  - azure-batch.JobPreparationTask.userIdentity
+  - azure-batch.JobPreparationTask.waitForSuccess
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    可以使用作业准备准备要运行的作业任务的计算节点。
+
+    通常在作业准备要执行的活动包括：下载作业中的所有任务都使用的通用资源文件。 作业准备任务可以将这些通用资源文件下载到计算节点上的共享位置。 (AZ_BATCH_NODE_ROOT_DIR\shared)，或从本地服务开始在计算节点上，这样该作业的所有任务可以与之进行都通信。 如果作业准备任务失败时 （即，用尽其次重试计数退出，退出代码 0 之前），批处理不会在计算节点上运行此作业的任务。 节点仍不能运行此作业的任务，直到它重置映像。 节点将保持活动状态，可用于其他作业。
+
+    作业准备任务可以多次运行相同的计算节点上。 因此，应编写，作业准备任务可以重新执行。 如果重新启动计算节点时，作业准备任务是再次运行在节点上计划作业的任何其他任务，如果 rerunOnNodeRebootAfterSuccess 为 true 或作业准备任务未以前完成之前。 如果在计算节点重置映像，计划作业的任何任务之前再次运行作业准备任务。 在计算节点上触发恢复操作时，batch 将重试任务。 恢复操作的示例包括 （但不限于） 时重启不正常的计算节点或计算节点因主机故障消失。 由于恢复操作是独立的不会根据 maxTaskRetryCount 计数会重试。
+
+    即使 maxTaskRetryCount 为 0，恢复操作由于内部重试可能会发生。
+
+    因此，所有任务应都是幂等。 这意味着任务需要允许正在中断并重新启动而不会导致任何损坏或重复的数据。 最佳实践长时间运行的任务是使用某种形式的检查点。
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 命令行不会在 shell 下运行，并因此不能充分利用 shell 功能，例如环境变量扩展。 如果你想要利用此类功能，您应中调用 shell 命令行中，例如使用"cmd /c MyCommand"在 Windows 中或"/ bin/sh-c MyCommand"在 Linux 中。 如果命令行所引用的文件路径，它应使用相对路径 （相对于任务工作目录），或使用批处理提供的环境变量 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。
+  syntax:
+    content: 'commandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'constraints?: TaskConstraints'
+    return:
+      type:
+      - azure-batch.TaskConstraints
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 当指定此选项时，如下 AZ_BATCH_NODE_ROOT_DIR （在节点上的 Azure Batch 目录的根） 的所有目录以递归方式都映射到容器、 所有任务的环境变量都都映射到容器中，和是任务命令行在容器中执行。
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ID 可以包含字母数字字符，包括连字符和下划线的任意组合，并且不能包含超过 64 个字符。 如果未指定此属性，Batch 服务将分配默认值为 jobpreparation。 作业中的任何其他任务可以不具有相同的 ID 作为作业准备任务。 如果你尝试提交具有同一 id 的任务，Batch 服务将拒绝请求，错误代码 TaskIdSameAsJobPreparationTask;如果你正在直接调用 REST API，HTTP 状态代码将为 409 （冲突）。
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+  name: rerunOnNodeRebootAfterSuccess
+  fullName: rerunOnNodeRebootAfterSuccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果计算节点重置映像，或作业准备任务未完成，始终重新运行作业准备任务 (例如在重新启动运行任务时出现)。 因此，应始终编写为幂等，并正常运行，如果多次运行作业准备任务。 默认值为 true。
+  optional: true
+  syntax:
+    content: 'rerunOnNodeRebootAfterSuccess?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    列出此元素下的文件位于任务的工作目录中。
+
+    没有资源文件的列表的最大大小。  当超过最大大小时，则请求将失败，并且响应错误代码将是 RequestEntityTooLarge。 如果发生这种情况，必须在大小减少的 ResourceFiles 集合。 这可以实现使用.zip 文件、 应用程序包或 Docker 容器。
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果省略，该任务运行以唯一任务在 Windows 节点上的某个非管理用户或唯一的 Linux 节点上的池的非管理用户。
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+- uid: azure-batch.JobPreparationTask.waitForSuccess
+  name: waitForSuccess
+  fullName: waitForSuccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果 true，作业准备任务在计算节点上失败，批处理服务重试作业准备任务，直到达到其最大重试计数 （如约束元素中指定）。 如果任务仍然未成功完成后所有重试，则批处理服务将计划作业到计算节点的任务。 计算节点保持活动状态并符合运行的其他作业的任务的条件。 如果为 false，则批处理服务将等待作业准备任务完成。 在这种情况下，作业的其他任务可以启动计算节点上执行，同时执行作业准备任务仍在运行;即使作业准备任务失败，新任务将继续在节点上计划。 默认值为 true。
+  optional: true
+  syntax:
+    content: 'waitForSuccess?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+references:
+- uid: azure-batch.TaskConstraints
+  name: TaskConstraints
+  spec.typeScript:
+  - name: TaskConstraints
+    fullName: TaskConstraints
+    uid: azure-batch.TaskConstraints
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity

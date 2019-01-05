@@ -1,0 +1,461 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8d938a3c6a00b78d7c7dfd44eebfa476424900af
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52042602"
+items:
+- uid: '@azure/event-hubs.EventHubClient'
+  name: EventHubClient
+  fullName: EventHubClient
+  children:
+  - '@azure/event-hubs.EventHubClient.close'
+  - '@azure/event-hubs.EventHubClient.connectionId'
+  - '@azure/event-hubs.EventHubClient.createFromAadTokenCredentials'
+  - '@azure/event-hubs.EventHubClient.createFromConnectionString'
+  - '@azure/event-hubs.EventHubClient.createFromIotHubConnectionString'
+  - '@azure/event-hubs.EventHubClient.createFromTokenProvider'
+  - '@azure/event-hubs.EventHubClient.constructor'
+  - '@azure/event-hubs.EventHubClient.eventhubName'
+  - '@azure/event-hubs.EventHubClient.getHubRuntimeInformation'
+  - '@azure/event-hubs.EventHubClient.getPartitionIds'
+  - '@azure/event-hubs.EventHubClient.getPartitionInformation'
+  - '@azure/event-hubs.EventHubClient.receive'
+  - '@azure/event-hubs.EventHubClient.receiveBatch'
+  - '@azure/event-hubs.EventHubClient.send'
+  - '@azure/event-hubs.EventHubClient.sendBatch'
+  langs:
+  - typeScript
+  type: class
+  summary: ''
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.close'
+  name: close()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 此客户端，返回的 promise 的断开连接完成时将解析到事件中心的 AMQP 连接将关闭。
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.connectionId'
+  name: connectionId
+  fullName: connectionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string}[connectionId]Amqp 连接 id 唯一标识进程内的连接。'
+  optional: true
+  syntax:
+    content: 'connectionId?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.createFromAadTokenCredentials'
+  name: createFromAadTokenCredentials(string, string, ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, ClientOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 从 AADTokenCredentials 创建事件中心客户端。
+  syntax:
+    content: 'static function createFromAadTokenCredentials(host: string, entityPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: ClientOptionsBase)'
+    parameters:
+    - id: host
+      type:
+      - string
+      description: 事件中心的完全限定的域名。 最有可能， <yournamespace>。 servicebus.windows.net
+    - id: entityPath
+      type:
+      - string
+      description: 窗体我的事件中心的名称-的事件中心路径
+    - id: credentials
+      type:
+      - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+      description: AAD 令牌凭据。 它可以是以下值之一：ApplicationTokenCredentials |UserTokenCredentials |DeviceTokenCredentials |MSITokenCredentials。
+    - id: options
+      type:
+      - '@azure/event-hubs.ClientOptionsBase'
+      description: 可以在客户端创建期间提供选项。
+      optional: true
+    return:
+      type:
+      - '@azure/event-hubs.EventHubClient'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.createFromConnectionString'
+  name: createFromConnectionString(string, undefined | string, ClientOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 从连接字符串创建事件中心客户端。
+  syntax:
+    content: 'static function createFromConnectionString(connectionString: string, path?: undefined | string, options?: ClientOptions)'
+    parameters:
+    - id: connectionString
+      type:
+      - string
+      description: 窗体的连接字符串 Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = 我-SA 的名称;SharedAccessKey = 我 SA 密钥
+    - id: path
+      type:
+      - undefined | string
+      description: ''
+      optional: true
+    - id: options
+      type:
+      - '@azure/event-hubs.ClientOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - '@azure/event-hubs.EventHubClient'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.createFromIotHubConnectionString'
+  name: createFromIotHubConnectionString(string, ClientOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 从连接字符串创建事件中心客户端。
+  syntax:
+    content: 'static function createFromIotHubConnectionString(iothubConnectionString: string, options?: ClientOptions)'
+    parameters:
+    - id: iothubConnectionString
+      type:
+      - string
+      description: 连接字符串的窗体主机名 = iot 主机名;SharedAccessKeyName = 我-SA 的名称;SharedAccessKey = 我 SA 密钥
+    - id: options
+      type:
+      - '@azure/event-hubs.ClientOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/event-hubs.EventHubClient>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.createFromTokenProvider'
+  name: createFromTokenProvider(string, string, TokenProvider, ClientOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 从泛型的令牌提供程序创建事件中心客户端。
+  syntax:
+    content: 'static function createFromTokenProvider(host: string, entityPath: string, tokenProvider: TokenProvider, options?: ClientOptionsBase)'
+    parameters:
+    - id: host
+      type:
+      - string
+      description: 事件中心的完全限定的域名。 最有可能， <yournamespace>。 servicebus.windows.net
+    - id: entityPath
+      type:
+      - string
+      description: 窗体我的事件中心的名称-的事件中心路径
+    - id: tokenProvider
+      type:
+      - TokenProvider
+      description: 实现 TokenProvider 接口将令牌提供程序。
+    - id: options
+      type:
+      - '@azure/event-hubs.ClientOptionsBase'
+      description: 可以在客户端创建期间提供选项。
+      optional: true
+    return:
+      type:
+      - '@azure/event-hubs.EventHubClient'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.constructor'
+  name: EventHubClient(EventHubConnectionConfig, ClientOptions)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: 实例化客户端向事件中心提供此配置。
+  syntax:
+    content: 'new EventHubClient(config: EventHubConnectionConfig, options?: ClientOptions)'
+    parameters:
+    - id: config
+      type:
+      - EventHubConnectionConfig
+      description: 要创建事件中心客户端的连接配置。
+    - id: options
+      type:
+      - '@azure/event-hubs.ClientOptions'
+      description: >
+        可以向事件中心客户端构造函数提供的可选参数。
+      optional: true
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.eventhubName'
+  name: eventhubName
+  fullName: eventhubName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} eventhubName 事件中心的名称。'
+  syntax:
+    content: 'eventhubName: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.getHubRuntimeInformation'
+  name: getHubRuntimeInformation()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 提供事件中心运行时信息。
+  syntax:
+    content: function getHubRuntimeInformation()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/event-hubs.EventHubRuntimeInformation>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.getPartitionIds'
+  name: getPartitionIds()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 提供了一系列 partitionIds。
+  syntax:
+    content: function getPartitionIds()
+    parameters: []
+    return:
+      type:
+      - Promise<Array<string>>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.getPartitionInformation'
+  name: getPartitionInformation(string | number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 提供有关指定的分区信息。
+  syntax:
+    content: 'function getPartitionInformation(partitionId: string | number)'
+    parameters:
+    - id: partitionId
+      type:
+      - string | number
+      description: 分区的分区信息是必需的 ID。
+    return:
+      type:
+      - Promise<@azure/event-hubs.EventHubPartitionRuntimeInformation>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.receive'
+  name: receive(string | number, OnMessage, OnError, ReceiveOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 通过在会话建立 AMQP 会话和 AMQP 的接收方链接来启动接收方。 消息将传递到提供的活动消息处理和错误将被传递到提供的 onError 处理程序。
+  syntax:
+    content: 'function receive(partitionId: string | number, onMessage: OnMessage, onError: OnError, options?: ReceiveOptions)'
+    parameters:
+    - id: partitionId
+      type:
+      - string | number
+      description: 从中接收的分区 ID。
+    - id: onMessage
+      type:
+      - '@azure/event-hubs.OnMessage'
+      description: 要接收的事件数据对象的消息处理程序。
+    - id: onError
+      type:
+      - '@azure/event-hubs.OnError'
+      description: 要收到一个错误，接收消息的过程中发生的错误处理程序。
+    - id: options
+      type:
+      - '@azure/event-hubs.ReceiveOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - '@azure/event-hubs.ReceiveHandler'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.receiveBatch'
+  name: receiveBatch(string | number, number, undefined | number, ReceiveOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 从事件中心分区接收 EventData 对象的一批，对于给定的计数和给定的最大等待时间 （秒），以先发生者为准。 可以直接在创建接收方对象后使用此方法和**不得**连同使用`start()`方法。
+  syntax:
+    content: 'function receiveBatch(partitionId: string | number, maxMessageCount: number, maxWaitTimeInSeconds?: undefined | number, options?: ReceiveOptions)'
+    parameters:
+    - id: partitionId
+      type:
+      - string | number
+      description: 从中接收的分区 ID。
+    - id: maxMessageCount
+      type:
+      - number
+      description: 最大消息计数。 必须是一个值大于 0。
+    - id: maxWaitTimeInSeconds
+      type:
+      - undefined | number
+      description: ''
+      optional: true
+    - id: options
+      type:
+      - '@azure/event-hubs.ReceiveOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/event-hubs.EventData[]>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.send'
+  name: send(EventData, string | number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 将给定的消息发送到事件中心。
+  syntax:
+    content: 'function send(data: EventData, partitionId?: string | number)'
+    parameters:
+    - id: data
+      type:
+      - '@azure/event-hubs.EventData'
+      description: 要发送的消息。  将发送以 UTF8 编码的 JSON 字符串。
+    - id: partitionId
+      type:
+      - string | number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Delivery>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.EventHubClient.sendBatch'
+  name: sendBatch(EventData[], string | number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 将一批的 EventData 发送到事件中心。 "Message_annotations"、"application_properties"和"属性"的第一条消息会设置为的信封 （批处理消息）。
+  syntax:
+    content: 'function sendBatch(datas: EventData[], partitionId?: string | number)'
+    parameters:
+    - id: datas
+      type:
+      - '@azure/event-hubs.EventData[]'
+      description: 要在批处理消息中发送的 EventData 对象的数组。
+    - id: partitionId
+      type:
+      - string | number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Delivery>
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.ClientOptions'
+  name: ClientOptions
+  spec.typeScript:
+  - name: ClientOptions
+    fullName: ClientOptions
+    uid: '@azure/event-hubs.ClientOptions'
+- uid: Promise<@azure/event-hubs.EventHubRuntimeInformation>
+  name: EventHubRuntimeInformation>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventHubRuntimeInformation
+    fullName: EventHubRuntimeInformation
+    uid: '@azure/event-hubs.EventHubRuntimeInformation'
+  - name: '>'
+    fullName: '>'
+- uid: Promise<@azure/event-hubs.EventHubPartitionRuntimeInformation>
+  name: EventHubPartitionRuntimeInformation>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventHubPartitionRuntimeInformation
+    fullName: EventHubPartitionRuntimeInformation
+    uid: '@azure/event-hubs.EventHubPartitionRuntimeInformation'
+  - name: '>'
+    fullName: '>'
+- uid: '@azure/event-hubs.OnMessage'
+  name: OnMessage
+  spec.typeScript:
+  - name: OnMessage
+    fullName: OnMessage
+    uid: '@azure/event-hubs.OnMessage'
+- uid: '@azure/event-hubs.OnError'
+  name: OnError
+  spec.typeScript:
+  - name: OnError
+    fullName: OnError
+    uid: '@azure/event-hubs.OnError'
+- uid: '@azure/event-hubs.ReceiveOptions'
+  name: ReceiveOptions
+  spec.typeScript:
+  - name: ReceiveOptions
+    fullName: ReceiveOptions
+    uid: '@azure/event-hubs.ReceiveOptions'
+- uid: '@azure/event-hubs.ReceiveHandler'
+  name: ReceiveHandler
+  spec.typeScript:
+  - name: ReceiveHandler
+    fullName: ReceiveHandler
+    uid: '@azure/event-hubs.ReceiveHandler'
+- uid: Promise<@azure/event-hubs.EventData[]>
+  name: EventData[]>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventData
+    fullName: EventData
+    uid: '@azure/event-hubs.EventData'
+  - name: '[]>'
+    fullName: '[]>'
+- uid: '@azure/event-hubs.EventData'
+  name: EventData
+  spec.typeScript:
+  - name: EventData
+    fullName: EventData
+    uid: '@azure/event-hubs.EventData'
+- uid: '@azure/event-hubs.EventData[]'
+  name: EventData[]
+  spec.typeScript:
+  - name: EventData
+    fullName: EventData
+    uid: '@azure/event-hubs.EventData'
+  - name: '[]'
+    fullName: '[]'
+- uid: '@azure/event-hubs.ClientOptionsBase'
+  name: ClientOptionsBase
+  spec.typeScript:
+  - name: ClientOptionsBase
+    fullName: ClientOptionsBase
+    uid: '@azure/event-hubs.ClientOptionsBase'
+- uid: '@azure/event-hubs.EventHubClient'
+  name: EventHubClient
+  spec.typeScript:
+  - name: EventHubClient
+    fullName: EventHubClient
+    uid: '@azure/event-hubs.EventHubClient'
+- uid: Promise<@azure/event-hubs.EventHubClient>
+  name: EventHubClient>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventHubClient
+    fullName: EventHubClient
+    uid: '@azure/event-hubs.EventHubClient'
+  - name: '>'
+    fullName: '>'

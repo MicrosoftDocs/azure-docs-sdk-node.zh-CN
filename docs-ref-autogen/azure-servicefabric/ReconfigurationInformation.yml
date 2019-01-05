@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d4557e6fbf7a07e424f47a9df6388b7ffe440975
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52075232"
+items:
+- uid: azure-servicefabric.ReconfigurationInformation
+  name: ReconfigurationInformation
+  fullName: ReconfigurationInformation
+  children:
+  - azure-servicefabric.ReconfigurationInformation.previousConfigurationRole
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationPhase
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationType
+  langs:
+  - typeScript
+  type: interface
+  summary: 有关当前重新配置阶段、 类型、 副本和重新配置的旧配置角色等的信息开始日期时间。
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.previousConfigurationRole
+  name: previousConfigurationRole
+  fullName: previousConfigurationRole
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 副本角色后，重新配置已启动。 可能的值包括：未知，'None'、 'Primary'，'空闲的次要副本、 次要
+  optional: true
+  syntax:
+    content: 'previousConfigurationRole?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationPhase
+  name: reconfigurationPhase
+  fullName: reconfigurationPhase
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 正在进行重新配置的当前阶段。 如果不发生任何重新配置此值将"None"。 可能的值包括：未知，None、"阶段 0"，"阶段 1"，Phase2、 Phase3、 Phase4、 AbortPhaseZero
+  optional: true
+  syntax:
+    content: 'reconfigurationPhase?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc
+  name: reconfigurationStartTimeUtc
+  fullName: reconfigurationStartTimeUtc
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 开始时间 （采用 UTC) 正在进行重新配置。 如果不发生任何重新配置此值将为零的日期时间。
+  optional: true
+  syntax:
+    content: 'reconfigurationStartTimeUtc?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationType
+  name: reconfigurationType
+  fullName: reconfigurationType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 当前正在进行重新配置的类型。 如果不发生任何重新配置此值将"None"。 可能的值包括：未知，交换主要副本，故障转移，其他
+  optional: true
+  syntax:
+    content: 'reconfigurationType?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4d28cd447cc9b0c5edfabcf7f0cb6a801809f796
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52064932"
+items:
+- uid: azure-servicefabric.ServiceLoadMetricDescription
+  name: ServiceLoadMetricDescription
+  fullName: ServiceLoadMetricDescription
+  children:
+  - azure-servicefabric.ServiceLoadMetricDescription.defaultLoad
+  - azure-servicefabric.ServiceLoadMetricDescription.name
+  - azure-servicefabric.ServiceLoadMetricDescription.primaryDefaultLoad
+  - azure-servicefabric.ServiceLoadMetricDescription.secondaryDefaultLoad
+  - azure-servicefabric.ServiceLoadMetricDescription.weight
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="7e8cb-101">在运行时期间指定的指标进行负载平衡的服务。</span><span class="sxs-lookup"><span data-stu-id="7e8cb-101">Specifies a metric to load balance a service during runtime.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.defaultLoad
+  name: defaultLoad
+  fullName: defaultLoad
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7e8cb-102">仅用于无状态服务。</span><span class="sxs-lookup"><span data-stu-id="7e8cb-102">Used only for Stateless services.</span></span> <span data-ttu-id="7e8cb-103">默认负载，为数字，此服务创建为此度量值的量。</span><span class="sxs-lookup"><span data-stu-id="7e8cb-103">The default amount of load, as a number, that this service creates for this metric.</span></span>
+  optional: true
+  syntax:
+    content: 'defaultLoad?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7e8cb-104">指标的名称。</span><span class="sxs-lookup"><span data-stu-id="7e8cb-104">The name of the metric.</span></span> <span data-ttu-id="7e8cb-105">如果服务在运行时期间选择报告负载，负载度量值名称应与在名称中完全指定的名称匹配。</span><span class="sxs-lookup"><span data-stu-id="7e8cb-105">If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly.</span></span> <span data-ttu-id="7e8cb-106">请注意，指标名称区分大小写。</span><span class="sxs-lookup"><span data-stu-id="7e8cb-106">Note that metric names are case-sensitive.</span></span>
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.primaryDefaultLoad
+  name: primaryDefaultLoad
+  fullName: primaryDefaultLoad
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7e8cb-107">仅用于有状态服务。</span><span class="sxs-lookup"><span data-stu-id="7e8cb-107">Used only for Stateful services.</span></span> <span data-ttu-id="7e8cb-108">默认负载，为数字，其主副本时，此服务创建为此度量值的量。</span><span class="sxs-lookup"><span data-stu-id="7e8cb-108">The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.</span></span>
+  optional: true
+  syntax:
+    content: 'primaryDefaultLoad?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.secondaryDefaultLoad
+  name: secondaryDefaultLoad
+  fullName: secondaryDefaultLoad
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="7e8cb-109">仅用于有状态服务。</span><span class="sxs-lookup"><span data-stu-id="7e8cb-109">Used only for Stateful services.</span></span> <span data-ttu-id="7e8cb-110">默认负载，为数字，其辅助副本时，此服务创建为此度量值的量。</span><span class="sxs-lookup"><span data-stu-id="7e8cb-110">The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.</span></span>
+  optional: true
+  syntax:
+    content: 'secondaryDefaultLoad?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.weight
+  name: weight
+  fullName: weight
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"7e8cb-111\">服务负载指标相对权重，为一个数字作为此服务配置的其他指标相比较。</span><span class=\"sxs-lookup\"><span data-stu-id=\"7e8cb-111\">The service load metric relative weight, compared to other metrics configured for this service, as a number.</span></span> <span data-ttu-id=\"7e8cb-112\">可能的值包括：Zero、 Low、 Medium、 高</span><span class=\"sxs-lookup\"><span data-stu-id=\"7e8cb-112\">Possible values include: 'Zero', 'Low', 'Medium', 'High'</span></span>"
+  optional: true
+  syntax:
+    content: 'weight?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

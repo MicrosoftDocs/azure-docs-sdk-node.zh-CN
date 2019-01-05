@@ -1,0 +1,176 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: aebd07dd9f7c35e7e22ab27782bf2d6a74d8d9d0
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52057922"
+items:
+- uid: azure-servicefabric.DeployedServiceReplicaInfo
+  name: DeployedServiceReplicaInfo
+  fullName: DeployedServiceReplicaInfo
+  children:
+  - azure-servicefabric.DeployedServiceReplicaInfo.address
+  - azure-servicefabric.DeployedServiceReplicaInfo.codePackageName
+  - azure-servicefabric.DeployedServiceReplicaInfo.hostProcessId
+  - azure-servicefabric.DeployedServiceReplicaInfo.partitionId
+  - azure-servicefabric.DeployedServiceReplicaInfo.replicaStatus
+  - azure-servicefabric.DeployedServiceReplicaInfo.serviceKind
+  - azure-servicefabric.DeployedServiceReplicaInfo.serviceManifestName
+  - azure-servicefabric.DeployedServiceReplicaInfo.serviceName
+  - azure-servicefabric.DeployedServiceReplicaInfo.servicePackageActivationId
+  - azure-servicefabric.DeployedServiceReplicaInfo.serviceTypeName
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="f9481-101">有关 Service Fabric 服务副本的节点上部署的信息。</span><span class="sxs-lookup"><span data-stu-id="f9481-101">Information about a Service Fabric service replica deployed on a node.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.address
+  name: address
+  fullName: address
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f9481-102">返回处于打开或 ChangeRole 副本的最后一个地址。</span><span class="sxs-lookup"><span data-stu-id="f9481-102">The last address returned by the replica in Open or ChangeRole.</span></span>
+  optional: true
+  syntax:
+    content: 'address?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.codePackageName
+  name: codePackageName
+  fullName: codePackageName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f9481-103">承载此副本的代码包的名称。</span><span class="sxs-lookup"><span data-stu-id="f9481-103">The name of the code package that hosts this replica.</span></span>
+  optional: true
+  syntax:
+    content: 'codePackageName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.hostProcessId
+  name: hostProcessId
+  fullName: hostProcessId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f9481-104">将托管该副本的进程的主机进程 ID。</span><span class="sxs-lookup"><span data-stu-id="f9481-104">Host process ID of the process that is hosting the replica.</span></span> <span data-ttu-id="f9481-105">如果副本已关闭，这将为零。</span><span class="sxs-lookup"><span data-stu-id="f9481-105">This will be zero if the replica is down.</span></span> <span data-ttu-id="f9481-106">Hyper-v 容器在此主机进程 ID 将从不同的内核。</span><span class="sxs-lookup"><span data-stu-id="f9481-106">In hyper-v containers this host process ID will be from different kernel.</span></span>
+  optional: true
+  syntax:
+    content: 'hostProcessId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f9481-107">Service Fabric 用于唯一标识分区的内部 ID。</span><span class="sxs-lookup"><span data-stu-id="f9481-107">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="f9481-108">创建服务时，这是随机生成的 GUID。</span><span class="sxs-lookup"><span data-stu-id="f9481-108">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="f9481-109">分区 ID 是唯一的而不会更改该服务的生存期内。</span><span class="sxs-lookup"><span data-stu-id="f9481-109">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="f9481-110">如果在同一个服务已被删除并重新创建其分区的 Id 会有所不同。</span><span class="sxs-lookup"><span data-stu-id="f9481-110">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>
+  optional: true
+  syntax:
+    content: 'partitionId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.replicaStatus
+  name: replicaStatus
+  fullName: replicaStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"f9481-111\">一个服务副本的状态。</span><span class=\"sxs-lookup\"><span data-stu-id=\"f9481-111\">The status of a replica of a service.</span></span> <span data-ttu-id=\"f9481-112\">可能的值包括：Invalid、 InBuild，备用，就绪，关闭、 删除</span><span class=\"sxs-lookup\"><span data-stu-id=\"f9481-112\">Possible values include: 'Invalid', 'InBuild', 'Standby', 'Ready', 'Down', 'Dropped'</span></span>"
+  optional: true
+  syntax:
+    content: 'replicaStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.serviceKind
+  name: serviceKind
+  fullName: serviceKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f9481-113">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="f9481-113">Polymorphic Discriminator</span></span>
+  syntax:
+    content: 'serviceKind: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.serviceManifestName
+  name: serviceManifestName
+  fullName: serviceManifestName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f9481-114">在其中定义此服务类型的服务清单的名称。</span><span class="sxs-lookup"><span data-stu-id="f9481-114">The name of the service manifest in which this service type is defined.</span></span>
+  optional: true
+  syntax:
+    content: 'serviceManifestName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.serviceName
+  name: serviceName
+  fullName: serviceName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f9481-115">与服务的完整名称 fabric:应用程序全名。</span><span class="sxs-lookup"><span data-stu-id="f9481-115">The full name of the service with 'fabric:' URI scheme.</span></span>
+  optional: true
+  syntax:
+    content: 'serviceName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.servicePackageActivationId
+  name: servicePackageActivationId
+  fullName: servicePackageActivationId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f9481-116">已部署的服务包的 ActivationId。</span><span class="sxs-lookup"><span data-stu-id="f9481-116">The ActivationId of a deployed service package.</span></span> <span data-ttu-id="f9481-117">如果在创建服务时指定 ServicePackageActivationMode 是 SharedProcess （或如果未指定，在这种情况下则默认为 SharedProcess），则 ServicePackageActivationId 值始终是空字符串。</span><span class="sxs-lookup"><span data-stu-id="f9481-117">If ServicePackageActivationMode specified at the time of creating the service is 'SharedProcess' (or if it is not specified, in which case it defaults to 'SharedProcess'), then value of ServicePackageActivationId is always an empty string.</span></span>
+  optional: true
+  syntax:
+    content: 'servicePackageActivationId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.serviceTypeName
+  name: serviceTypeName
+  fullName: serviceTypeName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f9481-118">服务清单中指定的服务类型的名称。</span><span class="sxs-lookup"><span data-stu-id="f9481-118">Name of the service type as specified in the service manifest.</span></span>
+  optional: true
+  syntax:
+    content: 'serviceTypeName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

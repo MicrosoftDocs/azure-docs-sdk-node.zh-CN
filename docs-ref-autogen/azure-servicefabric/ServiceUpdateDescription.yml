@@ -1,0 +1,210 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 341e3b0b6b4e5d0988dcc034d0604aff3d6b02ef
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52061222"
+items:
+- uid: azure-servicefabric.ServiceUpdateDescription
+  name: ServiceUpdateDescription
+  fullName: ServiceUpdateDescription
+  children:
+  - azure-servicefabric.ServiceUpdateDescription.correlationScheme
+  - azure-servicefabric.ServiceUpdateDescription.defaultMoveCost
+  - azure-servicefabric.ServiceUpdateDescription.flags
+  - azure-servicefabric.ServiceUpdateDescription.loadMetrics
+  - azure-servicefabric.ServiceUpdateDescription.placementConstraints
+  - azure-servicefabric.ServiceUpdateDescription.scalingPolicies
+  - azure-servicefabric.ServiceUpdateDescription.serviceKind
+  - azure-servicefabric.ServiceUpdateDescription.servicePlacementPolicies
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="f4007-101">ServiceUpdateDescription 包含所有所需更新服务的信息。</span><span class="sxs-lookup"><span data-stu-id="f4007-101">A ServiceUpdateDescription contains all of the information necessary to update a service.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.correlationScheme
+  name: correlationScheme
+  fullName: correlationScheme
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f4007-102">相关方案中。</span><span class="sxs-lookup"><span data-stu-id="f4007-102">The correlation scheme.</span></span>
+  optional: true
+  syntax:
+    content: 'correlationScheme?: ServiceCorrelationDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceCorrelationDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.defaultMoveCost
+  name: defaultMoveCost
+  fullName: defaultMoveCost
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"f4007-103\">该服务移动成本。</span><span class=\"sxs-lookup\"><span data-stu-id=\"f4007-103\">The move cost for the service.</span></span> <span data-ttu-id=\"f4007-104\">可能的值包括：Zero、 Low、 Medium、 高</span><span class=\"sxs-lookup\"><span data-stu-id=\"f4007-104\">Possible values include: 'Zero', 'Low', 'Medium', 'High'</span></span>"
+  optional: true
+  syntax:
+    content: 'defaultMoveCost?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.flags
+  name: flags
+  fullName: flags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="f4007-105">用于指示是否设置其他属性的标志。</span><span class="sxs-lookup"><span data-stu-id="f4007-105">Flags indicating whether other properties are set.</span></span> <span data-ttu-id="f4007-106">每个关联的属性对应于下面指定的标志，如果设置，指示指定属性。</span><span class="sxs-lookup"><span data-stu-id="f4007-106">Each of the associated properties corresponds to a flag, specified below, which, if set, indicate that the property is specified.</span></span>
+
+    <span data-ttu-id="f4007-107">此属性可使用按位 OR 运算符获取这些标志的组合。</span><span class="sxs-lookup"><span data-stu-id="f4007-107">This property can be a combination of those flags obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="f4007-108">例如，如果提供的值为 6 是设置 ReplicaRestartWaitDuration (2) 和 QuorumLossWaitDuration (4) 的标志。</span><span class="sxs-lookup"><span data-stu-id="f4007-108">For example, if the provided value is 6 then the flags for ReplicaRestartWaitDuration (2) and QuorumLossWaitDuration (4) are set.</span></span>
+
+    - <span data-ttu-id="f4007-109">无-不指示设置其他属性。</span><span class="sxs-lookup"><span data-stu-id="f4007-109">None - Does not indicate any other properties are set.</span></span> <span data-ttu-id="f4007-110">值为 0。</span><span class="sxs-lookup"><span data-stu-id="f4007-110">The value is zero.</span></span>
+
+    - <span data-ttu-id="f4007-111">TargetReplicaSetSize/InstanceCount-指示是否设置 TargetReplicaSetSize 属性 （对于有状态服务） 或 （对于无状态服务） 的 InstanceCount 属性。</span><span class="sxs-lookup"><span data-stu-id="f4007-111">TargetReplicaSetSize/InstanceCount - Indicates whether the TargetReplicaSetSize property (for Stateful services) or the InstanceCount property (for Stateless services) is set.</span></span> <span data-ttu-id="f4007-112">值为 1。</span><span class="sxs-lookup"><span data-stu-id="f4007-112">The value is 1.</span></span>
+
+    - <span data-ttu-id="f4007-113">ReplicaRestartWaitDuration-指示属性设置的 ReplicaRestartWaitDuration。</span><span class="sxs-lookup"><span data-stu-id="f4007-113">ReplicaRestartWaitDuration - Indicates the ReplicaRestartWaitDuration property is set.</span></span> <span data-ttu-id="f4007-114">值为 2。</span><span class="sxs-lookup"><span data-stu-id="f4007-114">The value is  2.</span></span>
+
+    - <span data-ttu-id="f4007-115">QuorumLossWaitDuration-指示属性设置的 QuorumLossWaitDuration。</span><span class="sxs-lookup"><span data-stu-id="f4007-115">QuorumLossWaitDuration - Indicates the QuorumLossWaitDuration property is set.</span></span> <span data-ttu-id="f4007-116">值是</span><span class="sxs-lookup"><span data-stu-id="f4007-116">The value is</span></span>
+
+    4.
+
+    - <span data-ttu-id="f4007-117">StandByReplicaKeepDuration-指示属性设置的 StandByReplicaKeepDuration。</span><span class="sxs-lookup"><span data-stu-id="f4007-117">StandByReplicaKeepDuration - Indicates the StandByReplicaKeepDuration property is set.</span></span> <span data-ttu-id="f4007-118">值为 8。</span><span class="sxs-lookup"><span data-stu-id="f4007-118">The value is 8.</span></span>
+
+    - <span data-ttu-id="f4007-119">MinReplicaSetSize-指示属性设置的 MinReplicaSetSize。</span><span class="sxs-lookup"><span data-stu-id="f4007-119">MinReplicaSetSize - Indicates the MinReplicaSetSize property is set.</span></span> <span data-ttu-id="f4007-120">值为 16。</span><span class="sxs-lookup"><span data-stu-id="f4007-120">The value is 16.</span></span>
+
+    - <span data-ttu-id="f4007-121">PlacementConstraints-指示属性设置的 PlacementConstraints。</span><span class="sxs-lookup"><span data-stu-id="f4007-121">PlacementConstraints - Indicates the PlacementConstraints property is set.</span></span> <span data-ttu-id="f4007-122">值为 32。</span><span class="sxs-lookup"><span data-stu-id="f4007-122">The value is 32.</span></span>
+
+    - <span data-ttu-id="f4007-123">PlacementPolicyList-指示 ServicePlacementPolicies 属性设置。</span><span class="sxs-lookup"><span data-stu-id="f4007-123">PlacementPolicyList - Indicates the ServicePlacementPolicies property is set.</span></span> <span data-ttu-id="f4007-124">值是</span><span class="sxs-lookup"><span data-stu-id="f4007-124">The value is</span></span>
+
+    64.
+
+    - <span data-ttu-id="f4007-125">关联 — 指示 CorrelationScheme 属性设置。</span><span class="sxs-lookup"><span data-stu-id="f4007-125">Correlation - Indicates the CorrelationScheme property is set.</span></span> <span data-ttu-id="f4007-126">值为 128。</span><span class="sxs-lookup"><span data-stu-id="f4007-126">The value is 128.</span></span>
+
+    - <span data-ttu-id="f4007-127">指标-指示 ServiceLoadMetrics 属性设置。</span><span class="sxs-lookup"><span data-stu-id="f4007-127">Metrics - Indicates the ServiceLoadMetrics property is set.</span></span> <span data-ttu-id="f4007-128">值为 256。</span><span class="sxs-lookup"><span data-stu-id="f4007-128">The value is 256.</span></span>
+
+    - <span data-ttu-id="f4007-129">DefaultMoveCost-指示 DefaultMoveCost 属性设置。</span><span class="sxs-lookup"><span data-stu-id="f4007-129">DefaultMoveCost - Indicates the DefaultMoveCost property is set.</span></span> <span data-ttu-id="f4007-130">值为 512。</span><span class="sxs-lookup"><span data-stu-id="f4007-130">The value is 512.</span></span>
+
+    - <span data-ttu-id="f4007-131">ScalingPolicy-指示 ScalingPolicies 属性设置。</span><span class="sxs-lookup"><span data-stu-id="f4007-131">ScalingPolicy - Indicates the ScalingPolicies property is set.</span></span> <span data-ttu-id="f4007-132">值为 1024年。</span><span class="sxs-lookup"><span data-stu-id="f4007-132">The value is 1024.</span></span>
+  optional: true
+  syntax:
+    content: 'flags?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.loadMetrics
+  name: loadMetrics
+  fullName: loadMetrics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f4007-133">服务负载度量值。</span><span class="sxs-lookup"><span data-stu-id="f4007-133">The service load metrics.</span></span>
+  optional: true
+  syntax:
+    content: 'loadMetrics?: ServiceLoadMetricDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceLoadMetricDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.placementConstraints
+  name: placementConstraints
+  fullName: placementConstraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="f4007-134">字符串形式的放置约束。</span><span class="sxs-lookup"><span data-stu-id="f4007-134">The placement constraints as a string.</span></span> <span data-ttu-id="f4007-135">放置约束是节点属性中的布尔表达式，用于根据服务要求将服务限制到特定的节点。</span><span class="sxs-lookup"><span data-stu-id="f4007-135">Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements.</span></span> <span data-ttu-id="f4007-136">例如，若要将放置在 NodeType 为 blue 的节点上的服务指定以下项："NodeColor == blue)"。</span><span class="sxs-lookup"><span data-stu-id="f4007-136">For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".</span></span>'
+  optional: true
+  syntax:
+    content: 'placementConstraints?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.scalingPolicies
+  name: scalingPolicies
+  fullName: scalingPolicies
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f4007-137">此服务的缩放策略。</span><span class="sxs-lookup"><span data-stu-id="f4007-137">Scaling policies for this service.</span></span>
+  optional: true
+  syntax:
+    content: 'scalingPolicies?: ScalingPolicyDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ScalingPolicyDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.serviceKind
+  name: serviceKind
+  fullName: serviceKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f4007-138">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="f4007-138">Polymorphic Discriminator</span></span>
+  syntax:
+    content: 'serviceKind: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.servicePlacementPolicies
+  name: servicePlacementPolicies
+  fullName: servicePlacementPolicies
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f4007-139">服务放置策略。</span><span class="sxs-lookup"><span data-stu-id="f4007-139">The service placement policies.</span></span>
+  optional: true
+  syntax:
+    content: 'servicePlacementPolicies?: ServicePlacementPolicyDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ServicePlacementPolicyDescription[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ServiceCorrelationDescription[]
+  name: ServiceCorrelationDescription[]
+  spec.typeScript:
+  - name: ServiceCorrelationDescription
+    fullName: ServiceCorrelationDescription
+    uid: azure-servicefabric.ServiceCorrelationDescription
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ServiceLoadMetricDescription[]
+  name: ServiceLoadMetricDescription[]
+  spec.typeScript:
+  - name: ServiceLoadMetricDescription
+    fullName: ServiceLoadMetricDescription
+    uid: azure-servicefabric.ServiceLoadMetricDescription
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ScalingPolicyDescription[]
+  name: ScalingPolicyDescription[]
+  spec.typeScript:
+  - name: ScalingPolicyDescription
+    fullName: ScalingPolicyDescription
+    uid: azure-servicefabric.ScalingPolicyDescription
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ServicePlacementPolicyDescription[]
+  name: ServicePlacementPolicyDescription[]
+  spec.typeScript:
+  - name: ServicePlacementPolicyDescription
+    fullName: ServicePlacementPolicyDescription
+    uid: azure-servicefabric.ServicePlacementPolicyDescription
+  - name: '[]'
+    fullName: '[]'

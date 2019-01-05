@@ -1,0 +1,404 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 36ec78b7a4517e47ca2cdc6b14a04d114674ef56
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52106102"
+items:
+- uid: azure-arm-cosmosdb.CollectionPartition
+  name: CollectionPartition
+  fullName: CollectionPartition
+  children:
+  - azure-arm-cosmosdb.CollectionPartition.listMetrics
+  - azure-arm-cosmosdb.CollectionPartition.listMetrics_2
+  - azure-arm-cosmosdb.CollectionPartition.listMetrics_1
+  - azure-arm-cosmosdb.CollectionPartition.listMetricsWithHttpOperationResponse
+  - azure-arm-cosmosdb.CollectionPartition.listUsages
+  - azure-arm-cosmosdb.CollectionPartition.listUsages_2
+  - azure-arm-cosmosdb.CollectionPartition.listUsages_1
+  - azure-arm-cosmosdb.CollectionPartition.listUsagesWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionPartition.listMetrics
+  name: listMetrics(string, string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="0feb8-101">检索由给定的集合，通过分区拆分的给定筛选器的度量值。</span><span class="sxs-lookup"><span data-stu-id="0feb8-101">Retrieves the metrics determined by the given filter for the given collection, split by partition.</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-102">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="0feb8-102">Name of an Azure resource group.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-103">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="0feb8-103">Cosmos DB database account name.</span></span>
+    - id: databaseRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-104">Rid 的 cosmos DB 数据库。</span><span class="sxs-lookup"><span data-stu-id="0feb8-104">Cosmos DB database rid.</span></span>
+    - id: collectionRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-105">Rid 的 cosmos DB 集合。</span><span class="sxs-lookup"><span data-stu-id="0feb8-105">Cosmos DB collection rid.</span></span>
+    - id: filter
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-106">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="0feb8-106">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="0feb8-107">可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="0feb8-107">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="0feb8-108">支持的运算符是等于</span><span class="sxs-lookup"><span data-stu-id="0feb8-108">The supported operator is eq.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.PartitionMetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionPartition.listMetrics_2
+  name: listMetrics(string, string, string, string, string, Object, ServiceCallback<PartitionMetricListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="0feb8-109">检索由给定的集合，通过分区拆分的给定筛选器的度量值。</span><span class="sxs-lookup"><span data-stu-id="0feb8-109">Retrieves the metrics determined by the given filter for the given collection, split by partition.</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, options: Object, callback: ServiceCallback<PartitionMetricListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.PartitionMetricListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.PartitionMetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionPartition.listMetrics_1
+  name: listMetrics(string, string, string, string, string, ServiceCallback<PartitionMetricListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="0feb8-110">检索由给定的集合，通过分区拆分的给定筛选器的度量值。</span><span class="sxs-lookup"><span data-stu-id="0feb8-110">Retrieves the metrics determined by the given filter for the given collection, split by partition.</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, callback: ServiceCallback<PartitionMetricListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.PartitionMetricListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.PartitionMetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionPartition.listMetricsWithHttpOperationResponse
+  name: listMetricsWithHttpOperationResponse(string, string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="0feb8-111">检索由给定的集合，通过分区拆分的给定筛选器的度量值。</span><span class="sxs-lookup"><span data-stu-id="0feb8-111">Retrieves the metrics determined by the given filter for the given collection, split by partition.</span></span>
+  syntax:
+    content: 'function listMetricsWithHttpOperationResponse(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-112">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="0feb8-112">Name of an Azure resource group.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-113">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="0feb8-113">Cosmos DB database account name.</span></span>
+    - id: databaseRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-114">Rid 的 cosmos DB 数据库。</span><span class="sxs-lookup"><span data-stu-id="0feb8-114">Cosmos DB database rid.</span></span>
+    - id: collectionRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-115">Rid 的 cosmos DB 集合。</span><span class="sxs-lookup"><span data-stu-id="0feb8-115">Cosmos DB collection rid.</span></span>
+    - id: filter
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-116">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="0feb8-116">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="0feb8-117">可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="0feb8-117">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="0feb8-118">支持的运算符是等于</span><span class="sxs-lookup"><span data-stu-id="0feb8-118">The supported operator is eq.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-cosmosdb.PartitionMetricListResult>>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionPartition.listUsages
+  name: listUsages(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="0feb8-119">检索给定集合中，按分区拆分 （最新存储的数据） 的用法。</span><span class="sxs-lookup"><span data-stu-id="0feb8-119">Retrieves the usages (most recent storage data) for the given collection, split by partition.</span></span>
+  syntax:
+    content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-120">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="0feb8-120">Name of an Azure resource group.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-121">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="0feb8-121">Cosmos DB database account name.</span></span>
+    - id: databaseRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-122">Rid 的 cosmos DB 数据库。</span><span class="sxs-lookup"><span data-stu-id="0feb8-122">Cosmos DB database rid.</span></span>
+    - id: collectionRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-123">Rid 的 cosmos DB 集合。</span><span class="sxs-lookup"><span data-stu-id="0feb8-123">Cosmos DB collection rid.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.PartitionUsagesResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionPartition.listUsages_2
+  name: listUsages(string, string, string, string, Object, ServiceCallback<PartitionUsagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="0feb8-124">检索给定集合中，按分区拆分 （最新存储的数据） 的用法。</span><span class="sxs-lookup"><span data-stu-id="0feb8-124">Retrieves the usages (most recent storage data) for the given collection, split by partition.</span></span>
+  syntax:
+    content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, options: Object, callback: ServiceCallback<PartitionUsagesResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.PartitionUsagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.PartitionUsagesResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionPartition.listUsages_1
+  name: listUsages(string, string, string, string, ServiceCallback<PartitionUsagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="0feb8-125">检索给定集合中，按分区拆分 （最新存储的数据） 的用法。</span><span class="sxs-lookup"><span data-stu-id="0feb8-125">Retrieves the usages (most recent storage data) for the given collection, split by partition.</span></span>
+  syntax:
+    content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, callback: ServiceCallback<PartitionUsagesResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.PartitionUsagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.PartitionUsagesResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionPartition.listUsagesWithHttpOperationResponse
+  name: listUsagesWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="0feb8-126">检索给定集合中，按分区拆分 （最新存储的数据） 的用法。</span><span class="sxs-lookup"><span data-stu-id="0feb8-126">Retrieves the usages (most recent storage data) for the given collection, split by partition.</span></span>
+  syntax:
+    content: 'function listUsagesWithHttpOperationResponse(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-127">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="0feb8-127">Name of an Azure resource group.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-128">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="0feb8-128">Cosmos DB database account name.</span></span>
+    - id: databaseRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-129">Rid 的 cosmos DB 数据库。</span><span class="sxs-lookup"><span data-stu-id="0feb8-129">Cosmos DB database rid.</span></span>
+    - id: collectionRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="0feb8-130">Rid 的 cosmos DB 集合。</span><span class="sxs-lookup"><span data-stu-id="0feb8-130">Cosmos DB collection rid.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-cosmosdb.PartitionUsagesResult>>
+  package: azure-arm-cosmosdb
+references:
+- uid: Promise<azure-arm-cosmosdb.PartitionMetricListResult>
+  name: PartitionMetricListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: PartitionMetricListResult
+    fullName: PartitionMetricListResult
+    uid: azure-arm-cosmosdb.PartitionMetricListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-cosmosdb.PartitionMetricListResult>
+  name: PartitionMetricListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: PartitionMetricListResult
+    fullName: PartitionMetricListResult
+    uid: azure-arm-cosmosdb.PartitionMetricListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-cosmosdb.PartitionMetricListResult>>
+  name: PartitionMetricListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: PartitionMetricListResult
+    fullName: PartitionMetricListResult
+    uid: azure-arm-cosmosdb.PartitionMetricListResult
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-cosmosdb.PartitionUsagesResult>
+  name: PartitionUsagesResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: PartitionUsagesResult
+    fullName: PartitionUsagesResult
+    uid: azure-arm-cosmosdb.PartitionUsagesResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-cosmosdb.PartitionUsagesResult>
+  name: PartitionUsagesResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: PartitionUsagesResult
+    fullName: PartitionUsagesResult
+    uid: azure-arm-cosmosdb.PartitionUsagesResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-cosmosdb.PartitionUsagesResult>>
+  name: PartitionUsagesResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: PartitionUsagesResult
+    fullName: PartitionUsagesResult
+    uid: azure-arm-cosmosdb.PartitionUsagesResult
+  - name: '>>'
+    fullName: '>>'

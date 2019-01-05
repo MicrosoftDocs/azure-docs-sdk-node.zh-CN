@@ -1,0 +1,159 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 981c3402a2579a029c7bd5d6e40af0dc410592cb
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52106492"
+items:
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo
+  name: DeployedStatefulServiceReplicaDetailInfo
+  fullName: DeployedStatefulServiceReplicaDetailInfo
+  children:
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentReplicatorOperation
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.deployedServiceReplicaQueryResult
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.readStatus
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaId
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaStatus
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicatorStatus
+  - azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.writeStatus
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="40494-101">有关运行代码包中的有状态副本的信息。</span><span class="sxs-lookup"><span data-stu-id="40494-101">Information about a stateful replica running in a code package.</span></span> <span data-ttu-id="40494-102">请注意 DeployedServiceReplicaQueryResult 将包含如 ServiceKind、 ServiceName、 PartitionId 和 replicaId 重复数据。</span><span class="sxs-lookup"><span data-stu-id="40494-102">Note DeployedServiceReplicaQueryResult will contain duplicate data like ServiceKind, ServiceName, PartitionId and replicaId.</span></span>
+  extends:
+    name: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.currentReplicatorOperation
+  name: currentReplicatorOperation
+  fullName: currentReplicatorOperation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"40494-103\">指定复制器当前正在执行的操作。</span><span class=\"sxs-lookup\"><span data-stu-id=\"40494-103\">Specifies the operation currently being executed by the Replicator.</span></span> <span data-ttu-id=\"40494-104\">可能的值包括：Invalid、 None、 打开、 ChangeRole、 UpdateEpoch、 关闭、 中止、 OnDataLoss、 WaitForCatchup，生成</span><span class=\"sxs-lookup\"><span data-stu-id=\"40494-104\">Possible values include: 'Invalid', 'None', 'Open', 'ChangeRole', 'UpdateEpoch', 'Close', 'Abort', 'OnDataLoss', 'WaitForCatchup', 'Build'</span></span>"
+  optional: true
+  syntax:
+    content: 'currentReplicatorOperation?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.deployedServiceReplicaQueryResult
+  name: deployedServiceReplicaQueryResult
+  fullName: deployedServiceReplicaQueryResult
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40494-105">有关有状态服务副本的节点上部署的信息。</span><span class="sxs-lookup"><span data-stu-id="40494-105">Information about a stateful service replica deployed on a node.</span></span>
+  optional: true
+  syntax:
+    content: 'deployedServiceReplicaQueryResult?: DeployedStatefulServiceReplicaInfo'
+    return:
+      type:
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.readStatus
+  name: readStatus
+  fullName: readStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"40494-106\">指定分区的访问状态。</span><span class=\"sxs-lookup\"><span data-stu-id=\"40494-106\">Specifies the access status of the partition.</span></span> <span data-ttu-id=\"40494-107\">可能的值包括：Invalid、 授予，ReconfigurationPending、 NotPrimary、 NoWriteQuorum</span><span class=\"sxs-lookup\"><span data-stu-id=\"40494-107\">Possible values include: 'Invalid', 'Granted', 'ReconfigurationPending', 'NotPrimary', 'NoWriteQuorum'</span></span>"
+  optional: true
+  syntax:
+    content: 'readStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaId
+  name: replicaId
+  fullName: replicaId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40494-108">有状态服务副本的 id。</span><span class="sxs-lookup"><span data-stu-id="40494-108">Id of a stateful service replica.</span></span> <span data-ttu-id="40494-109">Service Fabric 使用 ReplicaId 来唯一标识分区的副本。</span><span class="sxs-lookup"><span data-stu-id="40494-109">ReplicaId is used by Service Fabric to uniquely identify a replica of a partition.</span></span> <span data-ttu-id="40494-110">它是唯一在分区中并不会更改副本的生存期内。</span><span class="sxs-lookup"><span data-stu-id="40494-110">It is unique within a partition and does not change for the lifetime of the replica.</span></span> <span data-ttu-id="40494-111">如果删除副本和在同一个分区在同一节点上创建另一个副本，它将为 id 来获取不同的值。有时无状态服务实例的 id 也被称为副本 id。</span><span class="sxs-lookup"><span data-stu-id="40494-111">If a replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the id. Sometimes the id of a stateless service instance is also referred as a replica id.</span></span>
+  optional: true
+  syntax:
+    content: 'replicaId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicaStatus
+  name: replicaStatus
+  fullName: replicaStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40494-112">键值存储相关信息的副本。</span><span class="sxs-lookup"><span data-stu-id="40494-112">Key value store related information for the replica.</span></span>
+  optional: true
+  syntax:
+    content: 'replicaStatus?: KeyValueStoreReplicaStatus'
+    return:
+      type:
+      - azure-servicefabric.KeyValueStoreReplicaStatus
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.replicatorStatus
+  name: replicatorStatus
+  fullName: replicatorStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="40494-113">表示主或辅助复制器状态的基类。</span><span class="sxs-lookup"><span data-stu-id="40494-113">Represents a base class for primary or secondary replicator status.</span></span>
+
+    <span data-ttu-id="40494-114">包含有关 service fabric 复制器如复制/复制队列使用率、 最后一个已收到确认时间戳等信息。</span><span class="sxs-lookup"><span data-stu-id="40494-114">Contains information about the service fabric replicator like the replication/copy queue utilization, last acknowledgement received timestamp, etc.</span></span>
+  optional: true
+  syntax:
+    content: 'replicatorStatus?: ReplicatorStatus'
+    return:
+      type:
+      - azure-servicefabric.ReplicatorStatus
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaDetailInfo.writeStatus
+  name: writeStatus
+  fullName: writeStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"40494-115\">指定分区的访问状态。</span><span class=\"sxs-lookup\"><span data-stu-id=\"40494-115\">Specifies the access status of the partition.</span></span> <span data-ttu-id=\"40494-116\">可能的值包括：Invalid、 授予，ReconfigurationPending、 NotPrimary、 NoWriteQuorum</span><span class=\"sxs-lookup\"><span data-stu-id=\"40494-116\">Possible values include: 'Invalid', 'Granted', 'ReconfigurationPending', 'NotPrimary', 'NoWriteQuorum'</span></span>"
+  optional: true
+  syntax:
+    content: 'writeStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  name: DeployedServiceReplicaDetailInfo
+  spec.typeScript:
+  - name: DeployedServiceReplicaDetailInfo
+    fullName: DeployedServiceReplicaDetailInfo
+    uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo
+  name: DeployedStatefulServiceReplicaInfo
+  spec.typeScript:
+  - name: DeployedStatefulServiceReplicaInfo
+    fullName: DeployedStatefulServiceReplicaInfo
+    uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo
+- uid: azure-servicefabric.KeyValueStoreReplicaStatus
+  name: KeyValueStoreReplicaStatus
+  spec.typeScript:
+  - name: KeyValueStoreReplicaStatus
+    fullName: KeyValueStoreReplicaStatus
+    uid: azure-servicefabric.KeyValueStoreReplicaStatus
+- uid: azure-servicefabric.ReplicatorStatus
+  name: ReplicatorStatus
+  spec.typeScript:
+  - name: ReplicatorStatus
+    fullName: ReplicatorStatus
+    uid: azure-servicefabric.ReplicatorStatus

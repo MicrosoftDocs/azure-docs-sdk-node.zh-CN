@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b24f338e0d8a49072ae7944f730a845a20e529e2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52033392"
+items:
+- uid: azure-servicefabric.PartitionHealthStateFilter
+  name: PartitionHealthStateFilter
+  fullName: PartitionHealthStateFilter
+  children:
+  - azure-servicefabric.PartitionHealthStateFilter.healthStateFilter
+  - azure-servicefabric.PartitionHealthStateFilter.partitionIdFilter
+  - azure-servicefabric.PartitionHealthStateFilter.replicaFilters
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="f8be5-101">定义匹配条件以确定是否应包括作为群集运行状况区块中的服务的子分区。</span><span class="sxs-lookup"><span data-stu-id="f8be5-101">Defines matching criteria to determine whether a partition should be included as a child of a service in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="f8be5-102">如果父实体匹配群集运行状况区块查询说明中指定的筛选器仅返回分区。</span><span class="sxs-lookup"><span data-stu-id="f8be5-102">The partitions are only returned if the parent entities match a filter specified in the cluster health chunk query description.</span></span> <span data-ttu-id="f8be5-103">父服务和应用程序必须包括在群集运行状况区块。</span><span class="sxs-lookup"><span data-stu-id="f8be5-103">The parent service and application must be included in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="f8be5-104">一个筛选器可以匹配零个、 一个或多个分区，具体取决于其属性。</span><span class="sxs-lookup"><span data-stu-id="f8be5-104">One filter can match zero, one or multiple partitions, depending on its properties.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="f8be5-105">分区的运行状况状态筛选器。</span><span class="sxs-lookup"><span data-stu-id="f8be5-105">The filter for the health state of the partitions.</span></span> <span data-ttu-id="f8be5-106">它允许选择分区，如果它们匹配所需的运行状况状态。</span><span class="sxs-lookup"><span data-stu-id="f8be5-106">It allows selecting partitions if they match the desired health states.</span></span>
+
+    <span data-ttu-id="f8be5-107">可能值包括以下运行状况状态之一的整数值。</span><span class="sxs-lookup"><span data-stu-id="f8be5-107">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="f8be5-108">仅返回与筛选器匹配的分区。</span><span class="sxs-lookup"><span data-stu-id="f8be5-108">Only partitions that match the filter are returned.</span></span> <span data-ttu-id="f8be5-109">所有分区都用于评估聚合的群集运行状况状态。</span><span class="sxs-lookup"><span data-stu-id="f8be5-109">All partitions are used to evaluate the cluster aggregated health state.</span></span>
+
+    <span data-ttu-id="f8be5-110">如果未指定，默认值的为 None、，除非另有指定的分区 ID。</span><span class="sxs-lookup"><span data-stu-id="f8be5-110">If not specified, default value is None, unless the partition ID is specified.</span></span> <span data-ttu-id="f8be5-111">如果筛选器默认值，指定分区 ID，则返回匹配的分区。</span><span class="sxs-lookup"><span data-stu-id="f8be5-111">If the filter has default value and partition ID is specified, the matching partition is returned.</span></span>
+
+    <span data-ttu-id="f8be5-112">状态值为基于标志的枚举，因此该值可是使用按位“OR”运算符获取的值的组合。</span><span class="sxs-lookup"><span data-stu-id="f8be5-112">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="f8be5-113">例如，如果提供的值为 6，它可匹配与 HealthState 值为 OK (2) 和 Warning (4) 的分区。</span><span class="sxs-lookup"><span data-stu-id="f8be5-113">For example, if the provided value is 6, it matches partitions with HealthState value of OK (2) and Warning (4).</span></span>
+
+    - <span data-ttu-id="f8be5-114">Default-默认值。</span><span class="sxs-lookup"><span data-stu-id="f8be5-114">Default - Default value.</span></span> <span data-ttu-id="f8be5-115">匹配任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="f8be5-115">Matches any HealthState.</span></span> <span data-ttu-id="f8be5-116">值为 0。</span><span class="sxs-lookup"><span data-stu-id="f8be5-116">The value is zero.</span></span>
+
+    - <span data-ttu-id="f8be5-117">无-不与任何 HealthState 值匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="f8be5-117">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="f8be5-118">未返回有关给定状态集合的结果时使用。</span><span class="sxs-lookup"><span data-stu-id="f8be5-118">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="f8be5-119">值为 1。</span><span class="sxs-lookup"><span data-stu-id="f8be5-119">The value is 1.</span></span>
+
+    - <span data-ttu-id="f8be5-120">Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。</span><span class="sxs-lookup"><span data-stu-id="f8be5-120">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="f8be5-121">值为 2。</span><span class="sxs-lookup"><span data-stu-id="f8be5-121">The value is 2.</span></span>
+
+    - <span data-ttu-id="f8be5-122">警告-筛选器的输入匹配与 HealthState 值为 Warning。</span><span class="sxs-lookup"><span data-stu-id="f8be5-122">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="f8be5-123">值为 4。</span><span class="sxs-lookup"><span data-stu-id="f8be5-123">The value is 4.</span></span>
+
+    - <span data-ttu-id="f8be5-124">Error-与 HealthState 值为 Error 的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="f8be5-124">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="f8be5-125">值为 8。</span><span class="sxs-lookup"><span data-stu-id="f8be5-125">The value is 8.</span></span>
+
+    - <span data-ttu-id="f8be5-126">All-与具有任意 HealthState 值的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="f8be5-126">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="f8be5-127">值为 65535。</span><span class="sxs-lookup"><span data-stu-id="f8be5-127">The value is 65535.</span></span>
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionHealthStateFilter.partitionIdFilter
+  name: partitionIdFilter
+  fullName: partitionIdFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f8be5-128">与筛选器匹配的分区的 ID。</span><span class="sxs-lookup"><span data-stu-id="f8be5-128">ID of the partition that matches the filter.</span></span> <span data-ttu-id="f8be5-129">如果存在，将仅对指定的分区中，应用筛选器。</span><span class="sxs-lookup"><span data-stu-id="f8be5-129">The filter is applied only to the specified partition, if it exists.</span></span>
+
+    <span data-ttu-id="f8be5-130">如果分区不存在，没有分区是在群集运行状况区块根据此筛选器中返回。</span><span class="sxs-lookup"><span data-stu-id="f8be5-130">If the partition doesn't exist, no partition is returned in the cluster health chunk based on this filter.</span></span>
+
+    <span data-ttu-id="f8be5-131">如果该分区已存在，它包含在群集运行状况区块中，如果它尊重其他筛选器属性。</span><span class="sxs-lookup"><span data-stu-id="f8be5-131">If the partition exists, it is included in the cluster health chunk if it respects the other filter properties.</span></span>
+
+    <span data-ttu-id="f8be5-132">如果未指定，与父筛选器匹配 （如果有） 的所有分区都纳入考虑范围，并与其他筛选器成员，如运行状况状态筛选器相匹配。</span><span class="sxs-lookup"><span data-stu-id="f8be5-132">If not specified, all partitions that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+  optional: true
+  syntax:
+    content: 'partitionIdFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionHealthStateFilter.replicaFilters
+  name: replicaFilters
+  fullName: replicaFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f8be5-133">定义指定的副本，以包括在返回的群集运行状况区块作为子级的父分区的筛选器的列表。</span><span class="sxs-lookup"><span data-stu-id="f8be5-133">Defines a list of filters that specify which replicas to be included in the returned cluster health chunk as children of the parent partition.</span></span> <span data-ttu-id="f8be5-134">父分区与筛选器匹配时才返回副本。</span><span class="sxs-lookup"><span data-stu-id="f8be5-134">The replicas are returned only if the parent partition matches a filter.</span></span>
+
+    <span data-ttu-id="f8be5-135">如果列表为空，则返回没有副本。</span><span class="sxs-lookup"><span data-stu-id="f8be5-135">If the list is empty, no replicas are returned.</span></span> <span data-ttu-id="f8be5-136">所有副本都用于评估的父分区聚合运行状况状态，而不考虑输入筛选器。</span><span class="sxs-lookup"><span data-stu-id="f8be5-136">All the replicas are used to evaluate the parent partition aggregated health state, regardless of the input filters.</span></span>
+
+    <span data-ttu-id="f8be5-137">分区筛选器可以指定多个副本筛选器。</span><span class="sxs-lookup"><span data-stu-id="f8be5-137">The partition filter may specify multiple replica filters.</span></span>
+
+    <span data-ttu-id="f8be5-138">例如，它可以指定一个筛选器以返回具有运行状况状态错误的所有副本和另一个筛选器始终包含由其副本 id 标识的副本。</span><span class="sxs-lookup"><span data-stu-id="f8be5-138">For example, it can specify a filter to return all replicas with health state Error and another filter to always include a replica identified by its replica id.</span></span>
+  optional: true
+  syntax:
+    content: 'replicaFilters?: ReplicaHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.ReplicaHealthStateFilter[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ReplicaHealthStateFilter[]
+  name: ReplicaHealthStateFilter[]
+  spec.typeScript:
+  - name: ReplicaHealthStateFilter
+    fullName: ReplicaHealthStateFilter
+    uid: azure-servicefabric.ReplicaHealthStateFilter
+  - name: '[]'
+    fullName: '[]'

@@ -1,0 +1,230 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 676b34b9ffdfc30ae0a2ef68992fa71caba9217a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52090362"
+items:
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject
+  name: ClusterUpgradeDescriptionObject
+  fullName: ClusterUpgradeDescriptionObject
+  children:
+  - azure-servicefabric.ClusterUpgradeDescriptionObject.applicationHealthPolicyMap
+  - azure-servicefabric.ClusterUpgradeDescriptionObject.clusterHealthPolicy
+  - azure-servicefabric.ClusterUpgradeDescriptionObject.clusterUpgradeHealthPolicy
+  - azure-servicefabric.ClusterUpgradeDescriptionObject.codeVersion
+  - azure-servicefabric.ClusterUpgradeDescriptionObject.configVersion
+  - azure-servicefabric.ClusterUpgradeDescriptionObject.enableDeltaHealthEvaluation
+  - azure-servicefabric.ClusterUpgradeDescriptionObject.forceRestart
+  - azure-servicefabric.ClusterUpgradeDescriptionObject.monitoringPolicy
+  - azure-servicefabric.ClusterUpgradeDescriptionObject.rollingUpgradeMode
+  - azure-servicefabric.ClusterUpgradeDescriptionObject.upgradeKind
+  - azure-servicefabric.ClusterUpgradeDescriptionObject.upgradeReplicaSetCheckTimeoutInSeconds
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="6cc4e-101">表示 service Fabric 群集升级</span><span class="sxs-lookup"><span data-stu-id="6cc4e-101">Represents a ServiceFabric cluster upgrade</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject.applicationHealthPolicyMap
+  name: applicationHealthPolicyMap
+  fullName: applicationHealthPolicyMap
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="6cc4e-102">定义一个映射，以包含特定的应用程序的不同应用程序的运行状况策略。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-102">Defines a map that contains specific application health policies for different applications.</span></span>
+
+    <span data-ttu-id="6cc4e-103">每个项指定为密钥的应用程序名称，并作为 ApplicationHealthPolicy 用于评估应用程序运行状况的值。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-103">Each entry specifies as key the application name and as value an ApplicationHealthPolicy used to evaluate the application health.</span></span>
+
+    <span data-ttu-id="6cc4e-104">如果应用程序未指定映射中，应用程序运行状况评估使用 ApplicationHealthPolicy 或找不到其应用程序清单的默认应用程序运行状况策略 （如果没有运行状况策略定义在清单中）。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-104">If an application is not specified in the map, the application health evaluation uses the ApplicationHealthPolicy found in its application manifest or the default application health policy (if no health policy is defined in the manifest).</span></span>
+
+    <span data-ttu-id="6cc4e-105">映射默认为空。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-105">The map is empty by default.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationHealthPolicyMap?: ApplicationHealthPolicyMapItem[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthPolicyMapItem[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject.clusterHealthPolicy
+  name: clusterHealthPolicy
+  fullName: clusterHealthPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6cc4e-106">定义用于评估群集或群集节点的运行状况的运行状况策略。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-106">Defines a health policy used to evaluate the health of the cluster or of a cluster node.</span></span>
+  optional: true
+  syntax:
+    content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+    return:
+      type:
+      - azure-servicefabric.ClusterHealthPolicy
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject.clusterUpgradeHealthPolicy
+  name: clusterUpgradeHealthPolicy
+  fullName: clusterUpgradeHealthPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6cc4e-107">定义用于在将群集升级期间评估群集运行状况的运行状况策略。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-107">Defines a health policy used to evaluate the health of the cluster during a cluster upgrade.</span></span>
+  optional: true
+  syntax:
+    content: 'clusterUpgradeHealthPolicy?: ClusterUpgradeHealthPolicyObject'
+    return:
+      type:
+      - azure-servicefabric.ClusterUpgradeHealthPolicyObject
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject.codeVersion
+  name: codeVersion
+  fullName: codeVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6cc4e-108">群集的 service Fabric 代码版本。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-108">The ServiceFabric code version of the cluster.</span></span>
+  optional: true
+  syntax:
+    content: 'codeVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject.configVersion
+  name: configVersion
+  fullName: configVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6cc4e-109">群集配置版本 （在群集清单中指定）。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-109">The cluster configuration version (specified in the cluster manifest).</span></span>
+  optional: true
+  syntax:
+    content: 'configVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject.enableDeltaHealthEvaluation
+  name: enableDeltaHealthEvaluation
+  fullName: enableDeltaHealthEvaluation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6cc4e-110">如果为 true，则启用增量运行状况评估而不是绝对运行状况评估的每个升级域完成后。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-110">When true, enables delta health evaluation rather than absolute health evaluation after completion of each upgrade domain.</span></span>
+  optional: true
+  syntax:
+    content: 'enableDeltaHealthEvaluation?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject.forceRestart
+  name: forceRestart
+  fullName: forceRestart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6cc4e-111">如果为 true，然后强制重启进程在升级期间即使代码版本没有改变 （升级仅更改配置或数据）。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-111">If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).</span></span>
+  optional: true
+  syntax:
+    content: 'forceRestart?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject.monitoringPolicy
+  name: monitoringPolicy
+  fullName: monitoringPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6cc4e-112">介绍用于监视以监视模式升级的参数。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-112">Describes the parameters for monitoring an upgrade in Monitored mode.</span></span>
+  optional: true
+  syntax:
+    content: 'monitoringPolicy?: MonitoringPolicyDescription'
+    return:
+      type:
+      - azure-servicefabric.MonitoringPolicyDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject.rollingUpgradeMode
+  name: rollingUpgradeMode
+  fullName: rollingUpgradeMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"6cc4e-113\">在滚动升级期间用于监视运行状况的模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"6cc4e-113\">The mode used to monitor health during a rolling upgrade.</span></span> <span data-ttu-id=\"6cc4e-114\">值是 UnmonitoredAuto、 UnmonitoredManual，和 Monitored。</span><span class=\"sxs-lookup\"><span data-stu-id=\"6cc4e-114\">The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.</span></span> <span data-ttu-id=\"6cc4e-115\">可能的值包括：Invalid、 UnmonitoredAuto、 UnmonitoredManual、 监视</span><span class=\"sxs-lookup\"><span data-stu-id=\"6cc4e-115\">Possible values include: 'Invalid', 'UnmonitoredAuto', 'UnmonitoredManual', 'Monitored'</span></span>"
+  optional: true
+  syntax:
+    content: 'rollingUpgradeMode?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject.upgradeKind
+  name: upgradeKind
+  fullName: upgradeKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"6cc4e-116\">升级以下可能值的类型。</span><span class=\"sxs-lookup\"><span data-stu-id=\"6cc4e-116\">The kind of upgrade out of the following possible values.</span></span> <span data-ttu-id=\"6cc4e-117\">可能的值包括：Invalid，则滚动</span><span class=\"sxs-lookup\"><span data-stu-id=\"6cc4e-117\">Possible values include: 'Invalid', 'Rolling'</span></span>"
+  optional: true
+  syntax:
+    content: 'upgradeKind?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterUpgradeDescriptionObject.upgradeReplicaSetCheckTimeoutInSeconds
+  name: upgradeReplicaSetCheckTimeoutInSeconds
+  fullName: upgradeReplicaSetCheckTimeoutInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="6cc4e-118">出现意外问题时，阻止处理升级域并防止可用性丢失的最大时长。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-118">The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues.</span></span> <span data-ttu-id="6cc4e-119">当此超时到期时，无论是否存在可用性丢失问题，都将继续处理升级域。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-119">When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues.</span></span> <span data-ttu-id="6cc4e-120">每个升级域启动时重置超时。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-120">The timeout is reset at the start of each upgrade domain.</span></span> <span data-ttu-id="6cc4e-121">有效值介于 0 和 42949672925（含）之间。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-121">Valid values are between 0 and 42949672925 inclusive.</span></span>
+
+    <span data-ttu-id="6cc4e-122">（无符号的 32 位整数）。</span><span class="sxs-lookup"><span data-stu-id="6cc4e-122">(unsigned 32-bit integer).</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeReplicaSetCheckTimeoutInSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthPolicyMapItem[]
+  name: ApplicationHealthPolicyMapItem[]
+  spec.typeScript:
+  - name: ApplicationHealthPolicyMapItem
+    fullName: ApplicationHealthPolicyMapItem
+    uid: azure-servicefabric.ApplicationHealthPolicyMapItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ClusterHealthPolicy
+  name: ClusterHealthPolicy
+  spec.typeScript:
+  - name: ClusterHealthPolicy
+    fullName: ClusterHealthPolicy
+    uid: azure-servicefabric.ClusterHealthPolicy
+- uid: azure-servicefabric.ClusterUpgradeHealthPolicyObject
+  name: ClusterUpgradeHealthPolicyObject
+  spec.typeScript:
+  - name: ClusterUpgradeHealthPolicyObject
+    fullName: ClusterUpgradeHealthPolicyObject
+    uid: azure-servicefabric.ClusterUpgradeHealthPolicyObject
+- uid: azure-servicefabric.MonitoringPolicyDescription
+  name: MonitoringPolicyDescription
+  spec.typeScript:
+  - name: MonitoringPolicyDescription
+    fullName: MonitoringPolicyDescription
+    uid: azure-servicefabric.MonitoringPolicyDescription

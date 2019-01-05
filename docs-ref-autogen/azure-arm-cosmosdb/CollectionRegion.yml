@@ -1,0 +1,238 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8435c9bebc9b84f0d14e73d931f963d3b159991e
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52091782"
+items:
+- uid: azure-arm-cosmosdb.CollectionRegion
+  name: CollectionRegion
+  fullName: CollectionRegion
+  children:
+  - azure-arm-cosmosdb.CollectionRegion.listMetrics
+  - azure-arm-cosmosdb.CollectionRegion.listMetrics_2
+  - azure-arm-cosmosdb.CollectionRegion.listMetrics_1
+  - azure-arm-cosmosdb.CollectionRegion.listMetricsWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionRegion.listMetrics
+  name: listMetrics(string, string, string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="fd37f-101">检索由给定的数据库帐户、 集合和区域的给定筛选器的度量值。</span><span class="sxs-lookup"><span data-stu-id="fd37f-101">Retrieves the metrics determined by the given filter for the given database account, collection and region.</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-102">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="fd37f-102">Name of an Azure resource group.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-103">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="fd37f-103">Cosmos DB database account name.</span></span>
+    - id: region
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-104">Cosmos DB 区域，与单词和每个单词之间的空格首字母大写。</span><span class="sxs-lookup"><span data-stu-id="fd37f-104">Cosmos DB region, with spaces between words and each word capitalized.</span></span>
+    - id: databaseRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-105">Rid 的 cosmos DB 数据库。</span><span class="sxs-lookup"><span data-stu-id="fd37f-105">Cosmos DB database rid.</span></span>
+    - id: collectionRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-106">Rid 的 cosmos DB 集合。</span><span class="sxs-lookup"><span data-stu-id="fd37f-106">Cosmos DB collection rid.</span></span>
+    - id: filter
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-107">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="fd37f-107">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="fd37f-108">可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="fd37f-108">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="fd37f-109">支持的运算符是等于</span><span class="sxs-lookup"><span data-stu-id="fd37f-109">The supported operator is eq.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.MetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionRegion.listMetrics_2
+  name: listMetrics(string, string, string, string, string, string, Object, ServiceCallback<MetricListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="fd37f-110">检索由给定的数据库帐户、 集合和区域的给定筛选器的度量值。</span><span class="sxs-lookup"><span data-stu-id="fd37f-110">Retrieves the metrics determined by the given filter for the given database account, collection and region.</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options: Object, callback: ServiceCallback<MetricListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: region
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.MetricListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.MetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionRegion.listMetrics_1
+  name: listMetrics(string, string, string, string, string, string, ServiceCallback<MetricListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="fd37f-111">检索由给定的数据库帐户、 集合和区域的给定筛选器的度量值。</span><span class="sxs-lookup"><span data-stu-id="fd37f-111">Retrieves the metrics determined by the given filter for the given database account, collection and region.</span></span>
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, callback: ServiceCallback<MetricListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: region
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.MetricListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.MetricListResult>
+  package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionRegion.listMetricsWithHttpOperationResponse
+  name: listMetricsWithHttpOperationResponse(string, string, string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="fd37f-112">检索由给定的数据库帐户、 集合和区域的给定筛选器的度量值。</span><span class="sxs-lookup"><span data-stu-id="fd37f-112">Retrieves the metrics determined by the given filter for the given database account, collection and region.</span></span>
+  syntax:
+    content: 'function listMetricsWithHttpOperationResponse(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-113">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="fd37f-113">Name of an Azure resource group.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-114">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="fd37f-114">Cosmos DB database account name.</span></span>
+    - id: region
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-115">Cosmos DB 区域，与单词和每个单词之间的空格首字母大写。</span><span class="sxs-lookup"><span data-stu-id="fd37f-115">Cosmos DB region, with spaces between words and each word capitalized.</span></span>
+    - id: databaseRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-116">Rid 的 cosmos DB 数据库。</span><span class="sxs-lookup"><span data-stu-id="fd37f-116">Cosmos DB database rid.</span></span>
+    - id: collectionRid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-117">Rid 的 cosmos DB 集合。</span><span class="sxs-lookup"><span data-stu-id="fd37f-117">Cosmos DB collection rid.</span></span>
+    - id: filter
+      type:
+      - string
+      description: >
+        <span data-ttu-id="fd37f-118">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="fd37f-118">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="fd37f-119">可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="fd37f-119">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="fd37f-120">支持的运算符是等于</span><span class="sxs-lookup"><span data-stu-id="fd37f-120">The supported operator is eq.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-cosmosdb.MetricListResult>>
+  package: azure-arm-cosmosdb
+references:
+- uid: Promise<azure-arm-cosmosdb.MetricListResult>
+  name: MetricListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: MetricListResult
+    fullName: MetricListResult
+    uid: azure-arm-cosmosdb.MetricListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-cosmosdb.MetricListResult>
+  name: MetricListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: MetricListResult
+    fullName: MetricListResult
+    uid: azure-arm-cosmosdb.MetricListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-cosmosdb.MetricListResult>>
+  name: MetricListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: MetricListResult
+    fullName: MetricListResult
+    uid: azure-arm-cosmosdb.MetricListResult
+  - name: '>>'
+    fullName: '>>'

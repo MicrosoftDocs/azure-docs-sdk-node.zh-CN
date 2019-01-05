@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0295a5aa3e49294878005ae90914db69d7d7c718
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52153302"
+items:
+- uid: azure-servicefabric.PagedNodeInfoList
+  name: PagedNodeInfoList
+  fullName: PagedNodeInfoList
+  children:
+  - azure-servicefabric.PagedNodeInfoList.continuationToken
+  - azure-servicefabric.PagedNodeInfoList.items
+  langs:
+  - typeScript
+  type: interface
+  summary: 在群集中节点的列表。 当所有结果不能放入单个消息中时分页列表。 可以通过执行相同的查询，并显示此列表中提供的继续标记获取下一步的结果集。
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedNodeInfoList.continuationToken
+  name: continuationToken
+  fullName: continuationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    继续标记参数用于获取下一组结果。 从系统的结果无法容纳在单个响应中，则 API 响应中包含继续标记。 当此值传递到下一个 API 调用时，API 返回下一组结果。
+
+    如果没有更多结果，则继续标记在响应中不包括。
+  optional: true
+  syntax:
+    content: 'continuationToken?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedNodeInfoList.items
+  name: items
+  fullName: items
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 节点信息的列表。
+  optional: true
+  syntax:
+    content: 'items?: NodeInfo[]'
+    return:
+      type:
+      - azure-servicefabric.NodeInfo[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.NodeInfo[]
+  name: NodeInfo[]
+  spec.typeScript:
+  - name: NodeInfo
+    fullName: NodeInfo
+    uid: azure-servicefabric.NodeInfo
+  - name: '[]'
+    fullName: '[]'

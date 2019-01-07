@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: fd3367abf54e93dcb1c9fa48626ace7c6c67bce3
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52060952"
+items:
+- uid: azure-servicefabric.PartitionHealthStateChunk
+  name: PartitionHealthStateChunk
+  fullName: PartitionHealthStateChunk
+  children:
+  - azure-servicefabric.PartitionHealthStateChunk.partitionId
+  - azure-servicefabric.PartitionHealthStateChunk.replicaHealthStateChunks
+  langs:
+  - typeScript
+  type: interface
+  summary: 表示一个分区，其中包含的分区 ID、 其聚合运行状况状态以及任何群集运行状况区块查询说明中与筛选器的副本的健康状况区块。
+  extends:
+    name: azure-servicefabric.EntityHealthStateChunk
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionHealthStateChunk.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 分区的 Id。
+  optional: true
+  syntax:
+    content: 'partitionId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PartitionHealthStateChunk.replicaHealthStateChunks
+  name: replicaHealthStateChunks
+  fullName: replicaHealthStateChunks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 列表的副本运行状况区块属于分区与筛选器中的群集运行状况区块查询说明。
+  optional: true
+  syntax:
+    content: 'replicaHealthStateChunks?: ReplicaHealthStateChunkList'
+    return:
+      type:
+      - azure-servicefabric.ReplicaHealthStateChunkList
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.EntityHealthStateChunk
+  name: EntityHealthStateChunk
+  spec.typeScript:
+  - name: EntityHealthStateChunk
+    fullName: EntityHealthStateChunk
+    uid: azure-servicefabric.EntityHealthStateChunk
+- uid: azure-servicefabric.ReplicaHealthStateChunkList
+  name: ReplicaHealthStateChunkList
+  spec.typeScript:
+  - name: ReplicaHealthStateChunkList
+    fullName: ReplicaHealthStateChunkList
+    uid: azure-servicefabric.ReplicaHealthStateChunkList

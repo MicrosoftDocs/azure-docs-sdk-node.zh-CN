@@ -1,0 +1,113 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c43c4837ab8b753a732a3cc48105c596904c7baf
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55048577"
+items:
+- uid: azure-arm-batch.ResourceFile
+  name: ResourceFile
+  fullName: ResourceFile
+  children:
+  - azure-arm-batch.ResourceFile.autoStorageContainerName
+  - azure-arm-batch.ResourceFile.blobPrefix
+  - azure-arm-batch.ResourceFile.fileMode
+  - azure-arm-batch.ResourceFile.filePath
+  - azure-arm-batch.ResourceFile.httpUrl
+  - azure-arm-batch.ResourceFile.storageContainerUrl
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.autoStorageContainerName
+  name: autoStorageContainerName
+  fullName: autoStorageContainerName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: AutoStorageContainerName、 storageContainerUrl 和 httpUrl 属性是互相排斥，并且必须指定其中之一。
+  optional: true
+  syntax:
+    content: 'autoStorageContainerName?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.blobPrefix
+  name: blobPrefix
+  fullName: blobPrefix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 仅当使用 autoStorageContainerName 或 storageContainerUrl 时，属性才有效。 此前缀可以是部分文件名或一个子目录。 如果未指定前缀，将下载的容器中的所有文件。
+  optional: true
+  syntax:
+    content: 'blobPrefix?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.fileMode
+  name: fileMode
+  fullName: fileMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 此属性仅适用于文件下载到 Linux 计算节点。 如果指定 resourceFile 将下载到 Windows 节点，它将被忽略。 如果 Linux 节点未指定此属性，则默认值为 0770 应用到该文件。
+  optional: true
+  syntax:
+    content: 'fileMode?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.filePath
+  name: filePath
+  fullName: filePath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 如果指定 httpUrl 属性，则文件路径是必需的并介绍了该文件将下载到，包括文件名的路径。 否则为如果指定的 autoStorageContainerName 或 storageContainerUrl 属性，则文件路径是可选的是要下载到文件的目录。 文件路径用作目录的位置的情况下，将全部保留和追加到指定文件路径目录已输入的数据与关联的任何目录结构。 指定的相对路径不能中断的任务工作目录 (例如通过使用..)。
+  optional: true
+  syntax:
+    content: 'filePath?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.httpUrl
+  name: httpUrl
+  fullName: httpUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: AutoStorageContainerName、 storageContainerUrl 和 httpUrl 属性是互相排斥，并且必须指定其中之一。 如果 URL 是 Azure Blob 存储，它必须是可读使用匿名访问;也就是说，批处理服务没有显示任何凭据时下载的 blob。 有两种方法以在 Azure 存储 blob 获取此类 URL： 包含共享访问签名 (SAS) 授予对 blob 的读取的权限或设置 blob 或其容器的 ACL，以允许公共访问。
+  optional: true
+  syntax:
+    content: 'httpUrl?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.storageContainerUrl
+  name: storageContainerUrl
+  fullName: storageContainerUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: AutoStorageContainerName、 storageContainerUrl 和 httpUrl 属性是互相排斥，并且必须指定其中之一。 此 URL 必须是可读和 listable 使用匿名访问;也就是说，批处理服务没有显示任何凭据时下载的 blob。 有两种方法以在 Azure 存储 blob 获取此类 URL： 包含共享访问签名 (SAS) 授予对 blob 的读取和列出权限或设置 blob 或其容器的 ACL，以允许公共访问。
+  optional: true
+  syntax:
+    content: 'storageContainerUrl?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch

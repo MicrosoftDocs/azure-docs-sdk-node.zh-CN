@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: afff009948cffc8a11aaaeec6328285bed6bb40f
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55058628"
+items:
+- uid: '@azure/arm-network.ManagedServiceIdentity'
+  name: ManagedServiceIdentity
+  fullName: ManagedServiceIdentity
+  children:
+  - '@azure/arm-network.ManagedServiceIdentity.principalId'
+  - '@azure/arm-network.ManagedServiceIdentity.tenantId'
+  - '@azure/arm-network.ManagedServiceIdentity.type'
+  - '@azure/arm-network.ManagedServiceIdentity.userAssignedIdentities'
+  langs:
+  - typeScript
+  type: interface
+  summary: 资源标识。
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.ManagedServiceIdentity.principalId'
+  name: principalId
+  fullName: principalId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    系统分配标识主体 id。 仅将为系统分配的标识提供此属性。
+
+    **注意：此属性将不序列化。它仅可以由服务器填充。**
+  optional: true
+  syntax:
+    content: 'principalId?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.ManagedServiceIdentity.tenantId'
+  name: tenantId
+  fullName: tenantId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    系统分配的标识租户 id。 仅将为系统分配的标识提供此属性。
+
+    **注意：此属性将不序列化。它仅可以由服务器填充。**
+  optional: true
+  syntax:
+    content: 'tenantId?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.ManagedServiceIdentity.type'
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 标识用于资源的类型。 类型 'SystemAssigned、 UserAssigned 包括隐式创建的标识和一系列用户分配的标识。 类型 None 将从虚拟机中删除任何标识。 可能的值包括：SystemAssigned、 UserAssigned、 SystemAssigned，UserAssigned，None
+  optional: true
+  syntax:
+    content: 'type?: ResourceIdentityType'
+    return:
+      type:
+      - '@azure/arm-network.ResourceIdentityType'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.ManagedServiceIdentity.userAssignedIdentities'
+  name: userAssignedIdentities
+  fullName: userAssignedIdentities
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '与资源相关联的用户标识列表。 用户标识字典键引用将在窗体中的 ARM 资源 id: / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}。'
+  optional: true
+  syntax:
+    content: 'userAssignedIdentities?: undefined | [key: string]: ManagedServiceIdentityUserAssignedIdentitiesValue'
+    return:
+      type:
+      - 'undefined | [key: string]: @azure/arm-network.ManagedServiceIdentityUserAssignedIdentitiesValue'
+  package: '@azure/arm-network'
+references:
+- uid: '@azure/arm-network.ResourceIdentityType'
+  name: ResourceIdentityType
+  spec.typeScript:
+  - name: ResourceIdentityType
+    fullName: ResourceIdentityType
+    uid: '@azure/arm-network.ResourceIdentityType'
+- uid: 'undefined | [key: string]: @azure/arm-network.ManagedServiceIdentityUserAssignedIdentitiesValue'
+  name: ManagedServiceIdentityUserAssignedIdentitiesValue
+  spec.typeScript:
+  - name: 'undefined | [key: string]: '
+    fullName: 'undefined | [key: string]: '
+  - name: ManagedServiceIdentityUserAssignedIdentitiesValue
+    fullName: ManagedServiceIdentityUserAssignedIdentitiesValue
+    uid: '@azure/arm-network.ManagedServiceIdentityUserAssignedIdentitiesValue'

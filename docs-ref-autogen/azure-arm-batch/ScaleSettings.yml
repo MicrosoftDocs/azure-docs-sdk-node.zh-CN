@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0d49acd38179c5c4d5e45437193d85b567e15d76
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55058478"
+items:
+- uid: azure-arm-batch.ScaleSettings
+  name: ScaleSettings
+  fullName: ScaleSettings
+  children:
+  - azure-arm-batch.ScaleSettings.autoScale
+  - azure-arm-batch.ScaleSettings.fixedScale
+  langs:
+  - typeScript
+  type: interface
+  summary: 定义池所需的大小。 这可以是 fixedScale 指定请求的 targetDedicatedNodes 的位置或自动缩放定义公式会定期重新计算该公式。 如果未指定此属性，该池必须与 0 targetDedicatedNodes 小数位数是固定。
+  package: azure-arm-batch
+- uid: azure-arm-batch.ScaleSettings.autoScale
+  name: autoScale
+  fullName: autoScale
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 此属性与 fixedScale 互相排斥，并且必须指定一个属性。
+  optional: true
+  syntax:
+    content: 'autoScale?: AutoScaleSettings'
+    return:
+      type:
+      - azure-arm-batch.AutoScaleSettings
+  package: azure-arm-batch
+- uid: azure-arm-batch.ScaleSettings.fixedScale
+  name: fixedScale
+  fullName: fixedScale
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 此属性和自动缩放是互相排斥，并且必须指定一个属性。
+  optional: true
+  syntax:
+    content: 'fixedScale?: FixedScaleSettings'
+    return:
+      type:
+      - azure-arm-batch.FixedScaleSettings
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.AutoScaleSettings
+  name: AutoScaleSettings
+  spec.typeScript:
+  - name: AutoScaleSettings
+    fullName: AutoScaleSettings
+    uid: azure-arm-batch.AutoScaleSettings
+- uid: azure-arm-batch.FixedScaleSettings
+  name: FixedScaleSettings
+  spec.typeScript:
+  - name: FixedScaleSettings
+    fullName: FixedScaleSettings
+    uid: azure-arm-batch.FixedScaleSettings

@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 4c6e65102cf738ac75210b581e9abb7af69ddf60
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: f1bb66712907cbb0937dcab25ded5ff3389122a7
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53665191"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046611"
 items:
 - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
   name: SpeechConfig
@@ -33,9 +33,9 @@ items:
   - typeScript
   type: property
   summary: >-
-    设置授权令牌。
+    获取/设置授权令牌。
 
-    如果此设置，则忽略订阅密钥。
+    如果设置 autorizaton 令牌，则忽略订阅密钥。
 
     用户需要确保提供的授权令牌有效且未过期。
   syntax:
@@ -62,7 +62,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: 获取用于语音识别的自定义的语音模型的终结点 ID。
+  summary: 获取/设置用于语音识别的自定义的语音模型的终结点 ID。
   syntax:
     content: 'public endpointId: string'
     return:
@@ -75,7 +75,10 @@ items:
   type: method
   langs:
   - typeScript
-  summary: 使用指定的初始授权令牌和区域创建语音工厂的实例。
+  summary: >-
+    使用指定的初始授权令牌和区域创建语音工厂的实例。
+
+    注意：请使用派生自 LanguageUnderstanding 订阅密钥，以防你想要使用意向识别器的令牌。
   syntax:
     content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
     parameters:
@@ -103,6 +106,8 @@ items:
     此方法仅用于使用非标准的服务终结点或参数的用户。
 
     uri 中的语言设置将优先，并有效的语言是"DE-DE"。
+
+    注意：请如果你想要使用意向识别器，使用 LanguageUnderstanding 订阅密钥。
   syntax:
     content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
     parameters:
@@ -124,7 +129,10 @@ items:
   type: method
   langs:
   - typeScript
-  summary: 返回通过将传递 subscriptionKey 和服务的区域的 SpeechConfig 静态实例。
+  summary: >-
+    返回通过将传递 subscriptionKey 和服务的区域的 SpeechConfig 静态实例。
+
+    注意：请如果你想要使用意向识别器，使用 LanguageUnderstanding 订阅密钥。
   syntax:
     content: 'static function fromSubscription(subscriptionKey: string, region: string)'
     parameters:
@@ -170,7 +178,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: 获取输出格式。
+  summary: 获取/设置输出格式。
   syntax:
     content: 'public outputFormat: OutputFormat'
     return:
@@ -204,7 +212,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: 设置的输入的语言。
+  summary: 获取/设置的输入的语言。
   syntax:
     content: 'public speechRecognitionLanguage: string'
     return:

@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1e94bebc6b45853631b634d459eb76d0d1c29c36
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55058358"
+items:
+- uid: azure-arm-storage.BlobServiceProperties
+  name: BlobServiceProperties
+  fullName: BlobServiceProperties
+  children:
+  - azure-arm-storage.BlobServiceProperties.cors
+  - azure-arm-storage.BlobServiceProperties.defaultServiceVersion
+  - azure-arm-storage.BlobServiceProperties.deleteRetentionPolicy
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="dc94d-101">存储帐户的 Blob 服务的属性。</span><span class="sxs-lookup"><span data-stu-id="dc94d-101">The properties of a storage account’s Blob service.</span></span>
+  extends:
+    name: azure-arm-storage.Resource
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobServiceProperties.cors
+  name: cors
+  fullName: cors
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="dc94d-102">指定 Blob 服务的 CORS 规则。</span><span class="sxs-lookup"><span data-stu-id="dc94d-102">Specifies CORS rules for the Blob service.</span></span> <span data-ttu-id="dc94d-103">可以在请求中包含最多五个 CorsRule 元素。</span><span class="sxs-lookup"><span data-stu-id="dc94d-103">You can include up to five CorsRule elements in the request.</span></span> <span data-ttu-id="dc94d-104">如果在请求正文中不包含任何 CorsRule 元素，将删除所有 CORS 规则，并且将为 Blob 服务禁用 CORS。</span><span class="sxs-lookup"><span data-stu-id="dc94d-104">If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.</span></span>
+  optional: true
+  syntax:
+    content: 'cors?: CorsRules'
+    return:
+      type:
+      - azure-arm-storage.CorsRules
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobServiceProperties.defaultServiceVersion
+  name: defaultServiceVersion
+  fullName: defaultServiceVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="dc94d-105">DefaultServiceVersion 指示要用于对 Blob 服务的请求，如果未指定传入请求版本的默认版本。</span><span class="sxs-lookup"><span data-stu-id="dc94d-105">DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified.</span></span> <span data-ttu-id="dc94d-106">可能值包括版本 2008年-10-27 和所有更高版本。</span><span class="sxs-lookup"><span data-stu-id="dc94d-106">Possible values include version 2008-10-27 and all more recent versions.</span></span>
+  optional: true
+  syntax:
+    content: 'defaultServiceVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage
+- uid: azure-arm-storage.BlobServiceProperties.deleteRetentionPolicy
+  name: deleteRetentionPolicy
+  fullName: deleteRetentionPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="dc94d-107">软删除 blob 服务属性。</span><span class="sxs-lookup"><span data-stu-id="dc94d-107">The blob service properties for soft delete.</span></span>
+  optional: true
+  syntax:
+    content: 'deleteRetentionPolicy?: DeleteRetentionPolicy'
+    return:
+      type:
+      - azure-arm-storage.DeleteRetentionPolicy
+  package: azure-arm-storage
+references:
+- uid: azure-arm-storage.Resource
+  name: Resource
+  spec.typeScript:
+  - name: Resource
+    fullName: Resource
+    uid: azure-arm-storage.Resource
+- uid: azure-arm-storage.CorsRules
+  name: CorsRules
+  spec.typeScript:
+  - name: CorsRules
+    fullName: CorsRules
+    uid: azure-arm-storage.CorsRules
+- uid: azure-arm-storage.DeleteRetentionPolicy
+  name: DeleteRetentionPolicy
+  spec.typeScript:
+  - name: DeleteRetentionPolicy
+    fullName: DeleteRetentionPolicy
+    uid: azure-arm-storage.DeleteRetentionPolicy

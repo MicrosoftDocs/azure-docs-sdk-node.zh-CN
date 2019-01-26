@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 27d71d41260a8b64b94bdc009c237fb48f5b3e94
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 6c65ea87eb944bd87ab8d50d94a89daf7fa3917a
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52082664"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55056918"
 items:
 - uid: azure-arm-batch.ApplicationPackageOperations
   name: ApplicationPackageOperations
@@ -26,6 +26,14 @@ items:
   - azure-arm-batch.ApplicationPackageOperations.get_2
   - azure-arm-batch.ApplicationPackageOperations.get_1
   - azure-arm-batch.ApplicationPackageOperations.getWithHttpOperationResponse
+  - azure-arm-batch.ApplicationPackageOperations.list
+  - azure-arm-batch.ApplicationPackageOperations.list_2
+  - azure-arm-batch.ApplicationPackageOperations.list_1
+  - azure-arm-batch.ApplicationPackageOperations.listNext
+  - azure-arm-batch.ApplicationPackageOperations.listNext_2
+  - azure-arm-batch.ApplicationPackageOperations.listNext_1
+  - azure-arm-batch.ApplicationPackageOperations.listNextWithHttpOperationResponse
+  - azure-arm-batch.ApplicationPackageOperations.listWithHttpOperationResponse
   langs:
   - typeScript
   type: interface
@@ -37,35 +45,35 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-101">激活指定的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-101">Activates the specified application package.</span></span>
+  summary: <span data-ttu-id="a774b-101">激活指定的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-101">Activates the specified application package.</span></span>
   syntax:
-    content: 'function activate(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, options?: Object)'
+    content: 'function activate(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-102">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-102">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="a774b-102">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-102">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-103">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-103">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="a774b-103">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-103">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-104">应用程序的 ID。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-104">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="a774b-104">应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-104">The name of the application.</span></span> <span data-ttu-id="a774b-105">这必须是唯一的帐户中。</span><span class="sxs-lookup"><span data-stu-id="a774b-105">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-105">激活的应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-105">The version of the application to activate.</span></span>
+        <span data-ttu-id="a774b-106">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="a774b-106">The version of the application.</span></span>
     - id: format
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-106">应用程序包二进制文件的格式。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-106">The format of the application package binary file.</span></span>
+        <span data-ttu-id="a774b-107">应用程序包二进制文件的格式。</span><span class="sxs-lookup"><span data-stu-id="a774b-107">The format of the application package binary file.</span></span>
     - id: options
       type:
       - Object
@@ -73,17 +81,17 @@ items:
       optional: true
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.ApplicationPackage>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.activate_2
-  name: activate(string, string, string, string, string, Object, ServiceCallback<void>)
+  name: activate(string, string, string, string, string, Object, ServiceCallback<ApplicationPackage>)
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-107">激活指定的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-107">Activates the specified application package.</span></span>
+  summary: <span data-ttu-id="a774b-108">激活指定的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-108">Activates the specified application package.</span></span>
   syntax:
-    content: 'function activate(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, options: Object, callback: ServiceCallback<void>)'
+    content: 'function activate(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -93,11 +101,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -111,21 +119,21 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-batch.ApplicationPackage>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.ApplicationPackage>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.activate_1
-  name: activate(string, string, string, string, string, ServiceCallback<void>)
+  name: activate(string, string, string, string, string, ServiceCallback<ApplicationPackage>)
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-108">激活指定的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-108">Activates the specified application package.</span></span>
+  summary: <span data-ttu-id="a774b-109">激活指定的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-109">Activates the specified application package.</span></span>
   syntax:
-    content: 'function activate(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, callback: ServiceCallback<void>)'
+    content: 'function activate(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -135,11 +143,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -149,11 +157,11 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-batch.ApplicationPackage>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.ApplicationPackage>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.activateWithHttpOperationResponse
   name: activateWithHttpOperationResponse(string, string, string, string, string, Object)
@@ -161,35 +169,35 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-109">激活指定的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-109">Activates the specified application package.</span></span>
+  summary: <span data-ttu-id="a774b-110">激活指定的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-110">Activates the specified application package.</span></span>
   syntax:
-    content: 'function activateWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, options?: Object)'
+    content: 'function activateWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-110">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-110">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="a774b-111">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-111">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-111">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-111">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="a774b-112">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-112">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-112">应用程序的 ID。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-112">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="a774b-113">应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-113">The name of the application.</span></span> <span data-ttu-id="a774b-114">这必须是唯一的帐户中。</span><span class="sxs-lookup"><span data-stu-id="a774b-114">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-113">激活的应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-113">The version of the application to activate.</span></span>
+        <span data-ttu-id="a774b-115">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="a774b-115">The version of the application.</span></span>
     - id: format
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-114">应用程序包二进制文件的格式。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-114">The format of the application package binary file.</span></span>
+        <span data-ttu-id="a774b-116">应用程序包二进制文件的格式。</span><span class="sxs-lookup"><span data-stu-id="a774b-116">The format of the application package binary file.</span></span>
     - id: options
       type:
       - Object
@@ -197,7 +205,7 @@ items:
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<void>>
+      - Promise<HttpOperationResponse<azure-arm-batch.ApplicationPackage>>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.create
   name: create(string, string, string, string, Object)
@@ -205,30 +213,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-115">创建应用程序程序包记录。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-115">Creates an application package record.</span></span>
+  summary: <span data-ttu-id="a774b-117">创建应用程序程序包记录。</span><span class="sxs-lookup"><span data-stu-id="a774b-117">Creates an application package record.</span></span>
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-116">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-116">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="a774b-118">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-118">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-117">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-117">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="a774b-119">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-119">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-118">应用程序的 ID。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-118">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="a774b-120">应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-120">The name of the application.</span></span> <span data-ttu-id="a774b-121">这必须是唯一的帐户中。</span><span class="sxs-lookup"><span data-stu-id="a774b-121">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-119">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-119">The version of the application.</span></span>
+        <span data-ttu-id="a774b-122">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="a774b-122">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -244,9 +252,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-120">创建应用程序程序包记录。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-120">Creates an application package record.</span></span>
+  summary: <span data-ttu-id="a774b-123">创建应用程序程序包记录。</span><span class="sxs-lookup"><span data-stu-id="a774b-123">Creates an application package record.</span></span>
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, version: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -256,11 +264,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -282,9 +290,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-121">创建应用程序程序包记录。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-121">Creates an application package record.</span></span>
+  summary: <span data-ttu-id="a774b-124">创建应用程序程序包记录。</span><span class="sxs-lookup"><span data-stu-id="a774b-124">Creates an application package record.</span></span>
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, version: string, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -294,11 +302,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -316,30 +324,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-122">创建应用程序程序包记录。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-122">Creates an application package record.</span></span>
+  summary: <span data-ttu-id="a774b-125">创建应用程序程序包记录。</span><span class="sxs-lookup"><span data-stu-id="a774b-125">Creates an application package record.</span></span>
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-123">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-123">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="a774b-126">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-126">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-124">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-124">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="a774b-127">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-127">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-125">应用程序的 ID。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-125">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="a774b-128">应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-128">The name of the application.</span></span> <span data-ttu-id="a774b-129">这必须是唯一的帐户中。</span><span class="sxs-lookup"><span data-stu-id="a774b-129">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-126">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-126">The version of the application.</span></span>
+        <span data-ttu-id="a774b-130">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="a774b-130">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -355,30 +363,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-127">删除应用程序程序包记录和其关联的二进制文件。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-127">Deletes an application package record and its associated binary file.</span></span>
+  summary: <span data-ttu-id="a774b-131">删除应用程序程序包记录和其关联的二进制文件。</span><span class="sxs-lookup"><span data-stu-id="a774b-131">Deletes an application package record and its associated binary file.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-128">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-128">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="a774b-132">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-132">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-129">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-129">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="a774b-133">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-133">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-130">应用程序的 ID。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-130">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="a774b-134">应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-134">The name of the application.</span></span> <span data-ttu-id="a774b-135">这必须是唯一的帐户中。</span><span class="sxs-lookup"><span data-stu-id="a774b-135">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-131">要删除的应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-131">The version of the application to delete.</span></span>
+        <span data-ttu-id="a774b-136">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="a774b-136">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -394,9 +402,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-132">删除应用程序程序包记录和其关联的二进制文件。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-132">Deletes an application package record and its associated binary file.</span></span>
+  summary: <span data-ttu-id="a774b-137">删除应用程序程序包记录和其关联的二进制文件。</span><span class="sxs-lookup"><span data-stu-id="a774b-137">Deletes an application package record and its associated binary file.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, version: string, options: Object, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -406,11 +414,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -432,9 +440,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-133">删除应用程序程序包记录和其关联的二进制文件。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-133">Deletes an application package record and its associated binary file.</span></span>
+  summary: <span data-ttu-id="a774b-138">删除应用程序程序包记录和其关联的二进制文件。</span><span class="sxs-lookup"><span data-stu-id="a774b-138">Deletes an application package record and its associated binary file.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, version: string, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -444,11 +452,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -466,30 +474,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-134">删除应用程序程序包记录和其关联的二进制文件。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-134">Deletes an application package record and its associated binary file.</span></span>
+  summary: <span data-ttu-id="a774b-139">删除应用程序程序包记录和其关联的二进制文件。</span><span class="sxs-lookup"><span data-stu-id="a774b-139">Deletes an application package record and its associated binary file.</span></span>
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-135">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-135">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="a774b-140">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-140">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-136">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-136">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="a774b-141">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-141">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-137">应用程序的 ID。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-137">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="a774b-142">应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-142">The name of the application.</span></span> <span data-ttu-id="a774b-143">这必须是唯一的帐户中。</span><span class="sxs-lookup"><span data-stu-id="a774b-143">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-138">要删除的应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-138">The version of the application to delete.</span></span>
+        <span data-ttu-id="a774b-144">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="a774b-144">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -505,30 +513,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-139">获取有关指定的应用程序包的信息。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-139">Gets information about the specified application package.</span></span>
+  summary: <span data-ttu-id="a774b-145">获取有关指定的应用程序包的信息。</span><span class="sxs-lookup"><span data-stu-id="a774b-145">Gets information about the specified application package.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-140">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-140">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="a774b-146">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-146">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-141">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-141">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="a774b-147">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-147">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-142">应用程序的 ID。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-142">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="a774b-148">应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-148">The name of the application.</span></span> <span data-ttu-id="a774b-149">这必须是唯一的帐户中。</span><span class="sxs-lookup"><span data-stu-id="a774b-149">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-143">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-143">The version of the application.</span></span>
+        <span data-ttu-id="a774b-150">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="a774b-150">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -544,9 +552,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-144">获取有关指定的应用程序包的信息。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-144">Gets information about the specified application package.</span></span>
+  summary: <span data-ttu-id="a774b-151">获取有关指定的应用程序包的信息。</span><span class="sxs-lookup"><span data-stu-id="a774b-151">Gets information about the specified application package.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, version: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -556,11 +564,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -582,9 +590,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-145">获取有关指定的应用程序包的信息。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-145">Gets information about the specified application package.</span></span>
+  summary: <span data-ttu-id="a774b-152">获取有关指定的应用程序包的信息。</span><span class="sxs-lookup"><span data-stu-id="a774b-152">Gets information about the specified application package.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, version: string, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -594,11 +602,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -616,30 +624,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fa1b9-146">获取有关指定的应用程序包的信息。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-146">Gets information about the specified application package.</span></span>
+  summary: <span data-ttu-id="a774b-153">获取有关指定的应用程序包的信息。</span><span class="sxs-lookup"><span data-stu-id="a774b-153">Gets information about the specified application package.</span></span>
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-147">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-147">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="a774b-154">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-154">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-148">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-148">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="a774b-155">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-155">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-149">应用程序的 ID。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-149">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="a774b-156">应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-156">The name of the application.</span></span> <span data-ttu-id="a774b-157">这必须是唯一的帐户中。</span><span class="sxs-lookup"><span data-stu-id="a774b-157">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fa1b9-150">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="fa1b9-150">The version of the application.</span></span>
+        <span data-ttu-id="a774b-158">应用程序的版本。</span><span class="sxs-lookup"><span data-stu-id="a774b-158">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -648,6 +656,234 @@ items:
     return:
       type:
       - Promise<HttpOperationResponse<azure-arm-batch.ApplicationPackage>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.list
+  name: list(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a774b-159">列出所有指定的应用程序中的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-159">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a774b-160">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-160">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a774b-161">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-161">The name of the Batch account.</span></span>
+    - id: applicationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a774b-162">应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-162">The name of the application.</span></span> <span data-ttu-id="a774b-163">这必须是唯一的帐户中。</span><span class="sxs-lookup"><span data-stu-id="a774b-163">This must be unique within the account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.list_2
+  name: list(string, string, string, Object, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a774b-164">列出所有指定的应用程序中的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-164">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, applicationName: string, options: Object, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.list_1
+  name: list(string, string, string, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a774b-165">列出所有指定的应用程序中的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-165">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, applicationName: string, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNext
+  name: listNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a774b-166">列出所有指定的应用程序中的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-166">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a774b-167">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="a774b-167">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNext_2
+  name: listNext(string, Object, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a774b-168">列出所有指定的应用程序中的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-168">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNext_1
+  name: listNext(string, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a774b-169">列出所有指定的应用程序中的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-169">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a774b-170">列出所有指定的应用程序中的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-170">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a774b-171">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="a774b-171">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.ListApplicationPackagesResult>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a774b-172">列出所有指定的应用程序中的应用程序包。</span><span class="sxs-lookup"><span data-stu-id="a774b-172">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a774b-173">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-173">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a774b-174">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-174">The name of the Batch account.</span></span>
+    - id: applicationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a774b-175">应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="a774b-175">The name of the application.</span></span> <span data-ttu-id="a774b-176">这必须是唯一的帐户中。</span><span class="sxs-lookup"><span data-stu-id="a774b-176">This must be unique within the account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.ListApplicationPackagesResult>>
   package: azure-arm-batch
 references:
 - uid: Promise<azure-arm-batch.ApplicationPackage>
@@ -678,5 +914,35 @@ references:
   - name: ApplicationPackage
     fullName: ApplicationPackage
     uid: azure-arm-batch.ApplicationPackage
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-batch.ListApplicationPackagesResult>
+  name: ListApplicationPackagesResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ListApplicationPackagesResult
+    fullName: ListApplicationPackagesResult
+    uid: azure-arm-batch.ListApplicationPackagesResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+  name: ListApplicationPackagesResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ListApplicationPackagesResult
+    fullName: ListApplicationPackagesResult
+    uid: azure-arm-batch.ListApplicationPackagesResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-batch.ListApplicationPackagesResult>>
+  name: ListApplicationPackagesResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ListApplicationPackagesResult
+    fullName: ListApplicationPackagesResult
+    uid: azure-arm-batch.ListApplicationPackagesResult
   - name: '>>'
     fullName: '>>'

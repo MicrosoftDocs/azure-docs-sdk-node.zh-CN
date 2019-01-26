@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f5861517c1bb3444a6428cced6edae5bb0af8731
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55049328"
+items:
+- uid: azure-arm-batch.FixedScaleSettings
+  name: FixedScaleSettings
+  fullName: FixedScaleSettings
+  children:
+  - azure-arm-batch.FixedScaleSettings.nodeDeallocationOption
+  - azure-arm-batch.FixedScaleSettings.resizeTimeout
+  - azure-arm-batch.FixedScaleSettings.targetDedicatedNodes
+  - azure-arm-batch.FixedScaleSettings.targetLowPriorityNodes
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.nodeDeallocationOption
+  name: nodeDeallocationOption
+  fullName: nodeDeallocationOption
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"b3618-101\">如果省略，默认值为 Requeue。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b3618-101\">If omitted, the default value is Requeue.</span></span> <span data-ttu-id=\"b3618-102\">可能的值包括：'Requeue', 'Terminate', 'TaskCompletion', 'RetainedData'</span><span class=\"sxs-lookup\"><span data-stu-id=\"b3618-102\">Possible values include: 'Requeue', 'Terminate', 'TaskCompletion', 'RetainedData'</span></span>"
+  optional: true
+  syntax:
+    content: 'nodeDeallocationOption?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.resizeTimeout
+  name: resizeTimeout
+  fullName: resizeTimeout
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b3618-103">默认值为 15 分钟。</span><span class="sxs-lookup"><span data-stu-id="b3618-103">The default value is 15 minutes.</span></span> <span data-ttu-id="b3618-104">超时值使用 ISO 8601 格式。</span><span class="sxs-lookup"><span data-stu-id="b3618-104">Timeout values use ISO 8601 format.</span></span> <span data-ttu-id="b3618-105">例如，使用 10 分钟，PT10M。</span><span class="sxs-lookup"><span data-stu-id="b3618-105">For example, use PT10M for 10 minutes.</span></span> <span data-ttu-id="b3618-106">最小值为 5 分钟。</span><span class="sxs-lookup"><span data-stu-id="b3618-106">The minimum value is 5 minutes.</span></span> <span data-ttu-id="b3618-107">如果指定的值小于 5 分钟，Batch 服务会拒绝并出错; 请求如果你正在直接调用 REST API，HTTP 状态代码为 400 （错误请求）。</span><span class="sxs-lookup"><span data-stu-id="b3618-107">If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>
+  optional: true
+  syntax:
+    content: 'resizeTimeout?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.targetDedicatedNodes
+  name: targetDedicatedNodes
+  fullName: targetDedicatedNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b3618-108">在至少一个 targetDedicatedNodes，targetLowPriority 节点必须设置。</span><span class="sxs-lookup"><span data-stu-id="b3618-108">At least one of targetDedicatedNodes, targetLowPriority nodes must be set.</span></span>
+  optional: true
+  syntax:
+    content: 'targetDedicatedNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.FixedScaleSettings.targetLowPriorityNodes
+  name: targetLowPriorityNodes
+  fullName: targetLowPriorityNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b3618-109">在至少一个 targetDedicatedNodes，targetLowPriority 节点必须设置。</span><span class="sxs-lookup"><span data-stu-id="b3618-109">At least one of targetDedicatedNodes, targetLowPriority nodes must be set.</span></span>
+  optional: true
+  syntax:
+    content: 'targetLowPriorityNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch

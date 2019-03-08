@@ -1,16 +1,16 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 21d390a084604d3e9730795eb797195c9c5467d5
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 9c7ecf43d4c9a66065d2838527c7c309ca68e870
+ms.sourcegitcommit: 7fa36fd75fd794bd5110803d2013771eb697dad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52058771"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57462229"
 documentType: LandingData
-title: 面向 JavaScript 开发人员的 Azure
+title: 面向 JavaScript 和 Node.js 开发人员的 Azure
 metadata:
-  title: 面向 Node.js 开发人员的 Azure - 教程、工具和 SDK 参考
-  description: 使用为 Node.js 开发人员编写的教程、模块和工具，在 Azure 中开始开发应用。
-  keywords: Azure, Node.js, SDK, API, npm
+  title: 面向 JavaScript 和 Node.js 开发人员的 Azure - 教程、工具和 SDK 参考
+  description: 使用为 JavaScript 和 Node.js 开发人员编写的教程、模块和工具，在 Azure 中开始开发应用。
+  keywords: Azure、JavaScript、Node.js、SDK、API、NPM
   author: rloutlaw
   ms.author: routlaw
   manager: douge
@@ -23,49 +23,49 @@ metadata:
   ms.devlang: nodejs
   ms.service: multiple
 sections:
-- title: 快速入门
+- title: 免费部署你的第一个 Node.js 应用！
   items:
   - type: paragragh
-    html: <p>看看在 Azure 上开始使用 Node.js 有多简单！
+    html: <p>你可以免费在 Azure 应用服务上部署 Node.js 示例应用</p>
   - type: list
     style: cards
     className: cardsM
     columns: 3
     items:
     - href: https://aka.ms/try-azure-node
-      html: <p>在免费的沙盒环境中部署第一个应用</p>
+      html: <p>在 Azure 应用服务上的免费沙盒环境中部署你的第一个应用</p>
       image:
         src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
-      title: 开始免费使用！
-- title: 托管应用程序
+      title: 部署你的第一个 Node.js 示例应用
+- title: 为应用选择正确的托管
   items:
   - type: paragragh
-    html: <p>在 Azure 上生成、部署和缩放 Node.js 应用程序
+    html: <p>对于 Javascript 和 Node.js 开发人员，Azure 支持许多托管和应用程序类型。 请在下方选择你的应用程序类型，我们将引导你在 Azure 上构建、部署和缩放你的应用程序。</p>
   - type: list
     style: cards
     className: cardsM
     columns: 3
     items:
-    - href: https://code.visualstudio.com/tutorials/static-website/getting-started
+    - title: 静态 Web 应用、SPA 和渐进式 Web 应用
+      html: <p>在 Azure 存储上部署使用 React、Angular 和 Vue 等框架构建的静态应用</p>
+      href: https://code.visualstudio.com/tutorials/static-website/getting-started
       image:
         src: https://docs.microsoft.com/media/logos/logo_React.svg
-      title: 静态站点
-      html: <p>使用 Azure 存储托管 React、Angular 和 Vue 应用</p>
-    - href: https://code.visualstudio.com/tutorials/app-service-extension/getting-started
-      html: <p>使用应用服务部署 Express 应用</p>
+    - title: 完整堆栈 Node.js 支持的 Web 应用和 API
+      html: <p>在 Azure 应用服务上部署使用 Express 等框架构建的完整堆栈 node.js Web 应用和 API</p>
+      href: https://code.visualstudio.com/tutorials/app-service-extension/getting-started
       image:
         src: https://docs.microsoft.com/media/logos/logo_vs-code.svg
-      title: 完整堆栈
-    - href: https://code.visualstudio.com/tutorials/docker-extension/getting-started
-      html: <p>在 Azure 上生成和部署 docker 容器和微服务</p>
+    - title: 使用了 Docker 的容器化应用和微服务
+      html: <p>使用 Docker 容器在 Azure 应用服务上部署容器化应用和微服务</p>
+      href: https://code.visualstudio.com/tutorials/docker-extension/getting-started
       image:
-        src: https://docs.microsoft.com/azure/media/index/ContainerInstances.svg
-      title: 容器应用
-    - href: https://code.visualstudio.com/tutorials/functions-extension/getting-started
-      html: <p>通过 Azure Functions 实现无服务器</p>
+        src: https://docs.microsoft.com/en-us/azure/docker/media/docker.png
+    - title: 无服务器应用和 API
+      href: https://code.visualstudio.com/tutorials/functions-extension/getting-started
+      html: <p>在 Azure Functions 上部署使用 JavaScript 编写的无服务器应用和 API</p>
       image:
         src: https://docs.microsoft.com/azure/media/index/azurefunctions.svg
-      title: 无服务器应用和 API
 - title: 存储数据
   items:
   - type: paragragh
@@ -167,26 +167,21 @@ sections:
     className: cardsM
     columns: 3
     items:
-    - href: https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach
-      html: <p>将日志语句添加到生产应用而无需重新部署</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_tools.svg
-      title: 记录点
-    - href: https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_remote-debugging
-      html: <p>将调试程序附加到测试或生产实例</p>
+    - title: 适用于 Azure 应用服务的远程调试（预览版）
+      href: https://medium.com/@auchenberg/introducing-remote-debugging-of-node-js-apps-on-azure-app-service-from-vs-code-in-public-preview-9b8d83a6e1f0
+      html: <p>将调试程序附加到 Azure 应用服务上的测试或生产 Node.js 应用。</p>
       image:
         src: https://docs.microsoft.com/media/common/i_debug.svg
-      title: 远程调试
-    - href: https://code.visualstudio.com/docs/nodejs/nodejs-debugging
-      html: <p>查找常见 Node.js 错误的指南</p>
+    - title: VS Code 中针对 Azure 应用服务的日志点
+      href: https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach
+      html: <p>将日志语句添加到 Azure 应用服务应用，无需从 VS Code 重新部署。</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_investigate.svg
-      title: 排除应用故障
-    - href: https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+        src: https://docs.microsoft.com/media/common/i_tools.svg
+    - title: 在 VS Code 中调试本地 Node.js 应用
+      href: https://code.visualstudio.com/docs/nodejs/nodejs-debugging
       html: <p>自动将调试程序附加到正在运行的 Node 进程</p>
       image:
         src: https://docs.microsoft.com/media/logos/logo_vs-code.svg
-      title: 在 VS Code 中调试
 - title: 消息传递
   items:
   - type: paragragh
@@ -196,17 +191,17 @@ sections:
     className: cardsM
     columns: 3
     items:
-    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+    - href: https://docs.microsoft.com/en-us/azure/event-grid/custom-event-quickstart
       html: <p>使用基于 HTTP 的事件传送来消除轮询</p>
       image:
         src: https://docs.microsoft.com/azure/media/index/azure_event_grid.svg
       title: 事件网格
-    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+    - href: https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues
       html: <p>跨服务的高度可靠消息传送</p>
       image:
         src: https://docs.microsoft.com/azure/media/index/IOT_edge_50.svg
       title: 服务总线
-    - href: https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted
+    - href: https://docs.microsoft.com/en-us/azure/storage/queues/storage-nodejs-how-to-use-queues
       html: <p>简单的可缩放消息排队</p>
       image:
         src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
@@ -230,7 +225,7 @@ sections:
       image:
         src: https://docs.microsoft.com/azure/media/index/EventHubs.svg
       title: 大数据流式处理
-- title: DevOps
+- title: 持续部署和 DevOps
   items:
   - type: paragragh
     html: <p>生成、测试和管理应用版本</p>
@@ -239,16 +234,21 @@ sections:
     className: cardsM
     columns: 3
     items:
-    - href: https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=%2Fvsts%2Fdeploy-azure%2Ftoc.json&bc=%2Fvsts%2Fdeploy-azure%2Fbreadcrumb%2Ftoc.json&view=vsts
+    - title: 持续集成
+      href: https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=%2Fvsts%2Fdeploy-azure%2Ftoc.json&bc=%2Fvsts%2Fdeploy-azure%2Fbreadcrumb%2Ftoc.json&view=vsts
       html: <p>添加 Jenkins、CircleCI 或 Travis 来管理版本</p>
       image:
         src: https://docs.microsoft.com/media/common/i_scrum.svg
-      title: 持续集成
-    - href: https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=%2Fvsts%2Fdeploy-azure%2Ftoc.json&bc=%2Fvsts%2Fdeploy-azure%2Fbreadcrumb%2Ftoc.json&view=vsts
-      html: <p>从 VSTS 生成和部署 Node 应用</p>
+    - title: Azure DevOps Projects
+      href: https://docs.microsoft.com/en-us/azure/devops-project/azure-devops-project-nodejs?toc=%2Fvsts%2Fdeploy-azure%2Ftoc.json&bc=%2Fvsts%2Fdeploy-azure%2Fbreadcrumb%2Ftoc.json&view=azure-devops&viewFallbackFrom=vsts
+      html: <p>从 Azure DevOps 项目生成和部署 Node 应用</p>
       image:
         src: https://docs.microsoft.com/media/logos/logo_vs-team-services.svg
-      title: VSTS
+    - title: GitHub 操作
+      href: https://css-tricks.com/introducing-github-actions/
+      html: <p>通过 GitHub 操作生成 Node.js 应用并将其部署到 Azure</p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_octokitty.svg
 - title: 用于 Node.js 的 Azure SDK
   items:
   - type: list

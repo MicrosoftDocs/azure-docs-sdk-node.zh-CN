@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.ThresholdRuleCondition
+    name: ThresholdRuleCondition
+    fullName: ThresholdRuleCondition
+    children:
+      - azure-arm-monitor.ThresholdRuleCondition.dataSource
+      - azure-arm-monitor.ThresholdRuleCondition.odatatype
+      - azure-arm-monitor.ThresholdRuleCondition.operator
+      - azure-arm-monitor.ThresholdRuleCondition.threshold
+      - azure-arm-monitor.ThresholdRuleCondition.timeAggregation
+      - azure-arm-monitor.ThresholdRuleCondition.windowSize
+    langs:
+      - typeScript
+    type: interface
+    summary: 规则条件根据超出阈值的指标。
+    extends:
+      name: azure-arm-monitor.RuleCondition
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.dataSource
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 从该规则将收集其数据的资源。 此类型的数据源将始终是类型 RuleMetricDataSource。
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSource'
+      return:
+        type:
+          - azure-arm-monitor.RuleDataSource
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.operator
+    name: operator
+    fullName: operator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用于比较数据和阈值的运算符。 可能的值包括：GreaterThan、 GreaterThanOrEqual、 LessThan、 LessThanOrEqual
+    syntax:
+      content: 'operator: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.threshold
+    name: threshold
+    fullName: threshold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 激活警报的阈值。
+    syntax:
+      content: 'threshold: number'
+      return:
+        type:
+          - number
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.timeAggregation
+    name: timeAggregation
+    fullName: timeAggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      时间聚合运算符。 如何应随着时间的推移组合收集的数据。
+      默认值为指标的 PrimaryAggregationType。 可能的值包括：平均，最小值、 最大值，汇总，Last
+    optional: true
+    syntax:
+      content: 'timeAggregation?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ThresholdRuleCondition.windowSize
+    name: windowSize
+    fullName: windowSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用于监视警报活动基于阈值的时间 （以 ISO 8601 持续时间格式） 的段。 如果指定，则它必须介于 5 分钟到 1 天之间。
+    optional: true
+    syntax:
+      content: 'windowSize?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleCondition
+    name: RuleCondition
+    spec.typeScript:
+      - name: RuleCondition
+        fullName: RuleCondition
+        uid: azure-arm-monitor.RuleCondition
+  - uid: azure-arm-monitor.RuleDataSource
+    name: RuleDataSource
+    spec.typeScript:
+      - name: RuleDataSource
+        fullName: RuleDataSource
+        uid: azure-arm-monitor.RuleDataSource

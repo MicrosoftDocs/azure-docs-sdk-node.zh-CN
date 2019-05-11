@@ -1,0 +1,193 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-network.OutboundRule'
+    name: OutboundRule
+    fullName: OutboundRule
+    children:
+      - '@azure/arm-network.OutboundRule.allocatedOutboundPorts'
+      - '@azure/arm-network.OutboundRule.backendAddressPool'
+      - '@azure/arm-network.OutboundRule.enableTcpReset'
+      - '@azure/arm-network.OutboundRule.etag'
+      - '@azure/arm-network.OutboundRule.frontendIPConfigurations'
+      - '@azure/arm-network.OutboundRule.id'
+      - '@azure/arm-network.OutboundRule.idleTimeoutInMinutes'
+      - '@azure/arm-network.OutboundRule.name'
+      - '@azure/arm-network.OutboundRule.protocol'
+      - '@azure/arm-network.OutboundRule.provisioningState'
+    langs:
+      - typeScript
+    type: interface
+    summary: 负载均衡器的出站池。
+    extends:
+      name: '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.allocatedOutboundPorts'
+    name: allocatedOutboundPorts
+    fullName: allocatedOutboundPorts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 数量的出站端口用于 nat。
+    optional: true
+    syntax:
+      content: 'allocatedOutboundPorts?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.backendAddressPool'
+    name: backendAddressPool
+    fullName: backendAddressPool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 对 Dip 的池的引用。 出站流量随机进行负载平衡跨 Ip 在后端 Ip。
+    syntax:
+      content: 'backendAddressPool: SubResource'
+      return:
+        type:
+          - '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.enableTcpReset'
+    name: enableTcpReset
+    fullName: enableTcpReset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      接收双向 TCP 重置上 TCP 流空闲超时或意外的连接终止。
+      协议设置为 TCP 后才使用此元素。
+    optional: true
+    syntax:
+      content: 'enableTcpReset?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.etag'
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一个唯一只读的字符串，每当更新资源更改。
+    optional: true
+    syntax:
+      content: 'etag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.frontendIPConfigurations'
+    name: frontendIPConfigurations
+    fullName: frontendIPConfigurations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 负载均衡器前端 IP 地址。
+    syntax:
+      content: 'frontendIPConfigurations: SubResource[]'
+      return:
+        type:
+          - '@azure/arm-network.SubResource[]'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 资源 ID。
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.idleTimeoutInMinutes'
+    name: idleTimeoutInMinutes
+    fullName: idleTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: TCP 空闲连接超时
+    optional: true
+    syntax:
+      content: 'idleTimeoutInMinutes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在资源组中是唯一的资源的名称。 此名称可用于访问资源。
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 负载均衡器中的出站规则的协议。 可能的值包括：Tcp、 Udp 和 All。 可能的值包括：Tcp、 Udp、 全部
+    syntax:
+      content: 'protocol: LoadBalancerOutboundRuleProtocol'
+      return:
+        type:
+          - '@azure/arm-network.LoadBalancerOutboundRuleProtocol'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 获取 PublicIP 资源的预配状态。 可能的值包括：更新、 删除和失败。
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+references:
+  - uid: '@azure/arm-network.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.SubResource[]'
+    name: 'SubResource[]'
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-network.LoadBalancerOutboundRuleProtocol'
+    name: LoadBalancerOutboundRuleProtocol
+    spec.typeScript:
+      - name: LoadBalancerOutboundRuleProtocol
+        fullName: LoadBalancerOutboundRuleProtocol
+        uid: '@azure/arm-network.LoadBalancerOutboundRuleProtocol'

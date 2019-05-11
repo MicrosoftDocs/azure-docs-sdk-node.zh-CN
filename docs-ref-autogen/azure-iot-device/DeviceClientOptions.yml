@@ -1,0 +1,160 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.DeviceClientOptions
+    name: DeviceClientOptions
+    fullName: DeviceClientOptions
+    children:
+      - azure-iot-device.DeviceClientOptions.amqp
+      - azure-iot-device.DeviceClientOptions.ca
+      - azure-iot-device.DeviceClientOptions.cert
+      - azure-iot-device.DeviceClientOptions.clientCertEngine
+      - azure-iot-device.DeviceClientOptions.http
+      - azure-iot-device.DeviceClientOptions.key
+      - azure-iot-device.DeviceClientOptions.mqtt
+      - azure-iot-device.DeviceClientOptions.passphrase
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="0da5a-101">在客户端对象的选项。</span><span class="sxs-lookup"><span data-stu-id="0da5a-101">Options for the Client object.</span></span>  <span data-ttu-id="0da5a-102">传递到<xref:Client.setOptions>函数。</span><span class="sxs-lookup"><span data-stu-id="0da5a-102">Passed into the <xref:Client.setOptions> function.</span></span>'
+    extends:
+      name: X509
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.amqp
+    name: amqp
+    fullName: amqp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0da5a-103">具有特定于 Mqtt 传输选项的可选对象</span><span class="sxs-lookup"><span data-stu-id="0da5a-103">Optional object with options specific to the Mqtt transport</span></span>
+    optional: true
+    syntax:
+      content: 'amqp?: AmqpTransportOptions'
+      return:
+        type:
+          - azure-iot-device.AmqpTransportOptions
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.ca
+    name: ca
+    fullName: ca
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0da5a-104">中心服务正在使用的证书颁发机构的 PEM 格式的公共证书。</span><span class="sxs-lookup"><span data-stu-id="0da5a-104">Public certificate in PEM form for certificate authority being used by the Hub service.</span></span>  <span data-ttu-id="0da5a-105">这是中心使用安全的 TLS 连接的 CA，客户端会验证使用此公共证书以验证身份的中心的连接。</span><span class="sxs-lookup"><span data-stu-id="0da5a-105">This is the CA that the hub is using to secure TLS connections and the client validates the connection using this public cert in order to validate the identity of the hub.</span></span>  <span data-ttu-id="0da5a-106">如果要连接到 Azure IoT 中心在 Azure 数据中心内，您不需要将此项设置。</span><span class="sxs-lookup"><span data-stu-id="0da5a-106">If you are connecting to an Azure IoT Hub inside of an Azure data center, you do not need to set this.</span></span>  <span data-ttu-id="0da5a-107">如果要连接到某些其他中心 （例如 Edge 中心），您可能需要将其设置为使用 tls 使用中心的服务器证书。</span><span class="sxs-lookup"><span data-stu-id="0da5a-107">If you are connecting to some other hub (e.g. an Edge Hub), then you may need to set this to the server cert that the hub uses for TLS.</span></span>'
+    optional: true
+    syntax:
+      content: 'ca?: string'
+      return:
+        type:
+          - string
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.cert
+    name: cert
+    fullName: cert
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0da5a-108">X509 证书。</span><span class="sxs-lookup"><span data-stu-id="0da5a-108">X509 Certificate.</span></span>
+    optional: true
+    syntax:
+      content: 'cert?: string | string[] | Buffer | Buffer[]'
+      return:
+        type:
+          - 'string | string[] | Buffer | Buffer[]'
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.clientCertEngine
+    name: clientCertEngine
+    fullName: clientCertEngine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0da5a-109">OpenSSL 引擎，它可以提供客户端证书的名称。</span><span class="sxs-lookup"><span data-stu-id="0da5a-109">Name of an OpenSSL engine which can provide the client certificate.</span></span>
+    optional: true
+    syntax:
+      content: 'clientCertEngine?: string'
+      return:
+        type:
+          - string
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.http
+    name: http
+    fullName: http
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0da5a-110">具有特定于 Mqtt 传输选项的可选对象</span><span class="sxs-lookup"><span data-stu-id="0da5a-110">Optional object with options specific to the Mqtt transport</span></span>
+    optional: true
+    syntax:
+      content: 'http?: HttpTransportOptions'
+      return:
+        type:
+          - azure-iot-device.HttpTransportOptions
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.key
+    name: key
+    fullName: key
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0da5a-111">密钥相关联的 x509 证书。</span><span class="sxs-lookup"><span data-stu-id="0da5a-111">Key associated with the X509 certificate.</span></span>
+    optional: true
+    syntax:
+      content: 'key?: string | Buffer'
+      return:
+        type:
+          - string | Buffer
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.mqtt
+    name: mqtt
+    fullName: mqtt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0da5a-112">具有特定于 Mqtt 传输选项的可选对象</span><span class="sxs-lookup"><span data-stu-id="0da5a-112">Optional object with options specific to the Mqtt transport</span></span>
+    optional: true
+    syntax:
+      content: 'mqtt?: MqttTransportOptions'
+      return:
+        type:
+          - azure-iot-device.MqttTransportOptions
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.passphrase
+    name: passphrase
+    fullName: passphrase
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0da5a-113">通行短语用于解码的键相关联的 x509 证书。</span><span class="sxs-lookup"><span data-stu-id="0da5a-113">Passphrase used to decode the key associated with the X509 certificate.</span></span>
+    optional: true
+    syntax:
+      content: 'passphrase?: string'
+      return:
+        type:
+          - string
+    package: azure-iot-device
+references:
+  - uid: azure-iot-device.AmqpTransportOptions
+    name: AmqpTransportOptions
+    spec.typeScript:
+      - name: AmqpTransportOptions
+        fullName: AmqpTransportOptions
+        uid: azure-iot-device.AmqpTransportOptions
+  - uid: azure-iot-device.HttpTransportOptions
+    name: HttpTransportOptions
+    spec.typeScript:
+      - name: HttpTransportOptions
+        fullName: HttpTransportOptions
+        uid: azure-iot-device.HttpTransportOptions
+  - uid: azure-iot-device.MqttTransportOptions
+    name: MqttTransportOptions
+    spec.typeScript:
+      - name: MqttTransportOptions
+        fullName: MqttTransportOptions
+        uid: azure-iot-device.MqttTransportOptions

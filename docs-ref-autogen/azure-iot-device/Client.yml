@@ -1,0 +1,636 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.Client
+    name: Client
+    fullName: Client
+    children:
+      - azure-iot-device.Client.abandon_1
+      - azure-iot-device.Client.abandon
+      - azure-iot-device.Client.constructor
+      - azure-iot-device.Client.close_1
+      - azure-iot-device.Client.close
+      - azure-iot-device.Client.complete_1
+      - azure-iot-device.Client.complete
+      - azure-iot-device.Client.fromAuthenticationProvider
+      - azure-iot-device.Client.fromConnectionString
+      - azure-iot-device.Client.fromSharedAccessSignature
+      - azure-iot-device.Client.getTwin_1
+      - azure-iot-device.Client.getTwin
+      - azure-iot-device.Client.onDeviceMethod
+      - azure-iot-device.Client.open_1
+      - azure-iot-device.Client.open
+      - azure-iot-device.Client.reject_1
+      - azure-iot-device.Client.reject
+      - azure-iot-device.Client.sendEvent_1
+      - azure-iot-device.Client.sendEvent
+      - azure-iot-device.Client.sendEventBatch_1
+      - azure-iot-device.Client.sendEventBatch
+      - azure-iot-device.Client.setOptions_1
+      - azure-iot-device.Client.setOptions
+      - azure-iot-device.Client.setRetryPolicy
+      - azure-iot-device.Client.setTransportOptions_1
+      - azure-iot-device.Client.setTransportOptions
+      - azure-iot-device.Client.updateSharedAccessSignature
+      - azure-iot-device.Client.uploadToBlob_1
+      - azure-iot-device.Client.uploadToBlob
+    langs:
+      - typeScript
+    type: class
+    summary: |
+      <span data-ttu-id="29ad6-101">IoT 中心设备客户端用来与 Azure IoT 中心连接设备。</span><span class="sxs-lookup"><span data-stu-id="29ad6-101">IoT Hub device client used to connect a device with an Azure IoT hub.</span></span>
+      <span data-ttu-id="29ad6-102">SDK 的用户应在调用工厂方法之一[fromConnectionString](xref:azure-iot-device.Client.fromConnectionString)或[fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature)创建 IoT 中心设备客户端。</span><span class="sxs-lookup"><span data-stu-id="29ad6-102">Users of the SDK should call one of the factory methods, [fromConnectionString](xref:azure-iot-device.Client.fromConnectionString) or [fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature) to create an IoT Hub device client.</span></span>
+    extends:
+      name: InternalClient
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.abandon_1
+    name: abandon(Message)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function abandon(message: Message)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+      return:
+        type:
+          - Promise<MessageAbandoned>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.abandon
+    name: 'abandon(Message, Callback<MessageAbandoned>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function abandon(message: Message, abandonCallback: Callback<MessageAbandoned>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: abandonCallback
+          type:
+            - Callback<MessageAbandoned>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.constructor
+    name: 'Client(DeviceTransport, string, BlobUploadClient)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new Client(transport: DeviceTransport, connStr?: string, blobUploadClient?: BlobUploadClient)'
+      parameters:
+        - id: transport
+          type:
+            - azure-iot-device.DeviceTransport
+          description: '<span data-ttu-id="29ad6-103">一个对象，实现接口的传输对象，例如，预期[Http](xref:azure-iot-device-http.Http)。</span><span class="sxs-lookup"><span data-stu-id="29ad6-103">An object that implements the interface expected of a transport object, e.g., [Http](xref:azure-iot-device-http.Http).</span></span>'
+        - id: connStr
+          type:
+            - string
+          description: '<span data-ttu-id="29ad6-104">连接字符串 (可选： 如果未提供，必须调用 updateSharedAccessSignature 来直接设置 SharedAccessSignature 令牌)。</span><span class="sxs-lookup"><span data-stu-id="29ad6-104">A connection string (optional: when not provided, updateSharedAccessSignature must be called to set the SharedAccessSignature token directly).</span></span>'
+          optional: true
+        - id: blobUploadClient
+          type:
+            - BlobUploadClient
+          description: |
+            <span data-ttu-id="29ad6-105">一个对象，它能够将流上载到 blob。</span><span class="sxs-lookup"><span data-stu-id="29ad6-105">An object that is capable of uploading a stream to a blob.</span></span>
+          optional: true
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.close_1
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="29ad6-106">关闭传输连接并销毁的客户端资源。</span><span class="sxs-lookup"><span data-stu-id="29ad6-106">Closes the transport connection and destroys the client resources.</span></span>
+      <span data-ttu-id="29ad6-107">*注意：客户端调用此方法后不能重复使用对象。*</span><span class="sxs-lookup"><span data-stu-id="29ad6-107">*Note: After calling this method the Client object cannot be reused.*</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<Disconnected>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.close
+    name: close(Callback<Disconnected>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="29ad6-108">关闭传输连接并销毁的客户端资源。</span><span class="sxs-lookup"><span data-stu-id="29ad6-108">Closes the transport connection and destroys the client resources.</span></span>
+      <span data-ttu-id="29ad6-109">*注意：客户端调用此方法后不能重复使用对象。*</span><span class="sxs-lookup"><span data-stu-id="29ad6-109">*Note: After calling this method the Client object cannot be reused.*</span></span>
+    syntax:
+      content: 'function close(closeCallback: Callback<Disconnected>)'
+      parameters:
+        - id: closeCallback
+          type:
+            - Callback<Disconnected>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.complete_1
+    name: complete(Message)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function complete(message: Message)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+      return:
+        type:
+          - Promise<MessageCompleted>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.complete
+    name: 'complete(Message, Callback<MessageCompleted>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function complete(message: Message, completeCallback: Callback<MessageCompleted>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: completeCallback
+          type:
+            - Callback<MessageCompleted>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.fromAuthenticationProvider
+    name: 'fromAuthenticationProvider(AuthenticationProvider, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="29ad6-110">从给定的身份验证方法，并使用给定的传输类型创建 IoT 中心设备客户端。</span><span class="sxs-lookup"><span data-stu-id="29ad6-110">Creates an IoT Hub device client from the given authentication method and using the given transport type.</span></span>
+    syntax:
+      content: 'static function fromAuthenticationProvider(authenticationProvider: AuthenticationProvider, transportCtor: any)'
+      parameters:
+        - id: authenticationProvider
+          type:
+            - AuthenticationProvider
+          description: <span data-ttu-id="29ad6-111">用于获取 IoT 中心的身份验证参数的对象。</span><span class="sxs-lookup"><span data-stu-id="29ad6-111">Object used to obtain the authentication parameters for the IoT hub.</span></span>
+        - id: transportCtor
+          type:
+            - any
+          description: |
+            <span data-ttu-id="29ad6-112">传输协议用于连接到 IoT 中心。</span><span class="sxs-lookup"><span data-stu-id="29ad6-112">Transport protocol used to connect to IoT hub.</span></span>
+      return:
+        type:
+          - azure-iot-device.Client
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.fromConnectionString
+    name: 'fromConnectionString(string, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="29ad6-113">从给定的连接字符串使用给定的传输类型创建 IoT 中心设备客户端。</span><span class="sxs-lookup"><span data-stu-id="29ad6-113">Creates an IoT Hub device client from the given connection string using the given transport type.</span></span>
+    syntax:
+      content: 'static function fromConnectionString(connStr: string, transportCtor: any)'
+      parameters:
+        - id: connStr
+          type:
+            - string
+          description: <span data-ttu-id="29ad6-114">连接字符串，其中封装一个 IoT 中心的"设备连接"权限。</span><span class="sxs-lookup"><span data-stu-id="29ad6-114">A connection string which encapsulates "device connect" permissions on an IoT hub.</span></span>
+        - id: transportCtor
+          type:
+            - any
+          description: |
+            <span data-ttu-id="29ad6-115">传输的构造函数。</span><span class="sxs-lookup"><span data-stu-id="29ad6-115">A transport constructor.</span></span>
+      return:
+        type:
+          - azure-iot-device.Client
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.fromSharedAccessSignature
+    name: 'fromSharedAccessSignature(string, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="29ad6-116">从给定的共享的访问签名使用给定的传输类型创建 IoT 中心设备客户端。</span><span class="sxs-lookup"><span data-stu-id="29ad6-116">Creates an IoT Hub device client from the given shared access signature using the given transport type.</span></span>
+    syntax:
+      content: 'static function fromSharedAccessSignature(sharedAccessSignature: string, transportCtor: any)'
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: <span data-ttu-id="29ad6-117">共享的访问签名，其中封装一个 IoT 中心的"设备连接"权限。</span><span class="sxs-lookup"><span data-stu-id="29ad6-117">A shared access signature which encapsulates "device connect" permissions on an IoT hub.</span></span>
+        - id: transportCtor
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - azure-iot-device.Client
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.getTwin_1
+    name: getTwin()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getTwin()
+      parameters: []
+      return:
+        type:
+          - Promise<azure-iot-device.Twin>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.getTwin
+    name: getTwin(Callback<Twin>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTwin(done: Callback<Twin>)'
+      parameters:
+        - id: done
+          type:
+            - Callback<azure-iot-device.Twin>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.onDeviceMethod
+    name: 'onDeviceMethod(string, (request: DeviceMethodRequest, response: DeviceMethodResponse) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="29ad6-118">注册一个名为方法的回调`methodName`。</span><span class="sxs-lookup"><span data-stu-id="29ad6-118">Registers a callback for a method named `methodName`.</span></span>
+    syntax:
+      content: 'function onDeviceMethod(methodName: string, callback: (request: DeviceMethodRequest, response: DeviceMethodResponse) => void)'
+      parameters:
+        - id: methodName
+          type:
+            - string
+          description: <span data-ttu-id="29ad6-119">将处理由回调的方法名称</span><span class="sxs-lookup"><span data-stu-id="29ad6-119">Name of the method that will be handled by the callback</span></span>
+        - id: callback
+          type:
+            - '(request: DeviceMethodRequest, response: DeviceMethodResponse) => void'
+          description: |
+            <span data-ttu-id="29ad6-120">每次调用该方法的方法请求时应被调用的函数`methodName`收到。</span><span class="sxs-lookup"><span data-stu-id="29ad6-120">Function that shall be called whenever a method request for the method called `methodName` is received.</span></span>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.open_1
+    name: open()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function open()
+      parameters: []
+      return:
+        type:
+          - Promise<Connected>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.open
+    name: open(Callback<Connected>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function open(openCallback: Callback<Connected>)'
+      parameters:
+        - id: openCallback
+          type:
+            - Callback<Connected>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.reject_1
+    name: reject(Message)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reject(message: Message)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+      return:
+        type:
+          - Promise<MessageRejected>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.reject
+    name: 'reject(Message, Callback<MessageRejected>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reject(message: Message, rejectCallback: Callback<MessageRejected>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: rejectCallback
+          type:
+            - Callback<MessageRejected>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.sendEvent_1
+    name: sendEvent(Message)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function sendEvent(message: Message)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+      return:
+        type:
+          - Promise<MessageEnqueued>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.sendEvent
+    name: 'sendEvent(Message, Callback<MessageEnqueued>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function sendEvent(message: Message, sendEventCallback: Callback<MessageEnqueued>)'
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: ''
+        - id: sendEventCallback
+          type:
+            - Callback<MessageEnqueued>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.sendEventBatch_1
+    name: 'sendEventBatch(Message[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function sendEventBatch(messages: Message[])'
+      parameters:
+        - id: messages
+          type:
+            - 'Message[]'
+          description: ''
+      return:
+        type:
+          - Promise<MessageEnqueued>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.sendEventBatch
+    name: 'sendEventBatch(Message[], Callback<MessageEnqueued>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function sendEventBatch(messages: Message[], sendEventBatchCallback: Callback<MessageEnqueued>)'
+      parameters:
+        - id: messages
+          type:
+            - 'Message[]'
+          description: ''
+        - id: sendEventBatchCallback
+          type:
+            - Callback<MessageEnqueued>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.setOptions_1
+    name: setOptions(DeviceClientOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="29ad6-121">将传递到选项`Client`可用于配置传输的对象。</span><span class="sxs-lookup"><span data-stu-id="29ad6-121">Passes options to the `Client` object that can be used to configure the transport.</span></span>
+    syntax:
+      content: 'function setOptions(options: DeviceClientOptions)'
+      parameters:
+        - id: options
+          type:
+            - azure-iot-device.DeviceClientOptions
+          description: ''
+      return:
+        type:
+          - Promise<TransportConfigured>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.setOptions
+    name: 'setOptions(DeviceClientOptions, Callback<TransportConfigured>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="29ad6-122">将传递到选项`Client`可用于配置传输的对象。</span><span class="sxs-lookup"><span data-stu-id="29ad6-122">Passes options to the `Client` object that can be used to configure the transport.</span></span>
+    syntax:
+      content: 'function setOptions(options: DeviceClientOptions, done: Callback<TransportConfigured>)'
+      parameters:
+        - id: options
+          type:
+            - azure-iot-device.DeviceClientOptions
+          description: '<span data-ttu-id="29ad6-123">一个 <xref:DeviceClientOptions> 对象。</span><span class="sxs-lookup"><span data-stu-id="29ad6-123">A <xref:DeviceClientOptions> object.</span></span>'
+        - id: done
+          type:
+            - Callback<TransportConfigured>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.setRetryPolicy
+    name: setRetryPolicy(RetryPolicy)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="29ad6-124">设置客户端上的所有操作使用的重试策略。</span><span class="sxs-lookup"><span data-stu-id="29ad6-124">Sets the retry policy used by the client on all operations.</span></span> <span data-ttu-id="29ad6-125">默认值是[ExponentialBackoffWithJitter](xref:azure-iot-common.ExponentialBackoffWithJitter)。</span><span class="sxs-lookup"><span data-stu-id="29ad6-125">The default is [ExponentialBackoffWithJitter](xref:azure-iot-common.ExponentialBackoffWithJitter).</span></span>'
+    syntax:
+      content: 'function setRetryPolicy(policy: RetryPolicy)'
+      parameters:
+        - id: policy
+          type:
+            - RetryPolicy
+          description: |
+            <span data-ttu-id="29ad6-126">应该用于所有未来的操作重试策略。</span><span class="sxs-lookup"><span data-stu-id="29ad6-126">The retry policy that should be used for all future operations.</span></span>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.setTransportOptions_1
+    name: setTransportOptions(any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setTransportOptions(options: any)'
+      parameters:
+        - id: options
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - Promise<TransportConfigured>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.setTransportOptions
+    name: 'setTransportOptions(any, Callback<TransportConfigured>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setTransportOptions(options: any, done: Callback<TransportConfigured>)'
+      parameters:
+        - id: options
+          type:
+            - any
+          description: ''
+        - id: done
+          type:
+            - Callback<TransportConfigured>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.updateSharedAccessSignature
+    name: 'updateSharedAccessSignature(string, Callback<SharedAccessSignatureUpdated>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateSharedAccessSignature(sharedAccessSignature: string, updateSasCallback?: Callback<SharedAccessSignatureUpdated>)'
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: ''
+        - id: updateSasCallback
+          type:
+            - Callback<SharedAccessSignatureUpdated>
+          description: ''
+          optional: true
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.uploadToBlob_1
+    name: 'uploadToBlob(string, Stream, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="29ad6-127">`uploadToBlob`方法将流上载到 blob。</span><span class="sxs-lookup"><span data-stu-id="29ad6-127">The `uploadToBlob` method uploads a stream to a blob.</span></span>
+    syntax:
+      content: 'function uploadToBlob(blobName: string, stream: Stream, streamLength: number)'
+      parameters:
+        - id: blobName
+          type:
+            - string
+          description: ''
+        - id: stream
+          type:
+            - Stream
+          description: ''
+        - id: streamLength
+          type:
+            - number
+          description: ''
+      return:
+        type:
+          - Promise<void>
+    package: azure-iot-device
+  - uid: azure-iot-device.Client.uploadToBlob
+    name: 'uploadToBlob(string, Stream, number, ErrorCallback)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="29ad6-128">`uploadToBlob`方法将流上载到 blob。</span><span class="sxs-lookup"><span data-stu-id="29ad6-128">The `uploadToBlob` method uploads a stream to a blob.</span></span>
+    syntax:
+      content: 'function uploadToBlob(blobName: string, stream: Stream, streamLength: number, callback: ErrorCallback)'
+      parameters:
+        - id: blobName
+          type:
+            - string
+          description: <span data-ttu-id="29ad6-129">要用于将使用流的内容创建的 blob 的名称。</span><span class="sxs-lookup"><span data-stu-id="29ad6-129">The name to use for the blob that will be created with the content of the stream.</span></span>
+        - id: stream
+          type:
+            - Stream
+          description: <span data-ttu-id="29ad6-130">应将数据与数据上载到 blob。</span><span class="sxs-lookup"><span data-stu-id="29ad6-130">The data to that should be uploaded to the blob.</span></span>
+        - id: streamLength
+          type:
+            - number
+          description: <span data-ttu-id="29ad6-131">数据的大小应上载到 blob。</span><span class="sxs-lookup"><span data-stu-id="29ad6-131">The size of the data to that should be uploaded to the blob.</span></span>
+        - id: callback
+          type:
+            - ErrorCallback
+          description: ''
+    package: azure-iot-device
+references:
+  - uid: azure-iot-device.DeviceTransport
+    name: DeviceTransport
+    spec.typeScript:
+      - name: DeviceTransport
+        fullName: DeviceTransport
+        uid: azure-iot-device.DeviceTransport
+  - uid: Callback<azure-iot-device.Twin>
+    name: Twin>
+    spec.typeScript:
+      - name: Callback<
+        fullName: Callback<
+      - name: Twin
+        fullName: Twin
+        uid: azure-iot-device.Twin
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-iot-device.Twin>
+    name: Twin>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Twin
+        fullName: Twin
+        uid: azure-iot-device.Twin
+      - name: '>'
+        fullName: '>'
+  - uid: azure-iot-device.DeviceClientOptions
+    name: DeviceClientOptions
+    spec.typeScript:
+      - name: DeviceClientOptions
+        fullName: DeviceClientOptions
+        uid: azure-iot-device.DeviceClientOptions
+  - uid: azure-iot-device.Client
+    name: Client
+    spec.typeScript:
+      - name: Client
+        fullName: Client
+        uid: azure-iot-device.Client

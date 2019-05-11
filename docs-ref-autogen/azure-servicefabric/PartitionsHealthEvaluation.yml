@@ -1,0 +1,123 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.PartitionsHealthEvaluation
+    name: PartitionsHealthEvaluation
+    fullName: PartitionsHealthEvaluation
+    children:
+      - azure-servicefabric.PartitionsHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.PartitionsHealthEvaluation.description
+      - azure-servicefabric.PartitionsHealthEvaluation.kind
+      - azure-servicefabric.PartitionsHealthEvaluation.maxPercentUnhealthyPartitionsPerService
+      - azure-servicefabric.PartitionsHealthEvaluation.totalCount
+      - azure-servicefabric.PartitionsHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="a8c9f-101">表示包含每个会影响当前的聚合运行状况状态的不正常分区的运行状况评估的服务的分区的运行状况评估。</span><span class="sxs-lookup"><span data-stu-id="a8c9f-101">Represents health evaluation for the partitions of a service, containing health evaluations for each unhealthy partition that impacts current aggregated health state.</span></span> <span data-ttu-id="a8c9f-102">评估服务运行状况和聚合运行状况状态为错误或警告时，可以返回。</span><span class="sxs-lookup"><span data-stu-id="a8c9f-102">Can be returned when evaluating service health and the aggregated health state is either Error or Warning.</span></span>'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a8c9f-103">例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown</span><span class="sxs-lookup"><span data-stu-id="a8c9f-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a8c9f-104">运行状况评估，表示评估过程的摘要说明。</span><span class="sxs-lookup"><span data-stu-id="a8c9f-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a8c9f-105">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="a8c9f-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.maxPercentUnhealthyPartitionsPerService
+    name: maxPercentUnhealthyPartitionsPerService
+    fullName: maxPercentUnhealthyPartitionsPerService
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a8c9f-106">ServiceTypeHealthPolicy 从允许的每个服务不正常分区的百分比的最大值。</span><span class="sxs-lookup"><span data-stu-id="a8c9f-106">Maximum allowed percentage of unhealthy partitions per service from the ServiceTypeHealthPolicy.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyPartitionsPerService?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.totalCount
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a8c9f-107">从运行状况存储服务的分区的总数。</span><span class="sxs-lookup"><span data-stu-id="a8c9f-107">Total number of partitions of the service from the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'totalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionsHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a8c9f-108">聚合运行状况状态导致的不正常评估的列表。</span><span class="sxs-lookup"><span data-stu-id="a8c9f-108">List of unhealthy evaluations that led to the aggregated health state.</span></span> <span data-ttu-id="a8c9f-109">包括受影响的聚合运行状况的所有不正常 PartitionHealthEvaluation。</span><span class="sxs-lookup"><span data-stu-id="a8c9f-109">Includes all the unhealthy PartitionHealthEvaluation that impacted the aggregated health.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

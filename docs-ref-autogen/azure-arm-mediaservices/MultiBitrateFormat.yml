@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.MultiBitrateFormat
+    name: MultiBitrateFormat
+    fullName: MultiBitrateFormat
+    children:
+      - azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+      - azure-arm-mediaservices.MultiBitrateFormat.odatatype
+      - azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    langs:
+      - typeScript
+    type: interface
+    summary: 介绍用于生成 GOP 对齐多比特率文件的集合的属性。 默认行为是生成一个输出文件为每个视频层即 muxed 以及所有音频。 可以通过指定 outputFiles 集合控制生成的确切输出文件。
+    extends:
+      name: azure-arm-mediaservices.Format
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      生成的输出文件的文件名称模式。 文件名称中支持以下宏: {Basename}-{Extension} 的输入视频的基名称-适用于此格式的相应扩展。 {Label}-分配到编解码器/层的标签。
+      {Index} 的缩略图的唯一索引。 仅适用于缩略图。 {比特率}-音频/视频比特率。 不适用于缩略图。 {编解码器}-音频/视频编解码器的类型。 将折叠和从文件名中删除任何 unsubstituted 的宏。
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 若要生成的输出文件的列表。  在列表中的每个条目是一组的音频和视频层的标签在 muxed 一起。
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.OutputFile[]'
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Format
+    name: Format
+    spec.typeScript:
+      - name: Format
+        fullName: Format
+        uid: azure-arm-mediaservices.Format
+  - uid: 'azure-arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-arm-mediaservices.OutputFile
+      - name: '[]'
+        fullName: '[]'

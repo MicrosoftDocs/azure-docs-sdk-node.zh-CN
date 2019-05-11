@@ -1,0 +1,260 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.H264Layer
+    name: H264Layer
+    fullName: H264Layer
+    children:
+      - azure-arm-mediaservices.H264Layer.adaptiveBFrame
+      - azure-arm-mediaservices.H264Layer.bFrames
+      - azure-arm-mediaservices.H264Layer.bitrate
+      - azure-arm-mediaservices.H264Layer.bufferWindow
+      - azure-arm-mediaservices.H264Layer.entropyMode
+      - azure-arm-mediaservices.H264Layer.frameRate
+      - azure-arm-mediaservices.H264Layer.height
+      - azure-arm-mediaservices.H264Layer.label
+      - azure-arm-mediaservices.H264Layer.level
+      - azure-arm-mediaservices.H264Layer.maxBitrate
+      - azure-arm-mediaservices.H264Layer.odatatype
+      - azure-arm-mediaservices.H264Layer.profile
+      - azure-arm-mediaservices.H264Layer.referenceFrames
+      - azure-arm-mediaservices.H264Layer.slices
+      - azure-arm-mediaservices.H264Layer.width
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述输入的视频编码为 H.264 视频编解码器的所需的输出比特率层时要使用的设置。
+    extends:
+      name: azure-arm-mediaservices.VideoLayer
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.adaptiveBFrame
+    name: adaptiveBFrame
+    fullName: adaptiveBFrame
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 是否自适应的 B 帧是这一层进行编码时使用。 如果未指定，编码器会将其打开视频配置文件时允许其使用。
+    optional: true
+    syntax:
+      content: 'adaptiveBFrame?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.bFrames
+    name: bFrames
+    fullName: bFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 这一层进行编码时要使用的 B 帧数。  如果未指定，编码器将选择适当数量的视频配置文件和级别。
+    optional: true
+    syntax:
+      content: 'bFrames?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.bitrate
+    name: bitrate
+    fullName: bitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 比特 / 秒的输入的视频编码为生成这一层时平均比特率。 此为必填字段。
+    syntax:
+      content: 'bitrate: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.bufferWindow
+    name: bufferWindow
+    fullName: bufferWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'VBV 缓冲区窗口长度。 值应为采用 ISO 8601 格式。 值应在范围 [0.1-100] 数秒内。 默认值为 5 秒 (例如，PT5S)。'
+    optional: true
+    syntax:
+      content: 'bufferWindow?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.entropyMode
+    name: entropyMode
+    fullName: entropyMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要用于此层的平均信息量模式。 如果未指定，编码器将选择适用于配置文件和级别的模式。 可能的值包括：Cabac'，'Cavlc
+    optional: true
+    syntax:
+      content: 'entropyMode?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.frameRate
+    name: frameRate
+    fullName: frameRate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 帧速率 （以每秒帧数） 要对这一层进行编码。 值可以是形式的 M/N 其中 M 和 N 为整数 (例如，30000/1001)，或在号码 （例如，30 或为 29.97） 的形式。 编码器强制对基于配置文件和级别允许的帧速率进行限制。 如果未指定，则编码器将与输入视频使用相同的帧速率。
+    optional: true
+    syntax:
+      content: 'frameRate?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.height
+    name: height
+    fullName: height
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此层的输出视频的高度。 值可以是绝对值 （以像素为单位） 或相对 （以百分比计）。 例如 50%表示输出视频作为输入的高度的一半的任意多个像素。
+    optional: true
+    syntax:
+      content: 'height?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此层，可用于在多路复用不同的视频和音频层，或命名输出文件中的字母数字的标签。
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.level
+    name: level
+    fullName: level
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 我们目前支持多达 6.2 的级别。 值可以是自动或匹配 H.264 配置文件的编号。 如果未指定，默认值为 Auto，它允许编码器选择适合于这一层的级别。
+    optional: true
+    syntax:
+      content: 'level?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.maxBitrate
+    name: maxBitrate
+    fullName: maxBitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      最大比特率 （以位 / 秒），此时应假定 VBV 缓冲区重填。
+      如果未指定，默认为与比特率相同的值。
+    optional: true
+    syntax:
+      content: 'maxBitrate?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.profile
+    name: profile
+    fullName: profile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 我们目前支持 Baseline、 Main、 高、 High422、 High444。 默认值为自动。可能的值包括：Auto、 基线、 主要、 高、 High422、 High444
+    optional: true
+    syntax:
+      content: 'profile?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.referenceFrames
+    name: referenceFrames
+    fullName: referenceFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 这一层进行编码时要使用的参考帧数。 如果未指定，则编码器将确定基于编码器复杂性设置了适当数量。
+    optional: true
+    syntax:
+      content: 'referenceFrames?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.slices
+    name: slices
+    fullName: slices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 这一层进行编码时要使用的切片数。 如果未指定，默认值为零，这意味着为每个帧，该编码器将使用一个切片。
+    optional: true
+    syntax:
+      content: 'slices?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.width
+    name: width
+    fullName: width
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此层的输出视频的宽度。 值可以是绝对值 （以像素为单位） 或相对 （以百分比计）。 例如 50%表示输出视频作为输入的宽度的一半的任意多个像素。
+    optional: true
+    syntax:
+      content: 'width?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.VideoLayer
+    name: VideoLayer
+    spec.typeScript:
+      - name: VideoLayer
+        fullName: VideoLayer
+        uid: azure-arm-mediaservices.VideoLayer

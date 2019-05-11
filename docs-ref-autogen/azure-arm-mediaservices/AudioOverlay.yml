@@ -1,0 +1,130 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.AudioOverlay
+    name: AudioOverlay
+    fullName: AudioOverlay
+    children:
+      - azure-arm-mediaservices.AudioOverlay.audioGainLevel
+      - azure-arm-mediaservices.AudioOverlay.end
+      - azure-arm-mediaservices.AudioOverlay.fadeInDuration
+      - azure-arm-mediaservices.AudioOverlay.fadeOutDuration
+      - azure-arm-mediaservices.AudioOverlay.inputLabel
+      - azure-arm-mediaservices.AudioOverlay.odatatype
+      - azure-arm-mediaservices.AudioOverlay.start
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="64a37-101">介绍音频覆盖的属性。</span><span class="sxs-lookup"><span data-stu-id="64a37-101">Describes the properties of an audio overlay.</span></span>
+    extends:
+      name: azure-arm-mediaservices.Overlay
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.AudioOverlay.audioGainLevel
+    name: audioGainLevel
+    fullName: audioGainLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="64a37-102">在覆盖层中的音频增益等级。</span><span class="sxs-lookup"><span data-stu-id="64a37-102">The gain level of audio in the overlay.</span></span> <span data-ttu-id="64a37-103">值应为 [0，1.0] 范围内。</span><span class="sxs-lookup"><span data-stu-id="64a37-103">The value should be in the range [0, 1.0].</span></span> <span data-ttu-id="64a37-104">默认值为 1.0。</span><span class="sxs-lookup"><span data-stu-id="64a37-104">The default is 1.0.</span></span>'
+    optional: true
+    syntax:
+      content: 'audioGainLevel?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.AudioOverlay.end
+    name: end
+    fullName: end
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="64a37-105">在输入视频覆盖层的结束位置。</span><span class="sxs-lookup"><span data-stu-id="64a37-105">The position in the input video at which the overlay ends.</span></span> <span data-ttu-id="64a37-106">值应为采用 ISO 8601 持续时间格式。</span><span class="sxs-lookup"><span data-stu-id="64a37-106">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="64a37-107">例如，使用 PT30S 在 30 秒中为输入视频结束在覆盖区。</span><span class="sxs-lookup"><span data-stu-id="64a37-107">For example, PT30S to end the overlay at 30 seconds in to the input video.</span></span> <span data-ttu-id="64a37-108">如果未指定在覆盖区上将应用到输入视频的末尾，如果 inputLoop 为 true。</span><span class="sxs-lookup"><span data-stu-id="64a37-108">If not specified the overlay will be applied until the end of the input video if inputLoop is true.</span></span> <span data-ttu-id="64a37-109">否则，如果 inputLoop 为 false，然后覆盖将持续更长时间覆盖介质的持续时间。</span><span class="sxs-lookup"><span data-stu-id="64a37-109">Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.</span></span>'
+    optional: true
+    syntax:
+      content: 'end?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.AudioOverlay.fadeInDuration
+    name: fadeInDuration
+    fullName: fadeInDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="64a37-110">通过该覆盖淡入到输入视频的持续时间。</span><span class="sxs-lookup"><span data-stu-id="64a37-110">The duration over which the overlay fades in onto the input video.</span></span> <span data-ttu-id="64a37-111">值应为采用 ISO 8601 持续时间格式。</span><span class="sxs-lookup"><span data-stu-id="64a37-111">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="64a37-112">如果未指定的默认行为是在 （与 PT0S 相同） 中拥有任何淡入淡出。</span><span class="sxs-lookup"><span data-stu-id="64a37-112">If not specified the default behavior is to have no fade in (same as PT0S).</span></span>
+    optional: true
+    syntax:
+      content: 'fadeInDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.AudioOverlay.fadeOutDuration
+    name: fadeOutDuration
+    fullName: fadeOutDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="64a37-113">对其覆盖淡出输入视频的持续时间。</span><span class="sxs-lookup"><span data-stu-id="64a37-113">The duration over which the overlay fades out of the input video.</span></span> <span data-ttu-id="64a37-114">值应为采用 ISO 8601 持续时间格式。</span><span class="sxs-lookup"><span data-stu-id="64a37-114">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="64a37-115">如果未指定的默认行为是不让任何淡出 （与 PT0S 相同）。</span><span class="sxs-lookup"><span data-stu-id="64a37-115">If not specified the default behavior is to have no fade out (same as PT0S).</span></span>
+    optional: true
+    syntax:
+      content: 'fadeOutDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.AudioOverlay.inputLabel
+    name: inputLabel
+    fullName: inputLabel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="64a37-116">这是要用作覆盖层的作业输入的标签。</span><span class="sxs-lookup"><span data-stu-id="64a37-116">The label of the job input which is to be used as an overlay.</span></span> <span data-ttu-id="64a37-117">输入必须指定一个文件。</span><span class="sxs-lookup"><span data-stu-id="64a37-117">The Input must specify exactly one file.</span></span> <span data-ttu-id="64a37-118">您可以指定 JPG 或 PNG 格式的图像文件或音频文件 （如 WAV、 MP3、 WMA 或 M4A 文件），或视频文件。</span><span class="sxs-lookup"><span data-stu-id="64a37-118">You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file.</span></span> <span data-ttu-id="64a37-119">请参阅https://aka.ms/mesformats有关受支持的音频和视频文件格式的数据的完整列表。</span><span class="sxs-lookup"><span data-stu-id="64a37-119">See https://aka.ms/mesformats for the complete list of supported audio and video file formats.</span></span>'
+    syntax:
+      content: 'inputLabel: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.AudioOverlay.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="64a37-120">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="64a37-120">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.AudioOverlay.start
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="64a37-121">开始位置，引用输入视频，在覆盖区上开始。</span><span class="sxs-lookup"><span data-stu-id="64a37-121">The start position, with reference to the input video, at which the overlay starts.</span></span> <span data-ttu-id="64a37-122">值应为采用 ISO 8601 格式。</span><span class="sxs-lookup"><span data-stu-id="64a37-122">The value should be in ISO 8601 format.</span></span> <span data-ttu-id="64a37-123">例如，使用 PT05S 5 秒中为输入视频的开始覆盖区。</span><span class="sxs-lookup"><span data-stu-id="64a37-123">For example, PT05S to start the overlay at 5 seconds in to the input video.</span></span> <span data-ttu-id="64a37-124">如果未指定覆盖从输入视频的起始处开始。</span><span class="sxs-lookup"><span data-stu-id="64a37-124">If not specified the overlay starts from the beginning of the input video.</span></span>'
+    optional: true
+    syntax:
+      content: 'start?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Overlay
+    name: Overlay
+    spec.typeScript:
+      - name: Overlay
+        fullName: Overlay
+        uid: azure-arm-mediaservices.Overlay

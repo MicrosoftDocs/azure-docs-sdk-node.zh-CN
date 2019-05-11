@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription
+    name: ExternalStoreProvisionApplicationTypeDescription
+    fullName: ExternalStoreProvisionApplicationTypeDescription
+    children:
+      - azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationPackageDownloadUri
+      - azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationTypeName
+      - azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationTypeVersion
+      - azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.async
+      - azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.kind
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述要注册或预配从外部存储而不是上传到 Service Fabric 映像存储区的包使用的应用程序包的应用程序类型的操作。
+    extends:
+      name: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationPackageDownloadUri
+    name: applicationPackageDownloadUri
+    fullName: applicationPackageDownloadUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: “.sfpkg”应用程序包的路径，可使用 HTTP 或 HTTPS 协议从该处下载应用程序包。 应用程序包可以存储在外部存储中，该存储提供 GET 操作来下载文件。 支持的协议为 HTTP 和 HTTPS，并且路径必须允许读取访问权限。
+    syntax:
+      content: 'applicationPackageDownloadUri: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationTypeName
+    name: applicationTypeName
+    fullName: applicationTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 应用程序类型名称表示在应用程序清单中找到的应用程序类型的名称。
+    syntax:
+      content: 'applicationTypeName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.applicationTypeVersion
+    name: applicationTypeVersion
+    fullName: applicationTypeVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 应用程序类型版本表示在应用程序清单中找到的应用程序类型的版本。
+    syntax:
+      content: 'applicationTypeVersion: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.async
+    name: async
+    fullName: async
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指示预配是否应当以异步方式进行。 当设置为 true 时，预配操作将在请求被系统接受时返回，并且预配操作继续进行，没有任何超时限制。 默认值为 false。 对于大型应用程序包，建议将值设置为 true。
+    syntax:
+      content: 'async: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ExternalStoreProvisionApplicationTypeDescription.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    name: ProvisionApplicationTypeDescriptionBase
+    spec.typeScript:
+      - name: ProvisionApplicationTypeDescriptionBase
+        fullName: ProvisionApplicationTypeDescriptionBase
+        uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase

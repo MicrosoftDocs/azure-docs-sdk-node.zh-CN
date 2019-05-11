@@ -1,0 +1,160 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.DeviceClientOptions
+    name: DeviceClientOptions
+    fullName: DeviceClientOptions
+    children:
+      - azure-iot-device.DeviceClientOptions.amqp
+      - azure-iot-device.DeviceClientOptions.ca
+      - azure-iot-device.DeviceClientOptions.cert
+      - azure-iot-device.DeviceClientOptions.clientCertEngine
+      - azure-iot-device.DeviceClientOptions.http
+      - azure-iot-device.DeviceClientOptions.key
+      - azure-iot-device.DeviceClientOptions.mqtt
+      - azure-iot-device.DeviceClientOptions.passphrase
+    langs:
+      - typeScript
+    type: interface
+    summary: '在客户端对象的选项。  传递到<xref:Client.setOptions>函数。'
+    extends:
+      name: X509
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.amqp
+    name: amqp
+    fullName: amqp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 具有特定于 Mqtt 传输选项的可选对象
+    optional: true
+    syntax:
+      content: 'amqp?: AmqpTransportOptions'
+      return:
+        type:
+          - azure-iot-device.AmqpTransportOptions
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.ca
+    name: ca
+    fullName: ca
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 中心服务正在使用的证书颁发机构的 PEM 格式的公共证书。  这是中心使用安全的 TLS 连接的 CA，客户端会验证使用此公共证书以验证身份的中心的连接。  如果要连接到 Azure IoT 中心在 Azure 数据中心内，您不需要将此项设置。  如果要连接到某些其他中心 （例如 Edge 中心），您可能需要将其设置为使用 tls 使用中心的服务器证书。
+    optional: true
+    syntax:
+      content: 'ca?: string'
+      return:
+        type:
+          - string
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.cert
+    name: cert
+    fullName: cert
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: X509 证书。
+    optional: true
+    syntax:
+      content: 'cert?: string | string[] | Buffer | Buffer[]'
+      return:
+        type:
+          - 'string | string[] | Buffer | Buffer[]'
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.clientCertEngine
+    name: clientCertEngine
+    fullName: clientCertEngine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: OpenSSL 引擎，它可以提供客户端证书的名称。
+    optional: true
+    syntax:
+      content: 'clientCertEngine?: string'
+      return:
+        type:
+          - string
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.http
+    name: http
+    fullName: http
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 具有特定于 Mqtt 传输选项的可选对象
+    optional: true
+    syntax:
+      content: 'http?: HttpTransportOptions'
+      return:
+        type:
+          - azure-iot-device.HttpTransportOptions
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.key
+    name: key
+    fullName: key
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 密钥相关联的 x509 证书。
+    optional: true
+    syntax:
+      content: 'key?: string | Buffer'
+      return:
+        type:
+          - string | Buffer
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.mqtt
+    name: mqtt
+    fullName: mqtt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 具有特定于 Mqtt 传输选项的可选对象
+    optional: true
+    syntax:
+      content: 'mqtt?: MqttTransportOptions'
+      return:
+        type:
+          - azure-iot-device.MqttTransportOptions
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.passphrase
+    name: passphrase
+    fullName: passphrase
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 通行短语用于解码的键相关联的 x509 证书。
+    optional: true
+    syntax:
+      content: 'passphrase?: string'
+      return:
+        type:
+          - string
+    package: azure-iot-device
+references:
+  - uid: azure-iot-device.AmqpTransportOptions
+    name: AmqpTransportOptions
+    spec.typeScript:
+      - name: AmqpTransportOptions
+        fullName: AmqpTransportOptions
+        uid: azure-iot-device.AmqpTransportOptions
+  - uid: azure-iot-device.HttpTransportOptions
+    name: HttpTransportOptions
+    spec.typeScript:
+      - name: HttpTransportOptions
+        fullName: HttpTransportOptions
+        uid: azure-iot-device.HttpTransportOptions
+  - uid: azure-iot-device.MqttTransportOptions
+    name: MqttTransportOptions
+    spec.typeScript:
+      - name: MqttTransportOptions
+        fullName: MqttTransportOptions
+        uid: azure-iot-device.MqttTransportOptions

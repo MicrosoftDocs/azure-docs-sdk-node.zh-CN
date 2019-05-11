@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServicePartitionInfo
+    name: StatelessServicePartitionInfo
+    fullName: StatelessServicePartitionInfo
+    children:
+      - azure-servicefabric.StatelessServicePartitionInfo.healthState
+      - azure-servicefabric.StatelessServicePartitionInfo.instanceCount
+      - azure-servicefabric.StatelessServicePartitionInfo.partitionInformation
+      - azure-servicefabric.StatelessServicePartitionInfo.partitionStatus
+      - azure-servicefabric.StatelessServicePartitionInfo.serviceKind
+    langs:
+      - typeScript
+    type: interface
+    summary: 有关分区无状态 Service Fabric 服务的信息。
+    extends:
+      name: azure-servicefabric.ServicePartitionInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.instanceCount
+    name: instanceCount
+    fullName: instanceCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此分区的实例数。
+    optional: true
+    syntax:
+      content: 'instanceCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.partitionInformation
+    name: partitionInformation
+    fullName: partitionInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 有关分区标识，分区方案和支持它的密钥的信息。
+    optional: true
+    syntax:
+      content: 'partitionInformation?: PartitionInformation'
+      return:
+        type:
+          - azure-servicefabric.PartitionInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.partitionStatus
+    name: partitionStatus
+    fullName: partitionStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service fabric 服务分区的状态。 可能的值包括：Invalid、 就绪、 NotReady、 InQuorumLoss，重新配置，正在删除
+    optional: true
+    syntax:
+      content: 'partitionStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServicePartitionInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServicePartitionInfo
+    name: ServicePartitionInfo
+    spec.typeScript:
+      - name: ServicePartitionInfo
+        fullName: ServicePartitionInfo
+        uid: azure-servicefabric.ServicePartitionInfo
+  - uid: azure-servicefabric.PartitionInformation
+    name: PartitionInformation
+    spec.typeScript:
+      - name: PartitionInformation
+        fullName: PartitionInformation
+        uid: azure-servicefabric.PartitionInformation

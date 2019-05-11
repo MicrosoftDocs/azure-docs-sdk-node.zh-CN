@@ -1,0 +1,119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServiceReplicaDescription
+    name: ServiceReplicaDescription
+    fullName: ServiceReplicaDescription
+    children:
+      - azure-servicefabric.ServiceReplicaDescription.codePackages
+      - azure-servicefabric.ServiceReplicaDescription.diagnostics
+      - azure-servicefabric.ServiceReplicaDescription.networkRefs
+      - azure-servicefabric.ServiceReplicaDescription.osType
+      - azure-servicefabric.ServiceReplicaDescription.replicaName
+    langs:
+      - typeScript
+    type: interface
+    summary: 介绍服务资源的副本。
+    extends:
+      name: azure-servicefabric.ServiceReplicaProperties
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceReplicaDescription.codePackages
+    name: codePackages
+    fullName: codePackages
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 描述窗体服务的代码包的集。 代码包描述容器和运行它的属性。 所有代码包在同一主机上已启动并共享相同的上下文 （网络、 过程等）。
+    syntax:
+      content: 'codePackages: ContainerCodePackageProperties[]'
+      return:
+        type:
+          - 'azure-servicefabric.ContainerCodePackageProperties[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceReplicaDescription.diagnostics
+    name: diagnostics
+    fullName: diagnostics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 对 DiagnosticsDescription 中接收器的引用。
+    optional: true
+    syntax:
+      content: 'diagnostics?: DiagnosticsRef'
+      return:
+        type:
+          - azure-servicefabric.DiagnosticsRef
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceReplicaDescription.networkRefs
+    name: networkRefs
+    fullName: networkRefs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此服务需要的一部分的专用网络的名称。
+    optional: true
+    syntax:
+      content: 'networkRefs?: NetworkRef[]'
+      return:
+        type:
+          - 'azure-servicefabric.NetworkRef[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceReplicaDescription.osType
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在服务中的代码所需的操作系统。 可能的值包括：Linux，Windows
+    syntax:
+      content: 'osType: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceReplicaDescription.replicaName
+    name: replicaName
+    fullName: replicaName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 副本的名称。
+    syntax:
+      content: 'replicaName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServiceReplicaProperties
+    name: ServiceReplicaProperties
+    spec.typeScript:
+      - name: ServiceReplicaProperties
+        fullName: ServiceReplicaProperties
+        uid: azure-servicefabric.ServiceReplicaProperties
+  - uid: 'azure-servicefabric.ContainerCodePackageProperties[]'
+    name: 'ContainerCodePackageProperties[]'
+    spec.typeScript:
+      - name: ContainerCodePackageProperties
+        fullName: ContainerCodePackageProperties
+        uid: azure-servicefabric.ContainerCodePackageProperties
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.DiagnosticsRef
+    name: DiagnosticsRef
+    spec.typeScript:
+      - name: DiagnosticsRef
+        fullName: DiagnosticsRef
+        uid: azure-servicefabric.DiagnosticsRef
+  - uid: 'azure-servicefabric.NetworkRef[]'
+    name: 'NetworkRef[]'
+    spec.typeScript:
+      - name: NetworkRef
+        fullName: NetworkRef
+        uid: azure-servicefabric.NetworkRef
+      - name: '[]'
+        fullName: '[]'

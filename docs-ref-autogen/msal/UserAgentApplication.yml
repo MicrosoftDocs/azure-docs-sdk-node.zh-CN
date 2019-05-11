@@ -1,0 +1,337 @@
+### YamlMime:UniversalReference
+items:
+  - uid: msal.UserAgentApplication
+    name: UserAgentApplication
+    fullName: UserAgentApplication
+    children:
+      - msal.UserAgentApplication.acquireTokenPopup
+      - msal.UserAgentApplication.acquireTokenRedirect
+      - msal.UserAgentApplication.acquireTokenSilent
+      - msal.UserAgentApplication.authority
+      - msal.UserAgentApplication.getAccount
+      - msal.UserAgentApplication.getAllAccounts
+      - msal.UserAgentApplication.getAuthorityInstance
+      - msal.UserAgentApplication.getCurrentConfiguration
+      - msal.UserAgentApplication.getLoginInProgress
+      - msal.UserAgentApplication.getPostLogoutRedirectUri
+      - msal.UserAgentApplication.getRedirectUri
+      - msal.UserAgentApplication.handleRedirectCallback_1
+      - msal.UserAgentApplication.handleRedirectCallback
+      - msal.UserAgentApplication.loginPopup
+      - msal.UserAgentApplication.loginRedirect
+      - msal.UserAgentApplication.logout
+      - msal.UserAgentApplication.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: 'UserAgentApplication 类：<xref:UserAgentApplication> 对象实例的开发人员可用于使 loginXX OR acquireTokenXX 函数'
+    package: msal
+  - uid: msal.UserAgentApplication.acquireTokenPopup
+    name: acquireTokenPopup(AuthenticationParameters)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 当你想要为用户的浏览器中打开一个弹出窗口，通过 API 获取 access_token 时
+    syntax:
+      content: 'function acquireTokenPopup(request: AuthenticationParameters)'
+      parameters:
+        - id: request
+          type:
+            - msal.AuthenticationParameters
+          description: ''
+      return:
+        type:
+          - Promise<msal.AuthResponse>
+    package: msal
+  - uid: msal.UserAgentApplication.acquireTokenRedirect
+    name: acquireTokenRedirect(AuthenticationParameters)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 您希望获取的 API 的 access_token，通过将用户重定向到授权终结点时使用。
+    syntax:
+      content: 'function acquireTokenRedirect(request: AuthenticationParameters)'
+      parameters:
+        - id: request
+          type:
+            - msal.AuthenticationParameters
+          description: ''
+    package: msal
+  - uid: msal.UserAgentApplication.acquireTokenSilent
+    name: acquireTokenSilent(AuthenticationParameters)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      使用此函数来获取令牌，然后再每次调用 API / 资源提供程序 MSAL 返回的缓存的令牌可用时或将其发送到 STS 的请求获取新令牌的使用隐藏的 iframe。
+    syntax:
+      content: 'function acquireTokenSilent(request: AuthenticationParameters)'
+      parameters:
+        - id: request
+          type:
+            - msal.AuthenticationParameters
+          description: ''
+      return:
+        type:
+          - Promise<msal.AuthResponse>
+    package: msal
+  - uid: msal.UserAgentApplication.authority
+    name: authority
+    fullName: authority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      返回颁发机构，颁发机构所在的 URL，该值指示可以使用 MSAL 获取令牌的目录
+      - 在 Azure AD 中，此属性是 URL，该值指示使用 MSAL 获取的令牌的形式的 Azure active directory https://login.microsoftonline.com/&lt;Enter_the_Tenant_Info_Here&gt;如果你的应用程序支持在一个组织的目录中的帐户，"Enter_the_Tenant_Info_Here"值将替换为租户 Id 或租户名称 (例如，contoso.microsoft.com) 如果你的应用程序支持在任何组织的目录中将帐户、"Enter_the_Tenant_Info_Here"值替换组织中，如果你的应用程序支持在任何组织的目录和个人 Microsoft 帐户中的帐户，将为"Enter_the_Tenant_Info_使用通用的此处"值。
+      若要将支持限制为个人 Microsoft 帐户，"Enter_the_Tenant_Info_Here"将值替换为使用者。
+      - 在 Azure B2C 中，它属于窗体 https://&lt;实例&gt;/tfp/&lt;租户&gt;/<policyName>/
+    syntax:
+      content: 'authority: string'
+      return:
+        type:
+          - string
+    package: msal
+  - uid: msal.UserAgentApplication.getAccount
+    name: getAccount()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 签名中帐户 （来自在登录时创建的帐户对象） 或为 null 时返回发现没有状态
+    syntax:
+      content: function getAccount()
+      parameters: []
+      return:
+        type:
+          - msal.Account
+    package: msal
+  - uid: msal.UserAgentApplication.getAllAccounts
+    name: getAllAccounts()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 用于筛选所有缓存的项，并返回基于 homeAccountIdentifier 的唯一帐户的列表。
+    syntax:
+      content: function getAllAccounts()
+      parameters: []
+      return:
+        type:
+          - Array<msal.Account>
+    package: msal
+  - uid: msal.UserAgentApplication.getAuthorityInstance
+    name: getAuthorityInstance()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 返回的颁发机构实例
+    syntax:
+      content: function getAuthorityInstance()
+      parameters: []
+      return:
+        type:
+          - Authority
+    package: msal
+  - uid: msal.UserAgentApplication.getCurrentConfiguration
+    name: getCurrentConfiguration()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '用于获取当前<xref:Configuration>MSAL 中的对象'
+    syntax:
+      content: function getCurrentConfiguration()
+      parameters: []
+      return:
+        type:
+          - msal.Configuration
+    package: msal
+  - uid: msal.UserAgentApplication.getLoginInProgress
+    name: getLoginInProgress()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 返回到开发人员以帮助通知如果登录名是正在进行中的布尔型标志
+    syntax:
+      content: function getLoginInProgress()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: msal
+  - uid: msal.UserAgentApplication.getPostLogoutRedirectUri
+    name: getPostLogoutRedirectUri()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      用于获取在 MSAL 或 null 中配置的 post 注销重定向 uri。
+      计算结果 postLogoutredirectUri 如果它是一个函数，否则只需返回其值。
+    syntax:
+      content: function getPostLogoutRedirectUri()
+      parameters: []
+      return:
+        type:
+          - string
+    package: msal
+  - uid: msal.UserAgentApplication.getRedirectUri
+    name: getRedirectUri()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      用于获取在 MSAL 或 null 中配置的重定向 uri。
+      计算结果重定向 Uri 如果它是一个函数，否则只需返回其值。
+    syntax:
+      content: function getRedirectUri()
+      parameters: []
+      return:
+        type:
+          - string
+    package: msal
+  - uid: msal.UserAgentApplication.handleRedirectCallback_1
+    name: handleRedirectCallback(authResponseCallback)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 设置要发回的成功或错误的对象的重定向流的回调函数。
+    syntax:
+      content: 'function handleRedirectCallback(authCallback: authResponseCallback)'
+      parameters:
+        - id: authCallback
+          type:
+            - authResponseCallback
+          description: ''
+    package: msal
+  - uid: msal.UserAgentApplication.handleRedirectCallback
+    name: 'handleRedirectCallback(tokenReceivedCallback, errorReceivedCallback)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 设置要发回的成功或错误的对象的重定向流的回调函数。
+    syntax:
+      content: 'function handleRedirectCallback(tokenReceivedCallback: tokenReceivedCallback, errorReceivedCallback: errorReceivedCallback)'
+      parameters:
+        - id: tokenReceivedCallback
+          type:
+            - tokenReceivedCallback
+          description: ''
+        - id: errorReceivedCallback
+          type:
+            - errorReceivedCallback
+          description: ''
+    package: msal
+  - uid: msal.UserAgentApplication.loginPopup
+    name: loginPopup(AuthenticationParameters)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 使用启动登录过程中通过用户的浏览器中打开一个弹出窗口时
+    syntax:
+      content: 'function loginPopup(request?: AuthenticationParameters)'
+      parameters:
+        - id: request
+          type:
+            - msal.AuthenticationParameters
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<msal.AuthResponse>
+    package: msal
+  - uid: msal.UserAgentApplication.loginRedirect
+    name: loginRedirect(AuthenticationParameters)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 通过将用户的浏览器重定向到授权终结点启动登录过程时使用。
+    syntax:
+      content: 'function loginRedirect(request?: AuthenticationParameters)'
+      parameters:
+        - id: request
+          type:
+            - msal.AuthenticationParameters
+          description: ''
+          optional: true
+    package: msal
+  - uid: msal.UserAgentApplication.logout
+    name: logout()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      用于注销当前用户，并将用户重定向到 postLogoutRedirectUri。
+      默认行为是将用户重定向到`window.location.href`。
+    syntax:
+      content: function logout()
+      parameters: []
+    package: msal
+  - uid: msal.UserAgentApplication.constructor
+    name: UserAgentApplication(Configuration)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: '构造函数<xref:UserAgentApplication>这是为了能够实例化对象<xref:UserAgentApplication>对象'
+    syntax:
+      content: 'new UserAgentApplication(configuration: Configuration)'
+      parameters:
+        - id: configuration
+          type:
+            - msal.Configuration
+          description: |
+            MSAL UserAgentApplication 实例对象
+    package: msal
+references:
+  - uid: msal.Configuration
+    name: Configuration
+    spec.typeScript:
+      - name: Configuration
+        fullName: Configuration
+        uid: msal.Configuration
+  - uid: msal.AuthenticationParameters
+    name: AuthenticationParameters
+    spec.typeScript:
+      - name: AuthenticationParameters
+        fullName: AuthenticationParameters
+        uid: msal.AuthenticationParameters
+  - uid: Promise<msal.AuthResponse>
+    name: AuthResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: AuthResponse
+        fullName: AuthResponse
+        uid: msal.AuthResponse
+      - name: '>'
+        fullName: '>'
+  - uid: msal.Account
+    name: Account
+    spec.typeScript:
+      - name: Account
+        fullName: Account
+        uid: msal.Account
+  - uid: Array<msal.Account>
+    name: Account>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Account
+        fullName: Account
+        uid: msal.Account
+      - name: '>'
+        fullName: '>'

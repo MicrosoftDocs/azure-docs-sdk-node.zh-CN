@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaHealthState
+    name: ReplicaHealthState
+    fullName: ReplicaHealthState
+    children:
+      - azure-servicefabric.ReplicaHealthState.aggregatedHealthState
+      - azure-servicefabric.ReplicaHealthState.partitionId
+      - azure-servicefabric.ReplicaHealthState.serviceKind
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示的有状态服务副本或无状态服务实例运行状况状态的基类。
+    extends:
+      name: azure-servicefabric.EntityHealthState
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthState.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthState.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此副本所属的分区的 ID。
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthState.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthState
+    name: EntityHealthState
+    spec.typeScript:
+      - name: EntityHealthState
+        fullName: EntityHealthState
+        uid: azure-servicefabric.EntityHealthState

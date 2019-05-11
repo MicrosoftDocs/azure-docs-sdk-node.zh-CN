@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-cognitiveservices-websearch.Computation
+    name: Computation
+    fullName: Computation
+    children:
+      - azure-cognitiveservices-websearch.Computation.expression
+      - azure-cognitiveservices-websearch.Computation.followUpQueries
+      - azure-cognitiveservices-websearch.Computation.id
+      - azure-cognitiveservices-websearch.Computation.value
+      - azure-cognitiveservices-websearch.Computation.webSearchUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: 定义一个表达式和其答案
+    extends:
+      name: azure-cognitiveservices-websearch.Answer
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.expression
+    name: expression
+    fullName: expression
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 数学计算或转换表达式。 如果查询包含要转换的度量值 （例如，米至英尺） 单元的请求，此字段包含单位并将值包含到单位。 如果查询包含的数学表达式，例如 2 + 2，此字段包含的表达式和值包含答案。 请注意可能规范化的数学表达式。 例如，如果查询是 sqrt(4^2+8^2)，规范化的表达式，其可能 sqrt((4^2)+(8^2))。 如果该用户的查询是一个数学问题，textDecorations 查询参数设置为 true，该表达式字符串可能包含格式设置标记。 例如，如果该用户的查询，log(2) 规范化的表达式，包括下标标记。 有关详细信息，请参阅命中突出显示。
+    syntax:
+      content: 'expression: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.followUpQueries
+    name: followUpQueries
+    fullName: followUpQueries
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'followUpQueries?: Query[]'
+      return:
+        type:
+          - 'azure-cognitiveservices-websearch.Query[]'
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一个字符串标识符。
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 表达式的答案。
+    syntax:
+      content: 'value: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+  - uid: azure-cognitiveservices-websearch.Computation.webSearchUrl
+    name: webSearchUrl
+    fullName: webSearchUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此项的 URL 到必应的搜索结果。
+    optional: true
+    syntax:
+      content: 'webSearchUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-websearch
+references:
+  - uid: azure-cognitiveservices-websearch.Answer
+    name: Answer
+    spec.typeScript:
+      - name: Answer
+        fullName: Answer
+        uid: azure-cognitiveservices-websearch.Answer
+  - uid: 'azure-cognitiveservices-websearch.Query[]'
+    name: 'Query[]'
+    spec.typeScript:
+      - name: Query
+        fullName: Query
+        uid: azure-cognitiveservices-websearch.Query
+      - name: '[]'
+        fullName: '[]'

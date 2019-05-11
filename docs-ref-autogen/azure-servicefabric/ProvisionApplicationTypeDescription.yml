@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription
+    name: ProvisionApplicationTypeDescription
+    fullName: ProvisionApplicationTypeDescription
+    children:
+      - azure-servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy
+      - azure-servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath
+      - azure-servicefabric.ProvisionApplicationTypeDescription.async
+      - azure-servicefabric.ProvisionApplicationTypeDescription.kind
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述要注册或预配应用使用应用程序包上传到 Service Fabric 映像存储区的应用程序类型的操作。
+    extends:
+      name: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy
+    name: applicationPackageCleanupPolicy
+    fullName: applicationPackageCleanupPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 不需要用于清理后成功预配的应用程序包执行的操作的类型。 可能的值包括：Invalid、 Default、 自动、 'Manual'
+    optional: true
+    syntax:
+      content: 'applicationPackageCleanupPolicy?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath
+    name: applicationTypeBuildPath
+    fullName: applicationTypeBuildPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 应用程序包在先前的上传操作中指定的映像存储中的相对路径。
+    syntax:
+      content: 'applicationTypeBuildPath: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.async
+    name: async
+    fullName: async
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指示预配是否应当以异步方式进行。 当设置为 true 时，预配操作将在请求被系统接受时返回，并且预配操作继续进行，没有任何超时限制。 默认值为 false。 对于大型应用程序包，建议将值设置为 true。
+    syntax:
+      content: 'async: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    name: ProvisionApplicationTypeDescriptionBase
+    spec.typeScript:
+      - name: ProvisionApplicationTypeDescriptionBase
+        fullName: ProvisionApplicationTypeDescriptionBase
+        uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase

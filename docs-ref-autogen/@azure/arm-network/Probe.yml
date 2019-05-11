@@ -1,0 +1,196 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-network.Probe'
+    name: Probe
+    fullName: Probe
+    children:
+      - '@azure/arm-network.Probe.etag'
+      - '@azure/arm-network.Probe.id'
+      - '@azure/arm-network.Probe.intervalInSeconds'
+      - '@azure/arm-network.Probe.loadBalancingRules'
+      - '@azure/arm-network.Probe.name'
+      - '@azure/arm-network.Probe.numberOfProbes'
+      - '@azure/arm-network.Probe.port'
+      - '@azure/arm-network.Probe.protocol'
+      - '@azure/arm-network.Probe.provisioningState'
+      - '@azure/arm-network.Probe.requestPath'
+    langs:
+      - typeScript
+    type: interface
+    summary: 负载均衡器探测。
+    extends:
+      name: '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.Probe.etag'
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一个唯一只读的字符串，每当更新资源更改。
+    optional: true
+    syntax:
+      content: 'etag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.Probe.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 资源 ID。
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.Probe.intervalInSeconds'
+    name: intervalInSeconds
+    fullName: intervalInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      探测终结点的运行状况的间隔（以秒为单位）。
+      通常，该间隔略小于所分配超时期限（以秒为单位）的一半，以便在退出轮转前执行两次完整的探测。 默认值为 15，最小值为 5。
+    optional: true
+    syntax:
+      content: 'intervalInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.Probe.loadBalancingRules'
+    name: loadBalancingRules
+    fullName: loadBalancingRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      使用此探测的负载均衡器规则。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'loadBalancingRules?: SubResource[]'
+      return:
+        type:
+          - '@azure/arm-network.SubResource[]'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.Probe.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 获取资源组中是唯一的资源的名称。 此名称可用于访问资源。
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.Probe.numberOfProbes'
+    name: numberOfProbes
+    fullName: numberOfProbes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果没有响应，就会停止从正被传递到该终结点的更多流量，数探测的位置。 此值允许要执行的终结点脱离轮换，速度更快或慢于在 Azure 中使用的典型时间。
+    optional: true
+    syntax:
+      content: 'numberOfProbes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.Probe.port'
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用于传达探测的端口。 可能的值介于 1 和 65535（含）之间。
+    syntax:
+      content: 'port: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.Probe.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 终结点的协议。 可能的值包括：Http、 Tcp 或者 Https。 如果指定 Tcp，则接收到的 ACK 才表示探测成功。 如果指定 Http 或 Https，则从一个 200 OK 响应指定 URI 是必需的探测成功。 可能的值包括：Http，Tcp，Https
+    syntax:
+      content: 'protocol: ProbeProtocol'
+      return:
+        type:
+          - '@azure/arm-network.ProbeProtocol'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.Probe.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 获取公共 IP 资源的预配状态。 可能的值包括：更新、 删除和失败。
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.Probe.requestPath'
+    name: requestPath
+    fullName: requestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用于从 VM 请求运行状况的 URI。 如果协议设置为 http，则所需路径。 否则，不允许使用该属性。 没有默认值。
+    optional: true
+    syntax:
+      content: 'requestPath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+references:
+  - uid: '@azure/arm-network.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.SubResource[]'
+    name: 'SubResource[]'
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-network.ProbeProtocol'
+    name: ProbeProtocol
+    spec.typeScript:
+      - name: ProbeProtocol
+        fullName: ProbeProtocol
+        uid: '@azure/arm-network.ProbeProtocol'

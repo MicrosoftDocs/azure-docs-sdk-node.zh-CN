@@ -1,0 +1,19 @@
+### YamlMime:UniversalReference
+items:
+  - uid: msal.FrameworkOptions
+    name: FrameworkOptions
+    fullName: FrameworkOptions
+    children: []
+    langs:
+      - typeScript
+    type: type alias
+    summary: |+
+      应用程序/框架特定环境支持 isAngular-标志设置来确定它是否 Angular 框架。 用于广播的令牌。 TODO： 梳理从 core 此依赖项。
+      unprotectedResources-数组的 URI 的未受保护资源。 MSAL 将附加到具有这些 URI 的传出请求的令牌。 默认值为 null。
+      protectedResourceMap-这映射的 MSAL 用于自动附加在 web API 调用中的访问令牌的作用域的资源。
+      单个访问令牌获取的资源。 以便您可以按如下所示映射特定的资源路径: {"https://graph.microsoft.com/v1.0/me"，"user.read"}，或作为资源的应用 URL: {"https://graph.microsoft.com/"，["user.read"，"mail.send"]}。
+      这是必需的 CORS 调用。
+
+    syntax:
+      content: 'type FrameworkOptions = { isAngular:boolean, protectedResourceMap:Map<string>, unprotectedResources:Array<string> }'
+    package: msal

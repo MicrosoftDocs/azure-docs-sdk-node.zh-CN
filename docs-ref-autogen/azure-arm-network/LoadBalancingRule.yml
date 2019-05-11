@@ -1,0 +1,262 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-network.LoadBalancingRule
+    name: LoadBalancingRule
+    fullName: LoadBalancingRule
+    children:
+      - azure-arm-network.LoadBalancingRule.backendAddressPool
+      - azure-arm-network.LoadBalancingRule.backendPort
+      - azure-arm-network.LoadBalancingRule.disableOutboundSnat
+      - azure-arm-network.LoadBalancingRule.enableFloatingIP
+      - azure-arm-network.LoadBalancingRule.enableTcpReset
+      - azure-arm-network.LoadBalancingRule.etag
+      - azure-arm-network.LoadBalancingRule.frontendIPConfiguration
+      - azure-arm-network.LoadBalancingRule.frontendPort
+      - azure-arm-network.LoadBalancingRule.id
+      - azure-arm-network.LoadBalancingRule.idleTimeoutInMinutes
+      - azure-arm-network.LoadBalancingRule.loadDistribution
+      - azure-arm-network.LoadBalancingRule.name
+      - azure-arm-network.LoadBalancingRule.probe
+      - azure-arm-network.LoadBalancingRule.protocol
+      - azure-arm-network.LoadBalancingRule.provisioningState
+    langs:
+      - typeScript
+    type: interface
+    summary: 负载均衡的负载均衡器规则。
+    extends:
+      name: azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.backendAddressPool
+    name: backendAddressPool
+    fullName: backendAddressPool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 对 Dip 的池的引用。 入站的流量随机是负载平衡 Ip 的后端 Ip 中。
+    optional: true
+    syntax:
+      content: 'backendAddressPool?: SubResource'
+      return:
+        type:
+          - azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.backendPort
+    name: backendPort
+    fullName: backendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      用于在终结点上内部连接的端口。 可接受的值是介于 0 和
+      65535. 请注意，值为 0 会启用"Any 端口"
+    optional: true
+    syntax:
+      content: 'backendPort?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.disableOutboundSnat
+    name: disableOutboundSnat
+    fullName: disableOutboundSnat
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在要使用的前端负载均衡规则中指定的 publicIP 地址的后端池配置的 vm 的 SNAT。
+    optional: true
+    syntax:
+      content: 'disableOutboundSnat?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.enableFloatingIP
+    name: enableFloatingIP
+    fullName: enableFloatingIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 配置用于配置 SQL AlwaysOn 可用性组所需的浮动 IP 容量的虚拟机的终结点。 在 SQL server 中使用 SQL AlwaysOn 可用性组时，此设置是必需的。 在创建终结点后，不能更改此设置。
+    optional: true
+    syntax:
+      content: 'enableFloatingIP?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.enableTcpReset
+    name: enableTcpReset
+    fullName: enableTcpReset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      接收双向 TCP 重置上 TCP 流空闲超时或意外的连接终止。
+      协议设置为 TCP 后才使用此元素。
+    optional: true
+    syntax:
+      content: 'enableTcpReset?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.etag
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一个唯一只读的字符串，每当更新资源更改。
+    optional: true
+    syntax:
+      content: 'etag?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.frontendIPConfiguration
+    name: frontendIPConfiguration
+    fullName: frontendIPConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 对前端 IP 地址的引用。
+    optional: true
+    syntax:
+      content: 'frontendIPConfiguration?: SubResource'
+      return:
+        type:
+          - azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.frontendPort
+    name: frontendPort
+    fullName: frontendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 外部终结点的端口。 对于每个规则的端口号必须是在负载均衡器中是唯一的。 可接受的值是介于 0 和 65534 之间。 请注意，值为 0 会启用"Any 端口"
+    syntax:
+      content: 'frontendPort: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 资源 ID。
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.idleTimeoutInMinutes
+    name: idleTimeoutInMinutes
+    fullName: idleTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: TCP 空闲连接超时。 值可以设置介于 4 到 30 分钟之间。 默认值为 4 分钟。 协议设置为 TCP 后才使用此元素。
+    optional: true
+    syntax:
+      content: 'idleTimeoutInMinutes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.loadDistribution
+    name: loadDistribution
+    fullName: loadDistribution
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此规则在负载分发策略。 可能的值为 Default、 SourceIP 和 SourceIPProtocol。 可能的值包括：' Default'，'SourceIP'，'SourceIPProtocol
+    optional: true
+    syntax:
+      content: 'loadDistribution?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在资源组中是唯一的资源的名称。 此名称可用于访问资源。
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.probe
+    name: probe
+    fullName: probe
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 使用负载均衡规则的负载均衡器探测的引用。
+    optional: true
+    syntax:
+      content: 'probe?: SubResource'
+      return:
+        type:
+          - azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.protocol
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 对负载均衡规则使用的传输协议的引用。 可能的值包括：Udp、 Tcp，全部
+    syntax:
+      content: 'protocol: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 获取 PublicIP 资源的预配状态。 可能的值包括：更新、 删除和失败。
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+references:
+  - uid: azure-arm-network.SubResource
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-network.SubResource

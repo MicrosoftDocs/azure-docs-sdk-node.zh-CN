@@ -1,0 +1,180 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoLayer
+    name: VideoLayer
+    fullName: VideoLayer
+    children:
+      - azure-arm-mediaservices.VideoLayer.adaptiveBFrame
+      - azure-arm-mediaservices.VideoLayer.bFrames
+      - azure-arm-mediaservices.VideoLayer.bitrate
+      - azure-arm-mediaservices.VideoLayer.frameRate
+      - azure-arm-mediaservices.VideoLayer.height
+      - azure-arm-mediaservices.VideoLayer.label
+      - azure-arm-mediaservices.VideoLayer.maxBitrate
+      - azure-arm-mediaservices.VideoLayer.odatatype
+      - azure-arm-mediaservices.VideoLayer.slices
+      - azure-arm-mediaservices.VideoLayer.width
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述输入的视频编码到所需的输出比特率层时要使用的设置。
+    extends:
+      name: azure-arm-mediaservices.Layer
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.adaptiveBFrame
+    name: adaptiveBFrame
+    fullName: adaptiveBFrame
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 是否自适应的 B 帧是这一层进行编码时使用。 如果未指定，编码器会将其打开视频配置文件时允许其使用。
+    optional: true
+    syntax:
+      content: 'adaptiveBFrame?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.bFrames
+    name: bFrames
+    fullName: bFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 这一层进行编码时要使用的 B 帧数。  如果未指定，编码器将选择适当数量的视频配置文件和级别。
+    optional: true
+    syntax:
+      content: 'bFrames?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.bitrate
+    name: bitrate
+    fullName: bitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 比特 / 秒的输入的视频编码为生成这一层时平均比特率。 此为必填字段。
+    syntax:
+      content: 'bitrate: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.frameRate
+    name: frameRate
+    fullName: frameRate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 帧速率 （以每秒帧数） 要对这一层进行编码。 值可以是形式的 M/N 其中 M 和 N 为整数 (例如，30000/1001)，或在号码 （例如，30 或为 29.97） 的形式。 编码器强制对基于配置文件和级别允许的帧速率进行限制。 如果未指定，则编码器将与输入视频使用相同的帧速率。
+    optional: true
+    syntax:
+      content: 'frameRate?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.height
+    name: height
+    fullName: height
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此层的输出视频的高度。 值可以是绝对值 （以像素为单位） 或相对 （以百分比计）。 例如 50%表示输出视频作为输入的高度的一半的任意多个像素。
+    optional: true
+    syntax:
+      content: 'height?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此层，可用于在多路复用不同的视频和音频层，或命名输出文件中的字母数字的标签。
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.maxBitrate
+    name: maxBitrate
+    fullName: maxBitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      最大比特率 （以位 / 秒），此时应假定 VBV 缓冲区重填。
+      如果未指定，默认为与比特率相同的值。
+    optional: true
+    syntax:
+      content: 'maxBitrate?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.slices
+    name: slices
+    fullName: slices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 这一层进行编码时要使用的切片数。 如果未指定，默认值为零，这意味着为每个帧，该编码器将使用一个切片。
+    optional: true
+    syntax:
+      content: 'slices?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.width
+    name: width
+    fullName: width
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此层的输出视频的宽度。 值可以是绝对值 （以像素为单位） 或相对 （以百分比计）。 例如 50%表示输出视频作为输入的宽度的一半的任意多个像素。
+    optional: true
+    syntax:
+      content: 'width?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Layer
+    name: Layer
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-arm-mediaservices.Layer

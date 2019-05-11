@@ -1,0 +1,20 @@
+### YamlMime:UniversalReference
+items:
+  - uid: msal.AuthOptions
+    name: AuthOptions
+    fullName: AuthOptions
+    children: []
+    langs:
+      - typeScript
+    type: type alias
+    summary: |2+
+       身份验证选项 clientId-客户端 ID 分配给您的应用程序由 Azure Active Directory 颁发机构的开发人员可以选择发送的颁发机构，默认值为""(TODO:跟进 Pm-颁发机构讨论之前直到此注释是一个占位符） validateAuthority-用于启用/禁用颁发机构验证。 如果设置为 true （默认值），MSAL 将比较与已知表示格式正确的颁发机构的 Url 模板的应用程序的颁发机构。
+      颁发机构获取在运行时，若要防止 MSAL 显示来自恶意页的身份验证提示时，它是非常有用。
+      重定向 Uri 的重定向 URI 的应用程序，这应该与应用程序注册门户中的值相同。
+      默认为 `window.location.href`。
+      postLogoutRedirectUri-用于将用户注销后转到此位置。 默认为 `window.location.href`。
+      状态-用于发送身份验证请求 navigateToLoginRequestUrl-用于关闭默认导航后登录名启动页的状态参数。 默认值为 true。 这仅用于重定向流。
+
+    syntax:
+      content: 'type AuthOptions = { authority:string, clientId:string, navigateToLoginRequestUrl:boolean, postLogoutRedirectUri:Object, redirectUri:Object, validateAuthority:boolean }'
+    package: msal

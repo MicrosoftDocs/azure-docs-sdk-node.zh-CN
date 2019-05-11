@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-storage.LeaseContainerRequest
+    name: LeaseContainerRequest
+    fullName: LeaseContainerRequest
+    children:
+      - azure-arm-storage.LeaseContainerRequest.action
+      - azure-arm-storage.LeaseContainerRequest.breakPeriod
+      - azure-arm-storage.LeaseContainerRequest.leaseDuration
+      - azure-arm-storage.LeaseContainerRequest.leaseId
+      - azure-arm-storage.LeaseContainerRequest.proposedLeaseId
+    langs:
+      - typeScript
+    type: interface
+    summary: 租用容器请求架构。
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.action
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的租约操作。 可以是一个可用的操作。 可能的值包括：获取、 续订、 更改、 发行、 Break
+    syntax:
+      content: 'action: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.breakPeriod
+    name: breakPeriod
+    fullName: breakPeriod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可选。 对于中断操作，建议的持续时间租约在中断，以秒为单位，介于 0 和 60 之间之前应继续。
+    optional: true
+    syntax:
+      content: 'breakPeriod?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.leaseDuration
+    name: leaseDuration
+    fullName: leaseDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 对于获取必需。 指定租约的持续时间以秒为单位，则为负一 (-1) 表示永不过期的租约。
+    optional: true
+    syntax:
+      content: 'leaseDuration?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.leaseId
+    name: leaseId
+    fullName: leaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 标识该租约。 可以指定任何有效的 GUID 字符串格式。
+    optional: true
+    syntax:
+      content: 'leaseId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.LeaseContainerRequest.proposedLeaseId
+    name: proposedLeaseId
+    fullName: proposedLeaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可选的采集，所需的更改。 建议的租约 ID，采用 GUID 字符串格式。
+    optional: true
+    syntax:
+      content: 'proposedLeaseId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage

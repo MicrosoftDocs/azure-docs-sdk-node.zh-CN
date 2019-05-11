@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset
+    name: VideoAnalyzerPreset
+    fullName: VideoAnalyzerPreset
+    children:
+      - azure-arm-mediaservices.VideoAnalyzerPreset.audioLanguage
+      - azure-arm-mediaservices.VideoAnalyzerPreset.insightsToExtract
+      - azure-arm-mediaservices.VideoAnalyzerPreset.odatatype
+    langs:
+      - typeScript
+    type: interface
+    summary: 视频分析器预设，音频和视频中，从中提取见解 （丰富元数据） 并输出 JSON 格式的文件。
+    extends:
+      name: azure-arm-mediaservices.AudioAnalyzerPreset
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.audioLanguage
+    name: audioLanguage
+    fullName: audioLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '使用 BCP-47 格式的语言标记-地区输入中的音频有效负载的语言 (例如: EN-US)。  支持的语言的列表是英语 （EN-US 和 EN-GB）、 西班牙语 （ES-ES 和 ES-MX）、 法语 (FR-FR)、 意大利语 (IT-IT)、 日语 (JA-JP)、 葡萄牙语 (PT-BR)、 中文 (ZH-CN)、 德语 (DE-DE)、 阿拉伯语 （AR-EG 和 ar SY）、 俄语 (RU-RU)，(大家好-IN)、 印地语和韩语 (KO-KR)。 如果您知道你的内容的语言，建议你指定它。 如果未指定语言或将语言设置为 null，自动语言检测将选择检测到的第一种语言并使用所选语言处理整个文件。 此语言检测功能目前支持英语、 中文、 法语、 德语、 意大利语、 日语、 西班牙语、 俄语和葡萄牙语。 它目前不支持在检测到第一种语言后在各语言之间进行动态切换。 自动检测最适用于包含明确可识别语音的音频录制。 如果自动检测无法找到的语言，脚本会回退为 EN-US。"'
+    optional: true
+    syntax:
+      content: 'audioLanguage?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.insightsToExtract
+    name: insightsToExtract
+    fullName: insightsToExtract
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要提取的见解的类型。 如果未设置然后根据此类型将所选的内容。  如果仅则仅有音频 insights 提取，如果是视频仅音频内容。 可能的值包括：AudioInsightsOnly'，'VideoInsightsOnly'，'AllInsights
+    optional: true
+    syntax:
+      content: 'insightsToExtract?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.AudioAnalyzerPreset
+    name: AudioAnalyzerPreset
+    spec.typeScript:
+      - name: AudioAnalyzerPreset
+        fullName: AudioAnalyzerPreset
+        uid: azure-arm-mediaservices.AudioAnalyzerPreset

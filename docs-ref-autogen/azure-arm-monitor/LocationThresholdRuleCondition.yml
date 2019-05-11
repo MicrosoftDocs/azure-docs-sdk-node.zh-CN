@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition
+    name: LocationThresholdRuleCondition
+    fullName: LocationThresholdRuleCondition
+    children:
+      - azure-arm-monitor.LocationThresholdRuleCondition.dataSource
+      - azure-arm-monitor.LocationThresholdRuleCondition.failedLocationCount
+      - azure-arm-monitor.LocationThresholdRuleCondition.odatatype
+      - azure-arm-monitor.LocationThresholdRuleCondition.windowSize
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="8b647-101">基于一定数量的位置失败的规则条件。</span><span class="sxs-lookup"><span data-stu-id="8b647-101">A rule condition based on a certain number of locations failing.</span></span>
+    extends:
+      name: azure-arm-monitor.RuleCondition
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.dataSource
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8b647-102">从该规则将收集其数据的资源。</span><span class="sxs-lookup"><span data-stu-id="8b647-102">the resource from which the rule collects its data.</span></span> <span data-ttu-id="8b647-103">此类型的数据源将始终是类型 RuleMetricDataSource。</span><span class="sxs-lookup"><span data-stu-id="8b647-103">For this type dataSource will always be of type RuleMetricDataSource.</span></span>
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSource'
+      return:
+        type:
+          - azure-arm-monitor.RuleDataSource
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.failedLocationCount
+    name: failedLocationCount
+    fullName: failedLocationCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8b647-104">必定无法激活警报的位置数。</span><span class="sxs-lookup"><span data-stu-id="8b647-104">the number of locations that must fail to activate the alert.</span></span>
+    syntax:
+      content: 'failedLocationCount: number'
+      return:
+        type:
+          - number
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8b647-105">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="8b647-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.windowSize
+    name: windowSize
+    fullName: windowSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8b647-106">用于监视警报活动基于阈值的时间 （以 ISO 8601 持续时间格式） 的段。</span><span class="sxs-lookup"><span data-stu-id="8b647-106">the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.</span></span> <span data-ttu-id="8b647-107">如果指定，则它必须介于 5 分钟到 1 天之间。</span><span class="sxs-lookup"><span data-stu-id="8b647-107">If specified then it must be between 5 minutes and 1 day.</span></span>
+    optional: true
+    syntax:
+      content: 'windowSize?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleCondition
+    name: RuleCondition
+    spec.typeScript:
+      - name: RuleCondition
+        fullName: RuleCondition
+        uid: azure-arm-monitor.RuleCondition
+  - uid: azure-arm-monitor.RuleDataSource
+    name: RuleDataSource
+    spec.typeScript:
+      - name: RuleDataSource
+        fullName: RuleDataSource
+        uid: azure-arm-monitor.RuleDataSource

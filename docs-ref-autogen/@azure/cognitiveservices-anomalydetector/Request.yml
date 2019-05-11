@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-anomalydetector.Request'
+    name: Request
+    fullName: Request
+    children:
+      - '@azure/cognitiveservices-anomalydetector.Request.customInterval'
+      - '@azure/cognitiveservices-anomalydetector.Request.granularity'
+      - '@azure/cognitiveservices-anomalydetector.Request.maxAnomalyRatio'
+      - '@azure/cognitiveservices-anomalydetector.Request.period'
+      - '@azure/cognitiveservices-anomalydetector.Request.sensitivity'
+      - '@azure/cognitiveservices-anomalydetector.Request.series'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="c5b59-101">表示请求的接口。</span><span class="sxs-lookup"><span data-stu-id="c5b59-101">An interface representing Request.</span></span>
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.customInterval'
+    name: customInterval
+    fullName: customInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c5b59-102">自定义间隔用于设置非标准时间间隔，例如，如果序列为 5 分钟，请求可以将为 {"粒度":"精密地"、"customInterval": 5}。</span><span class="sxs-lookup"><span data-stu-id="c5b59-102">Custom Interval is used to set non-standard time interval, for example, if the series is 5 minutes, request can be set as {"granularity":"minutely", "customInterval":5}.</span></span>'
+    optional: true
+    syntax:
+      content: 'customInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.granularity'
+    name: granularity
+    fullName: granularity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c5b59-103">只能是一个每年，每月、 每周、 每日、 每小时或精密地。</span><span class="sxs-lookup"><span data-stu-id="c5b59-103">Can only be one of yearly, monthly, weekly, daily, hourly or minutely.</span></span> <span data-ttu-id="c5b59-104">粒度用于验证输入的序列是否有效。</span><span class="sxs-lookup"><span data-stu-id="c5b59-104">Granularity is used for verify whether input series is valid.</span></span> <span data-ttu-id="c5b59-105">可能的值包括: 每年、 每月、 每周、 每日、 每小时、 精密地</span><span class="sxs-lookup"><span data-stu-id="c5b59-105">Possible values include: ''yearly'', ''monthly'', ''weekly'', ''daily'', ''hourly'', ''minutely''</span></span>'
+    syntax:
+      content: 'granularity: Granularity'
+      return:
+        type:
+          - '@azure/cognitiveservices-anomalydetector.Granularity'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.maxAnomalyRatio'
+    name: maxAnomalyRatio
+    fullName: maxAnomalyRatio
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c5b59-106">可选参数，高级模型参数，在时序中的最大异常比率。</span><span class="sxs-lookup"><span data-stu-id="c5b59-106">Optional argument, advanced model parameter, max anomaly ratio in a time series.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxAnomalyRatio?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.period'
+    name: period
+    fullName: period
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c5b59-107">可选参数时，时间系列的定期值。</span><span class="sxs-lookup"><span data-stu-id="c5b59-107">Optional argument, periodic value of a time series.</span></span> <span data-ttu-id="c5b59-108">如果值为 null 或不存在，则 API 将自动确定周期。</span><span class="sxs-lookup"><span data-stu-id="c5b59-108">If the value is null or does not present, the API will determine the period automatically.</span></span>'
+    optional: true
+    syntax:
+      content: 'period?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.sensitivity'
+    name: sensitivity
+    fullName: sensitivity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c5b59-109">可选参数，高级模型参数，介于 0-99 之间的值是越低，则较大边距值将为这意味着将接受较少的异常。</span><span class="sxs-lookup"><span data-stu-id="c5b59-109">Optional argument, advanced model parameter, between 0-99, the lower the value is, the larger the margin value will be which means less anomalies will be accepted.</span></span>'
+    optional: true
+    syntax:
+      content: 'sensitivity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.Request.series'
+    name: series
+    fullName: series
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c5b59-110">时间序列数据点。</span><span class="sxs-lookup"><span data-stu-id="c5b59-110">Time series data points.</span></span> <span data-ttu-id="c5b59-111">点应按时间戳按升序排列，以匹配的异常情况检测结果进行排序。</span><span class="sxs-lookup"><span data-stu-id="c5b59-111">Points should be sorted by timestamp in ascending order to match the anomaly detection result.</span></span> <span data-ttu-id="c5b59-112">如果数据没有正确排序或重复的时间戳，该 API 将无法工作。</span><span class="sxs-lookup"><span data-stu-id="c5b59-112">If the data is not sorted correctly or there is duplicated timestamp, the API will not work.</span></span> <span data-ttu-id="c5b59-113">在这种情况下，将返回一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="c5b59-113">In such case, an error message will be returned.</span></span>'
+    syntax:
+      content: 'series: Point[]'
+      return:
+        type:
+          - '@azure/cognitiveservices-anomalydetector.Point[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+references:
+  - uid: '@azure/cognitiveservices-anomalydetector.Granularity'
+    name: Granularity
+    spec.typeScript:
+      - name: Granularity
+        fullName: Granularity
+        uid: '@azure/cognitiveservices-anomalydetector.Granularity'
+  - uid: '@azure/cognitiveservices-anomalydetector.Point[]'
+    name: 'Point[]'
+    spec.typeScript:
+      - name: Point
+        fullName: Point
+        uid: '@azure/cognitiveservices-anomalydetector.Point'
+      - name: '[]'
+        fullName: '[]'

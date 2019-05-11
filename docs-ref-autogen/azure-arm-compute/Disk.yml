@@ -1,0 +1,324 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-compute.Disk
+    name: Disk
+    fullName: Disk
+    children:
+      - azure-arm-compute.Disk.creationData
+      - azure-arm-compute.Disk.diskIOPSReadWrite
+      - azure-arm-compute.Disk.diskMBpsReadWrite
+      - azure-arm-compute.Disk.diskSizeGB
+      - azure-arm-compute.Disk.diskState
+      - azure-arm-compute.Disk.encryptionSettingsCollection
+      - azure-arm-compute.Disk.hyperVGeneration
+      - azure-arm-compute.Disk.id
+      - azure-arm-compute.Disk.location
+      - azure-arm-compute.Disk.managedBy
+      - azure-arm-compute.Disk.name
+      - azure-arm-compute.Disk.osType
+      - azure-arm-compute.Disk.provisioningState
+      - azure-arm-compute.Disk.sku
+      - azure-arm-compute.Disk.tags
+      - azure-arm-compute.Disk.timeCreated
+      - azure-arm-compute.Disk.type
+      - azure-arm-compute.Disk.zones
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="bccaf-101">磁盘资源。</span><span class="sxs-lookup"><span data-stu-id="bccaf-101">Disk resource.</span></span>
+    extends:
+      name: azure-arm-compute.Resource
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.creationData
+    name: creationData
+    fullName: creationData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bccaf-102">磁盘的源信息。</span><span class="sxs-lookup"><span data-stu-id="bccaf-102">Disk source information.</span></span> <span data-ttu-id="bccaf-103">创建磁盘后，无法更改 CreationData 信息。</span><span class="sxs-lookup"><span data-stu-id="bccaf-103">CreationData information cannot be changed after the disk has been created.</span></span>
+    syntax:
+      content: 'creationData: CreationData'
+      return:
+        type:
+          - azure-arm-compute.CreationData
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.diskIOPSReadWrite
+    name: diskIOPSReadWrite
+    fullName: diskIOPSReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bccaf-104">此磁盘; 允许的 IOPS 数仅可 UltraSSD 磁盘的设置。</span><span class="sxs-lookup"><span data-stu-id="bccaf-104">The number of IOPS allowed for this disk; only settable for UltraSSD disks.</span></span> <span data-ttu-id="bccaf-105">一个操作可以 4k 和 256 kb 之间传输。</span><span class="sxs-lookup"><span data-stu-id="bccaf-105">One operation can transfer between 4k and 256k bytes.</span></span>
+    optional: true
+    syntax:
+      content: 'diskIOPSReadWrite?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.diskMBpsReadWrite
+    name: diskMBpsReadWrite
+    fullName: diskMBpsReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="bccaf-106">允许此磁盘; 带宽。仅可 UltraSSD 磁盘的设置。</span><span class="sxs-lookup"><span data-stu-id="bccaf-106">The bandwidth allowed for this disk; only settable for UltraSSD disks.</span></span> <span data-ttu-id="bccaf-107">MBps 表示数以百万计的每秒字节数-MB 此处使用的 ISO 表示法，10 的幂。</span><span class="sxs-lookup"><span data-stu-id="bccaf-107">MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskMBpsReadWrite?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.diskSizeGB
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="bccaf-108">如果 creationData.createOption 为空，此字段是必需的它指示要创建的 VHD 的大小。</span><span class="sxs-lookup"><span data-stu-id="bccaf-108">If creationData.createOption is Empty, this field is mandatory and it indicates the size of the VHD to create.</span></span> <span data-ttu-id="bccaf-109">如果此字段为存在用于更新或创建与其他选项，则指示调整大小。</span><span class="sxs-lookup"><span data-stu-id="bccaf-109">If this field is present for updates or creation with other options, it indicates a resize.</span></span> <span data-ttu-id="bccaf-110">如果磁盘未附加到正在运行的 VM，且只能增加磁盘的大小，才允许调整大小。</span><span class="sxs-lookup"><span data-stu-id="bccaf-110">Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk''s size.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.diskState
+    name: diskState
+    fullName: diskState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="bccaf-111">磁盘的状态。</span><span class="sxs-lookup"><span data-stu-id="bccaf-111">The state of the disk.</span></span> <span data-ttu-id="bccaf-112">可能的值包括：''Unattached'', ''Attached'', ''Reserved'', ''ActiveSAS'', ''ReadyToUpload'', ''ActiveUpload''</span><span class="sxs-lookup"><span data-stu-id="bccaf-112">Possible values include: ''Unattached'', ''Attached'', ''Reserved'', ''ActiveSAS'', ''ReadyToUpload'', ''ActiveUpload''</span></span>'
+    optional: true
+    syntax:
+      content: 'diskState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.encryptionSettingsCollection
+    name: encryptionSettingsCollection
+    fullName: encryptionSettingsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="bccaf-113">使用 Azure 磁盘加密的加密设置集合可以包含每个磁盘或快照的多个加密设置。</span><span class="sxs-lookup"><span data-stu-id="bccaf-113">Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.</span></span>'
+    optional: true
+    syntax:
+      content: 'encryptionSettingsCollection?: EncryptionSettingsCollection'
+      return:
+        type:
+          - azure-arm-compute.EncryptionSettingsCollection
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.hyperVGeneration
+    name: hyperVGeneration
+    fullName: hyperVGeneration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="bccaf-114">虚拟机的虚拟机监控程序生成。</span><span class="sxs-lookup"><span data-stu-id="bccaf-114">The hypervisor generation of the Virtual Machine.</span></span> <span data-ttu-id="bccaf-115">适用于仅限 OS 磁盘。</span><span class="sxs-lookup"><span data-stu-id="bccaf-115">Applicable to OS disks only.</span></span> <span data-ttu-id="bccaf-116">可能的值包括：V1，V2</span><span class="sxs-lookup"><span data-stu-id="bccaf-116">Possible values include: ''V1'', ''V2''</span></span>'
+    optional: true
+    syntax:
+      content: 'hyperVGeneration?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bccaf-117">资源 ID</span><span class="sxs-lookup"><span data-stu-id="bccaf-117">Resource Id</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bccaf-118">资源位置</span><span class="sxs-lookup"><span data-stu-id="bccaf-118">Resource location</span></span>
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.managedBy
+    name: managedBy
+    fullName: managedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bccaf-119">包含有附加的磁盘的 VM 的 ID 的相对 URI。</span><span class="sxs-lookup"><span data-stu-id="bccaf-119">A relative URI containing the ID of the VM that has the disk attached.</span></span>
+    optional: true
+    syntax:
+      content: 'managedBy?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bccaf-120">资源名称</span><span class="sxs-lookup"><span data-stu-id="bccaf-120">Resource name</span></span>
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.osType
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="bccaf-121">操作系统类型。</span><span class="sxs-lookup"><span data-stu-id="bccaf-121">The Operating System type.</span></span> <span data-ttu-id="bccaf-122">可能的值包括：''Windows'', ''Linux''</span><span class="sxs-lookup"><span data-stu-id="bccaf-122">Possible values include: ''Windows'', ''Linux''</span></span>'
+    optional: true
+    syntax:
+      content: 'osType?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bccaf-123">磁盘预配状态。</span><span class="sxs-lookup"><span data-stu-id="bccaf-123">The disk provisioning state.</span></span>
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.sku
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sku?: DiskSku'
+      return:
+        type:
+          - azure-arm-compute.DiskSku
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bccaf-124">资源标记</span><span class="sxs-lookup"><span data-stu-id="bccaf-124">Resource tags</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.timeCreated
+    name: timeCreated
+    fullName: timeCreated
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bccaf-125">创建磁盘时的时间。</span><span class="sxs-lookup"><span data-stu-id="bccaf-125">The time when the disk was created.</span></span>
+    optional: true
+    syntax:
+      content: 'timeCreated?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bccaf-126">资源类型</span><span class="sxs-lookup"><span data-stu-id="bccaf-126">Resource type</span></span>
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.zones
+    name: zones
+    fullName: zones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bccaf-127">磁盘的逻辑区域列表。</span><span class="sxs-lookup"><span data-stu-id="bccaf-127">The Logical zone list for Disk.</span></span>
+    optional: true
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-compute
+references:
+  - uid: azure-arm-compute.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-compute.Resource
+  - uid: azure-arm-compute.CreationData
+    name: CreationData
+    spec.typeScript:
+      - name: CreationData
+        fullName: CreationData
+        uid: azure-arm-compute.CreationData
+  - uid: azure-arm-compute.EncryptionSettingsCollection
+    name: EncryptionSettingsCollection
+    spec.typeScript:
+      - name: EncryptionSettingsCollection
+        fullName: EncryptionSettingsCollection
+        uid: azure-arm-compute.EncryptionSettingsCollection
+  - uid: azure-arm-compute.DiskSku
+    name: DiskSku
+    spec.typeScript:
+      - name: DiskSku
+        fullName: DiskSku
+        uid: azure-arm-compute.DiskSku

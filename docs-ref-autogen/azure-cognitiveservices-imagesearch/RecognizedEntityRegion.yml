@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion
+    name: RecognizedEntityRegion
+    fullName: RecognizedEntityRegion
+    children:
+      - azure-cognitiveservices-imagesearch.RecognizedEntityRegion.id
+      - azure-cognitiveservices-imagesearch.RecognizedEntityRegion.matchingEntities
+      - azure-cognitiveservices-imagesearch.RecognizedEntityRegion.readLink
+      - azure-cognitiveservices-imagesearch.RecognizedEntityRegion.region
+      - azure-cognitiveservices-imagesearch.RecognizedEntityRegion.webSearchUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="1a3aa-101">定义图像的实体所在的区域和可能与之匹配的实体的列表。</span><span class="sxs-lookup"><span data-stu-id="1a3aa-101">Defines a region of the image where an entity was found and a list of entities that might match it.</span></span>
+    extends:
+      name: azure-cognitiveservices-imagesearch.Response
+    package: azure-cognitiveservices-imagesearch
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="1a3aa-102">一个字符串标识符。</span><span class="sxs-lookup"><span data-stu-id="1a3aa-102">A String identifier.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-imagesearch
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion.matchingEntities
+    name: matchingEntities
+    fullName: matchingEntities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="1a3aa-103">必应认为的实体的列表匹配的区域中找到的实体。</span><span class="sxs-lookup"><span data-stu-id="1a3aa-103">A list of entities that Bing believes match the entity found in the region.</span></span> <span data-ttu-id="1a3aa-104">实体都将位于的置信度降序 （请参阅 RecognizedEntity matchConfidence 字段）。</span><span class="sxs-lookup"><span data-stu-id="1a3aa-104">The entities are in descending order of confidence (see the matchConfidence field of RecognizedEntity).</span></span>
+    optional: true
+    syntax:
+      content: 'matchingEntities?: RecognizedEntity[]'
+      return:
+        type:
+          - 'azure-cognitiveservices-imagesearch.RecognizedEntity[]'
+    package: azure-cognitiveservices-imagesearch
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion.readLink
+    name: readLink
+    fullName: readLink
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="1a3aa-105">返回此资源的 URL。</span><span class="sxs-lookup"><span data-stu-id="1a3aa-105">The URL that returns this resource.</span></span>
+    optional: true
+    syntax:
+      content: 'readLink?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-imagesearch
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion.region
+    name: region
+    fullName: region
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1a3aa-106">包含实体的映像的区域。</span><span class="sxs-lookup"><span data-stu-id="1a3aa-106">A region of the image that contains an entity.</span></span> <span data-ttu-id="1a3aa-107">矩形的值是相对于原始图像的宽和高的，其范围为 0.0 到 1.0。</span><span class="sxs-lookup"><span data-stu-id="1a3aa-107">The values of the rectangle are relative to the width and height of the original image and are in the range 0.0 through 1.0.</span></span> <span data-ttu-id="1a3aa-108">例如，如果图像是 300 x 200 和区域的顶部，左上的角是点 （10，20） 和底部，权限中的点 （290，150），则规范化的矩形是：左 = 0.0333333333333333，顶部 = 0.1，右 = 0.9666666666666667，底部 = 0.75。</span><span class="sxs-lookup"><span data-stu-id="1a3aa-108">For example, if the image is 300x200 and the region''s top, left corner is at point (10, 20) and the bottom, right corner is at point (290, 150), then the normalized rectangle is: Left = 0.0333333333333333, Top = 0.1, Right = 0.9666666666666667, Bottom = 0.75.</span></span> <span data-ttu-id="1a3aa-109">就人来说，该区域代表人的面孔。</span><span class="sxs-lookup"><span data-stu-id="1a3aa-109">For people, the region represents the person''s face.</span></span>'
+    optional: true
+    syntax:
+      content: 'region?: NormalizedRectangle'
+      return:
+        type:
+          - azure-cognitiveservices-imagesearch.NormalizedRectangle
+    package: azure-cognitiveservices-imagesearch
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion.webSearchUrl
+    name: webSearchUrl
+    fullName: webSearchUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="1a3aa-110">此项的 URL 到必应的搜索结果。</span><span class="sxs-lookup"><span data-stu-id="1a3aa-110">The URL To Bing's search result for this item.</span></span>
+    optional: true
+    syntax:
+      content: 'webSearchUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-imagesearch
+references:
+  - uid: azure-cognitiveservices-imagesearch.Response
+    name: Response
+    spec.typeScript:
+      - name: Response
+        fullName: Response
+        uid: azure-cognitiveservices-imagesearch.Response
+  - uid: 'azure-cognitiveservices-imagesearch.RecognizedEntity[]'
+    name: 'RecognizedEntity[]'
+    spec.typeScript:
+      - name: RecognizedEntity
+        fullName: RecognizedEntity
+        uid: azure-cognitiveservices-imagesearch.RecognizedEntity
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-cognitiveservices-imagesearch.NormalizedRectangle
+    name: NormalizedRectangle
+    spec.typeScript:
+      - name: NormalizedRectangle
+        fullName: NormalizedRectangle
+        uid: azure-cognitiveservices-imagesearch.NormalizedRectangle

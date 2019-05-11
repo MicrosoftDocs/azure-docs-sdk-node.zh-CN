@@ -1,0 +1,360 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-cdn.Endpoint
+    name: Endpoint
+    fullName: Endpoint
+    children:
+      - azure-arm-cdn.Endpoint.contentTypesToCompress
+      - azure-arm-cdn.Endpoint.deliveryPolicy
+      - azure-arm-cdn.Endpoint.geoFilters
+      - azure-arm-cdn.Endpoint.hostName
+      - azure-arm-cdn.Endpoint.id
+      - azure-arm-cdn.Endpoint.isCompressionEnabled
+      - azure-arm-cdn.Endpoint.isHttpAllowed
+      - azure-arm-cdn.Endpoint.isHttpsAllowed
+      - azure-arm-cdn.Endpoint.location
+      - azure-arm-cdn.Endpoint.name
+      - azure-arm-cdn.Endpoint.optimizationType
+      - azure-arm-cdn.Endpoint.originHostHeader
+      - azure-arm-cdn.Endpoint.originPath
+      - azure-arm-cdn.Endpoint.origins
+      - azure-arm-cdn.Endpoint.probePath
+      - azure-arm-cdn.Endpoint.provisioningState
+      - azure-arm-cdn.Endpoint.queryStringCachingBehavior
+      - azure-arm-cdn.Endpoint.resourceState
+      - azure-arm-cdn.Endpoint.tags
+      - azure-arm-cdn.Endpoint.type
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="5dc52-101">CDN 终结点是包含配置信息如源、 协议、 内容的缓存和交付行为的 CDN 配置文件中的实体。</span><span class="sxs-lookup"><span data-stu-id="5dc52-101">CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior.</span></span> <span data-ttu-id="5dc52-102">CDN 终结点使用的 URL 格式<endpointname>。 azureedge.net。</span><span class="sxs-lookup"><span data-stu-id="5dc52-102">The CDN endpoint uses the URL format <endpointname>.azureedge.net.</span></span>'
+    extends:
+      name: azure-arm-cdn.TrackedResource
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.contentTypesToCompress
+    name: contentTypesToCompress
+    fullName: contentTypesToCompress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-103">应用压缩的内容类型的列表。</span><span class="sxs-lookup"><span data-stu-id="5dc52-103">List of content types on which compression applies.</span></span> <span data-ttu-id="5dc52-104">值应为有效的 MIME 类型。</span><span class="sxs-lookup"><span data-stu-id="5dc52-104">The value should be a valid MIME type.</span></span>
+    optional: true
+    syntax:
+      content: 'contentTypesToCompress?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.deliveryPolicy
+    name: deliveryPolicy
+    fullName: deliveryPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-105">指定要用于终结点的传递规则的策略。</span><span class="sxs-lookup"><span data-stu-id="5dc52-105">A policy that specifies the delivery rules to be used for an endpoint.</span></span>
+    optional: true
+    syntax:
+      content: 'deliveryPolicy?: EndpointPropertiesUpdateParametersDeliveryPolicy'
+      return:
+        type:
+          - azure-arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.geoFilters
+    name: geoFilters
+    fullName: geoFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5dc52-106">定义在 CDN 终结点的用户的地理访问规则的列表。</span><span class="sxs-lookup"><span data-stu-id="5dc52-106">List of rules defining the user''s geo access within a CDN endpoint.</span></span> <span data-ttu-id="5dc52-107">每个地区筛选器定义指定的路径或内容，例如块 APAC 路径 /pictures/ 的访问规则</span><span class="sxs-lookup"><span data-stu-id="5dc52-107">Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/</span></span>'
+    optional: true
+    syntax:
+      content: 'geoFilters?: GeoFilter[]'
+      return:
+        type:
+          - 'azure-arm-cdn.GeoFilter[]'
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.hostName
+    name: hostName
+    fullName: hostName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5dc52-108">{EndpointName} 为结构化的终结点主机名。{DNSZone} 例如 contoso.azureedge.net</span><span class="sxs-lookup"><span data-stu-id="5dc52-108">The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net</span></span>'
+    optional: true
+    syntax:
+      content: 'hostName?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-109">资源 ID。</span><span class="sxs-lookup"><span data-stu-id="5dc52-109">Resource ID.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.isCompressionEnabled
+    name: isCompressionEnabled
+    fullName: isCompressionEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5dc52-110">指示是否在 CDN 上启用内容压缩。</span><span class="sxs-lookup"><span data-stu-id="5dc52-110">Indicates whether content compression is enabled on CDN.</span></span> <span data-ttu-id="5dc52-111">默认值为 false。</span><span class="sxs-lookup"><span data-stu-id="5dc52-111">Default value is false.</span></span> <span data-ttu-id="5dc52-112">如果启用了压缩，内容将作为提供压缩如果用户请求的压缩版本。</span><span class="sxs-lookup"><span data-stu-id="5dc52-112">If compression is enabled, content will be served as compressed if user requests for a compressed version.</span></span> <span data-ttu-id="5dc52-113">请求的内容小于 1 个字节或大于 1 MB 时，不会在 CDN 上压缩内容。</span><span class="sxs-lookup"><span data-stu-id="5dc52-113">Content won''t be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.</span></span>'
+    optional: true
+    syntax:
+      content: 'isCompressionEnabled?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.isHttpAllowed
+    name: isHttpAllowed
+    fullName: isHttpAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-114">指示是否在终结点上允许的 HTTP 流量。</span><span class="sxs-lookup"><span data-stu-id="5dc52-114">Indicates whether HTTP traffic is allowed on the endpoint.</span></span> <span data-ttu-id="5dc52-115">默认值为 true。</span><span class="sxs-lookup"><span data-stu-id="5dc52-115">Default value is true.</span></span> <span data-ttu-id="5dc52-116">必须允许至少一个协议 （HTTP 或 HTTPS）。</span><span class="sxs-lookup"><span data-stu-id="5dc52-116">At least one protocol (HTTP or HTTPS) must be allowed.</span></span>
+    optional: true
+    syntax:
+      content: 'isHttpAllowed?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.isHttpsAllowed
+    name: isHttpsAllowed
+    fullName: isHttpsAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-117">指示是否在终结点上允许 HTTPS 流量。</span><span class="sxs-lookup"><span data-stu-id="5dc52-117">Indicates whether HTTPS traffic is allowed on the endpoint.</span></span> <span data-ttu-id="5dc52-118">默认值为 true。</span><span class="sxs-lookup"><span data-stu-id="5dc52-118">Default value is true.</span></span> <span data-ttu-id="5dc52-119">必须允许至少一个协议 （HTTP 或 HTTPS）。</span><span class="sxs-lookup"><span data-stu-id="5dc52-119">At least one protocol (HTTP or HTTPS) must be allowed.</span></span>
+    optional: true
+    syntax:
+      content: 'isHttpsAllowed?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-120">资源位置。</span><span class="sxs-lookup"><span data-stu-id="5dc52-120">Resource location.</span></span>
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-121">资源名称。</span><span class="sxs-lookup"><span data-stu-id="5dc52-121">Resource name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.optimizationType
+    name: optimizationType
+    fullName: optimizationType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5dc52-122">指定哪些方案客户希望将此 CDN 终结点以优化，例如下载，媒体服务。</span><span class="sxs-lookup"><span data-stu-id="5dc52-122">Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services.</span></span> <span data-ttu-id="5dc52-123">使用此信息，CDN 可以应用方案驱动优化。</span><span class="sxs-lookup"><span data-stu-id="5dc52-123">With this information, CDN can apply scenario driven optimization.</span></span> <span data-ttu-id="5dc52-124">可能的值包括：GeneralWebDelivery、 GeneralMediaStreaming、 VideoOnDemandMediaStreaming、 LargeFileDownload、 DynamicSiteAcceleration</span><span class="sxs-lookup"><span data-stu-id="5dc52-124">Possible values include: ''GeneralWebDelivery'', ''GeneralMediaStreaming'', ''VideoOnDemandMediaStreaming'', ''LargeFileDownload'', ''DynamicSiteAcceleration''</span></span>'
+    optional: true
+    syntax:
+      content: 'optimizationType?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.originHostHeader
+    name: originHostHeader
+    fullName: originHostHeader
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5dc52-125">主机标头值发送到每个请求源。</span><span class="sxs-lookup"><span data-stu-id="5dc52-125">The host header value sent to the origin with each request.</span></span> <span data-ttu-id="5dc52-126">如果将此留空，则请求主机名将确定此值。</span><span class="sxs-lookup"><span data-stu-id="5dc52-126">If you leave this blank, the request hostname determines this value.</span></span> <span data-ttu-id="5dc52-127">Azure CDN 来源，例如 Web 应用、 Blob 存储和云服务要求与源主机名匹配默认情况下此主机标头值。</span><span class="sxs-lookup"><span data-stu-id="5dc52-127">Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.</span></span>'
+    optional: true
+    syntax:
+      content: 'originHostHeader?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.originPath
+    name: originPath
+    fullName: originPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5dc52-128">CDN 可用于从例如 contoso.cloudapp.net/originpath 检索内容的来源目录路径。</span><span class="sxs-lookup"><span data-stu-id="5dc52-128">A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.</span></span>'
+    optional: true
+    syntax:
+      content: 'originPath?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.origins
+    name: origins
+    fullName: origins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-129">正在通过 CDN 传送的内容的源。</span><span class="sxs-lookup"><span data-stu-id="5dc52-129">The source of the content being delivered via CDN.</span></span>
+    syntax:
+      content: 'origins: DeepCreatedOrigin[]'
+      return:
+        type:
+          - 'azure-arm-cdn.DeepCreatedOrigin[]'
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.probePath
+    name: probePath
+    fullName: probePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-130">这有助于加速交付动态内容和 cdn 计算最优路由的原点上托管的文件路径。</span><span class="sxs-lookup"><span data-stu-id="5dc52-130">Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN.</span></span> <span data-ttu-id="5dc52-131">这是源路径的相对路径。</span><span class="sxs-lookup"><span data-stu-id="5dc52-131">This is relative to the origin path.</span></span>
+    optional: true
+    syntax:
+      content: 'probePath?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-132">预配终结点的状态。</span><span class="sxs-lookup"><span data-stu-id="5dc52-132">Provisioning status of the endpoint.</span></span>
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.queryStringCachingBehavior
+    name: queryStringCachingBehavior
+    fullName: queryStringCachingBehavior
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5dc52-133">定义 CDN 缓存请求： 其包括查询字符串的方式。</span><span class="sxs-lookup"><span data-stu-id="5dc52-133">Defines how CDN caches requests that include query strings.</span></span> <span data-ttu-id="5dc52-134">缓存，绕过缓存以防止请求包含查询字符串缓存，或缓存包含唯一 URL 的每个请求时，可以忽略任何查询字符串。</span><span class="sxs-lookup"><span data-stu-id="5dc52-134">You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.</span></span> <span data-ttu-id="5dc52-135">可能的值包括：IgnoreQueryString、 BypassCaching、 UseQueryString、 NotSet</span><span class="sxs-lookup"><span data-stu-id="5dc52-135">Possible values include: ''IgnoreQueryString'', ''BypassCaching'', ''UseQueryString'', ''NotSet''</span></span>'
+    optional: true
+    syntax:
+      content: 'queryStringCachingBehavior?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.resourceState
+    name: resourceState
+    fullName: resourceState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5dc52-136">终结点资源状态。</span><span class="sxs-lookup"><span data-stu-id="5dc52-136">Resource status of the endpoint.</span></span> <span data-ttu-id="5dc52-137">可能的值包括：创建，正在删除，正在运行、 启动，已停止，停止</span><span class="sxs-lookup"><span data-stu-id="5dc52-137">Possible values include: ''Creating'', ''Deleting'', ''Running'', ''Starting'', ''Stopped'', ''Stopping''</span></span>'
+    optional: true
+    syntax:
+      content: 'resourceState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-138">资源标记。</span><span class="sxs-lookup"><span data-stu-id="5dc52-138">Resource tags.</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-cdn
+  - uid: azure-arm-cdn.Endpoint.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5dc52-139">资源类型。</span><span class="sxs-lookup"><span data-stu-id="5dc52-139">Resource type.</span></span>
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-cdn
+references:
+  - uid: azure-arm-cdn.TrackedResource
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: azure-arm-cdn.TrackedResource
+  - uid: azure-arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy
+    name: EndpointPropertiesUpdateParametersDeliveryPolicy
+    spec.typeScript:
+      - name: EndpointPropertiesUpdateParametersDeliveryPolicy
+        fullName: EndpointPropertiesUpdateParametersDeliveryPolicy
+        uid: azure-arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy
+  - uid: 'azure-arm-cdn.GeoFilter[]'
+    name: 'GeoFilter[]'
+    spec.typeScript:
+      - name: GeoFilter
+        fullName: GeoFilter
+        uid: azure-arm-cdn.GeoFilter
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-arm-cdn.DeepCreatedOrigin[]'
+    name: 'DeepCreatedOrigin[]'
+    spec.typeScript:
+      - name: DeepCreatedOrigin
+        fullName: DeepCreatedOrigin
+        uid: azure-arm-cdn.DeepCreatedOrigin
+      - name: '[]'
+        fullName: '[]'

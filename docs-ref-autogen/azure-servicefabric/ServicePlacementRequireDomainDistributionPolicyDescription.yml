@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription
+    name: ServicePlacementRequireDomainDistributionPolicyDescription
+    fullName: ServicePlacementRequireDomainDistributionPolicyDescription
+    children:
+      - azure-servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName
+      - azure-servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      <span data-ttu-id="d3d07-101">描述要用于 Service Fabric 服务的放置在同一个分区中的两个副本应永远不会放置在同一个容错或升级域中的策略。</span><span class="sxs-lookup"><span data-stu-id="d3d07-101">Describes the policy to be used for placement of a Service Fabric service where two replicas from the same partition should never be placed in the same fault or upgrade domain.</span></span>
+      <span data-ttu-id="d3d07-102">尽管这不是常见它可以向公开该服务的并发故障由于计划外停机或后续/并发故障的其他情况下增大风险。</span><span class="sxs-lookup"><span data-stu-id="d3d07-102">While this is not common it can expose the service to an increased risk of concurrent failures due to unplanned outages or other cases of subsequent/concurrent failures.</span></span> <span data-ttu-id="d3d07-103">例如，假设副本跨不同的数据中心，与每个位置的一个副本的部署位置。</span><span class="sxs-lookup"><span data-stu-id="d3d07-103">As an example, consider a case where replicas are deployed across different data center, with one replica per location.</span></span> <span data-ttu-id="d3d07-104">在的一个数据中心处于脱机状态，通常在该数据中心中放置的副本将打包到剩余的数据中心之一。</span><span class="sxs-lookup"><span data-stu-id="d3d07-104">In the event that one of the datacenters goes offline, normally the replica that was placed in that datacenter will be packed into one of the remaining datacenters.</span></span> <span data-ttu-id="d3d07-105">如果这一点不可行，应设置此策略。</span><span class="sxs-lookup"><span data-stu-id="d3d07-105">If this is not desirable then this policy should be set.</span></span>
+    extends:
+      name: azure-servicefabric.ServicePlacementPolicyDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d3d07-106">应使用此策略根据要放置的域的名称。</span><span class="sxs-lookup"><span data-stu-id="d3d07-106">The name of the domain that should used for placement as per this policy.</span></span>
+    optional: true
+    syntax:
+      content: 'domainName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d3d07-107">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="d3d07-107">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'type: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServicePlacementPolicyDescription
+    name: ServicePlacementPolicyDescription
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescription
+        fullName: ServicePlacementPolicyDescription
+        uid: azure-servicefabric.ServicePlacementPolicyDescription

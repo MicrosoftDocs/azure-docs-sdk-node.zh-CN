@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation
+    name: DeployedServicePackagesHealthEvaluation
+    fullName: DeployedServicePackagesHealthEvaluation
+    children:
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.description
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.kind
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.totalCount
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="28314-101">表示已部署的服务包，其中包含每个受影响的当前聚合运行状况状态的不正常的已部署的服务包的运行状况评估的运行状况评估。</span><span class="sxs-lookup"><span data-stu-id="28314-101">Represents health evaluation for deployed service packages, containing health evaluations for each unhealthy deployed service package that impacted current aggregated health state.</span></span> <span data-ttu-id="28314-102">评估已部署应用程序运行状况和聚合运行状况状态为错误或警告时，可以返回。</span><span class="sxs-lookup"><span data-stu-id="28314-102">Can be returned when evaluating deployed application health and the aggregated health state is either Error or Warning.</span></span>'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="28314-103">例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown</span><span class="sxs-lookup"><span data-stu-id="28314-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="28314-104">运行状况评估，表示评估过程的摘要说明。</span><span class="sxs-lookup"><span data-stu-id="28314-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="28314-105">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="28314-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.totalCount
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="28314-106">已部署的服务包的运行状况存储中的已部署应用程序的总数。</span><span class="sxs-lookup"><span data-stu-id="28314-106">Total number of deployed service packages of the deployed application in the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'totalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="28314-107">聚合运行状况状态导致的不正常评估的列表。</span><span class="sxs-lookup"><span data-stu-id="28314-107">List of unhealthy evaluations that led to the aggregated health state.</span></span> <span data-ttu-id="28314-108">包括受影响的聚合运行状况的所有不正常 DeployedServicePackageHealthEvaluation。</span><span class="sxs-lookup"><span data-stu-id="28314-108">Includes all the unhealthy DeployedServicePackageHealthEvaluation that impacted the aggregated health.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

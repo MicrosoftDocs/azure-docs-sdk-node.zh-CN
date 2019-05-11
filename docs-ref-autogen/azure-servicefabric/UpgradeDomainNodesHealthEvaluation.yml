@@ -1,0 +1,139 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation
+    name: UpgradeDomainNodesHealthEvaluation
+    fullName: UpgradeDomainNodesHealthEvaluation
+    children:
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.description
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.kind
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.maxPercentUnhealthyNodes
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.totalCount
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.unhealthyEvaluations
+      - azure-servicefabric.UpgradeDomainNodesHealthEvaluation.upgradeDomainName
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="c55db-101">表示包含每个受影响的当前聚合运行状况状态的不正常节点的运行状况评估的升级域中的群集节点的运行状况评估。</span><span class="sxs-lookup"><span data-stu-id="c55db-101">Represents health evaluation for cluster nodes in an upgrade domain, containing health evaluations for each unhealthy node that impacted current aggregated health state.</span></span> <span data-ttu-id="c55db-102">可以在群集升级和聚合运行状况状态期间评估群集运行状况为错误或警告时返回。</span><span class="sxs-lookup"><span data-stu-id="c55db-102">Can be returned when evaluating cluster health during cluster upgrade and the aggregated health state is either Error or Warning.</span></span>'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c55db-103">例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown</span><span class="sxs-lookup"><span data-stu-id="c55db-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c55db-104">运行状况评估，表示评估过程的摘要说明。</span><span class="sxs-lookup"><span data-stu-id="c55db-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c55db-105">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="c55db-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.maxPercentUnhealthyNodes
+    name: maxPercentUnhealthyNodes
+    fullName: maxPercentUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c55db-106">ClusterHealthPolicy 从允许的不正常节点百分比的最大值。</span><span class="sxs-lookup"><span data-stu-id="c55db-106">Maximum allowed percentage of unhealthy nodes from the ClusterHealthPolicy.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.totalCount
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c55db-107">当前升级域中的节点的总数。</span><span class="sxs-lookup"><span data-stu-id="c55db-107">Total number of nodes in the current upgrade domain.</span></span>
+    optional: true
+    syntax:
+      content: 'totalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c55db-108">聚合运行状况状态导致的不正常评估的列表。</span><span class="sxs-lookup"><span data-stu-id="c55db-108">List of unhealthy evaluations that led to the aggregated health state.</span></span> <span data-ttu-id="c55db-109">包括受影响的聚合运行状况的所有不正常 NodeHealthEvaluation。</span><span class="sxs-lookup"><span data-stu-id="c55db-109">Includes all the unhealthy NodeHealthEvaluation that impacted the aggregated health.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainNodesHealthEvaluation.upgradeDomainName
+    name: upgradeDomainName
+    fullName: upgradeDomainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c55db-110">在当前计算节点运行状况的升级域的名称。</span><span class="sxs-lookup"><span data-stu-id="c55db-110">Name of the upgrade domain where nodes health is currently evaluated.</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeDomainName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

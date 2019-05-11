@@ -1,0 +1,142 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaHealth
+    name: ReplicaHealth
+    fullName: ReplicaHealth
+    children:
+      - azure-servicefabric.ReplicaHealth.aggregatedHealthState
+      - azure-servicefabric.ReplicaHealth.healthEvents
+      - azure-servicefabric.ReplicaHealth.healthStatistics
+      - azure-servicefabric.ReplicaHealth.partitionId
+      - azure-servicefabric.ReplicaHealth.serviceKind
+      - azure-servicefabric.ReplicaHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="99c52-101">表示的有状态服务副本或无状态服务实例运行状况的基类。</span><span class="sxs-lookup"><span data-stu-id="99c52-101">Represents a base class for stateful service replica or stateless service instance health.</span></span>
+      <span data-ttu-id="99c52-102">包含聚合的副本运行状况状态、 运行状况事件和不正常评估。</span><span class="sxs-lookup"><span data-stu-id="99c52-102">Contains the replica aggregated health state, the health events and the unhealthy evaluations.</span></span>
+    extends:
+      name: azure-servicefabric.EntityHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="99c52-103">表示计算的运行状况管理器中的实体的聚合运行状况状态 HealthState。</span><span class="sxs-lookup"><span data-stu-id="99c52-103">The HealthState representing the aggregated health state of the entity computed by Health Manager.</span></span>
+      <span data-ttu-id="99c52-104">实体的运行状况评估反映了在实体和 （如果有） 及其子级上报告的所有事件。</span><span class="sxs-lookup"><span data-stu-id="99c52-104">The health evaluation of the entity reflects all events reported on the entity and its children (if any).</span></span>
+      <span data-ttu-id="99c52-105">聚合是通过应用所需的运行状况策略。</span><span class="sxs-lookup"><span data-stu-id="99c52-105">The aggregation is done by applying the desired health policy.</span></span> <span data-ttu-id="99c52-106">可能的值包括：Invalid、 确定、 警告、 Error、 Unknown</span><span class="sxs-lookup"><span data-stu-id="99c52-106">Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="99c52-107">报告的实体上的运行状况事件的列表。</span><span class="sxs-lookup"><span data-stu-id="99c52-107">The list of health events reported on the entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="99c52-108">显示所有子级类型的查询的实体的运行状况统计信息。</span><span class="sxs-lookup"><span data-stu-id="99c52-108">Shows the health statistics for all children types of the queried entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealth.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="99c52-109">此副本所属的分区的 id。</span><span class="sxs-lookup"><span data-stu-id="99c52-109">Id of the partition to which this replica belongs.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealth.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="99c52-110">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="99c52-110">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="99c52-111">显示当前的聚合运行状况状态已返回的运行状况管理器的原因不正常评估。</span><span class="sxs-lookup"><span data-stu-id="99c52-111">The unhealthy evaluations that show why the current aggregated health state was returned by Health Manager.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealth
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: azure-servicefabric.EntityHealth
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

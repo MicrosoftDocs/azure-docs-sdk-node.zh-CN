@@ -1,0 +1,262 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent
+    name: StatefulReplicaNewHealthReportEvent
+    fullName: StatefulReplicaNewHealthReportEvent
+    children:
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.category
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.description
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.eventInstanceId
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.hasCorrelatedEvents
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.healthState
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.kind
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.partitionId
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.property
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.removeWhenExpired
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.replicaId
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.replicaInstanceId
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.sequenceNumber
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.sourceId
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.sourceUtcTimestamp
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.timeStamp
+      - azure-servicefabric.StatefulReplicaNewHealthReportEvent.timeToLiveMs
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="480b2-101">有状态副本运行状况报表创建的事件。</span><span class="sxs-lookup"><span data-stu-id="480b2-101">Stateful Replica Health Report Created event.</span></span>
+    extends:
+      name: azure-servicefabric.ReplicaEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.category
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-102">事件的类别。</span><span class="sxs-lookup"><span data-stu-id="480b2-102">The category of event.</span></span>
+    optional: true
+    syntax:
+      content: 'category?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-103">报表的说明。</span><span class="sxs-lookup"><span data-stu-id="480b2-103">Description of report.</span></span>
+    syntax:
+      content: 'description: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.eventInstanceId
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-104">FabricEvent 实例的标识符。</span><span class="sxs-lookup"><span data-stu-id="480b2-104">The identifier for the FabricEvent instance.</span></span>
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.hasCorrelatedEvents
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-105">显示存在可用的相关的事件。</span><span class="sxs-lookup"><span data-stu-id="480b2-105">Shows there is existing related events available.</span></span>
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-106">描述属性的运行状况状态。</span><span class="sxs-lookup"><span data-stu-id="480b2-106">Describes the property health state.</span></span>
+    syntax:
+      content: 'healthState: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-107">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="480b2-107">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-108">Service Fabric 用于唯一标识分区的内部 ID。</span><span class="sxs-lookup"><span data-stu-id="480b2-108">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="480b2-109">创建服务时，这是随机生成的 GUID。</span><span class="sxs-lookup"><span data-stu-id="480b2-109">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="480b2-110">分区 ID 是唯一的而不会更改该服务的生存期内。</span><span class="sxs-lookup"><span data-stu-id="480b2-110">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="480b2-111">如果在同一个服务已被删除并重新创建其分区的 Id 会有所不同。</span><span class="sxs-lookup"><span data-stu-id="480b2-111">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.property
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-112">描述的属性。</span><span class="sxs-lookup"><span data-stu-id="480b2-112">Describes the property.</span></span>
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.removeWhenExpired
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-113">当它过期时指示删除。</span><span class="sxs-lookup"><span data-stu-id="480b2-113">Indicates the removal when it expires.</span></span>
+    syntax:
+      content: 'removeWhenExpired: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.replicaId
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="480b2-114">有状态服务副本的 id。</span><span class="sxs-lookup"><span data-stu-id="480b2-114">Id of a stateful service replica.</span></span> <span data-ttu-id="480b2-115">Service Fabric 使用 ReplicaId 来唯一标识分区的副本。</span><span class="sxs-lookup"><span data-stu-id="480b2-115">ReplicaId is used by Service Fabric to uniquely identify a replica of a partition.</span></span> <span data-ttu-id="480b2-116">它是唯一在分区中并不会更改副本的生存期内。</span><span class="sxs-lookup"><span data-stu-id="480b2-116">It is unique within a partition and does not change for the lifetime of the replica.</span></span> <span data-ttu-id="480b2-117">如果删除副本和在同一个分区在同一节点上创建另一个副本，它将为 id 来获取不同的值。有时无状态服务实例的 id 也被称为副本 id。</span><span class="sxs-lookup"><span data-stu-id="480b2-117">If a replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the id. Sometimes the id of a stateless service instance is also referred as a replica id.</span></span>'
+    syntax:
+      content: 'replicaId: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.replicaInstanceId
+    name: replicaInstanceId
+    fullName: replicaInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-118">副本实例的 id。</span><span class="sxs-lookup"><span data-stu-id="480b2-118">Id of Replica instance.</span></span>
+    syntax:
+      content: 'replicaInstanceId: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.sequenceNumber
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-119">报表的序列号。</span><span class="sxs-lookup"><span data-stu-id="480b2-119">Sequence number of report.</span></span>
+    syntax:
+      content: 'sequenceNumber: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.sourceId
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-120">报告源 id。</span><span class="sxs-lookup"><span data-stu-id="480b2-120">Id of report source.</span></span>
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.sourceUtcTimestamp
+    name: sourceUtcTimestamp
+    fullName: sourceUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-121">源时间。</span><span class="sxs-lookup"><span data-stu-id="480b2-121">Source time.</span></span>
+    syntax:
+      content: 'sourceUtcTimestamp: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.timeStamp
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-122">记录时间事件。</span><span class="sxs-lookup"><span data-stu-id="480b2-122">The time event was logged.</span></span>
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulReplicaNewHealthReportEvent.timeToLiveMs
+    name: timeToLiveMs
+    fullName: timeToLiveMs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="480b2-123">以毫秒为单位生存时间。</span><span class="sxs-lookup"><span data-stu-id="480b2-123">Time to live in milli-seconds.</span></span>
+    syntax:
+      content: 'timeToLiveMs: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ReplicaEvent
+    name: ReplicaEvent
+    spec.typeScript:
+      - name: ReplicaEvent
+        fullName: ReplicaEvent
+        uid: azure-servicefabric.ReplicaEvent

@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.RollingUpgradePolicy'
+    name: RollingUpgradePolicy
+    fullName: RollingUpgradePolicy
+    children:
+      - '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="95fe5-101">执行滚动升级时使用的配置参数。</span><span class="sxs-lookup"><span data-stu-id="95fe5-101">The configuration parameters used while performing a rolling upgrade.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+    name: maxBatchInstancePercent
+    fullName: maxBatchInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="95fe5-102">在一个批处理中的滚动升级将同时升级的总虚拟机实例的最大百分比。</span><span class="sxs-lookup"><span data-stu-id="95fe5-102">The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch.</span></span> <span data-ttu-id="95fe5-103">由于这是最多，在旧或更新批处理中不正常的实例可能导致减小，以确保更高的可靠性的批中的实例的百分比。</span><span class="sxs-lookup"><span data-stu-id="95fe5-103">As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.</span></span> <span data-ttu-id="95fe5-104">此参数的默认值为 20%。</span><span class="sxs-lookup"><span data-stu-id="95fe5-104">The default value for this parameter is 20%.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxBatchInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+    name: maxUnhealthyInstancePercent
+    fullName: maxUnhealthyInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="95fe5-105">可以同时不正常，可以是正在升级时，或通过滚动升级将中止之前，处于不正常状态找到由虚拟机运行状况检查在规模集中的总虚拟机实例的最大百分比。</span><span class="sxs-lookup"><span data-stu-id="95fe5-105">The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts.</span></span> <span data-ttu-id="95fe5-106">此约束将在启动任何批处理之前进行检查。</span><span class="sxs-lookup"><span data-stu-id="95fe5-106">This constraint will be checked prior to starting any batch.</span></span> <span data-ttu-id="95fe5-107">此参数的默认值为 20%。</span><span class="sxs-lookup"><span data-stu-id="95fe5-107">The default value for this parameter is 20%.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+    name: maxUnhealthyUpgradedInstancePercent
+    fullName: maxUnhealthyUpgradedInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="95fe5-108">找不到处于不正常状态的已升级的虚拟机实例的最大百分比。</span><span class="sxs-lookup"><span data-stu-id="95fe5-108">The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state.</span></span> <span data-ttu-id="95fe5-109">每个批次升级后，会发生此检查。</span><span class="sxs-lookup"><span data-stu-id="95fe5-109">This check will happen after each batch is upgraded.</span></span> <span data-ttu-id="95fe5-110">如果曾经超过此百分比时，将中止滚动更新。</span><span class="sxs-lookup"><span data-stu-id="95fe5-110">If this percentage is ever exceeded, the rolling update aborts.</span></span> <span data-ttu-id="95fe5-111">此参数的默认值为 20%。</span><span class="sxs-lookup"><span data-stu-id="95fe5-111">The default value for this parameter is 20%.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyUpgradedInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    name: pauseTimeBetweenBatches
+    fullName: pauseTimeBetweenBatches
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="95fe5-112">完成在一个批处理中的所有虚拟机的更新和启动下一批之间的等待时间。</span><span class="sxs-lookup"><span data-stu-id="95fe5-112">The wait time between completing the update for all virtual machines in one batch and starting the next batch.</span></span> <span data-ttu-id="95fe5-113">应采用 ISO 8601 格式指定持续时间。</span><span class="sxs-lookup"><span data-stu-id="95fe5-113">The time duration should be specified in ISO 8601 format.</span></span> <span data-ttu-id="95fe5-114">默认值为 0 秒 (PT0S)。</span><span class="sxs-lookup"><span data-stu-id="95fe5-114">The default value is 0 seconds (PT0S).</span></span>
+    optional: true
+    syntax:
+      content: 'pauseTimeBetweenBatches?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

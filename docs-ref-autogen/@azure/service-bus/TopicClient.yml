@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.TopicClient'
+    name: TopicClient
+    fullName: TopicClient
+    children:
+      - '@azure/service-bus.TopicClient.close'
+      - '@azure/service-bus.TopicClient.createSender'
+      - '@azure/service-bus.TopicClient.entityPath'
+      - '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+      - '@azure/service-bus.TopicClient.id'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      描述允许与服务总线主题进行交互的客户端。
+      使用`createTopicClient`ServiceBusClient 对象来实例化 TopicClient 函数
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      关闭 AMQP 链接创建此客户端的发件人。
+      关闭之后，TopicClient 和发件人都不可以用于任何进一步的操作。
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      创建要用于发送消息，计划要在更高版本时发送的消息和取消此类计划的消息发件人。
+      - 如果打开的发件人已存在此 TopicClient，将引发错误。
+      如果本主题包含启用会话的订阅，则发送消息，而不`sessionId`属性将转到此类订阅的死信队列。
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 为其创建此客户端服务总线主题的路径。
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+    name: 'getDeadLetterTopicPath(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      返回给定主题和订阅名称的相应死信主题名称。
+      使用在此`createSubscriptionClient`函数的`ServiceBusClient`实例从死信队列接收消息，给定的订阅。
+    syntax:
+      content: 'static function getDeadLetterTopicPath(topicName: string, subscriptionName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: 正在提取其死信对应的名称的主题的名称
+        - id: subscriptionName
+          type:
+            - string
+          description: |
+            正在提取其死信对应的名称的订阅的名称
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此客户端唯一标识符。
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'

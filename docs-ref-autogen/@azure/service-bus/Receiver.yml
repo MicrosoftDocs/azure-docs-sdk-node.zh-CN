@@ -1,0 +1,278 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    fullName: Receiver
+    children:
+      - '@azure/service-bus.Receiver.close'
+      - '@azure/service-bus.Receiver.getMessageIterator'
+      - '@azure/service-bus.Receiver.isClosed'
+      - '@azure/service-bus.Receiver.isReceivingMessages'
+      - '@azure/service-bus.Receiver.receiveDeferredMessage'
+      - '@azure/service-bus.Receiver.receiveDeferredMessages'
+      - '@azure/service-bus.Receiver.receiveMessages'
+      - '@azure/service-bus.Receiver.receiveMode'
+      - '@azure/service-bus.Receiver.registerMessageHandler'
+      - '@azure/service-bus.Receiver.renewMessageLock'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      <span data-ttu-id="eed67-101">接收方类可用于在批处理中或通过注册处理程序接收消息。</span><span class="sxs-lookup"><span data-stu-id="eed67-101">The Receiver class can be used to receive messages in a batch or by registering handlers.</span></span>
+      <span data-ttu-id="eed67-102">使用`createReceiver`QueueClient 或 SubscriptionClient 实例化接收方上的函数。</span><span class="sxs-lookup"><span data-stu-id="eed67-102">Use the `createReceiver` function on the QueueClient or SubscriptionClient to instantiate a Receiver.</span></span>
+      <span data-ttu-id="eed67-103">接收方类是抽象基础 AMQP 接收方链接上。</span><span class="sxs-lookup"><span data-stu-id="eed67-103">The Receiver class is an abstraction over the underlying AMQP receiver link.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="eed67-104">关闭基础 AMQP 接收方链接。</span><span class="sxs-lookup"><span data-stu-id="eed67-104">Closes the underlying AMQP receiver link.</span></span>
+      <span data-ttu-id="eed67-105">关闭之后，接收方不能用于任何进一步的操作。</span><span class="sxs-lookup"><span data-stu-id="eed67-105">Once closed, the receiver cannot be used for any further operations.</span></span>
+      <span data-ttu-id="eed67-106">使用`createReceiver`QueueClient 或 SubscriptionClient 实例化新的接收方上的函数</span><span class="sxs-lookup"><span data-stu-id="eed67-106">Use the `createReceiver` function on the QueueClient or SubscriptionClient to instantiate a new Receiver</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.getMessageIterator'
+    name: getMessageIterator()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="eed67-107">从接收方的消息获取异步迭代器。</span><span class="sxs-lookup"><span data-stu-id="eed67-107">Gets an async iterator over messages from the receiver.</span></span>
+      <span data-ttu-id="eed67-108">如果没有另一个正在对同一接收方接收操作，将引发错误。</span><span class="sxs-lookup"><span data-stu-id="eed67-108">Throws an error if there is another receive operation in progress on the same receiver.</span></span> <span data-ttu-id="eed67-109">如果您不确定是否有另一个接收操作正在运行，则检查`isReceivingMessages`接收方上的属性。</span><span class="sxs-lookup"><span data-stu-id="eed67-109">If you are not sure whether there is another receive operation running, check the `isReceivingMessages` property on the receiver.</span></span>
+
+      <span data-ttu-id="eed67-110">如果迭代器不能以一分钟内提取中的新消息`undefined`将返回。</span><span class="sxs-lookup"><span data-stu-id="eed67-110">If the iterator is not able to fetch a new message in over a minute, `undefined` will be returned.</span></span>
+    syntax:
+      content: function getMessageIterator()
+      parameters: []
+      return:
+        type:
+          - AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.isClosed'
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="eed67-111">返回`true`如果接收方已关闭。</span><span class="sxs-lookup"><span data-stu-id="eed67-111">Returns `true` if the receiver is closed.</span></span> <span data-ttu-id="eed67-112">这可能是因为接收方本身已关闭或创建其客户端已关闭。</span><span class="sxs-lookup"><span data-stu-id="eed67-112">This can happen either because the receiver itself has been closed or the client that created it has been closed.</span></span>
+    syntax:
+      content: 'isClosed: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.isReceivingMessages'
+    name: isReceivingMessages()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="eed67-113">指示是否接收方当前正在接收消息。</span><span class="sxs-lookup"><span data-stu-id="eed67-113">Indicates whether the receiver is currently receiving messages or not.</span></span>
+      <span data-ttu-id="eed67-114">当此方法返回 true，新`registerMessageHandler()`或`receiveMessages()`无法进行调用。</span><span class="sxs-lookup"><span data-stu-id="eed67-114">When this returns true, new `registerMessageHandler()` or `receiveMessages()` calls cannot be made.</span></span>
+    syntax:
+      content: function isReceivingMessages()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveDeferredMessage'
+    name: receiveDeferredMessage(Long)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="eed67-115">返回的 promise 的解析延迟的消息由标识为给定`sequenceNumber`。</span><span class="sxs-lookup"><span data-stu-id="eed67-115">Returns a promise that resolves to a deferred message identified by the given `sequenceNumber`.</span></span>
+    syntax:
+      content: 'function receiveDeferredMessage(sequenceNumber: Long)'
+      parameters:
+        - id: sequenceNumber
+          type:
+            - Long
+          description: <span data-ttu-id="eed67-116">需要接收消息的序列号。</span><span class="sxs-lookup"><span data-stu-id="eed67-116">The sequence number of the message that needs to be received.</span></span>
+      return:
+        type:
+          - Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveDeferredMessages'
+    name: 'receiveDeferredMessages(Long[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="eed67-117">返回可解析延迟的消息标识为数组的 promise 的给定`sequenceNumbers`。</span><span class="sxs-lookup"><span data-stu-id="eed67-117">Returns a promise that resolves to an array of deferred messages identified by given `sequenceNumbers`.</span></span>
+    syntax:
+      content: 'function receiveDeferredMessages(sequenceNumbers: Long[])'
+      parameters:
+        - id: sequenceNumbers
+          type:
+            - 'Long[]'
+          description: <span data-ttu-id="eed67-118">需要接收的消息的序列号的数组。</span><span class="sxs-lookup"><span data-stu-id="eed67-118">An array of sequence numbers for the messages that need to be received.</span></span>
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveMessages'
+    name: 'receiveMessages(number, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="eed67-119">返回可解析到的消息数组的 promise 基于给定的计数和超时通过 AMQP 接收方链接从队列/订阅。</span><span class="sxs-lookup"><span data-stu-id="eed67-119">Returns a promise that resolves to an array of messages based on given count and timeout over an AMQP receiver link from a Queue/Subscription.</span></span>
+      <span data-ttu-id="eed67-120">如果没有另一个正在对同一接收方接收操作，将引发错误。</span><span class="sxs-lookup"><span data-stu-id="eed67-120">Throws an error if there is another receive operation in progress on the same receiver.</span></span> <span data-ttu-id="eed67-121">如果您不确定是否有另一个接收操作正在运行，则检查`isReceivingMessages`接收方上的属性。</span><span class="sxs-lookup"><span data-stu-id="eed67-121">If you are not sure whether there is another receive operation running, check the `isReceivingMessages` property on the receiver.</span></span>
+    syntax:
+      content: 'function receiveMessages(maxMessageCount: number, idleTimeoutInSeconds?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - number
+          description: <span data-ttu-id="eed67-122">要从队列/订阅接收的消息数目上限。</span><span class="sxs-lookup"><span data-stu-id="eed67-122">The maximum number of messages to receive from Queue/Subscription.</span></span>
+        - id: idleTimeoutInSeconds
+          type:
+            - undefined | number
+          description: |-
+            <span data-ttu-id="eed67-123">最大等待时间 （秒） 为其接收方应等待以接收第一条消息。</span><span class="sxs-lookup"><span data-stu-id="eed67-123">The maximum wait time in seconds for which the Receiver should wait to receive the first message.</span></span> <span data-ttu-id="eed67-124">如果此时不收到任何消息，则返回的承诺获取解析为一个空数组。</span><span class="sxs-lookup"><span data-stu-id="eed67-124">If no message is received by this time, the returned promise gets resolved to an empty array.</span></span>
+            - <span data-ttu-id="eed67-125">**默认值**:`60`秒。</span><span class="sxs-lookup"><span data-stu-id="eed67-125">**Default**: `60` seconds.</span></span>
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveMode'
+    name: receiveMode
+    fullName: receiveMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="eed67-126">表示此接收器的 receiveMode。</span><span class="sxs-lookup"><span data-stu-id="eed67-126">Denotes receiveMode of this receiver.</span></span>
+    syntax:
+      content: 'receiveMode: ReceiveMode'
+      return:
+        type:
+          - '@azure/service-bus.ReceiveMode'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.registerMessageHandler'
+    name: 'registerMessageHandler(OnMessage, OnError, MessageHandlerOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="eed67-127">注册处理程序以处理传入的消息流通过 AMQP 接收方链接从队列/订阅。</span><span class="sxs-lookup"><span data-stu-id="eed67-127">Registers handlers to deal with the incoming stream of messages over an AMQP receiver link from a Queue/Subscription.</span></span>
+      <span data-ttu-id="eed67-128">若要停止接收消息，请调用`close()`接收方上。</span><span class="sxs-lookup"><span data-stu-id="eed67-128">To stop receiving messages, call `close()` on the Receiver.</span></span>
+      <span data-ttu-id="eed67-129">如果没有另一个正在对同一接收方接收操作，将引发错误。</span><span class="sxs-lookup"><span data-stu-id="eed67-129">Throws an error if there is another receive operation in progress on the same receiver.</span></span> <span data-ttu-id="eed67-130">如果您不确定是否有另一个接收操作正在运行，则检查`isReceivingMessages`接收方上的属性。</span><span class="sxs-lookup"><span data-stu-id="eed67-130">If you are not sure whether there is another receive operation running, check the `isReceivingMessages` property on the receiver.</span></span>
+    syntax:
+      content: 'function registerMessageHandler(onMessage: OnMessage, onError: OnError, options?: MessageHandlerOptions)'
+      parameters:
+        - id: onMessage
+          type:
+            - '@azure/service-bus.OnMessage'
+          description: <span data-ttu-id="eed67-131">用于处理每个传入消息的处理程序。</span><span class="sxs-lookup"><span data-stu-id="eed67-131">Handler for processing each incoming message.</span></span>
+        - id: onError
+          type:
+            - '@azure/service-bus.OnError'
+          description: <span data-ttu-id="eed67-132">接收或处理消息过程中发生任何错误处理程序。</span><span class="sxs-lookup"><span data-stu-id="eed67-132">Handler for any error that occurs while receiving or processing messages.</span></span>
+        - id: options
+          type:
+            - '@azure/service-bus.MessageHandlerOptions'
+          description: |
+            <span data-ttu-id="eed67-133">如果应自动完成的消息，并且/或者有其锁自动续订的控制选项。</span><span class="sxs-lookup"><span data-stu-id="eed67-133">Options to control if messages should be automatically completed, and/or have their locks automatically renewed.</span></span> <span data-ttu-id="eed67-134">您可以控制应同时处理消息的最大数目。</span><span class="sxs-lookup"><span data-stu-id="eed67-134">You can control the maximum number of messages that should be concurrently processed.</span></span> <span data-ttu-id="eed67-135">此外可以提供超时以秒为单位来表示接收方在关闭之前等待新消息的时间量。</span><span class="sxs-lookup"><span data-stu-id="eed67-135">You can also provide a timeout in seconds to denote the amount of time to wait for a new message before closing the receiver.</span></span>
+          optional: true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.renewMessageLock'
+    name: renewMessageLock(string | ServiceBusMessage)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="eed67-136">队列/订阅创建期间指定的持续时间续订消息上的锁。</span><span class="sxs-lookup"><span data-stu-id="eed67-136">Renews the lock on the message for the duration as specified during the Queue/Subscription creation.</span></span>
+      - <span data-ttu-id="eed67-137">检查`lockedUntilUtc`属性上的消息的锁定的过期的时间。</span><span class="sxs-lookup"><span data-stu-id="eed67-137">Check the `lockedUntilUtc` property on the message for the time when the lock expires.</span></span>
+      - <span data-ttu-id="eed67-138">如果不确定一条消息 (使用`complete()`，`defer()`或`deadletter()`之前其锁定到期，则返回在下一步在队列/订阅消息领土接收操作。</span><span class="sxs-lookup"><span data-stu-id="eed67-138">If a message is not settled (using either `complete()`, `defer()` or `deadletter()`, before its lock expires, then the message lands back in the Queue/Subscription for the next receive operation.</span></span>
+    syntax:
+      content: 'function renewMessageLock(lockTokenOrMessage: string | ServiceBusMessage)'
+      parameters:
+        - id: lockTokenOrMessage
+          type:
+            - string | @azure/service-bus.ServiceBusMessage
+          description: <span data-ttu-id="eed67-139">`lockToken`消息或消息本身的属性。</span><span class="sxs-lookup"><span data-stu-id="eed67-139">The `lockToken` property of the message or the message itself.</span></span>
+      return:
+        type:
+          - Promise<Date>
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    name: ServiceBusMessage>
+    spec.typeScript:
+      - name: AsyncIterableIterator<
+        fullName: AsyncIterableIterator<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    name: ServiceBusMessage | undefined>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: ' | undefined>'
+        fullName: ' | undefined>'
+  - uid: 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    name: 'ServiceBusMessage[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/service-bus.OnMessage'
+    name: OnMessage
+    spec.typeScript:
+      - name: OnMessage
+        fullName: OnMessage
+        uid: '@azure/service-bus.OnMessage'
+  - uid: '@azure/service-bus.OnError'
+    name: OnError
+    spec.typeScript:
+      - name: OnError
+        fullName: OnError
+        uid: '@azure/service-bus.OnError'
+  - uid: '@azure/service-bus.MessageHandlerOptions'
+    name: MessageHandlerOptions
+    spec.typeScript:
+      - name: MessageHandlerOptions
+        fullName: MessageHandlerOptions
+        uid: '@azure/service-bus.MessageHandlerOptions'
+  - uid: string | @azure/service-bus.ServiceBusMessage
+    name: ServiceBusMessage
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'

@@ -1,0 +1,157 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.PercentileTarget'
+    name: PercentileTarget
+    fullName: PercentileTarget
+    children:
+      - '@azure/arm-cosmosdb.PercentileTarget.listMetrics'
+      - '@azure/arm-cosmosdb.PercentileTarget.listMetrics_2'
+      - '@azure/arm-cosmosdb.PercentileTarget.listMetrics_1'
+      - '@azure/arm-cosmosdb.PercentileTarget.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="d7af8-101">表示 PercentileTarget 类。</span><span class="sxs-lookup"><span data-stu-id="d7af8-101">Class representing a PercentileTarget.</span></span>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileTarget.listMetrics'
+    name: 'listMetrics(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d7af8-102">检索由给定的帐户目标区域的给定筛选器的度量值。</span><span class="sxs-lookup"><span data-stu-id="d7af8-102">Retrieves the metrics determined by the given filter for the given account target region.</span></span> <span data-ttu-id="d7af8-103">此 url 是仅针对 PBS 和复制延迟数据</span><span class="sxs-lookup"><span data-stu-id="d7af8-103">This url is only for PBS and Replication Latency data</span></span>
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, targetRegion: string, filter: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d7af8-104">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="d7af8-104">Name of an Azure resource group.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="d7af8-105">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="d7af8-105">Cosmos DB database account name.</span></span>
+        - id: targetRegion
+          type:
+            - string
+          description: '<span data-ttu-id="d7af8-106">向其写入数据的目标区域。</span><span class="sxs-lookup"><span data-stu-id="d7af8-106">Target region to which data is written.</span></span> <span data-ttu-id="d7af8-107">Cosmos DB 区域，与单词和每个单词之间的空格首字母大写。</span><span class="sxs-lookup"><span data-stu-id="d7af8-107">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: filter
+          type:
+            - string
+          description: '<span data-ttu-id="d7af8-108">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="d7af8-108">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="d7af8-109">可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="d7af8-109">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="d7af8-110">支持的运算符是等于</span><span class="sxs-lookup"><span data-stu-id="d7af8-110">The supported operator is eq.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PercentileTargetListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileTarget.listMetrics_2'
+    name: 'listMetrics(string, string, string, string, RequestOptionsBase, ServiceCallback<PercentileMetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, targetRegion: string, filter: string, options: RequestOptionsBase, callback: ServiceCallback<PercentileMetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d7af8-111">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="d7af8-111">Name of an Azure resource group.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="d7af8-112">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="d7af8-112">Cosmos DB database account name.</span></span>
+        - id: targetRegion
+          type:
+            - string
+          description: '<span data-ttu-id="d7af8-113">向其写入数据的目标区域。</span><span class="sxs-lookup"><span data-stu-id="d7af8-113">Target region to which data is written.</span></span> <span data-ttu-id="d7af8-114">Cosmos DB 区域，与单词和每个单词之间的空格首字母大写。</span><span class="sxs-lookup"><span data-stu-id="d7af8-114">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: filter
+          type:
+            - string
+          description: '<span data-ttu-id="d7af8-115">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="d7af8-115">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="d7af8-116">可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="d7af8-116">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="d7af8-117">支持的运算符是等于</span><span class="sxs-lookup"><span data-stu-id="d7af8-117">The supported operator is eq.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="d7af8-118">可选参数</span><span class="sxs-lookup"><span data-stu-id="d7af8-118">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.PercentileMetricListResult>
+          description: |
+            <span data-ttu-id="d7af8-119">回调</span><span class="sxs-lookup"><span data-stu-id="d7af8-119">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PercentileTargetListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileTarget.listMetrics_1'
+    name: 'listMetrics(string, string, string, string, ServiceCallback<PercentileMetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, targetRegion: string, filter: string, callback: ServiceCallback<PercentileMetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d7af8-120">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="d7af8-120">Name of an Azure resource group.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="d7af8-121">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="d7af8-121">Cosmos DB database account name.</span></span>
+        - id: targetRegion
+          type:
+            - string
+          description: '<span data-ttu-id="d7af8-122">向其写入数据的目标区域。</span><span class="sxs-lookup"><span data-stu-id="d7af8-122">Target region to which data is written.</span></span> <span data-ttu-id="d7af8-123">Cosmos DB 区域，与单词和每个单词之间的空格首字母大写。</span><span class="sxs-lookup"><span data-stu-id="d7af8-123">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: filter
+          type:
+            - string
+          description: '<span data-ttu-id="d7af8-124">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="d7af8-124">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="d7af8-125">可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="d7af8-125">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="d7af8-126">支持的运算符是等于</span><span class="sxs-lookup"><span data-stu-id="d7af8-126">The supported operator is eq.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.PercentileMetricListResult>
+          description: |
+            <span data-ttu-id="d7af8-127">回调</span><span class="sxs-lookup"><span data-stu-id="d7af8-127">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PercentileTargetListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileTarget.constructor'
+    name: PercentileTarget(CosmosDBManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d7af8-128">创建 PercentileTarget。</span><span class="sxs-lookup"><span data-stu-id="d7af8-128">Create a PercentileTarget.</span></span>
+    syntax:
+      content: 'new PercentileTarget(client: CosmosDBManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+          description: |
+            <span data-ttu-id="d7af8-129">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="d7af8-129">Reference to the service client.</span></span>
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+    name: CosmosDBManagementClientContext
+    spec.typeScript:
+      - name: CosmosDBManagementClientContext
+        fullName: CosmosDBManagementClientContext
+        uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-cosmosdb.PercentileMetricListResult>
+    name: PercentileMetricListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PercentileMetricListResult
+        fullName: PercentileMetricListResult
+        uid: '@azure/arm-cosmosdb.PercentileMetricListResult'
+      - name: '>'
+        fullName: '>'

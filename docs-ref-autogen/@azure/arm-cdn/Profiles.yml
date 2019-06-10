@@ -1,0 +1,987 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.Profiles'
+    name: Profiles
+    fullName: Profiles
+    children:
+      - '@azure/arm-cdn.Profiles.beginCreate'
+      - '@azure/arm-cdn.Profiles.beginDeleteMethod'
+      - '@azure/arm-cdn.Profiles.beginUpdate'
+      - '@azure/arm-cdn.Profiles.create'
+      - '@azure/arm-cdn.Profiles.deleteMethod'
+      - '@azure/arm-cdn.Profiles.generateSsoUri'
+      - '@azure/arm-cdn.Profiles.generateSsoUri_2'
+      - '@azure/arm-cdn.Profiles.generateSsoUri_1'
+      - '@azure/arm-cdn.Profiles.get'
+      - '@azure/arm-cdn.Profiles.get_2'
+      - '@azure/arm-cdn.Profiles.get_1'
+      - '@azure/arm-cdn.Profiles.list'
+      - '@azure/arm-cdn.Profiles.list_2'
+      - '@azure/arm-cdn.Profiles.list_1'
+      - '@azure/arm-cdn.Profiles.listByResourceGroup'
+      - '@azure/arm-cdn.Profiles.listByResourceGroup_2'
+      - '@azure/arm-cdn.Profiles.listByResourceGroup_1'
+      - '@azure/arm-cdn.Profiles.listByResourceGroupNext'
+      - '@azure/arm-cdn.Profiles.listByResourceGroupNext_2'
+      - '@azure/arm-cdn.Profiles.listByResourceGroupNext_1'
+      - '@azure/arm-cdn.Profiles.listNext'
+      - '@azure/arm-cdn.Profiles.listNext_2'
+      - '@azure/arm-cdn.Profiles.listNext_1'
+      - '@azure/arm-cdn.Profiles.listResourceUsage'
+      - '@azure/arm-cdn.Profiles.listResourceUsage_2'
+      - '@azure/arm-cdn.Profiles.listResourceUsage_1'
+      - '@azure/arm-cdn.Profiles.listResourceUsageNext'
+      - '@azure/arm-cdn.Profiles.listResourceUsageNext_2'
+      - '@azure/arm-cdn.Profiles.listResourceUsageNext_1'
+      - '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes'
+      - '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes_2'
+      - '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes_1'
+      - '@azure/arm-cdn.Profiles.constructor'
+      - '@azure/arm-cdn.Profiles.update'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="f5d83-101">表示配置文件的类。</span><span class="sxs-lookup"><span data-stu-id="f5d83-101">Class representing a Profiles.</span></span>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.beginCreate'
+    name: 'beginCreate(string, string, Profile, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-102">使用指定的订阅和资源组下的配置文件名称创建新的 CDN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="f5d83-102">Creates a new CDN profile with a profile name under the specified subscription and resource group.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, profileName: string, profile: Profile, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-103">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-103">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-104">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-104">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: profile
+          type:
+            - '@azure/arm-cdn.Profile'
+          description: <span data-ttu-id="f5d83-105">创建新的配置文件所需的配置文件属性。</span><span class="sxs-lookup"><span data-stu-id="f5d83-105">Profile properties needed to create a new profile.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="f5d83-106">删除现有的 CDN 配置文件使用指定的参数。</span><span class="sxs-lookup"><span data-stu-id="f5d83-106">Deletes an existing CDN profile with the specified parameters.</span></span> <span data-ttu-id="f5d83-107">删除配置文件将导致所有子资源的删除包括终结点、 来源和自定义域。</span><span class="sxs-lookup"><span data-stu-id="f5d83-107">Deleting a profile will result in the deletion of all of the sub-resources including endpoints, origins and custom domains.</span></span>'
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-108">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-108">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-109">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-109">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.beginUpdate'
+    name: 'beginUpdate(string, string, Models.ProfilesBeginUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-110">使用指定的订阅和资源组下的指定的配置文件名称更新现有的 CDN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="f5d83-110">Updates an existing CDN profile with the specified profile name under the specified subscription and resource group.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, profileName: string, options?: Models.ProfilesBeginUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-111">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-111">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-112">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-112">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - Models.ProfilesBeginUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.create'
+    name: 'create(string, string, Profile, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-113">使用指定的订阅和资源组下的配置文件名称创建新的 CDN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="f5d83-113">Creates a new CDN profile with a profile name under the specified subscription and resource group.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, profileName: string, profile: Profile, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-114">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-114">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-115">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-115">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: profile
+          type:
+            - '@azure/arm-cdn.Profile'
+          description: <span data-ttu-id="f5d83-116">创建新的配置文件所需的配置文件属性。</span><span class="sxs-lookup"><span data-stu-id="f5d83-116">Profile properties needed to create a new profile.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesCreateResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="f5d83-117">删除现有的 CDN 配置文件使用指定的参数。</span><span class="sxs-lookup"><span data-stu-id="f5d83-117">Deletes an existing CDN profile with the specified parameters.</span></span> <span data-ttu-id="f5d83-118">删除配置文件将导致所有子资源的删除包括终结点、 来源和自定义域。</span><span class="sxs-lookup"><span data-stu-id="f5d83-118">Deleting a profile will result in the deletion of all of the sub-resources including endpoints, origins and custom domains.</span></span>'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-119">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-119">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-120">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-120">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.generateSsoUri'
+    name: 'generateSsoUri(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="f5d83-121">生成的动态 SSO URI 用于登录到 CDN 补充门户。</span><span class="sxs-lookup"><span data-stu-id="f5d83-121">Generates a dynamic SSO URI used to sign in to the CDN supplemental portal.</span></span> <span data-ttu-id="f5d83-122">补充门户用于配置高级的功能尚不可用在 Azure 门户中，如在标准配置文件; 中的核心报表规则引擎、 高级 HTTP 报表和实时统计信息和高级版配置文件中的警报。</span><span class="sxs-lookup"><span data-stu-id="f5d83-122">Supplemental portal is used to configure advanced feature capabilities that are not yet available in the Azure portal, such as core reports in a standard profile; rules engine, advanced HTTP reports, and real-time stats and alerts in a premium profile.</span></span> <span data-ttu-id="f5d83-123">SSO URI 发生更改大约每 10 分钟。</span><span class="sxs-lookup"><span data-stu-id="f5d83-123">The SSO URI changes approximately every 10 minutes.</span></span>'
+    syntax:
+      content: 'function generateSsoUri(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-124">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-124">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-125">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-125">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesGenerateSsoUriResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.generateSsoUri_2'
+    name: 'generateSsoUri(string, string, RequestOptionsBase, ServiceCallback<SsoUri>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function generateSsoUri(resourceGroupName: string, profileName: string, options: RequestOptionsBase, callback: ServiceCallback<SsoUri>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-126">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-126">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-127">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-127">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f5d83-128">可选参数</span><span class="sxs-lookup"><span data-stu-id="f5d83-128">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.SsoUri>
+          description: |
+            <span data-ttu-id="f5d83-129">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-129">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesGenerateSsoUriResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.generateSsoUri_1'
+    name: 'generateSsoUri(string, string, ServiceCallback<SsoUri>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function generateSsoUri(resourceGroupName: string, profileName: string, callback: ServiceCallback<SsoUri>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-130">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-130">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-131">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-131">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.SsoUri>
+          description: |
+            <span data-ttu-id="f5d83-132">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-132">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesGenerateSsoUriResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-133">获取具有指定的配置文件名称指定的订阅和资源组下的 CDN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="f5d83-133">Gets a CDN profile with the specified profile name under the specified subscription and resource group.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-134">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-134">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-135">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-135">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<Profile>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, options: RequestOptionsBase, callback: ServiceCallback<Profile>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-136">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-136">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-137">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-137">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f5d83-138">可选参数</span><span class="sxs-lookup"><span data-stu-id="f5d83-138">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Profile>
+          description: |
+            <span data-ttu-id="f5d83-139">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.get_1'
+    name: 'get(string, string, ServiceCallback<Profile>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, callback: ServiceCallback<Profile>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-140">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-140">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-141">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-141">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Profile>
+          description: |
+            <span data-ttu-id="f5d83-142">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-142">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-143">列出所有 Azure 订阅中的 CDN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="f5d83-143">Lists all of the CDN profiles within an Azure subscription.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f5d83-144">可选参数</span><span class="sxs-lookup"><span data-stu-id="f5d83-144">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="f5d83-145">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-145">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.list_1'
+    name: list(ServiceCallback<ProfileListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="f5d83-146">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-146">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-147">列出所有资源组中的 CDN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="f5d83-147">Lists all of the CDN profiles within a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-148">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-148">Name of the Resource group within the Azure subscription.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-149">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-149">Name of the Resource group within the Azure subscription.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f5d83-150">可选参数</span><span class="sxs-lookup"><span data-stu-id="f5d83-150">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="f5d83-151">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-152">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-152">Name of the Resource group within the Azure subscription.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="f5d83-153">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-153">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-154">列出所有资源组中的 CDN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="f5d83-154">Lists all of the CDN profiles within a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-155">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f5d83-155">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-156">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f5d83-156">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f5d83-157">可选参数</span><span class="sxs-lookup"><span data-stu-id="f5d83-157">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="f5d83-158">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-159">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f5d83-159">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="f5d83-160">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListByResourceGroupNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-161">列出所有 Azure 订阅中的 CDN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="f5d83-161">Lists all of the CDN profiles within an Azure subscription.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-162">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f5d83-162">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-163">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f5d83-163">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f5d83-164">可选参数</span><span class="sxs-lookup"><span data-stu-id="f5d83-164">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="f5d83-165">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listNext_1'
+    name: 'listNext(string, ServiceCallback<ProfileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ProfileListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-166">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f5d83-166">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ProfileListResult>
+          description: |
+            <span data-ttu-id="f5d83-167">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-167">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsage'
+    name: 'listResourceUsage(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-168">检查配额和给定的 CDN 配置文件下的终结点的实际使用情况。</span><span class="sxs-lookup"><span data-stu-id="f5d83-168">Checks the quota and actual usage of endpoints under the given CDN profile.</span></span>
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-169">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-169">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-170">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-170">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsage_2'
+    name: 'listResourceUsage(string, string, RequestOptionsBase, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-171">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-171">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-172">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-172">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f5d83-173">可选参数</span><span class="sxs-lookup"><span data-stu-id="f5d83-173">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="f5d83-174">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsage_1'
+    name: 'listResourceUsage(string, string, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-175">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-175">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-176">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-176">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="f5d83-177">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsageNext'
+    name: 'listResourceUsageNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-178">检查配额和给定的 CDN 配置文件下的终结点的实际使用情况。</span><span class="sxs-lookup"><span data-stu-id="f5d83-178">Checks the quota and actual usage of endpoints under the given CDN profile.</span></span>
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-179">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f5d83-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsageNext_2'
+    name: 'listResourceUsageNext(string, RequestOptionsBase, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-180">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f5d83-180">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f5d83-181">可选参数</span><span class="sxs-lookup"><span data-stu-id="f5d83-181">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="f5d83-182">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listResourceUsageNext_1'
+    name: 'listResourceUsageNext(string, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-183">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f5d83-183">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            <span data-ttu-id="f5d83-184">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-184">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes'
+    name: 'listSupportedOptimizationTypes(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-185">获取当前配置文件受支持的优化类型。</span><span class="sxs-lookup"><span data-stu-id="f5d83-185">Gets the supported optimization types for the current profile.</span></span> <span data-ttu-id="f5d83-186">用户可以使用从所列的值的优化类型创建一个终结点。</span><span class="sxs-lookup"><span data-stu-id="f5d83-186">A user can create an endpoint with an optimization type from the listed values.</span></span>
+    syntax:
+      content: 'function listSupportedOptimizationTypes(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-187">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-187">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-188">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-188">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesListSupportedOptimizationTypesResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes_2'
+    name: 'listSupportedOptimizationTypes(string, string, RequestOptionsBase, ServiceCallback<SupportedOptimizationTypesListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listSupportedOptimizationTypes(resourceGroupName: string, profileName: string, options: RequestOptionsBase, callback: ServiceCallback<SupportedOptimizationTypesListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-189">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-189">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-190">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-190">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f5d83-191">可选参数</span><span class="sxs-lookup"><span data-stu-id="f5d83-191">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.SupportedOptimizationTypesListResult>
+          description: |
+            <span data-ttu-id="f5d83-192">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-192">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListSupportedOptimizationTypesResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.listSupportedOptimizationTypes_1'
+    name: 'listSupportedOptimizationTypes(string, string, ServiceCallback<SupportedOptimizationTypesListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listSupportedOptimizationTypes(resourceGroupName: string, profileName: string, callback: ServiceCallback<SupportedOptimizationTypesListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-193">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-193">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-194">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-194">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.SupportedOptimizationTypesListResult>
+          description: |
+            <span data-ttu-id="f5d83-195">回调</span><span class="sxs-lookup"><span data-stu-id="f5d83-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProfilesListSupportedOptimizationTypesResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.constructor'
+    name: Profiles(CdnManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-196">创建配置文件。</span><span class="sxs-lookup"><span data-stu-id="f5d83-196">Create a Profiles.</span></span>
+    syntax:
+      content: 'new Profiles(client: CdnManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cdn.CdnManagementClientContext'
+          description: |
+            <span data-ttu-id="f5d83-197">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="f5d83-197">Reference to the service client.</span></span>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Profiles.update'
+    name: 'update(string, string, Models.ProfilesUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5d83-198">使用指定的订阅和资源组下的指定的配置文件名称更新现有的 CDN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="f5d83-198">Updates an existing CDN profile with the specified profile name under the specified subscription and resource group.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, profileName: string, options?: Models.ProfilesUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-199">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-199">Name of the Resource group within the Azure subscription.</span></span>
+        - id: profileName
+          type:
+            - string
+          description: <span data-ttu-id="f5d83-200">在资源组中是唯一的 CDN 配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="f5d83-200">Name of the CDN profile which is unique within the resource group.</span></span>
+        - id: options
+          type:
+            - Models.ProfilesUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProfilesUpdateResponse>
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.CdnManagementClientContext'
+    name: CdnManagementClientContext
+    spec.typeScript:
+      - name: CdnManagementClientContext
+        fullName: CdnManagementClientContext
+        uid: '@azure/arm-cdn.CdnManagementClientContext'
+  - uid: '@azure/arm-cdn.Profile'
+    name: Profile
+    spec.typeScript:
+      - name: Profile
+        fullName: Profile
+        uid: '@azure/arm-cdn.Profile'
+  - uid: ServiceCallback<@azure/arm-cdn.SsoUri>
+    name: SsoUri>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SsoUri
+        fullName: SsoUri
+        uid: '@azure/arm-cdn.SsoUri'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.Profile>
+    name: Profile>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Profile
+        fullName: Profile
+        uid: '@azure/arm-cdn.Profile'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.ProfileListResult>
+    name: ProfileListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ProfileListResult
+        fullName: ProfileListResult
+        uid: '@azure/arm-cdn.ProfileListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+    name: ResourceUsageListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ResourceUsageListResult
+        fullName: ResourceUsageListResult
+        uid: '@azure/arm-cdn.ResourceUsageListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.SupportedOptimizationTypesListResult>
+    name: SupportedOptimizationTypesListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SupportedOptimizationTypesListResult
+        fullName: SupportedOptimizationTypesListResult
+        uid: '@azure/arm-cdn.SupportedOptimizationTypesListResult'
+      - name: '>'
+        fullName: '>'

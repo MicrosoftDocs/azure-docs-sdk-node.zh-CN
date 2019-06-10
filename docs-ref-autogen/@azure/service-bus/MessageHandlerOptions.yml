@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.MessageHandlerOptions'
+    name: MessageHandlerOptions
+    fullName: MessageHandlerOptions
+    children:
+      - '@azure/service-bus.MessageHandlerOptions.autoComplete'
+      - '@azure/service-bus.MessageHandlerOptions.maxConcurrentCalls'
+      - '@azure/service-bus.MessageHandlerOptions.maxMessageAutoRenewLockDurationInSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述传递到的选项`registerMessageHandler`方法时不会启用会话的队列/订阅从接收消息。
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.autoComplete'
+    name: autoComplete
+    fullName: autoComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指示是否`complete()`方法对消息应会自动在由 sdk 后调用用户提供执行活动消息处理程序。
+      调用`complete()`上一条消息将其删除从队列/订阅。
+      - **默认值**: `true`。
+    optional: true
+    syntax:
+      content: 'autoComplete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.maxConcurrentCalls'
+    name: maxConcurrentCalls
+    fullName: maxConcurrentCalls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      最大 sdk 可以对用户的消息处理程序进行的并发调用数。 一旦达到此限制，进一步将不接收消息之前至少其中一个到用户的消息处理程序调用已完成。
+      - **默认值**: `1`。
+    optional: true
+    syntax:
+      content: 'maxConcurrentCalls?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.maxMessageAutoRenewLockDurationInSeconds'
+    name: maxMessageAutoRenewLockDurationInSeconds
+    fullName: maxMessageAutoRenewLockDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      最大持续时间以秒为单位，直到该消息上的锁由 sdk 自动续订。 后该消息确定了外观或用户提供项执行的活动消息处理程序完成后，会停止此自动续订。
+
+      - **默认值**:`300`秒 （5 分钟）。
+      - **若要禁用 autolock 续订**，将其设置为`0`。
+    optional: true
+    syntax:
+      content: 'maxMessageAutoRenewLockDurationInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'

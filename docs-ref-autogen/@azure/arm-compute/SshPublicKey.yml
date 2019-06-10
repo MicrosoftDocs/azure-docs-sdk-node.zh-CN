@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.SshPublicKey'
+    name: SshPublicKey
+    fullName: SshPublicKey
+    children:
+      - '@azure/arm-compute.SshPublicKey.keyData'
+      - '@azure/arm-compute.SshPublicKey.path'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="368b4-101">包含有关 SSH 证书公用密钥和路径的公钥放置在 Linux VM 上的信息。</span><span class="sxs-lookup"><span data-stu-id="368b4-101">Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SshPublicKey.keyData'
+    name: keyData
+    fullName: keyData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="368b4-102">SSH 公钥证书用于进行身份验证通过 VM 与 ssh 配合使用。</span><span class="sxs-lookup"><span data-stu-id="368b4-102">SSH public key certificate used to authenticate with the VM through ssh.</span></span> <span data-ttu-id="368b4-103">密钥必须是至少 2048年位和 ssh rsa 格式。</span><span class="sxs-lookup"><span data-stu-id="368b4-103">The key needs to be at least 2048-bit and in ssh-rsa format.</span></span> <br><br> <span data-ttu-id="368b4-104">有关创建 ssh 密钥，请参阅[在 Azure 中 Linux Vm 的 Linux 和 Mac 上创建 SSH 密钥](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)。</span><span class="sxs-lookup"><span data-stu-id="368b4-104">For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).</span></span>'
+    optional: true
+    syntax:
+      content: 'keyData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SshPublicKey.path'
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="368b4-105">指定完整路径上创建 ssh 公钥的存储位置的 VM。</span><span class="sxs-lookup"><span data-stu-id="368b4-105">Specifies the full path on the created VM where ssh public key is stored.</span></span> <span data-ttu-id="368b4-106">如果文件已存在，则指定的键被追加到文件。</span><span class="sxs-lookup"><span data-stu-id="368b4-106">If the file already exists, the specified key is appended to the file.</span></span> <span data-ttu-id="368b4-107">示例： /home/user/.ssh/authorized_keys</span><span class="sxs-lookup"><span data-stu-id="368b4-107">Example: /home/user/.ssh/authorized_keys</span></span>'
+    optional: true
+    syntax:
+      content: 'path?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

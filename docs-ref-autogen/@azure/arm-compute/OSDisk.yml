@@ -1,0 +1,235 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.OSDisk'
+    name: OSDisk
+    fullName: OSDisk
+    children:
+      - '@azure/arm-compute.OSDisk.caching'
+      - '@azure/arm-compute.OSDisk.createOption'
+      - '@azure/arm-compute.OSDisk.diffDiskSettings'
+      - '@azure/arm-compute.OSDisk.diskSizeGB'
+      - '@azure/arm-compute.OSDisk.encryptionSettings'
+      - '@azure/arm-compute.OSDisk.image'
+      - '@azure/arm-compute.OSDisk.managedDisk'
+      - '@azure/arm-compute.OSDisk.name'
+      - '@azure/arm-compute.OSDisk.osType'
+      - '@azure/arm-compute.OSDisk.vhd'
+      - '@azure/arm-compute.OSDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="e274c-101">指定有关虚拟机使用的操作系统磁盘的信息。</span><span class="sxs-lookup"><span data-stu-id="e274c-101">Specifies information about the operating system disk used by the virtual machine.</span></span> <br><br> <span data-ttu-id="e274c-102">有关磁盘的详细信息，请参阅[有关 Azure 虚拟机的磁盘和 Vhd](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)。</span><span class="sxs-lookup"><span data-stu-id="e274c-102">For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).</span></span>'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e274c-103">指定的缓存要求。</span><span class="sxs-lookup"><span data-stu-id="e274c-103">Specifies the caching requirements.</span></span> <br><br> <span data-ttu-id="e274c-104">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="e274c-104">Possible values are:</span></span> <br><br> <span data-ttu-id="e274c-105">**无**</span><span class="sxs-lookup"><span data-stu-id="e274c-105">**None**</span></span> <br><br>
+      <span data-ttu-id="e274c-106">**ReadOnly**</span><span class="sxs-lookup"><span data-stu-id="e274c-106">**ReadOnly**</span></span> <br><br> <span data-ttu-id="e274c-107">**ReadWrite**</span><span class="sxs-lookup"><span data-stu-id="e274c-107">**ReadWrite**</span></span> <br><br> <span data-ttu-id="e274c-108">默认值：**未使用任何标准存储。高级存储的 ReadOnly**。</span><span class="sxs-lookup"><span data-stu-id="e274c-108">Default: **None for Standard storage. ReadOnly for Premium storage**.</span></span> <span data-ttu-id="e274c-109">可能的值包括：None、 ReadOnly，ReadWrite</span><span class="sxs-lookup"><span data-stu-id="e274c-109">Possible values include: 'None', 'ReadOnly', 'ReadWrite'</span></span>
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e274c-110">指定应如何创建虚拟机。</span><span class="sxs-lookup"><span data-stu-id="e274c-110">Specifies how the virtual machine should be created.</span></span><br><br> <span data-ttu-id="e274c-111">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="e274c-111">Possible values are:</span></span><br><br>
+      <span data-ttu-id="e274c-112">**附加**\u2013 时使用专用的磁盘创建虚拟机使用此值。</span><span class="sxs-lookup"><span data-stu-id="e274c-112">**Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.</span></span><br><br> <span data-ttu-id="e274c-113">**FromImage** \u2013 时使用映像创建虚拟机使用此值。</span><span class="sxs-lookup"><span data-stu-id="e274c-113">**FromImage** \u2013 This value is used when you are using an image to create the virtual machine.</span></span> <span data-ttu-id="e274c-114">如果使用平台映像，还可以使用上面所述的 imageReference 元素。</span><span class="sxs-lookup"><span data-stu-id="e274c-114">If you are using a platform image, you also use the imageReference element described above.</span></span> <span data-ttu-id="e274c-115">如果使用 marketplace 映像，还可以使用前面所述的计划元素。</span><span class="sxs-lookup"><span data-stu-id="e274c-115">If you are using a marketplace image, you  also use the plan element previously described.</span></span> <span data-ttu-id="e274c-116">可能的值包括：FromImage、 Empty，附加</span><span class="sxs-lookup"><span data-stu-id="e274c-116">Possible values include: 'FromImage', 'Empty', 'Attach'</span></span>
+    syntax:
+      content: 'createOption: DiskCreateOptionTypes'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOptionTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.diffDiskSettings'
+    name: diffDiskSettings
+    fullName: diffDiskSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e274c-117">指定虚拟机使用的操作系统磁盘的临时磁盘设置。</span><span class="sxs-lookup"><span data-stu-id="e274c-117">Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'diffDiskSettings?: DiffDiskSettings'
+      return:
+        type:
+          - '@azure/arm-compute.DiffDiskSettings'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e274c-118">指定空数据磁盘的大小在千兆字节为单位。</span><span class="sxs-lookup"><span data-stu-id="e274c-118">Specifies the size of an empty data disk in gigabytes.</span></span> <span data-ttu-id="e274c-119">可以使用此元素覆盖虚拟机映像中磁盘的大小。</span><span class="sxs-lookup"><span data-stu-id="e274c-119">This element can be used to overwrite the size of the disk in a virtual machine image.</span></span> <br><br> <span data-ttu-id="e274c-120">此值不能大于 1023 GB</span><span class="sxs-lookup"><span data-stu-id="e274c-120">This value cannot be larger than 1023 GB</span></span>
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.encryptionSettings'
+    name: encryptionSettings
+    fullName: encryptionSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e274c-121">指定 OS 磁盘的加密设置。</span><span class="sxs-lookup"><span data-stu-id="e274c-121">Specifies the encryption settings for the OS Disk.</span></span> <br><br> <span data-ttu-id="e274c-122">最小的 api 版本：2015-06-15</span><span class="sxs-lookup"><span data-stu-id="e274c-122">Minimum api-version: 2015-06-15</span></span>'
+    optional: true
+    syntax:
+      content: 'encryptionSettings?: DiskEncryptionSettings'
+      return:
+        type:
+          - '@azure/arm-compute.DiskEncryptionSettings'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.image'
+    name: image
+    fullName: image
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e274c-123">源用户映像的虚拟硬盘。</span><span class="sxs-lookup"><span data-stu-id="e274c-123">The source user image virtual hard disk.</span></span> <span data-ttu-id="e274c-124">虚拟硬盘将复制再将其附加到虚拟机。</span><span class="sxs-lookup"><span data-stu-id="e274c-124">The virtual hard disk will be copied before being attached to the virtual machine.</span></span> <span data-ttu-id="e274c-125">如果提供了 SourceImage，则不能存在目标虚拟硬盘。</span><span class="sxs-lookup"><span data-stu-id="e274c-125">If SourceImage is provided, the destination virtual hard drive must not exist.</span></span>'
+    optional: true
+    syntax:
+      content: 'image?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e274c-126">托管的磁盘的参数。</span><span class="sxs-lookup"><span data-stu-id="e274c-126">The managed disk parameters.</span></span>
+    optional: true
+    syntax:
+      content: 'managedDisk?: ManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.ManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e274c-127">磁盘名称。</span><span class="sxs-lookup"><span data-stu-id="e274c-127">The disk name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e274c-128">此属性可以指定如果从用户映像或专用的 VHD 创建 VM 的磁盘中包含的操作系统类型。</span><span class="sxs-lookup"><span data-stu-id="e274c-128">This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD.</span></span> <br><br> <span data-ttu-id="e274c-129">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="e274c-129">Possible values are:</span></span> <br><br>
+      <span data-ttu-id="e274c-130">**Windows**</span><span class="sxs-lookup"><span data-stu-id="e274c-130">**Windows**</span></span> <br><br> <span data-ttu-id="e274c-131">**Linux**。</span><span class="sxs-lookup"><span data-stu-id="e274c-131">**Linux**.</span></span> <span data-ttu-id="e274c-132">可能的值包括：'Windows', 'Linux'</span><span class="sxs-lookup"><span data-stu-id="e274c-132">Possible values include: 'Windows', 'Linux'</span></span>
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.vhd'
+    name: vhd
+    fullName: vhd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e274c-133">虚拟硬盘。</span><span class="sxs-lookup"><span data-stu-id="e274c-133">The virtual hard disk.</span></span>
+    optional: true
+    syntax:
+      content: 'vhd?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e274c-134">指定是否应启用或禁用在磁盘上 writeAccelerator。</span><span class="sxs-lookup"><span data-stu-id="e274c-134">Specifies whether writeAccelerator should be enabled or disabled on the disk.</span></span>
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.DiskCreateOptionTypes'
+    name: DiskCreateOptionTypes
+    spec.typeScript:
+      - name: DiskCreateOptionTypes
+        fullName: DiskCreateOptionTypes
+        uid: '@azure/arm-compute.DiskCreateOptionTypes'
+  - uid: '@azure/arm-compute.DiffDiskSettings'
+    name: DiffDiskSettings
+    spec.typeScript:
+      - name: DiffDiskSettings
+        fullName: DiffDiskSettings
+        uid: '@azure/arm-compute.DiffDiskSettings'
+  - uid: '@azure/arm-compute.DiskEncryptionSettings'
+    name: DiskEncryptionSettings
+    spec.typeScript:
+      - name: DiskEncryptionSettings
+        fullName: DiskEncryptionSettings
+        uid: '@azure/arm-compute.DiskEncryptionSettings'
+  - uid: '@azure/arm-compute.VirtualHardDisk'
+    name: VirtualHardDisk
+    spec.typeScript:
+      - name: VirtualHardDisk
+        fullName: VirtualHardDisk
+        uid: '@azure/arm-compute.VirtualHardDisk'
+  - uid: '@azure/arm-compute.ManagedDiskParameters'
+    name: ManagedDiskParameters
+    spec.typeScript:
+      - name: ManagedDiskParameters
+        fullName: ManagedDiskParameters
+        uid: '@azure/arm-compute.ManagedDiskParameters'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'

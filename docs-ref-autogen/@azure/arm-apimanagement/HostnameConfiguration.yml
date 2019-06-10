@@ -1,0 +1,152 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration'
+    name: HostnameConfiguration
+    fullName: HostnameConfiguration
+    children:
+      - '@azure/arm-apimanagement.HostnameConfiguration.certificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.certificatePassword'
+      - '@azure/arm-apimanagement.HostnameConfiguration.defaultSslBinding'
+      - '@azure/arm-apimanagement.HostnameConfiguration.encodedCertificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.hostName'
+      - '@azure/arm-apimanagement.HostnameConfiguration.keyVaultId'
+      - '@azure/arm-apimanagement.HostnameConfiguration.negotiateClientCertificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ea47c-101">自定义主机名配置。</span><span class="sxs-lookup"><span data-stu-id="ea47c-101">Custom hostname configuration.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.certificate'
+    name: certificate
+    fullName: certificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ea47c-102">证书信息。</span><span class="sxs-lookup"><span data-stu-id="ea47c-102">Certificate information.</span></span>
+    optional: true
+    syntax:
+      content: 'certificate?: CertificateInformation'
+      return:
+        type:
+          - '@azure/arm-apimanagement.CertificateInformation'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.certificatePassword'
+    name: certificatePassword
+    fullName: certificatePassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ea47c-103">证书密码。</span><span class="sxs-lookup"><span data-stu-id="ea47c-103">Certificate Password.</span></span>
+    optional: true
+    syntax:
+      content: 'certificatePassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.defaultSslBinding'
+    name: defaultSslBinding
+    fullName: defaultSslBinding
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ea47c-104">与此主机名作为默认 SSL 证书关联的证书指定为 true，则安装程序。</span><span class="sxs-lookup"><span data-stu-id="ea47c-104">Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate.</span></span> <span data-ttu-id="ea47c-105">如果客户端不会发送 SNI 标头，这将是将面临挑战的证书。</span><span class="sxs-lookup"><span data-stu-id="ea47c-105">If a client does not send the SNI header, then this will be the certificate that will be challenged.</span></span> <span data-ttu-id="ea47c-106">如果服务已启用多个自定义主机名，它需要确定默认的 ssl 证书，该属性非常有用。</span><span class="sxs-lookup"><span data-stu-id="ea47c-106">The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate.</span></span> <span data-ttu-id="ea47c-107">仅应用于代理主机名类型的设置。</span><span class="sxs-lookup"><span data-stu-id="ea47c-107">The setting only applied to Proxy Hostname Type.</span></span> <span data-ttu-id="ea47c-108">默认值： false。</span><span class="sxs-lookup"><span data-stu-id="ea47c-108">Default value: false.</span></span>'
+    optional: true
+    syntax:
+      content: 'defaultSslBinding?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.encodedCertificate'
+    name: encodedCertificate
+    fullName: encodedCertificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ea47c-109">Base64 编码的证书。</span><span class="sxs-lookup"><span data-stu-id="ea47c-109">Base64 Encoded certificate.</span></span>
+    optional: true
+    syntax:
+      content: 'encodedCertificate?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.hostName'
+    name: hostName
+    fullName: hostName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ea47c-110">若要在 Api 管理服务上配置的主机名。</span><span class="sxs-lookup"><span data-stu-id="ea47c-110">Hostname to configure on the Api Management service.</span></span>
+    syntax:
+      content: 'hostName: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.keyVaultId'
+    name: keyVaultId
+    fullName: keyVaultId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ea47c-111">为包含 Ssl 证书的密钥保管库机密的 Url。</span><span class="sxs-lookup"><span data-stu-id="ea47c-111">Url to the KeyVault Secret containing the Ssl Certificate.</span></span> <span data-ttu-id="ea47c-112">如果提供绝对 Url 包含版本，则将无法工作的 ssl 证书的自动更新。</span><span class="sxs-lookup"><span data-stu-id="ea47c-112">If absolute Url containing version is provided, auto-update of ssl certificate will not work.</span></span> <span data-ttu-id="ea47c-113">这要求使用 MSI 配置 Api 管理服务。</span><span class="sxs-lookup"><span data-stu-id="ea47c-113">This requires Api Management service to be configured with MSI.</span></span> <span data-ttu-id="ea47c-114">机密的类型应为*pkcs12/x 的应用程序*</span><span class="sxs-lookup"><span data-stu-id="ea47c-114">The secret should be of type *application/x-pkcs12*</span></span>'
+    optional: true
+    syntax:
+      content: 'keyVaultId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.negotiateClientCertificate'
+    name: negotiateClientCertificate
+    fullName: negotiateClientCertificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ea47c-115">指定为 true，则始终与协商客户端证书的主机名。</span><span class="sxs-lookup"><span data-stu-id="ea47c-115">Specify true to always negotiate client certificate on the hostname.</span></span> <span data-ttu-id="ea47c-116">默认值为 false。</span><span class="sxs-lookup"><span data-stu-id="ea47c-116">Default Value is false.</span></span>
+      <span data-ttu-id="ea47c-117">默认值： false。</span><span class="sxs-lookup"><span data-stu-id="ea47c-117">Default value: false.</span></span>
+    optional: true
+    syntax:
+      content: 'negotiateClientCertificate?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ea47c-118">主机名类型。</span><span class="sxs-lookup"><span data-stu-id="ea47c-118">Hostname type.</span></span> <span data-ttu-id="ea47c-119">可能的值包括：代理，门户、 管理、 Scm、 DeveloperPortal</span><span class="sxs-lookup"><span data-stu-id="ea47c-119">Possible values include: ''Proxy'', ''Portal'', ''Management'', ''Scm'', ''DeveloperPortal''</span></span>'
+    syntax:
+      content: 'type: HostnameType'
+      return:
+        type:
+          - '@azure/arm-apimanagement.HostnameType'
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.CertificateInformation'
+    name: CertificateInformation
+    spec.typeScript:
+      - name: CertificateInformation
+        fullName: CertificateInformation
+        uid: '@azure/arm-apimanagement.CertificateInformation'
+  - uid: '@azure/arm-apimanagement.HostnameType'
+    name: HostnameType
+    spec.typeScript:
+      - name: HostnameType
+        fullName: HostnameType
+        uid: '@azure/arm-apimanagement.HostnameType'

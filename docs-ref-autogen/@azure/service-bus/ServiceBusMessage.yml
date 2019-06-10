@@ -1,0 +1,541 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ServiceBusMessage'
+    name: ServiceBusMessage
+    fullName: ServiceBusMessage
+    children:
+      - '@azure/service-bus.ServiceBusMessage.abandon'
+      - '@azure/service-bus.ServiceBusMessage.body'
+      - '@azure/service-bus.ServiceBusMessage.clone'
+      - '@azure/service-bus.ServiceBusMessage.complete'
+      - '@azure/service-bus.ServiceBusMessage.contentType'
+      - '@azure/service-bus.ServiceBusMessage.correlationId'
+      - '@azure/service-bus.ServiceBusMessage.deadLetter'
+      - '@azure/service-bus.ServiceBusMessage.deadLetterSource'
+      - '@azure/service-bus.ServiceBusMessage.defer'
+      - '@azure/service-bus.ServiceBusMessage.delivery'
+      - '@azure/service-bus.ServiceBusMessage.deliveryCount'
+      - '@azure/service-bus.ServiceBusMessage.enqueuedSequenceNumber'
+      - '@azure/service-bus.ServiceBusMessage.enqueuedTimeUtc'
+      - '@azure/service-bus.ServiceBusMessage.expiresAtUtc'
+      - '@azure/service-bus.ServiceBusMessage.isSettled'
+      - '@azure/service-bus.ServiceBusMessage.label'
+      - '@azure/service-bus.ServiceBusMessage.lockedUntilUtc'
+      - '@azure/service-bus.ServiceBusMessage.lockToken'
+      - '@azure/service-bus.ServiceBusMessage.messageId'
+      - '@azure/service-bus.ServiceBusMessage.partitionKey'
+      - '@azure/service-bus.ServiceBusMessage.replyTo'
+      - '@azure/service-bus.ServiceBusMessage.replyToSessionId'
+      - '@azure/service-bus.ServiceBusMessage.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.ServiceBusMessage.sequenceNumber'
+      - '@azure/service-bus.ServiceBusMessage.sessionId'
+      - '@azure/service-bus.ServiceBusMessage.timeToLive'
+      - '@azure/service-bus.ServiceBusMessage.to'
+      - '@azure/service-bus.ServiceBusMessage.userProperties'
+      - '@azure/service-bus.ServiceBusMessage.viaPartitionKey'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="37944-101">介绍从服务总线收到的消息。</span><span class="sxs-lookup"><span data-stu-id="37944-101">Describes the message received from Service Bus.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.abandon'
+    name: 'abandon(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="37944-102">消息接收方持有的锁是让转，使消息可在服务总线，为另一个接收操作。</span><span class="sxs-lookup"><span data-stu-id="37944-102">The lock held on the message by the receiver is let go, making the message available again in Service Bus for another receive operation.</span></span>
+      - <span data-ttu-id="37944-103">引发`SessionLockLostError`（适用于从队列/订阅已启用会话的消息） 如果 AMQP 链接使用该消息已接收到已不再处于活动状态。</span><span class="sxs-lookup"><span data-stu-id="37944-103">Throws `SessionLockLostError` (for messages from a Queue/Subscription with sessions enabled) if the AMQP link with which the message was received is no longer alive.</span></span> <span data-ttu-id="37944-104">这种情况可能是因为在会话上的锁已过期或接收方已由用户显式关闭或由于网络丢失或服务错误的库已关闭 AMQP 链接。</span><span class="sxs-lookup"><span data-stu-id="37944-104">This can happen either because the lock on the session expired or the receiver was explicitly closed by the user or the AMQP link got closed by the library due to network loss or service error.</span></span>
+      - <span data-ttu-id="37944-105">引发`MessageLockLostError`（适用于从队列/订阅未启用会话的消息） 消息上的锁已过期或 AMQP 链接与该消息是否收到不再处于活动状态。</span><span class="sxs-lookup"><span data-stu-id="37944-105">Throws `MessageLockLostError` (for messages from a Queue/Subscription with sessions not enabled) if the lock on the message has expired or the AMQP link with which the message was received is no longer alive.</span></span> <span data-ttu-id="37944-106">如果接收方已由用户显式关闭或由于网络丢失或服务错误的库已关闭 AMQP 链接，可能发生后一种。</span><span class="sxs-lookup"><span data-stu-id="37944-106">The latter can happen if the receiver was explicitly closed by the user or the AMQP link got closed by the library due to network loss or service error.</span></span>
+      - <span data-ttu-id="37944-107">如果已确定该消息，将引发错误。</span><span class="sxs-lookup"><span data-stu-id="37944-107">Throws an error if the message is already settled.</span></span> <span data-ttu-id="37944-108">若要避免此错误检查`isSettled`时您不能确定是否决定消息的消息属性。</span><span class="sxs-lookup"><span data-stu-id="37944-108">To avoid this error check the `isSettled` property on the message if you are not sure whether the message is settled.</span></span>
+      - <span data-ttu-id="37944-109">如果在中使用，将引发错误`ReceiveAndDelete`模式因为在此模式下收到的所有消息都预处置。</span><span class="sxs-lookup"><span data-stu-id="37944-109">Throws an error if used in `ReceiveAndDelete` mode because all messages received in this mode are pre-settled.</span></span> <span data-ttu-id="37944-110">若要避免此错误，更新代码以未结清在此模式下收到的消息。</span><span class="sxs-lookup"><span data-stu-id="37944-110">To avoid this error, update your code to not settle a message which is received in this mode.</span></span>
+      - <span data-ttu-id="37944-111">引发`ServiceUnavailableError`如果服务总线不承认在时间中结清消息的请求。</span><span class="sxs-lookup"><span data-stu-id="37944-111">Throws `ServiceUnavailableError` if Service Bus does not acknowledge the request to settle the message in time.</span></span> <span data-ttu-id="37944-112">该消息可能会或可能不在结清未成功。</span><span class="sxs-lookup"><span data-stu-id="37944-112">The message may or may not have been settled successfully.</span></span>
+    syntax:
+      content: 'function abandon(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            <span data-ttu-id="37944-113">要修改时放弃消息的消息的属性。</span><span class="sxs-lookup"><span data-stu-id="37944-113">The properties of the message to modify while abandoning the message.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="37944-114">需将其发送或接收到消息正文。</span><span class="sxs-lookup"><span data-stu-id="37944-114">The message body that needs to be sent or is received.</span></span>
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.clone'
+    name: clone()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="37944-115">创建以使其能够重新发送到队列的当前消息的克隆</span><span class="sxs-lookup"><span data-stu-id="37944-115">Creates a clone of the current message to allow it to be re-sent to the queue</span></span>
+    syntax:
+      content: function clone()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.SendableMessageInfo'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.complete'
+    name: complete()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="37944-116">从服务总线中删除该消息。</span><span class="sxs-lookup"><span data-stu-id="37944-116">Removes the message from Service Bus.</span></span>
+      - <span data-ttu-id="37944-117">引发`SessionLockLostError`（适用于从队列/订阅已启用会话的消息） 如果 AMQP 链接使用该消息已接收到已不再处于活动状态。</span><span class="sxs-lookup"><span data-stu-id="37944-117">Throws `SessionLockLostError` (for messages from a Queue/Subscription with sessions enabled) if the AMQP link with which the message was received is no longer alive.</span></span> <span data-ttu-id="37944-118">这种情况可能是因为在会话上的锁已过期或接收方已由用户显式关闭或由于网络丢失或服务错误的库已关闭 AMQP 链接。</span><span class="sxs-lookup"><span data-stu-id="37944-118">This can happen either because the lock on the session expired or the receiver was explicitly closed by the user or the AMQP link got closed by the library due to network loss or service error.</span></span>
+      - <span data-ttu-id="37944-119">引发`MessageLockLostError`（适用于从队列/订阅未启用会话的消息） 消息上的锁已过期或 AMQP 链接与该消息是否收到不再处于活动状态。</span><span class="sxs-lookup"><span data-stu-id="37944-119">Throws `MessageLockLostError` (for messages from a Queue/Subscription with sessions not enabled) if the lock on the message has expired or the AMQP link with which the message was received is no longer alive.</span></span> <span data-ttu-id="37944-120">如果接收方已由用户显式关闭或由于网络丢失或服务错误的库已关闭 AMQP 链接，可能发生后一种。</span><span class="sxs-lookup"><span data-stu-id="37944-120">The latter can happen if the receiver was explicitly closed by the user or the AMQP link got closed by the library due to network loss or service error.</span></span>
+      - <span data-ttu-id="37944-121">如果已确定该消息，将引发错误。</span><span class="sxs-lookup"><span data-stu-id="37944-121">Throws an error if the message is already settled.</span></span> <span data-ttu-id="37944-122">若要避免此错误检查`isSettled`时您不能确定是否决定消息的消息属性。</span><span class="sxs-lookup"><span data-stu-id="37944-122">To avoid this error check the `isSettled` property on the message if you are not sure whether the message is settled.</span></span>
+      - <span data-ttu-id="37944-123">如果在中使用，将引发错误`ReceiveAndDelete`模式因为在此模式下收到的所有消息都预处置。</span><span class="sxs-lookup"><span data-stu-id="37944-123">Throws an error if used in `ReceiveAndDelete` mode because all messages received in this mode are pre-settled.</span></span> <span data-ttu-id="37944-124">若要避免此错误，更新代码以未结清在此模式下收到的消息。</span><span class="sxs-lookup"><span data-stu-id="37944-124">To avoid this error, update your code to not settle a message which is received in this mode.</span></span>
+      - <span data-ttu-id="37944-125">引发`ServiceUnavailableError`如果服务总线不承认在时间中结清消息的请求。</span><span class="sxs-lookup"><span data-stu-id="37944-125">Throws `ServiceUnavailableError` if Service Bus does not acknowledge the request to settle the message in time.</span></span> <span data-ttu-id="37944-126">该消息可能会或可能不在结清未成功。</span><span class="sxs-lookup"><span data-stu-id="37944-126">The message may or may not have been settled successfully.</span></span>
+    syntax:
+      content: function complete()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="37944-127">消息的内容类型。</span><span class="sxs-lookup"><span data-stu-id="37944-127">The content type of the message.</span></span> <span data-ttu-id="37944-128">视需要描述消息的负载，采用符合 rfc2045 第 5 节，例如"application/json"格式的描述符。</span><span class="sxs-lookup"><span data-stu-id="37944-128">Optionally describes the payload of the message, with a descriptor following the format of RFC2045, Section 5, for example "application/json".</span></span>'
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="37944-129">允许应用程序的相关性，例如专用于反映正在答复的消息的 MessageId 目的指定消息的上下文相关标识符。</span><span class="sxs-lookup"><span data-stu-id="37944-129">The correlation identifier that allows an application to specify a context for the message for the purposes of correlation, for example reflecting the MessageId of a message that is being replied to.</span></span>
+      <span data-ttu-id="37944-130">请参阅[消息路由和关联](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。</span><span class="sxs-lookup"><span data-stu-id="37944-130">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.deadLetter'
+    name: deadLetter(DeadLetterOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="37944-131">将消息移到死信子队列。</span><span class="sxs-lookup"><span data-stu-id="37944-131">Moves the message to the deadletter sub-queue.</span></span> <span data-ttu-id="37944-132">若要接收 deadletted 消息，创建新的 QueueClient/SubscriptionClient 使用死信子队列的路径。</span><span class="sxs-lookup"><span data-stu-id="37944-132">To receive a deadletted message, create a new QueueClient/SubscriptionClient using the path for the deadletter sub-queue.</span></span>
+      - <span data-ttu-id="37944-133">引发`SessionLockLostError`（适用于从队列/订阅已启用会话的消息） 如果 AMQP 链接使用该消息已接收到已不再处于活动状态。</span><span class="sxs-lookup"><span data-stu-id="37944-133">Throws `SessionLockLostError` (for messages from a Queue/Subscription with sessions enabled) if the AMQP link with which the message was received is no longer alive.</span></span> <span data-ttu-id="37944-134">这种情况可能是因为在会话上的锁已过期或接收方已由用户显式关闭或由于网络丢失或服务错误的库已关闭 AMQP 链接。</span><span class="sxs-lookup"><span data-stu-id="37944-134">This can happen either because the lock on the session expired or the receiver was explicitly closed by the user or the AMQP link got closed by the library due to network loss or service error.</span></span>
+      - <span data-ttu-id="37944-135">引发`MessageLockLostError`（适用于从队列/订阅未启用会话的消息） 消息上的锁已过期或 AMQP 链接与该消息是否收到不再处于活动状态。</span><span class="sxs-lookup"><span data-stu-id="37944-135">Throws `MessageLockLostError` (for messages from a Queue/Subscription with sessions not enabled) if the lock on the message has expired or the AMQP link with which the message was received is no longer alive.</span></span> <span data-ttu-id="37944-136">如果接收方已由用户显式关闭或由于网络丢失或服务错误的库已关闭 AMQP 链接，可能发生后一种。</span><span class="sxs-lookup"><span data-stu-id="37944-136">The latter can happen if the receiver was explicitly closed by the user or the AMQP link got closed by the library due to network loss or service error.</span></span>
+      - <span data-ttu-id="37944-137">如果已确定该消息，将引发错误。</span><span class="sxs-lookup"><span data-stu-id="37944-137">Throws an error if the message is already settled.</span></span> <span data-ttu-id="37944-138">若要避免此错误检查`isSettled`时您不能确定是否决定消息的消息属性。</span><span class="sxs-lookup"><span data-stu-id="37944-138">To avoid this error check the `isSettled` property on the message if you are not sure whether the message is settled.</span></span>
+      - <span data-ttu-id="37944-139">如果在中使用，将引发错误`ReceiveAndDelete`模式因为在此模式下收到的所有消息都预处置。</span><span class="sxs-lookup"><span data-stu-id="37944-139">Throws an error if used in `ReceiveAndDelete` mode because all messages received in this mode are pre-settled.</span></span> <span data-ttu-id="37944-140">若要避免此错误，更新代码以未结清在此模式下收到的消息。</span><span class="sxs-lookup"><span data-stu-id="37944-140">To avoid this error, update your code to not settle a message which is received in this mode.</span></span>
+      - <span data-ttu-id="37944-141">引发`ServiceUnavailableError`如果服务总线不承认在时间中结清消息的请求。</span><span class="sxs-lookup"><span data-stu-id="37944-141">Throws `ServiceUnavailableError` if Service Bus does not acknowledge the request to settle the message in time.</span></span> <span data-ttu-id="37944-142">该消息可能会或可能不在结清未成功。</span><span class="sxs-lookup"><span data-stu-id="37944-142">The message may or may not have been settled successfully.</span></span>
+    syntax:
+      content: 'function deadLetter(options?: DeadLetterOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/service-bus.DeadLetterOptions'
+          description: |
+            <span data-ttu-id="37944-143">可以同时拒绝该消息提供死信选项。</span><span class="sxs-lookup"><span data-stu-id="37944-143">The DeadLetter options that can be provided while rejecting the message.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.deadLetterSource'
+    name: deadLetterSource
+    fullName: deadLetterSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="37944-144">此消息，已排入队列的死信之前的订阅的队列的名称。</span><span class="sxs-lookup"><span data-stu-id="37944-144">The name of the queue or subscription that this message was enqueued on, before it was deadlettered.</span></span> <span data-ttu-id="37944-145">仅在已成为死信并随后从死信队列自动转发至其他实体的消息中设置。</span><span class="sxs-lookup"><span data-stu-id="37944-145">Only set in messages that have been dead-lettered and subsequently auto-forwarded from the dead-letter queue to another entity.</span></span> <span data-ttu-id="37944-146">指明已成为死信的消息所在的实体。</span><span class="sxs-lookup"><span data-stu-id="37944-146">Indicates the entity in which the message was dead-lettered.</span></span>'
+    optional: true
+    syntax:
+      content: 'deadLetterSource?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.defer'
+    name: 'defer(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="37944-147">延迟消息的处理过程。</span><span class="sxs-lookup"><span data-stu-id="37944-147">Defers the processing of the message.</span></span> <span data-ttu-id="37944-148">保存`sequenceNumber`消息，才能接收该消息再次在将来使用的`receiveDeferredMessage`方法。</span><span class="sxs-lookup"><span data-stu-id="37944-148">Save the `sequenceNumber` of the message, in order to receive it message again in the future using the `receiveDeferredMessage` method.</span></span>
+      - <span data-ttu-id="37944-149">引发`SessionLockLostError`（适用于从队列/订阅已启用会话的消息） 如果 AMQP 链接使用该消息已接收到已不再处于活动状态。</span><span class="sxs-lookup"><span data-stu-id="37944-149">Throws `SessionLockLostError` (for messages from a Queue/Subscription with sessions enabled) if the AMQP link with which the message was received is no longer alive.</span></span> <span data-ttu-id="37944-150">这种情况可能是因为在会话上的锁已过期或接收方已由用户显式关闭或由于网络丢失或服务错误的库已关闭 AMQP 链接。</span><span class="sxs-lookup"><span data-stu-id="37944-150">This can happen either because the lock on the session expired or the receiver was explicitly closed by the user or the AMQP link got closed by the library due to network loss or service error.</span></span>
+      - <span data-ttu-id="37944-151">引发`MessageLockLostError`（适用于从队列/订阅未启用会话的消息） 消息上的锁已过期或 AMQP 链接与该消息是否收到不再处于活动状态。</span><span class="sxs-lookup"><span data-stu-id="37944-151">Throws `MessageLockLostError` (for messages from a Queue/Subscription with sessions not enabled) if the lock on the message has expired or the AMQP link with which the message was received is no longer alive.</span></span> <span data-ttu-id="37944-152">如果接收方已由用户显式关闭或由于网络丢失或服务错误的库已关闭 AMQP 链接，可能发生后一种。</span><span class="sxs-lookup"><span data-stu-id="37944-152">The latter can happen if the receiver was explicitly closed by the user or the AMQP link got closed by the library due to network loss or service error.</span></span>
+      - <span data-ttu-id="37944-153">如果已确定该消息，将引发错误。</span><span class="sxs-lookup"><span data-stu-id="37944-153">Throws an error if the message is already settled.</span></span> <span data-ttu-id="37944-154">若要避免此错误检查`isSettled`时您不能确定是否决定消息的消息属性。</span><span class="sxs-lookup"><span data-stu-id="37944-154">To avoid this error check the `isSettled` property on the message if you are not sure whether the message is settled.</span></span>
+      - <span data-ttu-id="37944-155">如果在中使用，将引发错误`ReceiveAndDelete`模式因为在此模式下收到的所有消息都预处置。</span><span class="sxs-lookup"><span data-stu-id="37944-155">Throws an error if used in `ReceiveAndDelete` mode because all messages received in this mode are pre-settled.</span></span> <span data-ttu-id="37944-156">若要避免此错误，更新代码以未结清在此模式下收到的消息。</span><span class="sxs-lookup"><span data-stu-id="37944-156">To avoid this error, update your code to not settle a message which is received in this mode.</span></span>
+      - <span data-ttu-id="37944-157">引发`ServiceUnavailableError`如果服务总线不承认在时间中结清消息的请求。</span><span class="sxs-lookup"><span data-stu-id="37944-157">Throws `ServiceUnavailableError` if Service Bus does not acknowledge the request to settle the message in time.</span></span> <span data-ttu-id="37944-158">该消息可能会或可能不在结清未成功。</span><span class="sxs-lookup"><span data-stu-id="37944-158">The message may or may not have been settled successfully.</span></span>
+    syntax:
+      content: 'function defer(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            <span data-ttu-id="37944-159">要修改时延迟消息的消息的属性</span><span class="sxs-lookup"><span data-stu-id="37944-159">The properties of the message to modify while deferring the message</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.delivery'
+    name: delivery
+    fullName: delivery
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="37944-160">收到的消息关联的传递。</span><span class="sxs-lookup"><span data-stu-id="37944-160">The associated delivery of the received message.</span></span>
+    syntax:
+      content: 'delivery: Delivery'
+      return:
+        type:
+          - Delivery
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.deliveryCount'
+    name: deliveryCount
+    fullName: deliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="37944-161">已尝试传递此消息的次数。</span><span class="sxs-lookup"><span data-stu-id="37944-161">Number of deliveries that have been attempted for this message.</span></span> <span data-ttu-id="37944-162">当消息锁期满，或使用显式放弃消息时，则计数将递增`abandon()`对消息的方法。</span><span class="sxs-lookup"><span data-stu-id="37944-162">The count is incremented when a message lock expires, or the message is explicitly abandoned using the `abandon()` method on the message.</span></span>'
+    optional: true
+    syntax:
+      content: 'deliveryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.enqueuedSequenceNumber'
+    name: enqueuedSequenceNumber
+    fullName: enqueuedSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="37944-163">消息的原始序列号。</span><span class="sxs-lookup"><span data-stu-id="37944-163">The original sequence number of the message.</span></span> <span data-ttu-id="37944-164">对于已自动转发的消息，此属性反映的是在原始提交点首次分配给消息的序列号。</span><span class="sxs-lookup"><span data-stu-id="37944-164">For messages that have been auto-forwarded, this property reflects the sequence number that had first been assigned to the message at its original point of submission.</span></span>'
+    optional: true
+    syntax:
+      content: 'enqueuedSequenceNumber?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.enqueuedTimeUtc'
+    name: enqueuedTimeUtc
+    fullName: enqueuedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="37944-165">即时 UTC 的接受并存储在服务总线消息。</span><span class="sxs-lookup"><span data-stu-id="37944-165">The UTC instant at which the message has been accepted and stored in Service Bus.</span></span>
+    optional: true
+    syntax:
+      content: 'enqueuedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.expiresAtUtc'
+    name: expiresAtUtc
+    fullName: expiresAtUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="37944-166">由于已过期而标记消息以供删除且无法再从实体中检索消息的即时 UTC。</span><span class="sxs-lookup"><span data-stu-id="37944-166">The UTC instant at which the message is marked for removal and no longer available for retrieval from the entity due to expiration.</span></span> <span data-ttu-id="37944-167">此属性计算从消息中的 2 个其他属性： `enqueuedTimeUtc`  +  `timeToLive`。</span><span class="sxs-lookup"><span data-stu-id="37944-167">This property is computed from 2 other properties on the message: `enqueuedTimeUtc` + `timeToLive`.</span></span>'
+    optional: true
+    syntax:
+      content: 'expiresAtUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.isSettled'
+    name: isSettled
+    fullName: isSettled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="37944-168">布尔值，表示如果消息已结算。</span><span class="sxs-lookup"><span data-stu-id="37944-168">Boolean denoting if the message has already been settled.</span></span>
+    syntax:
+      content: 'isSettled: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="37944-169">应用程序特定标签。</span><span class="sxs-lookup"><span data-stu-id="37944-169">The application specific label.</span></span> <span data-ttu-id="37944-170">此属性使应用程序可指示消息接收方在一种标准化的用途。</span><span class="sxs-lookup"><span data-stu-id="37944-170">This property enables the application to indicate the purpose of the message to the receiver in a standardized.</span></span> <span data-ttu-id="37944-171">方式，类似于电子邮件主题行。</span><span class="sxs-lookup"><span data-stu-id="37944-171">fashion, similar to an email subject line.</span></span> <span data-ttu-id="37944-172">映射的 AMQP 属性是"subject"。</span><span class="sxs-lookup"><span data-stu-id="37944-172">The mapped AMQP property is "subject".</span></span>'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.lockedUntilUtc'
+    name: lockedUntilUtc
+    fullName: lockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="37944-173">队列/订阅中锁定则消息将保存到的即时 UTC。</span><span class="sxs-lookup"><span data-stu-id="37944-173">The UTC instant until which the message is held locked in the queue/subscription.</span></span>
+      <span data-ttu-id="37944-174">当锁定过期后时，`deliveryCount`会递增，消息再次可供检索。</span><span class="sxs-lookup"><span data-stu-id="37944-174">When the lock expires, the `deliveryCount` is incremented and the message is again available for retrieval.</span></span>
+      - <span data-ttu-id="37944-175">在收到消息时不适用`ReceiveMode.receiveAndDelete`模式。</span><span class="sxs-lookup"><span data-stu-id="37944-175">Not applicable when the message is received in `ReceiveMode.receiveAndDelete` mode.</span></span>
+    optional: true
+    syntax:
+      content: 'lockedUntilUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.lockToken'
+    name: lockToken
+    fullName: lockToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="37944-176">锁定标记为要保留的中转站的锁引用`ReceiveMode.PeekLock`模式。</span><span class="sxs-lookup"><span data-stu-id="37944-176">The lock token is a reference to the lock that is being held by the broker in `ReceiveMode.PeekLock` mode.</span></span> <span data-ttu-id="37944-177">在内部使用锁结清消息中所述[产品文档中更多详细信息](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)</span><span class="sxs-lookup"><span data-stu-id="37944-177">Locks are used internally settle messages as explained in the [product documentation in more detail](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)</span></span>
+      - <span data-ttu-id="37944-178">在收到消息时不适用`ReceiveMode.receiveAndDelete`模式。</span><span class="sxs-lookup"><span data-stu-id="37944-178">Not applicable when the message is received in `ReceiveMode.receiveAndDelete` mode.</span></span>
+    optional: true
+    syntax:
+      content: 'lockToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="37944-179">消息标识符是应用程序定义的值，可用于唯一标识消息及其有效负载。</span><span class="sxs-lookup"><span data-stu-id="37944-179">The message identifier is an application-defined value that uniquely identifies the message and its payload.</span></span> <span data-ttu-id="37944-180">此标识符是自由格式字符串，可反映 GUID 或派生自应用程序上下文的标识符。</span><span class="sxs-lookup"><span data-stu-id="37944-180">The identifier is a free-form string and can reflect a GUID or an identifier derived from the application context.</span></span> <span data-ttu-id="37944-181">如果启用，[重复检测](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection)标识并删除第二个和后续提交的消息使用了相同的 MessageId。</span><span class="sxs-lookup"><span data-stu-id="37944-181">If enabled, the [duplicate detection](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection) identifies and removes second and further submissions of messages with the same MessageId.</span></span>'
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="37944-182">用于将消息发送到已分区实体分区键。</span><span class="sxs-lookup"><span data-stu-id="37944-182">The partition key for sending a message to a partitioned entity.</span></span> <span data-ttu-id="37944-183">最大长度为 128 个字符。</span><span class="sxs-lookup"><span data-stu-id="37944-183">Maximum length is 128 characters.</span></span> <span data-ttu-id="37944-184">对于[已分区实体](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning)，设置此值后，可以将相关消息分配到同一内部分区，以便能够正确记录提交序列顺序。</span><span class="sxs-lookup"><span data-stu-id="37944-184">For [partitioned entities](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning), setting this value enables assigning related messages to the same internal partition, so that submission sequence order is correctly recorded.</span></span> <span data-ttu-id="37944-185">分区是由哈希函数通过此值进行选择，无法直接选择。</span><span class="sxs-lookup"><span data-stu-id="37944-185">The partition is chosen by a hash function over this value and cannot be chosen directly.</span></span> <span data-ttu-id="37944-186">对于会话感知实体，`sessionId`属性重写此值。</span><span class="sxs-lookup"><span data-stu-id="37944-186">For session-aware entities, the `sessionId` property overrides this value.</span></span>'
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="37944-187">一个实体，以发送答复的地址。</span><span class="sxs-lookup"><span data-stu-id="37944-187">The address of an entity to send replies to.</span></span> <span data-ttu-id="37944-188">应用程序定义的这一可选值是一种标准方法，可用于向消息接收程序明示答复路径。</span><span class="sxs-lookup"><span data-stu-id="37944-188">This optional and application-defined value is a standard way to express a reply path to the receiver of the message.</span></span> <span data-ttu-id="37944-189">如果发送程序希望收到答复，它会将此值设置为，要将答复发送到的队列或主题的绝对或相关路径。</span><span class="sxs-lookup"><span data-stu-id="37944-189">When a sender expects a reply, it sets the value to the absolute or relative path of the queue or topic it expects the reply to be sent to.</span></span> <span data-ttu-id="37944-190">请参阅[消息路由和关联](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。</span><span class="sxs-lookup"><span data-stu-id="37944-190">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="37944-191">会话标识符扩充`replyTo`地址。</span><span class="sxs-lookup"><span data-stu-id="37944-191">The session identifier augmenting the `replyTo` address.</span></span>
+      <span data-ttu-id="37944-192">最大长度为 128 个字符。</span><span class="sxs-lookup"><span data-stu-id="37944-192">Maximum length is 128 characters.</span></span> <span data-ttu-id="37944-193">此值补充了 ReplyTo 信息并指定了会话 Id 应为答复时发送给答复实体的设置。</span><span class="sxs-lookup"><span data-stu-id="37944-193">This value augments the ReplyTo information and specifies which SessionId should be set for the reply when sent to the reply entity.</span></span>
+      <span data-ttu-id="37944-194">请参阅[消息路由和关联](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。</span><span class="sxs-lookup"><span data-stu-id="37944-194">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="37944-195">日期和 utc 格式的消息将排入队列的时间。</span><span class="sxs-lookup"><span data-stu-id="37944-195">The date and time in UTC at which the message will be enqueued.</span></span> <span data-ttu-id="37944-196">此属性返回的时间采用 UTC;设置属性时，所提供的日期时间值还必须是 utc 格式。</span><span class="sxs-lookup"><span data-stu-id="37944-196">This property returns the time in UTC; when setting the property, the supplied DateTime value must also be in UTC.</span></span> <span data-ttu-id="37944-197">此值是延迟的消息发送。</span><span class="sxs-lookup"><span data-stu-id="37944-197">This value is for delayed message sending.</span></span>
+      <span data-ttu-id="37944-198">利用要延迟到特定时间在将来发送的邮件。</span><span class="sxs-lookup"><span data-stu-id="37944-198">It is utilized to delay messages sending to a specific time in the future.</span></span> <span data-ttu-id="37944-199">消息排入队列时间并不意味着该消息将发送一次。</span><span class="sxs-lookup"><span data-stu-id="37944-199">Message enqueuing time does not mean that the message will be sent at the same time.</span></span> <span data-ttu-id="37944-200">它将获取已排入队列，但实际发送时间取决于队列的工作负荷和其状态。</span><span class="sxs-lookup"><span data-stu-id="37944-200">It will get enqueued, but the actual sending time depends on the queue's workload and its state.</span></span>
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="37944-201">服务总线分配到一条消息的唯一编号。</span><span class="sxs-lookup"><span data-stu-id="37944-201">The unique number assigned to a message by Service Bus.</span></span>
+      <span data-ttu-id="37944-202">序列号是在中转站接受并存储消息时分配给消息的唯一 64 位整数，可用作真正的标识符。</span><span class="sxs-lookup"><span data-stu-id="37944-202">The sequence number is a unique 64-bit integer assigned to a message as it is accepted and stored by the broker and functions as its true identifier.</span></span> <span data-ttu-id="37944-203">对于已分区实体，最前面的 16 位数反映的是分区标识符。</span><span class="sxs-lookup"><span data-stu-id="37944-203">For partitioned entities, the topmost 16 bits reflect the partition identifier.</span></span> <span data-ttu-id="37944-204">序列号单调增加。</span><span class="sxs-lookup"><span data-stu-id="37944-204">Sequence numbers monotonically increase.</span></span>
+      <span data-ttu-id="37944-205">在 48-64 位范围用尽后，序列号会回滚到 0。</span><span class="sxs-lookup"><span data-stu-id="37944-205">They roll over to 0 when the 48-64 bit range is exhausted.</span></span>
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: Long'
+      return:
+        type:
+          - Long
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="37944-206">会话感知实体的会话标识符。</span><span class="sxs-lookup"><span data-stu-id="37944-206">The session identifier for a session-aware entity.</span></span> <span data-ttu-id="37944-207">最大长度为 128 个字符。</span><span class="sxs-lookup"><span data-stu-id="37944-207">Maximum length is 128 characters.</span></span> <span data-ttu-id="37944-208">对于会话感知实体，应用程序定义的此值指定了消息的会话附属关系。</span><span class="sxs-lookup"><span data-stu-id="37944-208">For session-aware entities, this application-defined value specifies the session affiliation of the message.</span></span> <span data-ttu-id="37944-209">会话标识符相同的消息会处于摘要锁定状态，并确切启用依序处理和解多路复用。</span><span class="sxs-lookup"><span data-stu-id="37944-209">Messages with the same session identifier are subject to summary locking and enable exact in-order processing and demultiplexing.</span></span> <span data-ttu-id="37944-210">对于非会话感知实体，可忽略此值。</span><span class="sxs-lookup"><span data-stu-id="37944-210">For session-unaware entities, this value is ignored.</span></span>
+      <span data-ttu-id="37944-211">[消息会话](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions)。</span><span class="sxs-lookup"><span data-stu-id="37944-211">[Message Sessions](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).</span></span>
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="37944-212">消息的生存时间值。</span><span class="sxs-lookup"><span data-stu-id="37944-212">The message’s time to live value.</span></span> <span data-ttu-id="37944-213">此值是相对持续时间之后消息过期、 从即时消息已接受并存储代理所捕获`enqueuedTimeUtc`。</span><span class="sxs-lookup"><span data-stu-id="37944-213">This value is the relative duration after which the message expires, starting from the instant the message has been accepted and stored by the broker, as captured in `enqueuedTimeUtc`.</span></span> <span data-ttu-id="37944-214">如果未明确设置，假设的值是相应队列或主题的 DefaultTimeToLive。</span><span class="sxs-lookup"><span data-stu-id="37944-214">When not set explicitly, the assumed value is the DefaultTimeToLive for the respective queue or topic.</span></span> <span data-ttu-id="37944-215">消息级别`timeToLive`值不得超过实体的 DefaultTimeToLive 设置并且以无提示方式调整如果是这样。</span><span class="sxs-lookup"><span data-stu-id="37944-215">A message-level `timeToLive` value cannot be longer than the entity''s DefaultTimeToLive setting and it is silently adjusted if it does.</span></span> <span data-ttu-id="37944-216">请参阅[到期](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration)。</span><span class="sxs-lookup"><span data-stu-id="37944-216">See [Expiration](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).</span></span>'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="37944-217">"收件人"地址。</span><span class="sxs-lookup"><span data-stu-id="37944-217">The "to" address.</span></span> <span data-ttu-id="37944-218">此属性已保留，以供将来用于路由方案，暂被中转站本身忽略。</span><span class="sxs-lookup"><span data-stu-id="37944-218">This property is reserved for future use in routing scenarios and presently ignored by the broker itself.</span></span> <span data-ttu-id="37944-219">应用程序可以使用此值在规则驱动[自动转发链](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding)方案，以指示消息的预期逻辑目标。</span><span class="sxs-lookup"><span data-stu-id="37944-219">Applications can use this value in rule-driven [auto-forward chaining](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) scenarios to indicate the intended logical destination of the message.</span></span>'
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="37944-220">应用程序特定属性。</span><span class="sxs-lookup"><span data-stu-id="37944-220">The application specific properties.</span></span>
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusMessage.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="37944-221">将消息发送到通过已分区的传输队列实体分区键。</span><span class="sxs-lookup"><span data-stu-id="37944-221">The partition key for sending a message into an entity via a partitioned transfer queue.</span></span> <span data-ttu-id="37944-222">最大长度为 128 个字符。</span><span class="sxs-lookup"><span data-stu-id="37944-222">Maximum length is 128 characters.</span></span> <span data-ttu-id="37944-223">如果通过事务的作用域中的传输队列发送一条消息，此值选择传输队列分区：这是功能上等效于`partitionKey`属性，并确保消息将保留在一起并按顺序，在传输。</span><span class="sxs-lookup"><span data-stu-id="37944-223">If a message is sent via a transfer queue in the scope of a transaction, this value selects the transfer queue partition: This is functionally equivalent to `partitionKey` property and ensures that messages are kept together and in order as they are transferred.</span></span>
+      <span data-ttu-id="37944-224">请参阅[传输并通过发送](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via)。</span><span class="sxs-lookup"><span data-stu-id="37944-224">See [Transfers and Send Via](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via).</span></span>
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
+  - uid: '@azure/service-bus.DeadLetterOptions'
+    name: DeadLetterOptions
+    spec.typeScript:
+      - name: DeadLetterOptions
+        fullName: DeadLetterOptions
+        uid: '@azure/service-bus.DeadLetterOptions'

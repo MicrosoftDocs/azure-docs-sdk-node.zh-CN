@@ -1,0 +1,182 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.DataDisk'
+    name: DataDisk
+    fullName: DataDisk
+    children:
+      - '@azure/arm-compute.DataDisk.caching'
+      - '@azure/arm-compute.DataDisk.createOption'
+      - '@azure/arm-compute.DataDisk.diskSizeGB'
+      - '@azure/arm-compute.DataDisk.image'
+      - '@azure/arm-compute.DataDisk.lun'
+      - '@azure/arm-compute.DataDisk.managedDisk'
+      - '@azure/arm-compute.DataDisk.name'
+      - '@azure/arm-compute.DataDisk.vhd'
+      - '@azure/arm-compute.DataDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="bbd96-101">介绍了数据磁盘。</span><span class="sxs-lookup"><span data-stu-id="bbd96-101">Describes a data disk.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="bbd96-102">指定的缓存要求。</span><span class="sxs-lookup"><span data-stu-id="bbd96-102">Specifies the caching requirements.</span></span> <br><br> <span data-ttu-id="bbd96-103">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="bbd96-103">Possible values are:</span></span> <br><br> <span data-ttu-id="bbd96-104">**无**</span><span class="sxs-lookup"><span data-stu-id="bbd96-104">**None**</span></span> <br><br>
+      <span data-ttu-id="bbd96-105">**ReadOnly**</span><span class="sxs-lookup"><span data-stu-id="bbd96-105">**ReadOnly**</span></span> <br><br> <span data-ttu-id="bbd96-106">**ReadWrite**</span><span class="sxs-lookup"><span data-stu-id="bbd96-106">**ReadWrite**</span></span> <br><br> <span data-ttu-id="bbd96-107">默认值：**未使用任何标准存储。高级存储的 ReadOnly**。</span><span class="sxs-lookup"><span data-stu-id="bbd96-107">Default: **None for Standard storage. ReadOnly for Premium storage**.</span></span> <span data-ttu-id="bbd96-108">可能的值包括：None、 ReadOnly，ReadWrite</span><span class="sxs-lookup"><span data-stu-id="bbd96-108">Possible values include: 'None', 'ReadOnly', 'ReadWrite'</span></span>
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="bbd96-109">指定应如何创建虚拟机。</span><span class="sxs-lookup"><span data-stu-id="bbd96-109">Specifies how the virtual machine should be created.</span></span><br><br> <span data-ttu-id="bbd96-110">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="bbd96-110">Possible values are:</span></span><br><br>
+      <span data-ttu-id="bbd96-111">**附加**\u2013 时使用专用的磁盘创建虚拟机使用此值。</span><span class="sxs-lookup"><span data-stu-id="bbd96-111">**Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.</span></span><br><br> <span data-ttu-id="bbd96-112">**FromImage** \u2013 时使用映像创建虚拟机使用此值。</span><span class="sxs-lookup"><span data-stu-id="bbd96-112">**FromImage** \u2013 This value is used when you are using an image to create the virtual machine.</span></span> <span data-ttu-id="bbd96-113">如果使用平台映像，还可以使用上面所述的 imageReference 元素。</span><span class="sxs-lookup"><span data-stu-id="bbd96-113">If you are using a platform image, you also use the imageReference element described above.</span></span> <span data-ttu-id="bbd96-114">如果使用 marketplace 映像，还可以使用前面所述的计划元素。</span><span class="sxs-lookup"><span data-stu-id="bbd96-114">If you are using a marketplace image, you  also use the plan element previously described.</span></span> <span data-ttu-id="bbd96-115">可能的值包括：FromImage、 Empty，附加</span><span class="sxs-lookup"><span data-stu-id="bbd96-115">Possible values include: 'FromImage', 'Empty', 'Attach'</span></span>
+    syntax:
+      content: 'createOption: DiskCreateOptionTypes'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOptionTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bbd96-116">指定空数据磁盘的大小在千兆字节为单位。</span><span class="sxs-lookup"><span data-stu-id="bbd96-116">Specifies the size of an empty data disk in gigabytes.</span></span> <span data-ttu-id="bbd96-117">可以使用此元素覆盖虚拟机映像中磁盘的大小。</span><span class="sxs-lookup"><span data-stu-id="bbd96-117">This element can be used to overwrite the size of the disk in a virtual machine image.</span></span> <br><br> <span data-ttu-id="bbd96-118">此值不能大于 1023 GB</span><span class="sxs-lookup"><span data-stu-id="bbd96-118">This value cannot be larger than 1023 GB</span></span>
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.image'
+    name: image
+    fullName: image
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="bbd96-119">源用户映像的虚拟硬盘。</span><span class="sxs-lookup"><span data-stu-id="bbd96-119">The source user image virtual hard disk.</span></span> <span data-ttu-id="bbd96-120">虚拟硬盘将复制再将其附加到虚拟机。</span><span class="sxs-lookup"><span data-stu-id="bbd96-120">The virtual hard disk will be copied before being attached to the virtual machine.</span></span> <span data-ttu-id="bbd96-121">如果提供了 SourceImage，则不能存在目标虚拟硬盘。</span><span class="sxs-lookup"><span data-stu-id="bbd96-121">If SourceImage is provided, the destination virtual hard drive must not exist.</span></span>'
+    optional: true
+    syntax:
+      content: 'image?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bbd96-122">指定数据磁盘的逻辑单元号。</span><span class="sxs-lookup"><span data-stu-id="bbd96-122">Specifies the logical unit number of the data disk.</span></span> <span data-ttu-id="bbd96-123">此值用于标识在 VM 中的数据磁盘，因此必须是唯一的每个数据磁盘附加到 VM。</span><span class="sxs-lookup"><span data-stu-id="bbd96-123">This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.</span></span>
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bbd96-124">托管的磁盘的参数。</span><span class="sxs-lookup"><span data-stu-id="bbd96-124">The managed disk parameters.</span></span>
+    optional: true
+    syntax:
+      content: 'managedDisk?: ManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.ManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bbd96-125">磁盘名称。</span><span class="sxs-lookup"><span data-stu-id="bbd96-125">The disk name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.vhd'
+    name: vhd
+    fullName: vhd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bbd96-126">虚拟硬盘。</span><span class="sxs-lookup"><span data-stu-id="bbd96-126">The virtual hard disk.</span></span>
+    optional: true
+    syntax:
+      content: 'vhd?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DataDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bbd96-127">指定是否应启用或禁用在磁盘上 writeAccelerator。</span><span class="sxs-lookup"><span data-stu-id="bbd96-127">Specifies whether writeAccelerator should be enabled or disabled on the disk.</span></span>
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.DiskCreateOptionTypes'
+    name: DiskCreateOptionTypes
+    spec.typeScript:
+      - name: DiskCreateOptionTypes
+        fullName: DiskCreateOptionTypes
+        uid: '@azure/arm-compute.DiskCreateOptionTypes'
+  - uid: '@azure/arm-compute.VirtualHardDisk'
+    name: VirtualHardDisk
+    spec.typeScript:
+      - name: VirtualHardDisk
+        fullName: VirtualHardDisk
+        uid: '@azure/arm-compute.VirtualHardDisk'
+  - uid: '@azure/arm-compute.ManagedDiskParameters'
+    name: ManagedDiskParameters
+    spec.typeScript:
+      - name: ManagedDiskParameters
+        fullName: ManagedDiskParameters
+        uid: '@azure/arm-compute.ManagedDiskParameters'

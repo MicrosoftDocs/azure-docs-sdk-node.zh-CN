@@ -1,0 +1,263 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys'
+    name: QuotaByCounterKeys
+    fullName: QuotaByCounterKeys
+    children:
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_2'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_1'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.constructor'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update_2'
+      - '@azure/arm-apimanagement.QuotaByCounterKeys.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示 QuotaByCounterKeys 类。
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService'
+    name: 'listByService(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出与指定的服务实例上的策略中配置的对等密钥相关联的当前配额计数器段的集合。 该 api 不支持尚未分页。
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 配额计数器的密钥标识符。这是表达式的基于密钥的配额策略的副署键属性中定义的结果。例如，如果在指定计数器键 ="boo"在策略中，则对其进行访问的"boo"计数器项。 但是，如果它被定义为 counter-key="@("b"+"a")"则可访问的"ba"键
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_2'
+    name: 'listByService(string, string, string, RequestOptionsBase, ServiceCallback<QuotaCounterCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options: RequestOptionsBase, callback: ServiceCallback<QuotaCounterCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 配额计数器的密钥标识符。这是表达式的基于密钥的配额策略的副署键属性中定义的结果。例如，如果在指定计数器键 ="boo"在策略中，则对其进行访问的"boo"计数器项。 但是，如果它被定义为 counter-key="@("b"+"a")"则可访问的"ba"键
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.listByService_1'
+    name: 'listByService(string, string, string, ServiceCallback<QuotaCounterCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, callback: ServiceCallback<QuotaCounterCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 配额计数器的密钥标识符。这是表达式的基于密钥的配额策略的副署键属性中定义的结果。例如，如果在指定计数器键 ="boo"在策略中，则对其进行访问的"boo"计数器项。 但是，如果它被定义为 counter-key="@("b"+"a")"则可访问的"ba"键
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.QuotaByCounterKeysListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.constructor'
+    name: QuotaByCounterKeys(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建 QuotaByCounterKeys。
+    syntax:
+      content: 'new QuotaByCounterKeys(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新使用现有的配额计数器项中指定的服务实例的值指定的所有配额计数器值。 这应该用于重置配额计数器值。
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 配额计数器的密钥标识符。这是表达式的基于密钥的配额策略的副署键属性中定义的结果。例如，如果在指定计数器键 ="boo"在策略中，则对其进行访问的"boo"计数器项。 但是，如果它被定义为 counter-key="@("b"+"a")"则可访问的"ba"键
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: 要应用于所有配额计数器期间的配额计数器值。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update_2'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 配额计数器的密钥标识符。这是表达式的基于密钥的配额策略的副署键属性中定义的结果。例如，如果在指定计数器键 ="boo"在策略中，则对其进行访问的"boo"计数器项。 但是，如果它被定义为 counter-key="@("b"+"a")"则可访问的"ba"键
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: 要应用于所有配额计数器期间的配额计数器值。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.QuotaByCounterKeys.update_1'
+    name: 'update(string, string, string, QuotaCounterValueContractProperties, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: quotaCounterKey
+          type:
+            - string
+          description: 配额计数器的密钥标识符。这是表达式的基于密钥的配额策略的副署键属性中定义的结果。例如，如果在指定计数器键 ="boo"在策略中，则对其进行访问的"boo"计数器项。 但是，如果它被定义为 counter-key="@("b"+"a")"则可访问的"ba"键
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+          description: 要应用于所有配额计数器期间的配额计数器值。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-apimanagement.QuotaCounterCollection>
+    name: QuotaCounterCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: QuotaCounterCollection
+        fullName: QuotaCounterCollection
+        uid: '@azure/arm-apimanagement.QuotaCounterCollection'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-apimanagement.QuotaCounterValueContractProperties'
+    name: QuotaCounterValueContractProperties
+    spec.typeScript:
+      - name: QuotaCounterValueContractProperties
+        fullName: QuotaCounterValueContractProperties
+        uid: '@azure/arm-apimanagement.QuotaCounterValueContractProperties'

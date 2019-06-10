@@ -1,0 +1,757 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.Disks'
+    name: Disks
+    fullName: Disks
+    children:
+      - '@azure/arm-compute.Disks.beginCreateOrUpdate'
+      - '@azure/arm-compute.Disks.beginDeleteMethod'
+      - '@azure/arm-compute.Disks.beginGrantAccess'
+      - '@azure/arm-compute.Disks.beginRevokeAccess'
+      - '@azure/arm-compute.Disks.beginUpdate'
+      - '@azure/arm-compute.Disks.createOrUpdate'
+      - '@azure/arm-compute.Disks.deleteMethod'
+      - '@azure/arm-compute.Disks.constructor'
+      - '@azure/arm-compute.Disks.get'
+      - '@azure/arm-compute.Disks.get_2'
+      - '@azure/arm-compute.Disks.get_1'
+      - '@azure/arm-compute.Disks.grantAccess'
+      - '@azure/arm-compute.Disks.list'
+      - '@azure/arm-compute.Disks.list_2'
+      - '@azure/arm-compute.Disks.list_1'
+      - '@azure/arm-compute.Disks.listByResourceGroup'
+      - '@azure/arm-compute.Disks.listByResourceGroup_2'
+      - '@azure/arm-compute.Disks.listByResourceGroup_1'
+      - '@azure/arm-compute.Disks.listByResourceGroupNext'
+      - '@azure/arm-compute.Disks.listByResourceGroupNext_2'
+      - '@azure/arm-compute.Disks.listByResourceGroupNext_1'
+      - '@azure/arm-compute.Disks.listNext'
+      - '@azure/arm-compute.Disks.listNext_2'
+      - '@azure/arm-compute.Disks.listNext_1'
+      - '@azure/arm-compute.Disks.revokeAccess'
+      - '@azure/arm-compute.Disks.update'
+    langs:
+      - typeScript
+    type: class
+    summary: 类表示磁盘。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, Disk, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建或更新磁盘。
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: disk
+          type:
+            - '@azure/arm-compute.Disk'
+          description: 在 Put 磁盘操作的正文中提供的磁盘对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除磁盘。
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, diskName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.beginGrantAccess'
+    name: 'beginGrantAccess(string, string, GrantAccessData, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 授予对磁盘的访问权限。
+    syntax:
+      content: 'function beginGrantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: grantAccessData
+          type:
+            - '@azure/arm-compute.GrantAccessData'
+          description: 获取磁盘访问操作的正文中提供访问数据对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.beginRevokeAccess'
+    name: 'beginRevokeAccess(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 为磁盘的撤消访问权限。
+    syntax:
+      content: 'function beginRevokeAccess(resourceGroupName: string, diskName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.beginUpdate'
+    name: 'beginUpdate(string, string, DiskUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新 （修补程序） 磁盘。
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: disk
+          type:
+            - '@azure/arm-compute.DiskUpdate'
+          description: 修补程序磁盘操作的正文中提供的磁盘对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.createOrUpdate'
+    name: 'createOrUpdate(string, string, Disk, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建或更新磁盘。
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: disk
+          type:
+            - '@azure/arm-compute.Disk'
+          description: 在 Put 磁盘操作的正文中提供的磁盘对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksCreateOrUpdateResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除磁盘。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, diskName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.constructor'
+    name: Disks(ComputeManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建磁盘。
+    syntax:
+      content: 'new Disks(client: ComputeManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-compute.ComputeManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取有关磁盘的信息。
+    syntax:
+      content: 'function get(resourceGroupName: string, diskName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<Disk>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, diskName: string, options: RequestOptionsBase, callback: ServiceCallback<Disk>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.Disk>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.DisksGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.get_1'
+    name: 'get(string, string, ServiceCallback<Disk>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, diskName: string, callback: ServiceCallback<Disk>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.Disk>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.DisksGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.grantAccess'
+    name: 'grantAccess(string, string, GrantAccessData, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 授予对磁盘的访问权限。
+    syntax:
+      content: 'function grantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: grantAccessData
+          type:
+            - '@azure/arm-compute.GrantAccessData'
+          description: 获取磁盘访问操作的正文中提供访问数据对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksGrantAccessResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出在订阅下的所有磁盘。
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.DisksListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.list_1'
+    name: list(ServiceCallback<DiskList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.DisksListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出资源组下的所有磁盘。
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出资源组下的所有磁盘。
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.DisksListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出在订阅下的所有磁盘。
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.DisksListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.listNext_1'
+    name: 'listNext(string, ServiceCallback<DiskList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<DiskList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.DiskList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.DisksListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.revokeAccess'
+    name: 'revokeAccess(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 为磁盘的撤消访问权限。
+    syntax:
+      content: 'function revokeAccess(resourceGroupName: string, diskName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Disks.update'
+    name: 'update(string, string, DiskUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新 （修补程序） 磁盘。
+    syntax:
+      content: 'function update(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: diskName
+          type:
+            - string
+          description: 正在创建托管磁盘的名称。 创建磁盘后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: disk
+          type:
+            - '@azure/arm-compute.DiskUpdate'
+          description: 修补程序磁盘操作的正文中提供的磁盘对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DisksUpdateResponse>
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComputeManagementClientContext'
+    name: ComputeManagementClientContext
+    spec.typeScript:
+      - name: ComputeManagementClientContext
+        fullName: ComputeManagementClientContext
+        uid: '@azure/arm-compute.ComputeManagementClientContext'
+  - uid: '@azure/arm-compute.Disk'
+    name: Disk
+    spec.typeScript:
+      - name: Disk
+        fullName: Disk
+        uid: '@azure/arm-compute.Disk'
+  - uid: '@azure/arm-compute.GrantAccessData'
+    name: GrantAccessData
+    spec.typeScript:
+      - name: GrantAccessData
+        fullName: GrantAccessData
+        uid: '@azure/arm-compute.GrantAccessData'
+  - uid: '@azure/arm-compute.DiskUpdate'
+    name: DiskUpdate
+    spec.typeScript:
+      - name: DiskUpdate
+        fullName: DiskUpdate
+        uid: '@azure/arm-compute.DiskUpdate'
+  - uid: ServiceCallback<@azure/arm-compute.Disk>
+    name: Disk>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Disk
+        fullName: Disk
+        uid: '@azure/arm-compute.Disk'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-compute.DiskList>
+    name: DiskList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DiskList
+        fullName: DiskList
+        uid: '@azure/arm-compute.DiskList'
+      - name: '>'
+        fullName: '>'

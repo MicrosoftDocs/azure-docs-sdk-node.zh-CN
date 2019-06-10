@@ -1,0 +1,603 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints'
+    name: FrontendEndpoints
+    fullName: FrontendEndpoints
+    children:
+      - '@azure/arm-frontdoor.FrontendEndpoints.beginCreateOrUpdate'
+      - '@azure/arm-frontdoor.FrontendEndpoints.beginDeleteMethod'
+      - '@azure/arm-frontdoor.FrontendEndpoints.beginDisableHttps'
+      - '@azure/arm-frontdoor.FrontendEndpoints.beginEnableHttps'
+      - '@azure/arm-frontdoor.FrontendEndpoints.createOrUpdate'
+      - '@azure/arm-frontdoor.FrontendEndpoints.deleteMethod'
+      - '@azure/arm-frontdoor.FrontendEndpoints.disableHttps'
+      - '@azure/arm-frontdoor.FrontendEndpoints.enableHttps'
+      - '@azure/arm-frontdoor.FrontendEndpoints.constructor'
+      - '@azure/arm-frontdoor.FrontendEndpoints.get'
+      - '@azure/arm-frontdoor.FrontendEndpoints.get_2'
+      - '@azure/arm-frontdoor.FrontendEndpoints.get_1'
+      - '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoor'
+      - '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoor_2'
+      - '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoor_1'
+      - '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoorNext'
+      - '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoorNext_2'
+      - '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoorNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示 FrontendEndpoints 类。
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, FrontendEndpoint, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建新的前端终结点具有指定的主机名中指定第一道防线。
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, frontDoorName: string, frontendEndpointName: string, frontendEndpointParameters: FrontendEndpoint, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: frontendEndpointName
+          type:
+            - string
+          description: 这是在第一道防线中是唯一的前端终结点的名称。
+        - id: frontendEndpointParameters
+          type:
+            - '@azure/arm-frontdoor.FrontendEndpoint'
+          description: 创建新的终结点所需的前端终结点属性。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除现有的前端终结点使用指定的参数。
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, frontDoorName: string, frontendEndpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: frontendEndpointName
+          type:
+            - string
+          description: 这是在第一道防线中是唯一的前端终结点的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.beginDisableHttps'
+    name: 'beginDisableHttps(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 禁用 HTTPS 流量 frontendEndpoint
+    syntax:
+      content: 'function beginDisableHttps(resourceGroupName: string, frontDoorName: string, frontendEndpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: frontendEndpointName
+          type:
+            - string
+          description: 这是在第一道防线中是唯一的前端终结点的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.beginEnableHttps'
+    name: 'beginEnableHttps(string, string, string, CustomHttpsConfiguration, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 启用用于 HTTPS 通信 frontendEndpoint
+    syntax:
+      content: 'function beginEnableHttps(resourceGroupName: string, frontDoorName: string, frontendEndpointName: string, customHttpsConfiguration: CustomHttpsConfiguration, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: frontendEndpointName
+          type:
+            - string
+          description: 这是在第一道防线中是唯一的前端终结点的名称。
+        - id: customHttpsConfiguration
+          type:
+            - '@azure/arm-frontdoor.CustomHttpsConfiguration'
+          description: 指定如何启用 HTTPS 的配置
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, FrontendEndpoint, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建新的前端终结点具有指定的主机名中指定第一道防线。
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, frontDoorName: string, frontendEndpointName: string, frontendEndpointParameters: FrontendEndpoint, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: frontendEndpointName
+          type:
+            - string
+          description: 这是在第一道防线中是唯一的前端终结点的名称。
+        - id: frontendEndpointParameters
+          type:
+            - '@azure/arm-frontdoor.FrontendEndpoint'
+          description: 创建新的终结点所需的前端终结点属性。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FrontendEndpointsCreateOrUpdateResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除现有的前端终结点使用指定的参数。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, frontDoorName: string, frontendEndpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: frontendEndpointName
+          type:
+            - string
+          description: 这是在第一道防线中是唯一的前端终结点的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.disableHttps'
+    name: 'disableHttps(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 禁用 HTTPS 流量 frontendEndpoint
+    syntax:
+      content: 'function disableHttps(resourceGroupName: string, frontDoorName: string, frontendEndpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: frontendEndpointName
+          type:
+            - string
+          description: 这是在第一道防线中是唯一的前端终结点的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.enableHttps'
+    name: 'enableHttps(string, string, string, CustomHttpsConfiguration, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 启用用于 HTTPS 通信 frontendEndpoint
+    syntax:
+      content: 'function enableHttps(resourceGroupName: string, frontDoorName: string, frontendEndpointName: string, customHttpsConfiguration: CustomHttpsConfiguration, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: frontendEndpointName
+          type:
+            - string
+          description: 这是在第一道防线中是唯一的前端终结点的名称。
+        - id: customHttpsConfiguration
+          type:
+            - '@azure/arm-frontdoor.CustomHttpsConfiguration'
+          description: 指定如何启用 HTTPS 的配置
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.constructor'
+    name: FrontendEndpoints(FrontDoorManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建 FrontendEndpoints。
+    syntax:
+      content: 'new FrontendEndpoints(client: FrontDoorManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-frontdoor.FrontDoorManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取具有指定名称中指定第一道防线的前端终结点。
+    syntax:
+      content: 'function get(resourceGroupName: string, frontDoorName: string, frontendEndpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: frontendEndpointName
+          type:
+            - string
+          description: 这是在第一道防线中是唯一的前端终结点的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FrontendEndpointsGetResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<FrontendEndpoint>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, frontDoorName: string, frontendEndpointName: string, options: RequestOptionsBase, callback: ServiceCallback<FrontendEndpoint>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: frontendEndpointName
+          type:
+            - string
+          description: 这是在第一道防线中是唯一的前端终结点的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.FrontendEndpoint>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.FrontendEndpointsGetResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.get_1'
+    name: 'get(string, string, string, ServiceCallback<FrontendEndpoint>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, frontDoorName: string, frontendEndpointName: string, callback: ServiceCallback<FrontendEndpoint>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: frontendEndpointName
+          type:
+            - string
+          description: 这是在第一道防线中是唯一的前端终结点的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.FrontendEndpoint>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.FrontendEndpointsGetResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoor'
+    name: 'listByFrontDoor(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有中第一道防线的前端终结点。
+    syntax:
+      content: 'function listByFrontDoor(resourceGroupName: string, frontDoorName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FrontendEndpointsListByFrontDoorResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoor_2'
+    name: 'listByFrontDoor(string, string, RequestOptionsBase, ServiceCallback<FrontendEndpointsListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByFrontDoor(resourceGroupName: string, frontDoorName: string, options: RequestOptionsBase, callback: ServiceCallback<FrontendEndpointsListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.FrontendEndpointsListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.FrontendEndpointsListByFrontDoorResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoor_1'
+    name: 'listByFrontDoor(string, string, ServiceCallback<FrontendEndpointsListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByFrontDoor(resourceGroupName: string, frontDoorName: string, callback: ServiceCallback<FrontendEndpointsListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: frontDoorName
+          type:
+            - string
+          description: 第一道防线是全局唯一的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.FrontendEndpointsListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.FrontendEndpointsListByFrontDoorResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoorNext'
+    name: 'listByFrontDoorNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有中第一道防线的前端终结点。
+    syntax:
+      content: 'function listByFrontDoorNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FrontendEndpointsListByFrontDoorNextResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoorNext_2'
+    name: 'listByFrontDoorNext(string, RequestOptionsBase, ServiceCallback<FrontendEndpointsListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByFrontDoorNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<FrontendEndpointsListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.FrontendEndpointsListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.FrontendEndpointsListByFrontDoorNextResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoints.listByFrontDoorNext_1'
+    name: 'listByFrontDoorNext(string, ServiceCallback<FrontendEndpointsListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByFrontDoorNext(nextPageLink: string, callback: ServiceCallback<FrontendEndpointsListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.FrontendEndpointsListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.FrontendEndpointsListByFrontDoorNextResponse>
+    package: '@azure/arm-frontdoor'
+references:
+  - uid: '@azure/arm-frontdoor.FrontDoorManagementClientContext'
+    name: FrontDoorManagementClientContext
+    spec.typeScript:
+      - name: FrontDoorManagementClientContext
+        fullName: FrontDoorManagementClientContext
+        uid: '@azure/arm-frontdoor.FrontDoorManagementClientContext'
+  - uid: '@azure/arm-frontdoor.FrontendEndpoint'
+    name: FrontendEndpoint
+    spec.typeScript:
+      - name: FrontendEndpoint
+        fullName: FrontendEndpoint
+        uid: '@azure/arm-frontdoor.FrontendEndpoint'
+  - uid: '@azure/arm-frontdoor.CustomHttpsConfiguration'
+    name: CustomHttpsConfiguration
+    spec.typeScript:
+      - name: CustomHttpsConfiguration
+        fullName: CustomHttpsConfiguration
+        uid: '@azure/arm-frontdoor.CustomHttpsConfiguration'
+  - uid: ServiceCallback<@azure/arm-frontdoor.FrontendEndpoint>
+    name: FrontendEndpoint>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FrontendEndpoint
+        fullName: FrontendEndpoint
+        uid: '@azure/arm-frontdoor.FrontendEndpoint'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-frontdoor.FrontendEndpointsListResult>
+    name: FrontendEndpointsListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FrontendEndpointsListResult
+        fullName: FrontendEndpointsListResult
+        uid: '@azure/arm-frontdoor.FrontendEndpointsListResult'
+      - name: '>'
+        fullName: '>'

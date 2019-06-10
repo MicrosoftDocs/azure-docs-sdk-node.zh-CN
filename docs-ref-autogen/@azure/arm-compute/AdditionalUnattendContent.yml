@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.AdditionalUnattendContent'
+    name: AdditionalUnattendContent
+    fullName: AdditionalUnattendContent
+    children:
+      - '@azure/arm-compute.AdditionalUnattendContent.componentName'
+      - '@azure/arm-compute.AdditionalUnattendContent.content'
+      - '@azure/arm-compute.AdditionalUnattendContent.passName'
+      - '@azure/arm-compute.AdditionalUnattendContent.settingName'
+    langs:
+      - typeScript
+    type: interface
+    summary: 指定可以在 Windows 安装程序使用的 Unattend.xml 文件中包含的其他 XML 格式信息。 内容定义通过设置名称、 组件名称，并在其中应用内容传递。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.componentName'
+    name: componentName
+    fullName: componentName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      组件名称。 目前，唯一允许的值是 Microsoft Windows-命令行程序安装程序。
+      可能的值包括：'Microsoft-Windows-Shell-Setup'
+    optional: true
+    syntax:
+      content: 'componentName?: ComponentNames'
+      return:
+        type:
+          - '@azure/arm-compute.ComponentNames'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.content'
+    name: content
+    fullName: content
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定添加到指定的路径和组件的 unattend.xml 文件的 XML 格式的内容。 XML 必须小于 4 KB，并且必须包含的设置或功能所插入的根元素。
+    optional: true
+    syntax:
+      content: 'content?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.passName'
+    name: passName
+    fullName: passName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 阶段名称。 目前，唯一允许的值为 OobeSystem。 可能的值包括：OobeSystem
+    optional: true
+    syntax:
+      content: 'passName?: PassNames'
+      return:
+        type:
+          - '@azure/arm-compute.PassNames'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.settingName'
+    name: settingName
+    fullName: settingName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的设置的名称对其内容的应用。 可能的值包括：FirstLogonCommands 和 AutoLogon。 可能的值包括：自动登录，FirstLogonCommands
+    optional: true
+    syntax:
+      content: 'settingName?: SettingNames'
+      return:
+        type:
+          - '@azure/arm-compute.SettingNames'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComponentNames'
+    name: ComponentNames
+    spec.typeScript:
+      - name: ComponentNames
+        fullName: ComponentNames
+        uid: '@azure/arm-compute.ComponentNames'
+  - uid: '@azure/arm-compute.PassNames'
+    name: PassNames
+    spec.typeScript:
+      - name: PassNames
+        fullName: PassNames
+        uid: '@azure/arm-compute.PassNames'
+  - uid: '@azure/arm-compute.SettingNames'
+    name: SettingNames
+    spec.typeScript:
+      - name: SettingNames
+        fullName: SettingNames
+        uid: '@azure/arm-compute.SettingNames'

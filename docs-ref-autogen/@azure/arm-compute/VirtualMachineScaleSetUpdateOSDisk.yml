@@ -1,0 +1,126 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk'
+    name: VirtualMachineScaleSetUpdateOSDisk
+    fullName: VirtualMachineScaleSetUpdateOSDisk
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.caching'
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.diskSizeGB'
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.image'
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.managedDisk'
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.vhdContainers'
+      - '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="3121f-101">描述虚拟机规模集操作系统磁盘更新对象。</span><span class="sxs-lookup"><span data-stu-id="3121f-101">Describes virtual machine scale set operating system disk Update Object.</span></span> <span data-ttu-id="3121f-102">这应该用于更新 VMSS OS 磁盘。</span><span class="sxs-lookup"><span data-stu-id="3121f-102">This should be used for Updating VMSS OS Disk.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3121f-103">缓存类型。</span><span class="sxs-lookup"><span data-stu-id="3121f-103">The caching type.</span></span> <span data-ttu-id="3121f-104">可能的值包括：None、 ReadOnly，ReadWrite</span><span class="sxs-lookup"><span data-stu-id="3121f-104">Possible values include: ''None'', ''ReadOnly'', ''ReadWrite''</span></span>'
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3121f-105">指定操作系统磁盘的大小在千兆字节为单位。</span><span class="sxs-lookup"><span data-stu-id="3121f-105">Specifies the size of the operating system disk in gigabytes.</span></span> <span data-ttu-id="3121f-106">可以使用此元素覆盖虚拟机映像中磁盘的大小。</span><span class="sxs-lookup"><span data-stu-id="3121f-106">This element can be used to overwrite the size of the disk in a virtual machine image.</span></span> <br><br> <span data-ttu-id="3121f-107">此值不能大于 1023 GB</span><span class="sxs-lookup"><span data-stu-id="3121f-107">This value cannot be larger than 1023 GB</span></span>
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.image'
+    name: image
+    fullName: image
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3121f-108">源用户映像 VirtualHardDisk。</span><span class="sxs-lookup"><span data-stu-id="3121f-108">The Source User Image VirtualHardDisk.</span></span> <span data-ttu-id="3121f-109">然后使用它来将附加到虚拟机将复制此 VirtualHardDisk。</span><span class="sxs-lookup"><span data-stu-id="3121f-109">This VirtualHardDisk will be copied before using it to attach to the Virtual Machine.</span></span> <span data-ttu-id="3121f-110">如果提供了 SourceImage，则目标 VirtualHardDisk 不应存在。</span><span class="sxs-lookup"><span data-stu-id="3121f-110">If SourceImage is provided, the destination VirtualHardDisk should not exist.</span></span>'
+    optional: true
+    syntax:
+      content: 'image?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3121f-111">托管的磁盘的参数。</span><span class="sxs-lookup"><span data-stu-id="3121f-111">The managed disk parameters.</span></span>
+    optional: true
+    syntax:
+      content: 'managedDisk?: VirtualMachineScaleSetManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.vhdContainers'
+    name: vhdContainers
+    fullName: vhdContainers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3121f-112">虚拟硬盘容器的列表的 uri。</span><span class="sxs-lookup"><span data-stu-id="3121f-112">The list of virtual hard disk container uris.</span></span>
+    optional: true
+    syntax:
+      content: 'vhdContainers?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetUpdateOSDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3121f-113">指定是否应启用或禁用在磁盘上 writeAccelerator。</span><span class="sxs-lookup"><span data-stu-id="3121f-113">Specifies whether writeAccelerator should be enabled or disabled on the disk.</span></span>
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.VirtualHardDisk'
+    name: VirtualHardDisk
+    spec.typeScript:
+      - name: VirtualHardDisk
+        fullName: VirtualHardDisk
+        uid: '@azure/arm-compute.VirtualHardDisk'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    name: VirtualMachineScaleSetManagedDiskParameters
+    spec.typeScript:
+      - name: VirtualMachineScaleSetManagedDiskParameters
+        fullName: VirtualMachineScaleSetManagedDiskParameters
+        uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'

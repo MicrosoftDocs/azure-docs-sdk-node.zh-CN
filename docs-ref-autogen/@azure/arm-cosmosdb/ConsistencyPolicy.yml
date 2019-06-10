@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy'
+    name: ConsistencyPolicy
+    fullName: ConsistencyPolicy
+    children:
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.defaultConsistencyLevel'
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.maxIntervalInSeconds'
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.maxStalenessPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: Cosmos DB 数据库帐户的一致性策略。
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.defaultConsistencyLevel'
+    name: defaultConsistencyLevel
+    fullName: defaultConsistencyLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 默认一致性级别和配置设置的 Cosmos DB 帐户。 可能的值包括：最终、 会话、 BoundedStaleness、 强、 ConsistentPrefix
+    syntax:
+      content: 'defaultConsistencyLevel: DefaultConsistencyLevel'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.DefaultConsistencyLevel'
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.maxIntervalInSeconds'
+    name: maxIntervalInSeconds
+    fullName: maxIntervalInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 当使用具有有限过期一致性级别，此值表示容忍长过期时间 （以秒为单位） 的时间量。 此值可接受范围内是 5 86400。 所需 defaultConsistencyPolicy 设置为 BoundedStaleness 时。
+    optional: true
+    syntax:
+      content: 'maxIntervalInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.maxStalenessPrefix'
+    name: maxStalenessPrefix
+    fullName: maxStalenessPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '当使用具有有限过期一致性级别，此值表示允许的过期请求数。 此值的接受范围为 1 – 2,147,483,647。 所需 defaultConsistencyPolicy 设置为 BoundedStaleness 时。'
+    optional: true
+    syntax:
+      content: 'maxStalenessPrefix?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.DefaultConsistencyLevel'
+    name: DefaultConsistencyLevel
+    spec.typeScript:
+      - name: DefaultConsistencyLevel
+        fullName: DefaultConsistencyLevel
+        uid: '@azure/arm-cosmosdb.DefaultConsistencyLevel'

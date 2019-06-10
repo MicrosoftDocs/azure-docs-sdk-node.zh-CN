@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.ReplicationStatus'
+    name: ReplicationStatus
+    fullName: ReplicationStatus
+    children:
+      - '@azure/arm-compute.ReplicationStatus.aggregatedState'
+      - '@azure/arm-compute.ReplicationStatus.summary'
+    langs:
+      - typeScript
+    type: interface
+    summary: 这是映像版本库的复制状态。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ReplicationStatus.aggregatedState'
+    name: aggregatedState
+    fullName: aggregatedState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      这是基于所有区域的复制状态标志的聚合的复制状态。
+      可能的值包括：未知，正在进行已完成，失败**注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'aggregatedState?: AggregatedReplicationState'
+      return:
+        type:
+          - '@azure/arm-compute.AggregatedReplicationState'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ReplicationStatus.summary'
+    name: summary
+    fullName: summary
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      这是为每个区域的复制状态的摘要。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'summary?: RegionalReplicationStatus[]'
+      return:
+        type:
+          - '@azure/arm-compute.RegionalReplicationStatus[]'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.AggregatedReplicationState'
+    name: AggregatedReplicationState
+    spec.typeScript:
+      - name: AggregatedReplicationState
+        fullName: AggregatedReplicationState
+        uid: '@azure/arm-compute.AggregatedReplicationState'
+  - uid: '@azure/arm-compute.RegionalReplicationStatus[]'
+    name: 'RegionalReplicationStatus[]'
+    spec.typeScript:
+      - name: RegionalReplicationStatus
+        fullName: RegionalReplicationStatus
+        uid: '@azure/arm-compute.RegionalReplicationStatus'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,333 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SubscriptionClient'
+    name: SubscriptionClient
+    fullName: SubscriptionClient
+    children:
+      - '@azure/service-bus.SubscriptionClient.addRule'
+      - '@azure/service-bus.SubscriptionClient.close'
+      - '@azure/service-bus.SubscriptionClient.createReceiver'
+      - '@azure/service-bus.SubscriptionClient.createReceiver_1'
+      - '@azure/service-bus.SubscriptionClient.defaultRuleName'
+      - '@azure/service-bus.SubscriptionClient.entityPath'
+      - '@azure/service-bus.SubscriptionClient.getRules'
+      - '@azure/service-bus.SubscriptionClient.id'
+      - '@azure/service-bus.SubscriptionClient.peek'
+      - '@azure/service-bus.SubscriptionClient.peekBySequenceNumber'
+      - '@azure/service-bus.SubscriptionClient.removeRule'
+      - '@azure/service-bus.SubscriptionClient.subscriptionName'
+      - '@azure/service-bus.SubscriptionClient.topicName'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      <span data-ttu-id="4d5b5-101">描述允许与服务总线订阅交互的客户端。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-101">Describes the client that allows interacting with a Service Bus Subscription.</span></span>
+      <span data-ttu-id="4d5b5-102">使用`createSubscriptionClient`ServiceBusClient 对象来实例化 SubscriptionClient 函数</span><span class="sxs-lookup"><span data-stu-id="4d5b5-102">Use the `createSubscriptionClient` function on the ServiceBusClient object to instantiate a SubscriptionClient</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.addRule'
+    name: 'addRule(string, boolean | string | CorrelationFilter, undefined | string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="4d5b5-103">给定的规则名称、 筛选器和操作定义的订阅上添加一个规则。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-103">Adds a rule on the subscription as defined by the given rule name, filter and action.</span></span>
+      <span data-ttu-id="4d5b5-104">**注意**：删除然后再添加一条规则订阅上的默认值，则返回 true 筛选器。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-104">**Note**: Remove the default true filter on the subscription before adding a rule.</span></span>
+      <span data-ttu-id="4d5b5-105">否则，添加了的规则会有任何影响，因为真正的筛选器始终会导致订阅接收所有消息。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-105">Otherwise, the added rule will have no affect as the true filter will always result in the subscription receiving all messages.</span></span>
+    syntax:
+      content: 'function addRule(ruleName: string, filter: boolean | string | CorrelationFilter, sqlRuleActionExpression?: undefined | string)'
+      parameters:
+        - id: ruleName
+          type:
+            - string
+          description: <span data-ttu-id="4d5b5-106">规则名称</span><span class="sxs-lookup"><span data-stu-id="4d5b5-106">Name of the rule</span></span>
+        - id: filter
+          type:
+            - boolean | string | @azure/service-bus.CorrelationFilter
+          description: '<span data-ttu-id="4d5b5-107">一个布尔值，SQL 表达式或相关筛选器。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-107">A Boolean, SQL expression or a Correlation filter.</span></span> <span data-ttu-id="4d5b5-108">SQL 筛选器语法，请参阅[SQLFilter 语法](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-sql-filter)。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-108">For SQL Filter syntax, see [SQLFilter syntax](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-sql-filter).</span></span>'
+        - id: sqlRuleActionExpression
+          type:
+            - undefined | string
+          description: |
+            <span data-ttu-id="4d5b5-109">消息满足筛选表达式时要执行的操作。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-109">Action to perform if the message satisfies the filtering expression.</span></span> <span data-ttu-id="4d5b5-110">有关 SQL 规则操作语法，请参阅[SQLRuleAction 语法](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-sql-rule-action)。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-110">For SQL Rule Action syntax, see [SQLRuleAction syntax](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-sql-rule-action).</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="4d5b5-111">关闭 AMQP 链接适用于创建此客户端的接收器。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-111">Closes the AMQP link for the receivers created by this client.</span></span>
+      <span data-ttu-id="4d5b5-112">关闭之后，SubscriptionClient 和其接收方都不可以用于任何进一步的操作。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-112">Once closed, neither the SubscriptionClient nor its receivers can be used for any further operations.</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.createReceiver'
+    name: createReceiver(ReceiveMode)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="4d5b5-113">创建用于从订阅没有启用会话接收的消息接收方。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-113">Creates a Receiver for receiving messages from a Subscription which does not have sessions enabled.</span></span>
+      - <span data-ttu-id="4d5b5-114">如果打开的接收方已存在此 SubscriptionClient，将引发错误。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-114">Throws error if an open receiver already exists for this SubscriptionClient.</span></span>
+      - <span data-ttu-id="4d5b5-115">将引发`InvalidOperationError`如果订阅包含启用的会话 (在这种情况下，使用采用此方法的重载`sessionOptions`参数)</span><span class="sxs-lookup"><span data-stu-id="4d5b5-115">Throws `InvalidOperationError` if the Subscription has sessions enabled (in which case, use the overload of this method which takes `sessionOptions` argument)</span></span>
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |
+            <span data-ttu-id="4d5b5-116">一个枚举，指示应在其中接收消息的模式。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-116">An enum indicating the mode in which messages should be received.</span></span> <span data-ttu-id="4d5b5-117">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="4d5b5-117">Possible values are:</span></span>
+            - <span data-ttu-id="4d5b5-118">`ReceiveMode.peekLock`：一旦在此模式下收到一条消息，接收方具有对锁定消息的特定持续时间。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-118">`ReceiveMode.peekLock`: Once a message is received in this mode, the receiver has a lock on the message for a particular duration.</span></span> <span data-ttu-id="4d5b5-119">如果消息不处置此时间，它进入返回下一步要提取的服务总线接收操作。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-119">If the message is not settled by this time, it lands back on Service Bus to be fetched by the next receive operation.</span></span>
+            - <span data-ttu-id="4d5b5-120">`ReceiveMode.receiveAndDelete`：从服务总线会自动删除在此模式下收到的消息。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-120">`ReceiveMode.receiveAndDelete`: Messages received in this mode get automatically removed from Service Bus.</span></span>
+      return:
+        type:
+          - '@azure/service-bus.Receiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.createReceiver_1'
+    name: 'createReceiver(ReceiveMode, SessionReceiverOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="4d5b5-121">创建接收方在会话中接收消息已启用的订阅。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-121">Creates a Receiver for receiving messages from a session enabled Subscription.</span></span> <span data-ttu-id="4d5b5-122">当给定没有会话 Id 时，使用可用的会话之间的随机会话。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-122">When no sessionId is given, a random session among the available sessions is used.</span></span>
+      - <span data-ttu-id="4d5b5-123">如果打开的接收方已存在为给定的会话 Id，将引发错误。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-123">Throws error if an open receiver already exists for given sessionId.</span></span>
+      - <span data-ttu-id="4d5b5-124">将引发`SessionCannotBeLockedError`如果订阅没有启用会话 (在这种情况下不传递`sessionOptions`参数) 或服务总线不是能够在会话 （在哪些情况下则重试一段时间后） 上获取锁</span><span class="sxs-lookup"><span data-stu-id="4d5b5-124">Throws `SessionCannotBeLockedError` if the Subscription does not have sessions enabled (in which case do not pass the `sessionOptions` argument) or if Service Bus is not able to get a lock on the session (in which case try again after some time)</span></span>
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode, sessionOptions: SessionReceiverOptions)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |-
+            <span data-ttu-id="4d5b5-125">一个枚举，指示应在其中接收消息的模式。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-125">An enum indicating the mode in which messages should be received.</span></span> <span data-ttu-id="4d5b5-126">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="4d5b5-126">Possible values are:</span></span>
+            - <span data-ttu-id="4d5b5-127">`ReceiveMode.peekLock`：一旦在此模式下收到一条消息，接收方具有对锁定消息的特定持续时间。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-127">`ReceiveMode.peekLock`: Once a message is received in this mode, the receiver has a lock on the message for a particular duration.</span></span> <span data-ttu-id="4d5b5-128">如果消息不处置此时间，它进入返回下一步要提取的服务总线接收操作。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-128">If the message is not settled by this time, it lands back on Service Bus to be fetched by the next receive operation.</span></span>
+            - <span data-ttu-id="4d5b5-129">`ReceiveMode.receiveAndDelete`：从服务总线会自动删除在此模式下收到的消息。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-129">`ReceiveMode.receiveAndDelete`: Messages received in this mode get automatically removed from Service Bus.</span></span>
+        - id: sessionOptions
+          type:
+            - '@azure/service-bus.SessionReceiverOptions'
+          description: |
+            <span data-ttu-id="4d5b5-130">若要为会话接收程序提供 sessionId 和自动锁定续订的持续时间的选项。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-130">Options to provide sessionId and duration of automatic lock renewal for the session receiver.</span></span>
+      return:
+        type:
+          - '@azure/service-bus.SessionReceiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.defaultRuleName'
+    name: defaultRuleName
+    fullName: defaultRuleName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4d5b5-131">在订阅上的默认规则的名称。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-131">The name of the default rule on the subscription.</span></span>
+    syntax:
+      content: 'defaultRuleName: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4d5b5-132">为其创建此客户端的服务总线订阅的路径。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-132">The path for the Service Bus Subscription for which this client is created.</span></span>
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.getRules'
+    name: getRules()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d5b5-133">获取与订阅关联的所有规则</span><span class="sxs-lookup"><span data-stu-id="4d5b5-133">Gets all rules associated with the subscription</span></span>
+    syntax:
+      content: function getRules()
+      parameters: []
+      return:
+        type:
+          - 'Promise<@azure/service-bus.RuleDescription[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4d5b5-134">此客户端唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-134">A unique identifier for this client.</span></span>
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.peek'
+    name: peek(undefined | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="4d5b5-135">提取下一批的活动消息 （包括但不是死信消息延迟）。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-135">Fetches the next batch of active messages (including deferred but not deadlettered messages).</span></span>
+      - <span data-ttu-id="4d5b5-136">首次调用`peek()`提取第一个活动消息。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-136">The first call to `peek()` fetches the first active message.</span></span> <span data-ttu-id="4d5b5-137">每个后续调用中获取的后续消息。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-137">Each subsequent call fetches the subsequent message.</span></span>
+      - <span data-ttu-id="4d5b5-138">与不同`received`消息，`peeked`消息是消息的只读版本。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-138">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="4d5b5-139">它不能为`Completed/Abandoned/Deferred/Deadlettered`。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-139">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="4d5b5-140">无法续订锁。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-140">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peek(maxMessageCount?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.peekBySequenceNumber'
+    name: 'peekBySequenceNumber(Long, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="4d5b5-141">查看所需的活动消息数 （包括但不是死信消息延迟） 从指定的序列号。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-141">Peeks the desired number of active messages (including deferred but not deadlettered messages) from the specified sequence number.</span></span>
+      - <span data-ttu-id="4d5b5-142">与不同`received`消息，`peeked`消息是消息的只读版本。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-142">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="4d5b5-143">它不能为`Completed/Abandoned/Deferred/Deadlettered`。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-143">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="4d5b5-144">无法续订锁。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-144">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peekBySequenceNumber(fromSequenceNumber: Long, maxMessageCount?: undefined | number)'
+      parameters:
+        - id: fromSequenceNumber
+          type:
+            - Long
+          description: <span data-ttu-id="4d5b5-145">从中读取消息序列号。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-145">The sequence number from where to read the message.</span></span>
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.removeRule'
+    name: removeRule(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="4d5b5-146">删除由给定的规则名称标识的订阅规则。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-146">Removes the rule on the subscription identified by the given rule name.</span></span>
+      <span data-ttu-id="4d5b5-147">**警告：**:如果移除订阅上的所有规则，则订阅将不会收到更多消息。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-147">**Caution**: If all rules on a subscription are removed, then the subscription will not receive any more messages.</span></span>
+    syntax:
+      content: 'function removeRule(ruleName: string)'
+      parameters:
+        - id: ruleName
+          type:
+            - string
+          description: |+
+
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.subscriptionName'
+    name: subscriptionName
+    fullName: subscriptionName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4d5b5-148">为其创建此客户端的服务总线订阅的名称。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-148">The name of the Service Bus Subscription for which this client is created.</span></span>
+    syntax:
+      content: 'subscriptionName: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.topicName'
+    name: topicName
+    fullName: topicName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4d5b5-149">创建其订阅服务总线主题的名称，此客户端。</span><span class="sxs-lookup"><span data-stu-id="4d5b5-149">The name of the Service Bus Topic for whose Subscription, this client is created.</span></span>'
+    syntax:
+      content: 'topicName: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: boolean | string | @azure/service-bus.CorrelationFilter
+    name: CorrelationFilter
+    spec.typeScript:
+      - name: 'boolean | string | '
+        fullName: 'boolean | string | '
+      - name: CorrelationFilter
+        fullName: CorrelationFilter
+        uid: '@azure/service-bus.CorrelationFilter'
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    spec.typeScript:
+      - name: Receiver
+        fullName: Receiver
+        uid: '@azure/service-bus.Receiver'
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    spec.typeScript:
+      - name: SessionReceiverOptions
+        fullName: SessionReceiverOptions
+        uid: '@azure/service-bus.SessionReceiverOptions'
+  - uid: '@azure/service-bus.SessionReceiver'
+    name: SessionReceiver
+    spec.typeScript:
+      - name: SessionReceiver
+        fullName: SessionReceiver
+        uid: '@azure/service-bus.SessionReceiver'
+  - uid: 'Promise<@azure/service-bus.RuleDescription[]>'
+    name: 'RuleDescription[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: RuleDescription
+        fullName: RuleDescription
+        uid: '@azure/service-bus.RuleDescription'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    name: 'ReceivedMessageInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+      - name: '[]>'
+        fullName: '[]>'

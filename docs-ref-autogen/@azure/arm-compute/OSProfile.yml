@@ -1,0 +1,167 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.OSProfile'
+    name: OSProfile
+    fullName: OSProfile
+    children:
+      - '@azure/arm-compute.OSProfile.adminPassword'
+      - '@azure/arm-compute.OSProfile.adminUsername'
+      - '@azure/arm-compute.OSProfile.allowExtensionOperations'
+      - '@azure/arm-compute.OSProfile.computerName'
+      - '@azure/arm-compute.OSProfile.customData'
+      - '@azure/arm-compute.OSProfile.linuxConfiguration'
+      - '@azure/arm-compute.OSProfile.secrets'
+      - '@azure/arm-compute.OSProfile.windowsConfiguration'
+    langs:
+      - typeScript
+    type: interface
+    summary: 指定虚拟机的操作系统设置。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.adminPassword'
+    name: adminPassword
+    fullName: adminPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定的管理员帐户的密码。 <br><br> **最小长度 (Windows):** 8 个字符 <br><br> **最小长度 (Linux):** 6 个字符 <br><br> **最大长度 (Windows):** 123 个字符 <br><br> **最大长度 (Linux):** 72 个字符 <br><br>
+      **复杂性要求：** 四分之三的条件下需要满足 <br> 具有较低的字符 <br>具有大写字符 <br> 有一个数字 <br> 中有特殊字符 （正则表达式匹配 [\W_]） <br><br> **不允许的值：** "abc@123"，"P@$$w0rd""P@ssw0rd"，"P@ssword123"，"Pa$ $word"，"pass@word1"，"密码 ！"、"Password1"、"Password22"、"iloveyou ！" <br><br> 有关重置密码，请参阅[如何重置远程桌面服务或 Windows VM 中的其登录密码](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> 有关重置根密码，请参阅[管理用户、 SSH，并检查或修复磁盘上使用 VMAccess 扩展在 Azure Linux Vm](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)
+    optional: true
+    syntax:
+      content: 'adminPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.adminUsername'
+    name: adminUsername
+    fullName: adminUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定管理员帐户的名称。 <br><br> **仅限 Windows 的限制：** 不能以结尾"。" <br><br> **不允许的值：** "administrator"、"admin"、"user"、"user1"、"测试"、"user2"、"test1"、"user3"、"admin1"，"1"、"123"，"a"、"actuser"、"adm"、"管理员 2"、"aspnet"、"备份"、"控制台"、"david"、"来宾"、"john"、"所有者"、"root"、"服务器"，"sql"、"支持"、"support_388945a0"、"sys"、"test2"、"test3"、"用户 4"、"user5"。 <br><br> **最小长度 (Linux):** 1 个字符 <br><br> **最大长度 (Linux):** 64 个字符 <br><br> **最大长度 (Windows):** 20 个字符  <br><br><li> 到 Linux VM 的根访问权限，请参阅[在 Azure 中 Linux 虚拟机上使用根权限](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li>
+      不应在此字段中使用的 Linux 上的内置系统用户的列表，请参阅[Azure 上的 Linux 选择用户名](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+    optional: true
+    syntax:
+      content: 'adminUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.allowExtensionOperations'
+    name: allowExtensionOperations
+    fullName: allowExtensionOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定是否应在虚拟机上允许扩展操作。 <br><br>这可能仅设置为 False 时不扩展存在虚拟机上。
+    optional: true
+    syntax:
+      content: 'allowExtensionOperations?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.computerName'
+    name: computerName
+    fullName: computerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '指定虚拟机的主机 OS 名称。 <br><br> 在创建 VM 后，无法更新此名称。 <br><br> **最大长度 (Windows):** 15 个字符 <br><br> **最大长度 (Linux):** 64 个字符。 <br><br> 用于命名约定和限制，请参阅[Azure 基础结构服务实施准则](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions)。'
+    optional: true
+    syntax:
+      content: 'computerName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.customData'
+    name: customData
+    fullName: customData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '指定自定义数据的 base-64 编码的字符串。 Base-64 编码的字符串解码为一个二进制数组保存为虚拟机上的文件。 该二元数组的最大长度为 65535 字节。 <br><br> 有关如何为 VM 使用的 cloud-init，请参阅[使用 cloud-init 在创建期间自定义 Linux VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)'
+    optional: true
+    syntax:
+      content: 'customData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.linuxConfiguration'
+    name: linuxConfiguration
+    fullName: linuxConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定虚拟机上的 Linux 操作系统设置。 <br><br>有关支持的 Linux 分发的列表，请参阅[Linux azure 认可的分发](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+      <br><br> 运行非认可分发版，请参阅[有关非认可分发的信息](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)。
+    optional: true
+    syntax:
+      content: 'linuxConfiguration?: LinuxConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.LinuxConfiguration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.secrets'
+    name: secrets
+    fullName: secrets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定应安装在虚拟机上的证书集。
+    optional: true
+    syntax:
+      content: 'secrets?: VaultSecretGroup[]'
+      return:
+        type:
+          - '@azure/arm-compute.VaultSecretGroup[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.windowsConfiguration'
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定虚拟机上的 Windows 操作系统设置。
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WindowsConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.LinuxConfiguration'
+    name: LinuxConfiguration
+    spec.typeScript:
+      - name: LinuxConfiguration
+        fullName: LinuxConfiguration
+        uid: '@azure/arm-compute.LinuxConfiguration'
+  - uid: '@azure/arm-compute.VaultSecretGroup[]'
+    name: 'VaultSecretGroup[]'
+    spec.typeScript:
+      - name: VaultSecretGroup
+        fullName: VaultSecretGroup
+        uid: '@azure/arm-compute.VaultSecretGroup'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: '@azure/arm-compute.WindowsConfiguration'

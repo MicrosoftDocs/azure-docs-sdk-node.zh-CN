@@ -1,0 +1,757 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.Snapshots'
+    name: Snapshots
+    fullName: Snapshots
+    children:
+      - '@azure/arm-compute.Snapshots.beginCreateOrUpdate'
+      - '@azure/arm-compute.Snapshots.beginDeleteMethod'
+      - '@azure/arm-compute.Snapshots.beginGrantAccess'
+      - '@azure/arm-compute.Snapshots.beginRevokeAccess'
+      - '@azure/arm-compute.Snapshots.beginUpdate'
+      - '@azure/arm-compute.Snapshots.createOrUpdate'
+      - '@azure/arm-compute.Snapshots.deleteMethod'
+      - '@azure/arm-compute.Snapshots.get'
+      - '@azure/arm-compute.Snapshots.get_2'
+      - '@azure/arm-compute.Snapshots.get_1'
+      - '@azure/arm-compute.Snapshots.grantAccess'
+      - '@azure/arm-compute.Snapshots.list'
+      - '@azure/arm-compute.Snapshots.list_2'
+      - '@azure/arm-compute.Snapshots.list_1'
+      - '@azure/arm-compute.Snapshots.listByResourceGroup'
+      - '@azure/arm-compute.Snapshots.listByResourceGroup_2'
+      - '@azure/arm-compute.Snapshots.listByResourceGroup_1'
+      - '@azure/arm-compute.Snapshots.listByResourceGroupNext'
+      - '@azure/arm-compute.Snapshots.listByResourceGroupNext_2'
+      - '@azure/arm-compute.Snapshots.listByResourceGroupNext_1'
+      - '@azure/arm-compute.Snapshots.listNext'
+      - '@azure/arm-compute.Snapshots.listNext_2'
+      - '@azure/arm-compute.Snapshots.listNext_1'
+      - '@azure/arm-compute.Snapshots.revokeAccess'
+      - '@azure/arm-compute.Snapshots.constructor'
+      - '@azure/arm-compute.Snapshots.update'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示快照的类。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, Snapshot, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建或更新快照。
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: snapshot
+          type:
+            - '@azure/arm-compute.Snapshot'
+          description: 快照 Put 磁盘操作的正文中提供对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除快照。
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, snapshotName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.beginGrantAccess'
+    name: 'beginGrantAccess(string, string, GrantAccessData, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 授予对快照的访问权限。
+    syntax:
+      content: 'function beginGrantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: grantAccessData
+          type:
+            - '@azure/arm-compute.GrantAccessData'
+          description: 获取快照访问操作的正文中提供访问数据对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.beginRevokeAccess'
+    name: 'beginRevokeAccess(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 为快照撤消访问权限。
+    syntax:
+      content: 'function beginRevokeAccess(resourceGroupName: string, snapshotName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.beginUpdate'
+    name: 'beginUpdate(string, string, SnapshotUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新 （修补程序） 快照。
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: snapshot
+          type:
+            - '@azure/arm-compute.SnapshotUpdate'
+          description: 修补快照操作的正文中提供了快照的对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.createOrUpdate'
+    name: 'createOrUpdate(string, string, Snapshot, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建或更新快照。
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: snapshot
+          type:
+            - '@azure/arm-compute.Snapshot'
+          description: 快照 Put 磁盘操作的正文中提供对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsCreateOrUpdateResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除快照。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, snapshotName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取有关快照的信息。
+    syntax:
+      content: 'function get(resourceGroupName: string, snapshotName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, snapshotName: string, options: RequestOptionsBase, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.Snapshot>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.SnapshotsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.get_1'
+    name: 'get(string, string, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.Snapshot>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.SnapshotsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.grantAccess'
+    name: 'grantAccess(string, string, GrantAccessData, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 授予对快照的访问权限。
+    syntax:
+      content: 'function grantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: grantAccessData
+          type:
+            - '@azure/arm-compute.GrantAccessData'
+          description: 获取快照访问操作的正文中提供访问数据对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsGrantAccessResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出在订阅下的快照。
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.SnapshotsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.list_1'
+    name: list(ServiceCallback<SnapshotList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.SnapshotsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出资源组下的快照。
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出资源组下的快照。
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出在订阅下的快照。
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.SnapshotsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listNext_1'
+    name: 'listNext(string, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.SnapshotsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.revokeAccess'
+    name: 'revokeAccess(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 为快照撤消访问权限。
+    syntax:
+      content: 'function revokeAccess(resourceGroupName: string, snapshotName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.constructor'
+    name: Snapshots(ComputeManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建快照。
+    syntax:
+      content: 'new Snapshots(client: ComputeManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-compute.ComputeManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.update'
+    name: 'update(string, string, SnapshotUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新 （修补程序） 快照。
+    syntax:
+      content: 'function update(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: snapshotName
+          type:
+            - string
+          description: 正在创建的快照的名称。 创建快照后，无法更改名称。 受支持的名称的字符是 a-z、 A-Z、 0-9 和 _。 最大名称长度为 80 个字符。
+        - id: snapshot
+          type:
+            - '@azure/arm-compute.SnapshotUpdate'
+          description: 修补快照操作的正文中提供了快照的对象。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsUpdateResponse>
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComputeManagementClientContext'
+    name: ComputeManagementClientContext
+    spec.typeScript:
+      - name: ComputeManagementClientContext
+        fullName: ComputeManagementClientContext
+        uid: '@azure/arm-compute.ComputeManagementClientContext'
+  - uid: '@azure/arm-compute.Snapshot'
+    name: Snapshot
+    spec.typeScript:
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/arm-compute.Snapshot'
+  - uid: '@azure/arm-compute.GrantAccessData'
+    name: GrantAccessData
+    spec.typeScript:
+      - name: GrantAccessData
+        fullName: GrantAccessData
+        uid: '@azure/arm-compute.GrantAccessData'
+  - uid: '@azure/arm-compute.SnapshotUpdate'
+    name: SnapshotUpdate
+    spec.typeScript:
+      - name: SnapshotUpdate
+        fullName: SnapshotUpdate
+        uid: '@azure/arm-compute.SnapshotUpdate'
+  - uid: ServiceCallback<@azure/arm-compute.Snapshot>
+    name: Snapshot>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/arm-compute.Snapshot'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-compute.SnapshotList>
+    name: SnapshotList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SnapshotList
+        fullName: SnapshotList
+        uid: '@azure/arm-compute.SnapshotList'
+      - name: '>'
+        fullName: '>'

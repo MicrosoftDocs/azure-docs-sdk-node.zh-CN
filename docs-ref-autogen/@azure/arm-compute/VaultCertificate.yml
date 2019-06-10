@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VaultCertificate'
+    name: VaultCertificate
+    fullName: VaultCertificate
+    children:
+      - '@azure/arm-compute.VaultCertificate.certificateStore'
+      - '@azure/arm-compute.VaultCertificate.certificateUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述在密钥保管库中的单个证书引用，该证书应位于 VM。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateStore'
+    name: certificateStore
+    fullName: certificateStore
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 对于 Windows Vm，应将证书添加到的虚拟机上指定的证书存储区。 指定的证书存储在 LocalMachine 帐户中是隐式。 <br><br>适用于 Linux Vm，证书文件被置于 /var/lib/waagent 目录，用文件名称下&lt;UppercaseThumbprint&gt;.crt x509 证书文件并&lt;UppercaseThumbprint&gt;.prv 为私有密钥。 这两个文件是.pem 格式。
+    optional: true
+    syntax:
+      content: 'certificateStore?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      这是证书的已上传到密钥保管库以机密形式的 URL。 有关将机密添加到密钥保管库，请参阅[将密钥或机密添加到密钥保管库](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add)。 在这种情况下，证书需要是它是以下 JSON 的 Base64 编码对象的以 utf-8 编码： <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>
+      "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

@@ -1,0 +1,48 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions'
+    name: SessionMessageHandlerOptions
+    fullName: SessionMessageHandlerOptions
+    children:
+      - '@azure/service-bus.SessionMessageHandlerOptions.autoComplete'
+      - '@azure/service-bus.SessionMessageHandlerOptions.maxConcurrentCalls'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述传递到的选项`registerMessageHandler`方法在从已启用会话的队列/订阅接收消息时。
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions.autoComplete'
+    name: autoComplete
+    fullName: autoComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指示是否`complete()`方法对消息应会自动在由 sdk 后调用用户提供执行活动消息处理程序。
+      调用`complete()`上一条消息将其删除从队列/订阅。
+      - **默认值**: `true`。
+    optional: true
+    syntax:
+      content: 'autoComplete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions.maxConcurrentCalls'
+    name: maxConcurrentCalls
+    fullName: maxConcurrentCalls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      最大的库可以对用户的消息处理程序进行并发调用数。 一旦达到此限制，更多的消息将不会收到直到至少有一个到用户的消息处理程序调用已完成。
+      - **默认值**: `1`。
+    optional: true
+    syntax:
+      content: 'maxConcurrentCalls?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'

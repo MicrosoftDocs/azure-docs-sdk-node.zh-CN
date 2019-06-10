@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters'
+    name: ProductEntityBaseParameters
+    fullName: ProductEntityBaseParameters
+    children:
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.approvalRequired'
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.description'
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.state'
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.subscriptionRequired'
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.subscriptionsLimit'
+      - '@azure/arm-apimanagement.ProductEntityBaseParameters.terms'
+    langs:
+      - typeScript
+    type: interface
+    summary: 产品实体基参数
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.approvalRequired'
+    name: approvalRequired
+    fullName: approvalRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 是否将需要订阅批准。 如果为 false，将自动使开发人员能够订阅后立即调用产品的 Api 批准新的订阅。 如果为 true，管理员必须手动审批订阅之前，开发人员可以任何产品的 Api。 仅当 subscriptionRequired 属性存在且具有值为 false，则可以会显示。
+    optional: true
+    syntax:
+      content: 'approvalRequired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 产品说明。 可以包含 HTML 格式标记。
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '是否发布产品。 已发布应用程序进行开发人员门户的用户。 非已发布应用程序是仅对管理员可见。 产品的默认状态为 notPublished。 可能的值包括: notPublished，发布'
+    optional: true
+    syntax:
+      content: 'state?: ProductState'
+      return:
+        type:
+          - '@azure/arm-apimanagement.ProductState'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.subscriptionRequired'
+    name: subscriptionRequired
+    fullName: subscriptionRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      此产品中包含访问 Api 是否产品订阅所需的。 如果为 true，该产品称为"保护"，并且有效的订阅密钥需要向产品中包括的 API 请求才能成功。 如果为 false，该产品称为"打开"，而向产品中包括的 API 的请求可成为而无需订阅密钥。
+      如果创建假定它的值的新产品时省略属性，则为 true。
+    optional: true
+    syntax:
+      content: 'subscriptionRequired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.subscriptionsLimit'
+    name: subscriptionsLimit
+    fullName: subscriptionsLimit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 是否对此产品可以具有的用户的订阅数，在同一时间。 设置为 null 或省略以允许用户订阅按无限制。 仅当 subscriptionRequired 属性存在且具有值为 false，则可以会显示。
+    optional: true
+    syntax:
+      content: 'subscriptionsLimit?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductEntityBaseParameters.terms'
+    name: terms
+    fullName: terms
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 产品使用条款。 当开发人员尝试订阅此产品时，系统会显示这些条款，开发人员需接受这些条款才能完成订阅过程。
+    optional: true
+    syntax:
+      content: 'terms?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ProductState'
+    name: ProductState
+    spec.typeScript:
+      - name: ProductState
+        fullName: ProductState
+        uid: '@azure/arm-apimanagement.ProductState'

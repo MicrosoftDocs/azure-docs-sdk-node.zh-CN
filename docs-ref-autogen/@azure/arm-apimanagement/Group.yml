@@ -1,0 +1,791 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.Group'
+    name: Group
+    fullName: Group
+    children:
+      - '@azure/arm-apimanagement.Group.createOrUpdate_2'
+      - '@azure/arm-apimanagement.Group.createOrUpdate'
+      - '@azure/arm-apimanagement.Group.createOrUpdate_1'
+      - '@azure/arm-apimanagement.Group.deleteMethod'
+      - '@azure/arm-apimanagement.Group.deleteMethod_2'
+      - '@azure/arm-apimanagement.Group.deleteMethod_1'
+      - '@azure/arm-apimanagement.Group.get'
+      - '@azure/arm-apimanagement.Group.get_2'
+      - '@azure/arm-apimanagement.Group.get_1'
+      - '@azure/arm-apimanagement.Group.getEntityTag'
+      - '@azure/arm-apimanagement.Group.getEntityTag_2'
+      - '@azure/arm-apimanagement.Group.getEntityTag_1'
+      - '@azure/arm-apimanagement.Group.constructor'
+      - '@azure/arm-apimanagement.Group.listByService_2'
+      - '@azure/arm-apimanagement.Group.listByService'
+      - '@azure/arm-apimanagement.Group.listByService_1'
+      - '@azure/arm-apimanagement.Group.listByServiceNext'
+      - '@azure/arm-apimanagement.Group.listByServiceNext_2'
+      - '@azure/arm-apimanagement.Group.listByServiceNext_1'
+      - '@azure/arm-apimanagement.Group.update'
+      - '@azure/arm-apimanagement.Group.update_2'
+      - '@azure/arm-apimanagement.Group.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示一组类。
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, GroupCreateParameters, GroupCreateOrUpdateOptionalParams, ServiceCallback<GroupContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, groupId: string, parameters: GroupCreateParameters, options: GroupCreateOrUpdateOptionalParams, callback: ServiceCallback<GroupContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.GroupCreateParameters'
+          description: 创建参数。
+        - id: options
+          type:
+            - '@azure/arm-apimanagement.GroupCreateOrUpdateOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.GroupContract>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.GroupCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, GroupCreateParameters, Models.GroupCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建或更新组。
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, groupId: string, parameters: GroupCreateParameters, options?: Models.GroupCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.GroupCreateParameters'
+          description: 创建参数。
+        - id: options
+          type:
+            - Models.GroupCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, GroupCreateParameters, ServiceCallback<GroupContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, groupId: string, parameters: GroupCreateParameters, callback: ServiceCallback<GroupContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.GroupCreateParameters'
+          description: 创建参数。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.GroupContract>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.GroupCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除 API 管理服务实例的特定组。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, groupId: string, ifMatch: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: ifMatch
+          type:
+            - string
+          description: 实体的 ETag。 ETag 应与 GET 请求标头响应中的当前实体状态匹配，或者它是 * 无条件更新。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, groupId: string, ifMatch: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: ifMatch
+          type:
+            - string
+          description: 实体的 ETag。 ETag 应与 GET 请求标头响应中的当前实体状态匹配，或者它是 * 无条件更新。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, groupId: string, ifMatch: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: ifMatch
+          type:
+            - string
+          description: 实体的 ETag。 ETag 应与 GET 请求标头响应中的当前实体状态匹配，或者它是 * 无条件更新。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取由其标识符指定的组的详细信息。
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, groupId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<GroupContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, groupId: string, options: RequestOptionsBase, callback: ServiceCallback<GroupContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.GroupContract>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.GroupGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.get_1'
+    name: 'get(string, string, string, ServiceCallback<GroupContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, groupId: string, callback: ServiceCallback<GroupContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.GroupContract>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.GroupGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.getEntityTag'
+    name: 'getEntityTag(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取由其标识符指定的组的实体状态 (Etag) 版本。
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, groupId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.getEntityTag_2'
+    name: 'getEntityTag(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, groupId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.GroupGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.getEntityTag_1'
+    name: 'getEntityTag(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, groupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.GroupGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.constructor'
+    name: Group(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建一个组。
+    syntax:
+      content: 'new Group(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.listByService_2'
+    name: 'listByService(string, string, GroupListByServiceOptionalParams, ServiceCallback<GroupCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, options: GroupListByServiceOptionalParams, callback: ServiceCallback<GroupCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: options
+          type:
+            - '@azure/arm-apimanagement.GroupListByServiceOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.GroupCollection>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.GroupListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.listByService'
+    name: 'listByService(string, string, Models.GroupListByServiceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出服务实例中定义的组的集合。
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, options?: Models.GroupListByServiceOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: options
+          type:
+            - Models.GroupListByServiceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.listByService_1'
+    name: 'listByService(string, string, ServiceCallback<GroupCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByService(resourceGroupName: string, serviceName: string, callback: ServiceCallback<GroupCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.GroupCollection>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.GroupListByServiceResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.listByServiceNext'
+    name: 'listByServiceNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出服务实例中定义的组的集合。
+    syntax:
+      content: 'function listByServiceNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupListByServiceNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.listByServiceNext_2'
+    name: 'listByServiceNext(string, RequestOptionsBase, ServiceCallback<GroupCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServiceNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<GroupCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.GroupCollection>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.GroupListByServiceNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.listByServiceNext_1'
+    name: 'listByServiceNext(string, ServiceCallback<GroupCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServiceNext(nextPageLink: string, callback: ServiceCallback<GroupCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.GroupCollection>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.GroupListByServiceNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.update'
+    name: 'update(string, string, string, GroupUpdateParameters, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 将更新按标识符指定的组的详细信息。
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, groupId: string, parameters: GroupUpdateParameters, ifMatch: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.GroupUpdateParameters'
+          description: 更新参数。
+        - id: ifMatch
+          type:
+            - string
+          description: 实体的 ETag。 ETag 应与 GET 请求标头响应中的当前实体状态匹配，或者它是 * 无条件更新。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.update_2'
+    name: 'update(string, string, string, GroupUpdateParameters, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, groupId: string, parameters: GroupUpdateParameters, ifMatch: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.GroupUpdateParameters'
+          description: 更新参数。
+        - id: ifMatch
+          type:
+            - string
+          description: 实体的 ETag。 ETag 应与 GET 请求标头响应中的当前实体状态匹配，或者它是 * 无条件更新。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.Group.update_1'
+    name: 'update(string, string, string, GroupUpdateParameters, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, groupId: string, parameters: GroupUpdateParameters, ifMatch: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: serviceName
+          type:
+            - string
+          description: API 管理服务的名称。
+        - id: groupId
+          type:
+            - string
+          description: 组标识符。 必须是当前 API 管理服务实例中唯一的。
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.GroupUpdateParameters'
+          description: 更新参数。
+        - id: ifMatch
+          type:
+            - string
+          description: 实体的 ETag。 ETag 应与 GET 请求标头响应中的当前实体状态匹配，或者它是 * 无条件更新。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: '@azure/arm-apimanagement.GroupCreateParameters'
+    name: GroupCreateParameters
+    spec.typeScript:
+      - name: GroupCreateParameters
+        fullName: GroupCreateParameters
+        uid: '@azure/arm-apimanagement.GroupCreateParameters'
+  - uid: ServiceCallback<@azure/arm-apimanagement.GroupContract>
+    name: GroupContract>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GroupContract
+        fullName: GroupContract
+        uid: '@azure/arm-apimanagement.GroupContract'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-apimanagement.GroupCreateOrUpdateOptionalParams'
+    name: GroupCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: GroupCreateOrUpdateOptionalParams
+        fullName: GroupCreateOrUpdateOptionalParams
+        uid: '@azure/arm-apimanagement.GroupCreateOrUpdateOptionalParams'
+  - uid: ServiceCallback<@azure/arm-apimanagement.GroupCollection>
+    name: GroupCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GroupCollection
+        fullName: GroupCollection
+        uid: '@azure/arm-apimanagement.GroupCollection'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-apimanagement.GroupListByServiceOptionalParams'
+    name: GroupListByServiceOptionalParams
+    spec.typeScript:
+      - name: GroupListByServiceOptionalParams
+        fullName: GroupListByServiceOptionalParams
+        uid: '@azure/arm-apimanagement.GroupListByServiceOptionalParams'
+  - uid: '@azure/arm-apimanagement.GroupUpdateParameters'
+    name: GroupUpdateParameters
+    spec.typeScript:
+      - name: GroupUpdateParameters
+        fullName: GroupUpdateParameters
+        uid: '@azure/arm-apimanagement.GroupUpdateParameters'

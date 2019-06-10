@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.EncryptionSettingsElement'
+    name: EncryptionSettingsElement
+    fullName: EncryptionSettingsElement
+    children:
+      - '@azure/arm-compute.EncryptionSettingsElement.diskEncryptionKey'
+      - '@azure/arm-compute.EncryptionSettingsElement.keyEncryptionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: 一个磁盘卷的加密设置。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.EncryptionSettingsElement.diskEncryptionKey'
+    name: diskEncryptionKey
+    fullName: diskEncryptionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 磁盘加密密钥的密钥保管库机密 Url 和保管库 id
+    optional: true
+    syntax:
+      content: 'diskEncryptionKey?: KeyVaultAndSecretReference'
+      return:
+        type:
+          - '@azure/arm-compute.KeyVaultAndSecretReference'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.EncryptionSettingsElement.keyEncryptionKey'
+    name: keyEncryptionKey
+    fullName: keyEncryptionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Key Vault 密钥 Url 和保管库的密钥加密密钥的 id。 是可选的 KeyEncryptionKey 和时提供用于解包的磁盘加密密钥。
+    optional: true
+    syntax:
+      content: 'keyEncryptionKey?: KeyVaultAndKeyReference'
+      return:
+        type:
+          - '@azure/arm-compute.KeyVaultAndKeyReference'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.KeyVaultAndSecretReference'
+    name: KeyVaultAndSecretReference
+    spec.typeScript:
+      - name: KeyVaultAndSecretReference
+        fullName: KeyVaultAndSecretReference
+        uid: '@azure/arm-compute.KeyVaultAndSecretReference'
+  - uid: '@azure/arm-compute.KeyVaultAndKeyReference'
+    name: KeyVaultAndKeyReference
+    spec.typeScript:
+      - name: KeyVaultAndKeyReference
+        fullName: KeyVaultAndKeyReference
+        uid: '@azure/arm-compute.KeyVaultAndKeyReference'

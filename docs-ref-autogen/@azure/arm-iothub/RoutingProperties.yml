@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.RoutingProperties'
+    name: RoutingProperties
+    fullName: RoutingProperties
+    children:
+      - '@azure/arm-iothub.RoutingProperties.endpoints'
+      - '@azure/arm-iothub.RoutingProperties.enrichments'
+      - '@azure/arm-iothub.RoutingProperties.fallbackRoute'
+      - '@azure/arm-iothub.RoutingProperties.routes'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'IoT 中心路由的相关的属性。 请参阅： https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging'
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RoutingProperties.endpoints'
+    name: endpoints
+    fullName: endpoints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'endpoints?: RoutingEndpoints'
+      return:
+        type:
+          - '@azure/arm-iothub.RoutingEndpoints'
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RoutingProperties.enrichments'
+    name: enrichments
+    fullName: enrichments
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '用户提供到 IoT 中心适用于消息传送到内置和自定义终结点的列表。 请参阅： https://aka.ms/iotmsgenrich'
+    optional: true
+    syntax:
+      content: 'enrichments?: EnrichmentProperties[]'
+      return:
+        type:
+          - '@azure/arm-iothub.EnrichmentProperties[]'
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RoutingProperties.fallbackRoute'
+    name: fallbackRoute
+    fullName: fallbackRoute
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 为回退路由均不在路由部分中指定的条件时使用的路由的属性都得到满足。 这是一个可选参数。 如果未设置此属性，不满足任何条件的路由部分中指定的消息将路由到内置事件中心终结点。
+    optional: true
+    syntax:
+      content: 'fallbackRoute?: FallbackRouteProperties'
+      return:
+        type:
+          - '@azure/arm-iothub.FallbackRouteProperties'
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RoutingProperties.routes'
+    name: routes
+    fullName: routes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IoT 中心消息路由到内置和自定义终结点使用的用户提供路由规则的列表。 付费的中心的允许最多 100 条路由规则和最多 5 个路由规则将允许免费中心。
+    optional: true
+    syntax:
+      content: 'routes?: RouteProperties[]'
+      return:
+        type:
+          - '@azure/arm-iothub.RouteProperties[]'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.RoutingEndpoints'
+    name: RoutingEndpoints
+    spec.typeScript:
+      - name: RoutingEndpoints
+        fullName: RoutingEndpoints
+        uid: '@azure/arm-iothub.RoutingEndpoints'
+  - uid: '@azure/arm-iothub.EnrichmentProperties[]'
+    name: 'EnrichmentProperties[]'
+    spec.typeScript:
+      - name: EnrichmentProperties
+        fullName: EnrichmentProperties
+        uid: '@azure/arm-iothub.EnrichmentProperties'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-iothub.FallbackRouteProperties'
+    name: FallbackRouteProperties
+    spec.typeScript:
+      - name: FallbackRouteProperties
+        fullName: FallbackRouteProperties
+        uid: '@azure/arm-iothub.FallbackRouteProperties'
+  - uid: '@azure/arm-iothub.RouteProperties[]'
+    name: 'RouteProperties[]'
+    spec.typeScript:
+      - name: RouteProperties
+        fullName: RouteProperties
+        uid: '@azure/arm-iothub.RouteProperties'
+      - name: '[]'
+        fullName: '[]'

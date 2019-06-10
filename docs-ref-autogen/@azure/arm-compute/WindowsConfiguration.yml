@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    fullName: WindowsConfiguration
+    children:
+      - '@azure/arm-compute.WindowsConfiguration.additionalUnattendContent'
+      - '@azure/arm-compute.WindowsConfiguration.enableAutomaticUpdates'
+      - '@azure/arm-compute.WindowsConfiguration.provisionVMAgent'
+      - '@azure/arm-compute.WindowsConfiguration.timeZone'
+      - '@azure/arm-compute.WindowsConfiguration.winRM'
+    langs:
+      - typeScript
+    type: interface
+    summary: 指定虚拟机上的 Windows 操作系统设置。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.additionalUnattendContent'
+    name: additionalUnattendContent
+    fullName: additionalUnattendContent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的其他 base-64 编码的 XML 格式信息可以包含在 Windows 安装程序使用的 Unattend.xml 文件中。
+    optional: true
+    syntax:
+      content: 'additionalUnattendContent?: AdditionalUnattendContent[]'
+      return:
+        type:
+          - '@azure/arm-compute.AdditionalUnattendContent[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.enableAutomaticUpdates'
+    name: enableAutomaticUpdates
+    fullName: enableAutomaticUpdates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指示是否将虚拟机启用自动更新。
+    optional: true
+    syntax:
+      content: 'enableAutomaticUpdates?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.provisionVMAgent'
+    name: provisionVMAgent
+    fullName: provisionVMAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指示是否应在虚拟机上设置虚拟机代理。 <br><br>
+      当在请求正文中未指定此属性时，默认行为是将其设置为 true。  这将确保 VM 代理上安装了 VM，以便扩展可添加到 VM 更高版本。
+    optional: true
+    syntax:
+      content: 'provisionVMAgent?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.timeZone'
+    name: timeZone
+    fullName: timeZone
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定虚拟机的时区。 例如"太平洋标准时间"
+    optional: true
+    syntax:
+      content: 'timeZone?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.winRM'
+    name: winRM
+    fullName: winRM
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的 Windows 远程管理侦听器。 这使远程 Windows PowerShell。
+    optional: true
+    syntax:
+      content: 'winRM?: WinRMConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WinRMConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.AdditionalUnattendContent[]'
+    name: 'AdditionalUnattendContent[]'
+    spec.typeScript:
+      - name: AdditionalUnattendContent
+        fullName: AdditionalUnattendContent
+        uid: '@azure/arm-compute.AdditionalUnattendContent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WinRMConfiguration'
+    name: WinRMConfiguration
+    spec.typeScript:
+      - name: WinRMConfiguration
+        fullName: WinRMConfiguration
+        uid: '@azure/arm-compute.WinRMConfiguration'

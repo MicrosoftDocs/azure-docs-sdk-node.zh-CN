@@ -1,0 +1,727 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-dns.Zones'
+    name: Zones
+    fullName: Zones
+    children:
+      - '@azure/arm-dns.Zones.beginDeleteMethod'
+      - '@azure/arm-dns.Zones.createOrUpdate'
+      - '@azure/arm-dns.Zones.createOrUpdate_1'
+      - '@azure/arm-dns.Zones.createOrUpdate_2'
+      - '@azure/arm-dns.Zones.deleteMethod'
+      - '@azure/arm-dns.Zones.get'
+      - '@azure/arm-dns.Zones.get_2'
+      - '@azure/arm-dns.Zones.get_1'
+      - '@azure/arm-dns.Zones.list'
+      - '@azure/arm-dns.Zones.list_1'
+      - '@azure/arm-dns.Zones.list_2'
+      - '@azure/arm-dns.Zones.listByResourceGroup'
+      - '@azure/arm-dns.Zones.listByResourceGroup_1'
+      - '@azure/arm-dns.Zones.listByResourceGroup_2'
+      - '@azure/arm-dns.Zones.listByResourceGroupNext'
+      - '@azure/arm-dns.Zones.listByResourceGroupNext_2'
+      - '@azure/arm-dns.Zones.listByResourceGroupNext_1'
+      - '@azure/arm-dns.Zones.listNext'
+      - '@azure/arm-dns.Zones.listNext_2'
+      - '@azure/arm-dns.Zones.listNext_1'
+      - '@azure/arm-dns.Zones.update'
+      - '@azure/arm-dns.Zones.update_1'
+      - '@azure/arm-dns.Zones.update_2'
+      - '@azure/arm-dns.Zones.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示区域的类。
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, Models.ZonesBeginDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除 DNS 区域。 警告：区域中的所有 DNS 记录也将被都删除。 此操作不可撤消。
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, zoneName: string, options?: Models.ZonesBeginDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: zoneName
+          type:
+            - string
+          description: （不带终止点） 的 DNS 区域的名称。
+        - id: options
+          type:
+            - Models.ZonesBeginDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.createOrUpdate'
+    name: 'createOrUpdate(string, string, Zone, Models.ZonesCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建或更新 DNS 区域。 不会修改该区域中的 DNS 记录。
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, parameters: Zone, options?: Models.ZonesCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: zoneName
+          type:
+            - string
+          description: （不带终止点） 的 DNS 区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-dns.Zone'
+          description: 提供给 CreateOrUpdate 操作的参数。
+        - id: options
+          type:
+            - Models.ZonesCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, Zone, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, parameters: Zone, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: zoneName
+          type:
+            - string
+          description: （不带终止点） 的 DNS 区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-dns.Zone'
+          description: 提供给 CreateOrUpdate 操作的参数。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, Zone, ZonesCreateOrUpdateOptionalParams, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, parameters: Zone, options: ZonesCreateOrUpdateOptionalParams, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: zoneName
+          type:
+            - string
+          description: （不带终止点） 的 DNS 区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-dns.Zone'
+          description: 提供给 CreateOrUpdate 操作的参数。
+        - id: options
+          type:
+            - '@azure/arm-dns.ZonesCreateOrUpdateOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.deleteMethod'
+    name: 'deleteMethod(string, string, Models.ZonesDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除 DNS 区域。 警告：区域中的所有 DNS 记录也将被都删除。 此操作不可撤消。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, zoneName: string, options?: Models.ZonesDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: zoneName
+          type:
+            - string
+          description: （不带终止点） 的 DNS 区域的名称。
+        - id: options
+          type:
+            - Models.ZonesDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取 DNS 区域。 检索区域属性，但不是在区域中的记录集。
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: zoneName
+          type:
+            - string
+          description: （不带终止点） 的 DNS 区域的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, options: RequestOptionsBase, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: zoneName
+          type:
+            - string
+          description: （不带终止点） 的 DNS 区域的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.get_1'
+    name: 'get(string, string, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: zoneName
+          type:
+            - string
+          description: （不带终止点） 的 DNS 区域的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.list'
+    name: list(Models.ZonesListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出订阅中的所有资源组中的 DNS 区域。
+    syntax:
+      content: 'function list(options?: Models.ZonesListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.ZonesListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesListResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.list_1'
+    name: list(ServiceCallback<ZoneListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesListResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.list_2'
+    name: 'list(ZonesListOptionalParams, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: ZonesListOptionalParams, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-dns.ZonesListOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesListResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroup'
+    name: 'listByResourceGroup(string, Models.ZonesListByResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出资源组中的 DNS 区域。
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: Models.ZonesListByResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: options
+          type:
+            - Models.ZonesListByResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, ZonesListByResourceGroupOptionalParams, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: ZonesListByResourceGroupOptionalParams, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: options
+          type:
+            - '@azure/arm-dns.ZonesListByResourceGroupOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出资源组中的 DNS 区域。
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesListByResourceGroupNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出订阅中的所有资源组中的 DNS 区域。
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesListNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesListNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.listNext_1'
+    name: 'listNext(string, ServiceCallback<ZoneListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ZoneListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.ZoneListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesListNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.update'
+    name: 'update(string, string, ZoneUpdate, Models.ZonesUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新 DNS 区域。 不会修改该区域中的 DNS 记录。
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, parameters: ZoneUpdate, options?: Models.ZonesUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: zoneName
+          type:
+            - string
+          description: （不带终止点） 的 DNS 区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-dns.ZoneUpdate'
+          description: 为更新操作提供的参数。
+        - id: options
+          type:
+            - Models.ZonesUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ZonesUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.update_1'
+    name: 'update(string, string, ZoneUpdate, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, parameters: ZoneUpdate, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: zoneName
+          type:
+            - string
+          description: （不带终止点） 的 DNS 区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-dns.ZoneUpdate'
+          description: 为更新操作提供的参数。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.update_2'
+    name: 'update(string, string, ZoneUpdate, ZonesUpdateOptionalParams, ServiceCallback<Zone>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, parameters: ZoneUpdate, options: ZonesUpdateOptionalParams, callback: ServiceCallback<Zone>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: zoneName
+          type:
+            - string
+          description: （不带终止点） 的 DNS 区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-dns.ZoneUpdate'
+          description: 为更新操作提供的参数。
+        - id: options
+          type:
+            - '@azure/arm-dns.ZonesUpdateOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.Zone>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ZonesUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.Zones.constructor'
+    name: Zones(DnsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建区域。
+    syntax:
+      content: 'new Zones(client: DnsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-dns.DnsManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-dns'
+references:
+  - uid: '@azure/arm-dns.DnsManagementClientContext'
+    name: DnsManagementClientContext
+    spec.typeScript:
+      - name: DnsManagementClientContext
+        fullName: DnsManagementClientContext
+        uid: '@azure/arm-dns.DnsManagementClientContext'
+  - uid: '@azure/arm-dns.Zone'
+    name: Zone
+    spec.typeScript:
+      - name: Zone
+        fullName: Zone
+        uid: '@azure/arm-dns.Zone'
+  - uid: ServiceCallback<@azure/arm-dns.Zone>
+    name: Zone>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Zone
+        fullName: Zone
+        uid: '@azure/arm-dns.Zone'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-dns.ZonesCreateOrUpdateOptionalParams'
+    name: ZonesCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: ZonesCreateOrUpdateOptionalParams
+        fullName: ZonesCreateOrUpdateOptionalParams
+        uid: '@azure/arm-dns.ZonesCreateOrUpdateOptionalParams'
+  - uid: ServiceCallback<@azure/arm-dns.ZoneListResult>
+    name: ZoneListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ZoneListResult
+        fullName: ZoneListResult
+        uid: '@azure/arm-dns.ZoneListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-dns.ZonesListOptionalParams'
+    name: ZonesListOptionalParams
+    spec.typeScript:
+      - name: ZonesListOptionalParams
+        fullName: ZonesListOptionalParams
+        uid: '@azure/arm-dns.ZonesListOptionalParams'
+  - uid: '@azure/arm-dns.ZonesListByResourceGroupOptionalParams'
+    name: ZonesListByResourceGroupOptionalParams
+    spec.typeScript:
+      - name: ZonesListByResourceGroupOptionalParams
+        fullName: ZonesListByResourceGroupOptionalParams
+        uid: '@azure/arm-dns.ZonesListByResourceGroupOptionalParams'
+  - uid: '@azure/arm-dns.ZoneUpdate'
+    name: ZoneUpdate
+    spec.typeScript:
+      - name: ZoneUpdate
+        fullName: ZoneUpdate
+        uid: '@azure/arm-dns.ZoneUpdate'
+  - uid: '@azure/arm-dns.ZonesUpdateOptionalParams'
+    name: ZonesUpdateOptionalParams
+    spec.typeScript:
+      - name: ZonesUpdateOptionalParams
+        fullName: ZonesUpdateOptionalParams
+        uid: '@azure/arm-dns.ZonesUpdateOptionalParams'

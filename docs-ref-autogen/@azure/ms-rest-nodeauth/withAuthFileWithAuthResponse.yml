@@ -1,0 +1,46 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withAuthFileWithAuthResponse'
+    name: withAuthFileWithAuthResponse(LoginWithAuthFileOptions)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="9743e-101">使用此方法之前请安装 az cli 从https://github.com/Azure/azure-cli/releases。</span><span class="sxs-lookup"><span data-stu-id="9743e-101">Before using this method please install az cli from https://github.com/Azure/azure-cli/releases.</span></span> <span data-ttu-id="9743e-102">然后执行`az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`。</span><span class="sxs-lookup"><span data-stu-id="9743e-102">Then execute `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.</span></span>
+      <span data-ttu-id="9743e-103">如果你想要创建针对不同的云/环境 sp 然后请执行：</span><span class="sxs-lookup"><span data-stu-id="9743e-103">If you want to create the sp for a different cloud/environment then please execute:</span></span>
+      1. <span data-ttu-id="9743e-104">az 云列表</span><span class="sxs-lookup"><span data-stu-id="9743e-104">az cloud list</span></span>
+      2. <span data-ttu-id="9743e-105">az 云设置 – n <name of the environment></span><span class="sxs-lookup"><span data-stu-id="9743e-105">az cloud set –n <name of the environment></span></span>
+      3. <span data-ttu-id="9743e-106">az ad sp 为 rbac 创建-sdk 身份验证 > auth.json / / 使用机密创建 sp**或**</span><span class="sxs-lookup"><span data-stu-id="9743e-106">az ad sp create-for-rbac --sdk-auth > auth.json // create sp with secret **OR**</span></span>
+      3. <span data-ttu-id="9743e-107">az ad sp 创建-对于-rbac-创建证书身份验证-sdk > auth.json / / sp 使用证书创建服务主体已创建然后登录使用服务主体信息如果：</span><span class="sxs-lookup"><span data-stu-id="9743e-107">az ad sp create-for-rbac --create-cert --sdk-auth > auth.json // create sp with certificate If the service principal is already created then login with service principal info:</span></span>
+      4. <span data-ttu-id="9743e-108">az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId></span><span class="sxs-lookup"><span data-stu-id="9743e-108">az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId></span></span>
+      5. <span data-ttu-id="9743e-109">az 帐户会显示-sdk 身份验证 > auth.json 身份验证使用身份验证文件中提供的服务主体信息。</span><span class="sxs-lookup"><span data-stu-id="9743e-109">az account show --sdk-auth > auth.json Authenticates using the service principal information provided in the auth file.</span></span> <span data-ttu-id="9743e-110">为用户提供的环境变量的 options 参数或默认值"AZURE_SUBSCRIPTION_ID"中，此方法将从身份验证文件设置订阅 Id。</span><span class="sxs-lookup"><span data-stu-id="9743e-110">This method will set the subscriptionId from the auth file to the user provided environment variable in the options parameter or the default "AZURE_SUBSCRIPTION_ID".</span></span>
+    syntax:
+      content: 'function withAuthFileWithAuthResponse(options?: LoginWithAuthFileOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+    name: LoginWithAuthFileOptions
+    spec.typeScript:
+      - name: LoginWithAuthFileOptions
+        fullName: LoginWithAuthFileOptions
+        uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    name: AuthResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: AuthResponse
+        fullName: AuthResponse
+        uid: '@azure/ms-rest-nodeauth.AuthResponse'
+      - name: '>'
+        fullName: '>'

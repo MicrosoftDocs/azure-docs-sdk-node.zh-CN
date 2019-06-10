@@ -1,0 +1,1073 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-dns.RecordSets'
+    name: RecordSets
+    fullName: RecordSets
+    children:
+      - '@azure/arm-dns.RecordSets.createOrUpdate'
+      - '@azure/arm-dns.RecordSets.createOrUpdate_2'
+      - '@azure/arm-dns.RecordSets.createOrUpdate_1'
+      - '@azure/arm-dns.RecordSets.deleteMethod'
+      - '@azure/arm-dns.RecordSets.deleteMethod_2'
+      - '@azure/arm-dns.RecordSets.deleteMethod_1'
+      - '@azure/arm-dns.RecordSets.get'
+      - '@azure/arm-dns.RecordSets.get_2'
+      - '@azure/arm-dns.RecordSets.get_1'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZone'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZone_2'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZone_1'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZoneNext'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_2'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_1'
+      - '@azure/arm-dns.RecordSets.listByDnsZone'
+      - '@azure/arm-dns.RecordSets.listByDnsZone_2'
+      - '@azure/arm-dns.RecordSets.listByDnsZone_1'
+      - '@azure/arm-dns.RecordSets.listByDnsZoneNext'
+      - '@azure/arm-dns.RecordSets.listByDnsZoneNext_2'
+      - '@azure/arm-dns.RecordSets.listByDnsZoneNext_1'
+      - '@azure/arm-dns.RecordSets.listByType'
+      - '@azure/arm-dns.RecordSets.listByType_2'
+      - '@azure/arm-dns.RecordSets.listByType_1'
+      - '@azure/arm-dns.RecordSets.listByTypeNext'
+      - '@azure/arm-dns.RecordSets.listByTypeNext_2'
+      - '@azure/arm-dns.RecordSets.listByTypeNext_1'
+      - '@azure/arm-dns.RecordSets.constructor'
+      - '@azure/arm-dns.RecordSets.update'
+      - '@azure/arm-dns.RecordSets.update_2'
+      - '@azure/arm-dns.RecordSets.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="4d4b8-101">表示记录集的类。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-101">Class representing a RecordSets.</span></span>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, Models.RecordType, RecordSet, Models.RecordSetsCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d4b8-102">创建或更新的记录集内 DNS 区域。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-102">Creates or updates a record set within a DNS zone.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options?: Models.RecordSetsCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-103">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-103">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-104">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-104">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-105">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-105">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-106">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-106">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-107">记录的类型 SOA 可以更新但未创建的集 （它们创建时创建 DNS 区域）。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-107">Record sets of type SOA can be updated but not created (they are created when the DNS zone is created).</span></span> <span data-ttu-id="4d4b8-108">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-108">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="4d4b8-109">提供给 CreateOrUpdate 操作的参数。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-109">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - Models.RecordSetsCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, Models.RecordType, RecordSet, RecordSetsCreateOrUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options: RecordSetsCreateOrUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-110">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-110">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-111">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-111">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-112">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-112">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-113">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-113">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-114">记录的类型 SOA 可以更新但未创建的集 （它们创建时创建 DNS 区域）。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-114">Record sets of type SOA can be updated but not created (they are created when the DNS zone is created).</span></span> <span data-ttu-id="4d4b8-115">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-115">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="4d4b8-116">提供给 CreateOrUpdate 操作的参数。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-116">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsCreateOrUpdateOptionalParams'
+          description: <span data-ttu-id="4d4b8-117">可选参数</span><span class="sxs-lookup"><span data-stu-id="4d4b8-117">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="4d4b8-118">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-118">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, Models.RecordType, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-119">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-119">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-120">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-120">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-121">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-121">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-122">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-122">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-123">记录的类型 SOA 可以更新但未创建的集 （它们创建时创建 DNS 区域）。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-123">Record sets of type SOA can be updated but not created (they are created when the DNS zone is created).</span></span> <span data-ttu-id="4d4b8-124">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-124">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="4d4b8-125">提供给 CreateOrUpdate 操作的参数。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-125">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="4d4b8-126">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.deleteMethod'
+    name: 'deleteMethod(string, string, string, Models.RecordType, Models.RecordSetsDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d4b8-127">删除的记录集从 DNS 区域。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-127">Deletes a record set from a DNS zone.</span></span> <span data-ttu-id="4d4b8-128">此操作不可撤消。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-128">This operation cannot be undone.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options?: Models.RecordSetsDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-129">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-129">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-130">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-130">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-131">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-131">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-132">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-132">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-133">记录集不能删除 SOA 类型 （它们会删除 DNS 区域将被删除时）。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-133">Record sets of type SOA cannot be deleted (they are deleted when the DNS zone is deleted).</span></span> <span data-ttu-id="4d4b8-134">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-134">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - Models.RecordSetsDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, Models.RecordType, RecordSetsDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options: RecordSetsDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-135">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-135">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-136">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-136">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-137">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-137">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-138">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-138">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-139">记录集不能删除 SOA 类型 （它们会删除 DNS 区域将被删除时）。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-139">Record sets of type SOA cannot be deleted (they are deleted when the DNS zone is deleted).</span></span> <span data-ttu-id="4d4b8-140">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-140">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsDeleteMethodOptionalParams'
+          description: <span data-ttu-id="4d4b8-141">可选参数</span><span class="sxs-lookup"><span data-stu-id="4d4b8-141">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="4d4b8-142">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-142">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, Models.RecordType, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-143">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-143">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-144">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-144">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-145">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-145">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-146">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-146">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-147">记录集不能删除 SOA 类型 （它们会删除 DNS 区域将被删除时）。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-147">Record sets of type SOA cannot be deleted (they are deleted when the DNS zone is deleted).</span></span> <span data-ttu-id="4d4b8-148">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-148">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="4d4b8-149">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-149">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.get'
+    name: 'get(string, string, string, Models.RecordType, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d4b8-150">获取记录集。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-150">Gets a record set.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-151">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-151">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-152">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-152">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-153">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-153">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-154">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-154">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-155">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-155">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.get_2'
+    name: 'get(string, string, string, Models.RecordType, RequestOptionsBase, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options: RequestOptionsBase, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-156">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-156">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-157">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-157">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-158">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-158">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-159">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-159">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-160">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-160">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="4d4b8-161">可选参数</span><span class="sxs-lookup"><span data-stu-id="4d4b8-161">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="4d4b8-162">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.get_1'
+    name: 'get(string, string, string, Models.RecordType, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-163">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-163">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-164">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-164">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-165">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-165">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-166">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-166">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-167">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-167">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="4d4b8-168">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZone'
+    name: 'listAllByDnsZone(string, string, Models.RecordSetsListAllByDnsZoneOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d4b8-169">列出 DNS 区域中的所有记录集。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-169">Lists all record sets in a DNS zone.</span></span>
+    syntax:
+      content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, options?: Models.RecordSetsListAllByDnsZoneOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-170">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-170">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-171">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-171">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - Models.RecordSetsListAllByDnsZoneOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZone_2'
+    name: 'listAllByDnsZone(string, string, RecordSetsListAllByDnsZoneOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, options: RecordSetsListAllByDnsZoneOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-172">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-172">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-173">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-173">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsListAllByDnsZoneOptionalParams'
+          description: <span data-ttu-id="4d4b8-174">可选参数</span><span class="sxs-lookup"><span data-stu-id="4d4b8-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-175">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZone_1'
+    name: 'listAllByDnsZone(string, string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-176">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-176">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-177">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-177">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-178">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZoneNext'
+    name: 'listAllByDnsZoneNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d4b8-179">列出 DNS 区域中的所有记录集。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-179">Lists all record sets in a DNS zone.</span></span>
+    syntax:
+      content: 'function listAllByDnsZoneNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-180">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-180">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_2'
+    name: 'listAllByDnsZoneNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZoneNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-181">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-181">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="4d4b8-182">可选参数</span><span class="sxs-lookup"><span data-stu-id="4d4b8-182">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-183">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_1'
+    name: 'listAllByDnsZoneNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZoneNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-184">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-184">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-185">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-185">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZone'
+    name: 'listByDnsZone(string, string, Models.RecordSetsListByDnsZoneOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d4b8-186">列出 DNS 区域中的所有记录集。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-186">Lists all record sets in a DNS zone.</span></span>
+    syntax:
+      content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, options?: Models.RecordSetsListByDnsZoneOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-187">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-187">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-188">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-188">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - Models.RecordSetsListByDnsZoneOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZone_2'
+    name: 'listByDnsZone(string, string, RecordSetsListByDnsZoneOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, options: RecordSetsListByDnsZoneOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-189">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-189">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-190">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-190">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsListByDnsZoneOptionalParams'
+          description: <span data-ttu-id="4d4b8-191">可选参数</span><span class="sxs-lookup"><span data-stu-id="4d4b8-191">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-192">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-192">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZone_1'
+    name: 'listByDnsZone(string, string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-193">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-193">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-194">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-194">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-195">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZoneNext'
+    name: 'listByDnsZoneNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d4b8-196">列出 DNS 区域中的所有记录集。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-196">Lists all record sets in a DNS zone.</span></span>
+    syntax:
+      content: 'function listByDnsZoneNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-197">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-197">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZoneNext_2'
+    name: 'listByDnsZoneNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZoneNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-198">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-198">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="4d4b8-199">可选参数</span><span class="sxs-lookup"><span data-stu-id="4d4b8-199">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-200">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-200">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZoneNext_1'
+    name: 'listByDnsZoneNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZoneNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-201">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-201">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-202">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-202">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByType'
+    name: 'listByType(string, string, Models.RecordType, Models.RecordSetsListByTypeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d4b8-203">列出 DNS 区域中的指定类型的记录集。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-203">Lists the record sets of a specified type in a DNS zone.</span></span>
+    syntax:
+      content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: Models.RecordType, options?: Models.RecordSetsListByTypeOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-204">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-204">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-205">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-205">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-206">若要枚举的记录集的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-206">The type of record sets to enumerate.</span></span> <span data-ttu-id="4d4b8-207">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-207">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - Models.RecordSetsListByTypeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByType_2'
+    name: 'listByType(string, string, Models.RecordType, RecordSetsListByTypeOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: Models.RecordType, options: RecordSetsListByTypeOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-208">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-208">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-209">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-209">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-210">若要枚举的记录集的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-210">The type of record sets to enumerate.</span></span> <span data-ttu-id="4d4b8-211">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-211">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsListByTypeOptionalParams'
+          description: <span data-ttu-id="4d4b8-212">可选参数</span><span class="sxs-lookup"><span data-stu-id="4d4b8-212">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-213">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-213">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByType_1'
+    name: 'listByType(string, string, Models.RecordType, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: Models.RecordType, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-214">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-214">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-215">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-215">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-216">若要枚举的记录集的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-216">The type of record sets to enumerate.</span></span> <span data-ttu-id="4d4b8-217">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-217">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-218">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-218">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByTypeNext'
+    name: 'listByTypeNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d4b8-219">列出 DNS 区域中的指定类型的记录集。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-219">Lists the record sets of a specified type in a DNS zone.</span></span>
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-220">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-220">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByTypeNext_2'
+    name: 'listByTypeNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-221">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-221">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="4d4b8-222">可选参数</span><span class="sxs-lookup"><span data-stu-id="4d4b8-222">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-223">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-223">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByTypeNext_1'
+    name: 'listByTypeNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-224">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-224">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            <span data-ttu-id="4d4b8-225">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-225">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.constructor'
+    name: RecordSets(DnsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d4b8-226">创建记录集。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-226">Create a RecordSets.</span></span>
+    syntax:
+      content: 'new RecordSets(client: DnsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-dns.DnsManagementClientContext'
+          description: |
+            <span data-ttu-id="4d4b8-227">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-227">Reference to the service client.</span></span>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.update'
+    name: 'update(string, string, string, Models.RecordType, RecordSet, Models.RecordSetsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4d4b8-228">更新的记录集内 DNS 区域。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-228">Updates a record set within a DNS zone.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options?: Models.RecordSetsUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-229">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-229">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-230">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-230">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-231">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-231">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-232">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-232">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-233">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-233">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="4d4b8-234">为更新操作提供的参数。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-234">Parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - Models.RecordSetsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.update_2'
+    name: 'update(string, string, string, Models.RecordType, RecordSet, RecordSetsUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options: RecordSetsUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-235">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-235">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-236">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-236">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-237">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-237">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-238">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-238">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-239">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-239">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="4d4b8-240">为更新操作提供的参数。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-240">Parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsUpdateOptionalParams'
+          description: <span data-ttu-id="4d4b8-241">可选参数</span><span class="sxs-lookup"><span data-stu-id="4d4b8-241">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="4d4b8-242">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-242">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.update_1'
+    name: 'update(string, string, string, Models.RecordType, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-243">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-243">The name of the resource group.</span></span>
+        - id: zoneName
+          type:
+            - string
+          description: <span data-ttu-id="4d4b8-244">（不带终止点） 的 DNS 区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-244">The name of the DNS zone (without a terminating dot).</span></span>
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: '<span data-ttu-id="4d4b8-245">设置记录的名称，相对于区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-245">The name of the record set, relative to the name of the zone.</span></span>'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: '<span data-ttu-id="4d4b8-246">在此记录集的 DNS 记录的类型。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-246">The type of DNS record in this record set.</span></span> <span data-ttu-id="4d4b8-247">可能的值包括：A、 AAAA、 CAA、 CNAME、 MX、 NS、 PTR、 SOA、 SRV、 TXT</span><span class="sxs-lookup"><span data-stu-id="4d4b8-247">Possible values include: ''A'', ''AAAA'', ''CAA'', ''CNAME'', ''MX'', ''NS'', ''PTR'', ''SOA'', ''SRV'', ''TXT''</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: <span data-ttu-id="4d4b8-248">为更新操作提供的参数。</span><span class="sxs-lookup"><span data-stu-id="4d4b8-248">Parameters supplied to the Update operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            <span data-ttu-id="4d4b8-249">回调</span><span class="sxs-lookup"><span data-stu-id="4d4b8-249">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-dns'
+references:
+  - uid: '@azure/arm-dns.DnsManagementClientContext'
+    name: DnsManagementClientContext
+    spec.typeScript:
+      - name: DnsManagementClientContext
+        fullName: DnsManagementClientContext
+        uid: '@azure/arm-dns.DnsManagementClientContext'
+  - uid: '@azure/arm-dns.RecordSet'
+    name: RecordSet
+    spec.typeScript:
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-dns.RecordSet'
+  - uid: ServiceCallback<@azure/arm-dns.RecordSet>
+    name: RecordSet>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-dns.RecordSet'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-dns.RecordSetsCreateOrUpdateOptionalParams'
+    name: RecordSetsCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsCreateOrUpdateOptionalParams
+        fullName: RecordSetsCreateOrUpdateOptionalParams
+        uid: '@azure/arm-dns.RecordSetsCreateOrUpdateOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsDeleteMethodOptionalParams'
+    name: RecordSetsDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: RecordSetsDeleteMethodOptionalParams
+        fullName: RecordSetsDeleteMethodOptionalParams
+        uid: '@azure/arm-dns.RecordSetsDeleteMethodOptionalParams'
+  - uid: ServiceCallback<@azure/arm-dns.RecordSetListResult>
+    name: RecordSetListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSetListResult
+        fullName: RecordSetListResult
+        uid: '@azure/arm-dns.RecordSetListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-dns.RecordSetsListAllByDnsZoneOptionalParams'
+    name: RecordSetsListAllByDnsZoneOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListAllByDnsZoneOptionalParams
+        fullName: RecordSetsListAllByDnsZoneOptionalParams
+        uid: '@azure/arm-dns.RecordSetsListAllByDnsZoneOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsListByDnsZoneOptionalParams'
+    name: RecordSetsListByDnsZoneOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListByDnsZoneOptionalParams
+        fullName: RecordSetsListByDnsZoneOptionalParams
+        uid: '@azure/arm-dns.RecordSetsListByDnsZoneOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsListByTypeOptionalParams'
+    name: RecordSetsListByTypeOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListByTypeOptionalParams
+        fullName: RecordSetsListByTypeOptionalParams
+        uid: '@azure/arm-dns.RecordSetsListByTypeOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsUpdateOptionalParams'
+    name: RecordSetsUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsUpdateOptionalParams
+        fullName: RecordSetsUpdateOptionalParams
+        uid: '@azure/arm-dns.RecordSetsUpdateOptionalParams'

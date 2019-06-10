@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withAuthFile_3'
+    name: withAuthFile(any)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      使用此方法之前请安装 az cli 从https://github.com/Azure/azure-cli/releases。 然后执行`az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`。
+      如果你想要创建针对不同的云/环境 sp 然后请执行：
+      1. az 云列表
+      2. az 云设置 – n <name of the environment>
+      3. az ad sp 为 rbac 创建-sdk 身份验证 > auth.json / / 使用机密创建 sp**或**
+      3. az ad sp 创建-对于-rbac-创建证书身份验证-sdk > auth.json / / sp 使用证书创建服务主体已创建然后登录使用服务主体信息如果：
+      4. az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId>
+      5. az 帐户会显示-sdk 身份验证 > auth.json 身份验证使用身份验证文件中提供的服务主体信息。 为用户提供的环境变量的 options 参数或默认值"AZURE_SUBSCRIPTION_ID"中，此方法将从身份验证文件设置订阅 Id。
+    syntax:
+      content: 'function withAuthFile(callback: any)'
+      parameters:
+        - id: callback
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    name: TokenCredentialsBase>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TokenCredentialsBase
+        fullName: TokenCredentialsBase
+        uid: '@azure/ms-rest-nodeauth.TokenCredentialsBase'
+      - name: '>'
+        fullName: '>'

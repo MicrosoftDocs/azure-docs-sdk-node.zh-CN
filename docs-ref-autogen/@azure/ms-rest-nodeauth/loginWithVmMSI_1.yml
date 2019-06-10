@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.loginWithVmMSI_1'
+    name: loginWithVmMSI(MSIVmOptions)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      使用此方法之前请安装 az cli 从https://github.com/Azure/azure-cli/releases。
+      如果有使用 az cli 预配 Azure 虚拟机，并启用了 MSI，可以使用此方法以从 VM 获取身份验证令牌。
+      若要创建新的 VM，启用 MSI，请执行此命令： az vm 创建-g < resource_group_name > n < vm_name-> 分配标识-图像 < os_image_name > 注意： 上述命令将启用服务终结点在主机上，使用默认端口 50342
+
+      若要启用已预配的 VM 上的 MSI，请执行以下命令： az vm-分配标识-g < resource_group_name > n < vm 名称 >-< custom_port_number > 端口
+
+      若要了解有关此命令的详细信息，请执行： az vm-分配标识-h
+
+      使用 Azure 虚拟机上运行的标识服务进行身份验证。
+      此方法向 VM 上托管的身份验证服务发出请求，并重新获取访问令牌。
+    syntax:
+      content: 'function loginWithVmMSI(options: MSIVmOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.MSIVmOptions'
+          description: ''
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.MSIVmOptions'
+    name: MSIVmOptions
+    spec.typeScript:
+      - name: MSIVmOptions
+        fullName: MSIVmOptions
+        uid: '@azure/ms-rest-nodeauth.MSIVmOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    name: MSIVmTokenCredentials>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: MSIVmTokenCredentials
+        fullName: MSIVmTokenCredentials
+        uid: '@azure/ms-rest-nodeauth.MSIVmTokenCredentials'
+      - name: '>'
+        fullName: '>'

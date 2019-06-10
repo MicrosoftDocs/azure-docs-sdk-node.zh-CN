@@ -1,0 +1,429 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.Origins'
+    name: Origins
+    fullName: Origins
+    children:
+      - '@azure/arm-cdn.Origins.beginUpdate'
+      - '@azure/arm-cdn.Origins.get'
+      - '@azure/arm-cdn.Origins.get_2'
+      - '@azure/arm-cdn.Origins.get_1'
+      - '@azure/arm-cdn.Origins.listByEndpoint'
+      - '@azure/arm-cdn.Origins.listByEndpoint_2'
+      - '@azure/arm-cdn.Origins.listByEndpoint_1'
+      - '@azure/arm-cdn.Origins.listByEndpointNext'
+      - '@azure/arm-cdn.Origins.listByEndpointNext_2'
+      - '@azure/arm-cdn.Origins.listByEndpointNext_1'
+      - '@azure/arm-cdn.Origins.constructor'
+      - '@azure/arm-cdn.Origins.update'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示源的类。
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.beginUpdate'
+    name: 'beginUpdate(string, string, string, string, OriginUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新现有 origin 终结点中。
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, profileName: string, endpointName: string, originName: string, originUpdateProperties: OriginUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: profileName
+          type:
+            - string
+          description: 在资源组中是唯一的 CDN 配置文件的名称。
+        - id: endpointName
+          type:
+            - string
+          description: 这是全局唯一的配置文件下的终结点的名称。
+        - id: originName
+          type:
+            - string
+          description: 这是在终结点中是唯一的原始名称。
+        - id: originUpdateProperties
+          type:
+            - '@azure/arm-cdn.OriginUpdateParameters'
+          description: 原点属性
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取现有 origin 终结点中。
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, originName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: profileName
+          type:
+            - string
+          description: 在资源组中是唯一的 CDN 配置文件的名称。
+        - id: endpointName
+          type:
+            - string
+          description: 这是全局唯一的配置文件下的终结点的名称。
+        - id: originName
+          type:
+            - string
+          description: 这是在终结点中是唯一的原始名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OriginsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<Origin>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, originName: string, options: RequestOptionsBase, callback: ServiceCallback<Origin>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: profileName
+          type:
+            - string
+          description: 在资源组中是唯一的 CDN 配置文件的名称。
+        - id: endpointName
+          type:
+            - string
+          description: 这是全局唯一的配置文件下的终结点的名称。
+        - id: originName
+          type:
+            - string
+          description: 这是在终结点中是唯一的原始名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Origin>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.OriginsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<Origin>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, originName: string, callback: ServiceCallback<Origin>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: profileName
+          type:
+            - string
+          description: 在资源组中是唯一的 CDN 配置文件的名称。
+        - id: endpointName
+          type:
+            - string
+          description: 这是全局唯一的配置文件下的终结点的名称。
+        - id: originName
+          type:
+            - string
+          description: 这是在终结点中是唯一的原始名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Origin>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.OriginsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpoint'
+    name: 'listByEndpoint(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出的所有现有源中终结点。
+    syntax:
+      content: 'function listByEndpoint(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: profileName
+          type:
+            - string
+          description: 在资源组中是唯一的 CDN 配置文件的名称。
+        - id: endpointName
+          type:
+            - string
+          description: 这是全局唯一的配置文件下的终结点的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpoint_2'
+    name: 'listByEndpoint(string, string, string, RequestOptionsBase, ServiceCallback<OriginListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByEndpoint(resourceGroupName: string, profileName: string, endpointName: string, options: RequestOptionsBase, callback: ServiceCallback<OriginListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: profileName
+          type:
+            - string
+          description: 在资源组中是唯一的 CDN 配置文件的名称。
+        - id: endpointName
+          type:
+            - string
+          description: 这是全局唯一的配置文件下的终结点的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.OriginListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpoint_1'
+    name: 'listByEndpoint(string, string, string, ServiceCallback<OriginListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByEndpoint(resourceGroupName: string, profileName: string, endpointName: string, callback: ServiceCallback<OriginListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: profileName
+          type:
+            - string
+          description: 在资源组中是唯一的 CDN 配置文件的名称。
+        - id: endpointName
+          type:
+            - string
+          description: 这是全局唯一的配置文件下的终结点的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.OriginListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpointNext'
+    name: 'listByEndpointNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出的所有现有源中终结点。
+    syntax:
+      content: 'function listByEndpointNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpointNext_2'
+    name: 'listByEndpointNext(string, RequestOptionsBase, ServiceCallback<OriginListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByEndpointNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<OriginListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.OriginListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.listByEndpointNext_1'
+    name: 'listByEndpointNext(string, ServiceCallback<OriginListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByEndpointNext(nextPageLink: string, callback: ServiceCallback<OriginListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.OriginListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.OriginsListByEndpointNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.constructor'
+    name: Origins(CdnManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建 Origin。
+    syntax:
+      content: 'new Origins(client: CdnManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cdn.CdnManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Origins.update'
+    name: 'update(string, string, string, string, OriginUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新现有 origin 终结点中。
+    syntax:
+      content: 'function update(resourceGroupName: string, profileName: string, endpointName: string, originName: string, originUpdateProperties: OriginUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 在 Azure 订阅中的资源组的名称。
+        - id: profileName
+          type:
+            - string
+          description: 在资源组中是唯一的 CDN 配置文件的名称。
+        - id: endpointName
+          type:
+            - string
+          description: 这是全局唯一的配置文件下的终结点的名称。
+        - id: originName
+          type:
+            - string
+          description: 这是在终结点中是唯一的原始名称。
+        - id: originUpdateProperties
+          type:
+            - '@azure/arm-cdn.OriginUpdateParameters'
+          description: 原点属性
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OriginsUpdateResponse>
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.CdnManagementClientContext'
+    name: CdnManagementClientContext
+    spec.typeScript:
+      - name: CdnManagementClientContext
+        fullName: CdnManagementClientContext
+        uid: '@azure/arm-cdn.CdnManagementClientContext'
+  - uid: '@azure/arm-cdn.OriginUpdateParameters'
+    name: OriginUpdateParameters
+    spec.typeScript:
+      - name: OriginUpdateParameters
+        fullName: OriginUpdateParameters
+        uid: '@azure/arm-cdn.OriginUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-cdn.Origin>
+    name: Origin>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Origin
+        fullName: Origin
+        uid: '@azure/arm-cdn.Origin'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.OriginListResult>
+    name: OriginListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OriginListResult
+        fullName: OriginListResult
+        uid: '@azure/arm-cdn.OriginListResult'
+      - name: '>'
+        fullName: '>'

@@ -1,0 +1,507 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.GalleryImageVersions'
+    name: GalleryImageVersions
+    fullName: GalleryImageVersions
+    children:
+      - '@azure/arm-compute.GalleryImageVersions.beginCreateOrUpdate'
+      - '@azure/arm-compute.GalleryImageVersions.beginDeleteMethod'
+      - '@azure/arm-compute.GalleryImageVersions.createOrUpdate'
+      - '@azure/arm-compute.GalleryImageVersions.deleteMethod'
+      - '@azure/arm-compute.GalleryImageVersions.constructor'
+      - '@azure/arm-compute.GalleryImageVersions.get_2'
+      - '@azure/arm-compute.GalleryImageVersions.get'
+      - '@azure/arm-compute.GalleryImageVersions.get_1'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImage'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImage_2'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImage_1'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext_2'
+      - '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="ee3c5-101">表示 GalleryImageVersions 类。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-101">Class representing a GalleryImageVersions.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, string, GalleryImageVersion, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ee3c5-102">创建或更新库映像版本。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-102">Create or update a gallery Image Version.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, galleryImageVersion: GalleryImageVersion, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-103">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-103">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-104">映像定义驻留在其中共享映像库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-104">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-105">是用来创建映像版本的库图像定义的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-105">The name of the gallery Image Definition in which the Image Version is to be created.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: '<span data-ttu-id="ee3c5-106">要创建的映像版本库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-106">The name of the gallery Image Version to be created.</span></span> <span data-ttu-id="ee3c5-107">若要遵循语义版本名称模式的需求：允许的字符是数字和句点。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-107">Needs to follow semantic version name pattern: The allowed characters are digit and period.</span></span> <span data-ttu-id="ee3c5-108">数字必须是 32 位整数的范围内。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-108">Digits must be within the range of a 32-bit integer.</span></span> <span data-ttu-id="ee3c5-109">格式： <MajorVersion>。<MinorVersion>。<Patch></span><span class="sxs-lookup"><span data-stu-id="ee3c5-109">Format: <MajorVersion>.<MinorVersion>.<Patch></span></span>'
+        - id: galleryImageVersion
+          type:
+            - '@azure/arm-compute.GalleryImageVersion'
+          description: <span data-ttu-id="ee3c5-110">创建或更新库映像版本操作提供的参数。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-110">Parameters supplied to the create or update gallery Image Version operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ee3c5-111">删除库映像版本。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-111">Delete a gallery Image Version.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-112">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-112">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-113">映像定义驻留在其中共享映像库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-113">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-114">映像版本所在的库图像定义的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-114">The name of the gallery Image Definition in which the Image Version resides.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-115">要删除的映像版本库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-115">The name of the gallery Image Version to be deleted.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, string, GalleryImageVersion, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ee3c5-116">创建或更新库映像版本。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-116">Create or update a gallery Image Version.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, galleryImageVersion: GalleryImageVersion, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-117">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-117">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-118">映像定义驻留在其中共享映像库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-118">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-119">是用来创建映像版本的库图像定义的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-119">The name of the gallery Image Definition in which the Image Version is to be created.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: '<span data-ttu-id="ee3c5-120">要创建的映像版本库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-120">The name of the gallery Image Version to be created.</span></span> <span data-ttu-id="ee3c5-121">若要遵循语义版本名称模式的需求：允许的字符是数字和句点。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-121">Needs to follow semantic version name pattern: The allowed characters are digit and period.</span></span> <span data-ttu-id="ee3c5-122">数字必须是 32 位整数的范围内。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-122">Digits must be within the range of a 32-bit integer.</span></span> <span data-ttu-id="ee3c5-123">格式： <MajorVersion>。<MinorVersion>。<Patch></span><span class="sxs-lookup"><span data-stu-id="ee3c5-123">Format: <MajorVersion>.<MinorVersion>.<Patch></span></span>'
+        - id: galleryImageVersion
+          type:
+            - '@azure/arm-compute.GalleryImageVersion'
+          description: <span data-ttu-id="ee3c5-124">创建或更新库映像版本操作提供的参数。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-124">Parameters supplied to the create or update gallery Image Version operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsCreateOrUpdateResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ee3c5-125">删除库映像版本。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-125">Delete a gallery Image Version.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-126">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-126">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-127">映像定义驻留在其中共享映像库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-127">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-128">映像版本所在的库图像定义的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-128">The name of the gallery Image Definition in which the Image Version resides.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-129">要删除的映像版本库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-129">The name of the gallery Image Version to be deleted.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.constructor'
+    name: GalleryImageVersions(ComputeManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ee3c5-130">创建 GalleryImageVersions。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-130">Create a GalleryImageVersions.</span></span>
+    syntax:
+      content: 'new GalleryImageVersions(client: ComputeManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-compute.ComputeManagementClientContext'
+          description: |
+            <span data-ttu-id="ee3c5-131">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-131">Reference to the service client.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.get_2'
+    name: 'get(string, string, string, string, GalleryImageVersionsGetOptionalParams, ServiceCallback<GalleryImageVersion>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, options: GalleryImageVersionsGetOptionalParams, callback: ServiceCallback<GalleryImageVersion>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-132">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-132">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-133">映像定义驻留在其中共享映像库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-133">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-134">映像版本所在的库图像定义的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-134">The name of the gallery Image Definition in which the Image Version resides.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-135">要检索的映像版本库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-135">The name of the gallery Image Version to be retrieved.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-compute.GalleryImageVersionsGetOptionalParams'
+          description: <span data-ttu-id="ee3c5-136">可选参数</span><span class="sxs-lookup"><span data-stu-id="ee3c5-136">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersion>
+          description: |
+            <span data-ttu-id="ee3c5-137">回调</span><span class="sxs-lookup"><span data-stu-id="ee3c5-137">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.get'
+    name: 'get(string, string, string, string, Models.GalleryImageVersionsGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ee3c5-138">检索有关库映像版本的信息。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-138">Retrieves information about a gallery Image Version.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, options?: Models.GalleryImageVersionsGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-139">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-139">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-140">映像定义驻留在其中共享映像库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-140">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-141">映像版本所在的库图像定义的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-141">The name of the gallery Image Definition in which the Image Version resides.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-142">要检索的映像版本库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-142">The name of the gallery Image Version to be retrieved.</span></span>
+        - id: options
+          type:
+            - Models.GalleryImageVersionsGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<GalleryImageVersion>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, galleryName: string, galleryImageName: string, galleryImageVersionName: string, callback: ServiceCallback<GalleryImageVersion>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-143">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-143">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-144">映像定义驻留在其中共享映像库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-144">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-145">映像版本所在的库图像定义的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-145">The name of the gallery Image Definition in which the Image Version resides.</span></span>
+        - id: galleryImageVersionName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-146">要检索的映像版本库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-146">The name of the gallery Image Version to be retrieved.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersion>
+          description: |
+            <span data-ttu-id="ee3c5-147">回调</span><span class="sxs-lookup"><span data-stu-id="ee3c5-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImage'
+    name: 'listByGalleryImage(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ee3c5-148">列出库库图像定义中的映像版本。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-148">List gallery Image Versions in a gallery Image Definition.</span></span>
+    syntax:
+      content: 'function listByGalleryImage(resourceGroupName: string, galleryName: string, galleryImageName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-149">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-149">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-150">映像定义驻留在其中共享映像库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-150">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-151">共享映像库图像定义是列出映像版本的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-151">The name of the Shared Image Gallery Image Definition from which the Image Versions are to be listed.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImage_2'
+    name: 'listByGalleryImage(string, string, string, RequestOptionsBase, ServiceCallback<GalleryImageVersionList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGalleryImage(resourceGroupName: string, galleryName: string, galleryImageName: string, options: RequestOptionsBase, callback: ServiceCallback<GalleryImageVersionList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-152">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-152">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-153">映像定义驻留在其中共享映像库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-153">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-154">共享映像库图像定义是列出映像版本的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-154">The name of the Shared Image Gallery Image Definition from which the Image Versions are to be listed.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="ee3c5-155">可选参数</span><span class="sxs-lookup"><span data-stu-id="ee3c5-155">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersionList>
+          description: |
+            <span data-ttu-id="ee3c5-156">回调</span><span class="sxs-lookup"><span data-stu-id="ee3c5-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImage_1'
+    name: 'listByGalleryImage(string, string, string, ServiceCallback<GalleryImageVersionList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGalleryImage(resourceGroupName: string, galleryName: string, galleryImageName: string, callback: ServiceCallback<GalleryImageVersionList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-157">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-157">The name of the resource group.</span></span>
+        - id: galleryName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-158">映像定义驻留在其中共享映像库的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-158">The name of the Shared Image Gallery in which the Image Definition resides.</span></span>
+        - id: galleryImageName
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-159">共享映像库图像定义是列出映像版本的名称。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-159">The name of the Shared Image Gallery Image Definition from which the Image Versions are to be listed.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersionList>
+          description: |
+            <span data-ttu-id="ee3c5-160">回调</span><span class="sxs-lookup"><span data-stu-id="ee3c5-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext'
+    name: 'listByGalleryImageNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ee3c5-161">列出库库图像定义中的映像版本。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-161">List gallery Image Versions in a gallery Image Definition.</span></span>
+    syntax:
+      content: 'function listByGalleryImageNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-162">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-162">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext_2'
+    name: 'listByGalleryImageNext(string, RequestOptionsBase, ServiceCallback<GalleryImageVersionList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGalleryImageNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<GalleryImageVersionList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-163">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-163">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="ee3c5-164">可选参数</span><span class="sxs-lookup"><span data-stu-id="ee3c5-164">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersionList>
+          description: |
+            <span data-ttu-id="ee3c5-165">回调</span><span class="sxs-lookup"><span data-stu-id="ee3c5-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryImageVersions.listByGalleryImageNext_1'
+    name: 'listByGalleryImageNext(string, ServiceCallback<GalleryImageVersionList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByGalleryImageNext(nextPageLink: string, callback: ServiceCallback<GalleryImageVersionList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="ee3c5-166">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="ee3c5-166">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.GalleryImageVersionList>
+          description: |
+            <span data-ttu-id="ee3c5-167">回调</span><span class="sxs-lookup"><span data-stu-id="ee3c5-167">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GalleryImageVersionsListByGalleryImageNextResponse>
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComputeManagementClientContext'
+    name: ComputeManagementClientContext
+    spec.typeScript:
+      - name: ComputeManagementClientContext
+        fullName: ComputeManagementClientContext
+        uid: '@azure/arm-compute.ComputeManagementClientContext'
+  - uid: '@azure/arm-compute.GalleryImageVersion'
+    name: GalleryImageVersion
+    spec.typeScript:
+      - name: GalleryImageVersion
+        fullName: GalleryImageVersion
+        uid: '@azure/arm-compute.GalleryImageVersion'
+  - uid: ServiceCallback<@azure/arm-compute.GalleryImageVersion>
+    name: GalleryImageVersion>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GalleryImageVersion
+        fullName: GalleryImageVersion
+        uid: '@azure/arm-compute.GalleryImageVersion'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-compute.GalleryImageVersionsGetOptionalParams'
+    name: GalleryImageVersionsGetOptionalParams
+    spec.typeScript:
+      - name: GalleryImageVersionsGetOptionalParams
+        fullName: GalleryImageVersionsGetOptionalParams
+        uid: '@azure/arm-compute.GalleryImageVersionsGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-compute.GalleryImageVersionList>
+    name: GalleryImageVersionList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GalleryImageVersionList
+        fullName: GalleryImageVersionList
+        uid: '@azure/arm-compute.GalleryImageVersionList'
+      - name: '>'
+        fullName: '>'

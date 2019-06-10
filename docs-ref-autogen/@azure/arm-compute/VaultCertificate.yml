@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VaultCertificate'
+    name: VaultCertificate
+    fullName: VaultCertificate
+    children:
+      - '@azure/arm-compute.VaultCertificate.certificateStore'
+      - '@azure/arm-compute.VaultCertificate.certificateUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="60d88-101">描述在密钥保管库中的单个证书引用，该证书应位于 VM。</span><span class="sxs-lookup"><span data-stu-id="60d88-101">Describes a single certificate reference in a Key Vault, and where the certificate should reside on the VM.</span></span>'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateStore'
+    name: certificateStore
+    fullName: certificateStore
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="60d88-102">对于 Windows Vm，应将证书添加到的虚拟机上指定的证书存储区。</span><span class="sxs-lookup"><span data-stu-id="60d88-102">For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added.</span></span> <span data-ttu-id="60d88-103">指定的证书存储在 LocalMachine 帐户中是隐式。</span><span class="sxs-lookup"><span data-stu-id="60d88-103">The specified certificate store is implicitly in the LocalMachine account.</span></span> <br><br><span data-ttu-id="60d88-104">适用于 Linux Vm，证书文件被置于 /var/lib/waagent 目录，用文件名称下&lt;UppercaseThumbprint&gt;.crt x509 证书文件并&lt;UppercaseThumbprint&gt;.prv 为私有密钥。</span><span class="sxs-lookup"><span data-stu-id="60d88-104">For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name &lt;UppercaseThumbprint&gt;.crt for the X509 certificate file and &lt;UppercaseThumbprint&gt;.prv for private key.</span></span> <span data-ttu-id="60d88-105">这两个文件是.pem 格式。</span><span class="sxs-lookup"><span data-stu-id="60d88-105">Both of these files are .pem formatted.</span></span>'
+    optional: true
+    syntax:
+      content: 'certificateStore?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="60d88-106">这是证书的已上传到密钥保管库以机密形式的 URL。</span><span class="sxs-lookup"><span data-stu-id="60d88-106">This is the URL of a certificate that has been uploaded to Key Vault as a secret.</span></span> <span data-ttu-id="60d88-107">有关将机密添加到密钥保管库，请参阅[将密钥或机密添加到密钥保管库](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add)。</span><span class="sxs-lookup"><span data-stu-id="60d88-107">For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add).</span></span> <span data-ttu-id="60d88-108">在这种情况下，证书需要是它是以下 JSON 的 Base64 编码对象的以 utf-8 编码：</span><span class="sxs-lookup"><span data-stu-id="60d88-108">In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8:</span></span> <br><br> <span data-ttu-id="60d88-109">{</span><span class="sxs-lookup"><span data-stu-id="60d88-109">{</span></span><br>  <span data-ttu-id="60d88-110">"data":"<Base64-encoded-certificate>",</span><span class="sxs-lookup"><span data-stu-id="60d88-110">"data":"<Base64-encoded-certificate>",</span></span><br>
+      <span data-ttu-id="60d88-111">"dataType":"pfx",</span><span class="sxs-lookup"><span data-stu-id="60d88-111">"dataType":"pfx",</span></span><br>  <span data-ttu-id="60d88-112">"password":"<pfx-file-password>"</span><span class="sxs-lookup"><span data-stu-id="60d88-112">"password":"<pfx-file-password>"</span></span><br><span data-ttu-id="60d88-113">}</span><span class="sxs-lookup"><span data-stu-id="60d88-113">}</span></span>
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

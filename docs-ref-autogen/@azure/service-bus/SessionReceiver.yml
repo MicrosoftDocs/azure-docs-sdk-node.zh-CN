@@ -1,0 +1,400 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SessionReceiver'
+    name: SessionReceiver
+    fullName: SessionReceiver
+    children:
+      - '@azure/service-bus.SessionReceiver.close'
+      - '@azure/service-bus.SessionReceiver.getMessageIterator'
+      - '@azure/service-bus.SessionReceiver.getState'
+      - '@azure/service-bus.SessionReceiver.isClosed'
+      - '@azure/service-bus.SessionReceiver.isReceivingMessages'
+      - '@azure/service-bus.SessionReceiver.peek'
+      - '@azure/service-bus.SessionReceiver.peekBySequenceNumber'
+      - '@azure/service-bus.SessionReceiver.receiveDeferredMessage'
+      - '@azure/service-bus.SessionReceiver.receiveDeferredMessages'
+      - '@azure/service-bus.SessionReceiver.receiveMessages'
+      - '@azure/service-bus.SessionReceiver.receiveMode'
+      - '@azure/service-bus.SessionReceiver.registerMessageHandler'
+      - '@azure/service-bus.SessionReceiver.renewSessionLock'
+      - '@azure/service-bus.SessionReceiver.sessionId'
+      - '@azure/service-bus.SessionReceiver.sessionLockedUntilUtc'
+      - '@azure/service-bus.SessionReceiver.setState'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      SessionReceiver 类可用于接收来自已启用的会话的消息队列或订阅在批处理中或通过注册处理程序。
+      使用`createReceiver`QueueClient 或 SubscriptionClient 实例化 SessionReceiver 上的函数。
+      SessionReceiver 类是抽象基础 AMQP 接收方链接上。
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      关闭基础 AMQP 接收方链接。
+      关闭之后，接收方不能用于任何进一步的操作。
+      使用`createReceiver`QueueClient 或 SubscriptionClient 实例化新的接收方上的函数
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.getMessageIterator'
+    name: getMessageIterator()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      从接收方的消息获取异步迭代器。
+      如果没有另一个正在对同一接收方接收操作，将引发错误。 如果您不确定是否有另一个接收操作正在运行，则检查`isReceivingMessages`接收方上的属性。
+
+      如果迭代器不能以一分钟内提取中的新消息`undefined`将返回
+    syntax:
+      content: function getMessageIterator()
+      parameters: []
+      return:
+        type:
+          - AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.getState'
+    name: getState()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '获取会话的状态。 有关会话状态的详细信息，请参阅[会话状态](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#message-session-state)'
+    syntax:
+      content: function getState()
+      parameters: []
+      return:
+        type:
+          - Promise<any>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.isClosed'
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 返回`true`如果接收方已关闭。 这可能是因为接收方本身已关闭或创建其客户端已关闭。
+    syntax:
+      content: 'isClosed: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.isReceivingMessages'
+    name: isReceivingMessages()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      指示是否接收方当前正在接收消息。
+      当此方法返回 true，新`registerMessageHandler()`或`receiveMessages()`无法进行调用。
+    syntax:
+      content: function isReceivingMessages()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.peek'
+    name: peek(undefined | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      提取下一批的活动消息 （包括但不是死信消息延迟） 在当前会话中。
+      - 首次调用`peek()`提取第一个活动消息。 每个后续调用中获取的后续消息。
+      - 与不同`received`消息，`peeked`消息是消息的只读版本。
+      它不能为`Completed/Abandoned/Deferred/Deadlettered`。 无法续订锁。
+    syntax:
+      content: 'function peek(maxMessageCount?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: 要查看的消息数目上限。 默认值`1`。
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.peekBySequenceNumber'
+    name: 'peekBySequenceNumber(Long, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      查看所需的活动消息数 （包括但不是死信消息延迟） 从当前会话中指定的序列号。
+      - 与不同`received`消息，`peeked`消息是消息的只读版本。
+      它不能为`Completed/Abandoned/Deferred/Deadlettered`。 无法续订锁。
+    syntax:
+      content: 'function peekBySequenceNumber(fromSequenceNumber: Long, maxMessageCount?: undefined | number)'
+      parameters:
+        - id: fromSequenceNumber
+          type:
+            - Long
+          description: 从中读取消息序列号。
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveDeferredMessage'
+    name: receiveDeferredMessage(Long)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 返回的 promise 的解析延迟的消息由标识为给定`sequenceNumber`。
+    syntax:
+      content: 'function receiveDeferredMessage(sequenceNumber: Long)'
+      parameters:
+        - id: sequenceNumber
+          type:
+            - Long
+          description: 需要接收消息的序列号。
+      return:
+        type:
+          - Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveDeferredMessages'
+    name: 'receiveDeferredMessages(Long[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 返回可解析延迟的消息标识为数组的 promise 的给定`sequenceNumbers`。
+    syntax:
+      content: 'function receiveDeferredMessages(sequenceNumbers: Long[])'
+      parameters:
+        - id: sequenceNumbers
+          type:
+            - 'Long[]'
+          description: 需要接收的消息的序列号的数组。
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveMessages'
+    name: 'receiveMessages(number, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      返回可解析到的消息数组的 promise 基于给定的计数和超时通过 AMQP 接收方链接从队列/订阅。
+      如果没有另一个正在对同一接收方接收操作，将引发错误。 如果您不确定是否有另一个接收操作正在运行，则检查`isReceivingMessages`接收方上的属性。
+    syntax:
+      content: 'function receiveMessages(maxMessageCount: number, maxWaitTimeInSeconds?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - number
+          description: 要从队列/订阅接收的消息数目上限。
+        - id: maxWaitTimeInSeconds
+          type:
+            - undefined | number
+          description: |-
+            最大等待时间 （秒） 为其接收方应等待以接收第一条消息。 如果此时不收到任何消息，则返回的承诺获取解析为一个空数组。
+            - **默认值**:`60`秒。
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveMode'
+    name: receiveMode
+    fullName: receiveMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 表示此接收器的 receiveMode。
+    syntax:
+      content: 'receiveMode: ReceiveMode'
+      return:
+        type:
+          - '@azure/service-bus.ReceiveMode'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.registerMessageHandler'
+    name: 'registerMessageHandler(OnMessage, OnError, SessionMessageHandlerOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      注册处理程序以处理传入的消息流通过 AMQP 接收方链接从队列/订阅。
+      若要停止接收消息，请调用`close()`SessionReceiver 上。
+      如果没有另一个正在对同一接收方接收操作，将引发错误。 如果您不确定是否有另一个接收操作正在运行，则检查`isReceivingMessages`接收方上的属性。
+    syntax:
+      content: 'function registerMessageHandler(onMessage: OnMessage, onError: OnError, options?: SessionMessageHandlerOptions)'
+      parameters:
+        - id: onMessage
+          type:
+            - '@azure/service-bus.OnMessage'
+          description: 用于处理每个传入消息的处理程序。
+        - id: onError
+          type:
+            - '@azure/service-bus.OnError'
+          description: 接收或处理消息过程中发生任何错误处理程序。
+        - id: options
+          type:
+            - '@azure/service-bus.SessionMessageHandlerOptions'
+          description: |
+            用于控制是否应自动完成的消息或如果应自动续订的会话上的锁的选项。 您可以控制应同时处理消息的最大数目。 此外可以提供超时以秒为单位来表示接收方在关闭之前等待新消息的时间量。
+          optional: true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.renewSessionLock'
+    name: renewSessionLock()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      队列/订阅创建期间指定持续时间的会话续订锁。
+      - 检查`sessionLockedUntilUtc`上的锁的过期的时间 SessionReceiver 属性。
+      - 对会话的锁定到期时
+          - 可以使用此接收方接收到没有更多消息
+          - 如果不确定一条消息 (使用`complete()`，`defer()`或`deadletter()`、 会话前锁定到期，则返回在下一步在队列/订阅消息领土接收操作。
+    syntax:
+      content: function renewSessionLock()
+      parameters: []
+      return:
+        type:
+          - Promise<Date>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      此接收器将从中接收消息的会话 id。
+      AMQP 接收方链接已成功设置为会话之前，将返回未定义。
+    syntax:
+      content: 'sessionId: string | undefined'
+      return:
+        type:
+          - string | undefined
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.sessionLockedUntilUtc'
+    name: sessionLockedUntilUtc
+    fullName: sessionLockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      会话已锁定到的 utc 时间。
+      每次`renewSessionLock()`是调用，这一次将更新为当前时间加上指定锁定持续时间在队列/订阅创建过程。
+
+      AMQP 接收方链接已成功设置为会话之前，将返回未定义。
+    syntax:
+      content: 'sessionLockedUntilUtc: Date | undefined'
+      return:
+        type:
+          - Date | undefined
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.setState'
+    name: setState(any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '在会话上设置的状态。 有关会话状态的详细信息，请参阅[会话状态](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#message-session-state)'
+    syntax:
+      content: 'function setState(state: any)'
+      parameters:
+        - id: state
+          type:
+            - any
+          description: |
+            需要设置状态。
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    name: ServiceBusMessage>
+    spec.typeScript:
+      - name: AsyncIterableIterator<
+        fullName: AsyncIterableIterator<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '>'
+        fullName: '>'
+  - uid: 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    name: 'ReceivedMessageInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    name: ServiceBusMessage | undefined>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: ' | undefined>'
+        fullName: ' | undefined>'
+  - uid: 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    name: 'ServiceBusMessage[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/service-bus.OnMessage'
+    name: OnMessage
+    spec.typeScript:
+      - name: OnMessage
+        fullName: OnMessage
+        uid: '@azure/service-bus.OnMessage'
+  - uid: '@azure/service-bus.OnError'
+    name: OnError
+    spec.typeScript:
+      - name: OnError
+        fullName: OnError
+        uid: '@azure/service-bus.OnError'
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions'
+    name: SessionMessageHandlerOptions
+    spec.typeScript:
+      - name: SessionMessageHandlerOptions
+        fullName: SessionMessageHandlerOptions
+        uid: '@azure/service-bus.SessionMessageHandlerOptions'

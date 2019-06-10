@@ -1,0 +1,252 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    fullName: SendableMessageInfo
+    children:
+      - '@azure/service-bus.SendableMessageInfo.body'
+      - '@azure/service-bus.SendableMessageInfo.contentType'
+      - '@azure/service-bus.SendableMessageInfo.correlationId'
+      - '@azure/service-bus.SendableMessageInfo.label'
+      - '@azure/service-bus.SendableMessageInfo.messageId'
+      - '@azure/service-bus.SendableMessageInfo.partitionKey'
+      - '@azure/service-bus.SendableMessageInfo.replyTo'
+      - '@azure/service-bus.SendableMessageInfo.replyToSessionId'
+      - '@azure/service-bus.SendableMessageInfo.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.SendableMessageInfo.sessionId'
+      - '@azure/service-bus.SendableMessageInfo.timeToLive'
+      - '@azure/service-bus.SendableMessageInfo.to'
+      - '@azure/service-bus.SendableMessageInfo.userProperties'
+      - '@azure/service-bus.SendableMessageInfo.viaPartitionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述要发送到服务总线的消息。
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 需将其发送或接收到消息正文。
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 消息的内容类型。 视需要描述消息的负载，采用符合 rfc2045 第 5 节，例如"application/json"格式的描述符。
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      允许应用程序的相关性，例如专用于反映正在答复的消息的 MessageId 目的指定消息的上下文相关标识符。
+      请参阅[消息路由和关联](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 应用程序特定标签。 此属性使应用程序可指示消息接收方在一种标准化的用途。 方式，类似于电子邮件主题行。 映射的 AMQP 属性是"subject"。
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      消息标识符是应用程序定义的值，可用于唯一标识消息及其有效负载。
+
+      请注意:不允许使用不是整个整数的数字。
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      用于将消息发送到已分区实体分区键。
+      最大长度为 128 个字符。 对于[已分区实体](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning)，设置此值后，可以将相关消息分配到同一内部分区，以便能够正确记录提交序列顺序。 分区是由哈希函数通过此值进行选择，无法直接选择。
+      - 对于会话感知实体，`sessionId`属性重写此值。
+      - 对于非分区实体，分区键将被忽略
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '一个实体，以发送答复的地址。 应用程序定义的这一可选值是一种标准方法，可用于向消息接收程序明示答复路径。 如果发送程序希望收到答复，它会将此值设置为，要将答复发送到的队列或主题的绝对或相关路径。 请参阅[消息路由和关联](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      会话标识符扩充`replyTo`地址。
+      最大长度为 128 个字符。 此值补充了 ReplyTo 信息并指定了会话 Id 应为答复时发送给答复实体的设置。
+      请参阅[消息路由和关联](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation)。
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      日期和 utc 格式的消息将排入队列的时间。 此属性返回的时间采用 UTC;设置属性时，所提供的日期时间值还必须是 utc 格式。 此值是延迟的消息发送。
+      利用要延迟到特定时间在将来发送的邮件。 消息排入队列时间并不意味着该消息将发送一次。 它将获取已排入队列，但实际发送时间取决于队列的工作负荷和其状态。
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      会话感知实体的会话标识符。 最大长度为 128 个字符。 对于会话感知实体，应用程序定义的此值指定了消息的会话附属关系。 会话标识符相同的消息会处于摘要锁定状态，并确切启用依序处理和解多路复用。 对于非会话感知实体，可忽略此值。
+      [消息会话](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions)。
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '消息的生存时间值。 此值是相对持续时间之后消息过期、 从即时消息已接受并存储代理所捕获`enqueuedTimeUtc`。 如果未明确设置，假设的值是相应队列或主题的 DefaultTimeToLive。 消息级别`timeToLive`值不得超过实体的 DefaultTimeToLive 设置并且以无提示方式调整如果是这样。 请参阅[到期](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration)。'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '"收件人"地址。 此属性已保留，以供将来用于路由方案，暂被中转站本身忽略。 应用程序可以使用此值在规则驱动[自动转发链](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding)方案，以指示消息的预期逻辑目标。'
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 应用程序特定属性可用于自定义消息元数据。
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      将消息发送到通过已分区的传输队列实体分区键。 最大长度为 128 个字符。 如果通过事务的作用域中的传输队列发送一条消息，此值选择传输队列分区：这是功能上等效于`partitionKey`属性，并确保消息将保留在一起并按顺序，在传输。
+      请参阅[传输并通过发送](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via)。
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'

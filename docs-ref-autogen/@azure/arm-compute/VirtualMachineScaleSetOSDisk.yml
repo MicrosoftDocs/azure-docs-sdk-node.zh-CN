@@ -1,0 +1,211 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk'
+    name: VirtualMachineScaleSetOSDisk
+    fullName: VirtualMachineScaleSetOSDisk
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.caching'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.createOption'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.diffDiskSettings'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.diskSizeGB'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.image'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.managedDisk'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.name'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.osType'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.vhdContainers'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSDisk.writeAcceleratorEnabled'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="31539-101">介绍虚拟机规模集操作系统磁盘。</span><span class="sxs-lookup"><span data-stu-id="31539-101">Describes a virtual machine scale set operating system disk.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="31539-102">指定的缓存要求。</span><span class="sxs-lookup"><span data-stu-id="31539-102">Specifies the caching requirements.</span></span> <br><br> <span data-ttu-id="31539-103">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="31539-103">Possible values are:</span></span> <br><br> <span data-ttu-id="31539-104">**无**</span><span class="sxs-lookup"><span data-stu-id="31539-104">**None**</span></span> <br><br>
+      <span data-ttu-id="31539-105">**ReadOnly**</span><span class="sxs-lookup"><span data-stu-id="31539-105">**ReadOnly**</span></span> <br><br> <span data-ttu-id="31539-106">**ReadWrite**</span><span class="sxs-lookup"><span data-stu-id="31539-106">**ReadWrite**</span></span> <br><br> <span data-ttu-id="31539-107">默认值：**未使用任何标准存储。高级存储的 ReadOnly**。</span><span class="sxs-lookup"><span data-stu-id="31539-107">Default: **None for Standard storage. ReadOnly for Premium storage**.</span></span> <span data-ttu-id="31539-108">可能的值包括：None、 ReadOnly，ReadWrite</span><span class="sxs-lookup"><span data-stu-id="31539-108">Possible values include: 'None', 'ReadOnly', 'ReadWrite'</span></span>
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.createOption'
+    name: createOption
+    fullName: createOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="31539-109">指定应如何创建在规模集中虚拟机。</span><span class="sxs-lookup"><span data-stu-id="31539-109">Specifies how the virtual machines in the scale set should be created.</span></span><br><br> <span data-ttu-id="31539-110">唯一允许的值是：**FromImage** \u2013 时使用映像创建虚拟机使用此值。</span><span class="sxs-lookup"><span data-stu-id="31539-110">The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine.</span></span> <span data-ttu-id="31539-111">如果使用平台映像，还可以使用上面所述的 imageReference 元素。</span><span class="sxs-lookup"><span data-stu-id="31539-111">If you are using a platform image, you also use the imageReference element described above.</span></span> <span data-ttu-id="31539-112">如果使用 marketplace 映像，还可以使用前面所述的计划元素。</span><span class="sxs-lookup"><span data-stu-id="31539-112">If you are using a marketplace image, you  also use the plan element previously described.</span></span> <span data-ttu-id="31539-113">可能的值包括：FromImage、 Empty，附加</span><span class="sxs-lookup"><span data-stu-id="31539-113">Possible values include: ''FromImage'', ''Empty'', ''Attach''</span></span>'
+    syntax:
+      content: 'createOption: DiskCreateOptionTypes'
+      return:
+        type:
+          - '@azure/arm-compute.DiskCreateOptionTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.diffDiskSettings'
+    name: diffDiskSettings
+    fullName: diffDiskSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="31539-114">指定操作系统磁盘使用的虚拟机规模集的临时磁盘设置。</span><span class="sxs-lookup"><span data-stu-id="31539-114">Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.</span></span>
+    optional: true
+    syntax:
+      content: 'diffDiskSettings?: DiffDiskSettings'
+      return:
+        type:
+          - '@azure/arm-compute.DiffDiskSettings'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="31539-115">指定操作系统磁盘的大小在千兆字节为单位。</span><span class="sxs-lookup"><span data-stu-id="31539-115">Specifies the size of the operating system disk in gigabytes.</span></span> <span data-ttu-id="31539-116">可以使用此元素覆盖虚拟机映像中磁盘的大小。</span><span class="sxs-lookup"><span data-stu-id="31539-116">This element can be used to overwrite the size of the disk in a virtual machine image.</span></span> <br><br> <span data-ttu-id="31539-117">此值不能大于 1023 GB</span><span class="sxs-lookup"><span data-stu-id="31539-117">This value cannot be larger than 1023 GB</span></span>
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.image'
+    name: image
+    fullName: image
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="31539-118">指定有关非托管的用户映像所基于的规模集上的信息。</span><span class="sxs-lookup"><span data-stu-id="31539-118">Specifies information about the unmanaged user image to base the scale set on.</span></span>
+    optional: true
+    syntax:
+      content: 'image?: VirtualHardDisk'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualHardDisk'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="31539-119">托管的磁盘的参数。</span><span class="sxs-lookup"><span data-stu-id="31539-119">The managed disk parameters.</span></span>
+    optional: true
+    syntax:
+      content: 'managedDisk?: VirtualMachineScaleSetManagedDiskParameters'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="31539-120">磁盘名称。</span><span class="sxs-lookup"><span data-stu-id="31539-120">The disk name.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="31539-121">此属性可以指定如果从用户映像或专用的 VHD 创建 VM 的磁盘中包含的操作系统类型。</span><span class="sxs-lookup"><span data-stu-id="31539-121">This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD.</span></span> <br><br> <span data-ttu-id="31539-122">可能的值包括：</span><span class="sxs-lookup"><span data-stu-id="31539-122">Possible values are:</span></span> <br><br>
+      <span data-ttu-id="31539-123">**Windows**</span><span class="sxs-lookup"><span data-stu-id="31539-123">**Windows**</span></span> <br><br> <span data-ttu-id="31539-124">**Linux**。</span><span class="sxs-lookup"><span data-stu-id="31539-124">**Linux**.</span></span> <span data-ttu-id="31539-125">可能的值包括：'Windows', 'Linux'</span><span class="sxs-lookup"><span data-stu-id="31539-125">Possible values include: 'Windows', 'Linux'</span></span>
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.vhdContainers'
+    name: vhdContainers
+    fullName: vhdContainers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="31539-126">指定用于存储操作系统磁盘的规模集的容器 url。</span><span class="sxs-lookup"><span data-stu-id="31539-126">Specifies the container urls that are used to store operating system disks for the scale set.</span></span>
+    optional: true
+    syntax:
+      content: 'vhdContainers?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSDisk.writeAcceleratorEnabled'
+    name: writeAcceleratorEnabled
+    fullName: writeAcceleratorEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="31539-127">指定是否应启用或禁用在磁盘上 writeAccelerator。</span><span class="sxs-lookup"><span data-stu-id="31539-127">Specifies whether writeAccelerator should be enabled or disabled on the disk.</span></span>
+    optional: true
+    syntax:
+      content: 'writeAcceleratorEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.DiskCreateOptionTypes'
+    name: DiskCreateOptionTypes
+    spec.typeScript:
+      - name: DiskCreateOptionTypes
+        fullName: DiskCreateOptionTypes
+        uid: '@azure/arm-compute.DiskCreateOptionTypes'
+  - uid: '@azure/arm-compute.DiffDiskSettings'
+    name: DiffDiskSettings
+    spec.typeScript:
+      - name: DiffDiskSettings
+        fullName: DiffDiskSettings
+        uid: '@azure/arm-compute.DiffDiskSettings'
+  - uid: '@azure/arm-compute.VirtualHardDisk'
+    name: VirtualHardDisk
+    spec.typeScript:
+      - name: VirtualHardDisk
+        fullName: VirtualHardDisk
+        uid: '@azure/arm-compute.VirtualHardDisk'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+    name: VirtualMachineScaleSetManagedDiskParameters
+    spec.typeScript:
+      - name: VirtualMachineScaleSetManagedDiskParameters
+        fullName: VirtualMachineScaleSetManagedDiskParameters
+        uid: '@azure/arm-compute.VirtualMachineScaleSetManagedDiskParameters'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'

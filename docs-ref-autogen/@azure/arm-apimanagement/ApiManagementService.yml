@@ -1,0 +1,1011 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ApiManagementService'
+    name: ApiManagementService
+    fullName: ApiManagementService
+    children:
+      - '@azure/arm-apimanagement.ApiManagementService.constructor'
+      - '@azure/arm-apimanagement.ApiManagementService.applyNetworkConfigurationUpdates'
+      - '@azure/arm-apimanagement.ApiManagementService.backup'
+      - '@azure/arm-apimanagement.ApiManagementService.beginApplyNetworkConfigurationUpdates'
+      - '@azure/arm-apimanagement.ApiManagementService.beginBackup'
+      - '@azure/arm-apimanagement.ApiManagementService.beginCreateOrUpdate'
+      - '@azure/arm-apimanagement.ApiManagementService.beginDeleteMethod'
+      - '@azure/arm-apimanagement.ApiManagementService.beginRestore'
+      - '@azure/arm-apimanagement.ApiManagementService.beginUpdate'
+      - '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability'
+      - '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability_2'
+      - '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability_1'
+      - '@azure/arm-apimanagement.ApiManagementService.createOrUpdate'
+      - '@azure/arm-apimanagement.ApiManagementService.deleteMethod'
+      - '@azure/arm-apimanagement.ApiManagementService.get'
+      - '@azure/arm-apimanagement.ApiManagementService.get_2'
+      - '@azure/arm-apimanagement.ApiManagementService.get_1'
+      - '@azure/arm-apimanagement.ApiManagementService.getSsoToken'
+      - '@azure/arm-apimanagement.ApiManagementService.getSsoToken_2'
+      - '@azure/arm-apimanagement.ApiManagementService.getSsoToken_1'
+      - '@azure/arm-apimanagement.ApiManagementService.list'
+      - '@azure/arm-apimanagement.ApiManagementService.list_2'
+      - '@azure/arm-apimanagement.ApiManagementService.list_1'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup_2'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup_1'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext_2'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext_1'
+      - '@azure/arm-apimanagement.ApiManagementService.listNext'
+      - '@azure/arm-apimanagement.ApiManagementService.listNext_2'
+      - '@azure/arm-apimanagement.ApiManagementService.listNext_1'
+      - '@azure/arm-apimanagement.ApiManagementService.restore'
+      - '@azure/arm-apimanagement.ApiManagementService.update'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="1e50c-101">表示 ApiManagementService 类。</span><span class="sxs-lookup"><span data-stu-id="1e50c-101">Class representing a ApiManagementService.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.constructor'
+    name: ApiManagementService(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-102">创建 ApiManagementService。</span><span class="sxs-lookup"><span data-stu-id="1e50c-102">Create a ApiManagementService.</span></span>
+    syntax:
+      content: 'new ApiManagementService(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            <span data-ttu-id="1e50c-103">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="1e50c-103">Reference to the service client.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.applyNetworkConfigurationUpdates'
+    name: 'applyNetworkConfigurationUpdates(string, string, Models.ApiManagementServiceApplyNetworkConfigurationUpdatesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-104">更新选取更新的网络设置的虚拟网络中运行的 Microsoft.ApiManagement 资源。</span><span class="sxs-lookup"><span data-stu-id="1e50c-104">Updates the Microsoft.ApiManagement resource running in the Virtual network to pick the updated network settings.</span></span>
+    syntax:
+      content: 'function applyNetworkConfigurationUpdates(resourceGroupName: string, serviceName: string, options?: Models.ApiManagementServiceApplyNetworkConfigurationUpdatesOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-105">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-105">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-106">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-106">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - Models.ApiManagementServiceApplyNetworkConfigurationUpdatesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceApplyNetworkConfigurationUpdatesResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.backup'
+    name: 'backup(string, string, ApiManagementServiceBackupRestoreParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-107">创建 API 管理服务在给定 Azure 存储帐户的备份。</span><span class="sxs-lookup"><span data-stu-id="1e50c-107">Creates a backup of the API Management service to the given Azure Storage Account.</span></span> <span data-ttu-id="1e50c-108">这是长时间运行的操作，可能需要几分钟才能完成。</span><span class="sxs-lookup"><span data-stu-id="1e50c-108">This is long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function backup(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceBackupRestoreParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-109">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-109">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-110">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-110">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+          description: <span data-ttu-id="1e50c-111">提供给 ApiManagementService_Backup 操作的参数。</span><span class="sxs-lookup"><span data-stu-id="1e50c-111">Parameters supplied to the ApiManagementService_Backup operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceBackupResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginApplyNetworkConfigurationUpdates'
+    name: 'beginApplyNetworkConfigurationUpdates(string, string, Models.ApiManagementServiceBeginApplyNetworkConfigurationUpdatesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-112">更新选取更新的网络设置的虚拟网络中运行的 Microsoft.ApiManagement 资源。</span><span class="sxs-lookup"><span data-stu-id="1e50c-112">Updates the Microsoft.ApiManagement resource running in the Virtual network to pick the updated network settings.</span></span>
+    syntax:
+      content: 'function beginApplyNetworkConfigurationUpdates(resourceGroupName: string, serviceName: string, options?: Models.ApiManagementServiceBeginApplyNetworkConfigurationUpdatesOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-113">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-113">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-114">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-114">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - Models.ApiManagementServiceBeginApplyNetworkConfigurationUpdatesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginBackup'
+    name: 'beginBackup(string, string, ApiManagementServiceBackupRestoreParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-115">创建 API 管理服务在给定 Azure 存储帐户的备份。</span><span class="sxs-lookup"><span data-stu-id="1e50c-115">Creates a backup of the API Management service to the given Azure Storage Account.</span></span> <span data-ttu-id="1e50c-116">这是长时间运行的操作，可能需要几分钟才能完成。</span><span class="sxs-lookup"><span data-stu-id="1e50c-116">This is long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function beginBackup(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceBackupRestoreParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-117">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-117">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-118">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-118">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+          description: <span data-ttu-id="1e50c-119">提供给 ApiManagementService_Backup 操作的参数。</span><span class="sxs-lookup"><span data-stu-id="1e50c-119">Parameters supplied to the ApiManagementService_Backup operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, ApiManagementServiceResource, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-120">创建或更新 API 管理服务。</span><span class="sxs-lookup"><span data-stu-id="1e50c-120">Creates or updates an API Management service.</span></span> <span data-ttu-id="1e50c-121">这是长时间运行的操作，可能需要几分钟才能完成。</span><span class="sxs-lookup"><span data-stu-id="1e50c-121">This is long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceResource, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-122">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-122">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-123">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-123">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceResource'
+          description: <span data-ttu-id="1e50c-124">提供给 CreateOrUpdate API 管理服务操作参数。</span><span class="sxs-lookup"><span data-stu-id="1e50c-124">Parameters supplied to the CreateOrUpdate API Management service operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-125">删除现有 API 管理服务。</span><span class="sxs-lookup"><span data-stu-id="1e50c-125">Deletes an existing API Management service.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, serviceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-126">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-126">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-127">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-127">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginRestore'
+    name: 'beginRestore(string, string, ApiManagementServiceBackupRestoreParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-128">将 API 管理服务使用 ApiManagementService_Backup 操作在当前服务上的创建的备份还原。</span><span class="sxs-lookup"><span data-stu-id="1e50c-128">Restores a backup of an API Management service created using the ApiManagementService_Backup operation on the current service.</span></span> <span data-ttu-id="1e50c-129">这是一个长时间运行的操作，可能需要几分钟才能完成。</span><span class="sxs-lookup"><span data-stu-id="1e50c-129">This is a long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function beginRestore(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceBackupRestoreParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-130">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-130">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-131">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-131">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+          description: <span data-ttu-id="1e50c-132">还原 API 管理服务提供来自备份操作的参数。</span><span class="sxs-lookup"><span data-stu-id="1e50c-132">Parameters supplied to the Restore API Management service from backup operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginUpdate'
+    name: 'beginUpdate(string, string, ApiManagementServiceUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-133">更新现有 API 管理服务。</span><span class="sxs-lookup"><span data-stu-id="1e50c-133">Updates an existing API Management service.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-134">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-134">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-135">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-135">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceUpdateParameters'
+          description: <span data-ttu-id="1e50c-136">提供给 CreateOrUpdate API 管理服务操作参数。</span><span class="sxs-lookup"><span data-stu-id="1e50c-136">Parameters supplied to the CreateOrUpdate API Management service operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability'
+    name: 'checkNameAvailability(ApiManagementServiceCheckNameAvailabilityParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-137">检查可用性和正确性的 API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-137">Checks availability and correctness of a name for an API Management service.</span></span>
+    syntax:
+      content: 'function checkNameAvailability(parameters: ApiManagementServiceCheckNameAvailabilityParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceCheckNameAvailabilityParameters'
+          description: <span data-ttu-id="1e50c-138">提供给 CheckNameAvailability 操作的参数。</span><span class="sxs-lookup"><span data-stu-id="1e50c-138">Parameters supplied to the CheckNameAvailability operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceCheckNameAvailabilityResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability_2'
+    name: 'checkNameAvailability(ApiManagementServiceCheckNameAvailabilityParameters, RequestOptionsBase, ServiceCallback<ApiManagementServiceNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(parameters: ApiManagementServiceCheckNameAvailabilityParameters, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceNameAvailabilityResult>)'
+      parameters:
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceCheckNameAvailabilityParameters'
+          description: <span data-ttu-id="1e50c-139">提供给 CheckNameAvailability 操作的参数。</span><span class="sxs-lookup"><span data-stu-id="1e50c-139">Parameters supplied to the CheckNameAvailability operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1e50c-140">可选参数</span><span class="sxs-lookup"><span data-stu-id="1e50c-140">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="1e50c-141">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-141">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceCheckNameAvailabilityResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability_1'
+    name: 'checkNameAvailability(ApiManagementServiceCheckNameAvailabilityParameters, ServiceCallback<ApiManagementServiceNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(parameters: ApiManagementServiceCheckNameAvailabilityParameters, callback: ServiceCallback<ApiManagementServiceNameAvailabilityResult>)'
+      parameters:
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceCheckNameAvailabilityParameters'
+          description: <span data-ttu-id="1e50c-142">提供给 CheckNameAvailability 操作的参数。</span><span class="sxs-lookup"><span data-stu-id="1e50c-142">Parameters supplied to the CheckNameAvailability operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="1e50c-143">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceCheckNameAvailabilityResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.createOrUpdate'
+    name: 'createOrUpdate(string, string, ApiManagementServiceResource, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-144">创建或更新 API 管理服务。</span><span class="sxs-lookup"><span data-stu-id="1e50c-144">Creates or updates an API Management service.</span></span> <span data-ttu-id="1e50c-145">这是长时间运行的操作，可能需要几分钟才能完成。</span><span class="sxs-lookup"><span data-stu-id="1e50c-145">This is long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceResource, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-146">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-146">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-147">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-147">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceResource'
+          description: <span data-ttu-id="1e50c-148">提供给 CreateOrUpdate API 管理服务操作参数。</span><span class="sxs-lookup"><span data-stu-id="1e50c-148">Parameters supplied to the CreateOrUpdate API Management service operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-149">删除现有 API 管理服务。</span><span class="sxs-lookup"><span data-stu-id="1e50c-149">Deletes an existing API Management service.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-150">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-150">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-151">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-151">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceDeleteMethodResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-152">获取 API 管理服务资源说明。</span><span class="sxs-lookup"><span data-stu-id="1e50c-152">Gets an API Management service resource description.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-153">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-153">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-154">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-154">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<ApiManagementServiceResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-155">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-155">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-156">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-156">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1e50c-157">可选参数</span><span class="sxs-lookup"><span data-stu-id="1e50c-157">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceResource>
+          description: |
+            <span data-ttu-id="1e50c-158">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.get_1'
+    name: 'get(string, string, ServiceCallback<ApiManagementServiceResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, callback: ServiceCallback<ApiManagementServiceResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-159">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-159">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-160">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-160">The name of the API Management service.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceResource>
+          description: |
+            <span data-ttu-id="1e50c-161">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.getSsoToken'
+    name: 'getSsoToken(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-162">获取 API 管理服务的有效期为 5 分钟的单点登录令牌。</span><span class="sxs-lookup"><span data-stu-id="1e50c-162">Gets the Single-Sign-On token for the API Management Service which is valid for 5 Minutes.</span></span>
+    syntax:
+      content: 'function getSsoToken(resourceGroupName: string, serviceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-163">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-163">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-164">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-164">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetSsoTokenResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.getSsoToken_2'
+    name: 'getSsoToken(string, string, RequestOptionsBase, ServiceCallback<ApiManagementServiceGetSsoTokenResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getSsoToken(resourceGroupName: string, serviceName: string, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceGetSsoTokenResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-165">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-165">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-166">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-166">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1e50c-167">可选参数</span><span class="sxs-lookup"><span data-stu-id="1e50c-167">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceGetSsoTokenResult>
+          description: |
+            <span data-ttu-id="1e50c-168">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetSsoTokenResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.getSsoToken_1'
+    name: 'getSsoToken(string, string, ServiceCallback<ApiManagementServiceGetSsoTokenResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getSsoToken(resourceGroupName: string, serviceName: string, callback: ServiceCallback<ApiManagementServiceGetSsoTokenResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-169">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-169">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-170">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-170">The name of the API Management service.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceGetSsoTokenResult>
+          description: |
+            <span data-ttu-id="1e50c-171">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-171">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetSsoTokenResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-172">列出 Azure 订阅中的所有 API 管理服务。</span><span class="sxs-lookup"><span data-stu-id="1e50c-172">Lists all API Management services within an Azure subscription.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1e50c-173">可选参数</span><span class="sxs-lookup"><span data-stu-id="1e50c-173">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="1e50c-174">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.list_1'
+    name: list(ServiceCallback<ApiManagementServiceListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="1e50c-175">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-176">列出资源组中的所有 API 管理服务。</span><span class="sxs-lookup"><span data-stu-id="1e50c-176">List all API Management services within a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-177">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-177">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-178">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-178">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1e50c-179">可选参数</span><span class="sxs-lookup"><span data-stu-id="1e50c-179">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="1e50c-180">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-181">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-181">The name of the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="1e50c-182">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-183">列出资源组中的所有 API 管理服务。</span><span class="sxs-lookup"><span data-stu-id="1e50c-183">List all API Management services within a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-184">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="1e50c-184">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-185">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="1e50c-185">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1e50c-186">可选参数</span><span class="sxs-lookup"><span data-stu-id="1e50c-186">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="1e50c-187">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-187">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-188">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="1e50c-188">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="1e50c-189">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-190">列出 Azure 订阅中的所有 API 管理服务。</span><span class="sxs-lookup"><span data-stu-id="1e50c-190">Lists all API Management services within an Azure subscription.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-191">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="1e50c-191">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-192">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="1e50c-192">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1e50c-193">可选参数</span><span class="sxs-lookup"><span data-stu-id="1e50c-193">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="1e50c-194">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-194">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listNext_1'
+    name: 'listNext(string, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-195">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="1e50c-195">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="1e50c-196">回调</span><span class="sxs-lookup"><span data-stu-id="1e50c-196">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.restore'
+    name: 'restore(string, string, ApiManagementServiceBackupRestoreParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-197">将 API 管理服务使用 ApiManagementService_Backup 操作在当前服务上的创建的备份还原。</span><span class="sxs-lookup"><span data-stu-id="1e50c-197">Restores a backup of an API Management service created using the ApiManagementService_Backup operation on the current service.</span></span> <span data-ttu-id="1e50c-198">这是一个长时间运行的操作，可能需要几分钟才能完成。</span><span class="sxs-lookup"><span data-stu-id="1e50c-198">This is a long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function restore(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceBackupRestoreParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-199">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-199">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-200">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-200">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+          description: <span data-ttu-id="1e50c-201">还原 API 管理服务提供来自备份操作的参数。</span><span class="sxs-lookup"><span data-stu-id="1e50c-201">Parameters supplied to the Restore API Management service from backup operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceRestoreResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.update'
+    name: 'update(string, string, ApiManagementServiceUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1e50c-202">更新现有 API 管理服务。</span><span class="sxs-lookup"><span data-stu-id="1e50c-202">Updates an existing API Management service.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-203">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-203">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="1e50c-204">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="1e50c-204">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceUpdateParameters'
+          description: <span data-ttu-id="1e50c-205">提供给 CreateOrUpdate API 管理服务操作参数。</span><span class="sxs-lookup"><span data-stu-id="1e50c-205">Parameters supplied to the CreateOrUpdate API Management service operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceUpdateResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+    name: ApiManagementServiceBackupRestoreParameters
+    spec.typeScript:
+      - name: ApiManagementServiceBackupRestoreParameters
+        fullName: ApiManagementServiceBackupRestoreParameters
+        uid: '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceResource'
+    name: ApiManagementServiceResource
+    spec.typeScript:
+      - name: ApiManagementServiceResource
+        fullName: ApiManagementServiceResource
+        uid: '@azure/arm-apimanagement.ApiManagementServiceResource'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceUpdateParameters'
+    name: ApiManagementServiceUpdateParameters
+    spec.typeScript:
+      - name: ApiManagementServiceUpdateParameters
+        fullName: ApiManagementServiceUpdateParameters
+        uid: '@azure/arm-apimanagement.ApiManagementServiceUpdateParameters'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceCheckNameAvailabilityParameters'
+    name: ApiManagementServiceCheckNameAvailabilityParameters
+    spec.typeScript:
+      - name: ApiManagementServiceCheckNameAvailabilityParameters
+        fullName: ApiManagementServiceCheckNameAvailabilityParameters
+        uid: '@azure/arm-apimanagement.ApiManagementServiceCheckNameAvailabilityParameters'
+  - uid: ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult>
+    name: ApiManagementServiceNameAvailabilityResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ApiManagementServiceNameAvailabilityResult
+        fullName: ApiManagementServiceNameAvailabilityResult
+        uid: '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceResource>
+    name: ApiManagementServiceResource>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ApiManagementServiceResource
+        fullName: ApiManagementServiceResource
+        uid: '@azure/arm-apimanagement.ApiManagementServiceResource'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceGetSsoTokenResult>
+    name: ApiManagementServiceGetSsoTokenResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ApiManagementServiceGetSsoTokenResult
+        fullName: ApiManagementServiceGetSsoTokenResult
+        uid: '@azure/arm-apimanagement.ApiManagementServiceGetSsoTokenResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+    name: ApiManagementServiceListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ApiManagementServiceListResult
+        fullName: ApiManagementServiceListResult
+        uid: '@azure/arm-apimanagement.ApiManagementServiceListResult'
+      - name: '>'
+        fullName: '>'

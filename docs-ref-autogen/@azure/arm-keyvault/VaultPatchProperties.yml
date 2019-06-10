@@ -1,0 +1,198 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.VaultPatchProperties'
+    name: VaultPatchProperties
+    fullName: VaultPatchProperties
+    children:
+      - '@azure/arm-keyvault.VaultPatchProperties.accessPolicies'
+      - '@azure/arm-keyvault.VaultPatchProperties.createMode'
+      - '@azure/arm-keyvault.VaultPatchProperties.enabledForDeployment'
+      - '@azure/arm-keyvault.VaultPatchProperties.enabledForDiskEncryption'
+      - '@azure/arm-keyvault.VaultPatchProperties.enabledForTemplateDeployment'
+      - '@azure/arm-keyvault.VaultPatchProperties.enablePurgeProtection'
+      - '@azure/arm-keyvault.VaultPatchProperties.enableSoftDelete'
+      - '@azure/arm-keyvault.VaultPatchProperties.networkAcls'
+      - '@azure/arm-keyvault.VaultPatchProperties.sku'
+      - '@azure/arm-keyvault.VaultPatchProperties.tenantId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ed4aa-101">保管库的属性</span><span class="sxs-lookup"><span data-stu-id="ed4aa-101">Properties of the vault</span></span>
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.accessPolicies'
+    name: accessPolicies
+    fullName: accessPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ed4aa-102">有权访问密钥保管库的 0 到 16 个标识的数组。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-102">An array of 0 to 16 identities that have access to the key vault.</span></span> <span data-ttu-id="ed4aa-103">数组中的所有标识必须都使用相同的租户 ID 作为密钥保管库的租户 id。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-103">All identities in the array must use the same tenant ID as the key vault's tenant ID.</span></span>
+    optional: true
+    syntax:
+      content: 'accessPolicies?: AccessPolicyEntry[]'
+      return:
+        type:
+          - '@azure/arm-keyvault.AccessPolicyEntry[]'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ed4aa-104">保管库的创建模式以指示是否需要或不恢复保管库。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-104">The vault''s create mode to indicate whether the vault need to be recovered or not.</span></span> <span data-ttu-id="ed4aa-105">可能的值包括: 恢复，default</span><span class="sxs-lookup"><span data-stu-id="ed4aa-105">Possible values include: ''recover'', ''default''</span></span>'
+    optional: true
+    syntax:
+      content: 'createMode?: CreateMode'
+      return:
+        type:
+          - '@azure/arm-keyvault.CreateMode'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enabledForDeployment'
+    name: enabledForDeployment
+    fullName: enabledForDeployment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ed4aa-106">属性指定是否允许 Azure 虚拟机检索作为机密密钥保管库中存储的证书。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-106">Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.</span></span>
+    optional: true
+    syntax:
+      content: 'enabledForDeployment?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enabledForDiskEncryption'
+    name: enabledForDiskEncryption
+    fullName: enabledForDiskEncryption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ed4aa-107">若要指定是否允许 Azure 磁盘加密从保管库检索机密并解开密钥的属性。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-107">Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.</span></span>
+    optional: true
+    syntax:
+      content: 'enabledForDiskEncryption?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enabledForTemplateDeployment'
+    name: enabledForTemplateDeployment
+    fullName: enabledForTemplateDeployment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ed4aa-108">属性指定是否允许 Azure 资源管理器从密钥保管库检索机密。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-108">Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.</span></span>
+    optional: true
+    syntax:
+      content: 'enabledForTemplateDeployment?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enablePurgeProtection'
+    name: enablePurgeProtection
+    fullName: enablePurgeProtection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ed4aa-109">属性指定是否清除对保护可用于此保管库。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-109">Property specifying whether protection against purge is enabled for this vault.</span></span> <span data-ttu-id="ed4aa-110">此属性设置为 true 激活保护对此保管库和其内容清除-只有密钥保管库服务可能会启动硬，且无法恢复的删除。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-110">Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion.</span></span> <span data-ttu-id="ed4aa-111">设置为还启用了软删除时才有效。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-111">The setting is effective only if soft delete is also enabled.</span></span> <span data-ttu-id="ed4aa-112">启用此功能是不可逆-也就是说，该属性不接受作为其值 false。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-112">Enabling this functionality is irreversible - that is, the property does not accept false as its value.</span></span>'
+    optional: true
+    syntax:
+      content: 'enablePurgeProtection?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.enableSoftDelete'
+    name: enableSoftDelete
+    fullName: enableSoftDelete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ed4aa-113">属性指定是否为此密钥保管库启用软删除功能。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-113">Property to specify whether the 'soft delete' functionality is enabled for this key vault.</span></span> <span data-ttu-id="ed4aa-114">它不接受 false 值。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-114">It does not accept false value.</span></span>
+    optional: true
+    syntax:
+      content: 'enableSoftDelete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.networkAcls'
+    name: networkAcls
+    fullName: networkAcls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ed4aa-115">适用于特定网络位置从保管库的可访问性规则的集合。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-115">A collection of rules governing the accessibility of the vault from specific network locations.</span></span>
+    optional: true
+    syntax:
+      content: 'networkAcls?: NetworkRuleSet'
+      return:
+        type:
+          - '@azure/arm-keyvault.NetworkRuleSet'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ed4aa-116">SKU 详细信息</span><span class="sxs-lookup"><span data-stu-id="ed4aa-116">SKU details</span></span>
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-keyvault.Sku'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.VaultPatchProperties.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ed4aa-117">应使用密钥保管库的请求进行身份验证的 Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="ed4aa-117">The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.</span></span>
+    optional: true
+    syntax:
+      content: 'tenantId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry[]'
+    name: 'AccessPolicyEntry[]'
+    spec.typeScript:
+      - name: AccessPolicyEntry
+        fullName: AccessPolicyEntry
+        uid: '@azure/arm-keyvault.AccessPolicyEntry'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-keyvault.CreateMode'
+    name: CreateMode
+    spec.typeScript:
+      - name: CreateMode
+        fullName: CreateMode
+        uid: '@azure/arm-keyvault.CreateMode'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet'
+    name: NetworkRuleSet
+    spec.typeScript:
+      - name: NetworkRuleSet
+        fullName: NetworkRuleSet
+        uid: '@azure/arm-keyvault.NetworkRuleSet'
+  - uid: '@azure/arm-keyvault.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-keyvault.Sku'

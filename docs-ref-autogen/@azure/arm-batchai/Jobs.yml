@@ -1,0 +1,993 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batchai.Jobs'
+    name: Jobs
+    fullName: Jobs
+    children:
+      - '@azure/arm-batchai.Jobs.beginCreate'
+      - '@azure/arm-batchai.Jobs.beginDeleteMethod'
+      - '@azure/arm-batchai.Jobs.beginTerminate'
+      - '@azure/arm-batchai.Jobs.create'
+      - '@azure/arm-batchai.Jobs.deleteMethod'
+      - '@azure/arm-batchai.Jobs.get'
+      - '@azure/arm-batchai.Jobs.get_2'
+      - '@azure/arm-batchai.Jobs.get_1'
+      - '@azure/arm-batchai.Jobs.constructor'
+      - '@azure/arm-batchai.Jobs.listByExperiment_2'
+      - '@azure/arm-batchai.Jobs.listByExperiment'
+      - '@azure/arm-batchai.Jobs.listByExperiment_1'
+      - '@azure/arm-batchai.Jobs.listByExperimentNext'
+      - '@azure/arm-batchai.Jobs.listByExperimentNext_2'
+      - '@azure/arm-batchai.Jobs.listByExperimentNext_1'
+      - '@azure/arm-batchai.Jobs.listOutputFiles'
+      - '@azure/arm-batchai.Jobs.listOutputFiles_2'
+      - '@azure/arm-batchai.Jobs.listOutputFiles_1'
+      - '@azure/arm-batchai.Jobs.listOutputFilesNext'
+      - '@azure/arm-batchai.Jobs.listOutputFilesNext_2'
+      - '@azure/arm-batchai.Jobs.listOutputFilesNext_1'
+      - '@azure/arm-batchai.Jobs.listRemoteLoginInformation'
+      - '@azure/arm-batchai.Jobs.listRemoteLoginInformation_2'
+      - '@azure/arm-batchai.Jobs.listRemoteLoginInformation_1'
+      - '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext'
+      - '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_2'
+      - '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_1'
+      - '@azure/arm-batchai.Jobs.terminate'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="67b5c-101">类表示作业。</span><span class="sxs-lookup"><span data-stu-id="67b5c-101">Class representing a Jobs.</span></span>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.beginCreate'
+    name: 'beginCreate(string, string, string, string, JobCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-102">在给定的实验中创建一个作业。</span><span class="sxs-lookup"><span data-stu-id="67b5c-102">Creates a Job in the given Experiment.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, parameters: JobCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-103">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-103">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-104">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-104">The name of the workspace.</span></span> <span data-ttu-id="67b5c-105">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-105">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-106">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-106">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-107">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-107">The name of the experiment.</span></span> <span data-ttu-id="67b5c-108">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-108">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-109">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-109">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-110">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-110">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-111">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-111">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-112">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-112">The name must be from 1 through 64 characters long.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batchai.JobCreateParameters'
+          description: <span data-ttu-id="67b5c-113">要提供的作业创建的参数。</span><span class="sxs-lookup"><span data-stu-id="67b5c-113">The parameters to provide for job creation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-114">删除的作业。</span><span class="sxs-lookup"><span data-stu-id="67b5c-114">Deletes a Job.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-115">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-115">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-116">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-116">The name of the workspace.</span></span> <span data-ttu-id="67b5c-117">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-117">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-118">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-118">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-119">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-119">The name of the experiment.</span></span> <span data-ttu-id="67b5c-120">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-120">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-121">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-121">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-122">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-122">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-123">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-123">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-124">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-124">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.beginTerminate'
+    name: 'beginTerminate(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-125">终止作业。</span><span class="sxs-lookup"><span data-stu-id="67b5c-125">Terminates a job.</span></span>
+    syntax:
+      content: 'function beginTerminate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-126">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-126">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-127">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-127">The name of the workspace.</span></span> <span data-ttu-id="67b5c-128">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-128">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-129">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-129">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-130">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-130">The name of the experiment.</span></span> <span data-ttu-id="67b5c-131">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-131">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-132">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-132">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-133">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-133">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-134">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-134">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-135">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-135">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.create'
+    name: 'create(string, string, string, string, JobCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-136">在给定的实验中创建一个作业。</span><span class="sxs-lookup"><span data-stu-id="67b5c-136">Creates a Job in the given Experiment.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, parameters: JobCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-137">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-137">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-138">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-138">The name of the workspace.</span></span> <span data-ttu-id="67b5c-139">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-139">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-140">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-140">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-141">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-141">The name of the experiment.</span></span> <span data-ttu-id="67b5c-142">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-142">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-143">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-143">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-144">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-144">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-145">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-145">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-146">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-146">The name must be from 1 through 64 characters long.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batchai.JobCreateParameters'
+          description: <span data-ttu-id="67b5c-147">要提供的作业创建的参数。</span><span class="sxs-lookup"><span data-stu-id="67b5c-147">The parameters to provide for job creation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsCreateResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-148">删除的作业。</span><span class="sxs-lookup"><span data-stu-id="67b5c-148">Deletes a Job.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-149">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-149">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-150">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-150">The name of the workspace.</span></span> <span data-ttu-id="67b5c-151">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-151">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-152">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-152">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-153">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-153">The name of the experiment.</span></span> <span data-ttu-id="67b5c-154">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-154">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-155">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-155">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-156">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-156">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-157">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-157">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-158">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-158">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-159">获取有关作业的信息。</span><span class="sxs-lookup"><span data-stu-id="67b5c-159">Gets information about a Job.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-160">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-160">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-161">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-161">The name of the workspace.</span></span> <span data-ttu-id="67b5c-162">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-162">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-163">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-163">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-164">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-164">The name of the experiment.</span></span> <span data-ttu-id="67b5c-165">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-165">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-166">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-166">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-167">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-167">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-168">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-168">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-169">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-169">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsGetResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<Job>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options: RequestOptionsBase, callback: ServiceCallback<Job>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-170">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-170">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-171">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-171">The name of the workspace.</span></span> <span data-ttu-id="67b5c-172">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-172">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-173">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-173">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-174">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-174">The name of the experiment.</span></span> <span data-ttu-id="67b5c-175">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-175">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-176">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-176">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-177">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-177">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-178">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-178">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-179">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-179">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="67b5c-180">可选参数</span><span class="sxs-lookup"><span data-stu-id="67b5c-180">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.Job>
+          description: |
+            <span data-ttu-id="67b5c-181">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-181">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsGetResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<Job>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, callback: ServiceCallback<Job>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-182">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-182">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-183">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-183">The name of the workspace.</span></span> <span data-ttu-id="67b5c-184">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-184">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-185">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-185">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-186">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-186">The name of the experiment.</span></span> <span data-ttu-id="67b5c-187">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-187">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-188">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-188">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-189">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-189">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-190">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-190">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-191">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-191">The name must be from 1 through 64 characters long.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.Job>
+          description: |
+            <span data-ttu-id="67b5c-192">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-192">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsGetResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.constructor'
+    name: Jobs(BatchAIManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-193">创建作业。</span><span class="sxs-lookup"><span data-stu-id="67b5c-193">Create a Jobs.</span></span>
+    syntax:
+      content: 'new Jobs(client: BatchAIManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batchai.BatchAIManagementClientContext'
+          description: |
+            <span data-ttu-id="67b5c-194">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="67b5c-194">Reference to the service client.</span></span>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listByExperiment_2'
+    name: 'listByExperiment(string, string, string, JobsListByExperimentOptionalParams, ServiceCallback<JobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByExperiment(resourceGroupName: string, workspaceName: string, experimentName: string, options: JobsListByExperimentOptionalParams, callback: ServiceCallback<JobListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-195">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-195">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-196">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-196">The name of the workspace.</span></span> <span data-ttu-id="67b5c-197">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-197">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-198">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-198">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-199">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-199">The name of the experiment.</span></span> <span data-ttu-id="67b5c-200">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-200">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-201">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-201">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-batchai.JobsListByExperimentOptionalParams'
+          description: <span data-ttu-id="67b5c-202">可选参数</span><span class="sxs-lookup"><span data-stu-id="67b5c-202">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.JobListResult>
+          description: |
+            <span data-ttu-id="67b5c-203">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListByExperimentResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listByExperiment'
+    name: 'listByExperiment(string, string, string, Models.JobsListByExperimentOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-204">获取指定的实验中的作业的列表。</span><span class="sxs-lookup"><span data-stu-id="67b5c-204">Gets a list of Jobs within the specified Experiment.</span></span>
+    syntax:
+      content: 'function listByExperiment(resourceGroupName: string, workspaceName: string, experimentName: string, options?: Models.JobsListByExperimentOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-205">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-205">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-206">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-206">The name of the workspace.</span></span> <span data-ttu-id="67b5c-207">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-207">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-208">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-208">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-209">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-209">The name of the experiment.</span></span> <span data-ttu-id="67b5c-210">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-210">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-211">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-211">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - Models.JobsListByExperimentOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListByExperimentResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listByExperiment_1'
+    name: 'listByExperiment(string, string, string, ServiceCallback<JobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByExperiment(resourceGroupName: string, workspaceName: string, experimentName: string, callback: ServiceCallback<JobListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-212">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-212">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-213">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-213">The name of the workspace.</span></span> <span data-ttu-id="67b5c-214">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-214">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-215">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-215">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-216">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-216">The name of the experiment.</span></span> <span data-ttu-id="67b5c-217">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-217">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-218">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-218">The name must be from 1 through 64 characters long.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.JobListResult>
+          description: |
+            <span data-ttu-id="67b5c-219">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-219">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListByExperimentResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listByExperimentNext'
+    name: 'listByExperimentNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-220">获取指定的实验中的作业的列表。</span><span class="sxs-lookup"><span data-stu-id="67b5c-220">Gets a list of Jobs within the specified Experiment.</span></span>
+    syntax:
+      content: 'function listByExperimentNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-221">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="67b5c-221">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListByExperimentNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listByExperimentNext_2'
+    name: 'listByExperimentNext(string, RequestOptionsBase, ServiceCallback<JobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByExperimentNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-222">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="67b5c-222">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="67b5c-223">可选参数</span><span class="sxs-lookup"><span data-stu-id="67b5c-223">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.JobListResult>
+          description: |
+            <span data-ttu-id="67b5c-224">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-224">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListByExperimentNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listByExperimentNext_1'
+    name: 'listByExperimentNext(string, ServiceCallback<JobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByExperimentNext(nextPageLink: string, callback: ServiceCallback<JobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-225">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="67b5c-225">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.JobListResult>
+          description: |
+            <span data-ttu-id="67b5c-226">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-226">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListByExperimentNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listOutputFiles'
+    name: 'listOutputFiles(string, string, string, string, JobsListOutputFilesOptions, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-227">列出所有目录和文件在给定目录中的作业的输出目录 （如果在输出目录是在 Azure 文件共享或 Azure 存储容器）。</span><span class="sxs-lookup"><span data-stu-id="67b5c-227">List all directories and files inside the given directory of the Job's output directory (if the output directory is on Azure File Share or Azure Storage Container).</span></span>
+    syntax:
+      content: 'function listOutputFiles(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, jobsListOutputFilesOptions: JobsListOutputFilesOptions, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-228">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-228">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-229">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-229">The name of the workspace.</span></span> <span data-ttu-id="67b5c-230">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-230">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-231">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-231">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-232">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-232">The name of the experiment.</span></span> <span data-ttu-id="67b5c-233">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-233">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-234">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-234">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-235">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-235">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-236">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-236">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-237">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-237">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobsListOutputFilesOptions
+          type:
+            - '@azure/arm-batchai.JobsListOutputFilesOptions'
+          description: <span data-ttu-id="67b5c-238">操作的其他参数</span><span class="sxs-lookup"><span data-stu-id="67b5c-238">Additional parameters for the operation</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListOutputFilesResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listOutputFiles_2'
+    name: 'listOutputFiles(string, string, string, string, JobsListOutputFilesOptions, RequestOptionsBase, ServiceCallback<FileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listOutputFiles(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, jobsListOutputFilesOptions: JobsListOutputFilesOptions, options: RequestOptionsBase, callback: ServiceCallback<FileListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-239">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-239">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-240">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-240">The name of the workspace.</span></span> <span data-ttu-id="67b5c-241">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-241">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-242">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-242">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-243">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-243">The name of the experiment.</span></span> <span data-ttu-id="67b5c-244">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-244">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-245">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-245">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-246">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-246">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-247">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-247">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-248">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-248">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobsListOutputFilesOptions
+          type:
+            - '@azure/arm-batchai.JobsListOutputFilesOptions'
+          description: <span data-ttu-id="67b5c-249">操作的其他参数</span><span class="sxs-lookup"><span data-stu-id="67b5c-249">Additional parameters for the operation</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="67b5c-250">可选参数</span><span class="sxs-lookup"><span data-stu-id="67b5c-250">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.FileListResult>
+          description: |
+            <span data-ttu-id="67b5c-251">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-251">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListOutputFilesResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listOutputFiles_1'
+    name: 'listOutputFiles(string, string, string, string, JobsListOutputFilesOptions, ServiceCallback<FileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listOutputFiles(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, jobsListOutputFilesOptions: JobsListOutputFilesOptions, callback: ServiceCallback<FileListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-252">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-252">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-253">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-253">The name of the workspace.</span></span> <span data-ttu-id="67b5c-254">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-254">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-255">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-255">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-256">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-256">The name of the experiment.</span></span> <span data-ttu-id="67b5c-257">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-257">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-258">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-258">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-259">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-259">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-260">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-260">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-261">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-261">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobsListOutputFilesOptions
+          type:
+            - '@azure/arm-batchai.JobsListOutputFilesOptions'
+          description: <span data-ttu-id="67b5c-262">操作的其他参数</span><span class="sxs-lookup"><span data-stu-id="67b5c-262">Additional parameters for the operation</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.FileListResult>
+          description: |
+            <span data-ttu-id="67b5c-263">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-263">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListOutputFilesResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listOutputFilesNext'
+    name: 'listOutputFilesNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-264">列出所有目录和文件在给定目录中的作业的输出目录 （如果在输出目录是在 Azure 文件共享或 Azure 存储容器）。</span><span class="sxs-lookup"><span data-stu-id="67b5c-264">List all directories and files inside the given directory of the Job's output directory (if the output directory is on Azure File Share or Azure Storage Container).</span></span>
+    syntax:
+      content: 'function listOutputFilesNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-265">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="67b5c-265">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListOutputFilesNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listOutputFilesNext_2'
+    name: 'listOutputFilesNext(string, RequestOptionsBase, ServiceCallback<FileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listOutputFilesNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<FileListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-266">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="67b5c-266">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="67b5c-267">可选参数</span><span class="sxs-lookup"><span data-stu-id="67b5c-267">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.FileListResult>
+          description: |
+            <span data-ttu-id="67b5c-268">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-268">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListOutputFilesNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listOutputFilesNext_1'
+    name: 'listOutputFilesNext(string, ServiceCallback<FileListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listOutputFilesNext(nextPageLink: string, callback: ServiceCallback<FileListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-269">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="67b5c-269">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.FileListResult>
+          description: |
+            <span data-ttu-id="67b5c-270">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-270">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListOutputFilesNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation'
+    name: 'listRemoteLoginInformation(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="67b5c-271">获取列表的当前现有节点，可用于执行作业。</span><span class="sxs-lookup"><span data-stu-id="67b5c-271">Gets a list of currently existing nodes which were used for the Job execution.</span></span> <span data-ttu-id="67b5c-272">返回的信息包含节点 ID，其公共 IP 和 SSH 端口。</span><span class="sxs-lookup"><span data-stu-id="67b5c-272">The returned information contains the node ID, its public IP and SSH port.</span></span>'
+    syntax:
+      content: 'function listRemoteLoginInformation(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-273">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-273">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-274">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-274">The name of the workspace.</span></span> <span data-ttu-id="67b5c-275">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-275">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-276">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-276">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-277">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-277">The name of the experiment.</span></span> <span data-ttu-id="67b5c-278">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-278">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-279">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-279">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-280">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-280">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-281">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-281">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-282">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-282">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListRemoteLoginInformationResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation_2'
+    name: 'listRemoteLoginInformation(string, string, string, string, RequestOptionsBase, ServiceCallback<RemoteLoginInformationListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listRemoteLoginInformation(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options: RequestOptionsBase, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-283">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-283">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-284">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-284">The name of the workspace.</span></span> <span data-ttu-id="67b5c-285">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-285">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-286">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-286">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-287">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-287">The name of the experiment.</span></span> <span data-ttu-id="67b5c-288">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-288">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-289">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-289">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-290">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-290">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-291">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-291">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-292">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-292">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="67b5c-293">可选参数</span><span class="sxs-lookup"><span data-stu-id="67b5c-293">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          description: |
+            <span data-ttu-id="67b5c-294">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-294">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListRemoteLoginInformationResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation_1'
+    name: 'listRemoteLoginInformation(string, string, string, string, ServiceCallback<RemoteLoginInformationListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listRemoteLoginInformation(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-295">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-295">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-296">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-296">The name of the workspace.</span></span> <span data-ttu-id="67b5c-297">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-297">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-298">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-298">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-299">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-299">The name of the experiment.</span></span> <span data-ttu-id="67b5c-300">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-300">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-301">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-301">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-302">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-302">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-303">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-303">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-304">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-304">The name must be from 1 through 64 characters long.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          description: |
+            <span data-ttu-id="67b5c-305">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-305">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListRemoteLoginInformationResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext'
+    name: 'listRemoteLoginInformationNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="67b5c-306">获取列表的当前现有节点，可用于执行作业。</span><span class="sxs-lookup"><span data-stu-id="67b5c-306">Gets a list of currently existing nodes which were used for the Job execution.</span></span> <span data-ttu-id="67b5c-307">返回的信息包含节点 ID，其公共 IP 和 SSH 端口。</span><span class="sxs-lookup"><span data-stu-id="67b5c-307">The returned information contains the node ID, its public IP and SSH port.</span></span>'
+    syntax:
+      content: 'function listRemoteLoginInformationNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-308">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="67b5c-308">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobsListRemoteLoginInformationNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_2'
+    name: 'listRemoteLoginInformationNext(string, RequestOptionsBase, ServiceCallback<RemoteLoginInformationListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listRemoteLoginInformationNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-309">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="67b5c-309">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="67b5c-310">可选参数</span><span class="sxs-lookup"><span data-stu-id="67b5c-310">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          description: |
+            <span data-ttu-id="67b5c-311">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-311">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListRemoteLoginInformationNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_1'
+    name: 'listRemoteLoginInformationNext(string, ServiceCallback<RemoteLoginInformationListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listRemoteLoginInformationNext(nextPageLink: string, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-312">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="67b5c-312">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          description: |
+            <span data-ttu-id="67b5c-313">回调</span><span class="sxs-lookup"><span data-stu-id="67b5c-313">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobsListRemoteLoginInformationNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Jobs.terminate'
+    name: 'terminate(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="67b5c-314">终止作业。</span><span class="sxs-lookup"><span data-stu-id="67b5c-314">Terminates a job.</span></span>
+    syntax:
+      content: 'function terminate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-315">此资源所属的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-315">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-316">工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-316">The name of the workspace.</span></span> <span data-ttu-id="67b5c-317">工作区名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-317">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-318">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-318">The name must be from 1 through 64 characters long.</span></span>
+        - id: experimentName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-319">该试验的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-319">The name of the experiment.</span></span> <span data-ttu-id="67b5c-320">实验名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-320">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-321">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-321">The name must be from 1 through 64 characters long.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="67b5c-322">指定的资源组中的作业的名称。</span><span class="sxs-lookup"><span data-stu-id="67b5c-322">The name of the job within the specified resource group.</span></span> <span data-ttu-id="67b5c-323">作业名称只能包含字母数字字符以及短划线 （-） 和下划线 (_) 的组合。</span><span class="sxs-lookup"><span data-stu-id="67b5c-323">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="67b5c-324">名称必须介于 1 到 64 个字符。</span><span class="sxs-lookup"><span data-stu-id="67b5c-324">The name must be from 1 through 64 characters long.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batchai'
+references:
+  - uid: '@azure/arm-batchai.BatchAIManagementClientContext'
+    name: BatchAIManagementClientContext
+    spec.typeScript:
+      - name: BatchAIManagementClientContext
+        fullName: BatchAIManagementClientContext
+        uid: '@azure/arm-batchai.BatchAIManagementClientContext'
+  - uid: '@azure/arm-batchai.JobCreateParameters'
+    name: JobCreateParameters
+    spec.typeScript:
+      - name: JobCreateParameters
+        fullName: JobCreateParameters
+        uid: '@azure/arm-batchai.JobCreateParameters'
+  - uid: ServiceCallback<@azure/arm-batchai.Job>
+    name: Job>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Job
+        fullName: Job
+        uid: '@azure/arm-batchai.Job'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batchai.JobListResult>
+    name: JobListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobListResult
+        fullName: JobListResult
+        uid: '@azure/arm-batchai.JobListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batchai.JobsListByExperimentOptionalParams'
+    name: JobsListByExperimentOptionalParams
+    spec.typeScript:
+      - name: JobsListByExperimentOptionalParams
+        fullName: JobsListByExperimentOptionalParams
+        uid: '@azure/arm-batchai.JobsListByExperimentOptionalParams'
+  - uid: '@azure/arm-batchai.JobsListOutputFilesOptions'
+    name: JobsListOutputFilesOptions
+    spec.typeScript:
+      - name: JobsListOutputFilesOptions
+        fullName: JobsListOutputFilesOptions
+        uid: '@azure/arm-batchai.JobsListOutputFilesOptions'
+  - uid: ServiceCallback<@azure/arm-batchai.FileListResult>
+    name: FileListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FileListResult
+        fullName: FileListResult
+        uid: '@azure/arm-batchai.FileListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+    name: RemoteLoginInformationListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RemoteLoginInformationListResult
+        fullName: RemoteLoginInformationListResult
+        uid: '@azure/arm-batchai.RemoteLoginInformationListResult'
+      - name: '>'
+        fullName: '>'

@@ -1,0 +1,953 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batch.BatchAccountOperations'
+    name: BatchAccountOperations
+    fullName: BatchAccountOperations
+    children:
+      - '@azure/arm-batch.BatchAccountOperations.constructor'
+      - '@azure/arm-batch.BatchAccountOperations.beginCreate'
+      - '@azure/arm-batch.BatchAccountOperations.beginDeleteMethod'
+      - '@azure/arm-batch.BatchAccountOperations.create'
+      - '@azure/arm-batch.BatchAccountOperations.deleteMethod'
+      - '@azure/arm-batch.BatchAccountOperations.get'
+      - '@azure/arm-batch.BatchAccountOperations.get_2'
+      - '@azure/arm-batch.BatchAccountOperations.get_1'
+      - '@azure/arm-batch.BatchAccountOperations.getKeys'
+      - '@azure/arm-batch.BatchAccountOperations.getKeys_2'
+      - '@azure/arm-batch.BatchAccountOperations.getKeys_1'
+      - '@azure/arm-batch.BatchAccountOperations.list'
+      - '@azure/arm-batch.BatchAccountOperations.list_2'
+      - '@azure/arm-batch.BatchAccountOperations.list_1'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroup'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_2'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_1'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_2'
+      - '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_1'
+      - '@azure/arm-batch.BatchAccountOperations.listNext'
+      - '@azure/arm-batch.BatchAccountOperations.listNext_2'
+      - '@azure/arm-batch.BatchAccountOperations.listNext_1'
+      - '@azure/arm-batch.BatchAccountOperations.regenerateKey'
+      - '@azure/arm-batch.BatchAccountOperations.regenerateKey_2'
+      - '@azure/arm-batch.BatchAccountOperations.regenerateKey_1'
+      - '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys'
+      - '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_2'
+      - '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_1'
+      - '@azure/arm-batch.BatchAccountOperations.update'
+      - '@azure/arm-batch.BatchAccountOperations.update_2'
+      - '@azure/arm-batch.BatchAccountOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="b15c4-101">表示 BatchAccountOperations 类。</span><span class="sxs-lookup"><span data-stu-id="b15c4-101">Class representing a BatchAccountOperations.</span></span>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.constructor'
+    name: BatchAccountOperations(BatchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-102">创建 BatchAccountOperations。</span><span class="sxs-lookup"><span data-stu-id="b15c4-102">Create a BatchAccountOperations.</span></span>
+    syntax:
+      content: 'new BatchAccountOperations(client: BatchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batch.BatchManagementClientContext'
+          description: |
+            <span data-ttu-id="b15c4-103">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="b15c4-103">Reference to the service client.</span></span>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.beginCreate'
+    name: 'beginCreate(string, string, BatchAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-104">使用指定的参数创建新的 Batch 帐户。</span><span class="sxs-lookup"><span data-stu-id="b15c4-104">Creates a new Batch account with the specified parameters.</span></span> <span data-ttu-id="b15c4-105">现有的帐户不能使用此 API 进行更新，并应改为使用更新批处理帐户 API 更新。</span><span class="sxs-lookup"><span data-stu-id="b15c4-105">Existing accounts cannot be updated with this API and should instead be updated with the Update Batch Account API.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-106">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-106">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="b15c4-107">在区域中必须是唯一的批处理帐户名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-107">A name for the Batch account which must be unique within the region.</span></span> <span data-ttu-id="b15c4-108">Batch 帐户名称必须是长度为 3 到 24 个字符之间，并且必须使用仅限数字和小写字母。</span><span class="sxs-lookup"><span data-stu-id="b15c4-108">Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters.</span></span> <span data-ttu-id="b15c4-109">此名称用作用于访问在其中创建帐户的区域中的 Batch 服务的 DNS 名称的一部分。</span><span class="sxs-lookup"><span data-stu-id="b15c4-109">This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created.</span></span> <span data-ttu-id="b15c4-110">例如：http://accountname.region.batch.azure.com/。</span><span class="sxs-lookup"><span data-stu-id="b15c4-110">For example: http://accountname.region.batch.azure.com/.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountCreateParameters'
+          description: <span data-ttu-id="b15c4-111">创建帐户的附加参数。</span><span class="sxs-lookup"><span data-stu-id="b15c4-111">Additional parameters for account creation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-112">删除指定的 Batch 帐户。</span><span class="sxs-lookup"><span data-stu-id="b15c4-112">Deletes the specified Batch account.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-113">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-113">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-114">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-114">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.create'
+    name: 'create(string, string, BatchAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-115">使用指定的参数创建新的 Batch 帐户。</span><span class="sxs-lookup"><span data-stu-id="b15c4-115">Creates a new Batch account with the specified parameters.</span></span> <span data-ttu-id="b15c4-116">现有的帐户不能使用此 API 进行更新，并应改为使用更新批处理帐户 API 更新。</span><span class="sxs-lookup"><span data-stu-id="b15c4-116">Existing accounts cannot be updated with this API and should instead be updated with the Update Batch Account API.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, parameters: BatchAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-117">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-117">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="b15c4-118">在区域中必须是唯一的批处理帐户名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-118">A name for the Batch account which must be unique within the region.</span></span> <span data-ttu-id="b15c4-119">Batch 帐户名称必须是长度为 3 到 24 个字符之间，并且必须使用仅限数字和小写字母。</span><span class="sxs-lookup"><span data-stu-id="b15c4-119">Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters.</span></span> <span data-ttu-id="b15c4-120">此名称用作用于访问在其中创建帐户的区域中的 Batch 服务的 DNS 名称的一部分。</span><span class="sxs-lookup"><span data-stu-id="b15c4-120">This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created.</span></span> <span data-ttu-id="b15c4-121">例如：http://accountname.region.batch.azure.com/。</span><span class="sxs-lookup"><span data-stu-id="b15c4-121">For example: http://accountname.region.batch.azure.com/.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountCreateParameters'
+          description: <span data-ttu-id="b15c4-122">创建帐户的附加参数。</span><span class="sxs-lookup"><span data-stu-id="b15c4-122">Additional parameters for account creation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountCreateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-123">删除指定的 Batch 帐户。</span><span class="sxs-lookup"><span data-stu-id="b15c4-123">Deletes the specified Batch account.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-124">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-124">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-125">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-125">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountDeleteResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-126">获取有关指定的批处理帐户的信息。</span><span class="sxs-lookup"><span data-stu-id="b15c4-126">Gets information about the specified Batch account.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-127">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-127">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-128">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-128">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-129">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-129">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-130">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-130">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b15c4-131">可选参数</span><span class="sxs-lookup"><span data-stu-id="b15c4-131">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            <span data-ttu-id="b15c4-132">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-132">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.get_1'
+    name: 'get(string, string, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-133">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-133">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-134">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-134">The name of the Batch account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            <span data-ttu-id="b15c4-135">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-135">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.getKeys'
+    name: 'getKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="b15c4-136">此操作仅适用于使用 BatchService poolAllocationMode 创建的 Batch 帐户。</span><span class="sxs-lookup"><span data-stu-id="b15c4-136">This operation applies only to Batch accounts created with a poolAllocationMode of ''BatchService''.</span></span> <span data-ttu-id="b15c4-137">如果使用 UserSubscription poolAllocationMode 创建 Batch 帐户，客户端不能使用访问密钥进行身份验证，并且必须改为使用 Azure Active Directory。</span><span class="sxs-lookup"><span data-stu-id="b15c4-137">If the Batch account was created with a poolAllocationMode of ''UserSubscription'', clients cannot use access to keys to authenticate, and must use Azure Active Directory instead.</span></span> <span data-ttu-id="b15c4-138">在这种情况下，获取密钥将失败。</span><span class="sxs-lookup"><span data-stu-id="b15c4-138">In this case, getting the keys will fail.</span></span>'
+    syntax:
+      content: 'function getKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-139">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-139">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-140">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-140">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountGetKeysResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.getKeys_2'
+    name: 'getKeys(string, string, RequestOptionsBase, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-141">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-141">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-142">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-142">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b15c4-143">可选参数</span><span class="sxs-lookup"><span data-stu-id="b15c4-143">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            <span data-ttu-id="b15c4-144">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountGetKeysResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.getKeys_1'
+    name: 'getKeys(string, string, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-145">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-145">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-146">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-146">The name of the Batch account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            <span data-ttu-id="b15c4-147">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountGetKeysResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-148">获取有关与订阅关联的批处理帐户的信息。</span><span class="sxs-lookup"><span data-stu-id="b15c4-148">Gets information about the Batch accounts associated with the subscription.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b15c4-149">可选参数</span><span class="sxs-lookup"><span data-stu-id="b15c4-149">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            <span data-ttu-id="b15c4-150">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-150">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountListResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.list_1'
+    name: list(ServiceCallback<BatchAccountListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            <span data-ttu-id="b15c4-151">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountListResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-152">获取与指定的资源组相关联的 Batch 帐户信息。</span><span class="sxs-lookup"><span data-stu-id="b15c4-152">Gets information about the Batch accounts associated with the specified resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-153">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-153">The name of the resource group that contains the Batch account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-154">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-154">The name of the resource group that contains the Batch account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b15c4-155">可选参数</span><span class="sxs-lookup"><span data-stu-id="b15c4-155">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            <span data-ttu-id="b15c4-156">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-157">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-157">The name of the resource group that contains the Batch account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            <span data-ttu-id="b15c4-158">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-159">获取与指定的资源组相关联的 Batch 帐户信息。</span><span class="sxs-lookup"><span data-stu-id="b15c4-159">Gets information about the Batch accounts associated with the specified resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-160">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b15c4-160">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-161">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b15c4-161">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b15c4-162">可选参数</span><span class="sxs-lookup"><span data-stu-id="b15c4-162">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            <span data-ttu-id="b15c4-163">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-163">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-164">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b15c4-164">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            <span data-ttu-id="b15c4-165">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountListByResourceGroupNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-166">获取有关与订阅关联的批处理帐户的信息。</span><span class="sxs-lookup"><span data-stu-id="b15c4-166">Gets information about the Batch accounts associated with the subscription.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-167">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b15c4-167">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountListNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-168">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b15c4-168">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b15c4-169">可选参数</span><span class="sxs-lookup"><span data-stu-id="b15c4-169">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            <span data-ttu-id="b15c4-170">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountListNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.listNext_1'
+    name: 'listNext(string, ServiceCallback<BatchAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<BatchAccountListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-171">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b15c4-171">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+          description: |
+            <span data-ttu-id="b15c4-172">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-172">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountListNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.regenerateKey'
+    name: 'regenerateKey(string, string, Models.AccountKeyType, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-173">重新生成 Batch 帐户的指定的帐户密钥。</span><span class="sxs-lookup"><span data-stu-id="b15c4-173">Regenerates the specified account key for the Batch account.</span></span>
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: Models.AccountKeyType, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-174">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-174">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-175">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-175">The name of the Batch account.</span></span>
+        - id: keyName
+          type:
+            - Models.AccountKeyType
+          description: '<span data-ttu-id="b15c4-176">要重新生成帐户密钥的类型。</span><span class="sxs-lookup"><span data-stu-id="b15c4-176">The type of account key to regenerate.</span></span> <span data-ttu-id="b15c4-177">可能的值包括：主要、 辅助</span><span class="sxs-lookup"><span data-stu-id="b15c4-177">Possible values include: ''Primary'', ''Secondary''</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountRegenerateKeyResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.regenerateKey_2'
+    name: 'regenerateKey(string, string, Models.AccountKeyType, RequestOptionsBase, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: Models.AccountKeyType, options: RequestOptionsBase, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-178">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-178">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-179">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-179">The name of the Batch account.</span></span>
+        - id: keyName
+          type:
+            - Models.AccountKeyType
+          description: '<span data-ttu-id="b15c4-180">要重新生成帐户密钥的类型。</span><span class="sxs-lookup"><span data-stu-id="b15c4-180">The type of account key to regenerate.</span></span> <span data-ttu-id="b15c4-181">可能的值包括：主要、 辅助</span><span class="sxs-lookup"><span data-stu-id="b15c4-181">Possible values include: ''Primary'', ''Secondary''</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b15c4-182">可选参数</span><span class="sxs-lookup"><span data-stu-id="b15c4-182">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            <span data-ttu-id="b15c4-183">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountRegenerateKeyResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.regenerateKey_1'
+    name: 'regenerateKey(string, string, Models.AccountKeyType, ServiceCallback<BatchAccountKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: Models.AccountKeyType, callback: ServiceCallback<BatchAccountKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-184">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-184">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-185">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-185">The name of the Batch account.</span></span>
+        - id: keyName
+          type:
+            - Models.AccountKeyType
+          description: '<span data-ttu-id="b15c4-186">要重新生成帐户密钥的类型。</span><span class="sxs-lookup"><span data-stu-id="b15c4-186">The type of account key to regenerate.</span></span> <span data-ttu-id="b15c4-187">可能的值包括：主要、 辅助</span><span class="sxs-lookup"><span data-stu-id="b15c4-187">Possible values include: ''Primary'', ''Secondary''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+          description: |
+            <span data-ttu-id="b15c4-188">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountRegenerateKeyResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys'
+    name: 'synchronizeAutoStorageKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-189">将同步配置所指定的批处理帐户的自动存储帐户的访问密钥。</span><span class="sxs-lookup"><span data-stu-id="b15c4-189">Synchronizes access keys for the auto-storage account configured for the specified Batch account.</span></span>
+    syntax:
+      content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-190">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-190">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-191">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-191">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_2'
+    name: 'synchronizeAutoStorageKeys(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-192">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-192">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-193">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-193">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b15c4-194">可选参数</span><span class="sxs-lookup"><span data-stu-id="b15c4-194">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b15c4-195">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-195">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.synchronizeAutoStorageKeys_1'
+    name: 'synchronizeAutoStorageKeys(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function synchronizeAutoStorageKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-196">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-196">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-197">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-197">The name of the Batch account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b15c4-198">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-198">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.update'
+    name: 'update(string, string, BatchAccountUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b15c4-199">更新现有的 Batch 帐户的属性。</span><span class="sxs-lookup"><span data-stu-id="b15c4-199">Updates the properties of an existing Batch account.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-200">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-200">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-201">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-201">The name of the Batch account.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountUpdateParameters'
+          description: <span data-ttu-id="b15c4-202">帐户更新的其他参数。</span><span class="sxs-lookup"><span data-stu-id="b15c4-202">Additional parameters for account update.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BatchAccountUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.update_2'
+    name: 'update(string, string, BatchAccountUpdateParameters, RequestOptionsBase, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, options: RequestOptionsBase, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-203">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-203">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-204">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-204">The name of the Batch account.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountUpdateParameters'
+          description: <span data-ttu-id="b15c4-205">帐户更新的其他参数。</span><span class="sxs-lookup"><span data-stu-id="b15c4-205">Additional parameters for account update.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b15c4-206">可选参数</span><span class="sxs-lookup"><span data-stu-id="b15c4-206">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            <span data-ttu-id="b15c4-207">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-207">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.BatchAccountOperations.update_1'
+    name: 'update(string, string, BatchAccountUpdateParameters, ServiceCallback<BatchAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: BatchAccountUpdateParameters, callback: ServiceCallback<BatchAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-208">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-208">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="b15c4-209">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="b15c4-209">The name of the Batch account.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batch.BatchAccountUpdateParameters'
+          description: <span data-ttu-id="b15c4-210">帐户更新的其他参数。</span><span class="sxs-lookup"><span data-stu-id="b15c4-210">Additional parameters for account update.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.BatchAccount>
+          description: |
+            <span data-ttu-id="b15c4-211">回调</span><span class="sxs-lookup"><span data-stu-id="b15c4-211">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BatchAccountUpdateResponse>
+    package: '@azure/arm-batch'
+references:
+  - uid: '@azure/arm-batch.BatchManagementClientContext'
+    name: BatchManagementClientContext
+    spec.typeScript:
+      - name: BatchManagementClientContext
+        fullName: BatchManagementClientContext
+        uid: '@azure/arm-batch.BatchManagementClientContext'
+  - uid: '@azure/arm-batch.BatchAccountCreateParameters'
+    name: BatchAccountCreateParameters
+    spec.typeScript:
+      - name: BatchAccountCreateParameters
+        fullName: BatchAccountCreateParameters
+        uid: '@azure/arm-batch.BatchAccountCreateParameters'
+  - uid: ServiceCallback<@azure/arm-batch.BatchAccount>
+    name: BatchAccount>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BatchAccount
+        fullName: BatchAccount
+        uid: '@azure/arm-batch.BatchAccount'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.BatchAccountKeys>
+    name: BatchAccountKeys>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BatchAccountKeys
+        fullName: BatchAccountKeys
+        uid: '@azure/arm-batch.BatchAccountKeys'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.BatchAccountListResult>
+    name: BatchAccountListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BatchAccountListResult
+        fullName: BatchAccountListResult
+        uid: '@azure/arm-batch.BatchAccountListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batch.BatchAccountUpdateParameters'
+    name: BatchAccountUpdateParameters
+    spec.typeScript:
+      - name: BatchAccountUpdateParameters
+        fullName: BatchAccountUpdateParameters
+        uid: '@azure/arm-batch.BatchAccountUpdateParameters'

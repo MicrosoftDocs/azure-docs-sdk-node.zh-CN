@@ -1,0 +1,685 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batch.CertificateOperations'
+    name: CertificateOperations
+    fullName: CertificateOperations
+    children:
+      - '@azure/arm-batch.CertificateOperations.beginCreate'
+      - '@azure/arm-batch.CertificateOperations.beginDeleteMethod'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion_2'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion_1'
+      - '@azure/arm-batch.CertificateOperations.constructor'
+      - '@azure/arm-batch.CertificateOperations.create'
+      - '@azure/arm-batch.CertificateOperations.deleteMethod'
+      - '@azure/arm-batch.CertificateOperations.get'
+      - '@azure/arm-batch.CertificateOperations.get_2'
+      - '@azure/arm-batch.CertificateOperations.get_1'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount_2'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount_1'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_2'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_1'
+      - '@azure/arm-batch.CertificateOperations.update_2'
+      - '@azure/arm-batch.CertificateOperations.update'
+      - '@azure/arm-batch.CertificateOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="e26a4-101">表示 CertificateOperations 类。</span><span class="sxs-lookup"><span data-stu-id="e26a4-101">Class representing a CertificateOperations.</span></span>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.beginCreate'
+    name: 'beginCreate(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateBeginCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e26a4-102">创建新的证书中指定的帐户。</span><span class="sxs-lookup"><span data-stu-id="e26a4-102">Creates a new certificate inside the specified account.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateBeginCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-103">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-103">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-104">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-104">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-105">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-105">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-106">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-106">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-107">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-107">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="e26a4-108">用于证书创建的其他参数。</span><span class="sxs-lookup"><span data-stu-id="e26a4-108">Additional parameters for certificate creation.</span></span>
+        - id: options
+          type:
+            - Models.CertificateBeginCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e26a4-109">删除指定的证书。</span><span class="sxs-lookup"><span data-stu-id="e26a4-109">Deletes the specified certificate.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-110">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-110">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-111">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-111">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-112">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-112">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-113">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-113">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-114">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-114">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion'
+    name: 'cancelDeletion(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="e26a4-115">如果你尝试删除正在使用以池的证书或计算节点，证书的状态更改为 deleteFailed。</span><span class="sxs-lookup"><span data-stu-id="e26a4-115">If you try to delete a certificate that is being used by a pool or compute node, the status of the certificate changes to deleteFailed.</span></span> <span data-ttu-id="e26a4-116">如果你决定你想要继续使用该证书，可以使用此操作可将证书状态设置为活动。</span><span class="sxs-lookup"><span data-stu-id="e26a4-116">If you decide that you want to continue using the certificate, you can use this operation to set the status of the certificate back to active.</span></span> <span data-ttu-id="e26a4-117">如果你想要删除的证书，您不需要在删除失败后运行此操作。</span><span class="sxs-lookup"><span data-stu-id="e26a4-117">If you intend to delete the certificate, you do not need to run this operation after the deletion failed.</span></span> <span data-ttu-id="e26a4-118">您必须确保任何资源，不使用证书，然后您可以重新尝试删除该证书。</span><span class="sxs-lookup"><span data-stu-id="e26a4-118">You must make sure that the certificate is not being used by any resources, and then you can try again to delete the certificate.</span></span>'
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-119">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-119">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-120">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-120">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-121">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-121">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-122">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-122">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-123">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-123">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion_2'
+    name: 'cancelDeletion(string, string, string, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-124">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-124">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-125">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-125">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-126">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-126">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-127">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-127">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-128">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-128">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e26a4-129">可选参数</span><span class="sxs-lookup"><span data-stu-id="e26a4-129">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="e26a4-130">回调</span><span class="sxs-lookup"><span data-stu-id="e26a4-130">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion_1'
+    name: 'cancelDeletion(string, string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-131">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-131">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-132">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-132">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-133">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-133">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-134">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-134">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-135">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-135">For example SHA1-a3d1c5.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="e26a4-136">回调</span><span class="sxs-lookup"><span data-stu-id="e26a4-136">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.constructor'
+    name: CertificateOperations(BatchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e26a4-137">创建 CertificateOperations。</span><span class="sxs-lookup"><span data-stu-id="e26a4-137">Create a CertificateOperations.</span></span>
+    syntax:
+      content: 'new CertificateOperations(client: BatchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batch.BatchManagementClientContext'
+          description: |
+            <span data-ttu-id="e26a4-138">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="e26a4-138">Reference to the service client.</span></span>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.create'
+    name: 'create(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e26a4-139">创建新的证书中指定的帐户。</span><span class="sxs-lookup"><span data-stu-id="e26a4-139">Creates a new certificate inside the specified account.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-140">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-140">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-141">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-141">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-142">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-142">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-143">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-143">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-144">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-144">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="e26a4-145">用于证书创建的其他参数。</span><span class="sxs-lookup"><span data-stu-id="e26a4-145">Additional parameters for certificate creation.</span></span>
+        - id: options
+          type:
+            - Models.CertificateCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateCreateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e26a4-146">删除指定的证书。</span><span class="sxs-lookup"><span data-stu-id="e26a4-146">Deletes the specified certificate.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-147">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-147">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-148">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-148">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-149">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-149">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-150">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-150">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-151">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-151">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateDeleteResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e26a4-152">获取有关指定证书的信息。</span><span class="sxs-lookup"><span data-stu-id="e26a4-152">Gets information about the specified certificate.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-153">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-153">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-154">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-154">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-155">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-155">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-156">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-156">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-157">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-157">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-158">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-158">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-159">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-159">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-160">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-160">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-161">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-161">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-162">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-162">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e26a4-163">可选参数</span><span class="sxs-lookup"><span data-stu-id="e26a4-163">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="e26a4-164">回调</span><span class="sxs-lookup"><span data-stu-id="e26a4-164">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get_1'
+    name: 'get(string, string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-165">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-165">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-166">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-166">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-167">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-167">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-168">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-168">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-169">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-169">For example SHA1-a3d1c5.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="e26a4-170">回调</span><span class="sxs-lookup"><span data-stu-id="e26a4-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount_2'
+    name: 'listByBatchAccount(string, string, CertificateListByBatchAccountOptionalParams, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options: CertificateListByBatchAccountOptionalParams, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-171">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-171">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-172">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-172">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+          description: <span data-ttu-id="e26a4-173">可选参数</span><span class="sxs-lookup"><span data-stu-id="e26a4-173">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="e26a4-174">回调</span><span class="sxs-lookup"><span data-stu-id="e26a4-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount'
+    name: 'listByBatchAccount(string, string, Models.CertificateListByBatchAccountOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e26a4-175">列出所有指定的帐户中的证书。</span><span class="sxs-lookup"><span data-stu-id="e26a4-175">Lists all of the certificates in the specified account.</span></span>
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options?: Models.CertificateListByBatchAccountOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-176">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-176">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-177">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-177">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - Models.CertificateListByBatchAccountOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount_1'
+    name: 'listByBatchAccount(string, string, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-178">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-178">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-179">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-179">The name of the Batch account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="e26a4-180">回调</span><span class="sxs-lookup"><span data-stu-id="e26a4-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext'
+    name: 'listByBatchAccountNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e26a4-181">列出所有指定的帐户中的证书。</span><span class="sxs-lookup"><span data-stu-id="e26a4-181">Lists all of the certificates in the specified account.</span></span>
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-182">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="e26a4-182">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_2'
+    name: 'listByBatchAccountNext(string, RequestOptionsBase, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-183">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="e26a4-183">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e26a4-184">可选参数</span><span class="sxs-lookup"><span data-stu-id="e26a4-184">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="e26a4-185">回调</span><span class="sxs-lookup"><span data-stu-id="e26a4-185">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_1'
+    name: 'listByBatchAccountNext(string, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-186">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="e26a4-186">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="e26a4-187">回调</span><span class="sxs-lookup"><span data-stu-id="e26a4-187">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update_2'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, CertificateUpdateOptionalParams, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options: CertificateUpdateOptionalParams, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-188">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-188">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-189">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-189">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-190">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-190">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-191">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-191">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-192">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-192">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="e26a4-193">要更新实体的证书。</span><span class="sxs-lookup"><span data-stu-id="e26a4-193">Certificate entity to update.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-batch.CertificateUpdateOptionalParams'
+          description: <span data-ttu-id="e26a4-194">可选参数</span><span class="sxs-lookup"><span data-stu-id="e26a4-194">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="e26a4-195">回调</span><span class="sxs-lookup"><span data-stu-id="e26a4-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e26a4-196">更新现有证书的属性。</span><span class="sxs-lookup"><span data-stu-id="e26a4-196">Updates the properties of an existing certificate.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-197">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-197">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-198">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-198">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-199">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-199">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-200">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-200">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-201">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-201">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="e26a4-202">要更新实体的证书。</span><span class="sxs-lookup"><span data-stu-id="e26a4-202">Certificate entity to update.</span></span>
+        - id: options
+          type:
+            - Models.CertificateUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update_1'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-203">包含 Batch 帐户的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-203">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="e26a4-204">Batch 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="e26a4-204">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="e26a4-205">证书标识符。</span><span class="sxs-lookup"><span data-stu-id="e26a4-205">The identifier for the certificate.</span></span> <span data-ttu-id="e26a4-206">这必须组成的算法和指纹由连字符，并且必须匹配在请求中的证书数据。</span><span class="sxs-lookup"><span data-stu-id="e26a4-206">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="e26a4-207">例如 SHA1 a3d1c5。</span><span class="sxs-lookup"><span data-stu-id="e26a4-207">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="e26a4-208">要更新实体的证书。</span><span class="sxs-lookup"><span data-stu-id="e26a4-208">Certificate entity to update.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="e26a4-209">回调</span><span class="sxs-lookup"><span data-stu-id="e26a4-209">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+references:
+  - uid: '@azure/arm-batch.BatchManagementClientContext'
+    name: BatchManagementClientContext
+    spec.typeScript:
+      - name: BatchManagementClientContext
+        fullName: BatchManagementClientContext
+        uid: '@azure/arm-batch.BatchManagementClientContext'
+  - uid: '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+    name: CertificateCreateOrUpdateParameters
+    spec.typeScript:
+      - name: CertificateCreateOrUpdateParameters
+        fullName: CertificateCreateOrUpdateParameters
+        uid: '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-batch.Certificate>
+    name: Certificate>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Certificate
+        fullName: Certificate
+        uid: '@azure/arm-batch.Certificate'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+    name: ListCertificatesResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListCertificatesResult
+        fullName: ListCertificatesResult
+        uid: '@azure/arm-batch.ListCertificatesResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+    name: CertificateListByBatchAccountOptionalParams
+    spec.typeScript:
+      - name: CertificateListByBatchAccountOptionalParams
+        fullName: CertificateListByBatchAccountOptionalParams
+        uid: '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+  - uid: '@azure/arm-batch.CertificateUpdateOptionalParams'
+    name: CertificateUpdateOptionalParams
+    spec.typeScript:
+      - name: CertificateUpdateOptionalParams
+        fullName: CertificateUpdateOptionalParams
+        uid: '@azure/arm-batch.CertificateUpdateOptionalParams'

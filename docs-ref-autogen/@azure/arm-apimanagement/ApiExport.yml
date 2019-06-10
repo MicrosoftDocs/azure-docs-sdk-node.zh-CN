@@ -1,0 +1,157 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ApiExport'
+    name: ApiExport
+    fullName: ApiExport
+    children:
+      - '@azure/arm-apimanagement.ApiExport.constructor'
+      - '@azure/arm-apimanagement.ApiExport.get'
+      - '@azure/arm-apimanagement.ApiExport.get_2'
+      - '@azure/arm-apimanagement.ApiExport.get_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="f5cd1-101">表示 ApiExport 类。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-101">Class representing a ApiExport.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiExport.constructor'
+    name: ApiExport(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5cd1-102">创建 ApiExport。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-102">Create a ApiExport.</span></span>
+    syntax:
+      content: 'new ApiExport(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            <span data-ttu-id="f5cd1-103">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-103">Reference to the service client.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiExport.get'
+    name: 'get(string, string, string, Models.ExportFormat, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f5cd1-104">获取指定替换为 5 分钟内有效的 SAS 密钥的存储 blob 的格式按标识符指定的 API 的详细信息。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-104">Gets the details of the API specified by its identifier in the format specified to the Storage Blob with SAS Key valid for 5 minutes.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, format: Models.ExportFormat, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5cd1-105">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-105">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="f5cd1-106">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-106">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="f5cd1-107">API 修订版本标识符。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-107">API revision identifier.</span></span> <span data-ttu-id="f5cd1-108">必须是当前 API 管理服务实例中唯一的。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-108">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="f5cd1-109">非当前修订; rev 作为后缀，其中 n 是修订号 = n。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-109">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: format
+          type:
+            - Models.ExportFormat
+          description: '<span data-ttu-id="f5cd1-110">要将 Api 详细信息导出到具有 5 分钟内有效的 Sas 密钥的存储 Blob 在其中设置格式。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-110">Format in which to export the Api Details to the Storage Blob with Sas Key valid for 5 minutes.</span></span> <span data-ttu-id="f5cd1-111">可能的值包括：Swagger，Wsdl、 Wadl''、 ''Openapi</span><span class="sxs-lookup"><span data-stu-id="f5cd1-111">Possible values include: ''Swagger'', ''Wsdl'', ''Wadl'', ''Openapi''</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiExportGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiExport.get_2'
+    name: 'get(string, string, string, Models.ExportFormat, RequestOptionsBase, ServiceCallback<ApiExportResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, format: Models.ExportFormat, options: RequestOptionsBase, callback: ServiceCallback<ApiExportResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5cd1-112">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-112">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="f5cd1-113">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-113">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="f5cd1-114">API 修订版本标识符。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-114">API revision identifier.</span></span> <span data-ttu-id="f5cd1-115">必须是当前 API 管理服务实例中唯一的。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-115">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="f5cd1-116">非当前修订; rev 作为后缀，其中 n 是修订号 = n。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-116">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: format
+          type:
+            - Models.ExportFormat
+          description: '<span data-ttu-id="f5cd1-117">要将 Api 详细信息导出到具有 5 分钟内有效的 Sas 密钥的存储 Blob 在其中设置格式。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-117">Format in which to export the Api Details to the Storage Blob with Sas Key valid for 5 minutes.</span></span> <span data-ttu-id="f5cd1-118">可能的值包括：Swagger，Wsdl、 Wadl''、 ''Openapi</span><span class="sxs-lookup"><span data-stu-id="f5cd1-118">Possible values include: ''Swagger'', ''Wsdl'', ''Wadl'', ''Openapi''</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f5cd1-119">可选参数</span><span class="sxs-lookup"><span data-stu-id="f5cd1-119">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiExportResult>
+          description: |
+            <span data-ttu-id="f5cd1-120">回调</span><span class="sxs-lookup"><span data-stu-id="f5cd1-120">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiExportGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiExport.get_1'
+    name: 'get(string, string, string, Models.ExportFormat, ServiceCallback<ApiExportResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, format: Models.ExportFormat, callback: ServiceCallback<ApiExportResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f5cd1-121">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-121">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="f5cd1-122">API 管理服务的名称。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-122">The name of the API Management service.</span></span>
+        - id: apiId
+          type:
+            - string
+          description: <span data-ttu-id="f5cd1-123">API 修订版本标识符。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-123">API revision identifier.</span></span> <span data-ttu-id="f5cd1-124">必须是当前 API 管理服务实例中唯一的。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-124">Must be unique in the current API Management service instance.</span></span> <span data-ttu-id="f5cd1-125">非当前修订; rev 作为后缀，其中 n 是修订号 = n。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-125">Non-current revision has ;rev=n as a suffix where n is the revision number.</span></span>
+        - id: format
+          type:
+            - Models.ExportFormat
+          description: '<span data-ttu-id="f5cd1-126">要将 Api 详细信息导出到具有 5 分钟内有效的 Sas 密钥的存储 Blob 在其中设置格式。</span><span class="sxs-lookup"><span data-stu-id="f5cd1-126">Format in which to export the Api Details to the Storage Blob with Sas Key valid for 5 minutes.</span></span> <span data-ttu-id="f5cd1-127">可能的值包括：Swagger，Wsdl、 Wadl''、 ''Openapi</span><span class="sxs-lookup"><span data-stu-id="f5cd1-127">Possible values include: ''Swagger'', ''Wsdl'', ''Wadl'', ''Openapi''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiExportResult>
+          description: |
+            <span data-ttu-id="f5cd1-128">回调</span><span class="sxs-lookup"><span data-stu-id="f5cd1-128">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiExportGetResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-apimanagement.ApiExportResult>
+    name: ApiExportResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ApiExportResult
+        fullName: ApiExportResult
+        uid: '@azure/arm-apimanagement.ApiExportResult'
+      - name: '>'
+        fullName: '>'

@@ -15,8 +15,6 @@ items:
       - msal.UserAgentApplication.getLoginInProgress
       - msal.UserAgentApplication.getPostLogoutRedirectUri
       - msal.UserAgentApplication.getRedirectUri
-      - msal.UserAgentApplication.handleRedirectCallback_1
-      - msal.UserAgentApplication.handleRedirectCallback
       - msal.UserAgentApplication.loginPopup
       - msal.UserAgentApplication.loginRedirect
       - msal.UserAgentApplication.logout
@@ -24,7 +22,8 @@ items:
     langs:
       - typeScript
     type: class
-    summary: 'UserAgentApplication 类：<xref:UserAgentApplication> 对象实例的开发人员可用于使 loginXX OR acquireTokenXX 函数'
+    summary: |
+      UserAgentApplication 类开发人员可用于使 loginXX 的对象实例或 acquireTokenXX 函数
     package: msal
   - uid: msal.UserAgentApplication.acquireTokenPopup
     name: acquireTokenPopup(AuthenticationParameters)
@@ -50,7 +49,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 您希望获取的 API 的 access_token，通过将用户重定向到授权终结点时使用。
+    summary: 当你想要获取 api 的 access_token，通过将用户的浏览器窗口中重定向到授权终结点时使用。
     syntax:
       content: 'function acquireTokenRedirect(request: AuthenticationParameters)'
       parameters:
@@ -85,11 +84,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: |-
-      返回颁发机构，颁发机构所在的 URL，该值指示可以使用 MSAL 获取令牌的目录
-      - 在 Azure AD 中，此属性是 URL，该值指示使用 MSAL 获取的令牌的形式的 Azure active directory https://login.microsoftonline.com/&lt;Enter_the_Tenant_Info_Here&gt;如果你的应用程序支持在一个组织的目录中的帐户，"Enter_the_Tenant_Info_Here"值将替换为租户 Id 或租户名称 (例如，contoso.microsoft.com) 如果你的应用程序支持在任何组织的目录中将帐户、"Enter_the_Tenant_Info_Here"值替换组织中，如果你的应用程序支持在任何组织的目录和个人 Microsoft 帐户中的帐户，将为"Enter_the_Tenant_Info_使用通用的此处"值。
-      若要将支持限制为个人 Microsoft 帐户，"Enter_the_Tenant_Info_Here"将值替换为使用者。
-      - 在 Azure B2C 中，它属于窗体 https://&lt;实例&gt;/tfp/&lt;租户&gt;/<policyName>/
+    summary: 若要管理颁发机构 URL 的方法。
     syntax:
       content: 'authority: string'
       return:
@@ -102,7 +97,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 签名中帐户 （来自在登录时创建的帐户对象） 或为 null 时返回发现没有状态
+    summary: 已登录帐户 （在成功登录时创建的帐户对象） 或 null 时返回发现无状态
     syntax:
       content: function getAccount()
       parameters: []
@@ -116,7 +111,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 用于筛选所有缓存的项，并返回基于 homeAccountIdentifier 的唯一帐户的列表。
+    summary: 使用基于 homeAccountIdentifier MSAL 缓存中获取一组唯一的帐户。
     syntax:
       content: function getAllAccounts()
       parameters: []
@@ -130,7 +125,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 返回的颁发机构实例
+    summary: 获取当前的颁发机构实例从 MSAL 配置对象
     syntax:
       content: function getAuthorityInstance()
       parameters: []
@@ -198,40 +193,6 @@ items:
         type:
           - string
     package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback_1
-    name: handleRedirectCallback(authResponseCallback)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: 设置要发回的成功或错误的对象的重定向流的回调函数。
-    syntax:
-      content: 'function handleRedirectCallback(authCallback: authResponseCallback)'
-      parameters:
-        - id: authCallback
-          type:
-            - authResponseCallback
-          description: ''
-    package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback
-    name: 'handleRedirectCallback(tokenReceivedCallback, errorReceivedCallback)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: 设置要发回的成功或错误的对象的重定向流的回调函数。
-    syntax:
-      content: 'function handleRedirectCallback(tokenReceivedCallback: tokenReceivedCallback, errorReceivedCallback: errorReceivedCallback)'
-      parameters:
-        - id: tokenReceivedCallback
-          type:
-            - tokenReceivedCallback
-          description: ''
-        - id: errorReceivedCallback
-          type:
-            - errorReceivedCallback
-          description: ''
-    package: msal
   - uid: msal.UserAgentApplication.loginPopup
     name: loginPopup(AuthenticationParameters)
     children: []
@@ -286,7 +247,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: '构造函数<xref:UserAgentApplication>这是为了能够实例化对象<xref:UserAgentApplication>对象'
+    summary: ''
     syntax:
       content: 'new UserAgentApplication(configuration: Configuration)'
       parameters:

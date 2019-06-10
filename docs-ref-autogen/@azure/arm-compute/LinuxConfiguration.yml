@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.LinuxConfiguration'
+    name: LinuxConfiguration
+    fullName: LinuxConfiguration
+    children:
+      - '@azure/arm-compute.LinuxConfiguration.disablePasswordAuthentication'
+      - '@azure/arm-compute.LinuxConfiguration.provisionVMAgent'
+      - '@azure/arm-compute.LinuxConfiguration.ssh'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      指定虚拟机上的 Linux 操作系统设置。 <br><br>有关支持的 Linux 分发的列表，请参阅[Linux azure 认可的分发](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+      <br><br> 运行非认可分发版，请参阅[有关非认可分发的信息](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.LinuxConfiguration.disablePasswordAuthentication'
+    name: disablePasswordAuthentication
+    fullName: disablePasswordAuthentication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定是否应禁用密码身份验证。
+    optional: true
+    syntax:
+      content: 'disablePasswordAuthentication?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.LinuxConfiguration.provisionVMAgent'
+    name: provisionVMAgent
+    fullName: provisionVMAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指示是否应在虚拟机上设置虚拟机代理。 <br><br>
+      当在请求正文中未指定此属性时，默认行为是将其设置为 true。  这将确保 VM 代理上安装了 VM，以便扩展可添加到 VM 更高版本。
+    optional: true
+    syntax:
+      content: 'provisionVMAgent?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.LinuxConfiguration.ssh'
+    name: ssh
+    fullName: ssh
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定 Linux OS 的 SSH 密钥配置。
+    optional: true
+    syntax:
+      content: 'ssh?: SshConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.SshConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.SshConfiguration'
+    name: SshConfiguration
+    spec.typeScript:
+      - name: SshConfiguration
+        fullName: SshConfiguration
+        uid: '@azure/arm-compute.SshConfiguration'

@@ -1,0 +1,226 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ServiceBusClient'
+    name: ServiceBusClient
+    fullName: ServiceBusClient
+    children:
+      - '@azure/service-bus.ServiceBusClient.close'
+      - '@azure/service-bus.ServiceBusClient.createFromAadTokenCredentials'
+      - '@azure/service-bus.ServiceBusClient.createFromConnectionString'
+      - '@azure/service-bus.ServiceBusClient.createFromTokenProvider'
+      - '@azure/service-bus.ServiceBusClient.createQueueClient'
+      - '@azure/service-bus.ServiceBusClient.createSubscriptionClient'
+      - '@azure/service-bus.ServiceBusClient.createTopicClient'
+      - '@azure/service-bus.ServiceBusClient.name'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      描述允许与服务总线实例进行交互的客户端。
+      保存到服务总线 Namespace 的 AMQP 连接并且是使用队列、 主题和订阅的入口点。
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      关闭 AMQP 链接以及此 ServiceBusClient 为创建此 ServiceBusClient 由创建队列/主题/订阅客户端的发送方/接收方创建的 AMQP 连接。
+      一次关闭，
+      - 通过此 ServiceBusClient 创建的客户端不能用于发送/接收消息了。
+      - 此 ServiceBusClient 不能用于创建任何新的队列/主题/订阅客户端。
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<any>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createFromAadTokenCredentials'
+    name: 'createFromAadTokenCredentials(string, ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, ServiceBusClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 为表示由给定主机使用 TokenCredentials 生成使用服务总线 Namespace 创建 ServiceBusClient`@azure/ms-rest-nodeauth`库。
+    syntax:
+      content: 'static function createFromAadTokenCredentials(host: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: ServiceBusClientOptions)'
+      parameters:
+        - id: host
+          type:
+            - string
+          description: |-
+            服务总线的完全限定的域名。
+            最有可能，{yournamespace}。 servicebus.windows.net
+        - id: credentials
+          type:
+            - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+          description: |-
+            通过使用生成的令牌凭据`@azure/ms-rest-nodeauth`库。 它可以是以下值之一：
+             - ApplicationTokenCredentials
+             - UserTokenCredentials
+             - DeviceTokenCredentials
+             - MSITokenCredentials。
+        - id: options
+          type:
+            - '@azure/service-bus.ServiceBusClientOptions'
+          description: 若要控制与服务总线 Namespace 进行交互的方式的选项。
+          optional: true
+      return:
+        type:
+          - '@azure/service-bus.ServiceBusClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createFromConnectionString'
+    name: 'createFromConnectionString(string, ServiceBusClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 为给定的连接字符串中表示服务总线 Namespace 创建 ServiceBusClient。
+    syntax:
+      content: 'static function createFromConnectionString(connectionString: string, options?: ServiceBusClientOptions)'
+      parameters:
+        - id: connectionString
+          type:
+            - string
+          description: '窗体的连接字符串 Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName = 我-SA 的名称;SharedAccessKey = 我 SA 密钥'
+        - id: options
+          type:
+            - '@azure/service-bus.ServiceBusClientOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@azure/service-bus.ServiceBusClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createFromTokenProvider'
+    name: 'createFromTokenProvider(string, TokenProvider, ServiceBusClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建服务总线 Namespace 表示给定的宿主使用给定的 TokenProvider ServiceBusClient。
+    syntax:
+      content: 'static function createFromTokenProvider(host: string, tokenProvider: TokenProvider, options?: ServiceBusClientOptions)'
+      parameters:
+        - id: host
+          type:
+            - string
+          description: 服务总线的完全限定的域名。 最有可能， `<yournamespace>.servicebus.windows.net`。
+        - id: tokenProvider
+          type:
+            - TokenProvider
+          description: '自定义的实现[令牌提供程序](https://github.com/Azure/amqp-common-js/blob/master/lib/auth/token.ts)接口。'
+        - id: options
+          type:
+            - '@azure/service-bus.ServiceBusClientOptions'
+          description: 若要控制与服务总线 Namespace 进行交互的方式的选项。
+          optional: true
+      return:
+        type:
+          - '@azure/service-bus.ServiceBusClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createQueueClient'
+    name: createQueueClient(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 为现有的服务总线队列创建 QueueClient。
+    syntax:
+      content: 'function createQueueClient(queueName: string)'
+      parameters:
+        - id: queueName
+          type:
+            - string
+          description: 队列名称。
+      return:
+        type:
+          - '@azure/service-bus.QueueClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createSubscriptionClient'
+    name: 'createSubscriptionClient(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 为现有的服务总线订阅创建 SubscriptionClient。
+    syntax:
+      content: 'function createSubscriptionClient(topicName: string, subscriptionName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: 主题名称。
+        - id: subscriptionName
+          type:
+            - string
+          description: 订阅名称。
+      return:
+        type:
+          - '@azure/service-bus.SubscriptionClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createTopicClient'
+    name: createTopicClient(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 为现有的服务总线主题创建 TopicClient。
+    syntax:
+      content: 'function createTopicClient(topicName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: 主题名称。
+      return:
+        type:
+          - '@azure/service-bus.TopicClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服务总线 Namespace 的名称。
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.QueueClient'
+    name: QueueClient
+    spec.typeScript:
+      - name: QueueClient
+        fullName: QueueClient
+        uid: '@azure/service-bus.QueueClient'
+  - uid: '@azure/service-bus.SubscriptionClient'
+    name: SubscriptionClient
+    spec.typeScript:
+      - name: SubscriptionClient
+        fullName: SubscriptionClient
+        uid: '@azure/service-bus.SubscriptionClient'
+  - uid: '@azure/service-bus.TopicClient'
+    name: TopicClient
+    spec.typeScript:
+      - name: TopicClient
+        fullName: TopicClient
+        uid: '@azure/service-bus.TopicClient'
+  - uid: '@azure/service-bus.ServiceBusClientOptions'
+    name: ServiceBusClientOptions
+    spec.typeScript:
+      - name: ServiceBusClientOptions
+        fullName: ServiceBusClientOptions
+        uid: '@azure/service-bus.ServiceBusClientOptions'
+  - uid: '@azure/service-bus.ServiceBusClient'
+    name: ServiceBusClient
+    spec.typeScript:
+      - name: ServiceBusClient
+        fullName: ServiceBusClient
+        uid: '@azure/service-bus.ServiceBusClient'

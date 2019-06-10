@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.WinRMListener'
+    name: WinRMListener
+    fullName: WinRMListener
+    children:
+      - '@azure/arm-compute.WinRMListener.certificateUrl'
+      - '@azure/arm-compute.WinRMListener.protocol'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述协议和 Windows 远程管理侦听器的指纹
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      这是证书的已上传到密钥保管库以机密形式的 URL。 有关将机密添加到密钥保管库，请参阅[将密钥或机密添加到密钥保管库](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add)。 在这种情况下，证书需要是它是以下 JSON 的 Base64 编码对象的以 utf-8 编码： <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>
+      "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WinRMListener.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定侦听器的协议。 <br><br> 可能的值包括： <br>**http** <br><br>
+      **https**。 可能的值包括：Http，Https
+    optional: true
+    syntax:
+      content: 'protocol?: ProtocolTypes'
+      return:
+        type:
+          - '@azure/arm-compute.ProtocolTypes'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ProtocolTypes'
+    name: ProtocolTypes
+    spec.typeScript:
+      - name: ProtocolTypes
+        fullName: ProtocolTypes
+        uid: '@azure/arm-compute.ProtocolTypes'

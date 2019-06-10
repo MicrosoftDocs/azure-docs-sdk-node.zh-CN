@@ -1,0 +1,331 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineUpdate'
+    name: VirtualMachineUpdate
+    fullName: VirtualMachineUpdate
+    children:
+      - '@azure/arm-compute.VirtualMachineUpdate.additionalCapabilities'
+      - '@azure/arm-compute.VirtualMachineUpdate.availabilitySet'
+      - '@azure/arm-compute.VirtualMachineUpdate.diagnosticsProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.hardwareProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.identity'
+      - '@azure/arm-compute.VirtualMachineUpdate.instanceView'
+      - '@azure/arm-compute.VirtualMachineUpdate.licenseType'
+      - '@azure/arm-compute.VirtualMachineUpdate.networkProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.osProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.plan'
+      - '@azure/arm-compute.VirtualMachineUpdate.provisioningState'
+      - '@azure/arm-compute.VirtualMachineUpdate.storageProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.tags'
+      - '@azure/arm-compute.VirtualMachineUpdate.vmId'
+      - '@azure/arm-compute.VirtualMachineUpdate.zones'
+    langs:
+      - typeScript
+    type: interface
+    summary: 本文介绍虚拟机更新。
+    extends:
+      name: '@azure/arm-compute.UpdateResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.additionalCapabilities'
+    name: additionalCapabilities
+    fullName: additionalCapabilities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定启用或禁用虚拟机上的其他功能。
+    optional: true
+    syntax:
+      content: 'additionalCapabilities?: AdditionalCapabilities'
+      return:
+        type:
+          - '@azure/arm-compute.AdditionalCapabilities'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.availabilitySet'
+    name: availabilitySet
+    fullName: availabilitySet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定有关虚拟机应分配给可用性集的信息。 指定同一个可用性集中的虚拟机分配给不同节点，以便最大化可用性。 有关可用性集的详细信息，请参阅[管理虚拟机的可用性](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)。
+      <br><br> Azure 计划内维护的详细信息，请参阅[Azure 中虚拟机的计划内维护](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> 目前，VM 只能添加到可用性集在创建时。 无法将现有 VM 添加到可用性集。
+    optional: true
+    syntax:
+      content: 'availabilitySet?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.diagnosticsProfile'
+    name: diagnosticsProfile
+    fullName: diagnosticsProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的启动诊断设置状态。 <br><br>最小的 api 版本：2015-06-15.
+    optional: true
+    syntax:
+      content: 'diagnosticsProfile?: DiagnosticsProfile'
+      return:
+        type:
+          - '@azure/arm-compute.DiagnosticsProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.hardwareProfile'
+    name: hardwareProfile
+    fullName: hardwareProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定虚拟机的硬件设置。
+    optional: true
+    syntax:
+      content: 'hardwareProfile?: HardwareProfile'
+      return:
+        type:
+          - '@azure/arm-compute.HardwareProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.identity'
+    name: identity
+    fullName: identity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果配置的虚拟机的标识。
+    optional: true
+    syntax:
+      content: 'identity?: VirtualMachineIdentity'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineIdentity'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.instanceView'
+    name: instanceView
+    fullName: instanceView
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      虚拟机实例视图。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'instanceView?: VirtualMachineInstanceView'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineInstanceView'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.licenseType'
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定的映像或正在使用的磁盘已在本地获得授权。 此元素仅用于包含 Windows Server 操作系统的映像。 <br><br> 可能的值包括： <br><br> Windows_Client <br><br> Windows_Server <br><br> 如果在更新请求中包含此元素，值必须匹配的初始值。 无法更新此值。 <br><br> 有关详细信息，请参阅[Azure 混合使用权益的 Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> 最小的 api 版本：2015-06-15
+    optional: true
+    syntax:
+      content: 'licenseType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.networkProfile'
+    name: networkProfile
+    fullName: networkProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定虚拟机的网络接口。
+    optional: true
+    syntax:
+      content: 'networkProfile?: NetworkProfile'
+      return:
+        type:
+          - '@azure/arm-compute.NetworkProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.osProfile'
+    name: osProfile
+    fullName: osProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定虚拟机的操作系统设置。
+    optional: true
+    syntax:
+      content: 'osProfile?: OSProfile'
+      return:
+        type:
+          - '@azure/arm-compute.OSProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.plan'
+    name: plan
+    fullName: plan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定用于创建虚拟机 marketplace 映像的信息。 此元素仅用于 marketplace 映像。 可以使用 API 的 marketplace 映像之前，必须启用此图像可查看以编程方式使用。  在 Azure 门户中，找到你想要使用，然后单击的 marketplace 映像**想要以编程方式部署，开始->**。 输入所需的任何信息，然后单击**保存**。
+    optional: true
+    syntax:
+      content: 'plan?: Plan'
+      return:
+        type:
+          - '@azure/arm-compute.Plan'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      预配状态，才会显示在响应中。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.storageProfile'
+    name: storageProfile
+    fullName: storageProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定虚拟机磁盘的存储设置。
+    optional: true
+    syntax:
+      content: 'storageProfile?: StorageProfile'
+      return:
+        type:
+          - '@azure/arm-compute.StorageProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 资源标记
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.vmId'
+    name: vmId
+    fullName: vmId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定这是一个 128 位标识符，它是编码，在所有 Azure IaaS Vm 的 SMBIOS 中存储的 VM 唯一 ID，并可以读取使用平台的 BIOS 命令。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'vmId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.zones'
+    name: zones
+    fullName: zones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在虚拟机区域中。
+    optional: true
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.UpdateResource'
+    name: UpdateResource
+    spec.typeScript:
+      - name: UpdateResource
+        fullName: UpdateResource
+        uid: '@azure/arm-compute.UpdateResource'
+  - uid: '@azure/arm-compute.AdditionalCapabilities'
+    name: AdditionalCapabilities
+    spec.typeScript:
+      - name: AdditionalCapabilities
+        fullName: AdditionalCapabilities
+        uid: '@azure/arm-compute.AdditionalCapabilities'
+  - uid: '@azure/arm-compute.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-compute.SubResource'
+  - uid: '@azure/arm-compute.DiagnosticsProfile'
+    name: DiagnosticsProfile
+    spec.typeScript:
+      - name: DiagnosticsProfile
+        fullName: DiagnosticsProfile
+        uid: '@azure/arm-compute.DiagnosticsProfile'
+  - uid: '@azure/arm-compute.HardwareProfile'
+    name: HardwareProfile
+    spec.typeScript:
+      - name: HardwareProfile
+        fullName: HardwareProfile
+        uid: '@azure/arm-compute.HardwareProfile'
+  - uid: '@azure/arm-compute.VirtualMachineIdentity'
+    name: VirtualMachineIdentity
+    spec.typeScript:
+      - name: VirtualMachineIdentity
+        fullName: VirtualMachineIdentity
+        uid: '@azure/arm-compute.VirtualMachineIdentity'
+  - uid: '@azure/arm-compute.VirtualMachineInstanceView'
+    name: VirtualMachineInstanceView
+    spec.typeScript:
+      - name: VirtualMachineInstanceView
+        fullName: VirtualMachineInstanceView
+        uid: '@azure/arm-compute.VirtualMachineInstanceView'
+  - uid: '@azure/arm-compute.NetworkProfile'
+    name: NetworkProfile
+    spec.typeScript:
+      - name: NetworkProfile
+        fullName: NetworkProfile
+        uid: '@azure/arm-compute.NetworkProfile'
+  - uid: '@azure/arm-compute.OSProfile'
+    name: OSProfile
+    spec.typeScript:
+      - name: OSProfile
+        fullName: OSProfile
+        uid: '@azure/arm-compute.OSProfile'
+  - uid: '@azure/arm-compute.Plan'
+    name: Plan
+    spec.typeScript:
+      - name: Plan
+        fullName: Plan
+        uid: '@azure/arm-compute.Plan'
+  - uid: '@azure/arm-compute.StorageProfile'
+    name: StorageProfile
+    spec.typeScript:
+      - name: StorageProfile
+        fullName: StorageProfile
+        uid: '@azure/arm-compute.StorageProfile'

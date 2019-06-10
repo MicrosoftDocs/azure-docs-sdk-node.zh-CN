@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult'
+    name: ApiManagementServiceNameAvailabilityResult
+    fullName: ApiManagementServiceNameAvailabilityResult
+    children:
+      - '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.message'
+      - '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.nameAvailable'
+      - '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.reason'
+    langs:
+      - typeScript
+    type: interface
+    summary: CheckNameAvailability 操作的响应。
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      如果原因 = = 无效，为用户提供无效，给定名称的原因并提供命名要求，以便用户可以选择一个有效的名称的资源。 如果原因 = = 已经存在，解释<resourceName>已在使用，并引导他们选择不同的名称。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.nameAvailable'
+    name: nameAvailable
+    fullName: nameAvailable
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      如果名称可用，可以用于创建新的 API 管理服务; 则为 true否则为 false。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'nameAvailable?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult.reason'
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 无效表明提供的名称与资源提供程序的命名要求 （长度不正确、 不支持的字符等） 不匹配已经存在指示该名称已被使用，以及因此不可用。 可能的值包括：有效，Invalid、 已经存在
+    optional: true
+    syntax:
+      content: 'reason?: NameAvailabilityReason'
+      return:
+        type:
+          - '@azure/arm-apimanagement.NameAvailabilityReason'
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.NameAvailabilityReason'
+    name: NameAvailabilityReason
+    spec.typeScript:
+      - name: NameAvailabilityReason
+        fullName: NameAvailabilityReason
+        uid: '@azure/arm-apimanagement.NameAvailabilityReason'

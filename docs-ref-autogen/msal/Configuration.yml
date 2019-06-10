@@ -7,7 +7,13 @@ items:
     langs:
       - typeScript
     type: type alias
-    summary: 配置对象
+    summary: |
+      使用配置对象配置 MSAL 和初始化 UserAgentApplication。
+      此对象允许您配置的 MSAL 功能的重要元素：
+      - 身份验证： 这是你在其中配置身份验证元素，如 clientID，使用的针对 Microsoft 标识平台进行身份验证颁发机构
+      - 缓存： 这是你在其中配置缓存位置，以及是否存储在 cookie 中缓存
+      - 系统： 这是你可在其中配置记录器、 帧超时等。
+      - framework： 这是可在其中配置 angular 的运行模式。 更多资源此处推出。
     syntax:
-      content: 'type Configuration = { auth:AuthOptions, cache:CacheOptions, framework:FrameworkOptions, system:SystemOptions }'
+      content: 'type Configuration = { auth: AuthOptions, cache: CacheOptions, framework: FrameworkOptions, system: SystemOptions }'
     package: msal

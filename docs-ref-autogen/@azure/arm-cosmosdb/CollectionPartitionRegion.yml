@@ -1,0 +1,181 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.CollectionPartitionRegion'
+    name: CollectionPartitionRegion
+    fullName: CollectionPartitionRegion
+    children:
+      - '@azure/arm-cosmosdb.CollectionPartitionRegion.constructor'
+      - '@azure/arm-cosmosdb.CollectionPartitionRegion.listMetrics'
+      - '@azure/arm-cosmosdb.CollectionPartitionRegion.listMetrics_2'
+      - '@azure/arm-cosmosdb.CollectionPartitionRegion.listMetrics_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="8bed8-101">表示 CollectionPartitionRegion 类。</span><span class="sxs-lookup"><span data-stu-id="8bed8-101">Class representing a CollectionPartitionRegion.</span></span>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CollectionPartitionRegion.constructor'
+    name: CollectionPartitionRegion(CosmosDBManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="8bed8-102">创建 CollectionPartitionRegion。</span><span class="sxs-lookup"><span data-stu-id="8bed8-102">Create a CollectionPartitionRegion.</span></span>
+    syntax:
+      content: 'new CollectionPartitionRegion(client: CosmosDBManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+          description: |
+            <span data-ttu-id="8bed8-103">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="8bed8-103">Reference to the service client.</span></span>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CollectionPartitionRegion.listMetrics'
+    name: 'listMetrics(string, string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8bed8-104">检索的度量值由给定集合的给定筛选器和区域，按分区划分。</span><span class="sxs-lookup"><span data-stu-id="8bed8-104">Retrieves the metrics determined by the given filter for the given collection and region, split by partition.</span></span>'
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-105">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="8bed8-105">Name of an Azure resource group.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-106">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="8bed8-106">Cosmos DB database account name.</span></span>
+        - id: region
+          type:
+            - string
+          description: '<span data-ttu-id="8bed8-107">Cosmos DB 区域，与单词和每个单词之间的空格首字母大写。</span><span class="sxs-lookup"><span data-stu-id="8bed8-107">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: databaseRid
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-108">Rid 的 cosmos DB 数据库。</span><span class="sxs-lookup"><span data-stu-id="8bed8-108">Cosmos DB database rid.</span></span>
+        - id: collectionRid
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-109">Rid 的 cosmos DB 集合。</span><span class="sxs-lookup"><span data-stu-id="8bed8-109">Cosmos DB collection rid.</span></span>
+        - id: filter
+          type:
+            - string
+          description: '<span data-ttu-id="8bed8-110">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="8bed8-110">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="8bed8-111">可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="8bed8-111">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="8bed8-112">支持的运算符是等于</span><span class="sxs-lookup"><span data-stu-id="8bed8-112">The supported operator is eq.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CollectionPartitionRegionListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CollectionPartitionRegion.listMetrics_2'
+    name: 'listMetrics(string, string, string, string, string, string, RequestOptionsBase, ServiceCallback<PartitionMetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, options: RequestOptionsBase, callback: ServiceCallback<PartitionMetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-113">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="8bed8-113">Name of an Azure resource group.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-114">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="8bed8-114">Cosmos DB database account name.</span></span>
+        - id: region
+          type:
+            - string
+          description: '<span data-ttu-id="8bed8-115">Cosmos DB 区域，与单词和每个单词之间的空格首字母大写。</span><span class="sxs-lookup"><span data-stu-id="8bed8-115">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: databaseRid
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-116">Rid 的 cosmos DB 数据库。</span><span class="sxs-lookup"><span data-stu-id="8bed8-116">Cosmos DB database rid.</span></span>
+        - id: collectionRid
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-117">Rid 的 cosmos DB 集合。</span><span class="sxs-lookup"><span data-stu-id="8bed8-117">Cosmos DB collection rid.</span></span>
+        - id: filter
+          type:
+            - string
+          description: '<span data-ttu-id="8bed8-118">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="8bed8-118">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="8bed8-119">可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="8bed8-119">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="8bed8-120">支持的运算符是等于</span><span class="sxs-lookup"><span data-stu-id="8bed8-120">The supported operator is eq.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8bed8-121">可选参数</span><span class="sxs-lookup"><span data-stu-id="8bed8-121">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.PartitionMetricListResult>
+          description: |
+            <span data-ttu-id="8bed8-122">回调</span><span class="sxs-lookup"><span data-stu-id="8bed8-122">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CollectionPartitionRegionListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.CollectionPartitionRegion.listMetrics_1'
+    name: 'listMetrics(string, string, string, string, string, string, ServiceCallback<PartitionMetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, databaseRid: string, collectionRid: string, filter: string, callback: ServiceCallback<PartitionMetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-123">Azure 资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="8bed8-123">Name of an Azure resource group.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-124">Cosmos DB 数据库帐户名称。</span><span class="sxs-lookup"><span data-stu-id="8bed8-124">Cosmos DB database account name.</span></span>
+        - id: region
+          type:
+            - string
+          description: '<span data-ttu-id="8bed8-125">Cosmos DB 区域，与单词和每个单词之间的空格首字母大写。</span><span class="sxs-lookup"><span data-stu-id="8bed8-125">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: databaseRid
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-126">Rid 的 cosmos DB 数据库。</span><span class="sxs-lookup"><span data-stu-id="8bed8-126">Cosmos DB database rid.</span></span>
+        - id: collectionRid
+          type:
+            - string
+          description: <span data-ttu-id="8bed8-127">Rid 的 cosmos DB 集合。</span><span class="sxs-lookup"><span data-stu-id="8bed8-127">Cosmos DB collection rid.</span></span>
+        - id: filter
+          type:
+            - string
+          description: '<span data-ttu-id="8bed8-128">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="8bed8-128">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="8bed8-129">可以进行筛选的参数是 name.value (名称的指标，可以有多个或名称)，startTime、 endTime，且 timeGrain。</span><span class="sxs-lookup"><span data-stu-id="8bed8-129">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="8bed8-130">支持的运算符是等于</span><span class="sxs-lookup"><span data-stu-id="8bed8-130">The supported operator is eq.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.PartitionMetricListResult>
+          description: |
+            <span data-ttu-id="8bed8-131">回调</span><span class="sxs-lookup"><span data-stu-id="8bed8-131">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CollectionPartitionRegionListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+    name: CosmosDBManagementClientContext
+    spec.typeScript:
+      - name: CosmosDBManagementClientContext
+        fullName: CosmosDBManagementClientContext
+        uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-cosmosdb.PartitionMetricListResult>
+    name: PartitionMetricListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PartitionMetricListResult
+        fullName: PartitionMetricListResult
+        uid: '@azure/arm-cosmosdb.PartitionMetricListResult'
+      - name: '>'
+        fullName: '>'

@@ -1,0 +1,919 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-kusto.Databases'
+    name: Databases
+    fullName: Databases
+    children:
+      - '@azure/arm-kusto.Databases.addPrincipals'
+      - '@azure/arm-kusto.Databases.addPrincipals_2'
+      - '@azure/arm-kusto.Databases.addPrincipals_1'
+      - '@azure/arm-kusto.Databases.beginCreateOrUpdate'
+      - '@azure/arm-kusto.Databases.beginDeleteMethod'
+      - '@azure/arm-kusto.Databases.beginUpdate'
+      - '@azure/arm-kusto.Databases.checkNameAvailability'
+      - '@azure/arm-kusto.Databases.checkNameAvailability_2'
+      - '@azure/arm-kusto.Databases.checkNameAvailability_1'
+      - '@azure/arm-kusto.Databases.createOrUpdate'
+      - '@azure/arm-kusto.Databases.constructor'
+      - '@azure/arm-kusto.Databases.deleteMethod'
+      - '@azure/arm-kusto.Databases.get'
+      - '@azure/arm-kusto.Databases.get_2'
+      - '@azure/arm-kusto.Databases.get_1'
+      - '@azure/arm-kusto.Databases.listByCluster'
+      - '@azure/arm-kusto.Databases.listByCluster_2'
+      - '@azure/arm-kusto.Databases.listByCluster_1'
+      - '@azure/arm-kusto.Databases.listPrincipals'
+      - '@azure/arm-kusto.Databases.listPrincipals_2'
+      - '@azure/arm-kusto.Databases.listPrincipals_1'
+      - '@azure/arm-kusto.Databases.removePrincipals'
+      - '@azure/arm-kusto.Databases.removePrincipals_2'
+      - '@azure/arm-kusto.Databases.removePrincipals_1'
+      - '@azure/arm-kusto.Databases.update'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="9656b-101">表示数据库的类。</span><span class="sxs-lookup"><span data-stu-id="9656b-101">Class representing a Databases.</span></span>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.addPrincipals'
+    name: 'addPrincipals(string, string, string, DatabasePrincipalListRequest, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-102">添加数据库主体权限。</span><span class="sxs-lookup"><span data-stu-id="9656b-102">Add Database principals permissions.</span></span>
+    syntax:
+      content: 'function addPrincipals(resourceGroupName: string, clusterName: string, databaseName: string, databasePrincipalsToAdd: DatabasePrincipalListRequest, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-103">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-103">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-104">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-104">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-105">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-105">The name of the database in the Kusto cluster.</span></span>
+        - id: databasePrincipalsToAdd
+          type:
+            - '@azure/arm-kusto.DatabasePrincipalListRequest'
+          description: <span data-ttu-id="9656b-106">若要添加的数据库主体的列表。</span><span class="sxs-lookup"><span data-stu-id="9656b-106">List of database principals to add.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesAddPrincipalsResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.addPrincipals_2'
+    name: 'addPrincipals(string, string, string, DatabasePrincipalListRequest, RequestOptionsBase, ServiceCallback<DatabasePrincipalListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addPrincipals(resourceGroupName: string, clusterName: string, databaseName: string, databasePrincipalsToAdd: DatabasePrincipalListRequest, options: RequestOptionsBase, callback: ServiceCallback<DatabasePrincipalListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-107">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-107">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-108">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-108">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-109">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-109">The name of the database in the Kusto cluster.</span></span>
+        - id: databasePrincipalsToAdd
+          type:
+            - '@azure/arm-kusto.DatabasePrincipalListRequest'
+          description: <span data-ttu-id="9656b-110">若要添加的数据库主体的列表。</span><span class="sxs-lookup"><span data-stu-id="9656b-110">List of database principals to add.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9656b-111">可选参数</span><span class="sxs-lookup"><span data-stu-id="9656b-111">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.DatabasePrincipalListResult>
+          description: |
+            <span data-ttu-id="9656b-112">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-112">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesAddPrincipalsResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.addPrincipals_1'
+    name: 'addPrincipals(string, string, string, DatabasePrincipalListRequest, ServiceCallback<DatabasePrincipalListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addPrincipals(resourceGroupName: string, clusterName: string, databaseName: string, databasePrincipalsToAdd: DatabasePrincipalListRequest, callback: ServiceCallback<DatabasePrincipalListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-113">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-113">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-114">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-114">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-115">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-115">The name of the database in the Kusto cluster.</span></span>
+        - id: databasePrincipalsToAdd
+          type:
+            - '@azure/arm-kusto.DatabasePrincipalListRequest'
+          description: <span data-ttu-id="9656b-116">若要添加的数据库主体的列表。</span><span class="sxs-lookup"><span data-stu-id="9656b-116">List of database principals to add.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.DatabasePrincipalListResult>
+          description: |
+            <span data-ttu-id="9656b-117">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-117">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesAddPrincipalsResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, Database, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-118">创建或更新数据库。</span><span class="sxs-lookup"><span data-stu-id="9656b-118">Creates or updates a database.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, clusterName: string, databaseName: string, parameters: Database, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-119">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-119">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-120">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-120">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-121">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-121">The name of the database in the Kusto cluster.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-kusto.Database'
+          description: <span data-ttu-id="9656b-122">提供给 CreateOrUpdate 操作数据库参数。</span><span class="sxs-lookup"><span data-stu-id="9656b-122">The database parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-123">删除具有给定名称的数据库。</span><span class="sxs-lookup"><span data-stu-id="9656b-123">Deletes the database with the given name.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, clusterName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-124">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-124">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-125">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-125">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-126">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-126">The name of the database in the Kusto cluster.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.beginUpdate'
+    name: 'beginUpdate(string, string, string, DatabaseUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-127">更新数据库。</span><span class="sxs-lookup"><span data-stu-id="9656b-127">Updates a database.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, clusterName: string, databaseName: string, parameters: DatabaseUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-128">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-128">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-129">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-129">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-130">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-130">The name of the database in the Kusto cluster.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-kusto.DatabaseUpdate'
+          description: <span data-ttu-id="9656b-131">为更新操作提供的数据库参数。</span><span class="sxs-lookup"><span data-stu-id="9656b-131">The database parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.checkNameAvailability'
+    name: 'checkNameAvailability(string, string, DatabaseCheckNameRequest, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-132">检查数据库名称有效，且不是使用。</span><span class="sxs-lookup"><span data-stu-id="9656b-132">Checks that the database name is valid and is not already in use.</span></span>
+    syntax:
+      content: 'function checkNameAvailability(resourceGroupName: string, clusterName: string, databaseName: DatabaseCheckNameRequest, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-133">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-133">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-134">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-134">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - '@azure/arm-kusto.DatabaseCheckNameRequest'
+          description: <span data-ttu-id="9656b-135">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-135">The name of the database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesCheckNameAvailabilityResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.checkNameAvailability_2'
+    name: 'checkNameAvailability(string, string, DatabaseCheckNameRequest, RequestOptionsBase, ServiceCallback<CheckNameResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(resourceGroupName: string, clusterName: string, databaseName: DatabaseCheckNameRequest, options: RequestOptionsBase, callback: ServiceCallback<CheckNameResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-136">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-136">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-137">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-137">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - '@azure/arm-kusto.DatabaseCheckNameRequest'
+          description: <span data-ttu-id="9656b-138">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-138">The name of the database.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9656b-139">可选参数</span><span class="sxs-lookup"><span data-stu-id="9656b-139">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.CheckNameResult>
+          description: |
+            <span data-ttu-id="9656b-140">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-140">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesCheckNameAvailabilityResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.checkNameAvailability_1'
+    name: 'checkNameAvailability(string, string, DatabaseCheckNameRequest, ServiceCallback<CheckNameResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(resourceGroupName: string, clusterName: string, databaseName: DatabaseCheckNameRequest, callback: ServiceCallback<CheckNameResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-141">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-141">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-142">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-142">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - '@azure/arm-kusto.DatabaseCheckNameRequest'
+          description: <span data-ttu-id="9656b-143">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-143">The name of the database.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.CheckNameResult>
+          description: |
+            <span data-ttu-id="9656b-144">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesCheckNameAvailabilityResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, Database, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-145">创建或更新数据库。</span><span class="sxs-lookup"><span data-stu-id="9656b-145">Creates or updates a database.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, clusterName: string, databaseName: string, parameters: Database, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-146">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-146">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-147">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-147">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-148">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-148">The name of the database in the Kusto cluster.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-kusto.Database'
+          description: <span data-ttu-id="9656b-149">提供给 CreateOrUpdate 操作数据库参数。</span><span class="sxs-lookup"><span data-stu-id="9656b-149">The database parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesCreateOrUpdateResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.constructor'
+    name: Databases(KustoManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-150">创建数据库。</span><span class="sxs-lookup"><span data-stu-id="9656b-150">Create a Databases.</span></span>
+    syntax:
+      content: 'new Databases(client: KustoManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-kusto.KustoManagementClientContext'
+          description: |
+            <span data-ttu-id="9656b-151">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="9656b-151">Reference to the service client.</span></span>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-152">删除具有给定名称的数据库。</span><span class="sxs-lookup"><span data-stu-id="9656b-152">Deletes the database with the given name.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, clusterName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-153">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-153">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-154">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-154">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-155">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-155">The name of the database in the Kusto cluster.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-156">返回数据库。</span><span class="sxs-lookup"><span data-stu-id="9656b-156">Returns a database.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, clusterName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-157">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-157">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-158">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-158">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-159">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-159">The name of the database in the Kusto cluster.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesGetResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Database>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, clusterName: string, databaseName: string, options: RequestOptionsBase, callback: ServiceCallback<Database>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-160">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-160">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-161">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-161">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-162">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-162">The name of the database in the Kusto cluster.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9656b-163">可选参数</span><span class="sxs-lookup"><span data-stu-id="9656b-163">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.Database>
+          description: |
+            <span data-ttu-id="9656b-164">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-164">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesGetResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.get_1'
+    name: 'get(string, string, string, ServiceCallback<Database>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, clusterName: string, databaseName: string, callback: ServiceCallback<Database>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-165">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-165">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-166">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-166">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-167">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-167">The name of the database in the Kusto cluster.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.Database>
+          description: |
+            <span data-ttu-id="9656b-168">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesGetResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.listByCluster'
+    name: 'listByCluster(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-169">返回给定 Kusto 群集数据库的列表。</span><span class="sxs-lookup"><span data-stu-id="9656b-169">Returns the list of databases of the given Kusto cluster.</span></span>
+    syntax:
+      content: 'function listByCluster(resourceGroupName: string, clusterName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-170">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-170">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-171">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-171">The name of the Kusto cluster.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesListByClusterResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.listByCluster_2'
+    name: 'listByCluster(string, string, RequestOptionsBase, ServiceCallback<DatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByCluster(resourceGroupName: string, clusterName: string, options: RequestOptionsBase, callback: ServiceCallback<DatabaseListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-172">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-172">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-173">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-173">The name of the Kusto cluster.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9656b-174">可选参数</span><span class="sxs-lookup"><span data-stu-id="9656b-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.DatabaseListResult>
+          description: |
+            <span data-ttu-id="9656b-175">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListByClusterResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.listByCluster_1'
+    name: 'listByCluster(string, string, ServiceCallback<DatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByCluster(resourceGroupName: string, clusterName: string, callback: ServiceCallback<DatabaseListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-176">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-176">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-177">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-177">The name of the Kusto cluster.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.DatabaseListResult>
+          description: |
+            <span data-ttu-id="9656b-178">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListByClusterResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.listPrincipals'
+    name: 'listPrincipals(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-179">返回给定的 Kusto 群集和数据库的数据库主体的列表。</span><span class="sxs-lookup"><span data-stu-id="9656b-179">Returns a list of database principals of the given Kusto cluster and database.</span></span>
+    syntax:
+      content: 'function listPrincipals(resourceGroupName: string, clusterName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-180">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-180">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-181">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-181">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-182">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-182">The name of the database in the Kusto cluster.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesListPrincipalsResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.listPrincipals_2'
+    name: 'listPrincipals(string, string, string, RequestOptionsBase, ServiceCallback<DatabasePrincipalListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPrincipals(resourceGroupName: string, clusterName: string, databaseName: string, options: RequestOptionsBase, callback: ServiceCallback<DatabasePrincipalListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-183">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-183">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-184">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-184">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-185">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-185">The name of the database in the Kusto cluster.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9656b-186">可选参数</span><span class="sxs-lookup"><span data-stu-id="9656b-186">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.DatabasePrincipalListResult>
+          description: |
+            <span data-ttu-id="9656b-187">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-187">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListPrincipalsResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.listPrincipals_1'
+    name: 'listPrincipals(string, string, string, ServiceCallback<DatabasePrincipalListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPrincipals(resourceGroupName: string, clusterName: string, databaseName: string, callback: ServiceCallback<DatabasePrincipalListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-188">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-188">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-189">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-189">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-190">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-190">The name of the database in the Kusto cluster.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.DatabasePrincipalListResult>
+          description: |
+            <span data-ttu-id="9656b-191">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-191">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListPrincipalsResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.removePrincipals'
+    name: 'removePrincipals(string, string, string, DatabasePrincipalListRequest, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-192">删除数据库主体的权限。</span><span class="sxs-lookup"><span data-stu-id="9656b-192">Remove Database principals permissions.</span></span>
+    syntax:
+      content: 'function removePrincipals(resourceGroupName: string, clusterName: string, databaseName: string, databasePrincipalsToRemove: DatabasePrincipalListRequest, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-193">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-193">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-194">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-194">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-195">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-195">The name of the database in the Kusto cluster.</span></span>
+        - id: databasePrincipalsToRemove
+          type:
+            - '@azure/arm-kusto.DatabasePrincipalListRequest'
+          description: <span data-ttu-id="9656b-196">若要删除的数据库主体的列表。</span><span class="sxs-lookup"><span data-stu-id="9656b-196">List of database principals to remove.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesRemovePrincipalsResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.removePrincipals_2'
+    name: 'removePrincipals(string, string, string, DatabasePrincipalListRequest, RequestOptionsBase, ServiceCallback<DatabasePrincipalListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removePrincipals(resourceGroupName: string, clusterName: string, databaseName: string, databasePrincipalsToRemove: DatabasePrincipalListRequest, options: RequestOptionsBase, callback: ServiceCallback<DatabasePrincipalListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-197">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-197">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-198">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-198">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-199">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-199">The name of the database in the Kusto cluster.</span></span>
+        - id: databasePrincipalsToRemove
+          type:
+            - '@azure/arm-kusto.DatabasePrincipalListRequest'
+          description: <span data-ttu-id="9656b-200">若要删除的数据库主体的列表。</span><span class="sxs-lookup"><span data-stu-id="9656b-200">List of database principals to remove.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9656b-201">可选参数</span><span class="sxs-lookup"><span data-stu-id="9656b-201">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.DatabasePrincipalListResult>
+          description: |
+            <span data-ttu-id="9656b-202">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-202">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesRemovePrincipalsResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.removePrincipals_1'
+    name: 'removePrincipals(string, string, string, DatabasePrincipalListRequest, ServiceCallback<DatabasePrincipalListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removePrincipals(resourceGroupName: string, clusterName: string, databaseName: string, databasePrincipalsToRemove: DatabasePrincipalListRequest, callback: ServiceCallback<DatabasePrincipalListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-203">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-203">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-204">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-204">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-205">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-205">The name of the database in the Kusto cluster.</span></span>
+        - id: databasePrincipalsToRemove
+          type:
+            - '@azure/arm-kusto.DatabasePrincipalListRequest'
+          description: <span data-ttu-id="9656b-206">若要删除的数据库主体的列表。</span><span class="sxs-lookup"><span data-stu-id="9656b-206">List of database principals to remove.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-kusto.DatabasePrincipalListResult>
+          description: |
+            <span data-ttu-id="9656b-207">回调</span><span class="sxs-lookup"><span data-stu-id="9656b-207">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesRemovePrincipalsResponse>
+    package: '@azure/arm-kusto'
+  - uid: '@azure/arm-kusto.Databases.update'
+    name: 'update(string, string, string, DatabaseUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9656b-208">更新数据库。</span><span class="sxs-lookup"><span data-stu-id="9656b-208">Updates a database.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, clusterName: string, databaseName: string, parameters: DatabaseUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-209">包含 Kusto 群集的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-209">The name of the resource group containing the Kusto cluster.</span></span>
+        - id: clusterName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-210">Kusto 群集的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-210">The name of the Kusto cluster.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="9656b-211">Kusto 群集中的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="9656b-211">The name of the database in the Kusto cluster.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-kusto.DatabaseUpdate'
+          description: <span data-ttu-id="9656b-212">为更新操作提供的数据库参数。</span><span class="sxs-lookup"><span data-stu-id="9656b-212">The database parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesUpdateResponse>
+    package: '@azure/arm-kusto'
+references:
+  - uid: '@azure/arm-kusto.KustoManagementClientContext'
+    name: KustoManagementClientContext
+    spec.typeScript:
+      - name: KustoManagementClientContext
+        fullName: KustoManagementClientContext
+        uid: '@azure/arm-kusto.KustoManagementClientContext'
+  - uid: '@azure/arm-kusto.DatabasePrincipalListRequest'
+    name: DatabasePrincipalListRequest
+    spec.typeScript:
+      - name: DatabasePrincipalListRequest
+        fullName: DatabasePrincipalListRequest
+        uid: '@azure/arm-kusto.DatabasePrincipalListRequest'
+  - uid: ServiceCallback<@azure/arm-kusto.DatabasePrincipalListResult>
+    name: DatabasePrincipalListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DatabasePrincipalListResult
+        fullName: DatabasePrincipalListResult
+        uid: '@azure/arm-kusto.DatabasePrincipalListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-kusto.Database'
+    name: Database
+    spec.typeScript:
+      - name: Database
+        fullName: Database
+        uid: '@azure/arm-kusto.Database'
+  - uid: '@azure/arm-kusto.DatabaseUpdate'
+    name: DatabaseUpdate
+    spec.typeScript:
+      - name: DatabaseUpdate
+        fullName: DatabaseUpdate
+        uid: '@azure/arm-kusto.DatabaseUpdate'
+  - uid: '@azure/arm-kusto.DatabaseCheckNameRequest'
+    name: DatabaseCheckNameRequest
+    spec.typeScript:
+      - name: DatabaseCheckNameRequest
+        fullName: DatabaseCheckNameRequest
+        uid: '@azure/arm-kusto.DatabaseCheckNameRequest'
+  - uid: ServiceCallback<@azure/arm-kusto.CheckNameResult>
+    name: CheckNameResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CheckNameResult
+        fullName: CheckNameResult
+        uid: '@azure/arm-kusto.CheckNameResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-kusto.Database>
+    name: Database>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Database
+        fullName: Database
+        uid: '@azure/arm-kusto.Database'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-kusto.DatabaseListResult>
+    name: DatabaseListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DatabaseListResult
+        fullName: DatabaseListResult
+        uid: '@azure/arm-kusto.DatabaseListResult'
+      - name: '>'
+        fullName: '>'

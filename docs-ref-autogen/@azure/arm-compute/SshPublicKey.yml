@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.SshPublicKey'
+    name: SshPublicKey
+    fullName: SshPublicKey
+    children:
+      - '@azure/arm-compute.SshPublicKey.keyData'
+      - '@azure/arm-compute.SshPublicKey.path'
+    langs:
+      - typeScript
+    type: interface
+    summary: 包含有关 SSH 证书公用密钥和路径的公钥放置在 Linux VM 上的信息。
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SshPublicKey.keyData'
+    name: keyData
+    fullName: keyData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'SSH 公钥证书用于进行身份验证通过 VM 与 ssh 配合使用。 密钥必须是至少 2048年位和 ssh rsa 格式。 <br><br> 有关创建 ssh 密钥，请参阅[在 Azure 中 Linux Vm 的 Linux 和 Mac 上创建 SSH 密钥](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)。'
+    optional: true
+    syntax:
+      content: 'keyData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SshPublicKey.path'
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定完整路径上创建 ssh 公钥的存储位置的 VM。 如果文件已存在，则指定的键被追加到文件。 示例： /home/user/.ssh/authorized_keys
+    optional: true
+    syntax:
+      content: 'path?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

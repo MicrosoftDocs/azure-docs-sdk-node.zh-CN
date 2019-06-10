@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile'
+    name: ContainerServiceNetworkProfile
+    fullName: ContainerServiceNetworkProfile
+    children:
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.dnsServiceIP'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.dockerBridgeCidr'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPlugin'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPolicy'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.podCidr'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.serviceCidr'
+    langs:
+      - typeScript
+    type: interface
+    summary: 网络配置的配置文件。
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.dnsServiceIP'
+    name: dnsServiceIP
+    fullName: dnsServiceIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 分配给 Kubernetes DNS 服务的 IP 地址。 它必须是指定 serviceCidr 中的 Kubernetes 服务地址范围之内。 默认值：'10.0.0.10'.
+    optional: true
+    syntax:
+      content: 'dnsServiceIP?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.dockerBridgeCidr'
+    name: dockerBridgeCidr
+    fullName: dockerBridgeCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 分配给 Docker 桥接网络 CIDR 标记 IP 范围。 它不得与任何子网 IP 范围或 Kubernetes 服务地址范围重叠。 默认值：'172.17.0.1/16'.
+    optional: true
+    syntax:
+      content: 'dockerBridgeCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPlugin'
+    name: networkPlugin
+    fullName: networkPlugin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '用于生成 Kubernetes 网络的网络插件。 可能的值包括: azure，kubenet。 默认值: kubenet。'
+    optional: true
+    syntax:
+      content: 'networkPlugin?: NetworkPlugin'
+      return:
+        type:
+          - '@azure/arm-containerservice.NetworkPlugin'
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPolicy'
+    name: networkPolicy
+    fullName: networkPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '用于生成 Kubernetes 网络的网络策略。 可能的值包括: calico，azure'
+    optional: true
+    syntax:
+      content: 'networkPolicy?: NetworkPolicy'
+      return:
+        type:
+          - '@azure/arm-containerservice.NetworkPolicy'
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.podCidr'
+    name: podCidr
+    fullName: podCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: CIDR 表示法 IP 范围，使用 kubenet 时从其中分配 Pod IP。 默认值：'10.244.0.0/16'.
+    optional: true
+    syntax:
+      content: 'podCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.serviceCidr'
+    name: serviceCidr
+    fullName: serviceCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: CIDR 表示法 IP 范围，从其中分配服务群集 IP。 此范围不得与任何子网 IP 范围重叠。 默认值：'10.0.0.0/16'.
+    optional: true
+    syntax:
+      content: 'serviceCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+references:
+  - uid: '@azure/arm-containerservice.NetworkPlugin'
+    name: NetworkPlugin
+    spec.typeScript:
+      - name: NetworkPlugin
+        fullName: NetworkPlugin
+        uid: '@azure/arm-containerservice.NetworkPlugin'
+  - uid: '@azure/arm-containerservice.NetworkPolicy'
+    name: NetworkPolicy
+    spec.typeScript:
+      - name: NetworkPolicy
+        fullName: NetworkPolicy
+        uid: '@azure/arm-containerservice.NetworkPolicy'

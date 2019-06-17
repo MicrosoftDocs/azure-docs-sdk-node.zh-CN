@@ -1,0 +1,537 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.DatabaseUpdate'
+    name: DatabaseUpdate
+    fullName: DatabaseUpdate
+    children:
+      - '@azure/arm-sql.DatabaseUpdate.catalogCollation'
+      - '@azure/arm-sql.DatabaseUpdate.collation'
+      - '@azure/arm-sql.DatabaseUpdate.createMode'
+      - '@azure/arm-sql.DatabaseUpdate.creationDate'
+      - '@azure/arm-sql.DatabaseUpdate.currentServiceObjectiveName'
+      - '@azure/arm-sql.DatabaseUpdate.currentSku'
+      - '@azure/arm-sql.DatabaseUpdate.databaseId'
+      - '@azure/arm-sql.DatabaseUpdate.defaultSecondaryLocation'
+      - '@azure/arm-sql.DatabaseUpdate.earliestRestoreDate'
+      - '@azure/arm-sql.DatabaseUpdate.elasticPoolId'
+      - '@azure/arm-sql.DatabaseUpdate.failoverGroupId'
+      - '@azure/arm-sql.DatabaseUpdate.licenseType'
+      - '@azure/arm-sql.DatabaseUpdate.longTermRetentionBackupResourceId'
+      - '@azure/arm-sql.DatabaseUpdate.maxLogSizeBytes'
+      - '@azure/arm-sql.DatabaseUpdate.maxSizeBytes'
+      - '@azure/arm-sql.DatabaseUpdate.readScale'
+      - '@azure/arm-sql.DatabaseUpdate.recoverableDatabaseId'
+      - '@azure/arm-sql.DatabaseUpdate.recoveryServicesRecoveryPointId'
+      - '@azure/arm-sql.DatabaseUpdate.requestedServiceObjectiveName'
+      - '@azure/arm-sql.DatabaseUpdate.restorableDroppedDatabaseId'
+      - '@azure/arm-sql.DatabaseUpdate.restorePointInTime'
+      - '@azure/arm-sql.DatabaseUpdate.sampleName'
+      - '@azure/arm-sql.DatabaseUpdate.sku'
+      - '@azure/arm-sql.DatabaseUpdate.sourceDatabaseDeletionDate'
+      - '@azure/arm-sql.DatabaseUpdate.sourceDatabaseId'
+      - '@azure/arm-sql.DatabaseUpdate.status'
+      - '@azure/arm-sql.DatabaseUpdate.tags'
+      - '@azure/arm-sql.DatabaseUpdate.zoneRedundant'
+    langs:
+      - typeScript
+    type: interface
+    summary: 数据库资源。
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.catalogCollation'
+    name: catalogCollation
+    fullName: catalogCollation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '元数据目录的排序规则。 可能的值包括：''DATABASE_DEFAULT'', ''SQL_Latin1_General_CP1_CI_AS'''
+    optional: true
+    syntax:
+      content: 'catalogCollation?: CatalogCollationType'
+      return:
+        type:
+          - '@azure/arm-sql.CatalogCollationType'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.collation'
+    name: collation
+    fullName: collation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 数据库的排序规则。
+    optional: true
+    syntax:
+      content: 'collation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      指定创建数据库的模式。
+      默认值： 常规数据库创建。
+
+      复制： 为现有数据库的副本创建数据库。 sourceDatabaseId 必须指定为源数据库的资源 ID。
+
+      辅助： 为现有数据库的辅助副本创建数据库。 sourceDatabaseId 必须指定为现有的主数据库的资源 ID。
+
+      PointInTimeRestore:通过还原时间点备份的现有数据库创建数据库。 sourceDatabaseId 必须指定为现有数据库的资源 ID，必须指定 restorePointInTime。
+
+      恢复：创建一个数据库的异地复制的备份还原。 sourceDatabaseId 必须指定为要还原的可恢复的数据库资源 ID。
+
+      还原：通过还原已删除的数据库备份创建的数据库。 必须指定 sourceDatabaseId。 如果 sourceDatabaseId 是数据库的原始资源 ID，则必须指定 sourceDatabaseDeletionDate。 否则为 sourceDatabaseId 必须是可还原的已删除的数据库资源 ID 并且 sourceDatabaseDeletionDate 将被忽略。
+      此外可以指定 restorePointInTime 从早的时间点还原的时间。
+
+      RestoreLongTermRetentionBackup:通过从长期保留保管库还原创建的数据库。 recoveryServicesRecoveryPointResourceId 必须指定为恢复点的资源 id。
+
+      数据仓库版本不支持复制、 辅助数据库和 RestoreLongTermRetentionBackup。 可能的值包括：'Default', 'Copy', 'Secondary', 'PointInTimeRestore', 'Restore', 'Recovery', 'RestoreExternalBackup', 'RestoreExternalBackupSecondary', 'RestoreLongTermRetentionBackup', 'OnlineSecondary'
+    optional: true
+    syntax:
+      content: 'createMode?: CreateMode'
+      return:
+        type:
+          - '@azure/arm-sql.CreateMode'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.creationDate'
+    name: creationDate
+    fullName: creationDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      数据库 （ISO8601 格式） 的创建日期。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'creationDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.currentServiceObjectiveName'
+    name: currentServiceObjectiveName
+    fullName: currentServiceObjectiveName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      当前服务级别目标名称的数据库。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'currentServiceObjectiveName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.currentSku'
+    name: currentSku
+    fullName: currentSku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      名称和 SKU 层。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'currentSku?: Sku'
+      return:
+        type:
+          - '@azure/arm-sql.Sku'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.databaseId'
+    name: databaseId
+    fullName: databaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      数据库的 ID。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'databaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.defaultSecondaryLocation'
+    name: defaultSecondaryLocation
+    fullName: defaultSecondaryLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      此数据库默认次要区域。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'defaultSecondaryLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.earliestRestoreDate'
+    name: earliestRestoreDate
+    fullName: earliestRestoreDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      还原此记录的最早开始日期和时间是可用于此数据库 （ISO8601 格式）。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'earliestRestoreDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.elasticPoolId'
+    name: elasticPoolId
+    fullName: elasticPoolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 包含此数据库的弹性池资源标识符。
+    optional: true
+    syntax:
+      content: 'elasticPoolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.failoverGroupId'
+    name: failoverGroupId
+    fullName: failoverGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      此数据库属于的故障转移组资源标识符。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'failoverGroupId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.licenseType'
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要为此数据库应用的许可证类型。 可能的值包括：LicenseIncluded'，'BasePrice
+    optional: true
+    syntax:
+      content: 'licenseType?: DatabaseLicenseType'
+      return:
+        type:
+          - '@azure/arm-sql.DatabaseLicenseType'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.longTermRetentionBackupResourceId'
+    name: longTermRetentionBackupResourceId
+    fullName: longTermRetentionBackupResourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 长期保留备份与关联的资源标识符创建此数据库的操作。
+    optional: true
+    syntax:
+      content: 'longTermRetentionBackupResourceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.maxLogSizeBytes'
+    name: maxLogSizeBytes
+    fullName: maxLogSizeBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      此数据库的最大日志大小。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'maxLogSizeBytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.maxSizeBytes'
+    name: maxSizeBytes
+    fullName: maxSizeBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 以字节为单位的数据库的最大大小。
+    optional: true
+    syntax:
+      content: 'maxSizeBytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.readScale'
+    name: readScale
+    fullName: readScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 只读路由的状态。 如果启用，已将设置为只读，其连接字符串中的应用程序意向的连接可能会路由到同一区域中的只读次要副本。 可能的值包括：' Enabled'，'Disabled'
+    optional: true
+    syntax:
+      content: 'readScale?: DatabaseReadScale'
+      return:
+        type:
+          - '@azure/arm-sql.DatabaseReadScale'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.recoverableDatabaseId'
+    name: recoverableDatabaseId
+    fullName: recoverableDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 与关联的可恢复数据库的资源标识符创建此数据库的操作。
+    optional: true
+    syntax:
+      content: 'recoverableDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.recoveryServicesRecoveryPointId'
+    name: recoveryServicesRecoveryPointId
+    fullName: recoveryServicesRecoveryPointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 与关联的恢复点的资源标识符创建此数据库的操作。
+    optional: true
+    syntax:
+      content: 'recoveryServicesRecoveryPointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.requestedServiceObjectiveName'
+    name: requestedServiceObjectiveName
+    fullName: requestedServiceObjectiveName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      请求的服务级别目标的数据库的名称。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'requestedServiceObjectiveName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.restorableDroppedDatabaseId'
+    name: restorableDroppedDatabaseId
+    fullName: restorableDroppedDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可还原的已删除的数据库与关联的资源标识符创建此数据库的操作。
+    optional: true
+    syntax:
+      content: 'restorableDroppedDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.restorePointInTime'
+    name: restorePointInTime
+    fullName: restorePointInTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 若要创建新数据库，将还原源数据库的时间 （ISO8601 格式） 指定的点。
+    optional: true
+    syntax:
+      content: 'restorePointInTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.sampleName'
+    name: sampleName
+    fullName: sampleName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要创建此数据库时应用的示例架构的名称。 可能的值包括：AdventureWorksLT，WideWorldImportersStd'，'WideWorldImportersFull
+    optional: true
+    syntax:
+      content: 'sampleName?: SampleName'
+      return:
+        type:
+          - '@azure/arm-sql.SampleName'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 名称和 SKU 层。
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-sql.Sku'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.sourceDatabaseDeletionDate'
+    name: sourceDatabaseDeletionDate
+    fullName: sourceDatabaseDeletionDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定已删除的数据库的时间。
+    optional: true
+    syntax:
+      content: 'sourceDatabaseDeletionDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.sourceDatabaseId'
+    name: sourceDatabaseId
+    fullName: sourceDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 与关联的源数据库的资源标识符创建此数据库的操作。
+    optional: true
+    syntax:
+      content: 'sourceDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 数据库的状态。 可能的值包括：联机，还原，RecoveryPending，恢复，可疑，脱机、 备用、 关闭、 EmergencyMode、 自动关闭，复制、 创建、 不可访问，OfflineSecondary，暂停、 暂停，恢复、 缩放**注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'status?: DatabaseStatus'
+      return:
+        type:
+          - '@azure/arm-sql.DatabaseStatus'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 资源标记。
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.zoneRedundant'
+    name: zoneRedundant
+    fullName: zoneRedundant
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此数据库是否是区域冗余的这意味着此数据库的副本将分布在多个可用性区域中。
+    optional: true
+    syntax:
+      content: 'zoneRedundant?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.CatalogCollationType'
+    name: CatalogCollationType
+    spec.typeScript:
+      - name: CatalogCollationType
+        fullName: CatalogCollationType
+        uid: '@azure/arm-sql.CatalogCollationType'
+  - uid: '@azure/arm-sql.CreateMode'
+    name: CreateMode
+    spec.typeScript:
+      - name: CreateMode
+        fullName: CreateMode
+        uid: '@azure/arm-sql.CreateMode'
+  - uid: '@azure/arm-sql.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-sql.Sku'
+  - uid: '@azure/arm-sql.DatabaseLicenseType'
+    name: DatabaseLicenseType
+    spec.typeScript:
+      - name: DatabaseLicenseType
+        fullName: DatabaseLicenseType
+        uid: '@azure/arm-sql.DatabaseLicenseType'
+  - uid: '@azure/arm-sql.DatabaseReadScale'
+    name: DatabaseReadScale
+    spec.typeScript:
+      - name: DatabaseReadScale
+        fullName: DatabaseReadScale
+        uid: '@azure/arm-sql.DatabaseReadScale'
+  - uid: '@azure/arm-sql.SampleName'
+    name: SampleName
+    spec.typeScript:
+      - name: SampleName
+        fullName: SampleName
+        uid: '@azure/arm-sql.SampleName'
+  - uid: '@azure/arm-sql.DatabaseStatus'
+    name: DatabaseStatus
+    spec.typeScript:
+      - name: DatabaseStatus
+        fullName: DatabaseStatus
+        uid: '@azure/arm-sql.DatabaseStatus'

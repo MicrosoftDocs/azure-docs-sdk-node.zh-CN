@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeUpdateUserParameter'
+    name: NodeUpdateUserParameter
+    fullName: NodeUpdateUserParameter
+    children:
+      - '@azure/batch.NodeUpdateUserParameter.expiryTime'
+      - '@azure/batch.NodeUpdateUserParameter.password'
+      - '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 NodeUpdateUserParameter 的接口。
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.expiryTime'
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 该帐户应过期的时间。 如果省略，默认值为从当前时间的 1 天。 对于 Linux 计算节点，expiryTime 具有最多一天的精度。
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.password'
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 帐户的密码。 密码是必需的 Windows 节点 （即使用 cloudServiceConfiguration，创建或使用 virtualMachineConfiguration 使用 Windows 映像引用创建的）。 对于 Linux 计算节点，可以选择 sshPublicKey 属性以及指定密码。 如果省略，则会删除任何现有的密码。
+    optional: true
+    syntax:
+      content: 'password?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可用于远程登录到计算节点的 SSH 公共密钥。 应与编码 OpenSSH 兼容公钥并应进行 base64 编码。 只能为 Linux 节点，可以指定此属性。 如果 Windows 节点指定此选项，然后 Batch 服务会拒绝该请求;如果你正在直接调用 REST API，HTTP 状态代码为 400 （错误请求）。 如果省略，则会删除任何现有的 SSH 公钥。
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

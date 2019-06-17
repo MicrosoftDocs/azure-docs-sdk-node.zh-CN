@@ -1,0 +1,245 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-search.AdminKeys'
+    name: AdminKeys
+    fullName: AdminKeys
+    children:
+      - '@azure/arm-search.AdminKeys.constructor'
+      - '@azure/arm-search.AdminKeys.get_2'
+      - '@azure/arm-search.AdminKeys.get'
+      - '@azure/arm-search.AdminKeys.get_1'
+      - '@azure/arm-search.AdminKeys.regenerate_2'
+      - '@azure/arm-search.AdminKeys.regenerate'
+      - '@azure/arm-search.AdminKeys.regenerate_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示 AdminKeys 类。
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.constructor'
+    name: AdminKeys(SearchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建 AdminKeys。
+    syntax:
+      content: 'new AdminKeys(client: SearchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-search.SearchManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.get_2'
+    name: 'get(string, string, AdminKeysGetOptionalParams, ServiceCallback<AdminKeyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, options: AdminKeysGetOptionalParams, callback: ServiceCallback<AdminKeyResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: searchServiceName
+          type:
+            - string
+          description: 与指定的资源组关联的 Azure 搜索服务的名称。
+        - id: options
+          type:
+            - '@azure/arm-search.AdminKeysGetOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.AdminKeyResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.AdminKeysGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.get'
+    name: 'get(string, string, Models.AdminKeysGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取主要和辅助管理员指定的 Azure 搜索服务的 API 密钥。
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, options?: Models.AdminKeysGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: searchServiceName
+          type:
+            - string
+          description: 与指定的资源组关联的 Azure 搜索服务的名称。
+        - id: options
+          type:
+            - Models.AdminKeysGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AdminKeysGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.get_1'
+    name: 'get(string, string, ServiceCallback<AdminKeyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, callback: ServiceCallback<AdminKeyResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: searchServiceName
+          type:
+            - string
+          description: 与指定的资源组关联的 Azure 搜索服务的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.AdminKeyResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.AdminKeysGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.regenerate_2'
+    name: 'regenerate(string, string, Models.AdminKeyKind, AdminKeysRegenerateOptionalParams, ServiceCallback<AdminKeyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerate(resourceGroupName: string, searchServiceName: string, keyKind: Models.AdminKeyKind, options: AdminKeysRegenerateOptionalParams, callback: ServiceCallback<AdminKeyResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: searchServiceName
+          type:
+            - string
+          description: 与指定的资源组关联的 Azure 搜索服务的名称。
+        - id: keyKind
+          type:
+            - Models.AdminKeyKind
+          description: '指定要重新生成哪个密钥。 有效值包括主要和 secondary。 可能的值包括: ''primary''、 辅助'
+        - id: options
+          type:
+            - '@azure/arm-search.AdminKeysRegenerateOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.AdminKeyResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.AdminKeysRegenerateResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.regenerate'
+    name: 'regenerate(string, string, Models.AdminKeyKind, Models.AdminKeysRegenerateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 重新生成主密钥或辅助管理 API 密钥。 你仅可以一次重新生成一个密钥。
+    syntax:
+      content: 'function regenerate(resourceGroupName: string, searchServiceName: string, keyKind: Models.AdminKeyKind, options?: Models.AdminKeysRegenerateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: searchServiceName
+          type:
+            - string
+          description: 与指定的资源组关联的 Azure 搜索服务的名称。
+        - id: keyKind
+          type:
+            - Models.AdminKeyKind
+          description: '指定要重新生成哪个密钥。 有效值包括主要和 secondary。 可能的值包括: ''primary''、 辅助'
+        - id: options
+          type:
+            - Models.AdminKeysRegenerateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AdminKeysRegenerateResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.AdminKeys.regenerate_1'
+    name: 'regenerate(string, string, Models.AdminKeyKind, ServiceCallback<AdminKeyResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerate(resourceGroupName: string, searchServiceName: string, keyKind: Models.AdminKeyKind, callback: ServiceCallback<AdminKeyResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 当前订阅中的资源组的名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: searchServiceName
+          type:
+            - string
+          description: 与指定的资源组关联的 Azure 搜索服务的名称。
+        - id: keyKind
+          type:
+            - Models.AdminKeyKind
+          description: '指定要重新生成哪个密钥。 有效值包括主要和 secondary。 可能的值包括: ''primary''、 辅助'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.AdminKeyResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.AdminKeysRegenerateResponse>
+    package: '@azure/arm-search'
+references:
+  - uid: '@azure/arm-search.SearchManagementClientContext'
+    name: SearchManagementClientContext
+    spec.typeScript:
+      - name: SearchManagementClientContext
+        fullName: SearchManagementClientContext
+        uid: '@azure/arm-search.SearchManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-search.AdminKeyResult>
+    name: AdminKeyResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AdminKeyResult
+        fullName: AdminKeyResult
+        uid: '@azure/arm-search.AdminKeyResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-search.AdminKeysGetOptionalParams'
+    name: AdminKeysGetOptionalParams
+    spec.typeScript:
+      - name: AdminKeysGetOptionalParams
+        fullName: AdminKeysGetOptionalParams
+        uid: '@azure/arm-search.AdminKeysGetOptionalParams'
+  - uid: '@azure/arm-search.AdminKeysRegenerateOptionalParams'
+    name: AdminKeysRegenerateOptionalParams
+    spec.typeScript:
+      - name: AdminKeysRegenerateOptionalParams
+        fullName: AdminKeysRegenerateOptionalParams
+        uid: '@azure/arm-search.AdminKeysRegenerateOptionalParams'

@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.ScaleAction'
+    name: ScaleAction
+    fullName: ScaleAction
+    children:
+      - '@azure/arm-monitor.ScaleAction.cooldown'
+      - '@azure/arm-monitor.ScaleAction.direction'
+      - '@azure/arm-monitor.ScaleAction.type'
+      - '@azure/arm-monitor.ScaleAction.value'
+    langs:
+      - typeScript
+    type: interface
+    summary: 缩放操作的参数。
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.cooldown'
+    name: cooldown
+    fullName: cooldown
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 自上次缩放操作中，会发生此操作之前等待的时间量。 它必须是 1 周和介于 1 分钟之间采用 ISO 8601 格式。
+    syntax:
+      content: 'cooldown: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.direction'
+    name: direction
+    fullName: direction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 缩放方向。 是否缩放操作增加或减少实例数。 可能的值包括：None、 增加，降低
+    syntax:
+      content: 'direction: ScaleDirection'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleDirection'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '缩放规则触发时应发生的操作的类型。 可能的值包括：''ChangeCount'', ''PercentChangeCount'', ''ExactCount'''
+    syntax:
+      content: 'type: ScaleType'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleType'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.value'
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 缩放操作中涉及的实例数。 此值必须大于或等于 1。 默认值为 1。 默认值：'1'.
+    optional: true
+    syntax:
+      content: 'value?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.ScaleDirection'
+    name: ScaleDirection
+    spec.typeScript:
+      - name: ScaleDirection
+        fullName: ScaleDirection
+        uid: '@azure/arm-monitor.ScaleDirection'
+  - uid: '@azure/arm-monitor.ScaleType'
+    name: ScaleType
+    spec.typeScript:
+      - name: ScaleType
+        fullName: ScaleType
+        uid: '@azure/arm-monitor.ScaleType'

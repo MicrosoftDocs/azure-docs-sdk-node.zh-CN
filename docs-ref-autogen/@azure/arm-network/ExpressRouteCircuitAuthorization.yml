@@ -10,10 +10,11 @@ items:
       - '@azure/arm-network.ExpressRouteCircuitAuthorization.id'
       - '@azure/arm-network.ExpressRouteCircuitAuthorization.name'
       - '@azure/arm-network.ExpressRouteCircuitAuthorization.provisioningState'
+      - '@azure/arm-network.ExpressRouteCircuitAuthorization.type'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="4079a-101">ExpressRouteCircuit 资源中的授权。</span><span class="sxs-lookup"><span data-stu-id="4079a-101">Authorization in an ExpressRouteCircuit resource.</span></span>
+    summary: <span data-ttu-id="a9a9f-101">ExpressRouteCircuit 资源中的授权。</span><span class="sxs-lookup"><span data-stu-id="a9a9f-101">Authorization in an ExpressRouteCircuit resource.</span></span>
     extends:
       name: '@azure/arm-network.SubResource'
     package: '@azure/arm-network'
@@ -24,7 +25,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4079a-102">授权密钥。</span><span class="sxs-lookup"><span data-stu-id="4079a-102">The authorization key.</span></span>
+    summary: <span data-ttu-id="a9a9f-102">授权密钥。</span><span class="sxs-lookup"><span data-stu-id="a9a9f-102">The authorization key.</span></span>
     optional: true
     syntax:
       content: 'authorizationKey?: undefined | string'
@@ -39,7 +40,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="4079a-103">AuthorizationUseStatus.</span><span class="sxs-lookup"><span data-stu-id="4079a-103">AuthorizationUseStatus.</span></span> <span data-ttu-id="4079a-104">可能的值包括：可用和正在使用。</span><span class="sxs-lookup"><span data-stu-id="4079a-104">Possible values are: ''Available'' and ''InUse''.</span></span> <span data-ttu-id="4079a-105">可能的值包括：可用，正在使用</span><span class="sxs-lookup"><span data-stu-id="4079a-105">Possible values include: ''Available'', ''InUse''</span></span>'
+    summary: '<span data-ttu-id="a9a9f-103">授权使用状态。</span><span class="sxs-lookup"><span data-stu-id="a9a9f-103">The authorization use status.</span></span> <span data-ttu-id="a9a9f-104">可能的值包括：可用，正在使用</span><span class="sxs-lookup"><span data-stu-id="a9a9f-104">Possible values include: ''Available'', ''InUse''</span></span>'
     optional: true
     syntax:
       content: 'authorizationUseStatus?: AuthorizationUseStatus'
@@ -55,8 +56,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="4079a-106">一个唯一只读的字符串，每当更新资源更改。</span><span class="sxs-lookup"><span data-stu-id="4079a-106">A unique read-only string that changes whenever the resource is updated.</span></span>
-      <span data-ttu-id="4079a-107">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="4079a-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="a9a9f-105">一个唯一只读的字符串，每当更新资源更改。</span><span class="sxs-lookup"><span data-stu-id="a9a9f-105">A unique read-only string that changes whenever the resource is updated.</span></span>
+      <span data-ttu-id="a9a9f-106">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="a9a9f-106">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -71,7 +72,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4079a-108">资源 ID。</span><span class="sxs-lookup"><span data-stu-id="4079a-108">Resource ID.</span></span>
+    summary: <span data-ttu-id="a9a9f-107">资源 ID。</span><span class="sxs-lookup"><span data-stu-id="a9a9f-107">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -86,7 +87,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4079a-109">获取资源组中是唯一的资源的名称。</span><span class="sxs-lookup"><span data-stu-id="4079a-109">Gets name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="4079a-110">此名称可用于访问资源。</span><span class="sxs-lookup"><span data-stu-id="4079a-110">This name can be used to access the resource.</span></span>
+    summary: <span data-ttu-id="a9a9f-108">获取资源组中是唯一的资源的名称。</span><span class="sxs-lookup"><span data-stu-id="a9a9f-108">Gets name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="a9a9f-109">此名称可用于访问资源。</span><span class="sxs-lookup"><span data-stu-id="a9a9f-109">This name can be used to access the resource.</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -101,10 +102,27 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="4079a-111">获取公共 IP 资源的预配状态。</span><span class="sxs-lookup"><span data-stu-id="4079a-111">Gets the provisioning state of the public IP resource.</span></span> <span data-ttu-id="4079a-112">可能的值包括：更新、 删除和失败。</span><span class="sxs-lookup"><span data-stu-id="4079a-112">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
+    summary: '<span data-ttu-id="a9a9f-110">获取公共 IP 资源的预配状态。</span><span class="sxs-lookup"><span data-stu-id="a9a9f-110">Gets the provisioning state of the public IP resource.</span></span> <span data-ttu-id="a9a9f-111">可能的值包括：更新、 删除和失败。</span><span class="sxs-lookup"><span data-stu-id="a9a9f-111">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRouteCircuitAuthorization.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a9a9f-112">资源的类型。</span><span class="sxs-lookup"><span data-stu-id="a9a9f-112">Type of the resource.</span></span>
+      <span data-ttu-id="a9a9f-113">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="a9a9f-113">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
       return:
         type:
           - undefined | string

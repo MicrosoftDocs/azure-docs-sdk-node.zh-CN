@@ -1,0 +1,410 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ComputeNode'
+    name: ComputeNode
+    fullName: ComputeNode
+    children:
+      - '@azure/batch.ComputeNode.affinityId'
+      - '@azure/batch.ComputeNode.allocationTime'
+      - '@azure/batch.ComputeNode.certificateReferences'
+      - '@azure/batch.ComputeNode.endpointConfiguration'
+      - '@azure/batch.ComputeNode.errors'
+      - '@azure/batch.ComputeNode.id'
+      - '@azure/batch.ComputeNode.ipAddress'
+      - '@azure/batch.ComputeNode.isDedicated'
+      - '@azure/batch.ComputeNode.lastBootTime'
+      - '@azure/batch.ComputeNode.nodeAgentInfo'
+      - '@azure/batch.ComputeNode.recentTasks'
+      - '@azure/batch.ComputeNode.runningTasksCount'
+      - '@azure/batch.ComputeNode.schedulingState'
+      - '@azure/batch.ComputeNode.startTask'
+      - '@azure/batch.ComputeNode.startTaskInfo'
+      - '@azure/batch.ComputeNode.state'
+      - '@azure/batch.ComputeNode.stateTransitionTime'
+      - '@azure/batch.ComputeNode.totalTasksRun'
+      - '@azure/batch.ComputeNode.totalTasksSucceeded'
+      - '@azure/batch.ComputeNode.url'
+      - '@azure/batch.ComputeNode.vmSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ac72f-101">表示 ComputeNode 的接口。</span><span class="sxs-lookup"><span data-stu-id="ac72f-101">An interface representing ComputeNode.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.affinityId'
+    name: affinityId
+    fullName: affinityId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac72f-102">可以在此节点添加任务请求的任务计划时传递标识符。</span><span class="sxs-lookup"><span data-stu-id="ac72f-102">An identifier which can be passed when adding a task to request that the task be scheduled on this node.</span></span> <span data-ttu-id="ac72f-103">请注意，这只是软关联。</span><span class="sxs-lookup"><span data-stu-id="ac72f-103">Note that this is just a soft affinity.</span></span> <span data-ttu-id="ac72f-104">如果目标节点正忙或不可用时计划任务，然后将其他位置计划任务。</span><span class="sxs-lookup"><span data-stu-id="ac72f-104">If the target node is busy or unavailable at the time the task is scheduled, then the task will be scheduled elsewhere.</span></span>'
+    optional: true
+    syntax:
+      content: 'affinityId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.allocationTime'
+    name: allocationTime
+    fullName: allocationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac72f-105">此计算节点分配给池的时间。</span><span class="sxs-lookup"><span data-stu-id="ac72f-105">The time at which this compute node was allocated to the pool.</span></span> <span data-ttu-id="ac72f-106">这是节点的初始分配，并且不会更改一次设置的时间。</span><span class="sxs-lookup"><span data-stu-id="ac72f-106">This is the time when the node was initially allocated and doesn't change once set.</span></span> <span data-ttu-id="ac72f-107">不更新服务修复或被抢占节点时。</span><span class="sxs-lookup"><span data-stu-id="ac72f-107">It is not updated when the node is service healed or preempted.</span></span>
+    optional: true
+    syntax:
+      content: 'allocationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac72f-108">计算节点上安装的证书的列表。</span><span class="sxs-lookup"><span data-stu-id="ac72f-108">The list of certificates installed on the compute node.</span></span> <span data-ttu-id="ac72f-109">对于 Windows 计算节点，Batch 服务将安装到指定的证书存储区和位置的证书。</span><span class="sxs-lookup"><span data-stu-id="ac72f-109">For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location.</span></span> <span data-ttu-id="ac72f-110">对于 Linux 计算节点，这些证书将存储在任务工作目录和环境变量 AZ_BATCH_CERTIFICATES_DIR 提供给任务来查询此位置的一个目录中。</span><span class="sxs-lookup"><span data-stu-id="ac72f-110">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id="ac72f-111">对于具有可见性 remoteUser 的证书，证书目录中创建用户的主目录 (例如，/home/ {用户名} / 证书) 和证书放置在该目录中。</span><span class="sxs-lookup"><span data-stu-id="ac72f-111">For certificates with visibility of ''remoteUser'', a ''certs'' directory is created in the user''s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.endpointConfiguration'
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac72f-112">计算节点的终结点配置。</span><span class="sxs-lookup"><span data-stu-id="ac72f-112">The endpoint configuration for the compute node.</span></span>
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: ComputeNodeEndpointConfiguration'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeEndpointConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.errors'
+    name: errors
+    fullName: errors
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac72f-113">当前的计算节点遇到的错误的列表。</span><span class="sxs-lookup"><span data-stu-id="ac72f-113">The list of errors that are currently being encountered by the compute node.</span></span>
+    optional: true
+    syntax:
+      content: 'errors?: ComputeNodeError[]'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeError[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ac72f-114">计算节点的 ID。</span><span class="sxs-lookup"><span data-stu-id="ac72f-114">The ID of the compute node.</span></span> <span data-ttu-id="ac72f-115">添加到池中的每个节点分配唯一 id。</span><span class="sxs-lookup"><span data-stu-id="ac72f-115">Every node that is added to a pool is assigned a unique ID.</span></span>
+      <span data-ttu-id="ac72f-116">每当从池中删除节点，所有本地文件被删除，并且该 ID 将被回收，可重用于新节点。</span><span class="sxs-lookup"><span data-stu-id="ac72f-116">Whenever a node is removed from a pool, all of its local files are deleted, and the ID is reclaimed and could be reused for new nodes.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.ipAddress'
+    name: ipAddress
+    fullName: ipAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac72f-117">可以使用其他计算节点的 IP 地址与此计算节点进行通信。</span><span class="sxs-lookup"><span data-stu-id="ac72f-117">The IP address that other compute nodes can use to communicate with this compute node.</span></span> <span data-ttu-id="ac72f-118">添加到池中的每个节点分配唯一的 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="ac72f-118">Every node that is added to a pool is assigned a unique IP address.</span></span> <span data-ttu-id="ac72f-119">每当从池中删除节点，所有本地文件被删除，并且 IP 地址将被回收，可重用于新节点。</span><span class="sxs-lookup"><span data-stu-id="ac72f-119">Whenever a node is removed from a pool, all of its local files are deleted, and the IP address is reclaimed and could be reused for new nodes.</span></span>'
+    optional: true
+    syntax:
+      content: 'ipAddress?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.isDedicated'
+    name: isDedicated
+    fullName: isDedicated
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac72f-120">此计算节点是否专用的节点。</span><span class="sxs-lookup"><span data-stu-id="ac72f-120">Whether this compute node is a dedicated node.</span></span> <span data-ttu-id="ac72f-121">如果为 false，则节点是低优先级节点。</span><span class="sxs-lookup"><span data-stu-id="ac72f-121">If false, the node is a low-priority node.</span></span>'
+    optional: true
+    syntax:
+      content: 'isDedicated?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.lastBootTime'
+    name: lastBootTime
+    fullName: lastBootTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac72f-122">已启动计算节点的最后一个时间。</span><span class="sxs-lookup"><span data-stu-id="ac72f-122">The last time at which the compute node was started.</span></span> <span data-ttu-id="ac72f-123">此属性可能不存在，如果节点状态为不可用。</span><span class="sxs-lookup"><span data-stu-id="ac72f-123">This property may not be present if the node state is unusable.</span></span>
+    optional: true
+    syntax:
+      content: 'lastBootTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.nodeAgentInfo'
+    name: nodeAgentInfo
+    fullName: nodeAgentInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac72f-124">节点代理版本以及时间的信息节点升级到新版本。</span><span class="sxs-lookup"><span data-stu-id="ac72f-124">Information about the node agent version and the time the node upgraded to a new version.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeAgentInfo?: NodeAgentInformation'
+      return:
+        type:
+          - '@azure/batch.NodeAgentInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.recentTasks'
+    name: recentTasks
+    fullName: recentTasks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac72f-125">最近更改了状态的任务的列表。</span><span class="sxs-lookup"><span data-stu-id="ac72f-125">A list of tasks whose state has recently changed.</span></span> <span data-ttu-id="ac72f-126">仅当至少一个任务已在此节点上运行，因为其已分配到池时，才存在此属性。</span><span class="sxs-lookup"><span data-stu-id="ac72f-126">This property is present only if at least one task has run on this node since it was assigned to the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'recentTasks?: TaskInformation[]'
+      return:
+        type:
+          - '@azure/batch.TaskInformation[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.runningTasksCount'
+    name: runningTasksCount
+    fullName: runningTasksCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac72f-127">当前在计算节点上运行作业任务的总数。</span><span class="sxs-lookup"><span data-stu-id="ac72f-127">The total number of currently running job tasks on the compute node.</span></span> <span data-ttu-id="ac72f-128">这包括作业管理器任务和普通任务，但不是作业准备、 作业发布或启动任务。</span><span class="sxs-lookup"><span data-stu-id="ac72f-128">This includes Job Manager tasks and normal tasks, but not Job Preparation, Job Release or Start tasks.</span></span>'
+    optional: true
+    syntax:
+      content: 'runningTasksCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.schedulingState'
+    name: schedulingState
+    fullName: schedulingState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac72f-129">计算节点是否可供任务计划。</span><span class="sxs-lookup"><span data-stu-id="ac72f-129">Whether the compute node is available for task scheduling.</span></span> <span data-ttu-id="ac72f-130">可能的值包括: ''enabled''、 ''disabled''</span><span class="sxs-lookup"><span data-stu-id="ac72f-130">Possible values include: ''enabled'', ''disabled''</span></span>'
+    optional: true
+    syntax:
+      content: 'schedulingState?: SchedulingState'
+      return:
+        type:
+          - '@azure/batch.SchedulingState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac72f-131">指定要在加入池计算节点上运行的任务。</span><span class="sxs-lookup"><span data-stu-id="ac72f-131">The task specified to run on the compute node as it joins the pool.</span></span>
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.startTaskInfo'
+    name: startTaskInfo
+    fullName: startTaskInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac72f-132">有关执行启动任务在计算节点上运行时信息。</span><span class="sxs-lookup"><span data-stu-id="ac72f-132">Runtime information about the execution of the start task on the compute node.</span></span>
+    optional: true
+    syntax:
+      content: 'startTaskInfo?: StartTaskInformation'
+      return:
+        type:
+          - '@azure/batch.StartTaskInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac72f-133">计算节点的当前状态。</span><span class="sxs-lookup"><span data-stu-id="ac72f-133">The current state of the compute node.</span></span> <span data-ttu-id="ac72f-134">低优先级节点已被占用。</span><span class="sxs-lookup"><span data-stu-id="ac72f-134">The low-priority node has been preempted.</span></span> <span data-ttu-id="ac72f-135">另一个节点变得可用时，将重新安排时被抢占在节点运行的任务。</span><span class="sxs-lookup"><span data-stu-id="ac72f-135">Tasks which were running on the node when it was preempted will be rescheduled when another node becomes available.</span></span> <span data-ttu-id="ac72f-136">可能的值包括: 空闲、 重新启动操作，重置映像，正在运行，不可用、 创建、 启动、 waitingForStartTask、 startTaskFailed、 未知、 leavingPool，脱机，抢占</span><span class="sxs-lookup"><span data-stu-id="ac72f-136">Possible values include: ''idle'', ''rebooting'', ''reimaging'', ''running'', ''unusable'', ''creating'', ''starting'', ''waitingForStartTask'', ''startTaskFailed'', ''unknown'', ''leavingPool'', ''offline'', ''preempted''</span></span>'
+    optional: true
+    syntax:
+      content: 'state?: ComputeNodeState'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac72f-137">计算节点进入其当前状态的时间。</span><span class="sxs-lookup"><span data-stu-id="ac72f-137">The time at which the compute node entered its current state.</span></span>
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.totalTasksRun'
+    name: totalTasksRun
+    fullName: totalTasksRun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac72f-138">计算节点上完成的作业任务的总数。</span><span class="sxs-lookup"><span data-stu-id="ac72f-138">The total number of job tasks completed on the compute node.</span></span> <span data-ttu-id="ac72f-139">这包括作业管理器任务和普通任务，但不是作业准备、 作业发布或启动任务。</span><span class="sxs-lookup"><span data-stu-id="ac72f-139">This includes Job Manager tasks and normal tasks, but not Job Preparation, Job Release or Start tasks.</span></span>'
+    optional: true
+    syntax:
+      content: 'totalTasksRun?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.totalTasksSucceeded'
+    name: totalTasksSucceeded
+    fullName: totalTasksSucceeded
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac72f-140">已完成，已成功 （但退出代码 0） 的作业任务的总数在计算节点上。</span><span class="sxs-lookup"><span data-stu-id="ac72f-140">The total number of job tasks which completed successfully (with exitCode 0) on the compute node.</span></span> <span data-ttu-id="ac72f-141">这包括作业管理器任务和普通任务，但不是作业准备、 作业发布或启动任务。</span><span class="sxs-lookup"><span data-stu-id="ac72f-141">This includes Job Manager tasks and normal tasks, but not Job Preparation, Job Release or Start tasks.</span></span>'
+    optional: true
+    syntax:
+      content: 'totalTasksSucceeded?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac72f-142">计算节点的 URL。</span><span class="sxs-lookup"><span data-stu-id="ac72f-142">The URL of the compute node.</span></span>
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNode.vmSize'
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac72f-143">托管的计算节点的虚拟机的大小。</span><span class="sxs-lookup"><span data-stu-id="ac72f-143">The size of the virtual machine hosting the compute node.</span></span> <span data-ttu-id="ac72f-144">在池中的虚拟机的可用大小的信息，请参阅选择 Azure Batch 池中计算节点的 VM 大小 (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes)。</span><span class="sxs-lookup"><span data-stu-id="ac72f-144">For information about available sizes of virtual machines in pools, see Choose a VM size for compute nodes in an Azure Batch pool (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).</span></span>'
+    optional: true
+    syntax:
+      content: 'vmSize?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ComputeNodeEndpointConfiguration'
+    name: ComputeNodeEndpointConfiguration
+    spec.typeScript:
+      - name: ComputeNodeEndpointConfiguration
+        fullName: ComputeNodeEndpointConfiguration
+        uid: '@azure/batch.ComputeNodeEndpointConfiguration'
+  - uid: '@azure/batch.ComputeNodeError[]'
+    name: 'ComputeNodeError[]'
+    spec.typeScript:
+      - name: ComputeNodeError
+        fullName: ComputeNodeError
+        uid: '@azure/batch.ComputeNodeError'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.NodeAgentInformation'
+    name: NodeAgentInformation
+    spec.typeScript:
+      - name: NodeAgentInformation
+        fullName: NodeAgentInformation
+        uid: '@azure/batch.NodeAgentInformation'
+  - uid: '@azure/batch.TaskInformation[]'
+    name: 'TaskInformation[]'
+    spec.typeScript:
+      - name: TaskInformation
+        fullName: TaskInformation
+        uid: '@azure/batch.TaskInformation'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.SchedulingState'
+    name: SchedulingState
+    spec.typeScript:
+      - name: SchedulingState
+        fullName: SchedulingState
+        uid: '@azure/batch.SchedulingState'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
+  - uid: '@azure/batch.StartTaskInformation'
+    name: StartTaskInformation
+    spec.typeScript:
+      - name: StartTaskInformation
+        fullName: StartTaskInformation
+        uid: '@azure/batch.StartTaskInformation'
+  - uid: '@azure/batch.ComputeNodeState'
+    name: ComputeNodeState
+    spec.typeScript:
+      - name: ComputeNodeState
+        fullName: ComputeNodeState
+        uid: '@azure/batch.ComputeNodeState'

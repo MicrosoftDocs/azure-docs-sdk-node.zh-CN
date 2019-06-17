@@ -4,18 +4,36 @@ items:
     name: ServiceAssociationLink
     fullName: ServiceAssociationLink
     children:
+      - '@azure/arm-network.ServiceAssociationLink.allowDelete'
       - '@azure/arm-network.ServiceAssociationLink.etag'
       - '@azure/arm-network.ServiceAssociationLink.id'
       - '@azure/arm-network.ServiceAssociationLink.link'
       - '@azure/arm-network.ServiceAssociationLink.linkedResourceType'
+      - '@azure/arm-network.ServiceAssociationLink.locations'
       - '@azure/arm-network.ServiceAssociationLink.name'
       - '@azure/arm-network.ServiceAssociationLink.provisioningState'
+      - '@azure/arm-network.ServiceAssociationLink.type'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="92077-101">ServiceAssociationLink 资源。</span><span class="sxs-lookup"><span data-stu-id="92077-101">ServiceAssociationLink resource.</span></span>
+    summary: <span data-ttu-id="10334-101">ServiceAssociationLink 资源。</span><span class="sxs-lookup"><span data-stu-id="10334-101">ServiceAssociationLink resource.</span></span>
     extends:
       name: '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ServiceAssociationLink.allowDelete'
+    name: allowDelete
+    fullName: allowDelete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="10334-102">如果为 true，则可以删除该资源。</span><span class="sxs-lookup"><span data-stu-id="10334-102">If true, the resource can be deleted.</span></span>'
+    optional: true
+    syntax:
+      content: 'allowDelete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.etag'
     name: etag
@@ -25,8 +43,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="92077-102">一个唯一只读的字符串，每当更新资源更改。</span><span class="sxs-lookup"><span data-stu-id="92077-102">A unique read-only string that changes whenever the resource is updated.</span></span>
-      <span data-ttu-id="92077-103">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="92077-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="10334-103">一个唯一只读的字符串，每当更新资源更改。</span><span class="sxs-lookup"><span data-stu-id="10334-103">A unique read-only string that changes whenever the resource is updated.</span></span>
+      <span data-ttu-id="10334-104">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="10334-104">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -41,7 +59,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="92077-104">资源 ID。</span><span class="sxs-lookup"><span data-stu-id="92077-104">Resource ID.</span></span>
+    summary: <span data-ttu-id="10334-105">资源 ID。</span><span class="sxs-lookup"><span data-stu-id="10334-105">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -56,7 +74,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="92077-105">链接到外部资源。</span><span class="sxs-lookup"><span data-stu-id="92077-105">Link to the external resource.</span></span>
+    summary: <span data-ttu-id="10334-106">链接到外部资源。</span><span class="sxs-lookup"><span data-stu-id="10334-106">Link to the external resource.</span></span>
     optional: true
     syntax:
       content: 'link?: undefined | string'
@@ -71,13 +89,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="92077-106">链接的资源的资源类型。</span><span class="sxs-lookup"><span data-stu-id="92077-106">Resource type of the linked resource.</span></span>
+    summary: <span data-ttu-id="10334-107">链接的资源的资源类型。</span><span class="sxs-lookup"><span data-stu-id="10334-107">Resource type of the linked resource.</span></span>
     optional: true
     syntax:
       content: 'linkedResourceType?: undefined | string'
       return:
         type:
           - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ServiceAssociationLink.locations'
+    name: locations
+    fullName: locations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="10334-108">位置的列表。</span><span class="sxs-lookup"><span data-stu-id="10334-108">A list of locations.</span></span>
+    optional: true
+    syntax:
+      content: 'locations?: string[]'
+      return:
+        type:
+          - 'string[]'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.name'
     name: name
@@ -86,7 +119,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="92077-107">在资源组中是唯一的资源的名称。</span><span class="sxs-lookup"><span data-stu-id="92077-107">Name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="92077-108">此名称可用于访问资源。</span><span class="sxs-lookup"><span data-stu-id="92077-108">This name can be used to access the resource.</span></span>
+    summary: <span data-ttu-id="10334-109">在资源组中是唯一的资源的名称。</span><span class="sxs-lookup"><span data-stu-id="10334-109">Name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="10334-110">此名称可用于访问资源。</span><span class="sxs-lookup"><span data-stu-id="10334-110">This name can be used to access the resource.</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -102,11 +135,26 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="92077-109">预配 ServiceAssociationLink 资源的状态。</span><span class="sxs-lookup"><span data-stu-id="92077-109">Provisioning state of the ServiceAssociationLink resource.</span></span>
-      <span data-ttu-id="92077-110">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="92077-110">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="10334-111">预配 ServiceAssociationLink 资源的状态。</span><span class="sxs-lookup"><span data-stu-id="10334-111">Provisioning state of the ServiceAssociationLink resource.</span></span>
+      <span data-ttu-id="10334-112">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="10334-112">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ServiceAssociationLink.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="10334-113">资源类型。</span><span class="sxs-lookup"><span data-stu-id="10334-113">Resource type.</span></span>
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
       return:
         type:
           - undefined | string

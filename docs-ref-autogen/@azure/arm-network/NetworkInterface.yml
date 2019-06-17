@@ -10,13 +10,13 @@ items:
       - '@azure/arm-network.NetworkInterface.etag'
       - '@azure/arm-network.NetworkInterface.hostedWorkloads'
       - '@azure/arm-network.NetworkInterface.id'
-      - '@azure/arm-network.NetworkInterface.interfaceEndpoint'
       - '@azure/arm-network.NetworkInterface.ipConfigurations'
       - '@azure/arm-network.NetworkInterface.location'
       - '@azure/arm-network.NetworkInterface.macAddress'
       - '@azure/arm-network.NetworkInterface.name'
       - '@azure/arm-network.NetworkInterface.networkSecurityGroup'
       - '@azure/arm-network.NetworkInterface.primary'
+      - '@azure/arm-network.NetworkInterface.privateEndpoint'
       - '@azure/arm-network.NetworkInterface.provisioningState'
       - '@azure/arm-network.NetworkInterface.resourceGuid'
       - '@azure/arm-network.NetworkInterface.tags'
@@ -26,7 +26,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="0de77-101">资源组中的网络接口。</span><span class="sxs-lookup"><span data-stu-id="0de77-101">A network interface in a resource group.</span></span>
+    summary: <span data-ttu-id="246f0-101">资源组中的网络接口。</span><span class="sxs-lookup"><span data-stu-id="246f0-101">A network interface in a resource group.</span></span>
     extends:
       name: '@azure/arm-network.Resource'
     package: '@azure/arm-network'
@@ -37,7 +37,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-102">网络接口中的 DNS 设置。</span><span class="sxs-lookup"><span data-stu-id="0de77-102">The DNS settings in network interface.</span></span>
+    summary: <span data-ttu-id="246f0-102">网络接口中的 DNS 设置。</span><span class="sxs-lookup"><span data-stu-id="246f0-102">The DNS settings in network interface.</span></span>
     optional: true
     syntax:
       content: 'dnsSettings?: NetworkInterfaceDnsSettings'
@@ -52,7 +52,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-103">如果网络接口加速网络已启用。</span><span class="sxs-lookup"><span data-stu-id="0de77-103">If the network interface is accelerated networking enabled.</span></span>
+    summary: <span data-ttu-id="246f0-103">如果网络接口加速网络已启用。</span><span class="sxs-lookup"><span data-stu-id="246f0-103">If the network interface is accelerated networking enabled.</span></span>
     optional: true
     syntax:
       content: 'enableAcceleratedNetworking?: undefined | false | true'
@@ -67,7 +67,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-104">指示是否在此网络接口上启用 IP 转发。</span><span class="sxs-lookup"><span data-stu-id="0de77-104">Indicates whether IP forwarding is enabled on this network interface.</span></span>
+    summary: <span data-ttu-id="246f0-104">指示是否在此网络接口上启用 IP 转发。</span><span class="sxs-lookup"><span data-stu-id="246f0-104">Indicates whether IP forwarding is enabled on this network interface.</span></span>
     optional: true
     syntax:
       content: 'enableIPForwarding?: undefined | false | true'
@@ -82,7 +82,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-105">一个唯一只读的字符串，每当更新资源更改。</span><span class="sxs-lookup"><span data-stu-id="0de77-105">A unique read-only string that changes whenever the resource is updated.</span></span>
+    summary: <span data-ttu-id="246f0-105">一个唯一只读的字符串，每当更新资源更改。</span><span class="sxs-lookup"><span data-stu-id="246f0-105">A unique read-only string that changes whenever the resource is updated.</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -97,7 +97,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="0de77-106">对链接的 BareMetal 资源的引用列表**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="0de77-106">A list of references to linked BareMetal resources **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: |-
+      <span data-ttu-id="246f0-106">链接的 BareMetal 资源的引用的列表。</span><span class="sxs-lookup"><span data-stu-id="246f0-106">A list of references to linked BareMetal resources.</span></span>
+      <span data-ttu-id="246f0-107">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="246f0-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'hostedWorkloads?: string[]'
@@ -112,30 +114,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-107">资源 ID。</span><span class="sxs-lookup"><span data-stu-id="0de77-107">Resource ID.</span></span>
+    summary: <span data-ttu-id="246f0-108">资源 ID。</span><span class="sxs-lookup"><span data-stu-id="246f0-108">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.NetworkInterface.interfaceEndpoint'
-    name: interfaceEndpoint
-    fullName: interfaceEndpoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      <span data-ttu-id="0de77-108">对链接到的网络接口的接口终结点的引用。</span><span class="sxs-lookup"><span data-stu-id="0de77-108">A reference to the interface endpoint to which the network interface is linked.</span></span>
-      <span data-ttu-id="0de77-109">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="0de77-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
-    optional: true
-    syntax:
-      content: 'interfaceEndpoint?: InterfaceEndpoint'
-      return:
-        type:
-          - '@azure/arm-network.InterfaceEndpoint'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.ipConfigurations'
     name: ipConfigurations
@@ -144,7 +129,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-110">网络接口的 IPConfigurations 的列表。</span><span class="sxs-lookup"><span data-stu-id="0de77-110">A list of IPConfigurations of the network interface.</span></span>
+    summary: <span data-ttu-id="246f0-109">网络接口的 IPConfigurations 的列表。</span><span class="sxs-lookup"><span data-stu-id="246f0-109">A list of IPConfigurations of the network interface.</span></span>
     optional: true
     syntax:
       content: 'ipConfigurations?: NetworkInterfaceIPConfiguration[]'
@@ -159,7 +144,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-111">资源位置。</span><span class="sxs-lookup"><span data-stu-id="0de77-111">Resource location.</span></span>
+    summary: <span data-ttu-id="246f0-110">资源位置。</span><span class="sxs-lookup"><span data-stu-id="246f0-110">Resource location.</span></span>
     optional: true
     syntax:
       content: 'location?: undefined | string'
@@ -174,7 +159,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-112">网络接口的 MAC 地址。</span><span class="sxs-lookup"><span data-stu-id="0de77-112">The MAC address of the network interface.</span></span>
+    summary: <span data-ttu-id="246f0-111">网络接口的 MAC 地址。</span><span class="sxs-lookup"><span data-stu-id="246f0-111">The MAC address of the network interface.</span></span>
     optional: true
     syntax:
       content: 'macAddress?: undefined | string'
@@ -190,8 +175,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="0de77-113">资源名称。</span><span class="sxs-lookup"><span data-stu-id="0de77-113">Resource name.</span></span>
-      <span data-ttu-id="0de77-114">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="0de77-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="246f0-112">资源名称。</span><span class="sxs-lookup"><span data-stu-id="246f0-112">Resource name.</span></span>
+      <span data-ttu-id="246f0-113">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="246f0-113">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -206,7 +191,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-115">NetworkSecurityGroup 资源的引用。</span><span class="sxs-lookup"><span data-stu-id="0de77-115">The reference of the NetworkSecurityGroup resource.</span></span>
+    summary: <span data-ttu-id="246f0-114">NetworkSecurityGroup 资源的引用。</span><span class="sxs-lookup"><span data-stu-id="246f0-114">The reference of the NetworkSecurityGroup resource.</span></span>
     optional: true
     syntax:
       content: 'networkSecurityGroup?: NetworkSecurityGroup'
@@ -221,13 +206,30 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-116">获取这是否是虚拟机上的主网络接口。</span><span class="sxs-lookup"><span data-stu-id="0de77-116">Gets whether this is a primary network interface on a virtual machine.</span></span>
+    summary: <span data-ttu-id="246f0-115">获取这是否是虚拟机上的主网络接口。</span><span class="sxs-lookup"><span data-stu-id="246f0-115">Gets whether this is a primary network interface on a virtual machine.</span></span>
     optional: true
     syntax:
       content: 'primary?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkInterface.privateEndpoint'
+    name: privateEndpoint
+    fullName: privateEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="246f0-116">对链接到的网络接口的专用终结点的引用。</span><span class="sxs-lookup"><span data-stu-id="246f0-116">A reference to the private endpoint to which the network interface is linked.</span></span>
+      <span data-ttu-id="246f0-117">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="246f0-117">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'privateEndpoint?: PrivateEndpoint'
+      return:
+        type:
+          - '@azure/arm-network.PrivateEndpoint'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.provisioningState'
     name: provisioningState
@@ -236,7 +238,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="0de77-117">公共 IP 资源预配状态。</span><span class="sxs-lookup"><span data-stu-id="0de77-117">The provisioning state of the public IP resource.</span></span> <span data-ttu-id="0de77-118">可能的值包括：更新、 删除和失败。</span><span class="sxs-lookup"><span data-stu-id="0de77-118">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
+    summary: '<span data-ttu-id="246f0-118">公共 IP 资源预配状态。</span><span class="sxs-lookup"><span data-stu-id="246f0-118">The provisioning state of the public IP resource.</span></span> <span data-ttu-id="246f0-119">可能的值包括：更新、 删除和失败。</span><span class="sxs-lookup"><span data-stu-id="246f0-119">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
@@ -251,7 +253,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-119">资源的网络接口资源的 GUID 属性。</span><span class="sxs-lookup"><span data-stu-id="0de77-119">The resource GUID property of the network interface resource.</span></span>
+    summary: <span data-ttu-id="246f0-120">资源的网络接口资源的 GUID 属性。</span><span class="sxs-lookup"><span data-stu-id="246f0-120">The resource GUID property of the network interface resource.</span></span>
     optional: true
     syntax:
       content: 'resourceGuid?: undefined | string'
@@ -266,7 +268,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-120">资源标记。</span><span class="sxs-lookup"><span data-stu-id="0de77-120">Resource tags.</span></span>
+    summary: <span data-ttu-id="246f0-121">资源标记。</span><span class="sxs-lookup"><span data-stu-id="246f0-121">Resource tags.</span></span>
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
@@ -281,7 +283,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="0de77-121">TapConfigurations 的网络接口的列表。</span><span class="sxs-lookup"><span data-stu-id="0de77-121">A list of TapConfigurations of the network interface.</span></span>
+    summary: <span data-ttu-id="246f0-122">TapConfigurations 的网络接口的列表。</span><span class="sxs-lookup"><span data-stu-id="246f0-122">A list of TapConfigurations of the network interface.</span></span>
     optional: true
     syntax:
       content: 'tapConfigurations?: NetworkInterfaceTapConfiguration[]'
@@ -297,8 +299,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="0de77-122">资源类型。</span><span class="sxs-lookup"><span data-stu-id="0de77-122">Resource type.</span></span>
-      <span data-ttu-id="0de77-123">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="0de77-123">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="246f0-123">资源类型。</span><span class="sxs-lookup"><span data-stu-id="246f0-123">Resource type.</span></span>
+      <span data-ttu-id="246f0-124">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="246f0-124">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'type?: undefined | string'
@@ -314,8 +316,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="0de77-124">虚拟机的引用。</span><span class="sxs-lookup"><span data-stu-id="0de77-124">The reference of a virtual machine.</span></span>
-      <span data-ttu-id="0de77-125">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="0de77-125">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="246f0-125">虚拟机的引用。</span><span class="sxs-lookup"><span data-stu-id="246f0-125">The reference of a virtual machine.</span></span>
+      <span data-ttu-id="246f0-126">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="246f0-126">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'virtualMachine?: SubResource'
@@ -336,12 +338,6 @@ references:
       - name: NetworkInterfaceDnsSettings
         fullName: NetworkInterfaceDnsSettings
         uid: '@azure/arm-network.NetworkInterfaceDnsSettings'
-  - uid: '@azure/arm-network.InterfaceEndpoint'
-    name: InterfaceEndpoint
-    spec.typeScript:
-      - name: InterfaceEndpoint
-        fullName: InterfaceEndpoint
-        uid: '@azure/arm-network.InterfaceEndpoint'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
     name: 'NetworkInterfaceIPConfiguration[]'
     spec.typeScript:
@@ -356,6 +352,12 @@ references:
       - name: NetworkSecurityGroup
         fullName: NetworkSecurityGroup
         uid: '@azure/arm-network.NetworkSecurityGroup'
+  - uid: '@azure/arm-network.PrivateEndpoint'
+    name: PrivateEndpoint
+    spec.typeScript:
+      - name: PrivateEndpoint
+        fullName: PrivateEndpoint
+        uid: '@azure/arm-network.PrivateEndpoint'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
     name: 'NetworkInterfaceTapConfiguration[]'
     spec.typeScript:

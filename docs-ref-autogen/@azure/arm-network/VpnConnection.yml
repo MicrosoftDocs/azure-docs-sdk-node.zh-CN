@@ -20,11 +20,12 @@ items:
       - '@azure/arm-network.VpnConnection.routingWeight'
       - '@azure/arm-network.VpnConnection.sharedKey'
       - '@azure/arm-network.VpnConnection.useLocalAzureIpAddress'
+      - '@azure/arm-network.VpnConnection.usePolicyBasedTrafficSelectors'
       - '@azure/arm-network.VpnConnection.vpnConnectionProtocolType'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="e7fc3-101">VpnConnection 资源。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-101">VpnConnection Resource.</span></span>
+    summary: <span data-ttu-id="b71b2-101">VpnConnection 资源。</span><span class="sxs-lookup"><span data-stu-id="b71b2-101">VpnConnection Resource.</span></span>
     extends:
       name: '@azure/arm-network.SubResource'
     package: '@azure/arm-network'
@@ -35,7 +36,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e7fc3-102">以 mbps 为单位的预期的带宽。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-102">Expected bandwidth in MBPS.</span></span>
+    summary: <span data-ttu-id="b71b2-102">以 mbps 为单位的预期的带宽。</span><span class="sxs-lookup"><span data-stu-id="b71b2-102">Expected bandwidth in MBPS.</span></span>
     optional: true
     syntax:
       content: 'connectionBandwidth?: undefined | number'
@@ -50,7 +51,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="e7fc3-103">连接状态。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-103">The connection status.</span></span> <span data-ttu-id="e7fc3-104">可能的值包括：未知，连接，连接，NotConnected</span><span class="sxs-lookup"><span data-stu-id="e7fc3-104">Possible values include: ''Unknown'', ''Connecting'', ''Connected'', ''NotConnected''</span></span>'
+    summary: '<span data-ttu-id="b71b2-103">连接状态。</span><span class="sxs-lookup"><span data-stu-id="b71b2-103">The connection status.</span></span> <span data-ttu-id="b71b2-104">可能的值包括：未知，连接，连接，NotConnected</span><span class="sxs-lookup"><span data-stu-id="b71b2-104">Possible values include: ''Unknown'', ''Connecting'', ''Connected'', ''NotConnected''</span></span>'
     optional: true
     syntax:
       content: 'connectionStatus?: VpnConnectionStatus'
@@ -66,8 +67,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="e7fc3-105">传送的出口字节数。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-105">Egress bytes transferred.</span></span>
-      <span data-ttu-id="e7fc3-106">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="e7fc3-106">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="b71b2-105">传送的出口字节数。</span><span class="sxs-lookup"><span data-stu-id="b71b2-105">Egress bytes transferred.</span></span>
+      <span data-ttu-id="b71b2-106">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="b71b2-106">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'egressBytesTransferred?: undefined | number'
@@ -82,7 +83,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e7fc3-107">EnableBgp 标志</span><span class="sxs-lookup"><span data-stu-id="e7fc3-107">EnableBgp flag</span></span>
+    summary: <span data-ttu-id="b71b2-107">EnableBgp 标志。</span><span class="sxs-lookup"><span data-stu-id="b71b2-107">EnableBgp flag.</span></span>
     optional: true
     syntax:
       content: 'enableBgp?: undefined | false | true'
@@ -97,7 +98,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e7fc3-108">启用 internet 安全性</span><span class="sxs-lookup"><span data-stu-id="e7fc3-108">Enable internet security</span></span>
+    summary: <span data-ttu-id="b71b2-108">启用 internet 安全机制。</span><span class="sxs-lookup"><span data-stu-id="b71b2-108">Enable internet security.</span></span>
     optional: true
     syntax:
       content: 'enableInternetSecurity?: undefined | false | true'
@@ -112,7 +113,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e7fc3-109">EnableBgp 标志</span><span class="sxs-lookup"><span data-stu-id="e7fc3-109">EnableBgp flag</span></span>
+    summary: <span data-ttu-id="b71b2-109">EnableBgp 标志。</span><span class="sxs-lookup"><span data-stu-id="b71b2-109">EnableBgp flag.</span></span>
     optional: true
     syntax:
       content: 'enableRateLimiting?: undefined | false | true'
@@ -128,8 +129,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="e7fc3-110">获取每当更新资源更改的唯一只读的字符串。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-110">Gets a unique read-only string that changes whenever the resource is updated.</span></span>
-      <span data-ttu-id="e7fc3-111">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="e7fc3-111">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="b71b2-110">获取每当更新资源更改的唯一只读的字符串。</span><span class="sxs-lookup"><span data-stu-id="b71b2-110">Gets a unique read-only string that changes whenever the resource is updated.</span></span>
+      <span data-ttu-id="b71b2-111">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="b71b2-111">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -144,7 +145,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e7fc3-112">资源 ID。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-112">Resource ID.</span></span>
+    summary: <span data-ttu-id="b71b2-112">资源 ID。</span><span class="sxs-lookup"><span data-stu-id="b71b2-112">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -160,8 +161,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="e7fc3-113">传送的入站字节数。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-113">Ingress bytes transferred.</span></span>
-      <span data-ttu-id="e7fc3-114">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="e7fc3-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="b71b2-113">传送的入站字节数。</span><span class="sxs-lookup"><span data-stu-id="b71b2-113">Ingress bytes transferred.</span></span>
+      <span data-ttu-id="b71b2-114">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="b71b2-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'ingressBytesTransferred?: undefined | number'
@@ -176,7 +177,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e7fc3-115">要被视为此连接的 IPSec 策略。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-115">The IPSec Policies to be considered by this connection.</span></span>
+    summary: <span data-ttu-id="b71b2-115">要被视为此连接的 IPSec 策略。</span><span class="sxs-lookup"><span data-stu-id="b71b2-115">The IPSec Policies to be considered by this connection.</span></span>
     optional: true
     syntax:
       content: 'ipsecPolicies?: IpsecPolicy[]'
@@ -191,7 +192,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e7fc3-116">在资源组中是唯一的资源的名称。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-116">The name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="e7fc3-117">此名称可用于访问资源。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-117">This name can be used to access the resource.</span></span>
+    summary: <span data-ttu-id="b71b2-116">在资源组中是唯一的资源的名称。</span><span class="sxs-lookup"><span data-stu-id="b71b2-116">The name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="b71b2-117">此名称可用于访问资源。</span><span class="sxs-lookup"><span data-stu-id="b71b2-117">This name can be used to access the resource.</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -206,7 +207,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="e7fc3-118">资源预配状态。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-118">The provisioning state of the resource.</span></span> <span data-ttu-id="e7fc3-119">可能的值包括：成功，更新，删除，失败</span><span class="sxs-lookup"><span data-stu-id="e7fc3-119">Possible values include: ''Succeeded'', ''Updating'', ''Deleting'', ''Failed''</span></span>'
+    summary: '<span data-ttu-id="b71b2-118">资源预配状态。</span><span class="sxs-lookup"><span data-stu-id="b71b2-118">The provisioning state of the resource.</span></span> <span data-ttu-id="b71b2-119">可能的值包括：成功，更新，删除，失败</span><span class="sxs-lookup"><span data-stu-id="b71b2-119">Possible values include: ''Succeeded'', ''Updating'', ''Deleting'', ''Failed''</span></span>'
     optional: true
     syntax:
       content: 'provisioningState?: ProvisioningState'
@@ -221,7 +222,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e7fc3-120">已连接的 vpn 站点 id。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-120">Id of the connected vpn site.</span></span>
+    summary: <span data-ttu-id="b71b2-120">已连接的 vpn 站点 id。</span><span class="sxs-lookup"><span data-stu-id="b71b2-120">Id of the connected vpn site.</span></span>
     optional: true
     syntax:
       content: 'remoteVpnSite?: SubResource'
@@ -236,7 +237,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e7fc3-121">路由的 vpn 连接的权重。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-121">Routing weight for vpn connection.</span></span>
+    summary: <span data-ttu-id="b71b2-121">路由的 vpn 连接的权重。</span><span class="sxs-lookup"><span data-stu-id="b71b2-121">Routing weight for vpn connection.</span></span>
     optional: true
     syntax:
       content: 'routingWeight?: undefined | number'
@@ -251,7 +252,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e7fc3-122">SharedKey vpn 连接。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-122">SharedKey for the vpn connection.</span></span>
+    summary: <span data-ttu-id="b71b2-122">SharedKey vpn 连接。</span><span class="sxs-lookup"><span data-stu-id="b71b2-122">SharedKey for the vpn connection.</span></span>
     optional: true
     syntax:
       content: 'sharedKey?: undefined | string'
@@ -266,10 +267,25 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="e7fc3-123">使用本地 azure ip 初始化连接</span><span class="sxs-lookup"><span data-stu-id="e7fc3-123">Use local azure ip to initiate connection</span></span>
+    summary: <span data-ttu-id="b71b2-123">使用本地 azure ip 来启动连接。</span><span class="sxs-lookup"><span data-stu-id="b71b2-123">Use local azure ip to initiate connection.</span></span>
     optional: true
     syntax:
       content: 'useLocalAzureIpAddress?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VpnConnection.usePolicyBasedTrafficSelectors'
+    name: usePolicyBasedTrafficSelectors
+    fullName: usePolicyBasedTrafficSelectors
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b71b2-124">启用基于策略的流量选择器。</span><span class="sxs-lookup"><span data-stu-id="b71b2-124">Enable policy-based traffic selectors.</span></span>
+    optional: true
+    syntax:
+      content: 'usePolicyBasedTrafficSelectors?: undefined | false | true'
       return:
         type:
           - undefined | false | true
@@ -281,7 +297,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="e7fc3-124">用于此连接的连接协议。</span><span class="sxs-lookup"><span data-stu-id="e7fc3-124">Connection protocol used for this connection.</span></span> <span data-ttu-id="e7fc3-125">可能的值包括：IKEv2，IKEv1</span><span class="sxs-lookup"><span data-stu-id="e7fc3-125">Possible values include: ''IKEv2'', ''IKEv1''</span></span>'
+    summary: '<span data-ttu-id="b71b2-125">用于此连接的连接协议。</span><span class="sxs-lookup"><span data-stu-id="b71b2-125">Connection protocol used for this connection.</span></span> <span data-ttu-id="b71b2-126">可能的值包括：IKEv2，IKEv1</span><span class="sxs-lookup"><span data-stu-id="b71b2-126">Possible values include: ''IKEv2'', ''IKEv1''</span></span>'
     optional: true
     syntax:
       content: 'vpnConnectionProtocolType?: VirtualNetworkGatewayConnectionProtocol'

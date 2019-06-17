@@ -1,0 +1,216 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters'
+    name: StorageAccountUpdateParameters
+    fullName: StorageAccountUpdateParameters
+    children:
+      - '@azure/arm-storage.StorageAccountUpdateParameters.accessTier'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.customDomain'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.enableAzureFilesAadIntegration'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.enableHttpsTrafficOnly'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.encryption'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.identity'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.kind'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.networkRuleSet'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.sku'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: 可以更新存储帐户属性时提供的参数。
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.accessTier'
+    name: accessTier
+    fullName: accessTier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      所需的存储帐户，其中 kind = BlobStorage。 使用进行计费的访问级别。
+      可能的值包括：热、 冷
+    optional: true
+    syntax:
+      content: 'accessTier?: AccessTier'
+      return:
+        type:
+          - '@azure/arm-storage.AccessTier'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.customDomain'
+    name: customDomain
+    fullName: customDomain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 由用户分配到存储帐户的自定义域。 名称是 CNAME 源。 这一次只能有一个自定义域支持每个存储帐户。 若要清除现有的自定义域，请使用自定义域名称属性为空字符串。
+    optional: true
+    syntax:
+      content: 'customDomain?: CustomDomain'
+      return:
+        type:
+          - '@azure/arm-storage.CustomDomain'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.enableAzureFilesAadIntegration'
+    name: enableAzureFilesAadIntegration
+    fullName: enableAzureFilesAadIntegration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果为 SMB 启用 Azure 文件 AAD 集成设置为 true。
+    optional: true
+    syntax:
+      content: 'enableAzureFilesAadIntegration?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.enableHttpsTrafficOnly'
+    name: enableHttpsTrafficOnly
+    fullName: enableHttpsTrafficOnly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果允许 https 流量仅向存储服务设置为 true。
+    optional: true
+    syntax:
+      content: 'enableHttpsTrafficOnly?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.encryption'
+    name: encryption
+    fullName: encryption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 提供有关帐户的加密设置。 默认设置为未加密。
+    optional: true
+    syntax:
+      content: 'encryption?: Encryption'
+      return:
+        type:
+          - '@azure/arm-storage.Encryption'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.identity'
+    name: identity
+    fullName: identity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 资源的标识。
+    optional: true
+    syntax:
+      content: 'identity?: Identity'
+      return:
+        type:
+          - '@azure/arm-storage.Identity'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '可选。 指示存储帐户的类型。 当前仅 StorageV2 值支持的服务器。 可能的值包括：''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage'''
+    optional: true
+    syntax:
+      content: 'kind?: Kind'
+      return:
+        type:
+          - '@azure/arm-storage.Kind'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.networkRuleSet'
+    name: networkRuleSet
+    fullName: networkRuleSet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 网络规则集
+    optional: true
+    syntax:
+      content: 'networkRuleSet?: NetworkRuleSet'
+      return:
+        type:
+          - '@azure/arm-storage.NetworkRuleSet'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 获取或设置 SKU 名称。 请注意，SKU 名称不能更新为 Standard_ZRS、 Premium_LRS 或 Premium_ZRS，也不可以为任何其他值更新这些 SKU 名称的帐户。
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-storage.Sku'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 获取或设置描述资源的键/值对的列表。 在查看此资源分组 （跨资源组），可以使用这些标记。 可以为资源提供最多 15 个标记。 每个标记必须具有密钥不应超过 128 个字符和值的长度不应超过 256 个字符的长度。
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.AccessTier'
+    name: AccessTier
+    spec.typeScript:
+      - name: AccessTier
+        fullName: AccessTier
+        uid: '@azure/arm-storage.AccessTier'
+  - uid: '@azure/arm-storage.CustomDomain'
+    name: CustomDomain
+    spec.typeScript:
+      - name: CustomDomain
+        fullName: CustomDomain
+        uid: '@azure/arm-storage.CustomDomain'
+  - uid: '@azure/arm-storage.Encryption'
+    name: Encryption
+    spec.typeScript:
+      - name: Encryption
+        fullName: Encryption
+        uid: '@azure/arm-storage.Encryption'
+  - uid: '@azure/arm-storage.Identity'
+    name: Identity
+    spec.typeScript:
+      - name: Identity
+        fullName: Identity
+        uid: '@azure/arm-storage.Identity'
+  - uid: '@azure/arm-storage.Kind'
+    name: Kind
+    spec.typeScript:
+      - name: Kind
+        fullName: Kind
+        uid: '@azure/arm-storage.Kind'
+  - uid: '@azure/arm-storage.NetworkRuleSet'
+    name: NetworkRuleSet
+    spec.typeScript:
+      - name: NetworkRuleSet
+        fullName: NetworkRuleSet
+        uid: '@azure/arm-storage.NetworkRuleSet'
+  - uid: '@azure/arm-storage.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-storage.Sku'

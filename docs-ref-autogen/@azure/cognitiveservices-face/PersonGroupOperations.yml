@@ -1,0 +1,629 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations'
+    name: PersonGroupOperations
+    fullName: PersonGroupOperations
+    children:
+      - '@azure/cognitiveservices-face.PersonGroupOperations.create'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.create_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.create_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.get'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.get_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.get_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.list'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.list_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.list_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.constructor'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.train'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.train_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.train_1'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.update'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.update_2'
+      - '@azure/cognitiveservices-face.PersonGroupOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示 PersonGroupOperations 类。
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.create'
+    name: 'create(string, Models.PersonGroupCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      使用指定的 personGroupId、 名称、 用户提供的 userData 和 recognitionModel 创建新的人员组。
+      <br /> 人员组是上传的个人数据，包括人脸图像和人脸识别功能的容器。
+      <br /> 在创建后，使用[person Group 人员-创建](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c)以将人员添加到组，然后调用[person Group-Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249)若要获取此组供[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)。
+      <br /> 联系人的人脸、 图像和用户数据都将 [person Group 人员之前中存储在服务器上
+      - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) 或[person Group-删除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245)调用。
+      <br />
+      * 免费层订阅配额：1000 人组。 每个保留最多 1,000 个人员。
+      * S0 层订阅配额：1,000,000 人员组。 每个保留最多 10,000 个人员。
+      * 若要处理更大的缩放人脸识别问题，请考虑使用[大型人物组](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)。
+      <br />
+      应该指定 recognitionModel，以将与此人员组相关联。 默认值为 recognitionModel 是 recognition_01，如果最新的模型需要请显式指定所需的模型中此参数。 新的人脸添加到现有的人员组将使用已具有与集合关联的识别模型。 在人员组中的现有人脸特征无法更新为识别模型的另一个版本中提取的功能。
+    syntax:
+      content: 'function create(personGroupId: string, options?: Models.PersonGroupCreateOptionalParams)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - Models.PersonGroupCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.create_2'
+    name: 'create(string, PersonGroupCreateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(personGroupId: string, options: PersonGroupCreateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.PersonGroupCreateOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.create_1'
+    name: 'create(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(personGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod'
+    name: 'deleteMethod(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除现有的人员组。 保存人脸的人员组中的所有人的功能也将被删除。
+    syntax:
+      content: 'function deleteMethod(personGroupId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod_2'
+    name: 'deleteMethod(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(personGroupId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(personGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.get'
+    name: 'get(string, Models.PersonGroupGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '检索人员组名称、 userData 和 recognitionModel。 若要获取此 person Group 下的个人信息，请使用[person Group 人员-列出](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395241)。'
+    syntax:
+      content: 'function get(personGroupId: string, options?: Models.PersonGroupGetOptionalParams)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - Models.PersonGroupGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PersonGroupGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.get_2'
+    name: 'get(string, PersonGroupGetOptionalParams, ServiceCallback<PersonGroup>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(personGroupId: string, options: PersonGroupGetOptionalParams, callback: ServiceCallback<PersonGroup>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.PersonGroupGetOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.PersonGroup>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PersonGroupGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.get_1'
+    name: 'get(string, ServiceCallback<PersonGroup>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(personGroupId: string, callback: ServiceCallback<PersonGroup>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.PersonGroup>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PersonGroupGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus'
+    name: 'getTrainingStatus(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 检索 （已完成或正在进行） 的人员组定型状态。
+    syntax:
+      content: 'function getTrainingStatus(personGroupId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PersonGroupGetTrainingStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus_2'
+    name: 'getTrainingStatus(string, RequestOptionsBase, ServiceCallback<TrainingStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTrainingStatus(personGroupId: string, options: RequestOptionsBase, callback: ServiceCallback<TrainingStatus>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PersonGroupGetTrainingStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.getTrainingStatus_1'
+    name: 'getTrainingStatus(string, ServiceCallback<TrainingStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTrainingStatus(personGroupId: string, callback: ServiceCallback<TrainingStatus>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PersonGroupGetTrainingStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.list'
+    name: list(Models.PersonGroupListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      列出人员组 personGroupId、 名称、 用户数据和 recognitionModel。<br />
+      * 人员组的 personGroupId 按字母顺序存储。
+      * "start"参数 （字符串，可选） 是返回条目具有更大的 id 的字符串比较的用户提供 personGroupId 值。 "启动"设置为空以指示从第一项返回。
+      * "top"参数 (int，可选) 指定要返回条目的数。 可以在一个调用中返回 1000 个条目的最大。 若要提取更多，可以使用的当前调用的最后一个返回的项的 Id 指定"start"。
+      <br />
+      例如，总 5 个人员组:"group1"，...，"组 5"。
+      <br /> "启动 = & 排名靠前 ="将返回 5 的所有组。
+      <br /> "启动 = & 排名靠前 = 2"将返回"group1"，"group2"。
+      <br /> "启动组 2 （& t） = = 3"将返回"组 3"、"组 4"、"组 5"。
+    syntax:
+      content: 'function list(options?: Models.PersonGroupListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PersonGroupListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PersonGroupListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.list_2'
+    name: 'list(PersonGroupListOptionalParams, ServiceCallback<PersonGroup[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: PersonGroupListOptionalParams, callback: ServiceCallback<PersonGroup[]>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.PersonGroupListOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.PersonGroup[]>'
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PersonGroupListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.list_1'
+    name: 'list(ServiceCallback<PersonGroup[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<PersonGroup[]>)'
+      parameters:
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.PersonGroup[]>'
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PersonGroupListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.constructor'
+    name: PersonGroupOperations(FaceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建 PersonGroupOperations。
+    syntax:
+      content: 'new PersonGroupOperations(client: FaceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-face.FaceClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.train'
+    name: 'train(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 任务排入队列人员组培训，培训任务可能不会立即启动。
+    syntax:
+      content: 'function train(personGroupId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.train_2'
+    name: 'train(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function train(personGroupId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.train_1'
+    name: 'train(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function train(personGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.update'
+    name: 'update(string, Models.PersonGroupUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新现有人员组的显示名称和 userData。 将更新它在请求正文中未显示的属性。
+    syntax:
+      content: 'function update(personGroupId: string, options?: Models.PersonGroupUpdateOptionalParams)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - Models.PersonGroupUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.update_2'
+    name: 'update(string, PersonGroupUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(personGroupId: string, options: PersonGroupUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.PersonGroupUpdateOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupOperations.update_1'
+    name: 'update(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(personGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: personGroupId
+          type:
+            - string
+          description: 引用特定的人员组 id。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FaceClientContext'
+    name: FaceClientContext
+    spec.typeScript:
+      - name: FaceClientContext
+        fullName: FaceClientContext
+        uid: '@azure/cognitiveservices-face.FaceClientContext'
+  - uid: '@azure/cognitiveservices-face.PersonGroupCreateOptionalParams'
+    name: PersonGroupCreateOptionalParams
+    spec.typeScript:
+      - name: PersonGroupCreateOptionalParams
+        fullName: PersonGroupCreateOptionalParams
+        uid: '@azure/cognitiveservices-face.PersonGroupCreateOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.PersonGroup>
+    name: PersonGroup>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PersonGroup
+        fullName: PersonGroup
+        uid: '@azure/cognitiveservices-face.PersonGroup'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-face.PersonGroupGetOptionalParams'
+    name: PersonGroupGetOptionalParams
+    spec.typeScript:
+      - name: PersonGroupGetOptionalParams
+        fullName: PersonGroupGetOptionalParams
+        uid: '@azure/cognitiveservices-face.PersonGroupGetOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
+    name: TrainingStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: TrainingStatus
+        fullName: TrainingStatus
+        uid: '@azure/cognitiveservices-face.TrainingStatus'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.PersonGroup[]>'
+    name: 'PersonGroup[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PersonGroup
+        fullName: PersonGroup
+        uid: '@azure/cognitiveservices-face.PersonGroup'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.PersonGroupListOptionalParams'
+    name: PersonGroupListOptionalParams
+    spec.typeScript:
+      - name: PersonGroupListOptionalParams
+        fullName: PersonGroupListOptionalParams
+        uid: '@azure/cognitiveservices-face.PersonGroupListOptionalParams'
+  - uid: '@azure/cognitiveservices-face.PersonGroupUpdateOptionalParams'
+    name: PersonGroupUpdateOptionalParams
+    spec.typeScript:
+      - name: PersonGroupUpdateOptionalParams
+        fullName: PersonGroupUpdateOptionalParams
+        uid: '@azure/cognitiveservices-face.PersonGroupUpdateOptionalParams'

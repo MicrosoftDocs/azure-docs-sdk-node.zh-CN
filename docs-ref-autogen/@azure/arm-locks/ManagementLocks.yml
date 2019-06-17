@@ -58,6 +58,12 @@ items:
       - '@azure/arm-locks.ManagementLocks.listAtSubscriptionLevelNext'
       - '@azure/arm-locks.ManagementLocks.listAtSubscriptionLevelNext_2'
       - '@azure/arm-locks.ManagementLocks.listAtSubscriptionLevelNext_1'
+      - '@azure/arm-locks.ManagementLocks.listByScope_2'
+      - '@azure/arm-locks.ManagementLocks.listByScope'
+      - '@azure/arm-locks.ManagementLocks.listByScope_1'
+      - '@azure/arm-locks.ManagementLocks.listByScopeNext'
+      - '@azure/arm-locks.ManagementLocks.listByScopeNext_2'
+      - '@azure/arm-locks.ManagementLocks.listByScopeNext_1'
       - '@azure/arm-locks.ManagementLocks.constructor'
     langs:
       - typeScript
@@ -1714,6 +1720,152 @@ items:
         type:
           - Promise<Models.ManagementLocksListAtSubscriptionLevelNextResponse>
     package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScope_2'
+    name: 'listByScope(string, ManagementLocksListByScopeOptionalParams, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScope(scope: string, options: ManagementLocksListByScopeOptionalParams, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '锁的作用域。 提供时分配的作用域，使用 / {subscriptionId} 的订阅，/ {subscriptionId} /resourcegroups/ {resourceGroupName} 的资源组和 / {subscriptionId} / resourcegroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / {parentResourcePathIfPresent} / {resourceType} / {resourceName} 的资源。'
+        - id: options
+          type:
+            - '@azure/arm-locks.ManagementLocksListByScopeOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScope'
+    name: 'listByScope(string, Models.ManagementLocksListByScopeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取一个作用域的所有管理锁。
+    syntax:
+      content: 'function listByScope(scope: string, options?: Models.ManagementLocksListByScopeOptionalParams)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '锁的作用域。 提供时分配的作用域，使用 / {subscriptionId} 的订阅，/ {subscriptionId} /resourcegroups/ {resourceGroupName} 的资源组和 / {subscriptionId} / resourcegroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / {parentResourcePathIfPresent} / {resourceType} / {resourceName} 的资源。'
+        - id: options
+          type:
+            - Models.ManagementLocksListByScopeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScope_1'
+    name: 'listByScope(string, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScope(scope: string, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '锁的作用域。 提供时分配的作用域，使用 / {subscriptionId} 的订阅，/ {subscriptionId} /resourcegroups/ {resourceGroupName} 的资源组和 / {subscriptionId} / resourcegroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / {parentResourcePathIfPresent} / {resourceType} / {resourceName} 的资源。'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScopeNext'
+    name: 'listByScopeNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取一个作用域的所有管理锁。
+    syntax:
+      content: 'function listByScopeNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeNextResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScopeNext_2'
+    name: 'listByScopeNext(string, RequestOptionsBase, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScopeNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeNextResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScopeNext_1'
+    name: 'listByScopeNext(string, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScopeNext(nextPageLink: string, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeNextResponse>
+    package: '@azure/arm-locks'
   - uid: '@azure/arm-locks.ManagementLocks.constructor'
     name: ManagementLocks(ManagementLockClientContext)
     children: []
@@ -1781,3 +1933,9 @@ references:
       - name: ManagementLocksListAtSubscriptionLevelOptionalParams
         fullName: ManagementLocksListAtSubscriptionLevelOptionalParams
         uid: '@azure/arm-locks.ManagementLocksListAtSubscriptionLevelOptionalParams'
+  - uid: '@azure/arm-locks.ManagementLocksListByScopeOptionalParams'
+    name: ManagementLocksListByScopeOptionalParams
+    spec.typeScript:
+      - name: ManagementLocksListByScopeOptionalParams
+        fullName: ManagementLocksListByScopeOptionalParams
+        uid: '@azure/arm-locks.ManagementLocksListByScopeOptionalParams'

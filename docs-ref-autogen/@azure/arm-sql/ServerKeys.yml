@@ -1,0 +1,461 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ServerKeys'
+    name: ServerKeys
+    fullName: ServerKeys
+    children:
+      - '@azure/arm-sql.ServerKeys.beginCreateOrUpdate'
+      - '@azure/arm-sql.ServerKeys.beginDeleteMethod'
+      - '@azure/arm-sql.ServerKeys.createOrUpdate'
+      - '@azure/arm-sql.ServerKeys.deleteMethod'
+      - '@azure/arm-sql.ServerKeys.get'
+      - '@azure/arm-sql.ServerKeys.get_2'
+      - '@azure/arm-sql.ServerKeys.get_1'
+      - '@azure/arm-sql.ServerKeys.listByServer'
+      - '@azure/arm-sql.ServerKeys.listByServer_2'
+      - '@azure/arm-sql.ServerKeys.listByServer_1'
+      - '@azure/arm-sql.ServerKeys.listByServerNext'
+      - '@azure/arm-sql.ServerKeys.listByServerNext_2'
+      - '@azure/arm-sql.ServerKeys.listByServerNext_1'
+      - '@azure/arm-sql.ServerKeys.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="f36b3-101">表示 ServerKeys 类。</span><span class="sxs-lookup"><span data-stu-id="f36b3-101">Class representing a ServerKeys.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, ServerKey, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f36b3-102">创建或更新服务器密钥。</span><span class="sxs-lookup"><span data-stu-id="f36b3-102">Creates or updates a server key.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, serverName: string, keyName: string, parameters: ServerKey, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-103">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f36b3-104">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="f36b3-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-105">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-105">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="f36b3-106">要操作的服务器密钥的名称 （更新或创建）。</span><span class="sxs-lookup"><span data-stu-id="f36b3-106">The name of the server key to be operated on (updated or created).</span></span> <span data-ttu-id="f36b3-107">所需密钥名称为 vault_key_version 的格式。</span><span class="sxs-lookup"><span data-stu-id="f36b3-107">The key name is required to be in the format of ''vault_key_version''.</span></span> <span data-ttu-id="f36b3-108">例如，如果 keyId 是https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901，则服务器密钥名称的格式应为：YourVaultName_YourKeyName_01234567890123456789012345678901</span><span class="sxs-lookup"><span data-stu-id="f36b3-108">For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901, then the server key name should be formatted as: YourVaultName_YourKeyName_01234567890123456789012345678901</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ServerKey'
+          description: <span data-ttu-id="f36b3-109">请求的服务器的重要资源状态。</span><span class="sxs-lookup"><span data-stu-id="f36b3-109">The requested server key resource state.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f36b3-110">删除具有给定名称的服务器密钥。</span><span class="sxs-lookup"><span data-stu-id="f36b3-110">Deletes the server key with the given name.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, serverName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-111">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-111">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f36b3-112">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="f36b3-112">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-113">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-113">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-114">要删除的服务器密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-114">The name of the server key to be deleted.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, ServerKey, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f36b3-115">创建或更新服务器密钥。</span><span class="sxs-lookup"><span data-stu-id="f36b3-115">Creates or updates a server key.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serverName: string, keyName: string, parameters: ServerKey, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-116">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-116">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f36b3-117">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="f36b3-117">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-118">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-118">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="f36b3-119">要操作的服务器密钥的名称 （更新或创建）。</span><span class="sxs-lookup"><span data-stu-id="f36b3-119">The name of the server key to be operated on (updated or created).</span></span> <span data-ttu-id="f36b3-120">所需密钥名称为 vault_key_version 的格式。</span><span class="sxs-lookup"><span data-stu-id="f36b3-120">The key name is required to be in the format of ''vault_key_version''.</span></span> <span data-ttu-id="f36b3-121">例如，如果 keyId 是https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901，则服务器密钥名称的格式应为：YourVaultName_YourKeyName_01234567890123456789012345678901</span><span class="sxs-lookup"><span data-stu-id="f36b3-121">For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901, then the server key name should be formatted as: YourVaultName_YourKeyName_01234567890123456789012345678901</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ServerKey'
+          description: <span data-ttu-id="f36b3-122">请求的服务器的重要资源状态。</span><span class="sxs-lookup"><span data-stu-id="f36b3-122">The requested server key resource state.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f36b3-123">删除具有给定名称的服务器密钥。</span><span class="sxs-lookup"><span data-stu-id="f36b3-123">Deletes the server key with the given name.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-124">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-124">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f36b3-125">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="f36b3-125">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-126">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-126">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-127">要删除的服务器密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-127">The name of the server key to be deleted.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f36b3-128">获取服务器密钥。</span><span class="sxs-lookup"><span data-stu-id="f36b3-128">Gets a server key.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-129">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-129">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f36b3-130">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="f36b3-130">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-131">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-131">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-132">要检索的服务器密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-132">The name of the server key to be retrieved.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<ServerKey>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, keyName: string, options: RequestOptionsBase, callback: ServiceCallback<ServerKey>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-133">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-133">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f36b3-134">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="f36b3-134">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-135">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-135">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-136">要检索的服务器密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-136">The name of the server key to be retrieved.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f36b3-137">可选参数</span><span class="sxs-lookup"><span data-stu-id="f36b3-137">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKey>
+          description: |
+            <span data-ttu-id="f36b3-138">回调</span><span class="sxs-lookup"><span data-stu-id="f36b3-138">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.get_1'
+    name: 'get(string, string, string, ServiceCallback<ServerKey>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, keyName: string, callback: ServiceCallback<ServerKey>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-139">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-139">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f36b3-140">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="f36b3-140">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-141">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-141">The name of the server.</span></span>
+        - id: keyName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-142">要检索的服务器密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-142">The name of the server key to be retrieved.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKey>
+          description: |
+            <span data-ttu-id="f36b3-143">回调</span><span class="sxs-lookup"><span data-stu-id="f36b3-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServer'
+    name: 'listByServer(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f36b3-144">获取服务器密钥的列表。</span><span class="sxs-lookup"><span data-stu-id="f36b3-144">Gets a list of server keys.</span></span>
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-145">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-145">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f36b3-146">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="f36b3-146">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-147">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-147">The name of the server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServer_2'
+    name: 'listByServer(string, string, RequestOptionsBase, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, options: RequestOptionsBase, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-148">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-148">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f36b3-149">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="f36b3-149">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-150">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-150">The name of the server.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f36b3-151">可选参数</span><span class="sxs-lookup"><span data-stu-id="f36b3-151">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            <span data-ttu-id="f36b3-152">回调</span><span class="sxs-lookup"><span data-stu-id="f36b3-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServer_1'
+    name: 'listByServer(string, string, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-153">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-153">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="f36b3-154">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="f36b3-154">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-155">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="f36b3-155">The name of the server.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            <span data-ttu-id="f36b3-156">回调</span><span class="sxs-lookup"><span data-stu-id="f36b3-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServerNext'
+    name: 'listByServerNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f36b3-157">获取服务器密钥的列表。</span><span class="sxs-lookup"><span data-stu-id="f36b3-157">Gets a list of server keys.</span></span>
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-158">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f36b3-158">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServerNext_2'
+    name: 'listByServerNext(string, RequestOptionsBase, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-159">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f36b3-159">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f36b3-160">可选参数</span><span class="sxs-lookup"><span data-stu-id="f36b3-160">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            <span data-ttu-id="f36b3-161">回调</span><span class="sxs-lookup"><span data-stu-id="f36b3-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServerNext_1'
+    name: 'listByServerNext(string, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f36b3-162">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="f36b3-162">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            <span data-ttu-id="f36b3-163">回调</span><span class="sxs-lookup"><span data-stu-id="f36b3-163">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.constructor'
+    name: ServerKeys(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f36b3-164">创建 ServerKeys。</span><span class="sxs-lookup"><span data-stu-id="f36b3-164">Create a ServerKeys.</span></span>
+    syntax:
+      content: 'new ServerKeys(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="f36b3-165">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="f36b3-165">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: '@azure/arm-sql.ServerKey'
+    name: ServerKey
+    spec.typeScript:
+      - name: ServerKey
+        fullName: ServerKey
+        uid: '@azure/arm-sql.ServerKey'
+  - uid: ServiceCallback<@azure/arm-sql.ServerKey>
+    name: ServerKey>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ServerKey
+        fullName: ServerKey
+        uid: '@azure/arm-sql.ServerKey'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+    name: ServerKeyListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ServerKeyListResult
+        fullName: ServerKeyListResult
+        uid: '@azure/arm-sql.ServerKeyListResult'
+      - name: '>'
+        fullName: '>'

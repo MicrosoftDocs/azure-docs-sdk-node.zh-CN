@@ -1,0 +1,1429 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Job'
+    name: Job
+    fullName: Job
+    children:
+      - '@azure/batch.Job.add_2'
+      - '@azure/batch.Job.add'
+      - '@azure/batch.Job.add_1'
+      - '@azure/batch.Job.deleteMethod_2'
+      - '@azure/batch.Job.deleteMethod'
+      - '@azure/batch.Job.deleteMethod_1'
+      - '@azure/batch.Job.disable_2'
+      - '@azure/batch.Job.disable'
+      - '@azure/batch.Job.disable_1'
+      - '@azure/batch.Job.enable_2'
+      - '@azure/batch.Job.enable'
+      - '@azure/batch.Job.enable_1'
+      - '@azure/batch.Job.get_2'
+      - '@azure/batch.Job.get'
+      - '@azure/batch.Job.get_1'
+      - '@azure/batch.Job.getAllLifetimeStatistics_2'
+      - '@azure/batch.Job.getAllLifetimeStatistics'
+      - '@azure/batch.Job.getAllLifetimeStatistics_1'
+      - '@azure/batch.Job.getTaskCounts_2'
+      - '@azure/batch.Job.getTaskCounts'
+      - '@azure/batch.Job.getTaskCounts_1'
+      - '@azure/batch.Job.constructor'
+      - '@azure/batch.Job.list_2'
+      - '@azure/batch.Job.list'
+      - '@azure/batch.Job.list_1'
+      - '@azure/batch.Job.listFromJobSchedule_2'
+      - '@azure/batch.Job.listFromJobSchedule'
+      - '@azure/batch.Job.listFromJobSchedule_1'
+      - '@azure/batch.Job.listFromJobScheduleNext_2'
+      - '@azure/batch.Job.listFromJobScheduleNext'
+      - '@azure/batch.Job.listFromJobScheduleNext_1'
+      - '@azure/batch.Job.listNext_2'
+      - '@azure/batch.Job.listNext'
+      - '@azure/batch.Job.listNext_1'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatus_2'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatus'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatus_1'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_2'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext'
+      - '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_1'
+      - '@azure/batch.Job.patch_2'
+      - '@azure/batch.Job.patch'
+      - '@azure/batch.Job.patch_1'
+      - '@azure/batch.Job.terminate_2'
+      - '@azure/batch.Job.terminate'
+      - '@azure/batch.Job.terminate_1'
+      - '@azure/batch.Job.update_2'
+      - '@azure/batch.Job.update'
+      - '@azure/batch.Job.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="56cb8-101">类表示一个作业。</span><span class="sxs-lookup"><span data-stu-id="56cb8-101">Class representing a Job.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.add_2'
+    name: 'add(JobAddParameter, JobAddOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(job: JobAddParameter, options: JobAddOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: job
+          type:
+            - '@azure/batch.JobAddParameter'
+          description: <span data-ttu-id="56cb8-102">要添加的作业。</span><span class="sxs-lookup"><span data-stu-id="56cb8-102">The job to be added.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobAddOptionalParams'
+          description: <span data-ttu-id="56cb8-103">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-103">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-104">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-104">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.add'
+    name: 'add(JobAddParameter, Models.JobAddOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="56cb8-105">批处理服务支持两种方法来控制作业中完成的工作。</span><span class="sxs-lookup"><span data-stu-id="56cb8-105">The Batch service supports two ways to control the work done as part of a job.</span></span> <span data-ttu-id="56cb8-106">在第一种方法，用户指定作业管理器任务。</span><span class="sxs-lookup"><span data-stu-id="56cb8-106">In the first approach, the user specifies a Job Manager task.</span></span> <span data-ttu-id="56cb8-107">准备好启动作业时，Batch 服务将启动此任务。</span><span class="sxs-lookup"><span data-stu-id="56cb8-107">The Batch service launches this task when it is ready to start the job.</span></span> <span data-ttu-id="56cb8-108">作业管理器任务控制使用任务 Api 运行此作业下的所有其他任务。</span><span class="sxs-lookup"><span data-stu-id="56cb8-108">The Job Manager task controls all other tasks that run under this job, by using the Task APIs.</span></span> <span data-ttu-id="56cb8-109">在第二个方法中，用户直接使用任务 Api 控制下活动的作业的任务的执行。</span><span class="sxs-lookup"><span data-stu-id="56cb8-109">In the second approach, the user directly controls the execution of tasks under an active job, by using the Task APIs.</span></span> <span data-ttu-id="56cb8-110">另请注意： 在命名的作业时避免包括敏感信息，如用户名称或机密项目的名称。</span><span class="sxs-lookup"><span data-stu-id="56cb8-110">Also note: when naming jobs, avoid including sensitive information such as user names or secret project names.</span></span> <span data-ttu-id="56cb8-111">此信息可能会显示在遥测日志联系 Microsoft 支持工程师可访问。</span><span class="sxs-lookup"><span data-stu-id="56cb8-111">This information may appear in telemetry logs accessible to Microsoft Support engineers.</span></span>'
+    syntax:
+      content: 'function add(job: JobAddParameter, options?: Models.JobAddOptionalParams)'
+      parameters:
+        - id: job
+          type:
+            - '@azure/batch.JobAddParameter'
+          description: <span data-ttu-id="56cb8-112">要添加的作业。</span><span class="sxs-lookup"><span data-stu-id="56cb8-112">The job to be added.</span></span>
+        - id: options
+          type:
+            - Models.JobAddOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.add_1'
+    name: 'add(JobAddParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(job: JobAddParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: job
+          type:
+            - '@azure/batch.JobAddParameter'
+          description: <span data-ttu-id="56cb8-113">要添加的作业。</span><span class="sxs-lookup"><span data-stu-id="56cb8-113">The job to be added.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-114">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.deleteMethod_2'
+    name: 'deleteMethod(string, JobDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobId: string, options: JobDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-115">若要删除的作业 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-115">The ID of the job to delete.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobDeleteMethodOptionalParams'
+          description: <span data-ttu-id="56cb8-116">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-116">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-117">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-117">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.deleteMethod'
+    name: 'deleteMethod(string, Models.JobDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="56cb8-118">删除作业也会删除属于该作业的所有任务和作业的所有统计信息。</span><span class="sxs-lookup"><span data-stu-id="56cb8-118">Deleting a job also deletes all tasks that are part of that job, and all job statistics.</span></span> <span data-ttu-id="56cb8-119">这还将重写任务的数据; 的保留期也就是说，如果作业包含仍保留在计算节点的任务，批处理服务会删除这些任务的工作目录和它们的所有内容。</span><span class="sxs-lookup"><span data-stu-id="56cb8-119">This also overrides the retention period for task data; that is, if the job contains tasks which are still retained on compute nodes, the Batch services deletes those tasks'' working directories and all their contents.</span></span>  <span data-ttu-id="56cb8-120">收到删除作业请求后，Batch 服务将设置为删除状态的作业。</span><span class="sxs-lookup"><span data-stu-id="56cb8-120">When a Delete Job request is received, the Batch service sets the job to the deleting state.</span></span> <span data-ttu-id="56cb8-121">处于 deleting 状态的作业上的所有更新操作将都失败状态代码 409 （冲突），并指示正在删除作业的其他信息。</span><span class="sxs-lookup"><span data-stu-id="56cb8-121">All update operations on a job that is in deleting state will fail with status code 409 (Conflict), with additional information indicating that the job is being deleted.</span></span>'
+    syntax:
+      content: 'function deleteMethod(jobId: string, options?: Models.JobDeleteMethodOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-122">若要删除的作业 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-122">The ID of the job to delete.</span></span>
+        - id: options
+          type:
+            - Models.JobDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-123">若要删除的作业 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-123">The ID of the job to delete.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-124">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-124">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.disable_2'
+    name: 'disable(string, Models.DisableJobOption, JobDisableOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disable(jobId: string, disableTasks: Models.DisableJobOption, options: JobDisableOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-125">若要禁用的作业 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-125">The ID of the job to disable.</span></span>
+        - id: disableTasks
+          type:
+            - Models.DisableJobOption
+          description: '<span data-ttu-id="56cb8-126">应如何处理与作业关联的活动任务。</span><span class="sxs-lookup"><span data-stu-id="56cb8-126">What to do with active tasks associated with the job.</span></span> <span data-ttu-id="56cb8-127">可能的值包括: 将重新排队、 终止、 wait</span><span class="sxs-lookup"><span data-stu-id="56cb8-127">Possible values include: ''requeue'', ''terminate'', ''wait''</span></span>'
+        - id: options
+          type:
+            - '@azure/batch.JobDisableOptionalParams'
+          description: <span data-ttu-id="56cb8-128">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-128">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-129">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-129">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.disable'
+    name: 'disable(string, Models.DisableJobOption, Models.JobDisableOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="56cb8-130">Batch 服务立即将为禁用状态的作业。</span><span class="sxs-lookup"><span data-stu-id="56cb8-130">The Batch Service immediately moves the job to the disabling state.</span></span> <span data-ttu-id="56cb8-131">Batch 使用 disableTasks 参数来确定应如何处理作业的当前正在运行的任务。</span><span class="sxs-lookup"><span data-stu-id="56cb8-131">Batch then uses the disableTasks parameter to determine what to do with the currently running tasks of the job.</span></span> <span data-ttu-id="56cb8-132">该作业会保持处于禁用状态直到完成禁用操作后，已根据 disableTasks 选项; 处理了所有任务作业将转到已禁用状态。</span><span class="sxs-lookup"><span data-stu-id="56cb8-132">The job remains in the disabling state until the disable operation is completed and all tasks have been dealt with according to the disableTasks option; the job then moves to the disabled state.</span></span>
+      <span data-ttu-id="56cb8-133">在作业恢复 active 状态之前，任何新任务将不启动该作业下。</span><span class="sxs-lookup"><span data-stu-id="56cb8-133">No new tasks are started under the job until it moves back to active state.</span></span> <span data-ttu-id="56cb8-134">如果你尝试禁用处于非活动状态的任何状态的作业，禁用，或已禁用，则请求失败，状态代码 409。</span><span class="sxs-lookup"><span data-stu-id="56cb8-134">If you try to disable a job that is in any state other than active, disabling, or disabled, the request fails with status code 409.</span></span>
+    syntax:
+      content: 'function disable(jobId: string, disableTasks: Models.DisableJobOption, options?: Models.JobDisableOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-135">若要禁用的作业 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-135">The ID of the job to disable.</span></span>
+        - id: disableTasks
+          type:
+            - Models.DisableJobOption
+          description: '<span data-ttu-id="56cb8-136">应如何处理与作业关联的活动任务。</span><span class="sxs-lookup"><span data-stu-id="56cb8-136">What to do with active tasks associated with the job.</span></span> <span data-ttu-id="56cb8-137">可能的值包括: 将重新排队、 终止、 wait</span><span class="sxs-lookup"><span data-stu-id="56cb8-137">Possible values include: ''requeue'', ''terminate'', ''wait''</span></span>'
+        - id: options
+          type:
+            - Models.JobDisableOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.disable_1'
+    name: 'disable(string, Models.DisableJobOption, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disable(jobId: string, disableTasks: Models.DisableJobOption, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-138">若要禁用的作业 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-138">The ID of the job to disable.</span></span>
+        - id: disableTasks
+          type:
+            - Models.DisableJobOption
+          description: '<span data-ttu-id="56cb8-139">应如何处理与作业关联的活动任务。</span><span class="sxs-lookup"><span data-stu-id="56cb8-139">What to do with active tasks associated with the job.</span></span> <span data-ttu-id="56cb8-140">可能的值包括: 将重新排队、 终止、 wait</span><span class="sxs-lookup"><span data-stu-id="56cb8-140">Possible values include: ''requeue'', ''terminate'', ''wait''</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-141">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-141">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.enable_2'
+    name: 'enable(string, JobEnableOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enable(jobId: string, options: JobEnableOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-142">若要启用的作业 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-142">The ID of the job to enable.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobEnableOptionalParams'
+          description: <span data-ttu-id="56cb8-143">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-143">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-144">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.enable'
+    name: 'enable(string, Models.JobEnableOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="56cb8-145">当调用此 API 时，Batch 服务将设置为启用状态的已禁用的作业。</span><span class="sxs-lookup"><span data-stu-id="56cb8-145">When you call this API, the Batch service sets a disabled job to the enabling state.</span></span> <span data-ttu-id="56cb8-146">之后此操作完成后，作业将移到活动状态，且新下的任务的作业恢复计划。</span><span class="sxs-lookup"><span data-stu-id="56cb8-146">After the this operation is completed, the job moves to the active state, and scheduling of new tasks under the job resumes.</span></span> <span data-ttu-id="56cb8-147">Batch 服务不允许超过 180 天处于活动状态的任务。</span><span class="sxs-lookup"><span data-stu-id="56cb8-147">The Batch service does not allow a task to remain in the active state for more than 180 days.</span></span> <span data-ttu-id="56cb8-148">因此，如果启用包含已添加 180 天前的活动任务的作业，将不会运行这些任务。</span><span class="sxs-lookup"><span data-stu-id="56cb8-148">Therefore, if you enable a job containing active tasks which were added more than 180 days ago, those tasks will not run.</span></span>'
+    syntax:
+      content: 'function enable(jobId: string, options?: Models.JobEnableOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-149">若要启用的作业 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-149">The ID of the job to enable.</span></span>
+        - id: options
+          type:
+            - Models.JobEnableOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.enable_1'
+    name: 'enable(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enable(jobId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-150">若要启用的作业 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-150">The ID of the job to enable.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-151">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.get_2'
+    name: 'get(string, JobGetOptionalParams, ServiceCallback<CloudJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, options: JobGetOptionalParams, callback: ServiceCallback<CloudJob>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-152">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-152">The ID of the job.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobGetOptionalParams'
+          description: <span data-ttu-id="56cb8-153">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-153">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJob>
+          description: |
+            <span data-ttu-id="56cb8-154">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-154">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.get'
+    name: 'get(string, Models.JobGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, options?: Models.JobGetOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-155">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-155">The ID of the job.</span></span>
+        - id: options
+          type:
+            - Models.JobGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.get_1'
+    name: 'get(string, ServiceCallback<CloudJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, callback: ServiceCallback<CloudJob>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-156">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-156">The ID of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJob>
+          description: |
+            <span data-ttu-id="56cb8-157">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getAllLifetimeStatistics_2'
+    name: 'getAllLifetimeStatistics(JobGetAllLifetimeStatisticsOptionalParams, ServiceCallback<JobStatistics>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(options: JobGetAllLifetimeStatisticsOptionalParams, callback: ServiceCallback<JobStatistics>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.JobGetAllLifetimeStatisticsOptionalParams'
+          description: <span data-ttu-id="56cb8-158">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.JobStatistics>
+          description: |
+            <span data-ttu-id="56cb8-159">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getAllLifetimeStatistics'
+    name: getAllLifetimeStatistics(Models.JobGetAllLifetimeStatisticsOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="56cb8-160">跨所有作业都已曾存在于从帐户创建的帐户中的最后一个更新时间的统计信息的聚合统计信息。</span><span class="sxs-lookup"><span data-stu-id="56cb8-160">Statistics are aggregated across all jobs that have ever existed in the account, from account creation to the last update time of the statistics.</span></span> <span data-ttu-id="56cb8-161">统计信息可能不会立即可用。</span><span class="sxs-lookup"><span data-stu-id="56cb8-161">The statistics may not be immediately available.</span></span> <span data-ttu-id="56cb8-162">Batch 服务执行定期汇总统计信息。</span><span class="sxs-lookup"><span data-stu-id="56cb8-162">The Batch service performs periodic roll-up of statistics.</span></span> <span data-ttu-id="56cb8-163">典型的延迟为大约 30 分钟。</span><span class="sxs-lookup"><span data-stu-id="56cb8-163">The typical delay is about 30 minutes.</span></span>'
+    syntax:
+      content: 'function getAllLifetimeStatistics(options?: Models.JobGetAllLifetimeStatisticsOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.JobGetAllLifetimeStatisticsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getAllLifetimeStatistics_1'
+    name: getAllLifetimeStatistics(ServiceCallback<JobStatistics>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(callback: ServiceCallback<JobStatistics>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.JobStatistics>
+          description: |
+            <span data-ttu-id="56cb8-164">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-164">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getTaskCounts_2'
+    name: 'getTaskCounts(string, JobGetTaskCountsOptionalParams, ServiceCallback<TaskCounts>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTaskCounts(jobId: string, options: JobGetTaskCountsOptionalParams, callback: ServiceCallback<TaskCounts>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-165">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-165">The ID of the job.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobGetTaskCountsOptionalParams'
+          description: <span data-ttu-id="56cb8-166">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-166">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.TaskCounts>
+          description: |
+            <span data-ttu-id="56cb8-167">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-167">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetTaskCountsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getTaskCounts'
+    name: 'getTaskCounts(string, Models.JobGetTaskCountsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="56cb8-168">任务计数提供的按活动、 正在运行或已完成的任务状态对任务计数和任务成功或失败的计数。</span><span class="sxs-lookup"><span data-stu-id="56cb8-168">Task counts provide a count of the tasks by active, running or completed task state, and a count of tasks which succeeded or failed.</span></span> <span data-ttu-id="56cb8-169">准备状态中的任务将计为正在运行。</span><span class="sxs-lookup"><span data-stu-id="56cb8-169">Tasks in the preparing state are counted as running.</span></span>'
+    syntax:
+      content: 'function getTaskCounts(jobId: string, options?: Models.JobGetTaskCountsOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-170">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-170">The ID of the job.</span></span>
+        - id: options
+          type:
+            - Models.JobGetTaskCountsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobGetTaskCountsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.getTaskCounts_1'
+    name: 'getTaskCounts(string, ServiceCallback<TaskCounts>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTaskCounts(jobId: string, callback: ServiceCallback<TaskCounts>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-171">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-171">The ID of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.TaskCounts>
+          description: |
+            <span data-ttu-id="56cb8-172">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-172">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobGetTaskCountsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.constructor'
+    name: Job(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="56cb8-173">创建一个作业。</span><span class="sxs-lookup"><span data-stu-id="56cb8-173">Create a Job.</span></span>
+    syntax:
+      content: 'new Job(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            <span data-ttu-id="56cb8-174">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="56cb8-174">Reference to the service client.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.list_2'
+    name: 'list(JobListOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: JobListOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.JobListOptionalParams'
+          description: <span data-ttu-id="56cb8-175">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-175">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="56cb8-176">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-176">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.list'
+    name: list(Models.JobListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options?: Models.JobListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.JobListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.list_1'
+    name: list(ServiceCallback<CloudJobListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="56cb8-177">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobSchedule_2'
+    name: 'listFromJobSchedule(string, JobListFromJobScheduleOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobSchedule(jobScheduleId: string, options: JobListFromJobScheduleOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-178">你想要获取作业的列表的作业计划的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-178">The ID of the job schedule from which you want to get a list of jobs.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListFromJobScheduleOptionalParams'
+          description: <span data-ttu-id="56cb8-179">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-179">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="56cb8-180">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobSchedule'
+    name: 'listFromJobSchedule(string, Models.JobListFromJobScheduleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobSchedule(jobScheduleId: string, options?: Models.JobListFromJobScheduleOptionalParams)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-181">你想要获取作业的列表的作业计划的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-181">The ID of the job schedule from which you want to get a list of jobs.</span></span>
+        - id: options
+          type:
+            - Models.JobListFromJobScheduleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobSchedule_1'
+    name: 'listFromJobSchedule(string, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobSchedule(jobScheduleId: string, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-182">你想要获取作业的列表的作业计划的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-182">The ID of the job schedule from which you want to get a list of jobs.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="56cb8-183">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobScheduleNext_2'
+    name: 'listFromJobScheduleNext(string, JobListFromJobScheduleNextOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobScheduleNext(nextPageLink: string, options: JobListFromJobScheduleNextOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-184">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="56cb8-184">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListFromJobScheduleNextOptionalParams'
+          description: <span data-ttu-id="56cb8-185">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-185">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="56cb8-186">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-186">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobScheduleNext'
+    name: 'listFromJobScheduleNext(string, Models.JobListFromJobScheduleNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobScheduleNext(nextPageLink: string, options?: Models.JobListFromJobScheduleNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-187">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="56cb8-187">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.JobListFromJobScheduleNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listFromJobScheduleNext_1'
+    name: 'listFromJobScheduleNext(string, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listFromJobScheduleNext(nextPageLink: string, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-188">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="56cb8-188">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="56cb8-189">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListFromJobScheduleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listNext_2'
+    name: 'listNext(string, JobListNextOptionalParams, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: JobListNextOptionalParams, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-190">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="56cb8-190">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListNextOptionalParams'
+          description: <span data-ttu-id="56cb8-191">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-191">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="56cb8-192">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-192">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listNext'
+    name: 'listNext(string, Models.JobListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.JobListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-193">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="56cb8-193">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.JobListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listNext_1'
+    name: 'listNext(string, ServiceCallback<CloudJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-194">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="56cb8-194">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListResult>
+          description: |
+            <span data-ttu-id="56cb8-195">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus_2'
+    name: 'listPreparationAndReleaseTaskStatus(string, JobListPreparationAndReleaseTaskStatusOptionalParams, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatus(jobId: string, options: JobListPreparationAndReleaseTaskStatusOptionalParams, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-196">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-196">The ID of the job.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListPreparationAndReleaseTaskStatusOptionalParams'
+          description: <span data-ttu-id="56cb8-197">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-197">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="56cb8-198">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus'
+    name: 'listPreparationAndReleaseTaskStatus(string, Models.JobListPreparationAndReleaseTaskStatusOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="56cb8-199">此 API 返回运行作业准备或作业释放任务的所有计算节点上的作业准备和作业发布任务状态。</span><span class="sxs-lookup"><span data-stu-id="56cb8-199">This API returns the Job Preparation and Job Release task status on all compute nodes that have run the Job Preparation or Job Release task.</span></span> <span data-ttu-id="56cb8-200">这包括已从池中删除节点。</span><span class="sxs-lookup"><span data-stu-id="56cb8-200">This includes nodes which have since been removed from the pool.</span></span> <span data-ttu-id="56cb8-201">如果上一个作业，它具有无作业准备或作业发布任务调用此 API，Batch 服务将返回错误代码为 JobPreparationTaskNotSpecified HTTP 状态代码 409 （冲突）。</span><span class="sxs-lookup"><span data-stu-id="56cb8-201">If this API is invoked on a job which has no Job Preparation or Job Release task, the Batch service returns HTTP status code 409 (Conflict) with an error code of JobPreparationTaskNotSpecified.</span></span>'
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatus(jobId: string, options?: Models.JobListPreparationAndReleaseTaskStatusOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-202">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-202">The ID of the job.</span></span>
+        - id: options
+          type:
+            - Models.JobListPreparationAndReleaseTaskStatusOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus_1'
+    name: 'listPreparationAndReleaseTaskStatus(string, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatus(jobId: string, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-203">作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-203">The ID of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="56cb8-204">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-204">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_2'
+    name: 'listPreparationAndReleaseTaskStatusNext(string, JobListPreparationAndReleaseTaskStatusNextOptionalParams, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatusNext(nextPageLink: string, options: JobListPreparationAndReleaseTaskStatusNextOptionalParams, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-205">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="56cb8-205">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobListPreparationAndReleaseTaskStatusNextOptionalParams'
+          description: <span data-ttu-id="56cb8-206">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-206">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="56cb8-207">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-207">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext'
+    name: 'listPreparationAndReleaseTaskStatusNext(string, Models.JobListPreparationAndReleaseTaskStatusNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="56cb8-208">此 API 返回运行作业准备或作业释放任务的所有计算节点上的作业准备和作业发布任务状态。</span><span class="sxs-lookup"><span data-stu-id="56cb8-208">This API returns the Job Preparation and Job Release task status on all compute nodes that have run the Job Preparation or Job Release task.</span></span> <span data-ttu-id="56cb8-209">这包括已从池中删除节点。</span><span class="sxs-lookup"><span data-stu-id="56cb8-209">This includes nodes which have since been removed from the pool.</span></span> <span data-ttu-id="56cb8-210">如果上一个作业，它具有无作业准备或作业发布任务调用此 API，Batch 服务将返回错误代码为 JobPreparationTaskNotSpecified HTTP 状态代码 409 （冲突）。</span><span class="sxs-lookup"><span data-stu-id="56cb8-210">If this API is invoked on a job which has no Job Preparation or Job Release task, the Batch service returns HTTP status code 409 (Conflict) with an error code of JobPreparationTaskNotSpecified.</span></span>'
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatusNext(nextPageLink: string, options?: Models.JobListPreparationAndReleaseTaskStatusNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-211">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="56cb8-211">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.JobListPreparationAndReleaseTaskStatusNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_1'
+    name: 'listPreparationAndReleaseTaskStatusNext(string, ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listPreparationAndReleaseTaskStatusNext(nextPageLink: string, callback: ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-212">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="56cb8-212">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+          description: |
+            <span data-ttu-id="56cb8-213">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-213">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobListPreparationAndReleaseTaskStatusResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.patch_2'
+    name: 'patch(string, JobPatchParameter, JobPatchOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(jobId: string, jobPatchParameter: JobPatchParameter, options: JobPatchOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-214">你想要更新其属性的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-214">The ID of the job whose properties you want to update.</span></span>
+        - id: jobPatchParameter
+          type:
+            - '@azure/batch.JobPatchParameter'
+          description: <span data-ttu-id="56cb8-215">请求参数。</span><span class="sxs-lookup"><span data-stu-id="56cb8-215">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobPatchOptionalParams'
+          description: <span data-ttu-id="56cb8-216">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-216">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-217">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-217">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.patch'
+    name: 'patch(string, JobPatchParameter, Models.JobPatchOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="56cb8-218">这会替换请求中指定的作业属性。</span><span class="sxs-lookup"><span data-stu-id="56cb8-218">This replaces only the job properties specified in the request.</span></span> <span data-ttu-id="56cb8-219">例如，如果作业具有约束，并且请求未指定约束元素，该作业会保留现有约束。</span><span class="sxs-lookup"><span data-stu-id="56cb8-219">For example, if the job has constraints, and a request does not specify the constraints element, then the job keeps the existing constraints.</span></span>'
+    syntax:
+      content: 'function patch(jobId: string, jobPatchParameter: JobPatchParameter, options?: Models.JobPatchOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-220">你想要更新其属性的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-220">The ID of the job whose properties you want to update.</span></span>
+        - id: jobPatchParameter
+          type:
+            - '@azure/batch.JobPatchParameter'
+          description: <span data-ttu-id="56cb8-221">请求参数。</span><span class="sxs-lookup"><span data-stu-id="56cb8-221">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - Models.JobPatchOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.patch_1'
+    name: 'patch(string, JobPatchParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(jobId: string, jobPatchParameter: JobPatchParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-222">你想要更新其属性的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-222">The ID of the job whose properties you want to update.</span></span>
+        - id: jobPatchParameter
+          type:
+            - '@azure/batch.JobPatchParameter'
+          description: <span data-ttu-id="56cb8-223">请求参数。</span><span class="sxs-lookup"><span data-stu-id="56cb8-223">The parameters for the request.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-224">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-224">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.terminate_2'
+    name: 'terminate(string, JobTerminateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobId: string, options: JobTerminateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-225">若要终止该作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-225">The ID of the job to terminate.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobTerminateOptionalParams'
+          description: <span data-ttu-id="56cb8-226">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-226">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-227">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-227">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.terminate'
+    name: 'terminate(string, Models.JobTerminateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="56cb8-228">当收到终止作业请求时，Batch 服务将设置为终止状态的作业。</span><span class="sxs-lookup"><span data-stu-id="56cb8-228">When a Terminate Job request is received, the Batch service sets the job to the terminating state.</span></span> <span data-ttu-id="56cb8-229">然后，Batch 服务终止任何正在运行的任务与作业关联，并运行所需的任何作业释放任务。</span><span class="sxs-lookup"><span data-stu-id="56cb8-229">The Batch service then terminates any running tasks associated with the job and runs any required job release tasks.</span></span> <span data-ttu-id="56cb8-230">然后该作业将移动到已完成的状态。</span><span class="sxs-lookup"><span data-stu-id="56cb8-230">Then the job moves into the completed state.</span></span> <span data-ttu-id="56cb8-231">如果有任何任务在作业中处于活动状态，则它们仍处于活动状态。</span><span class="sxs-lookup"><span data-stu-id="56cb8-231">If there are any tasks in the job in the active state, they will remain in the active state.</span></span> <span data-ttu-id="56cb8-232">作业是终止后，不能添加新任务和所有剩余的活动任务将不会计划。</span><span class="sxs-lookup"><span data-stu-id="56cb8-232">Once a job is terminated, new tasks cannot be added and any remaining active tasks will not be scheduled.</span></span>'
+    syntax:
+      content: 'function terminate(jobId: string, options?: Models.JobTerminateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-233">若要终止该作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-233">The ID of the job to terminate.</span></span>
+        - id: options
+          type:
+            - Models.JobTerminateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.terminate_1'
+    name: 'terminate(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-234">若要终止该作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-234">The ID of the job to terminate.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-235">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-235">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.update_2'
+    name: 'update(string, JobUpdateParameter, JobUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobId: string, jobUpdateParameter: JobUpdateParameter, options: JobUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-236">你想要更新其属性的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-236">The ID of the job whose properties you want to update.</span></span>
+        - id: jobUpdateParameter
+          type:
+            - '@azure/batch.JobUpdateParameter'
+          description: <span data-ttu-id="56cb8-237">请求参数。</span><span class="sxs-lookup"><span data-stu-id="56cb8-237">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.JobUpdateOptionalParams'
+          description: <span data-ttu-id="56cb8-238">可选参数</span><span class="sxs-lookup"><span data-stu-id="56cb8-238">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-239">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-239">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.update'
+    name: 'update(string, JobUpdateParameter, Models.JobUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="56cb8-240">这会完全替换作业的所有可更新的属性。</span><span class="sxs-lookup"><span data-stu-id="56cb8-240">This fully replaces all the updatable properties of the job.</span></span> <span data-ttu-id="56cb8-241">例如，如果作业具有与之关联的约束和约束未指定与此请求，批处理服务将删除现有的约束。</span><span class="sxs-lookup"><span data-stu-id="56cb8-241">For example, if the job has constraints associated with it and if constraints is not specified with this request, then the Batch service will remove the existing constraints.</span></span>'
+    syntax:
+      content: 'function update(jobId: string, jobUpdateParameter: JobUpdateParameter, options?: Models.JobUpdateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-242">你想要更新其属性的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-242">The ID of the job whose properties you want to update.</span></span>
+        - id: jobUpdateParameter
+          type:
+            - '@azure/batch.JobUpdateParameter'
+          description: <span data-ttu-id="56cb8-243">请求参数。</span><span class="sxs-lookup"><span data-stu-id="56cb8-243">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - Models.JobUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Job.update_1'
+    name: 'update(string, JobUpdateParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobId: string, jobUpdateParameter: JobUpdateParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="56cb8-244">你想要更新其属性的作业的 ID。</span><span class="sxs-lookup"><span data-stu-id="56cb8-244">The ID of the job whose properties you want to update.</span></span>
+        - id: jobUpdateParameter
+          type:
+            - '@azure/batch.JobUpdateParameter'
+          description: <span data-ttu-id="56cb8-245">请求参数。</span><span class="sxs-lookup"><span data-stu-id="56cb8-245">The parameters for the request.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="56cb8-246">回调</span><span class="sxs-lookup"><span data-stu-id="56cb8-246">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobUpdateResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.JobAddParameter'
+    name: JobAddParameter
+    spec.typeScript:
+      - name: JobAddParameter
+        fullName: JobAddParameter
+        uid: '@azure/batch.JobAddParameter'
+  - uid: '@azure/batch.JobAddOptionalParams'
+    name: JobAddOptionalParams
+    spec.typeScript:
+      - name: JobAddOptionalParams
+        fullName: JobAddOptionalParams
+        uid: '@azure/batch.JobAddOptionalParams'
+  - uid: '@azure/batch.JobDeleteMethodOptionalParams'
+    name: JobDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: JobDeleteMethodOptionalParams
+        fullName: JobDeleteMethodOptionalParams
+        uid: '@azure/batch.JobDeleteMethodOptionalParams'
+  - uid: '@azure/batch.JobDisableOptionalParams'
+    name: JobDisableOptionalParams
+    spec.typeScript:
+      - name: JobDisableOptionalParams
+        fullName: JobDisableOptionalParams
+        uid: '@azure/batch.JobDisableOptionalParams'
+  - uid: '@azure/batch.JobEnableOptionalParams'
+    name: JobEnableOptionalParams
+    spec.typeScript:
+      - name: JobEnableOptionalParams
+        fullName: JobEnableOptionalParams
+        uid: '@azure/batch.JobEnableOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudJob>
+    name: CloudJob>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudJob
+        fullName: CloudJob
+        uid: '@azure/batch.CloudJob'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobGetOptionalParams'
+    name: JobGetOptionalParams
+    spec.typeScript:
+      - name: JobGetOptionalParams
+        fullName: JobGetOptionalParams
+        uid: '@azure/batch.JobGetOptionalParams'
+  - uid: ServiceCallback<@azure/batch.JobStatistics>
+    name: JobStatistics>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobStatistics
+        fullName: JobStatistics
+        uid: '@azure/batch.JobStatistics'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobGetAllLifetimeStatisticsOptionalParams'
+    name: JobGetAllLifetimeStatisticsOptionalParams
+    spec.typeScript:
+      - name: JobGetAllLifetimeStatisticsOptionalParams
+        fullName: JobGetAllLifetimeStatisticsOptionalParams
+        uid: '@azure/batch.JobGetAllLifetimeStatisticsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.TaskCounts>
+    name: TaskCounts>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: TaskCounts
+        fullName: TaskCounts
+        uid: '@azure/batch.TaskCounts'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobGetTaskCountsOptionalParams'
+    name: JobGetTaskCountsOptionalParams
+    spec.typeScript:
+      - name: JobGetTaskCountsOptionalParams
+        fullName: JobGetTaskCountsOptionalParams
+        uid: '@azure/batch.JobGetTaskCountsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudJobListResult>
+    name: CloudJobListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudJobListResult
+        fullName: CloudJobListResult
+        uid: '@azure/batch.CloudJobListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobListOptionalParams'
+    name: JobListOptionalParams
+    spec.typeScript:
+      - name: JobListOptionalParams
+        fullName: JobListOptionalParams
+        uid: '@azure/batch.JobListOptionalParams'
+  - uid: '@azure/batch.JobListFromJobScheduleOptionalParams'
+    name: JobListFromJobScheduleOptionalParams
+    spec.typeScript:
+      - name: JobListFromJobScheduleOptionalParams
+        fullName: JobListFromJobScheduleOptionalParams
+        uid: '@azure/batch.JobListFromJobScheduleOptionalParams'
+  - uid: '@azure/batch.JobListFromJobScheduleNextOptionalParams'
+    name: JobListFromJobScheduleNextOptionalParams
+    spec.typeScript:
+      - name: JobListFromJobScheduleNextOptionalParams
+        fullName: JobListFromJobScheduleNextOptionalParams
+        uid: '@azure/batch.JobListFromJobScheduleNextOptionalParams'
+  - uid: '@azure/batch.JobListNextOptionalParams'
+    name: JobListNextOptionalParams
+    spec.typeScript:
+      - name: JobListNextOptionalParams
+        fullName: JobListNextOptionalParams
+        uid: '@azure/batch.JobListNextOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult>
+    name: CloudJobListPreparationAndReleaseTaskStatusResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudJobListPreparationAndReleaseTaskStatusResult
+        fullName: CloudJobListPreparationAndReleaseTaskStatusResult
+        uid: '@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusOptionalParams'
+    name: JobListPreparationAndReleaseTaskStatusOptionalParams
+    spec.typeScript:
+      - name: JobListPreparationAndReleaseTaskStatusOptionalParams
+        fullName: JobListPreparationAndReleaseTaskStatusOptionalParams
+        uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusOptionalParams'
+  - uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusNextOptionalParams'
+    name: JobListPreparationAndReleaseTaskStatusNextOptionalParams
+    spec.typeScript:
+      - name: JobListPreparationAndReleaseTaskStatusNextOptionalParams
+        fullName: JobListPreparationAndReleaseTaskStatusNextOptionalParams
+        uid: '@azure/batch.JobListPreparationAndReleaseTaskStatusNextOptionalParams'
+  - uid: '@azure/batch.JobPatchParameter'
+    name: JobPatchParameter
+    spec.typeScript:
+      - name: JobPatchParameter
+        fullName: JobPatchParameter
+        uid: '@azure/batch.JobPatchParameter'
+  - uid: '@azure/batch.JobPatchOptionalParams'
+    name: JobPatchOptionalParams
+    spec.typeScript:
+      - name: JobPatchOptionalParams
+        fullName: JobPatchOptionalParams
+        uid: '@azure/batch.JobPatchOptionalParams'
+  - uid: '@azure/batch.JobTerminateOptionalParams'
+    name: JobTerminateOptionalParams
+    spec.typeScript:
+      - name: JobTerminateOptionalParams
+        fullName: JobTerminateOptionalParams
+        uid: '@azure/batch.JobTerminateOptionalParams'
+  - uid: '@azure/batch.JobUpdateParameter'
+    name: JobUpdateParameter
+    spec.typeScript:
+      - name: JobUpdateParameter
+        fullName: JobUpdateParameter
+        uid: '@azure/batch.JobUpdateParameter'
+  - uid: '@azure/batch.JobUpdateOptionalParams'
+    name: JobUpdateOptionalParams
+    spec.typeScript:
+      - name: JobUpdateOptionalParams
+        fullName: JobUpdateOptionalParams
+        uid: '@azure/batch.JobUpdateOptionalParams'

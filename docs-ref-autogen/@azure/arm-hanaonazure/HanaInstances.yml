@@ -4,8 +4,12 @@ items:
     name: HanaInstances
     fullName: HanaInstances
     children:
+      - '@azure/arm-hanaonazure.HanaInstances.beginCreate'
+      - '@azure/arm-hanaonazure.HanaInstances.beginDeleteMethod'
       - '@azure/arm-hanaonazure.HanaInstances.beginEnableMonitoring'
       - '@azure/arm-hanaonazure.HanaInstances.beginRestart'
+      - '@azure/arm-hanaonazure.HanaInstances.create'
+      - '@azure/arm-hanaonazure.HanaInstances.deleteMethod'
       - '@azure/arm-hanaonazure.HanaInstances.enableMonitoring'
       - '@azure/arm-hanaonazure.HanaInstances.get'
       - '@azure/arm-hanaonazure.HanaInstances.get_2'
@@ -31,6 +35,64 @@ items:
       - typeScript
     type: class
     summary: 表示 HanaInstances 类。
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstances.beginCreate'
+    name: 'beginCreate(string, string, HanaInstance, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建 SAP HANA 实例的指定的订阅、 资源组和实例名称。
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, hanaInstanceName: string, hanaInstanceParameter: HanaInstance, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: hanaInstanceName
+          type:
+            - string
+          description: Azure 实例上的 SAP HANA 的名称。
+        - id: hanaInstanceParameter
+          type:
+            - '@azure/arm-hanaonazure.HanaInstance'
+          description: 请求正文表示 HanaInstance
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstances.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除具有指定的订阅、 资源组和实例名称的 SAP HANA 实例。
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, hanaInstanceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: hanaInstanceName
+          type:
+            - string
+          description: Azure 实例上的 SAP HANA 的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstances.beginEnableMonitoring'
     name: 'beginEnableMonitoring(string, string, MonitoringDetails, msRest.RequestOptionsBase)'
@@ -89,6 +151,64 @@ items:
       return:
         type:
           - Promise<LROPoller>
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstances.create'
+    name: 'create(string, string, HanaInstance, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建 SAP HANA 实例的指定的订阅、 资源组和实例名称。
+    syntax:
+      content: 'function create(resourceGroupName: string, hanaInstanceName: string, hanaInstanceParameter: HanaInstance, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: hanaInstanceName
+          type:
+            - string
+          description: Azure 实例上的 SAP HANA 的名称。
+        - id: hanaInstanceParameter
+          type:
+            - '@azure/arm-hanaonazure.HanaInstance'
+          description: 请求正文表示 HanaInstance
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.HanaInstancesCreateResponse>
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.HanaInstances.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除具有指定的订阅、 资源组和实例名称的 SAP HANA 实例。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, hanaInstanceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: hanaInstanceName
+          type:
+            - string
+          description: Azure 实例上的 SAP HANA 的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.HanaInstances.enableMonitoring'
     name: 'enableMonitoring(string, string, MonitoringDetails, msRest.RequestOptionsBase)'
@@ -633,6 +753,12 @@ references:
       - name: HanaManagementClientContext
         fullName: HanaManagementClientContext
         uid: '@azure/arm-hanaonazure.HanaManagementClientContext'
+  - uid: '@azure/arm-hanaonazure.HanaInstance'
+    name: HanaInstance
+    spec.typeScript:
+      - name: HanaInstance
+        fullName: HanaInstance
+        uid: '@azure/arm-hanaonazure.HanaInstance'
   - uid: '@azure/arm-hanaonazure.MonitoringDetails'
     name: MonitoringDetails
     spec.typeScript:

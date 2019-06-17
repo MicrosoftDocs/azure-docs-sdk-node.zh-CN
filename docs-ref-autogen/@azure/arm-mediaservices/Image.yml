@@ -1,0 +1,128 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.Image'
+    name: Image
+    fullName: Image
+    children:
+      - '@azure/arm-mediaservices.Image.keyFrameInterval'
+      - '@azure/arm-mediaservices.Image.label'
+      - '@azure/arm-mediaservices.Image.odatatype'
+      - '@azure/arm-mediaservices.Image.range'
+      - '@azure/arm-mediaservices.Image.start'
+      - '@azure/arm-mediaservices.Image.step'
+      - '@azure/arm-mediaservices.Image.stretchMode'
+    langs:
+      - typeScript
+    type: interface
+    summary: 介绍用于从输入视频生成缩略图的基本属性
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.keyFrameInterval'
+    name: keyFrameInterval
+    fullName: keyFrameInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '两个关键帧，从而定义一组 (gop) 之间的距离。 值应为非零整数在范围 [1，30] 秒钟内，采用 ISO 8601 格式指定。 默认值为 2 秒 (PT2S)。'
+    optional: true
+    syntax:
+      content: 'keyFrameInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 编解码器可选标签。 标签可用于控制 muxing 行为。
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.Image"'
+      return:
+        type:
+          - '"#Microsoft.Media.Image"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.range'
+    name: range
+    fullName: range
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '停止生成缩略图的视频的输入中的位置。 值可以是绝对时间戳 (ISO 8601，例如：PT5M30S 停止在 5 分钟和 30 秒)，或帧数 (例如，300 个 1/300,smalldatetime 帧停止) 或相对的值 （例如，100%)。'
+    optional: true
+    syntax:
+      content: 'range?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.start'
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '输入视频从何处开始生成缩略图中的位置。 值可以是绝对时间戳 (ISO 8601，例如：PT05S)，或帧数 (例如，为 10 个 10，10 帧) 或相对的值 （例如，1%)。 此外支持的宏 {Best}，它指示编码器，以从视频的前几秒选择最佳的缩略图。'
+    syntax:
+      content: 'start: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.step'
+    name: step
+    fullName: step
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 生成的缩略图时的时间间隔。 值可以是绝对时间戳 (ISO 8601，例如：一个 PT05S 图像每隔 5 秒），或帧数 (例如，30 每隔 30 帧) 或相对的值 （例如，1%)。
+    optional: true
+    syntax:
+      content: 'step?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.stretchMode'
+    name: stretchMode
+    fullName: stretchMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 大小调整模式-如何输入的视频将会调整大小以适合所需的输出解决方案。 默认值为自动调整大小。 可能的值包括：None、 自动调整大小，自动调整
+    optional: true
+    syntax:
+      content: 'stretchMode?: StretchMode'
+      return:
+        type:
+          - '@azure/arm-mediaservices.StretchMode'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.StretchMode'
+    name: StretchMode
+    spec.typeScript:
+      - name: StretchMode
+        fullName: StretchMode
+        uid: '@azure/arm-mediaservices.StretchMode'

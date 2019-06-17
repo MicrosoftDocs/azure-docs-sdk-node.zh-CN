@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.JobOutput'
+    name: JobOutput
+    fullName: JobOutput
+    children:
+      - '@azure/arm-mediaservices.JobOutput.error'
+      - '@azure/arm-mediaservices.JobOutput.label'
+      - '@azure/arm-mediaservices.JobOutput.odatatype'
+      - '@azure/arm-mediaservices.JobOutput.progress'
+      - '@azure/arm-mediaservices.JobOutput.state'
+    langs:
+      - typeScript
+    type: interface
+    summary: 介绍 JobOutput 的所有属性。
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutput.error'
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      如果 JobOutput 处于错误状态，它包含错误的详细信息。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'error?: JobError'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JobError'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutput.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '为了帮助唯一地标识分配给 JobOutput 标签。 当你转换具有多个 TransformOutput，你的作业，从而使得有多个 JobOutput 时，这很有用。 在这种情况下，当提交作业，您将添加两个或多个 JobOutputs TransformOutputs 在转换中的顺序相同。 随后，当您检索作业，通过事件中或在 GET 请求中，可以使用标签可以轻松地识别 JobOutput。 如果未提供标签，则默认值为 {presetName} _ {outputIndex} 将使用，其中预设的名称是在相应 TransformOutput 和输出索引中的预设的名称是相对的此索引 JobOutput 作业中。 请注意，此索引是在其转换相应 TransformOutput 的相对索引相同。'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutput.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'odatatype: "JobOutput"'
+      return:
+        type:
+          - '"JobOutput"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutput.progress'
+    name: progress
+    fullName: progress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      如果 JobOutput 处于处理状态，则将包含作业的完成百分比。 值是一个估计值，不适合用于预测作业的完成时间。 若要确定 JobOutput 是否完成，请使用状态属性。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'progress?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutput.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 描述 JobOutput 的状态。 可能的值包括：取消，取消，Error，完成、 处理、 排队，Scheduled**注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'state?: JobState'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JobState'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.JobError'
+    name: JobError
+    spec.typeScript:
+      - name: JobError
+        fullName: JobError
+        uid: '@azure/arm-mediaservices.JobError'
+  - uid: '@azure/arm-mediaservices.JobState'
+    name: JobState
+    spec.typeScript:
+      - name: JobState
+        fullName: JobState
+        uid: '@azure/arm-mediaservices.JobState'

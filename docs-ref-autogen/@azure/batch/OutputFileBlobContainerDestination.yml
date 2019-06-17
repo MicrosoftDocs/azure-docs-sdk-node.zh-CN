@@ -1,0 +1,42 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.OutputFileBlobContainerDestination'
+    name: OutputFileBlobContainerDestination
+    fullName: OutputFileBlobContainerDestination
+    children:
+      - '@azure/batch.OutputFileBlobContainerDestination.containerUrl'
+      - '@azure/batch.OutputFileBlobContainerDestination.path'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 OutputFileBlobContainerDestination 的接口。
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFileBlobContainerDestination.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要将文件上传到 Azure Blob 存储中容器的 URL。 URL 必须包含共享访问签名 (SAS) 授予对容器的写权限。
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFileBlobContainerDestination.path'
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 目标 blob 或 Azure 存储容器中的虚拟目录。 如果 filePattern 所引用的特定文件 （即包含任何通配符），则路径为要将该文件上载到 blob 的名称。 如果 filePattern 包含一个或多个通配符 （并因此可能匹配多个文件），路径对要上传文件，是的 blob 虚拟目录 （将追加到每个 blob 名称前面） 的名称。 如果省略，文件与 blob 名称相匹配其文件上载到容器的根目录。
+    optional: true
+    syntax:
+      content: 'path?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

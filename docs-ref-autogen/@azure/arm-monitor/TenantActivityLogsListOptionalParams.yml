@@ -1,0 +1,127 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams'
+    name: TenantActivityLogsListOptionalParams
+    fullName: TenantActivityLogsListOptionalParams
+    children:
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.abortSignal'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.customHeaders'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.filter'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.onDownloadProgress'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.onUploadProgress'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.select'
+      - '@azure/arm-monitor.TenantActivityLogsListOptionalParams.timeout'
+    langs:
+      - typeScript
+    type: interface
+    summary: 可选参数。
+    extends:
+      name: RequestOptionsBase
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.abortSignal'
+    name: abortSignal
+    fullName: abortSignal
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用于中止的信号请求。
+    optional: true
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        type:
+          - AbortSignalLike
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.customHeaders'
+    name: customHeaders
+    fullName: customHeaders
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{object}[customHeaders]用户定义的自定义请求标头将发送请求之前应用。'
+    optional: true
+    syntax:
+      content: 'customHeaders?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.filter'
+    name: filter
+    fullName: filter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      减少收集的数据集。 <br>**$Filter**受到严格限制，允许仅以下模式。<br>-列出资源组的事件： $filter = eventTimestamp ge '<Start
+      Time>和 eventTimestamp le'<End Time>和 eventChannels eq 'Admin，Operation 和 resourceGroupName eq'<ResourceGroupName>。<br>-列出资源的事件： $filter = eventTimestamp ge '<Start Time>和 eventTimestamp le'<End Time>和 eventChannels eq 'Admin，Operation 和 resourceUri eq'<ResourceURI>。<br>-列出事件订阅： $filter = eventTimestamp ge '<Start Time>和 eventTimestamp le<End Time>和 eventChannels eq 'Admin，Operation。<br>-列出资源提供程序事件： $filter = eventTimestamp ge '<Start Time>和 eventTimestamp le<End Time>和 eventChannels eq 'Admin，Operation 和 resourceProvider eq'<ResourceProviderName>。<br>-列出相关 Id 的事件： api 版本 = 2014年-04-01 & $filter = eventTimestamp ge"2014年-07-16T04:36:37.6407898Z 和 eventTimestamp le"2014年-07-20T04:36:37.6407898Z 和 eventChannels eq 'Admin，Operation 和 correlationId eq '<CorrelationID>'.<br>**注意**：允许其他语法。
+    optional: true
+    syntax:
+      content: 'filter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.onDownloadProgress'
+    name: onDownloadProgress
+    fullName: onDownloadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在下载进度时触发的回调。
+    optional: true
+    syntax:
+      content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - 'undefined | (progress: TransferProgressEvent) => void'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.onUploadProgress'
+    name: onUploadProgress
+    fullName: onUploadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在上传进度时触发的回调。
+    optional: true
+    syntax:
+      content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - 'undefined | (progress: TransferProgressEvent) => void'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.select'
+    name: select
+    fullName: select
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用于获取给定的属性的事件。<br>**$Select**参数是要返回的属性名称的逗号分隔列表。 可能的值为：*授权*，*声明*， *correlationId*，*说明*， *eventDataId*， *eventName*， *eventTimestamp*， *httpRequest*，*级别*， *operationId*， *operationName*，*属性*， *resourceGroupName*， *resourceProviderName*， *resourceId*，*状态*， *submissionTimestamp*，*子状态*， *subscriptionId*
+    optional: true
+    syntax:
+      content: 'select?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.TenantActivityLogsListOptionalParams.timeout'
+    name: timeout
+    fullName: timeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一个请求可以获取自动终止之前的毫秒数。
+    optional: true
+    syntax:
+      content: 'timeout?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-monitor'

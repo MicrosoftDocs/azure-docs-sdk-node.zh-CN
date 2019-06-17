@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.Restriction'
+    name: Restriction
+    fullName: Restriction
+    children:
+      - '@azure/arm-storage.Restriction.reasonCode'
+      - '@azure/arm-storage.Restriction.type'
+      - '@azure/arm-storage.Restriction.values'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="4e04f-101">由于这不能使用 SKU 的限制。</span><span class="sxs-lookup"><span data-stu-id="4e04f-101">The restriction because of which SKU cannot be used.</span></span>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.reasonCode'
+    name: reasonCode
+    fullName: reasonCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4e04f-102">限制的原因。</span><span class="sxs-lookup"><span data-stu-id="4e04f-102">The reason for the restriction.</span></span> <span data-ttu-id="4e04f-103">到目前为止这可以是"QuotaId"或"NotAvailableForSubscription"。</span><span class="sxs-lookup"><span data-stu-id="4e04f-103">As of now this can be "QuotaId" or "NotAvailableForSubscription".</span></span> <span data-ttu-id="4e04f-104">当 SKU requiredQuotas 参数根据该订阅不属于该配额设置配额 Id。</span><span class="sxs-lookup"><span data-stu-id="4e04f-104">Quota Id is set when the SKU has requiredQuotas parameter as the subscription does not belong to that quota.</span></span> <span data-ttu-id="4e04f-105">"NotAvailableForSubscription"与在 DC 的容量。</span><span class="sxs-lookup"><span data-stu-id="4e04f-105">The "NotAvailableForSubscription" is related to capacity at DC.</span></span> <span data-ttu-id="4e04f-106">可能的值包括：QuotaId''，''NotAvailableForSubscription</span><span class="sxs-lookup"><span data-stu-id="4e04f-106">Possible values include: ''QuotaId'', ''NotAvailableForSubscription''</span></span>'
+    optional: true
+    syntax:
+      content: 'reasonCode?: ReasonCode'
+      return:
+        type:
+          - '@azure/arm-storage.ReasonCode'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4e04f-107">限制的类型。</span><span class="sxs-lookup"><span data-stu-id="4e04f-107">The type of restrictions.</span></span> <span data-ttu-id="4e04f-108">到目前为止为此只可能值为位置。</span><span class="sxs-lookup"><span data-stu-id="4e04f-108">As of now only possible value for this is location.</span></span>
+      <span data-ttu-id="4e04f-109">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="4e04f-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.values'
+    name: values
+    fullName: values
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4e04f-110">限制值。</span><span class="sxs-lookup"><span data-stu-id="4e04f-110">The value of restrictions.</span></span> <span data-ttu-id="4e04f-111">如果限制类型设置为位置。</span><span class="sxs-lookup"><span data-stu-id="4e04f-111">If the restriction type is set to location.</span></span> <span data-ttu-id="4e04f-112">这将是不同 SKU 是受限制的位置。</span><span class="sxs-lookup"><span data-stu-id="4e04f-112">This would be different locations where the SKU is restricted.</span></span>
+      <span data-ttu-id="4e04f-113">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="4e04f-113">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'values?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.ReasonCode'
+    name: ReasonCode
+    spec.typeScript:
+      - name: ReasonCode
+        fullName: ReasonCode
+        uid: '@azure/arm-storage.ReasonCode'

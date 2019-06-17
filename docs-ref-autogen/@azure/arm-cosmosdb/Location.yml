@@ -7,12 +7,13 @@ items:
       - '@azure/arm-cosmosdb.Location.documentEndpoint'
       - '@azure/arm-cosmosdb.Location.failoverPriority'
       - '@azure/arm-cosmosdb.Location.id'
+      - '@azure/arm-cosmosdb.Location.isZoneRedundant'
       - '@azure/arm-cosmosdb.Location.locationName'
       - '@azure/arm-cosmosdb.Location.provisioningState'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="2e099-101">部署 Azure Cosmos DB 数据库帐户的区域。</span><span class="sxs-lookup"><span data-stu-id="2e099-101">A region in which the Azure Cosmos DB database account is deployed.</span></span>
+    summary: <span data-ttu-id="67353-101">部署 Azure Cosmos DB 数据库帐户的区域。</span><span class="sxs-lookup"><span data-stu-id="67353-101">A region in which the Azure Cosmos DB database account is deployed.</span></span>
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.Location.documentEndpoint'
     name: documentEndpoint
@@ -21,7 +22,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="2e099-102">特定区域的连接终结点。</span><span class="sxs-lookup"><span data-stu-id="2e099-102">The connection endpoint for the specific region.</span></span> <span data-ttu-id="2e099-103">示例： https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="2e099-103">Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/ **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: '<span data-ttu-id="67353-102">特定区域的连接终结点。</span><span class="sxs-lookup"><span data-stu-id="67353-102">The connection endpoint for the specific region.</span></span> <span data-ttu-id="67353-103">示例： https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="67353-103">Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/ **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
     optional: true
     syntax:
       content: 'documentEndpoint?: undefined | string'
@@ -36,7 +37,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="2e099-104">在区域故障转移优先级。</span><span class="sxs-lookup"><span data-stu-id="2e099-104">The failover priority of the region.</span></span> <span data-ttu-id="2e099-105">故障转移优先级 0 指示写入区域。</span><span class="sxs-lookup"><span data-stu-id="2e099-105">A failover priority of 0 indicates a write region.</span></span> <span data-ttu-id="2e099-106">故障转移优先级的最大值 = （的区域-1 的总数量）。</span><span class="sxs-lookup"><span data-stu-id="2e099-106">The maximum value for a failover priority = (total number of regions - 1).</span></span> <span data-ttu-id="2e099-107">故障转移优先级值必须是唯一的每个数据库帐户所在的区域。</span><span class="sxs-lookup"><span data-stu-id="2e099-107">Failover priority values must be unique for each of the regions in which the database account exists.</span></span>
+    summary: <span data-ttu-id="67353-104">在区域故障转移优先级。</span><span class="sxs-lookup"><span data-stu-id="67353-104">The failover priority of the region.</span></span> <span data-ttu-id="67353-105">故障转移优先级 0 指示写入区域。</span><span class="sxs-lookup"><span data-stu-id="67353-105">A failover priority of 0 indicates a write region.</span></span> <span data-ttu-id="67353-106">故障转移优先级的最大值 = （的区域-1 的总数量）。</span><span class="sxs-lookup"><span data-stu-id="67353-106">The maximum value for a failover priority = (total number of regions - 1).</span></span> <span data-ttu-id="67353-107">故障转移优先级值必须是唯一的每个数据库帐户所在的区域。</span><span class="sxs-lookup"><span data-stu-id="67353-107">Failover priority values must be unique for each of the regions in which the database account exists.</span></span>
     optional: true
     syntax:
       content: 'failoverPriority?: undefined | number'
@@ -52,14 +53,29 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="2e099-108">数据库帐户内的区域的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="2e099-108">The unique identifier of the region within the database account.</span></span> <span data-ttu-id="2e099-109">示例： &lt;accountName&gt;-&lt;locationName&gt;。</span><span class="sxs-lookup"><span data-stu-id="2e099-109">Example: &lt;accountName&gt;-&lt;locationName&gt;.</span></span>
-      <span data-ttu-id="2e099-110">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="2e099-110">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="67353-108">数据库帐户内的区域的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="67353-108">The unique identifier of the region within the database account.</span></span> <span data-ttu-id="67353-109">示例： &lt;accountName&gt;-&lt;locationName&gt;。</span><span class="sxs-lookup"><span data-stu-id="67353-109">Example: &lt;accountName&gt;-&lt;locationName&gt;.</span></span>
+      <span data-ttu-id="67353-110">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="67353-110">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Location.isZoneRedundant'
+    name: isZoneRedundant
+    fullName: isZoneRedundant
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="67353-111">标志，指示此区域为 AvailabilityZone 区域</span><span class="sxs-lookup"><span data-stu-id="67353-111">Flag to indicate whether or not this region is an AvailabilityZone region</span></span>
+    optional: true
+    syntax:
+      content: 'isZoneRedundant?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.Location.locationName'
     name: locationName
@@ -68,7 +84,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="2e099-111">区域的名称。</span><span class="sxs-lookup"><span data-stu-id="2e099-111">The name of the region.</span></span>
+    summary: <span data-ttu-id="67353-112">区域的名称。</span><span class="sxs-lookup"><span data-stu-id="67353-112">The name of the region.</span></span>
     optional: true
     syntax:
       content: 'locationName?: undefined | string'

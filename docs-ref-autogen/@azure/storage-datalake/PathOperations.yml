@@ -1,0 +1,737 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/storage-datalake.PathOperations'
+    name: PathOperations
+    fullName: PathOperations
+    children:
+      - '@azure/storage-datalake.PathOperations.create'
+      - '@azure/storage-datalake.PathOperations.create_2'
+      - '@azure/storage-datalake.PathOperations.create_1'
+      - '@azure/storage-datalake.PathOperations.deleteMethod'
+      - '@azure/storage-datalake.PathOperations.deleteMethod_2'
+      - '@azure/storage-datalake.PathOperations.deleteMethod_1'
+      - '@azure/storage-datalake.PathOperations.getProperties'
+      - '@azure/storage-datalake.PathOperations.getProperties_2'
+      - '@azure/storage-datalake.PathOperations.getProperties_1'
+      - '@azure/storage-datalake.PathOperations.lease'
+      - '@azure/storage-datalake.PathOperations.lease_2'
+      - '@azure/storage-datalake.PathOperations.lease_1'
+      - '@azure/storage-datalake.PathOperations.list'
+      - '@azure/storage-datalake.PathOperations.list_2'
+      - '@azure/storage-datalake.PathOperations.list_1'
+      - '@azure/storage-datalake.PathOperations.constructor'
+      - '@azure/storage-datalake.PathOperations.read'
+      - '@azure/storage-datalake.PathOperations.read_2'
+      - '@azure/storage-datalake.PathOperations.read_1'
+      - '@azure/storage-datalake.PathOperations.update'
+      - '@azure/storage-datalake.PathOperations.update_2'
+      - '@azure/storage-datalake.PathOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="71cde-101">表示 PathOperations 类。</span><span class="sxs-lookup"><span data-stu-id="71cde-101">Class representing a PathOperations.</span></span>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create'
+    name: 'create(string, string, Models.PathCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="71cde-102">创建或重命名文件或目录。</span><span class="sxs-lookup"><span data-stu-id="71cde-102">Create or rename a file or directory.</span></span>    <span data-ttu-id="71cde-103">默认情况下，目标将被覆盖，并且如果目标已存在且具有租约的租约已中断。</span><span class="sxs-lookup"><span data-stu-id="71cde-103">By default, the destination is overwritten and if the destination already exists and has a lease the lease is broken.</span></span>  <span data-ttu-id="71cde-104">此操作支持条件性 HTTP 请求。</span><span class="sxs-lookup"><span data-stu-id="71cde-104">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="71cde-105">有关详细信息，请参阅[为 Blob 服务操作指定条件标头](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。</span><span class="sxs-lookup"><span data-stu-id="71cde-105">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>
+      <span data-ttu-id="71cde-106">若要未通过目标已存在，请使用与无-If-match 条件的请求:"\*"。</span><span class="sxs-lookup"><span data-stu-id="71cde-106">To fail if the destination already exists, use a conditional request with If-None-Match: "\*".</span></span>
+    syntax:
+      content: 'function create(filesystem: string, path: string, options?: Models.PathCreateOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-107">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-107">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-108">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-108">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create_2'
+    name: 'create(string, string, PathCreateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, path: string, options: PathCreateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-109">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-109">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-110">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-110">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathCreateOptionalParams'
+          description: <span data-ttu-id="71cde-111">可选参数</span><span class="sxs-lookup"><span data-stu-id="71cde-111">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-112">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-112">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create_1'
+    name: 'create(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-113">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-113">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-114">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-114">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-115">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-115">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod'
+    name: 'deleteMethod(string, string, Models.PathDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="71cde-116">删除文件或目录。</span><span class="sxs-lookup"><span data-stu-id="71cde-116">Delete the file or directory.</span></span> <span data-ttu-id="71cde-117">此操作支持条件性 HTTP 请求。</span><span class="sxs-lookup"><span data-stu-id="71cde-117">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="71cde-118">有关详细信息，请参阅[为 Blob 服务操作指定条件标头](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。</span><span class="sxs-lookup"><span data-stu-id="71cde-118">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, options?: Models.PathDeleteMethodOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-119">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-119">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-120">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-120">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod_2'
+    name: 'deleteMethod(string, string, PathDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, options: PathDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-121">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-121">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-122">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-122">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+          description: <span data-ttu-id="71cde-123">可选参数</span><span class="sxs-lookup"><span data-stu-id="71cde-123">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-124">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-124">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-125">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-125">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-126">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-126">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-127">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-127">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties'
+    name: 'getProperties(string, string, Models.PathGetPropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="71cde-128">获取属性的文件或目录，并选择性地包含访问控制列表。</span><span class="sxs-lookup"><span data-stu-id="71cde-128">Get the properties for a file or directory, and optionally include the access control list.</span></span>
+      <span data-ttu-id="71cde-129">此操作支持条件性 HTTP 请求。</span><span class="sxs-lookup"><span data-stu-id="71cde-129">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="71cde-130">有关详细信息，请参阅[为 Blob 服务操作指定条件标头](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。</span><span class="sxs-lookup"><span data-stu-id="71cde-130">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, options?: Models.PathGetPropertiesOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-131">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-131">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-132">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-132">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathGetPropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties_2'
+    name: 'getProperties(string, string, PathGetPropertiesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, options: PathGetPropertiesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-133">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-133">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-134">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-134">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+          description: <span data-ttu-id="71cde-135">可选参数</span><span class="sxs-lookup"><span data-stu-id="71cde-135">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-136">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-136">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties_1'
+    name: 'getProperties(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-137">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-137">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-138">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-138">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-139">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease'
+    name: 'lease(Models.PathLeaseAction, string, string, Models.PathLeaseOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="71cde-140">创建和管理限制写入和删除访问路径的租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-140">Create and manage a lease to restrict write and delete access to the path.</span></span> <span data-ttu-id="71cde-141">此操作支持条件性 HTTP 请求。</span><span class="sxs-lookup"><span data-stu-id="71cde-141">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="71cde-142">有关详细信息，请参阅[为 Blob 服务操作指定条件标头](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。</span><span class="sxs-lookup"><span data-stu-id="71cde-142">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, options?: Models.PathLeaseOptionalParams)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            <span data-ttu-id="71cde-143">有五个租约操作:"获取"、"中断"、"更改"、"续订"和"发布"。</span><span class="sxs-lookup"><span data-stu-id="71cde-143">There are five lease actions: "acquire", "break", "change", "renew", and "release".</span></span> <span data-ttu-id="71cde-144">使用"获取"并指定"x-ms-建议的租约的 id"和"x-ms-租约的持续时间"以获取新租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-144">Use "acquire" and specify the "x-ms-proposed-lease-id" and "x-ms-lease-duration" to acquire a new lease.</span></span> <span data-ttu-id="71cde-145">使用"中断"中断现有租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-145">Use "break" to break an existing lease.</span></span> <span data-ttu-id="71cde-146">在中断租约，租约中断期时允许经历，在这段时间中断和发布以外的任何租约操作可以对文件执行。</span><span class="sxs-lookup"><span data-stu-id="71cde-146">When a lease is broken, the lease break period is allowed to elapse, during which time no lease operation except break and release can be performed on the file.</span></span> <span data-ttu-id="71cde-147">在租约成功中断，响应将指示的间隔后才能获取新的租约 （秒）。</span><span class="sxs-lookup"><span data-stu-id="71cde-147">When a lease is successfully broken, the response indicates the interval in seconds until a new lease can be acquired.</span></span> <span data-ttu-id="71cde-148">使用"更改"，并指定"x-ms-租约的 id"中的当前租约 ID 和"x-ms-建议的租约的 id"中的新租约 ID，以更改活动租约的租约 ID。</span><span class="sxs-lookup"><span data-stu-id="71cde-148">Use "change" and specify the current lease ID in "x-ms-lease-id" and the new lease ID in "x-ms-proposed-lease-id" to change the lease ID of an active lease.</span></span> <span data-ttu-id="71cde-149">使用"续订"并指定"x-ms-租约的 id"，以续订现有的租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-149">Use "renew" and specify the "x-ms-lease-id" to renew an existing lease.</span></span>
+            <span data-ttu-id="71cde-150">使用"发布"并指定"x-ms-租约的 id"以释放的租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-150">Use "release" and specify the "x-ms-lease-id" to release a lease.</span></span> <span data-ttu-id="71cde-151">可能的值包括: 获取、 break、 更改、 续订、 发行</span><span class="sxs-lookup"><span data-stu-id="71cde-151">Possible values include: 'acquire', 'break', 'change', 'renew', 'release'</span></span>
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-152">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-152">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-153">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-153">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathLeaseOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease_2'
+    name: 'lease(Models.PathLeaseAction, string, string, PathLeaseOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, options: PathLeaseOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            <span data-ttu-id="71cde-154">有五个租约操作:"获取"、"中断"、"更改"、"续订"和"发布"。</span><span class="sxs-lookup"><span data-stu-id="71cde-154">There are five lease actions: "acquire", "break", "change", "renew", and "release".</span></span> <span data-ttu-id="71cde-155">使用"获取"并指定"x-ms-建议的租约的 id"和"x-ms-租约的持续时间"以获取新租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-155">Use "acquire" and specify the "x-ms-proposed-lease-id" and "x-ms-lease-duration" to acquire a new lease.</span></span> <span data-ttu-id="71cde-156">使用"中断"中断现有租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-156">Use "break" to break an existing lease.</span></span> <span data-ttu-id="71cde-157">在中断租约，租约中断期时允许经历，在这段时间中断和发布以外的任何租约操作可以对文件执行。</span><span class="sxs-lookup"><span data-stu-id="71cde-157">When a lease is broken, the lease break period is allowed to elapse, during which time no lease operation except break and release can be performed on the file.</span></span> <span data-ttu-id="71cde-158">在租约成功中断，响应将指示的间隔后才能获取新的租约 （秒）。</span><span class="sxs-lookup"><span data-stu-id="71cde-158">When a lease is successfully broken, the response indicates the interval in seconds until a new lease can be acquired.</span></span> <span data-ttu-id="71cde-159">使用"更改"，并指定"x-ms-租约的 id"中的当前租约 ID 和"x-ms-建议的租约的 id"中的新租约 ID，以更改活动租约的租约 ID。</span><span class="sxs-lookup"><span data-stu-id="71cde-159">Use "change" and specify the current lease ID in "x-ms-lease-id" and the new lease ID in "x-ms-proposed-lease-id" to change the lease ID of an active lease.</span></span> <span data-ttu-id="71cde-160">使用"续订"并指定"x-ms-租约的 id"，以续订现有的租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-160">Use "renew" and specify the "x-ms-lease-id" to renew an existing lease.</span></span>
+            <span data-ttu-id="71cde-161">使用"发布"并指定"x-ms-租约的 id"以释放的租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-161">Use "release" and specify the "x-ms-lease-id" to release a lease.</span></span> <span data-ttu-id="71cde-162">可能的值包括: 获取、 break、 更改、 续订、 发行</span><span class="sxs-lookup"><span data-stu-id="71cde-162">Possible values include: 'acquire', 'break', 'change', 'renew', 'release'</span></span>
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-163">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-163">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-164">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-164">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathLeaseOptionalParams'
+          description: <span data-ttu-id="71cde-165">可选参数</span><span class="sxs-lookup"><span data-stu-id="71cde-165">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-166">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-166">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease_1'
+    name: 'lease(Models.PathLeaseAction, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            <span data-ttu-id="71cde-167">有五个租约操作:"获取"、"中断"、"更改"、"续订"和"发布"。</span><span class="sxs-lookup"><span data-stu-id="71cde-167">There are five lease actions: "acquire", "break", "change", "renew", and "release".</span></span> <span data-ttu-id="71cde-168">使用"获取"并指定"x-ms-建议的租约的 id"和"x-ms-租约的持续时间"以获取新租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-168">Use "acquire" and specify the "x-ms-proposed-lease-id" and "x-ms-lease-duration" to acquire a new lease.</span></span> <span data-ttu-id="71cde-169">使用"中断"中断现有租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-169">Use "break" to break an existing lease.</span></span> <span data-ttu-id="71cde-170">在中断租约，租约中断期时允许经历，在这段时间中断和发布以外的任何租约操作可以对文件执行。</span><span class="sxs-lookup"><span data-stu-id="71cde-170">When a lease is broken, the lease break period is allowed to elapse, during which time no lease operation except break and release can be performed on the file.</span></span> <span data-ttu-id="71cde-171">在租约成功中断，响应将指示的间隔后才能获取新的租约 （秒）。</span><span class="sxs-lookup"><span data-stu-id="71cde-171">When a lease is successfully broken, the response indicates the interval in seconds until a new lease can be acquired.</span></span> <span data-ttu-id="71cde-172">使用"更改"，并指定"x-ms-租约的 id"中的当前租约 ID 和"x-ms-建议的租约的 id"中的新租约 ID，以更改活动租约的租约 ID。</span><span class="sxs-lookup"><span data-stu-id="71cde-172">Use "change" and specify the current lease ID in "x-ms-lease-id" and the new lease ID in "x-ms-proposed-lease-id" to change the lease ID of an active lease.</span></span> <span data-ttu-id="71cde-173">使用"续订"并指定"x-ms-租约的 id"，以续订现有的租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-173">Use "renew" and specify the "x-ms-lease-id" to renew an existing lease.</span></span>
+            <span data-ttu-id="71cde-174">使用"发布"并指定"x-ms-租约的 id"以释放的租约。</span><span class="sxs-lookup"><span data-stu-id="71cde-174">Use "release" and specify the "x-ms-lease-id" to release a lease.</span></span> <span data-ttu-id="71cde-175">可能的值包括: 获取、 break、 更改、 续订、 发行</span><span class="sxs-lookup"><span data-stu-id="71cde-175">Possible values include: 'acquire', 'break', 'change', 'renew', 'release'</span></span>
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-176">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-176">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-177">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-177">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-178">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list'
+    name: 'list(boolean, string, Models.PathListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="71cde-179">列出文件系统路径及其属性。</span><span class="sxs-lookup"><span data-stu-id="71cde-179">List filesystem paths and their properties.</span></span>
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, options?: Models.PathListOptionalParams)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: '<span data-ttu-id="71cde-180">如果为"true"，列出所有路径;否则，列出了仅在文件系统的根的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-180">If "true", all paths are listed; otherwise, only paths at the root of the filesystem are listed.</span></span>  <span data-ttu-id="71cde-181">如果指定"directory"，则列表将仅包括共享相同的根的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-181">If "directory" is specified, the list will only include paths that share the same root.</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: '<span data-ttu-id="71cde-182">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-182">The filesystem identifier.</span></span>  <span data-ttu-id="71cde-183">值必须开头和结尾以字母或数字，并且必须包含字母、 数字和短划线 （-） 字符。</span><span class="sxs-lookup"><span data-stu-id="71cde-183">The value must start and end with a letter or number and must contain only letters, numbers, and the dash (-) character.</span></span>  <span data-ttu-id="71cde-184">不允许使用连续划线。</span><span class="sxs-lookup"><span data-stu-id="71cde-184">Consecutive dashes are not permitted.</span></span>  <span data-ttu-id="71cde-185">所有字母都必须小写。</span><span class="sxs-lookup"><span data-stu-id="71cde-185">All letters must be lowercase.</span></span>  <span data-ttu-id="71cde-186">值必须介于 3 到 63 个字符之间。</span><span class="sxs-lookup"><span data-stu-id="71cde-186">The value must have between 3 and 63 characters.</span></span>'
+        - id: options
+          type:
+            - Models.PathListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list_2'
+    name: 'list(boolean, string, PathListOptionalParams, ServiceCallback<PathList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, options: PathListOptionalParams, callback: ServiceCallback<PathList>)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: '<span data-ttu-id="71cde-187">如果为"true"，列出所有路径;否则，列出了仅在文件系统的根的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-187">If "true", all paths are listed; otherwise, only paths at the root of the filesystem are listed.</span></span>  <span data-ttu-id="71cde-188">如果指定"directory"，则列表将仅包括共享相同的根的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-188">If "directory" is specified, the list will only include paths that share the same root.</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: '<span data-ttu-id="71cde-189">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-189">The filesystem identifier.</span></span>  <span data-ttu-id="71cde-190">值必须开头和结尾以字母或数字，并且必须包含字母、 数字和短划线 （-） 字符。</span><span class="sxs-lookup"><span data-stu-id="71cde-190">The value must start and end with a letter or number and must contain only letters, numbers, and the dash (-) character.</span></span>  <span data-ttu-id="71cde-191">不允许使用连续划线。</span><span class="sxs-lookup"><span data-stu-id="71cde-191">Consecutive dashes are not permitted.</span></span>  <span data-ttu-id="71cde-192">所有字母都必须小写。</span><span class="sxs-lookup"><span data-stu-id="71cde-192">All letters must be lowercase.</span></span>  <span data-ttu-id="71cde-193">值必须介于 3 到 63 个字符之间。</span><span class="sxs-lookup"><span data-stu-id="71cde-193">The value must have between 3 and 63 characters.</span></span>'
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathListOptionalParams'
+          description: <span data-ttu-id="71cde-194">可选参数</span><span class="sxs-lookup"><span data-stu-id="71cde-194">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.PathList>
+          description: |
+            <span data-ttu-id="71cde-195">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list_1'
+    name: 'list(boolean, string, ServiceCallback<PathList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, callback: ServiceCallback<PathList>)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: '<span data-ttu-id="71cde-196">如果为"true"，列出所有路径;否则，列出了仅在文件系统的根的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-196">If "true", all paths are listed; otherwise, only paths at the root of the filesystem are listed.</span></span>  <span data-ttu-id="71cde-197">如果指定"directory"，则列表将仅包括共享相同的根的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-197">If "directory" is specified, the list will only include paths that share the same root.</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: '<span data-ttu-id="71cde-198">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-198">The filesystem identifier.</span></span>  <span data-ttu-id="71cde-199">值必须开头和结尾以字母或数字，并且必须包含字母、 数字和短划线 （-） 字符。</span><span class="sxs-lookup"><span data-stu-id="71cde-199">The value must start and end with a letter or number and must contain only letters, numbers, and the dash (-) character.</span></span>  <span data-ttu-id="71cde-200">不允许使用连续划线。</span><span class="sxs-lookup"><span data-stu-id="71cde-200">Consecutive dashes are not permitted.</span></span>  <span data-ttu-id="71cde-201">所有字母都必须小写。</span><span class="sxs-lookup"><span data-stu-id="71cde-201">All letters must be lowercase.</span></span>  <span data-ttu-id="71cde-202">值必须介于 3 到 63 个字符之间。</span><span class="sxs-lookup"><span data-stu-id="71cde-202">The value must have between 3 and 63 characters.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.PathList>
+          description: |
+            <span data-ttu-id="71cde-203">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.constructor'
+    name: PathOperations(DataLakeStorageClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="71cde-204">创建 PathOperations。</span><span class="sxs-lookup"><span data-stu-id="71cde-204">Create a PathOperations.</span></span>
+    syntax:
+      content: 'new PathOperations(client: DataLakeStorageClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/storage-datalake.DataLakeStorageClientContext'
+          description: |
+            <span data-ttu-id="71cde-205">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="71cde-205">Reference to the service client.</span></span>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read'
+    name: 'read(string, string, Models.PathReadOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="71cde-206">读取文件的内容。</span><span class="sxs-lookup"><span data-stu-id="71cde-206">Read the contents of a file.</span></span>  <span data-ttu-id="71cde-207">对于读取操作，支持范围请求。</span><span class="sxs-lookup"><span data-stu-id="71cde-207">For read operations, range requests are supported.</span></span> <span data-ttu-id="71cde-208">此操作支持条件性 HTTP 请求。</span><span class="sxs-lookup"><span data-stu-id="71cde-208">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="71cde-209">有关详细信息，请参阅[为 Blob 服务操作指定条件标头](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。</span><span class="sxs-lookup"><span data-stu-id="71cde-209">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function read(filesystem: string, path: string, options?: Models.PathReadOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-210">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-210">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-211">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-211">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathReadOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read_2'
+    name: 'read(string, string, PathReadOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function read(filesystem: string, path: string, options: PathReadOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-212">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-212">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-213">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-213">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathReadOptionalParams'
+          description: <span data-ttu-id="71cde-214">可选参数</span><span class="sxs-lookup"><span data-stu-id="71cde-214">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-215">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-215">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read_1'
+    name: 'read(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function read(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-216">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-216">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-217">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-217">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-218">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-218">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update'
+    name: 'update(Models.PathUpdateAction, string, string, Models.PathUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="71cde-219">将数据追加到文件上传、 （写入） 以前上传的数据刷新到文件、 设置属性的文件或目录，或设置文件或目录的访问控制。</span><span class="sxs-lookup"><span data-stu-id="71cde-219">Uploads data to be appended to a file, flushes (writes) previously uploaded data to a file, sets properties for a file or directory, or sets access control for a file or directory.</span></span> <span data-ttu-id="71cde-220">仅可以将数据追加到文件中。</span><span class="sxs-lookup"><span data-stu-id="71cde-220">Data can only be appended to a file.</span></span> <span data-ttu-id="71cde-221">此操作支持条件性 HTTP 请求。</span><span class="sxs-lookup"><span data-stu-id="71cde-221">This operation supports conditional HTTP requests.</span></span> <span data-ttu-id="71cde-222">有关详细信息，请参阅[为 Blob 服务操作指定条件标头](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations)。</span><span class="sxs-lookup"><span data-stu-id="71cde-222">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, options?: Models.PathUpdateOptionalParams)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '<span data-ttu-id="71cde-223">操作必须是"追加"上传要追加到文件中，"刷新"将以前上载的数据刷新到文件中，"setProperties"设置文件的属性的数据或目录或"setAccessControl"设置所有者，组的权限，或访问控制列表文件或目录。</span><span class="sxs-lookup"><span data-stu-id="71cde-223">The action must be "append" to upload data to be appended to a file, "flush" to flush previously uploaded data to a file, "setProperties" to set the properties of a file or directory, or "setAccessControl" to set the owner, group, permissions, or access control list for a file or directory.</span></span>  <span data-ttu-id="71cde-224">请注意分层 Namespace 必须为帐户启用才能使用访问控制。</span><span class="sxs-lookup"><span data-stu-id="71cde-224">Note that Hierarchical Namespace must be enabled for the account in order to use access control.</span></span>  <span data-ttu-id="71cde-225">另请注意，访问控制列表 (ACL) 包括所有者、 拥有组的权限和其他人，因此 x ms 权限和 x ms acl 请求标头是互相排斥。</span><span class="sxs-lookup"><span data-stu-id="71cde-225">Also note that the Access Control List (ACL) includes permissions for the owner, owning group, and others, so the x-ms-permissions and x-ms-acl request headers are mutually exclusive.</span></span> <span data-ttu-id="71cde-226">可能的值包括: 追加、 刷新、 setProperties、 setAccessControl</span><span class="sxs-lookup"><span data-stu-id="71cde-226">Possible values include: ''append'', ''flush'', ''setProperties'', ''setAccessControl''</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-227">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-227">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-228">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-228">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update_2'
+    name: 'update(Models.PathUpdateAction, string, string, PathUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, options: PathUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '<span data-ttu-id="71cde-229">操作必须是"追加"上传要追加到文件中，"刷新"将以前上载的数据刷新到文件中，"setProperties"设置文件的属性的数据或目录或"setAccessControl"设置所有者，组的权限，或访问控制列表文件或目录。</span><span class="sxs-lookup"><span data-stu-id="71cde-229">The action must be "append" to upload data to be appended to a file, "flush" to flush previously uploaded data to a file, "setProperties" to set the properties of a file or directory, or "setAccessControl" to set the owner, group, permissions, or access control list for a file or directory.</span></span>  <span data-ttu-id="71cde-230">请注意分层 Namespace 必须为帐户启用才能使用访问控制。</span><span class="sxs-lookup"><span data-stu-id="71cde-230">Note that Hierarchical Namespace must be enabled for the account in order to use access control.</span></span>  <span data-ttu-id="71cde-231">另请注意，访问控制列表 (ACL) 包括所有者、 拥有组的权限和其他人，因此 x ms 权限和 x ms acl 请求标头是互相排斥。</span><span class="sxs-lookup"><span data-stu-id="71cde-231">Also note that the Access Control List (ACL) includes permissions for the owner, owning group, and others, so the x-ms-permissions and x-ms-acl request headers are mutually exclusive.</span></span> <span data-ttu-id="71cde-232">可能的值包括: 追加、 刷新、 setProperties、 setAccessControl</span><span class="sxs-lookup"><span data-stu-id="71cde-232">Possible values include: ''append'', ''flush'', ''setProperties'', ''setAccessControl''</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-233">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-233">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-234">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-234">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathUpdateOptionalParams'
+          description: <span data-ttu-id="71cde-235">可选参数</span><span class="sxs-lookup"><span data-stu-id="71cde-235">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-236">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-236">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update_1'
+    name: 'update(Models.PathUpdateAction, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '<span data-ttu-id="71cde-237">操作必须是"追加"上传要追加到文件中，"刷新"将以前上载的数据刷新到文件中，"setProperties"设置文件的属性的数据或目录或"setAccessControl"设置所有者，组的权限，或访问控制列表文件或目录。</span><span class="sxs-lookup"><span data-stu-id="71cde-237">The action must be "append" to upload data to be appended to a file, "flush" to flush previously uploaded data to a file, "setProperties" to set the properties of a file or directory, or "setAccessControl" to set the owner, group, permissions, or access control list for a file or directory.</span></span>  <span data-ttu-id="71cde-238">请注意分层 Namespace 必须为帐户启用才能使用访问控制。</span><span class="sxs-lookup"><span data-stu-id="71cde-238">Note that Hierarchical Namespace must be enabled for the account in order to use access control.</span></span>  <span data-ttu-id="71cde-239">另请注意，访问控制列表 (ACL) 包括所有者、 拥有组的权限和其他人，因此 x ms 权限和 x ms acl 请求标头是互相排斥。</span><span class="sxs-lookup"><span data-stu-id="71cde-239">Also note that the Access Control List (ACL) includes permissions for the owner, owning group, and others, so the x-ms-permissions and x-ms-acl request headers are mutually exclusive.</span></span> <span data-ttu-id="71cde-240">可能的值包括: 追加、 刷新、 setProperties、 setAccessControl</span><span class="sxs-lookup"><span data-stu-id="71cde-240">Possible values include: ''append'', ''flush'', ''setProperties'', ''setAccessControl''</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="71cde-241">文件系统标识符。</span><span class="sxs-lookup"><span data-stu-id="71cde-241">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="71cde-242">文件或目录的路径。</span><span class="sxs-lookup"><span data-stu-id="71cde-242">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="71cde-243">回调</span><span class="sxs-lookup"><span data-stu-id="71cde-243">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+references:
+  - uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+    name: DataLakeStorageClientContext
+    spec.typeScript:
+      - name: DataLakeStorageClientContext
+        fullName: DataLakeStorageClientContext
+        uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+  - uid: '@azure/storage-datalake.PathCreateOptionalParams'
+    name: PathCreateOptionalParams
+    spec.typeScript:
+      - name: PathCreateOptionalParams
+        fullName: PathCreateOptionalParams
+        uid: '@azure/storage-datalake.PathCreateOptionalParams'
+  - uid: '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+    name: PathDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: PathDeleteMethodOptionalParams
+        fullName: PathDeleteMethodOptionalParams
+        uid: '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+  - uid: '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+    name: PathGetPropertiesOptionalParams
+    spec.typeScript:
+      - name: PathGetPropertiesOptionalParams
+        fullName: PathGetPropertiesOptionalParams
+        uid: '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+  - uid: '@azure/storage-datalake.PathLeaseOptionalParams'
+    name: PathLeaseOptionalParams
+    spec.typeScript:
+      - name: PathLeaseOptionalParams
+        fullName: PathLeaseOptionalParams
+        uid: '@azure/storage-datalake.PathLeaseOptionalParams'
+  - uid: ServiceCallback<@azure/storage-datalake.PathList>
+    name: PathList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PathList
+        fullName: PathList
+        uid: '@azure/storage-datalake.PathList'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/storage-datalake.PathListOptionalParams'
+    name: PathListOptionalParams
+    spec.typeScript:
+      - name: PathListOptionalParams
+        fullName: PathListOptionalParams
+        uid: '@azure/storage-datalake.PathListOptionalParams'
+  - uid: '@azure/storage-datalake.PathReadOptionalParams'
+    name: PathReadOptionalParams
+    spec.typeScript:
+      - name: PathReadOptionalParams
+        fullName: PathReadOptionalParams
+        uid: '@azure/storage-datalake.PathReadOptionalParams'
+  - uid: '@azure/storage-datalake.PathUpdateOptionalParams'
+    name: PathUpdateOptionalParams
+    spec.typeScript:
+      - name: PathUpdateOptionalParams
+        fullName: PathUpdateOptionalParams
+        uid: '@azure/storage-datalake.PathUpdateOptionalParams'

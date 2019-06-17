@@ -1,0 +1,455 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-migrate.Groups'
+    name: Groups
+    fullName: Groups
+    children:
+      - '@azure/arm-migrate.Groups.create_2'
+      - '@azure/arm-migrate.Groups.create'
+      - '@azure/arm-migrate.Groups.create_1'
+      - '@azure/arm-migrate.Groups.deleteMethod'
+      - '@azure/arm-migrate.Groups.deleteMethod_2'
+      - '@azure/arm-migrate.Groups.deleteMethod_1'
+      - '@azure/arm-migrate.Groups.get'
+      - '@azure/arm-migrate.Groups.get_2'
+      - '@azure/arm-migrate.Groups.get_1'
+      - '@azure/arm-migrate.Groups.constructor'
+      - '@azure/arm-migrate.Groups.listByProject'
+      - '@azure/arm-migrate.Groups.listByProject_2'
+      - '@azure/arm-migrate.Groups.listByProject_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="42c68-101">表示组的类。</span><span class="sxs-lookup"><span data-stu-id="42c68-101">Class representing a Groups.</span></span>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.create_2'
+    name: 'create(string, string, string, GroupsCreateOptionalParams, ServiceCallback<Group>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, options: GroupsCreateOptionalParams, callback: ServiceCallback<Group>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-102">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-102">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-103">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-103">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-104">在项目中的组的唯一名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-104">Unique name of a group within a project.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-migrate.GroupsCreateOptionalParams'
+          description: <span data-ttu-id="42c68-105">可选参数</span><span class="sxs-lookup"><span data-stu-id="42c68-105">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Group>
+          description: |
+            <span data-ttu-id="42c68-106">回调</span><span class="sxs-lookup"><span data-stu-id="42c68-106">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GroupsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.create'
+    name: 'create(string, string, string, Models.GroupsCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="42c68-107">通过将 group 类型的 json 对象作为给定发送模型部分中，作为请求正文的一部分创建一个新的组。</span><span class="sxs-lookup"><span data-stu-id="42c68-107">Create a new group by sending a json object of type 'group' as given in Models section as part of the Request Body.</span></span> <span data-ttu-id="42c68-108">在项目中的组名称是唯一的。</span><span class="sxs-lookup"><span data-stu-id="42c68-108">The group name in a project is unique.</span></span> <span data-ttu-id="42c68-109">标签可应用于组创建的过程。</span><span class="sxs-lookup"><span data-stu-id="42c68-109">Labels can be applied on a group as part of creation.</span></span>
+      <span data-ttu-id="42c68-110">如果具有已在 URL 中指定域的组名的组存在，此调用充当更新。</span><span class="sxs-lookup"><span data-stu-id="42c68-110">If a group with the groupName specified in the URL already exists, then this call acts as an update.</span></span>
+
+      <span data-ttu-id="42c68-111">此操作是幂等。</span><span class="sxs-lookup"><span data-stu-id="42c68-111">This operation is Idempotent.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, options?: Models.GroupsCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-112">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-112">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-113">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-113">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-114">在项目中的组的唯一名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-114">Unique name of a group within a project.</span></span>
+        - id: options
+          type:
+            - Models.GroupsCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.create_1'
+    name: 'create(string, string, string, ServiceCallback<Group>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(resourceGroupName: string, projectName: string, groupName: string, callback: ServiceCallback<Group>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-115">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-115">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-116">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-116">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-117">在项目中的组的唯一名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-117">Unique name of a group within a project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Group>
+          description: |
+            <span data-ttu-id="42c68-118">回调</span><span class="sxs-lookup"><span data-stu-id="42c68-118">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GroupsCreateResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="42c68-119">从项目中删除组。</span><span class="sxs-lookup"><span data-stu-id="42c68-119">Delete the group from the project.</span></span> <span data-ttu-id="42c68-120">计算机保留在项目中。</span><span class="sxs-lookup"><span data-stu-id="42c68-120">The machines remain in the project.</span></span> <span data-ttu-id="42c68-121">删除不存在组会导致无操作。</span><span class="sxs-lookup"><span data-stu-id="42c68-121">Deleting a non-existent group results in a no-operation.</span></span>
+      <span data-ttu-id="42c68-122">组是在项目中的计算机的聚合机制。</span><span class="sxs-lookup"><span data-stu-id="42c68-122">A group is an aggregation mechanism for machines in a project.</span></span> <span data-ttu-id="42c68-123">因此，删除组不会删除在其中的计算机。</span><span class="sxs-lookup"><span data-stu-id="42c68-123">Therefore, deleting group does not delete machines in it.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-124">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-124">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-125">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-125">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-126">在项目中的组的唯一名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-126">Unique name of a group within a project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-127">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-127">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-128">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-128">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-129">在项目中的组的唯一名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-129">Unique name of a group within a project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="42c68-130">可选参数</span><span class="sxs-lookup"><span data-stu-id="42c68-130">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="42c68-131">回调</span><span class="sxs-lookup"><span data-stu-id="42c68-131">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GroupsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, projectName: string, groupName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-132">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-132">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-133">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-133">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-134">在项目中的组的唯一名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-134">Unique name of a group within a project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="42c68-135">回调</span><span class="sxs-lookup"><span data-stu-id="42c68-135">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GroupsDeleteResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="42c68-136">获取与该项目中的特定组相关的信息。</span><span class="sxs-lookup"><span data-stu-id="42c68-136">Get information related to a specific group in the project.</span></span> <span data-ttu-id="42c68-137">返回类型组作为模型部分中指定的 json 对象。</span><span class="sxs-lookup"><span data-stu-id="42c68-137">Returns a json object of type 'group' as specified in the models section.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-138">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-138">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-139">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-139">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-140">在项目中的组的唯一名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-140">Unique name of a group within a project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Group>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, options: RequestOptionsBase, callback: ServiceCallback<Group>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-141">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-141">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-142">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-142">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-143">在项目中的组的唯一名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-143">Unique name of a group within a project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="42c68-144">可选参数</span><span class="sxs-lookup"><span data-stu-id="42c68-144">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Group>
+          description: |
+            <span data-ttu-id="42c68-145">回调</span><span class="sxs-lookup"><span data-stu-id="42c68-145">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GroupsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.get_1'
+    name: 'get(string, string, string, ServiceCallback<Group>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, callback: ServiceCallback<Group>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-146">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-146">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-147">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-147">Name of the Azure Migrate project.</span></span>
+        - id: groupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-148">在项目中的组的唯一名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-148">Unique name of a group within a project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.Group>
+          description: |
+            <span data-ttu-id="42c68-149">回调</span><span class="sxs-lookup"><span data-stu-id="42c68-149">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GroupsGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.constructor'
+    name: Groups(AzureMigrateContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="42c68-150">创建组。</span><span class="sxs-lookup"><span data-stu-id="42c68-150">Create a Groups.</span></span>
+    syntax:
+      content: 'new Groups(client: AzureMigrateContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-migrate.AzureMigrateContext'
+          description: |
+            <span data-ttu-id="42c68-151">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="42c68-151">Reference to the service client.</span></span>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.listByProject'
+    name: 'listByProject(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="42c68-152">获取项目中创建的所有组。</span><span class="sxs-lookup"><span data-stu-id="42c68-152">Get all groups created in the project.</span></span> <span data-ttu-id="42c68-153">返回类型组作为模型部分中指定的对象的 json 数组。</span><span class="sxs-lookup"><span data-stu-id="42c68-153">Returns a json array of objects of type 'group' as specified in the Models section.</span></span>
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-154">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-154">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-155">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-155">Name of the Azure Migrate project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GroupsListByProjectResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.listByProject_2'
+    name: 'listByProject(string, string, RequestOptionsBase, ServiceCallback<GroupResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, options: RequestOptionsBase, callback: ServiceCallback<GroupResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-156">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-156">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-157">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-157">Name of the Azure Migrate project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="42c68-158">可选参数</span><span class="sxs-lookup"><span data-stu-id="42c68-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.GroupResultList>
+          description: |
+            <span data-ttu-id="42c68-159">回调</span><span class="sxs-lookup"><span data-stu-id="42c68-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GroupsListByProjectResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.Groups.listByProject_1'
+    name: 'listByProject(string, string, ServiceCallback<GroupResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProject(resourceGroupName: string, projectName: string, callback: ServiceCallback<GroupResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-160">Azure 资源组项目的名称是的一部分。</span><span class="sxs-lookup"><span data-stu-id="42c68-160">Name of the Azure Resource Group that project is part of.</span></span>
+        - id: projectName
+          type:
+            - string
+          description: <span data-ttu-id="42c68-161">Azure Migrate 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="42c68-161">Name of the Azure Migrate project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.GroupResultList>
+          description: |
+            <span data-ttu-id="42c68-162">回调</span><span class="sxs-lookup"><span data-stu-id="42c68-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.GroupsListByProjectResponse>
+    package: '@azure/arm-migrate'
+references:
+  - uid: '@azure/arm-migrate.AzureMigrateContext'
+    name: AzureMigrateContext
+    spec.typeScript:
+      - name: AzureMigrateContext
+        fullName: AzureMigrateContext
+        uid: '@azure/arm-migrate.AzureMigrateContext'
+  - uid: ServiceCallback<@azure/arm-migrate.Group>
+    name: Group>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Group
+        fullName: Group
+        uid: '@azure/arm-migrate.Group'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-migrate.GroupsCreateOptionalParams'
+    name: GroupsCreateOptionalParams
+    spec.typeScript:
+      - name: GroupsCreateOptionalParams
+        fullName: GroupsCreateOptionalParams
+        uid: '@azure/arm-migrate.GroupsCreateOptionalParams'
+  - uid: ServiceCallback<@azure/arm-migrate.GroupResultList>
+    name: GroupResultList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: GroupResultList
+        fullName: GroupResultList
+        uid: '@azure/arm-migrate.GroupResultList'
+      - name: '>'
+        fullName: '>'

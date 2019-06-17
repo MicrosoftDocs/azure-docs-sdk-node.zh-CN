@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter'
+    name: PoolEnableAutoScaleParameter
+    fullName: PoolEnableAutoScaleParameter
+    children:
+      - '@azure/batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval'
+      - '@azure/batch.PoolEnableAutoScaleParameter.autoScaleFormula'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 PoolEnableAutoScaleParameter 的接口。
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 遵循自动调整根据自动缩放公式的池大小的时间间隔。 默认值为 15 分钟。 最小值和最大值分别为 5 分钟和 168 小时。 如果您指定的值小于 5 分钟或大于 168 小时，Batch 服务会拒绝具有无效的属性值错误; 的请求如果你正在直接调用 REST API，HTTP 状态代码为 400 （错误请求）。 如果指定一个新的间隔，然后将停止现有的自动缩放评估计划，并将启动新的自动缩放评估计划与正在时发出此请求的时间及其开始时间。
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '所需的池中的计算节点数的公式。 应用到池之前将检查该公式的有效性。 如果公式无效，Batch 服务将拒绝该请求与详细的错误信息。 有关指定此公式的详细信息，请参阅自动缩放计算 Azure Batch 池中的节点 (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling)。'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

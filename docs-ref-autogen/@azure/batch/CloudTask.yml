@@ -1,0 +1,532 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CloudTask'
+    name: CloudTask
+    fullName: CloudTask
+    children:
+      - '@azure/batch.CloudTask.affinityInfo'
+      - '@azure/batch.CloudTask.applicationPackageReferences'
+      - '@azure/batch.CloudTask.authenticationTokenSettings'
+      - '@azure/batch.CloudTask.commandLine'
+      - '@azure/batch.CloudTask.constraints'
+      - '@azure/batch.CloudTask.containerSettings'
+      - '@azure/batch.CloudTask.creationTime'
+      - '@azure/batch.CloudTask.dependsOn'
+      - '@azure/batch.CloudTask.displayName'
+      - '@azure/batch.CloudTask.environmentSettings'
+      - '@azure/batch.CloudTask.eTag'
+      - '@azure/batch.CloudTask.executionInfo'
+      - '@azure/batch.CloudTask.exitConditions'
+      - '@azure/batch.CloudTask.id'
+      - '@azure/batch.CloudTask.lastModified'
+      - '@azure/batch.CloudTask.multiInstanceSettings'
+      - '@azure/batch.CloudTask.nodeInfo'
+      - '@azure/batch.CloudTask.outputFiles'
+      - '@azure/batch.CloudTask.previousState'
+      - '@azure/batch.CloudTask.previousStateTransitionTime'
+      - '@azure/batch.CloudTask.resourceFiles'
+      - '@azure/batch.CloudTask.state'
+      - '@azure/batch.CloudTask.stateTransitionTime'
+      - '@azure/batch.CloudTask.stats'
+      - '@azure/batch.CloudTask.url'
+      - '@azure/batch.CloudTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: 在计算节点上触发恢复操作时，batch 将重试任务。 恢复操作的示例包括 （但不限于） 时重启不正常的计算节点或计算节点因主机故障消失。 由于恢复操作是独立的不会根据 maxTaskRetryCount 计数会重试。 即使 maxTaskRetryCount 为 0，恢复操作由于内部重试可能会发生。 因此，所有任务应都是幂等。 这意味着任务需要允许正在中断并重新启动而不会导致任何损坏或重复的数据。 最佳实践长时间运行的任务是使用某种形式的检查点。
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.affinityInfo'
+    name: affinityInfo
+    fullName: affinityInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 批处理服务可用于选择计算节点在其上开始新任务区域提示。
+    optional: true
+    syntax:
+      content: 'affinityInfo?: AffinityInformation'
+      return:
+        type:
+          - '@azure/batch.AffinityInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch 服务会将部署到计算节点运行命令行之前的应用程序包的列表。 应用程序包下载并部署到共享目录，不工作目录的任务。 因此，如果引用的包已在计算节点上，并且是最新，然后不重新下载;使用计算节点上的现有副本。 如果引用的应用程序无法安装包，例如因为包已被删除或下载失败，因为该任务将失败。
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.authenticationTokenSettings'
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 该任务可以使用来执行批处理服务操作的身份验证令牌的设置。 如果设置此属性，Batch 服务提供了用于批处理服务操作不需要帐户访问密钥进行身份验证的身份验证令牌的任务。 通过 AZ_BATCH_AUTHENTICATION_TOKEN 环境变量提供的标记。 该任务可使用该令牌在执行的操作取决于设置。 例如，任务可以请求以便将其他任务添加到作业，或检查状态的作业或作业下的其他任务的作业权限。
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - '@azure/batch.AuthenticationTokenSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '任务的命令行。 对于多实例任务命令行后的主要任务和所有子任务完成执行协调命令行作为主要任务执行。 命令行不会在 shell 下运行，并因此不能充分利用 shell 功能，例如环境变量扩展。 如果你想要利用此类功能，您应中调用 shell 命令行中，例如使用"cmd /c MyCommand"在 Windows 中或"/ bin/sh-c MyCommand"在 Linux 中。 如果命令行所引用的文件路径，它应使用相对路径 （相对于任务工作目录），或使用批处理提供的环境变量 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。'
+    optional: true
+    syntax:
+      content: 'commandLine?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 应用到此任务的执行约束。
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务运行的容器设置。 如果将运行此任务的池没有设置 containerConfiguration，则必须也设置。 如果将运行此任务的池没有设置 containerConfiguration，这不能设置。 当指定此选项时，如下 AZ_BATCH_NODE_ROOT_DIR （在节点上的 Azure Batch 目录的根） 的所有目录以递归方式都映射到容器、 所有任务的环境变量都都映射到容器中，和是任务命令行在容器中执行。
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.creationTime'
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务的创建时间。
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.dependsOn'
+    name: dependsOn
+    fullName: dependsOn
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此任务依赖于任务。 此任务将不会计划，直到它依赖于的所有任务已成功都完成。 如果任何这些任务故障并耗尽其重试计数，此任务将永远不会安排。
+    optional: true
+    syntax:
+      content: 'dependsOn?: TaskDependencies'
+      return:
+        type:
+          - '@azure/batch.TaskDependencies'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务的显示名称。 显示名称不需要是唯一，并且可以包含最大长度为 1024年的任何 Unicode 字符。
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务的环境变量设置的列表。
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务的 ETag。 这是不透明的字符串。 可用于检测任务是否已请求之间发生更改。 具体而言，可以进行时，传递 ETag 更新任务来指定仅当没有其他人后修改该任务在此期间，所做的更改应才会生效。
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.executionInfo'
+    name: executionInfo
+    fullName: executionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 有关执行任务的信息。
+    optional: true
+    syntax:
+      content: 'executionInfo?: TaskExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.exitConditions'
+    name: exitConditions
+    fullName: exitConditions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch 服务应如何响应在任务完成时。
+    optional: true
+    syntax:
+      content: 'exitConditions?: ExitConditions'
+      return:
+        type:
+          - '@azure/batch.ExitConditions'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一个字符串，唯一标识作业中的任务。 ID 可以包含字母数字字符，包括连字符和下划线的任意组合，并且不能包含超过 64 个字符。
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 上次修改任务的时间。
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.multiInstanceSettings'
+    name: multiInstanceSettings
+    fullName: multiInstanceSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一个对象，指示该任务是一个多实例任务，并包含有关如何运行多实例任务的信息。
+    optional: true
+    syntax:
+      content: 'multiInstanceSettings?: MultiInstanceSettings'
+      return:
+        type:
+          - '@azure/batch.MultiInstanceSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.nodeInfo'
+    name: nodeInfo
+    fullName: nodeInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 有关运行任务的计算节点的信息。
+    optional: true
+    syntax:
+      content: 'nodeInfo?: ComputeNodeInformation'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 批处理服务将上传从计算节点运行命令行后的文件的列表。 对于多实例任务，才会在其执行的主要任务的计算节点从上载文件。
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/batch.OutputFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.previousState'
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '任务的前一状态。 如果任务处于其初始活动状态，则不设置此属性。 可能的值包括: ''active''，则准备，正在运行、 已完成'
+    optional: true
+    syntax:
+      content: 'previousState?: TaskState'
+      return:
+        type:
+          - '@azure/batch.TaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.previousStateTransitionTime'
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务进入其以前的状态的时间。 如果任务处于其初始活动状态，则不设置此属性。
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch 服务会将下载到计算节点上，运行命令行之前的文件的列表。 多实例任务的资源文件仅会下载到在其执行的主要任务的计算节点。 没有资源文件的列表的最大大小。  当超过最大大小时，则请求将失败，并且响应错误代码将是 RequestEntityTooLarge。 如果发生这种情况，必须在大小减少的 ResourceFiles 集合。 这可以实现使用.zip 文件、 应用程序包或 Docker 容器。
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '任务的当前状态。 可能的值包括: ''active''，则准备，正在运行、 已完成'
+    optional: true
+    syntax:
+      content: 'state?: TaskState'
+      return:
+        type:
+          - '@azure/batch.TaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务进入其当前状态的时间。
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.stats'
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务的资源使用情况统计信息。
+    optional: true
+    syntax:
+      content: 'stats?: TaskStatistics'
+      return:
+        type:
+          - '@azure/batch.TaskStatistics'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务的 URL。
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务运行的用户标识。 如果省略，该任务运行作为唯一的非管理用户的任务。
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.AffinityInformation'
+    name: AffinityInformation
+    spec.typeScript:
+      - name: AffinityInformation
+        fullName: AffinityInformation
+        uid: '@azure/batch.AffinityInformation'
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AuthenticationTokenSettings'
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: '@azure/batch.AuthenticationTokenSettings'
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.TaskDependencies'
+    name: TaskDependencies
+    spec.typeScript:
+      - name: TaskDependencies
+        fullName: TaskDependencies
+        uid: '@azure/batch.TaskDependencies'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.TaskExecutionInformation'
+    name: TaskExecutionInformation
+    spec.typeScript:
+      - name: TaskExecutionInformation
+        fullName: TaskExecutionInformation
+        uid: '@azure/batch.TaskExecutionInformation'
+  - uid: '@azure/batch.ExitConditions'
+    name: ExitConditions
+    spec.typeScript:
+      - name: ExitConditions
+        fullName: ExitConditions
+        uid: '@azure/batch.ExitConditions'
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    spec.typeScript:
+      - name: MultiInstanceSettings
+        fullName: MultiInstanceSettings
+        uid: '@azure/batch.MultiInstanceSettings'
+  - uid: '@azure/batch.ComputeNodeInformation'
+    name: ComputeNodeInformation
+    spec.typeScript:
+      - name: ComputeNodeInformation
+        fullName: ComputeNodeInformation
+        uid: '@azure/batch.ComputeNodeInformation'
+  - uid: '@azure/batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/batch.OutputFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.TaskState'
+    name: TaskState
+    spec.typeScript:
+      - name: TaskState
+        fullName: TaskState
+        uid: '@azure/batch.TaskState'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.TaskStatistics'
+    name: TaskStatistics
+    spec.typeScript:
+      - name: TaskStatistics
+        fullName: TaskStatistics
+        uid: '@azure/batch.TaskStatistics'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'

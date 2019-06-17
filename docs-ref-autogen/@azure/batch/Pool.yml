@@ -1,0 +1,1555 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Pool'
+    name: Pool
+    fullName: Pool
+    children:
+      - '@azure/batch.Pool.add'
+      - '@azure/batch.Pool.add_2'
+      - '@azure/batch.Pool.add_1'
+      - '@azure/batch.Pool.deleteMethod'
+      - '@azure/batch.Pool.deleteMethod_2'
+      - '@azure/batch.Pool.deleteMethod_1'
+      - '@azure/batch.Pool.disableAutoScale'
+      - '@azure/batch.Pool.disableAutoScale_2'
+      - '@azure/batch.Pool.disableAutoScale_1'
+      - '@azure/batch.Pool.enableAutoScale'
+      - '@azure/batch.Pool.enableAutoScale_2'
+      - '@azure/batch.Pool.enableAutoScale_1'
+      - '@azure/batch.Pool.evaluateAutoScale'
+      - '@azure/batch.Pool.evaluateAutoScale_2'
+      - '@azure/batch.Pool.evaluateAutoScale_1'
+      - '@azure/batch.Pool.exists'
+      - '@azure/batch.Pool.exists_2'
+      - '@azure/batch.Pool.exists_1'
+      - '@azure/batch.Pool.get'
+      - '@azure/batch.Pool.get_2'
+      - '@azure/batch.Pool.get_1'
+      - '@azure/batch.Pool.getAllLifetimeStatistics'
+      - '@azure/batch.Pool.getAllLifetimeStatistics_2'
+      - '@azure/batch.Pool.getAllLifetimeStatistics_1'
+      - '@azure/batch.Pool.list'
+      - '@azure/batch.Pool.list_2'
+      - '@azure/batch.Pool.list_1'
+      - '@azure/batch.Pool.listNext'
+      - '@azure/batch.Pool.listNext_2'
+      - '@azure/batch.Pool.listNext_1'
+      - '@azure/batch.Pool.listUsageMetrics'
+      - '@azure/batch.Pool.listUsageMetrics_2'
+      - '@azure/batch.Pool.listUsageMetrics_1'
+      - '@azure/batch.Pool.listUsageMetricsNext'
+      - '@azure/batch.Pool.listUsageMetricsNext_2'
+      - '@azure/batch.Pool.listUsageMetricsNext_1'
+      - '@azure/batch.Pool.patch'
+      - '@azure/batch.Pool.patch_2'
+      - '@azure/batch.Pool.patch_1'
+      - '@azure/batch.Pool.constructor'
+      - '@azure/batch.Pool.removeNodes'
+      - '@azure/batch.Pool.removeNodes_2'
+      - '@azure/batch.Pool.removeNodes_1'
+      - '@azure/batch.Pool.resize'
+      - '@azure/batch.Pool.resize_2'
+      - '@azure/batch.Pool.resize_1'
+      - '@azure/batch.Pool.stopResize'
+      - '@azure/batch.Pool.stopResize_2'
+      - '@azure/batch.Pool.stopResize_1'
+      - '@azure/batch.Pool.updateProperties'
+      - '@azure/batch.Pool.updateProperties_2'
+      - '@azure/batch.Pool.updateProperties_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 类表示一个池。
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.add'
+    name: 'add(PoolAddParameter, Models.PoolAddOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 当命名池，避免包含敏感信息，如用户名称或机密项目的名称。 此信息可能会显示在遥测日志联系 Microsoft 支持工程师可访问。
+    syntax:
+      content: 'function add(pool: PoolAddParameter, options?: Models.PoolAddOptionalParams)'
+      parameters:
+        - id: pool
+          type:
+            - '@azure/batch.PoolAddParameter'
+          description: 要添加的池。
+        - id: options
+          type:
+            - Models.PoolAddOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.add_2'
+    name: 'add(PoolAddParameter, PoolAddOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(pool: PoolAddParameter, options: PoolAddOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: pool
+          type:
+            - '@azure/batch.PoolAddParameter'
+          description: 要添加的池。
+        - id: options
+          type:
+            - '@azure/batch.PoolAddOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.add_1'
+    name: 'add(PoolAddParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(pool: PoolAddParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: pool
+          type:
+            - '@azure/batch.PoolAddParameter'
+          description: 要添加的池。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.deleteMethod'
+    name: 'deleteMethod(string, Models.PoolDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      当你请求删除池时，执行下列操作： 池状态设置为删除;停止在池上任何正在进行的调整大小操作;批处理服务将开始重设大小为零，节点; 的池现有节点上运行任何任务终止，并将其重新排队 （就像已使用默认重新排队选项请求大小调整池操作）;最后，从系统删除池。 正在运行的任务重新排入队列，因为用户可以重新运行这些任务，通过更新其作业以面向不同的池。 然后，任务可以运行新池。
+      如果你想要重写重新排队行为，则应调用调整池大小显式以删除池之前将池收缩到大小为零。 如果处于删除状态的池上调用更新、 修补程序或删除 API，它将失败，错误代码为 PoolBeingDeleted 的 HTTP 状态代码 409。
+    syntax:
+      content: 'function deleteMethod(poolId: string, options?: Models.PoolDeleteMethodOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要删除该池的 ID。
+        - id: options
+          type:
+            - Models.PoolDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.deleteMethod_2'
+    name: 'deleteMethod(string, PoolDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(poolId: string, options: PoolDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要删除该池的 ID。
+        - id: options
+          type:
+            - '@azure/batch.PoolDeleteMethodOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(poolId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要删除该池的 ID。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.disableAutoScale'
+    name: 'disableAutoScale(string, Models.PoolDisableAutoScaleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(poolId: string, options?: Models.PoolDisableAutoScaleOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要禁用自动缩放池的 ID。
+        - id: options
+          type:
+            - Models.PoolDisableAutoScaleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.disableAutoScale_2'
+    name: 'disableAutoScale(string, PoolDisableAutoScaleOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(poolId: string, options: PoolDisableAutoScaleOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要禁用自动缩放池的 ID。
+        - id: options
+          type:
+            - '@azure/batch.PoolDisableAutoScaleOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.disableAutoScale_1'
+    name: 'disableAutoScale(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(poolId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要禁用自动缩放池的 ID。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.enableAutoScale'
+    name: 'enableAutoScale(string, PoolEnableAutoScaleParameter, Models.PoolEnableAutoScaleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      无法启用自动缩放的池上如果在池上正在执行的调整大小操作。
+      如果当前禁用了自动缩放的池，你必须指定有效的自动缩放公式作为请求的一部分。 如果已启用自动缩放的池，则可以指定新的自动缩放公式和/或新的评估时间间隔。 您不能调用此 API 的相同池不止一次每隔 30 秒。
+    syntax:
+      content: 'function enableAutoScale(poolId: string, poolEnableAutoScaleParameter: PoolEnableAutoScaleParameter, options?: Models.PoolEnableAutoScaleOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要启用自动缩放池的 ID。
+        - id: poolEnableAutoScaleParameter
+          type:
+            - '@azure/batch.PoolEnableAutoScaleParameter'
+          description: 请求参数。
+        - id: options
+          type:
+            - Models.PoolEnableAutoScaleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolEnableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.enableAutoScale_2'
+    name: 'enableAutoScale(string, PoolEnableAutoScaleParameter, PoolEnableAutoScaleOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableAutoScale(poolId: string, poolEnableAutoScaleParameter: PoolEnableAutoScaleParameter, options: PoolEnableAutoScaleOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要启用自动缩放池的 ID。
+        - id: poolEnableAutoScaleParameter
+          type:
+            - '@azure/batch.PoolEnableAutoScaleParameter'
+          description: 请求参数。
+        - id: options
+          type:
+            - '@azure/batch.PoolEnableAutoScaleOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolEnableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.enableAutoScale_1'
+    name: 'enableAutoScale(string, PoolEnableAutoScaleParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableAutoScale(poolId: string, poolEnableAutoScaleParameter: PoolEnableAutoScaleParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要启用自动缩放池的 ID。
+        - id: poolEnableAutoScaleParameter
+          type:
+            - '@azure/batch.PoolEnableAutoScaleParameter'
+          description: 请求参数。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolEnableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.evaluateAutoScale'
+    name: 'evaluateAutoScale(string, string, Models.PoolEvaluateAutoScaleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 此 API 主要是为了验证自动缩放公式，因为它只是返回的结果而不将公式应用到池。 该池必须具有自动缩放启用才能对公式进行评估。
+    syntax:
+      content: 'function evaluateAutoScale(poolId: string, autoScaleFormula: string, options?: Models.PoolEvaluateAutoScaleOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要评估自动缩放公式的池的 ID。
+        - id: autoScaleFormula
+          type:
+            - string
+          description: '所需的池中的计算节点数的公式。 验证该公式和计算其结果，但它不应用于该池。 若要将公式应用到池，启用自动缩放的池上。 有关指定此公式的详细信息，请参阅自动缩放计算 Azure Batch 池中的节点 (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling)。'
+        - id: options
+          type:
+            - Models.PoolEvaluateAutoScaleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolEvaluateAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.evaluateAutoScale_2'
+    name: 'evaluateAutoScale(string, string, PoolEvaluateAutoScaleOptionalParams, ServiceCallback<AutoScaleRun>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function evaluateAutoScale(poolId: string, autoScaleFormula: string, options: PoolEvaluateAutoScaleOptionalParams, callback: ServiceCallback<AutoScaleRun>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要评估自动缩放公式的池的 ID。
+        - id: autoScaleFormula
+          type:
+            - string
+          description: '所需的池中的计算节点数的公式。 验证该公式和计算其结果，但它不应用于该池。 若要将公式应用到池，启用自动缩放的池上。 有关指定此公式的详细信息，请参阅自动缩放计算 Azure Batch 池中的节点 (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling)。'
+        - id: options
+          type:
+            - '@azure/batch.PoolEvaluateAutoScaleOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.AutoScaleRun>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolEvaluateAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.evaluateAutoScale_1'
+    name: 'evaluateAutoScale(string, string, ServiceCallback<AutoScaleRun>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function evaluateAutoScale(poolId: string, autoScaleFormula: string, callback: ServiceCallback<AutoScaleRun>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要评估自动缩放公式的池的 ID。
+        - id: autoScaleFormula
+          type:
+            - string
+          description: '所需的池中的计算节点数的公式。 验证该公式和计算其结果，但它不应用于该池。 若要将公式应用到池，启用自动缩放的池上。 有关指定此公式的详细信息，请参阅自动缩放计算 Azure Batch 池中的节点 (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling)。'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.AutoScaleRun>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolEvaluateAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.exists'
+    name: 'exists(string, Models.PoolExistsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取池的基本属性。
+    syntax:
+      content: 'function exists(poolId: string, options?: Models.PoolExistsOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 若要获取池的 ID。
+        - id: options
+          type:
+            - Models.PoolExistsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.exists_2'
+    name: 'exists(string, PoolExistsOptionalParams, ServiceCallback<boolean>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function exists(poolId: string, options: PoolExistsOptionalParams, callback: ServiceCallback<boolean>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 若要获取池的 ID。
+        - id: options
+          type:
+            - '@azure/batch.PoolExistsOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<boolean>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.exists_1'
+    name: 'exists(string, ServiceCallback<boolean>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function exists(poolId: string, callback: ServiceCallback<boolean>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 若要获取池的 ID。
+        - id: callback
+          type:
+            - ServiceCallback<boolean>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.get'
+    name: 'get(string, Models.PoolGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取有关指定池的信息。
+    syntax:
+      content: 'function get(poolId: string, options?: Models.PoolGetOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 若要获取池的 ID。
+        - id: options
+          type:
+            - Models.PoolGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.get_2'
+    name: 'get(string, PoolGetOptionalParams, ServiceCallback<CloudPool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, options: PoolGetOptionalParams, callback: ServiceCallback<CloudPool>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 若要获取池的 ID。
+        - id: options
+          type:
+            - '@azure/batch.PoolGetOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPool>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.get_1'
+    name: 'get(string, ServiceCallback<CloudPool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, callback: ServiceCallback<CloudPool>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 若要获取池的 ID。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPool>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.getAllLifetimeStatistics'
+    name: getAllLifetimeStatistics(Models.PoolGetAllLifetimeStatisticsOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 跨所有池的已曾存在于从帐户创建的帐户中的最后一个更新时间的统计信息的聚合统计信息。 统计信息可能不会立即可用。 Batch 服务执行定期汇总统计信息。 典型的延迟为大约 30 分钟。
+    syntax:
+      content: 'function getAllLifetimeStatistics(options?: Models.PoolGetAllLifetimeStatisticsOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PoolGetAllLifetimeStatisticsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.getAllLifetimeStatistics_2'
+    name: 'getAllLifetimeStatistics(PoolGetAllLifetimeStatisticsOptionalParams, ServiceCallback<PoolStatistics>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(options: PoolGetAllLifetimeStatisticsOptionalParams, callback: ServiceCallback<PoolStatistics>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.PoolGetAllLifetimeStatisticsOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolStatistics>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.getAllLifetimeStatistics_1'
+    name: getAllLifetimeStatistics(ServiceCallback<PoolStatistics>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(callback: ServiceCallback<PoolStatistics>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolStatistics>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.list'
+    name: list(Models.PoolListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options?: Models.PoolListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PoolListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.list_2'
+    name: 'list(PoolListOptionalParams, ServiceCallback<CloudPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: PoolListOptionalParams, callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.PoolListOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.list_1'
+    name: list(ServiceCallback<CloudPoolListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listNext'
+    name: 'listNext(string, Models.PoolListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.PoolListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - Models.PoolListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listNext_2'
+    name: 'listNext(string, PoolListNextOptionalParams, ServiceCallback<CloudPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: PoolListNextOptionalParams, callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - '@azure/batch.PoolListNextOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listNext_1'
+    name: 'listNext(string, ServiceCallback<CloudPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetrics'
+    name: listUsageMetrics(Models.PoolListUsageMetricsOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 如果不指定包括池 Id 的 $filter 子句，响应将包括在返回的聚合间隔的时间范围中的帐户中已存在的所有池。 如果不指定 $filter 子句包括开始时间或结束时间筛选器默认为当前可用，则最后一个聚合间隔开始和结束时间也就是说，返回仅最后一个聚合时间间隔。
+    syntax:
+      content: 'function listUsageMetrics(options?: Models.PoolListUsageMetricsOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PoolListUsageMetricsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetrics_2'
+    name: 'listUsageMetrics(PoolListUsageMetricsOptionalParams, ServiceCallback<PoolListUsageMetricsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetrics(options: PoolListUsageMetricsOptionalParams, callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.PoolListUsageMetricsOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetrics_1'
+    name: listUsageMetrics(ServiceCallback<PoolListUsageMetricsResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetrics(callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetricsNext'
+    name: 'listUsageMetricsNext(string, Models.PoolListUsageMetricsNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 如果不指定包括池 Id 的 $filter 子句，响应将包括在返回的聚合间隔的时间范围中的帐户中已存在的所有池。 如果不指定 $filter 子句包括开始时间或结束时间筛选器默认为当前可用，则最后一个聚合间隔开始和结束时间也就是说，返回仅最后一个聚合时间间隔。
+    syntax:
+      content: 'function listUsageMetricsNext(nextPageLink: string, options?: Models.PoolListUsageMetricsNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - Models.PoolListUsageMetricsNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetricsNext_2'
+    name: 'listUsageMetricsNext(string, PoolListUsageMetricsNextOptionalParams, ServiceCallback<PoolListUsageMetricsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetricsNext(nextPageLink: string, options: PoolListUsageMetricsNextOptionalParams, callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - '@azure/batch.PoolListUsageMetricsNextOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetricsNext_1'
+    name: 'listUsageMetricsNext(string, ServiceCallback<PoolListUsageMetricsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetricsNext(nextPageLink: string, callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.patch'
+    name: 'patch(string, PoolPatchParameter, Models.PoolPatchOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 这只会替换请求中指定的池属性。 例如，如果该池有与其关联的启动任务，且请求未指定开始任务元素，该池将保持现有的启动任务。
+    syntax:
+      content: 'function patch(poolId: string, poolPatchParameter: PoolPatchParameter, options?: Models.PoolPatchOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要更新池的 ID。
+        - id: poolPatchParameter
+          type:
+            - '@azure/batch.PoolPatchParameter'
+          description: 请求参数。
+        - id: options
+          type:
+            - Models.PoolPatchOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.patch_2'
+    name: 'patch(string, PoolPatchParameter, PoolPatchOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(poolId: string, poolPatchParameter: PoolPatchParameter, options: PoolPatchOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要更新池的 ID。
+        - id: poolPatchParameter
+          type:
+            - '@azure/batch.PoolPatchParameter'
+          description: 请求参数。
+        - id: options
+          type:
+            - '@azure/batch.PoolPatchOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.patch_1'
+    name: 'patch(string, PoolPatchParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(poolId: string, poolPatchParameter: PoolPatchParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要更新池的 ID。
+        - id: poolPatchParameter
+          type:
+            - '@azure/batch.PoolPatchParameter'
+          description: 请求参数。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.constructor'
+    name: Pool(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建池。
+    syntax:
+      content: 'new Pool(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.removeNodes'
+    name: 'removeNodes(string, NodeRemoveParameter, Models.PoolRemoveNodesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 稳定的池的分配状态时，仅可以运行此操作。 此操作运行时，从稳定的分配状态更改为调整大小。
+    syntax:
+      content: 'function removeNodes(poolId: string, nodeRemoveParameter: NodeRemoveParameter, options?: Models.PoolRemoveNodesOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 你想要删除节点的池的 ID。
+        - id: nodeRemoveParameter
+          type:
+            - '@azure/batch.NodeRemoveParameter'
+          description: 请求参数。
+        - id: options
+          type:
+            - Models.PoolRemoveNodesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolRemoveNodesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.removeNodes_2'
+    name: 'removeNodes(string, NodeRemoveParameter, PoolRemoveNodesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removeNodes(poolId: string, nodeRemoveParameter: NodeRemoveParameter, options: PoolRemoveNodesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 你想要删除节点的池的 ID。
+        - id: nodeRemoveParameter
+          type:
+            - '@azure/batch.NodeRemoveParameter'
+          description: 请求参数。
+        - id: options
+          type:
+            - '@azure/batch.PoolRemoveNodesOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolRemoveNodesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.removeNodes_1'
+    name: 'removeNodes(string, NodeRemoveParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removeNodes(poolId: string, nodeRemoveParameter: NodeRemoveParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 你想要删除节点的池的 ID。
+        - id: nodeRemoveParameter
+          type:
+            - '@azure/batch.NodeRemoveParameter'
+          description: 请求参数。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolRemoveNodesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.resize'
+    name: 'resize(string, PoolResizeParameter, Models.PoolResizeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 仅可以调整池大小其分配状态为稳定时。 如果已调整池的大小，则请求失败，状态代码 409。 当您调整大小的池，该池的分配状态将更改从稳定为调整大小。 不能调整池的自动缩放配置。 如果您尝试执行此操作，批处理服务将返回错误 409。 如果调整大小的池向下，Batch 服务将选择要删除的节点。 若要删除特定的节点，请改为使用池中删除节点 API。
+    syntax:
+      content: 'function resize(poolId: string, poolResizeParameter: PoolResizeParameter, options?: Models.PoolResizeOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 若要调整大小的池的 ID。
+        - id: poolResizeParameter
+          type:
+            - '@azure/batch.PoolResizeParameter'
+          description: 请求参数。
+        - id: options
+          type:
+            - Models.PoolResizeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.resize_2'
+    name: 'resize(string, PoolResizeParameter, PoolResizeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function resize(poolId: string, poolResizeParameter: PoolResizeParameter, options: PoolResizeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 若要调整大小的池的 ID。
+        - id: poolResizeParameter
+          type:
+            - '@azure/batch.PoolResizeParameter'
+          description: 请求参数。
+        - id: options
+          type:
+            - '@azure/batch.PoolResizeOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.resize_1'
+    name: 'resize(string, PoolResizeParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function resize(poolId: string, poolResizeParameter: PoolResizeParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 若要调整大小的池的 ID。
+        - id: poolResizeParameter
+          type:
+            - '@azure/batch.PoolResizeParameter'
+          description: 请求参数。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.stopResize'
+    name: 'stopResize(string, Models.PoolStopResizeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 这不会还原到之前在调整大小操作以前的状态的池： 它仅停止正在进行任何进一步的更改和池维护其当前状态。 后停止，池的节点所处完成停止操作的数量稳定为止。 在停止操作时，停止然后写入稳定池分配状态更改第一次。 不需要显式的大小调整池请求; 调整大小操作。此外可以使用此 API 可以在创建时暂停该池的初始大小。
+    syntax:
+      content: 'function stopResize(poolId: string, options?: Models.PoolStopResizeOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 你想要停止调整池的 ID。
+        - id: options
+          type:
+            - Models.PoolStopResizeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.stopResize_2'
+    name: 'stopResize(string, PoolStopResizeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stopResize(poolId: string, options: PoolStopResizeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 你想要停止调整池的 ID。
+        - id: options
+          type:
+            - '@azure/batch.PoolStopResizeOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.stopResize_1'
+    name: 'stopResize(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stopResize(poolId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 你想要停止调整池的 ID。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.updateProperties'
+    name: 'updateProperties(string, PoolUpdatePropertiesParameter, Models.PoolUpdatePropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 这会完全替换该池的所有可更新的属性。 例如，如果该池有与之关联的启动任务，并且如果未使用此请求指定启动任务，然后批处理服务将删除现有的启动任务。
+    syntax:
+      content: 'function updateProperties(poolId: string, poolUpdatePropertiesParameter: PoolUpdatePropertiesParameter, options?: Models.PoolUpdatePropertiesOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要更新池的 ID。
+        - id: poolUpdatePropertiesParameter
+          type:
+            - '@azure/batch.PoolUpdatePropertiesParameter'
+          description: 请求参数。
+        - id: options
+          type:
+            - Models.PoolUpdatePropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolUpdatePropertiesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.updateProperties_2'
+    name: 'updateProperties(string, PoolUpdatePropertiesParameter, PoolUpdatePropertiesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateProperties(poolId: string, poolUpdatePropertiesParameter: PoolUpdatePropertiesParameter, options: PoolUpdatePropertiesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要更新池的 ID。
+        - id: poolUpdatePropertiesParameter
+          type:
+            - '@azure/batch.PoolUpdatePropertiesParameter'
+          description: 请求参数。
+        - id: options
+          type:
+            - '@azure/batch.PoolUpdatePropertiesOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolUpdatePropertiesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.updateProperties_1'
+    name: 'updateProperties(string, PoolUpdatePropertiesParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateProperties(poolId: string, poolUpdatePropertiesParameter: PoolUpdatePropertiesParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 要更新池的 ID。
+        - id: poolUpdatePropertiesParameter
+          type:
+            - '@azure/batch.PoolUpdatePropertiesParameter'
+          description: 请求参数。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PoolUpdatePropertiesResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.PoolAddParameter'
+    name: PoolAddParameter
+    spec.typeScript:
+      - name: PoolAddParameter
+        fullName: PoolAddParameter
+        uid: '@azure/batch.PoolAddParameter'
+  - uid: '@azure/batch.PoolAddOptionalParams'
+    name: PoolAddOptionalParams
+    spec.typeScript:
+      - name: PoolAddOptionalParams
+        fullName: PoolAddOptionalParams
+        uid: '@azure/batch.PoolAddOptionalParams'
+  - uid: '@azure/batch.PoolDeleteMethodOptionalParams'
+    name: PoolDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: PoolDeleteMethodOptionalParams
+        fullName: PoolDeleteMethodOptionalParams
+        uid: '@azure/batch.PoolDeleteMethodOptionalParams'
+  - uid: '@azure/batch.PoolDisableAutoScaleOptionalParams'
+    name: PoolDisableAutoScaleOptionalParams
+    spec.typeScript:
+      - name: PoolDisableAutoScaleOptionalParams
+        fullName: PoolDisableAutoScaleOptionalParams
+        uid: '@azure/batch.PoolDisableAutoScaleOptionalParams'
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter'
+    name: PoolEnableAutoScaleParameter
+    spec.typeScript:
+      - name: PoolEnableAutoScaleParameter
+        fullName: PoolEnableAutoScaleParameter
+        uid: '@azure/batch.PoolEnableAutoScaleParameter'
+  - uid: '@azure/batch.PoolEnableAutoScaleOptionalParams'
+    name: PoolEnableAutoScaleOptionalParams
+    spec.typeScript:
+      - name: PoolEnableAutoScaleOptionalParams
+        fullName: PoolEnableAutoScaleOptionalParams
+        uid: '@azure/batch.PoolEnableAutoScaleOptionalParams'
+  - uid: ServiceCallback<@azure/batch.AutoScaleRun>
+    name: AutoScaleRun>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AutoScaleRun
+        fullName: AutoScaleRun
+        uid: '@azure/batch.AutoScaleRun'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolEvaluateAutoScaleOptionalParams'
+    name: PoolEvaluateAutoScaleOptionalParams
+    spec.typeScript:
+      - name: PoolEvaluateAutoScaleOptionalParams
+        fullName: PoolEvaluateAutoScaleOptionalParams
+        uid: '@azure/batch.PoolEvaluateAutoScaleOptionalParams'
+  - uid: '@azure/batch.PoolExistsOptionalParams'
+    name: PoolExistsOptionalParams
+    spec.typeScript:
+      - name: PoolExistsOptionalParams
+        fullName: PoolExistsOptionalParams
+        uid: '@azure/batch.PoolExistsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudPool>
+    name: CloudPool>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudPool
+        fullName: CloudPool
+        uid: '@azure/batch.CloudPool'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolGetOptionalParams'
+    name: PoolGetOptionalParams
+    spec.typeScript:
+      - name: PoolGetOptionalParams
+        fullName: PoolGetOptionalParams
+        uid: '@azure/batch.PoolGetOptionalParams'
+  - uid: ServiceCallback<@azure/batch.PoolStatistics>
+    name: PoolStatistics>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PoolStatistics
+        fullName: PoolStatistics
+        uid: '@azure/batch.PoolStatistics'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolGetAllLifetimeStatisticsOptionalParams'
+    name: PoolGetAllLifetimeStatisticsOptionalParams
+    spec.typeScript:
+      - name: PoolGetAllLifetimeStatisticsOptionalParams
+        fullName: PoolGetAllLifetimeStatisticsOptionalParams
+        uid: '@azure/batch.PoolGetAllLifetimeStatisticsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudPoolListResult>
+    name: CloudPoolListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudPoolListResult
+        fullName: CloudPoolListResult
+        uid: '@azure/batch.CloudPoolListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolListOptionalParams'
+    name: PoolListOptionalParams
+    spec.typeScript:
+      - name: PoolListOptionalParams
+        fullName: PoolListOptionalParams
+        uid: '@azure/batch.PoolListOptionalParams'
+  - uid: '@azure/batch.PoolListNextOptionalParams'
+    name: PoolListNextOptionalParams
+    spec.typeScript:
+      - name: PoolListNextOptionalParams
+        fullName: PoolListNextOptionalParams
+        uid: '@azure/batch.PoolListNextOptionalParams'
+  - uid: ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+    name: PoolListUsageMetricsResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PoolListUsageMetricsResult
+        fullName: PoolListUsageMetricsResult
+        uid: '@azure/batch.PoolListUsageMetricsResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolListUsageMetricsOptionalParams'
+    name: PoolListUsageMetricsOptionalParams
+    spec.typeScript:
+      - name: PoolListUsageMetricsOptionalParams
+        fullName: PoolListUsageMetricsOptionalParams
+        uid: '@azure/batch.PoolListUsageMetricsOptionalParams'
+  - uid: '@azure/batch.PoolListUsageMetricsNextOptionalParams'
+    name: PoolListUsageMetricsNextOptionalParams
+    spec.typeScript:
+      - name: PoolListUsageMetricsNextOptionalParams
+        fullName: PoolListUsageMetricsNextOptionalParams
+        uid: '@azure/batch.PoolListUsageMetricsNextOptionalParams'
+  - uid: '@azure/batch.PoolPatchParameter'
+    name: PoolPatchParameter
+    spec.typeScript:
+      - name: PoolPatchParameter
+        fullName: PoolPatchParameter
+        uid: '@azure/batch.PoolPatchParameter'
+  - uid: '@azure/batch.PoolPatchOptionalParams'
+    name: PoolPatchOptionalParams
+    spec.typeScript:
+      - name: PoolPatchOptionalParams
+        fullName: PoolPatchOptionalParams
+        uid: '@azure/batch.PoolPatchOptionalParams'
+  - uid: '@azure/batch.NodeRemoveParameter'
+    name: NodeRemoveParameter
+    spec.typeScript:
+      - name: NodeRemoveParameter
+        fullName: NodeRemoveParameter
+        uid: '@azure/batch.NodeRemoveParameter'
+  - uid: '@azure/batch.PoolRemoveNodesOptionalParams'
+    name: PoolRemoveNodesOptionalParams
+    spec.typeScript:
+      - name: PoolRemoveNodesOptionalParams
+        fullName: PoolRemoveNodesOptionalParams
+        uid: '@azure/batch.PoolRemoveNodesOptionalParams'
+  - uid: '@azure/batch.PoolResizeParameter'
+    name: PoolResizeParameter
+    spec.typeScript:
+      - name: PoolResizeParameter
+        fullName: PoolResizeParameter
+        uid: '@azure/batch.PoolResizeParameter'
+  - uid: '@azure/batch.PoolResizeOptionalParams'
+    name: PoolResizeOptionalParams
+    spec.typeScript:
+      - name: PoolResizeOptionalParams
+        fullName: PoolResizeOptionalParams
+        uid: '@azure/batch.PoolResizeOptionalParams'
+  - uid: '@azure/batch.PoolStopResizeOptionalParams'
+    name: PoolStopResizeOptionalParams
+    spec.typeScript:
+      - name: PoolStopResizeOptionalParams
+        fullName: PoolStopResizeOptionalParams
+        uid: '@azure/batch.PoolStopResizeOptionalParams'
+  - uid: '@azure/batch.PoolUpdatePropertiesParameter'
+    name: PoolUpdatePropertiesParameter
+    spec.typeScript:
+      - name: PoolUpdatePropertiesParameter
+        fullName: PoolUpdatePropertiesParameter
+        uid: '@azure/batch.PoolUpdatePropertiesParameter'
+  - uid: '@azure/batch.PoolUpdatePropertiesOptionalParams'
+    name: PoolUpdatePropertiesOptionalParams
+    spec.typeScript:
+      - name: PoolUpdatePropertiesOptionalParams
+        fullName: PoolUpdatePropertiesOptionalParams
+        uid: '@azure/batch.PoolUpdatePropertiesOptionalParams'

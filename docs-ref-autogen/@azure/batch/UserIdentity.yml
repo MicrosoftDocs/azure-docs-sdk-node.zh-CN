@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    fullName: UserIdentity
+    children:
+      - '@azure/batch.UserIdentity.autoUser'
+      - '@azure/batch.UserIdentity.userName'
+    langs:
+      - typeScript
+    type: interface
+    summary: 指定用户名或自动用户属性，但不是能同时指定。
+    package: '@azure/batch'
+  - uid: '@azure/batch.UserIdentity.autoUser'
+    name: autoUser
+    fullName: autoUser
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 自动用户在其下运行该任务。 UserName 和自动用户属性是互相排斥;必须指定一个，但不可同时使用两者。
+    optional: true
+    syntax:
+      content: 'autoUser?: AutoUserSpecification'
+      return:
+        type:
+          - '@azure/batch.AutoUserSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.UserIdentity.userName'
+    name: userName
+    fullName: userName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 运行任务的用户标识的名称。 UserName 和自动用户属性是互相排斥;必须指定一个，但不可同时使用两者。
+    optional: true
+    syntax:
+      content: 'userName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.AutoUserSpecification'
+    name: AutoUserSpecification
+    spec.typeScript:
+      - name: AutoUserSpecification
+        fullName: AutoUserSpecification
+        uid: '@azure/batch.AutoUserSpecification'

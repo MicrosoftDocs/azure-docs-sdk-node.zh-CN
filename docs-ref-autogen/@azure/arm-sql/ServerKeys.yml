@@ -1,0 +1,461 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ServerKeys'
+    name: ServerKeys
+    fullName: ServerKeys
+    children:
+      - '@azure/arm-sql.ServerKeys.beginCreateOrUpdate'
+      - '@azure/arm-sql.ServerKeys.beginDeleteMethod'
+      - '@azure/arm-sql.ServerKeys.createOrUpdate'
+      - '@azure/arm-sql.ServerKeys.deleteMethod'
+      - '@azure/arm-sql.ServerKeys.get'
+      - '@azure/arm-sql.ServerKeys.get_2'
+      - '@azure/arm-sql.ServerKeys.get_1'
+      - '@azure/arm-sql.ServerKeys.listByServer'
+      - '@azure/arm-sql.ServerKeys.listByServer_2'
+      - '@azure/arm-sql.ServerKeys.listByServer_1'
+      - '@azure/arm-sql.ServerKeys.listByServerNext'
+      - '@azure/arm-sql.ServerKeys.listByServerNext_2'
+      - '@azure/arm-sql.ServerKeys.listByServerNext_1'
+      - '@azure/arm-sql.ServerKeys.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示 ServerKeys 类。
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, ServerKey, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建或更新服务器密钥。
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, serverName: string, keyName: string, parameters: ServerKey, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: keyName
+          type:
+            - string
+          description: '要操作的服务器密钥的名称 （更新或创建）。 所需密钥名称为 vault_key_version 的格式。 例如，如果 keyId 是https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901，则服务器密钥名称的格式应为：YourVaultName_YourKeyName_01234567890123456789012345678901'
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ServerKey'
+          description: 请求的服务器的重要资源状态。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除具有给定名称的服务器密钥。
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, serverName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: keyName
+          type:
+            - string
+          description: 要删除的服务器密钥的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, ServerKey, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建或更新服务器密钥。
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serverName: string, keyName: string, parameters: ServerKey, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: keyName
+          type:
+            - string
+          description: '要操作的服务器密钥的名称 （更新或创建）。 所需密钥名称为 vault_key_version 的格式。 例如，如果 keyId 是https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901，则服务器密钥名称的格式应为：YourVaultName_YourKeyName_01234567890123456789012345678901'
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ServerKey'
+          description: 请求的服务器的重要资源状态。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除具有给定名称的服务器密钥。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: keyName
+          type:
+            - string
+          description: 要删除的服务器密钥的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取服务器密钥。
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: keyName
+          type:
+            - string
+          description: 要检索的服务器密钥的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<ServerKey>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, keyName: string, options: RequestOptionsBase, callback: ServiceCallback<ServerKey>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: keyName
+          type:
+            - string
+          description: 要检索的服务器密钥的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKey>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ServerKeysGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.get_1'
+    name: 'get(string, string, string, ServiceCallback<ServerKey>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, keyName: string, callback: ServiceCallback<ServerKey>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: keyName
+          type:
+            - string
+          description: 要检索的服务器密钥的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKey>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ServerKeysGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServer'
+    name: 'listByServer(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取服务器密钥的列表。
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServer_2'
+    name: 'listByServer(string, string, RequestOptionsBase, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, options: RequestOptionsBase, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServer_1'
+    name: 'listByServer(string, string, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServerNext'
+    name: 'listByServerNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取服务器密钥的列表。
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServerNext_2'
+    name: 'listByServerNext(string, RequestOptionsBase, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.listByServerNext_1'
+    name: 'listByServerNext(string, ServiceCallback<ServerKeyListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, callback: ServiceCallback<ServerKeyListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ServerKeysListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerKeys.constructor'
+    name: ServerKeys(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建 ServerKeys。
+    syntax:
+      content: 'new ServerKeys(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: '@azure/arm-sql.ServerKey'
+    name: ServerKey
+    spec.typeScript:
+      - name: ServerKey
+        fullName: ServerKey
+        uid: '@azure/arm-sql.ServerKey'
+  - uid: ServiceCallback<@azure/arm-sql.ServerKey>
+    name: ServerKey>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ServerKey
+        fullName: ServerKey
+        uid: '@azure/arm-sql.ServerKey'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.ServerKeyListResult>
+    name: ServerKeyListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ServerKeyListResult
+        fullName: ServerKeyListResult
+        uid: '@azure/arm-sql.ServerKeyListResult'
+      - name: '>'
+        fullName: '>'

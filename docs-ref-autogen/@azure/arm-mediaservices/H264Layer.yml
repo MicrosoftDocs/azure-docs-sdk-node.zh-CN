@@ -1,0 +1,264 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.H264Layer'
+    name: H264Layer
+    fullName: H264Layer
+    children:
+      - '@azure/arm-mediaservices.H264Layer.adaptiveBFrame'
+      - '@azure/arm-mediaservices.H264Layer.bFrames'
+      - '@azure/arm-mediaservices.H264Layer.bitrate'
+      - '@azure/arm-mediaservices.H264Layer.bufferWindow'
+      - '@azure/arm-mediaservices.H264Layer.entropyMode'
+      - '@azure/arm-mediaservices.H264Layer.frameRate'
+      - '@azure/arm-mediaservices.H264Layer.height'
+      - '@azure/arm-mediaservices.H264Layer.label'
+      - '@azure/arm-mediaservices.H264Layer.level'
+      - '@azure/arm-mediaservices.H264Layer.maxBitrate'
+      - '@azure/arm-mediaservices.H264Layer.odatatype'
+      - '@azure/arm-mediaservices.H264Layer.profile'
+      - '@azure/arm-mediaservices.H264Layer.referenceFrames'
+      - '@azure/arm-mediaservices.H264Layer.slices'
+      - '@azure/arm-mediaservices.H264Layer.width'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="78054-101">描述输入的视频编码为 H.264 视频编解码器的所需的输出比特率层时要使用的设置。</span><span class="sxs-lookup"><span data-stu-id="78054-101">Describes the settings to be used when encoding the input video into a desired output bitrate layer with the H.264 video codec.</span></span>
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.adaptiveBFrame'
+    name: adaptiveBFrame
+    fullName: adaptiveBFrame
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="78054-102">是否自适应的 B 帧是这一层进行编码时使用。</span><span class="sxs-lookup"><span data-stu-id="78054-102">Whether or not adaptive B-frames are to be used when encoding this layer.</span></span> <span data-ttu-id="78054-103">如果未指定，编码器会将其打开视频配置文件时允许其使用。</span><span class="sxs-lookup"><span data-stu-id="78054-103">If not specified, the encoder will turn it on whenever the video profile permits its use.</span></span>'
+    optional: true
+    syntax:
+      content: 'adaptiveBFrame?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.bFrames'
+    name: bFrames
+    fullName: bFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="78054-104">这一层进行编码时要使用的 B 帧数。</span><span class="sxs-lookup"><span data-stu-id="78054-104">The number of B-frames to be used when encoding this layer.</span></span>  <span data-ttu-id="78054-105">如果未指定，编码器将选择适当数量的视频配置文件和级别。</span><span class="sxs-lookup"><span data-stu-id="78054-105">If not specified, the encoder chooses an appropriate number based on the video profile and level.</span></span>'
+    optional: true
+    syntax:
+      content: 'bFrames?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.bitrate'
+    name: bitrate
+    fullName: bitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="78054-106">比特 / 秒的输入的视频编码为生成这一层时平均比特率。</span><span class="sxs-lookup"><span data-stu-id="78054-106">The average bitrate in bits per second at which to encode the input video when generating this layer.</span></span> <span data-ttu-id="78054-107">这是必填的字段。</span><span class="sxs-lookup"><span data-stu-id="78054-107">This is a required field.</span></span>
+    syntax:
+      content: 'bitrate: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.bufferWindow'
+    name: bufferWindow
+    fullName: bufferWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="78054-108">VBV 缓冲区窗口长度。</span><span class="sxs-lookup"><span data-stu-id="78054-108">The VBV buffer window length.</span></span> <span data-ttu-id="78054-109">值应为采用 ISO 8601 格式。</span><span class="sxs-lookup"><span data-stu-id="78054-109">The value should be in ISO 8601 format.</span></span> <span data-ttu-id="78054-110">值应在范围 [0.1-100] 数秒内。</span><span class="sxs-lookup"><span data-stu-id="78054-110">The value should be in the range [0.1-100] seconds.</span></span> <span data-ttu-id="78054-111">默认值为 5 秒 (例如，PT5S)。</span><span class="sxs-lookup"><span data-stu-id="78054-111">The default is 5 seconds (for example, PT5S).</span></span>'
+    optional: true
+    syntax:
+      content: 'bufferWindow?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.entropyMode'
+    name: entropyMode
+    fullName: entropyMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="78054-112">要用于此层的平均信息量模式。</span><span class="sxs-lookup"><span data-stu-id="78054-112">The entropy mode to be used for this layer.</span></span> <span data-ttu-id="78054-113">如果未指定，编码器将选择适用于配置文件和级别的模式。</span><span class="sxs-lookup"><span data-stu-id="78054-113">If not specified, the encoder chooses the mode that is appropriate for the profile and level.</span></span> <span data-ttu-id="78054-114">可能的值包括：Cabac''，''Cavlc</span><span class="sxs-lookup"><span data-stu-id="78054-114">Possible values include: ''Cabac'', ''Cavlc''</span></span>'
+    optional: true
+    syntax:
+      content: 'entropyMode?: EntropyMode'
+      return:
+        type:
+          - '@azure/arm-mediaservices.EntropyMode'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.frameRate'
+    name: frameRate
+    fullName: frameRate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="78054-115">帧速率 （以每秒帧数） 要对这一层进行编码。</span><span class="sxs-lookup"><span data-stu-id="78054-115">The frame rate (in frames per second) at which to encode this layer.</span></span> <span data-ttu-id="78054-116">值可以是形式的 M/N 其中 M 和 N 为整数 (例如，30000/1001)，或在号码 （例如，30 或为 29.97） 的形式。</span><span class="sxs-lookup"><span data-stu-id="78054-116">The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97).</span></span> <span data-ttu-id="78054-117">编码器强制对基于配置文件和级别允许的帧速率进行限制。</span><span class="sxs-lookup"><span data-stu-id="78054-117">The encoder enforces constraints on allowed frame rates based on the profile and level.</span></span> <span data-ttu-id="78054-118">如果未指定，则编码器将与输入视频使用相同的帧速率。</span><span class="sxs-lookup"><span data-stu-id="78054-118">If it is not specified, the encoder will use the same frame rate as the input video.</span></span>'
+    optional: true
+    syntax:
+      content: 'frameRate?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.height'
+    name: height
+    fullName: height
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="78054-119">此层的输出视频的高度。</span><span class="sxs-lookup"><span data-stu-id="78054-119">The height of the output video for this layer.</span></span> <span data-ttu-id="78054-120">值可以是绝对值 （以像素为单位） 或相对 （以百分比计）。</span><span class="sxs-lookup"><span data-stu-id="78054-120">The value can be absolute (in pixels) or relative (in percentage).</span></span> <span data-ttu-id="78054-121">例如 50%表示输出视频作为输入的高度的一半的任意多个像素。</span><span class="sxs-lookup"><span data-stu-id="78054-121">For example 50% means the output video has half as many pixels in height as the input.</span></span>
+    optional: true
+    syntax:
+      content: 'height?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="78054-122">此层，可用于在多路复用不同的视频和音频层，或命名输出文件中的字母数字的标签。</span><span class="sxs-lookup"><span data-stu-id="78054-122">The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.</span></span>'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.level'
+    name: level
+    fullName: level
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="78054-123">我们目前支持多达 6.2 的级别。</span><span class="sxs-lookup"><span data-stu-id="78054-123">We currently support Level up to 6.2.</span></span> <span data-ttu-id="78054-124">值可以是自动或匹配 H.264 配置文件的编号。</span><span class="sxs-lookup"><span data-stu-id="78054-124">The value can be Auto, or a number that matches the H.264 profile.</span></span> <span data-ttu-id="78054-125">如果未指定，默认值为 Auto，它允许编码器选择适合于这一层的级别。</span><span class="sxs-lookup"><span data-stu-id="78054-125">If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.</span></span>'
+    optional: true
+    syntax:
+      content: 'level?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.maxBitrate'
+    name: maxBitrate
+    fullName: maxBitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="78054-126">最大比特率 （以位 / 秒），此时应假定 VBV 缓冲区重填。</span><span class="sxs-lookup"><span data-stu-id="78054-126">The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill.</span></span>
+      <span data-ttu-id="78054-127">如果未指定，默认为与比特率相同的值。</span><span class="sxs-lookup"><span data-stu-id="78054-127">If not specified, defaults to the same value as bitrate.</span></span>
+    optional: true
+    syntax:
+      content: 'maxBitrate?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="78054-128">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="78054-128">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.H264Layer"'
+      return:
+        type:
+          - '"#Microsoft.Media.H264Layer"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.profile'
+    name: profile
+    fullName: profile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="78054-129">我们目前支持 Baseline、 Main、 高、 High422、 High444。</span><span class="sxs-lookup"><span data-stu-id="78054-129">We currently support Baseline, Main, High, High422, High444.</span></span> <span data-ttu-id="78054-130">默认值为自动。可能的值包括：Auto、 基线、 主要、 高、 High422、 High444</span><span class="sxs-lookup"><span data-stu-id="78054-130">Default is Auto. Possible values include: ''Auto'', ''Baseline'', ''Main'', ''High'', ''High422'', ''High444''</span></span>'
+    optional: true
+    syntax:
+      content: 'profile?: H264VideoProfile'
+      return:
+        type:
+          - '@azure/arm-mediaservices.H264VideoProfile'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.referenceFrames'
+    name: referenceFrames
+    fullName: referenceFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="78054-131">这一层进行编码时要使用的参考帧数。</span><span class="sxs-lookup"><span data-stu-id="78054-131">The number of reference frames to be used when encoding this layer.</span></span> <span data-ttu-id="78054-132">如果未指定，则编码器将确定基于编码器复杂性设置了适当数量。</span><span class="sxs-lookup"><span data-stu-id="78054-132">If not specified, the encoder determines an appropriate number based on the encoder complexity setting.</span></span>'
+    optional: true
+    syntax:
+      content: 'referenceFrames?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.slices'
+    name: slices
+    fullName: slices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="78054-133">这一层进行编码时要使用的切片数。</span><span class="sxs-lookup"><span data-stu-id="78054-133">The number of slices to be used when encoding this layer.</span></span> <span data-ttu-id="78054-134">如果未指定，默认值为零，这意味着为每个帧，该编码器将使用一个切片。</span><span class="sxs-lookup"><span data-stu-id="78054-134">If not specified, default is zero, which means that encoder will use a single slice for each frame.</span></span>'
+    optional: true
+    syntax:
+      content: 'slices?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.H264Layer.width'
+    name: width
+    fullName: width
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="78054-135">此层的输出视频的宽度。</span><span class="sxs-lookup"><span data-stu-id="78054-135">The width of the output video for this layer.</span></span> <span data-ttu-id="78054-136">值可以是绝对值 （以像素为单位） 或相对 （以百分比计）。</span><span class="sxs-lookup"><span data-stu-id="78054-136">The value can be absolute (in pixels) or relative (in percentage).</span></span> <span data-ttu-id="78054-137">例如 50%表示输出视频作为输入的宽度的一半的任意多个像素。</span><span class="sxs-lookup"><span data-stu-id="78054-137">For example 50% means the output video has half as many pixels in width as the input.</span></span>
+    optional: true
+    syntax:
+      content: 'width?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.EntropyMode'
+    name: EntropyMode
+    spec.typeScript:
+      - name: EntropyMode
+        fullName: EntropyMode
+        uid: '@azure/arm-mediaservices.EntropyMode'
+  - uid: '@azure/arm-mediaservices.H264VideoProfile'
+    name: H264VideoProfile
+    spec.typeScript:
+      - name: H264VideoProfile
+        fullName: H264VideoProfile
+        uid: '@azure/arm-mediaservices.H264VideoProfile'

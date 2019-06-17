@@ -1,0 +1,589 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.InstanceFailoverGroups'
+    name: InstanceFailoverGroups
+    fullName: InstanceFailoverGroups
+    children:
+      - '@azure/arm-sql.InstanceFailoverGroups.beginCreateOrUpdate'
+      - '@azure/arm-sql.InstanceFailoverGroups.beginDeleteMethod'
+      - '@azure/arm-sql.InstanceFailoverGroups.beginFailover'
+      - '@azure/arm-sql.InstanceFailoverGroups.beginForceFailoverAllowDataLoss'
+      - '@azure/arm-sql.InstanceFailoverGroups.createOrUpdate'
+      - '@azure/arm-sql.InstanceFailoverGroups.deleteMethod'
+      - '@azure/arm-sql.InstanceFailoverGroups.failover'
+      - '@azure/arm-sql.InstanceFailoverGroups.forceFailoverAllowDataLoss'
+      - '@azure/arm-sql.InstanceFailoverGroups.get'
+      - '@azure/arm-sql.InstanceFailoverGroups.get_2'
+      - '@azure/arm-sql.InstanceFailoverGroups.get_1'
+      - '@azure/arm-sql.InstanceFailoverGroups.constructor'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocation'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocation_2'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocation_1'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext_2'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="4a932-101">表示 InstanceFailoverGroups 类。</span><span class="sxs-lookup"><span data-stu-id="4a932-101">Class representing a InstanceFailoverGroups.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, InstanceFailoverGroup, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-102">创建或更新故障转移组。</span><span class="sxs-lookup"><span data-stu-id="4a932-102">Creates or updates a failover group.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, locationName: string, failoverGroupName: string, parameters: InstanceFailoverGroup, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-103">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-104">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-105">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-105">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-106">故障转移组的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-106">The name of the failover group.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.InstanceFailoverGroup'
+          description: <span data-ttu-id="4a932-107">故障转移组参数。</span><span class="sxs-lookup"><span data-stu-id="4a932-107">The failover group parameters.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-108">删除故障转移组。</span><span class="sxs-lookup"><span data-stu-id="4a932-108">Deletes a failover group.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-109">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-110">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-111">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-111">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-112">故障转移组的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-112">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.beginFailover'
+    name: 'beginFailover(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-113">故障转移从当前的主托管实例到此托管实例。</span><span class="sxs-lookup"><span data-stu-id="4a932-113">Fails over from the current primary managed instance to this managed instance.</span></span>
+    syntax:
+      content: 'function beginFailover(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-114">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-114">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-115">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-115">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-116">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-116">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-117">故障转移组的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-117">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.beginForceFailoverAllowDataLoss'
+    name: 'beginForceFailoverAllowDataLoss(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-118">故障转移从当前的主托管实例到此托管实例。</span><span class="sxs-lookup"><span data-stu-id="4a932-118">Fails over from the current primary managed instance to this managed instance.</span></span> <span data-ttu-id="4a932-119">此操作可能导致数据丢失。</span><span class="sxs-lookup"><span data-stu-id="4a932-119">This operation might result in data loss.</span></span>
+    syntax:
+      content: 'function beginForceFailoverAllowDataLoss(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-120">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-120">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-121">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-121">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-122">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-122">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-123">故障转移组的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-123">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, InstanceFailoverGroup, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-124">创建或更新故障转移组。</span><span class="sxs-lookup"><span data-stu-id="4a932-124">Creates or updates a failover group.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, locationName: string, failoverGroupName: string, parameters: InstanceFailoverGroup, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-125">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-125">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-126">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-126">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-127">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-127">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-128">故障转移组的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-128">The name of the failover group.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.InstanceFailoverGroup'
+          description: <span data-ttu-id="4a932-129">故障转移组参数。</span><span class="sxs-lookup"><span data-stu-id="4a932-129">The failover group parameters.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-130">删除故障转移组。</span><span class="sxs-lookup"><span data-stu-id="4a932-130">Deletes a failover group.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-131">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-131">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-132">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-132">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-133">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-133">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-134">故障转移组的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-134">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.failover'
+    name: 'failover(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-135">故障转移从当前的主托管实例到此托管实例。</span><span class="sxs-lookup"><span data-stu-id="4a932-135">Fails over from the current primary managed instance to this managed instance.</span></span>
+    syntax:
+      content: 'function failover(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-136">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-136">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-137">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-137">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-138">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-138">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-139">故障转移组的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-139">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsFailoverResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.forceFailoverAllowDataLoss'
+    name: 'forceFailoverAllowDataLoss(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-140">故障转移从当前的主托管实例到此托管实例。</span><span class="sxs-lookup"><span data-stu-id="4a932-140">Fails over from the current primary managed instance to this managed instance.</span></span> <span data-ttu-id="4a932-141">此操作可能导致数据丢失。</span><span class="sxs-lookup"><span data-stu-id="4a932-141">This operation might result in data loss.</span></span>
+    syntax:
+      content: 'function forceFailoverAllowDataLoss(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-142">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-142">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-143">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-143">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-144">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-144">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-145">故障转移组的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-145">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsForceFailoverAllowDataLossResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-146">获取故障转移组。</span><span class="sxs-lookup"><span data-stu-id="4a932-146">Gets a failover group.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-147">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-147">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-148">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-148">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-149">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-149">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-150">故障转移组的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-150">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<InstanceFailoverGroup>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, locationName: string, failoverGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<InstanceFailoverGroup>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-151">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-151">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-152">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-152">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-153">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-153">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-154">故障转移组的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-154">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="4a932-155">可选参数</span><span class="sxs-lookup"><span data-stu-id="4a932-155">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroup>
+          description: |
+            <span data-ttu-id="4a932-156">回调</span><span class="sxs-lookup"><span data-stu-id="4a932-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.get_1'
+    name: 'get(string, string, string, ServiceCallback<InstanceFailoverGroup>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, locationName: string, failoverGroupName: string, callback: ServiceCallback<InstanceFailoverGroup>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-157">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-157">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-158">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-158">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-159">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-159">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-160">故障转移组的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-160">The name of the failover group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroup>
+          description: |
+            <span data-ttu-id="4a932-161">回调</span><span class="sxs-lookup"><span data-stu-id="4a932-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.constructor'
+    name: InstanceFailoverGroups(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-162">创建 InstanceFailoverGroups。</span><span class="sxs-lookup"><span data-stu-id="4a932-162">Create a InstanceFailoverGroups.</span></span>
+    syntax:
+      content: 'new InstanceFailoverGroups(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="4a932-163">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="4a932-163">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocation'
+    name: 'listByLocation(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-164">列出某个位置中的故障转移组。</span><span class="sxs-lookup"><span data-stu-id="4a932-164">Lists the failover groups in a location.</span></span>
+    syntax:
+      content: 'function listByLocation(resourceGroupName: string, locationName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-165">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-165">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-166">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-166">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-167">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-167">The name of the region where the resource is located.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocation_2'
+    name: 'listByLocation(string, string, RequestOptionsBase, ServiceCallback<InstanceFailoverGroupListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByLocation(resourceGroupName: string, locationName: string, options: RequestOptionsBase, callback: ServiceCallback<InstanceFailoverGroupListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-168">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-168">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-169">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-169">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-170">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-170">The name of the region where the resource is located.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="4a932-171">可选参数</span><span class="sxs-lookup"><span data-stu-id="4a932-171">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroupListResult>
+          description: |
+            <span data-ttu-id="4a932-172">回调</span><span class="sxs-lookup"><span data-stu-id="4a932-172">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocation_1'
+    name: 'listByLocation(string, string, ServiceCallback<InstanceFailoverGroupListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByLocation(resourceGroupName: string, locationName: string, callback: ServiceCallback<InstanceFailoverGroupListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-173">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-173">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="4a932-174">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="4a932-174">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="4a932-175">资源所在的区域的名称。</span><span class="sxs-lookup"><span data-stu-id="4a932-175">The name of the region where the resource is located.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroupListResult>
+          description: |
+            <span data-ttu-id="4a932-176">回调</span><span class="sxs-lookup"><span data-stu-id="4a932-176">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext'
+    name: 'listByLocationNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4a932-177">列出某个位置中的故障转移组。</span><span class="sxs-lookup"><span data-stu-id="4a932-177">Lists the failover groups in a location.</span></span>
+    syntax:
+      content: 'function listByLocationNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4a932-178">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4a932-178">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext_2'
+    name: 'listByLocationNext(string, RequestOptionsBase, ServiceCallback<InstanceFailoverGroupListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByLocationNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<InstanceFailoverGroupListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4a932-179">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4a932-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="4a932-180">可选参数</span><span class="sxs-lookup"><span data-stu-id="4a932-180">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroupListResult>
+          description: |
+            <span data-ttu-id="4a932-181">回调</span><span class="sxs-lookup"><span data-stu-id="4a932-181">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext_1'
+    name: 'listByLocationNext(string, ServiceCallback<InstanceFailoverGroupListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByLocationNext(nextPageLink: string, callback: ServiceCallback<InstanceFailoverGroupListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="4a932-182">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="4a932-182">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroupListResult>
+          description: |
+            <span data-ttu-id="4a932-183">回调</span><span class="sxs-lookup"><span data-stu-id="4a932-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationNextResponse>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: '@azure/arm-sql.InstanceFailoverGroup'
+    name: InstanceFailoverGroup
+    spec.typeScript:
+      - name: InstanceFailoverGroup
+        fullName: InstanceFailoverGroup
+        uid: '@azure/arm-sql.InstanceFailoverGroup'
+  - uid: ServiceCallback<@azure/arm-sql.InstanceFailoverGroup>
+    name: InstanceFailoverGroup>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: InstanceFailoverGroup
+        fullName: InstanceFailoverGroup
+        uid: '@azure/arm-sql.InstanceFailoverGroup'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.InstanceFailoverGroupListResult>
+    name: InstanceFailoverGroupListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: InstanceFailoverGroupListResult
+        fullName: InstanceFailoverGroupListResult
+        uid: '@azure/arm-sql.InstanceFailoverGroupListResult'
+      - name: '>'
+        fullName: '>'

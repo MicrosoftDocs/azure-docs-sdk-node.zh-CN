@@ -1,0 +1,1516 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews'
+    name: Reviews
+    fullName: Reviews
+    children:
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createJob'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createJob_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createJob_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createReviews'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createReviews_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createReviews_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getReview'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getReview_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getReview_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview_2'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview_1'
+      - '@azure/cognitiveservices-contentmoderator.Reviews.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="b8f43-101">表示评审的类。</span><span class="sxs-lookup"><span data-stu-id="b8f43-101">Class representing a Reviews.</span></span>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame'
+    name: 'addVideoFrame(string, string, Models.ReviewsAddVideoFrameOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="b8f43-102">创建评审会显示为审阅者在你的团队。</span><span class="sxs-lookup"><span data-stu-id="b8f43-102">The reviews created would show up for Reviewers on your team.</span></span> <span data-ttu-id="b8f43-103">为审阅者已完成审阅，评审结果会发布 (即 HTTP POST) 上指定 CallBackEndpoint。</span><span class="sxs-lookup"><span data-stu-id="b8f43-103">As Reviewers complete reviewing, results of the Review would be POSTED (i.e. HTTP POST) on the specified CallBackEndpoint.</span></span>
+      <h3><span data-ttu-id="b8f43-104">回调架构</span><span class="sxs-lookup"><span data-stu-id="b8f43-104">CallBack Schemas</span></span> </h3>
+      <h4><span data-ttu-id="b8f43-105">评审完成回调示例</span><span class="sxs-lookup"><span data-stu-id="b8f43-105">Review Completion CallBack Sample</span></span></h4>
+      <p>
+      <span data-ttu-id="b8f43-106">{</span><span class="sxs-lookup"><span data-stu-id="b8f43-106">{</span></span><br/>
+      <span data-ttu-id="b8f43-107">"ReviewId": "<Review Id>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-107">"ReviewId": "<Review Id>",</span></span><br/>
+      <span data-ttu-id="b8f43-108">"ModifiedOn":"2016-10-11T22:36:32.9934851Z",</span><span class="sxs-lookup"><span data-stu-id="b8f43-108">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span></span><br/>
+      <span data-ttu-id="b8f43-109">"ModifiedBy": "<Name of the Reviewer>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-109">"ModifiedBy": "<Name of the Reviewer>",</span></span><br/>
+      <span data-ttu-id="b8f43-110">"CallBackType":"评论"，</span><span class="sxs-lookup"><span data-stu-id="b8f43-110">"CallBackType": "Review",</span></span><br/>
+      <span data-ttu-id="b8f43-111">"ContentId": "<The ContentId that was specified input>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-111">"ContentId": "<The ContentId that was specified input>",</span></span><br/>
+      <span data-ttu-id="b8f43-112">"元数据": {</span><span class="sxs-lookup"><span data-stu-id="b8f43-112">"Metadata": {</span></span><br/>
+      <span data-ttu-id="b8f43-113">"adultscore":"0.xxx",</span><span class="sxs-lookup"><span data-stu-id="b8f43-113">"adultscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="b8f43-114">"a":"False",</span><span class="sxs-lookup"><span data-stu-id="b8f43-114">"a": "False",</span></span><br/>
+      <span data-ttu-id="b8f43-115">"racyscore":"0.xxx",</span><span class="sxs-lookup"><span data-stu-id="b8f43-115">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="b8f43-116">"r":"True"</span><span class="sxs-lookup"><span data-stu-id="b8f43-116">"r": "True"</span></span><br/>
+      <span data-ttu-id="b8f43-117">},</span><span class="sxs-lookup"><span data-stu-id="b8f43-117">},</span></span><br/>
+      <span data-ttu-id="b8f43-118">"ReviewerResultTags": {</span><span class="sxs-lookup"><span data-stu-id="b8f43-118">"ReviewerResultTags": {</span></span><br/>
+      <span data-ttu-id="b8f43-119">"a":"False",</span><span class="sxs-lookup"><span data-stu-id="b8f43-119">"a": "False",</span></span><br/>
+      <span data-ttu-id="b8f43-120">"r":"True"</span><span class="sxs-lookup"><span data-stu-id="b8f43-120">"r": "True"</span></span><br/>
+      <span data-ttu-id="b8f43-121">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-121">}</span></span><br/>
+      <span data-ttu-id="b8f43-122">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-122">}</span></span><br/>
+
+      </p><span data-ttu-id="b8f43-123">.</span><span class="sxs-lookup"><span data-stu-id="b8f43-123">.</span></span>
+    syntax:
+      content: 'function addVideoFrame(teamName: string, reviewId: string, options?: Models.ReviewsAddVideoFrameOptionalParams)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-124">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-124">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-125">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-125">Id of the review.</span></span>
+        - id: options
+          type:
+            - Models.ReviewsAddVideoFrameOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame_2'
+    name: 'addVideoFrame(string, string, ReviewsAddVideoFrameOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrame(teamName: string, reviewId: string, options: ReviewsAddVideoFrameOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-126">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-126">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-127">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-127">Id of the review.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameOptionalParams'
+          description: <span data-ttu-id="b8f43-128">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-128">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-129">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-129">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrame_1'
+    name: 'addVideoFrame(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrame(teamName: string, reviewId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-130">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-130">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-131">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-131">Id of the review.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-132">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-132">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream'
+    name: 'addVideoFrameStream(string, string, string, msRest.HttpRequestBody, string, Models.ReviewsAddVideoFrameStreamOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="b8f43-133">使用此方法添加的视频评审的帧。时间刻度：此参数是一个用于将上一个帧的时间戳转换为毫秒。</span><span class="sxs-lookup"><span data-stu-id="b8f43-133">Use this method to add frames for a video review.Timescale: This parameter is a factor which is used to convert the timestamp on a frame into milliseconds.</span></span> <span data-ttu-id="b8f43-134">Azure 媒体服务平台上的内容审查器视频媒体处理器的输出中提供了时间刻度。视频审查输出中的时间刻度为计时周期数/秒。</span><span class="sxs-lookup"><span data-stu-id="b8f43-134">Timescale is provided in the output of the Content Moderator video media processor on the Azure Media Services platform.Timescale in the Video Moderation output is Ticks/Second.</span></span>'
+    syntax:
+      content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: msRest.HttpRequestBody, frameMetadata: string, options?: Models.ReviewsAddVideoFrameStreamOptionalParams)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-135">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-135">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-136">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-136">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-137">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-137">Id of the review.</span></span>
+        - id: frameImageZip
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="b8f43-138">Zip 文件包含帧图像。</span><span class="sxs-lookup"><span data-stu-id="b8f43-138">Zip file containing frame images.</span></span>
+        - id: frameMetadata
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-139">帧的元数据。</span><span class="sxs-lookup"><span data-stu-id="b8f43-139">Metadata of the frame.</span></span>
+        - id: options
+          type:
+            - Models.ReviewsAddVideoFrameStreamOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_2'
+    name: 'addVideoFrameStream(string, string, string, msRest.HttpRequestBody, string, ReviewsAddVideoFrameStreamOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: msRest.HttpRequestBody, frameMetadata: string, options: ReviewsAddVideoFrameStreamOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-140">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-140">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-141">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-141">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-142">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-142">Id of the review.</span></span>
+        - id: frameImageZip
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="b8f43-143">Zip 文件包含帧图像。</span><span class="sxs-lookup"><span data-stu-id="b8f43-143">Zip file containing frame images.</span></span>
+        - id: frameMetadata
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-144">帧的元数据。</span><span class="sxs-lookup"><span data-stu-id="b8f43-144">Metadata of the frame.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameStreamOptionalParams'
+          description: <span data-ttu-id="b8f43-145">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-145">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-146">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-146">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_1'
+    name: 'addVideoFrameStream(string, string, string, msRest.HttpRequestBody, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: msRest.HttpRequestBody, frameMetadata: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-147">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-147">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-148">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-148">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-149">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-149">Id of the review.</span></span>
+        - id: frameImageZip
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="b8f43-150">Zip 文件包含帧图像。</span><span class="sxs-lookup"><span data-stu-id="b8f43-150">Zip file containing frame images.</span></span>
+        - id: frameMetadata
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-151">帧的元数据。</span><span class="sxs-lookup"><span data-stu-id="b8f43-151">Metadata of the frame.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-152">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-152">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl'
+    name: 'addVideoFrameUrl(string, string, string, VideoFrameBodyItem[], Models.ReviewsAddVideoFrameUrlOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="b8f43-153">使用此方法添加的视频评审的帧。时间刻度：此参数是一个用于将上一个帧的时间戳转换为毫秒。</span><span class="sxs-lookup"><span data-stu-id="b8f43-153">Use this method to add frames for a video review.Timescale: This parameter is a factor which is used to convert the timestamp on a frame into milliseconds.</span></span> <span data-ttu-id="b8f43-154">Azure 媒体服务平台上的内容审查器视频媒体处理器的输出中提供了时间刻度。视频审查输出中的时间刻度为计时周期数/秒。</span><span class="sxs-lookup"><span data-stu-id="b8f43-154">Timescale is provided in the output of the Content Moderator video media processor on the Azure Media Services platform.Timescale in the Video Moderation output is Ticks/Second.</span></span>'
+    syntax:
+      content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], options?: Models.ReviewsAddVideoFrameUrlOptionalParams)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-155">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-155">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-156">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-156">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-157">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-157">Id of the review.</span></span>
+        - id: videoFrameBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.VideoFrameBodyItem[]'
+          description: <span data-ttu-id="b8f43-158">正文添加视频帧 API</span><span class="sxs-lookup"><span data-stu-id="b8f43-158">Body for add video frames API</span></span>
+        - id: options
+          type:
+            - Models.ReviewsAddVideoFrameUrlOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_2'
+    name: 'addVideoFrameUrl(string, string, string, VideoFrameBodyItem[], ReviewsAddVideoFrameUrlOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], options: ReviewsAddVideoFrameUrlOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-159">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-159">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-160">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-160">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-161">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-161">Id of the review.</span></span>
+        - id: videoFrameBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.VideoFrameBodyItem[]'
+          description: <span data-ttu-id="b8f43-162">正文添加视频帧 API</span><span class="sxs-lookup"><span data-stu-id="b8f43-162">Body for add video frames API</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameUrlOptionalParams'
+          description: <span data-ttu-id="b8f43-163">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-163">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-164">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-164">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_1'
+    name: 'addVideoFrameUrl(string, string, string, VideoFrameBodyItem[], ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-165">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-165">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-166">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-166">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-167">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-167">Id of the review.</span></span>
+        - id: videoFrameBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.VideoFrameBodyItem[]'
+          description: <span data-ttu-id="b8f43-168">正文添加视频帧 API</span><span class="sxs-lookup"><span data-stu-id="b8f43-168">Body for add video frames API</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-169">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-169">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript'
+    name: 'addVideoTranscript(string, string, msRest.HttpRequestBody, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b8f43-170">此 API 将脚本文件 （视频中讲述的所有单词的文本版本） 添加到视频的评论。</span><span class="sxs-lookup"><span data-stu-id="b8f43-170">This API adds a transcript file (text version of all the words spoken in a video) to a video review.</span></span> <span data-ttu-id="b8f43-171">该文件应为有效的 WebVTT 格式。</span><span class="sxs-lookup"><span data-stu-id="b8f43-171">The file should be a valid WebVTT format.</span></span>
+    syntax:
+      content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: msRest.HttpRequestBody, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-172">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-172">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-173">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-173">Id of the review.</span></span>
+        - id: vTTfile
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="b8f43-174">视频的脚本文件。</span><span class="sxs-lookup"><span data-stu-id="b8f43-174">Transcript file of the video.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript_2'
+    name: 'addVideoTranscript(string, string, msRest.HttpRequestBody, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: msRest.HttpRequestBody, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-175">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-175">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-176">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-176">Id of the review.</span></span>
+        - id: vTTfile
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="b8f43-177">视频的脚本文件。</span><span class="sxs-lookup"><span data-stu-id="b8f43-177">Transcript file of the video.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b8f43-178">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-178">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-179">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-179">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscript_1'
+    name: 'addVideoTranscript(string, string, msRest.HttpRequestBody, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: msRest.HttpRequestBody, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-180">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-180">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-181">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-181">Id of the review.</span></span>
+        - id: vTTfile
+          type:
+            - msRest.HttpRequestBody
+          description: <span data-ttu-id="b8f43-182">视频的脚本文件。</span><span class="sxs-lookup"><span data-stu-id="b8f43-182">Transcript file of the video.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-183">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-183">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult'
+    name: 'addVideoTranscriptModerationResult(string, string, string, TranscriptModerationBodyItem[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="b8f43-184">此 API 中添加脚本屏幕文本结果文件的视频的评审。</span><span class="sxs-lookup"><span data-stu-id="b8f43-184">This API adds a transcript screen text result file for a video review.</span></span> <span data-ttu-id="b8f43-185">脚本屏幕文本结果文件是屏幕文本 API 的结果。</span><span class="sxs-lookup"><span data-stu-id="b8f43-185">Transcript screen text result file is a result of Screen Text API .</span></span> <span data-ttu-id="b8f43-186">若要生成脚本屏幕文本结果文件，必须使用屏幕文本 API 的猥亵语言筛选出脚本文件。</span><span class="sxs-lookup"><span data-stu-id="b8f43-186">In order to generate transcript screen text result file , a transcript file has to be screened for profanity using Screen Text API.</span></span>'
+    syntax:
+      content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-187">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-187">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-188">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-188">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-189">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-189">Id of the review.</span></span>
+        - id: transcriptModerationBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]'
+          description: <span data-ttu-id="b8f43-190">正文添加视频字幕审查结果 API</span><span class="sxs-lookup"><span data-stu-id="b8f43-190">Body for add video transcript moderation result API</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_2'
+    name: 'addVideoTranscriptModerationResult(string, string, string, TranscriptModerationBodyItem[], RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-191">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-191">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-192">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-192">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-193">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-193">Id of the review.</span></span>
+        - id: transcriptModerationBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]'
+          description: <span data-ttu-id="b8f43-194">正文添加视频字幕审查结果 API</span><span class="sxs-lookup"><span data-stu-id="b8f43-194">Body for add video transcript moderation result API</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b8f43-195">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-195">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-196">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-196">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_1'
+    name: 'addVideoTranscriptModerationResult(string, string, string, TranscriptModerationBodyItem[], ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], callback: ServiceCallback<void>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-197">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-197">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-198">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-198">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-199">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-199">Id of the review.</span></span>
+        - id: transcriptModerationBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]'
+          description: <span data-ttu-id="b8f43-200">正文添加视频字幕审查结果 API</span><span class="sxs-lookup"><span data-stu-id="b8f43-200">Body for add video transcript moderation result API</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-201">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-201">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createJob'
+    name: 'createJob(string, Models.ContentType, string, string, Models.JobContentType, Content, Models.ReviewsCreateJobOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="b8f43-202">作业 Id 将返回此终结点上发布的内容。</span><span class="sxs-lookup"><span data-stu-id="b8f43-202">A job Id will be returned for the content posted on this endpoint.</span></span>
+      <span data-ttu-id="b8f43-203">一旦针对评估内容工作流提供评审不会创建或忽略基于工作流表达式。</span><span class="sxs-lookup"><span data-stu-id="b8f43-203">Once the content is evaluated against the Workflow provided the review will be created or ignored based on the workflow expression.</span></span>
+
+      <h3><span data-ttu-id="b8f43-204">回调架构</span><span class="sxs-lookup"><span data-stu-id="b8f43-204">CallBack Schemas</span></span> </h3>
+
+      <p>
+      <h4><span data-ttu-id="b8f43-205">作业完成回调示例</span><span class="sxs-lookup"><span data-stu-id="b8f43-205">Job Completion CallBack Sample</span></span></h4><br/>
+
+      <span data-ttu-id="b8f43-206">{</span><span class="sxs-lookup"><span data-stu-id="b8f43-206">{</span></span><br/>
+      <span data-ttu-id="b8f43-207">"JobId": "<Job Id>,</span><span class="sxs-lookup"><span data-stu-id="b8f43-207">"JobId": "<Job Id>,</span></span><br/>
+      <span data-ttu-id="b8f43-208">"ReviewId":"< 评审 Id，如果该作业导致要创建的评审 >"，</span><span class="sxs-lookup"><span data-stu-id="b8f43-208">"ReviewId": "<Review Id, if the Job resulted in a Review to be created>",</span></span><br/>
+      <span data-ttu-id="b8f43-209">"WorkFlowId": "default",</span><span class="sxs-lookup"><span data-stu-id="b8f43-209">"WorkFlowId": "default",</span></span><br/>
+      <span data-ttu-id="b8f43-210">"Status":"< 这也是一完成，正在进行、 错误 >"，</span><span class="sxs-lookup"><span data-stu-id="b8f43-210">"Status": "<This will be one of Complete, InProgress, Error>",</span></span><br/>
+      <span data-ttu-id="b8f43-211">"ContentType":"Image",</span><span class="sxs-lookup"><span data-stu-id="b8f43-211">"ContentType": "Image",</span></span><br/>
+      <span data-ttu-id="b8f43-212">"ContentId": "<This is the ContentId that was specified on input>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-212">"ContentId": "<This is the ContentId that was specified on input>",</span></span><br/>
+      <span data-ttu-id="b8f43-213">"CallBackType":"作业"</span><span class="sxs-lookup"><span data-stu-id="b8f43-213">"CallBackType": "Job",</span></span><br/>
+      <span data-ttu-id="b8f43-214">"元数据": {</span><span class="sxs-lookup"><span data-stu-id="b8f43-214">"Metadata": {</span></span><br/>
+      <span data-ttu-id="b8f43-215">"adultscore":"0.xxx",</span><span class="sxs-lookup"><span data-stu-id="b8f43-215">"adultscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="b8f43-216">"a":"False",</span><span class="sxs-lookup"><span data-stu-id="b8f43-216">"a": "False",</span></span><br/>
+      <span data-ttu-id="b8f43-217">"racyscore":"0.xxx",</span><span class="sxs-lookup"><span data-stu-id="b8f43-217">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="b8f43-218">"r":"True"</span><span class="sxs-lookup"><span data-stu-id="b8f43-218">"r": "True"</span></span><br/>
+      <span data-ttu-id="b8f43-219">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-219">}</span></span><br/>
+      <span data-ttu-id="b8f43-220">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-220">}</span></span><br/>
+
+      </p>
+      <p>
+      <h4><span data-ttu-id="b8f43-221">评审完成回调示例</span><span class="sxs-lookup"><span data-stu-id="b8f43-221">Review Completion CallBack Sample</span></span></h4><br/>
+
+      <span data-ttu-id="b8f43-222">{ "ReviewId": "<Review Id>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-222">{ "ReviewId": "<Review Id>",</span></span><br/>
+      <span data-ttu-id="b8f43-223">"ModifiedOn":"2016-10-11T22:36:32.9934851Z",</span><span class="sxs-lookup"><span data-stu-id="b8f43-223">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span></span><br/>
+      <span data-ttu-id="b8f43-224">"ModifiedBy": "<Name of the Reviewer>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-224">"ModifiedBy": "<Name of the Reviewer>",</span></span><br/>
+      <span data-ttu-id="b8f43-225">"CallBackType":"评论"，</span><span class="sxs-lookup"><span data-stu-id="b8f43-225">"CallBackType": "Review",</span></span><br/>
+      <span data-ttu-id="b8f43-226">"ContentId": "<The ContentId that was specified input>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-226">"ContentId": "<The ContentId that was specified input>",</span></span><br/>
+      <span data-ttu-id="b8f43-227">"元数据": {</span><span class="sxs-lookup"><span data-stu-id="b8f43-227">"Metadata": {</span></span><br/>
+      <span data-ttu-id="b8f43-228">"adultscore":"0.xxx", "a":"False",</span><span class="sxs-lookup"><span data-stu-id="b8f43-228">"adultscore": "0.xxx", "a": "False",</span></span><br/>
+      <span data-ttu-id="b8f43-229">"racyscore":"0.xxx",</span><span class="sxs-lookup"><span data-stu-id="b8f43-229">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="b8f43-230">"r":"True"</span><span class="sxs-lookup"><span data-stu-id="b8f43-230">"r": "True"</span></span><br/>
+      <span data-ttu-id="b8f43-231">},</span><span class="sxs-lookup"><span data-stu-id="b8f43-231">},</span></span><br/>
+      <span data-ttu-id="b8f43-232">"ReviewerResultTags": {</span><span class="sxs-lookup"><span data-stu-id="b8f43-232">"ReviewerResultTags": {</span></span><br/>
+      <span data-ttu-id="b8f43-233">"a":"False",</span><span class="sxs-lookup"><span data-stu-id="b8f43-233">"a": "False",</span></span><br/>
+      <span data-ttu-id="b8f43-234">"r":"True"</span><span class="sxs-lookup"><span data-stu-id="b8f43-234">"r": "True"</span></span><br/>
+      <span data-ttu-id="b8f43-235">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-235">}</span></span><br/>
+      <span data-ttu-id="b8f43-236">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-236">}</span></span><br/>
+
+      </p><span data-ttu-id="b8f43-237">.</span><span class="sxs-lookup"><span data-stu-id="b8f43-237">.</span></span>
+    syntax:
+      content: 'function createJob(teamName: string, contentType: Models.ContentType, contentId: string, workflowName: string, jobContentType: Models.JobContentType, content: Content, options?: Models.ReviewsCreateJobOptionalParams)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-238">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-238">Your team name.</span></span>
+        - id: contentType
+          type:
+            - Models.ContentType
+          description: '<span data-ttu-id="b8f43-239">图像、 文本或视频。</span><span class="sxs-lookup"><span data-stu-id="b8f43-239">Image, Text or Video.</span></span> <span data-ttu-id="b8f43-240">可能的值包括：映像，Text、 视频</span><span class="sxs-lookup"><span data-stu-id="b8f43-240">Possible values include: ''Image'', ''Text'', ''Video''</span></span>'
+        - id: contentId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-241">Id/名称来识别提交的内容。</span><span class="sxs-lookup"><span data-stu-id="b8f43-241">Id/Name to identify the content submitted.</span></span>
+        - id: workflowName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-242">你想要调用的工作流名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-242">Workflow Name that you want to invoke.</span></span>
+        - id: jobContentType
+          type:
+            - Models.JobContentType
+          description: '<span data-ttu-id="b8f43-243">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-243">The content type.</span></span> <span data-ttu-id="b8f43-244">可能的值包括: application/json，image/jpeg</span><span class="sxs-lookup"><span data-stu-id="b8f43-244">Possible values include: ''application/json'', ''image/jpeg''</span></span>'
+        - id: content
+          type:
+            - '@azure/cognitiveservices-contentmoderator.Content'
+          description: <span data-ttu-id="b8f43-245">若要评估的内容。</span><span class="sxs-lookup"><span data-stu-id="b8f43-245">Content to evaluate.</span></span>
+        - id: options
+          type:
+            - Models.ReviewsCreateJobOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsCreateJobResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createJob_2'
+    name: 'createJob(string, Models.ContentType, string, string, Models.JobContentType, Content, ReviewsCreateJobOptionalParams, ServiceCallback<JobId>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createJob(teamName: string, contentType: Models.ContentType, contentId: string, workflowName: string, jobContentType: Models.JobContentType, content: Content, options: ReviewsCreateJobOptionalParams, callback: ServiceCallback<JobId>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-246">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-246">Your team name.</span></span>
+        - id: contentType
+          type:
+            - Models.ContentType
+          description: '<span data-ttu-id="b8f43-247">图像、 文本或视频。</span><span class="sxs-lookup"><span data-stu-id="b8f43-247">Image, Text or Video.</span></span> <span data-ttu-id="b8f43-248">可能的值包括：映像，Text、 视频</span><span class="sxs-lookup"><span data-stu-id="b8f43-248">Possible values include: ''Image'', ''Text'', ''Video''</span></span>'
+        - id: contentId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-249">Id/名称来识别提交的内容。</span><span class="sxs-lookup"><span data-stu-id="b8f43-249">Id/Name to identify the content submitted.</span></span>
+        - id: workflowName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-250">你想要调用的工作流名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-250">Workflow Name that you want to invoke.</span></span>
+        - id: jobContentType
+          type:
+            - Models.JobContentType
+          description: '<span data-ttu-id="b8f43-251">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-251">The content type.</span></span> <span data-ttu-id="b8f43-252">可能的值包括: application/json，image/jpeg</span><span class="sxs-lookup"><span data-stu-id="b8f43-252">Possible values include: ''application/json'', ''image/jpeg''</span></span>'
+        - id: content
+          type:
+            - '@azure/cognitiveservices-contentmoderator.Content'
+          description: <span data-ttu-id="b8f43-253">若要评估的内容。</span><span class="sxs-lookup"><span data-stu-id="b8f43-253">Content to evaluate.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsCreateJobOptionalParams'
+          description: <span data-ttu-id="b8f43-254">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-254">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.JobId>
+          description: |
+            <span data-ttu-id="b8f43-255">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-255">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateJobResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createJob_1'
+    name: 'createJob(string, Models.ContentType, string, string, Models.JobContentType, Content, ServiceCallback<JobId>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createJob(teamName: string, contentType: Models.ContentType, contentId: string, workflowName: string, jobContentType: Models.JobContentType, content: Content, callback: ServiceCallback<JobId>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-256">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-256">Your team name.</span></span>
+        - id: contentType
+          type:
+            - Models.ContentType
+          description: '<span data-ttu-id="b8f43-257">图像、 文本或视频。</span><span class="sxs-lookup"><span data-stu-id="b8f43-257">Image, Text or Video.</span></span> <span data-ttu-id="b8f43-258">可能的值包括：映像，Text、 视频</span><span class="sxs-lookup"><span data-stu-id="b8f43-258">Possible values include: ''Image'', ''Text'', ''Video''</span></span>'
+        - id: contentId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-259">Id/名称来识别提交的内容。</span><span class="sxs-lookup"><span data-stu-id="b8f43-259">Id/Name to identify the content submitted.</span></span>
+        - id: workflowName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-260">你想要调用的工作流名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-260">Workflow Name that you want to invoke.</span></span>
+        - id: jobContentType
+          type:
+            - Models.JobContentType
+          description: '<span data-ttu-id="b8f43-261">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-261">The content type.</span></span> <span data-ttu-id="b8f43-262">可能的值包括: application/json，image/jpeg</span><span class="sxs-lookup"><span data-stu-id="b8f43-262">Possible values include: ''application/json'', ''image/jpeg''</span></span>'
+        - id: content
+          type:
+            - '@azure/cognitiveservices-contentmoderator.Content'
+          description: <span data-ttu-id="b8f43-263">若要评估的内容。</span><span class="sxs-lookup"><span data-stu-id="b8f43-263">Content to evaluate.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.JobId>
+          description: |
+            <span data-ttu-id="b8f43-264">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-264">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateJobResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createReviews'
+    name: 'createReviews(string, string, CreateReviewBodyItem[], Models.ReviewsCreateReviewsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="b8f43-265">创建评审会显示为审阅者在你的团队。</span><span class="sxs-lookup"><span data-stu-id="b8f43-265">The reviews created would show up for Reviewers on your team.</span></span> <span data-ttu-id="b8f43-266">为审阅者已完成审阅，评审结果会发布 (即 HTTP POST) 上指定 CallBackEndpoint。</span><span class="sxs-lookup"><span data-stu-id="b8f43-266">As Reviewers complete reviewing, results of the Review would be POSTED (i.e. HTTP POST) on the specified CallBackEndpoint.</span></span>
+      <h3><span data-ttu-id="b8f43-267">回调架构</span><span class="sxs-lookup"><span data-stu-id="b8f43-267">CallBack Schemas</span></span> </h3>
+      <h4><span data-ttu-id="b8f43-268">评审完成回调示例</span><span class="sxs-lookup"><span data-stu-id="b8f43-268">Review Completion CallBack Sample</span></span></h4>
+      <p>
+      <span data-ttu-id="b8f43-269">{</span><span class="sxs-lookup"><span data-stu-id="b8f43-269">{</span></span><br/>
+      <span data-ttu-id="b8f43-270">"ReviewId": "<Review Id>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-270">"ReviewId": "<Review Id>",</span></span><br/>
+      <span data-ttu-id="b8f43-271">"ModifiedOn":"2016-10-11T22:36:32.9934851Z",</span><span class="sxs-lookup"><span data-stu-id="b8f43-271">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span></span><br/>
+      <span data-ttu-id="b8f43-272">"ModifiedBy": "<Name of the Reviewer>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-272">"ModifiedBy": "<Name of the Reviewer>",</span></span><br/>
+      <span data-ttu-id="b8f43-273">"CallBackType":"评论"，</span><span class="sxs-lookup"><span data-stu-id="b8f43-273">"CallBackType": "Review",</span></span><br/>
+      <span data-ttu-id="b8f43-274">"ContentId": "<The ContentId that was specified input>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-274">"ContentId": "<The ContentId that was specified input>",</span></span><br/>
+      <span data-ttu-id="b8f43-275">"元数据": {</span><span class="sxs-lookup"><span data-stu-id="b8f43-275">"Metadata": {</span></span><br/>
+      <span data-ttu-id="b8f43-276">"adultscore":"0.xxx",</span><span class="sxs-lookup"><span data-stu-id="b8f43-276">"adultscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="b8f43-277">"a":"False",</span><span class="sxs-lookup"><span data-stu-id="b8f43-277">"a": "False",</span></span><br/>
+      <span data-ttu-id="b8f43-278">"racyscore":"0.xxx",</span><span class="sxs-lookup"><span data-stu-id="b8f43-278">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="b8f43-279">"r":"True"</span><span class="sxs-lookup"><span data-stu-id="b8f43-279">"r": "True"</span></span><br/>
+      <span data-ttu-id="b8f43-280">},</span><span class="sxs-lookup"><span data-stu-id="b8f43-280">},</span></span><br/>
+      <span data-ttu-id="b8f43-281">"ReviewerResultTags": {</span><span class="sxs-lookup"><span data-stu-id="b8f43-281">"ReviewerResultTags": {</span></span><br/>
+      <span data-ttu-id="b8f43-282">"a":"False",</span><span class="sxs-lookup"><span data-stu-id="b8f43-282">"a": "False",</span></span><br/>
+      <span data-ttu-id="b8f43-283">"r":"True"</span><span class="sxs-lookup"><span data-stu-id="b8f43-283">"r": "True"</span></span><br/>
+      <span data-ttu-id="b8f43-284">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-284">}</span></span><br/>
+      <span data-ttu-id="b8f43-285">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-285">}</span></span><br/>
+
+      </p><span data-ttu-id="b8f43-286">.</span><span class="sxs-lookup"><span data-stu-id="b8f43-286">.</span></span>
+    syntax:
+      content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], options?: Models.ReviewsCreateReviewsOptionalParams)'
+      parameters:
+        - id: urlContentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-287">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-287">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-288">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-288">Your team name.</span></span>
+        - id: createReviewBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateReviewBodyItem[]'
+          description: <span data-ttu-id="b8f43-289">创建评审 API 的正文</span><span class="sxs-lookup"><span data-stu-id="b8f43-289">Body for create reviews API</span></span>
+        - id: options
+          type:
+            - Models.ReviewsCreateReviewsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsCreateReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createReviews_2'
+    name: 'createReviews(string, string, CreateReviewBodyItem[], ReviewsCreateReviewsOptionalParams, ServiceCallback<string[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], options: ReviewsCreateReviewsOptionalParams, callback: ServiceCallback<string[]>)'
+      parameters:
+        - id: urlContentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-290">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-290">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-291">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-291">Your team name.</span></span>
+        - id: createReviewBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateReviewBodyItem[]'
+          description: <span data-ttu-id="b8f43-292">创建评审 API 的正文</span><span class="sxs-lookup"><span data-stu-id="b8f43-292">Body for create reviews API</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsCreateReviewsOptionalParams'
+          description: <span data-ttu-id="b8f43-293">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-293">The optional parameters</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<string[]>'
+          description: |
+            <span data-ttu-id="b8f43-294">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-294">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createReviews_1'
+    name: 'createReviews(string, string, CreateReviewBodyItem[], ServiceCallback<string[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], callback: ServiceCallback<string[]>)'
+      parameters:
+        - id: urlContentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-295">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-295">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-296">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-296">Your team name.</span></span>
+        - id: createReviewBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateReviewBodyItem[]'
+          description: <span data-ttu-id="b8f43-297">创建评审 API 的正文</span><span class="sxs-lookup"><span data-stu-id="b8f43-297">Body for create reviews API</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<string[]>'
+          description: |
+            <span data-ttu-id="b8f43-298">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-298">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews'
+    name: 'createVideoReviews(string, string, CreateVideoReviewsBodyItem[], Models.ReviewsCreateVideoReviewsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="b8f43-299">创建评审会显示为审阅者在你的团队。</span><span class="sxs-lookup"><span data-stu-id="b8f43-299">The reviews created would show up for Reviewers on your team.</span></span> <span data-ttu-id="b8f43-300">为审阅者已完成审阅，评审结果会发布 (即 HTTP POST) 上指定 CallBackEndpoint。</span><span class="sxs-lookup"><span data-stu-id="b8f43-300">As Reviewers complete reviewing, results of the Review would be POSTED (i.e. HTTP POST) on the specified CallBackEndpoint.</span></span>
+      <h3><span data-ttu-id="b8f43-301">回调架构</span><span class="sxs-lookup"><span data-stu-id="b8f43-301">CallBack Schemas</span></span> </h3>
+      <h4><span data-ttu-id="b8f43-302">评审完成回调示例</span><span class="sxs-lookup"><span data-stu-id="b8f43-302">Review Completion CallBack Sample</span></span></h4>
+      <p>
+      <span data-ttu-id="b8f43-303">{</span><span class="sxs-lookup"><span data-stu-id="b8f43-303">{</span></span><br/>
+      <span data-ttu-id="b8f43-304">"ReviewId": "<Review Id>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-304">"ReviewId": "<Review Id>",</span></span><br/>
+      <span data-ttu-id="b8f43-305">"ModifiedOn":"2016-10-11T22:36:32.9934851Z",</span><span class="sxs-lookup"><span data-stu-id="b8f43-305">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span></span><br/>
+      <span data-ttu-id="b8f43-306">"ModifiedBy": "<Name of the Reviewer>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-306">"ModifiedBy": "<Name of the Reviewer>",</span></span><br/>
+      <span data-ttu-id="b8f43-307">"CallBackType":"评论"，</span><span class="sxs-lookup"><span data-stu-id="b8f43-307">"CallBackType": "Review",</span></span><br/>
+      <span data-ttu-id="b8f43-308">"ContentId": "<The ContentId that was specified input>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-308">"ContentId": "<The ContentId that was specified input>",</span></span><br/>
+      <span data-ttu-id="b8f43-309">"元数据": {</span><span class="sxs-lookup"><span data-stu-id="b8f43-309">"Metadata": {</span></span><br/>
+      <span data-ttu-id="b8f43-310">"adultscore":"0.xxx",</span><span class="sxs-lookup"><span data-stu-id="b8f43-310">"adultscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="b8f43-311">"a":"False",</span><span class="sxs-lookup"><span data-stu-id="b8f43-311">"a": "False",</span></span><br/>
+      <span data-ttu-id="b8f43-312">"racyscore":"0.xxx",</span><span class="sxs-lookup"><span data-stu-id="b8f43-312">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="b8f43-313">"r":"True"</span><span class="sxs-lookup"><span data-stu-id="b8f43-313">"r": "True"</span></span><br/>
+      <span data-ttu-id="b8f43-314">},</span><span class="sxs-lookup"><span data-stu-id="b8f43-314">},</span></span><br/>
+      <span data-ttu-id="b8f43-315">"ReviewerResultTags": {</span><span class="sxs-lookup"><span data-stu-id="b8f43-315">"ReviewerResultTags": {</span></span><br/>
+      <span data-ttu-id="b8f43-316">"a":"False",</span><span class="sxs-lookup"><span data-stu-id="b8f43-316">"a": "False",</span></span><br/>
+      <span data-ttu-id="b8f43-317">"r":"True"</span><span class="sxs-lookup"><span data-stu-id="b8f43-317">"r": "True"</span></span><br/>
+      <span data-ttu-id="b8f43-318">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-318">}</span></span><br/>
+      <span data-ttu-id="b8f43-319">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-319">}</span></span><br/>
+
+      </p><span data-ttu-id="b8f43-320">.</span><span class="sxs-lookup"><span data-stu-id="b8f43-320">.</span></span>
+    syntax:
+      content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], options?: Models.ReviewsCreateVideoReviewsOptionalParams)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-321">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-321">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-322">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-322">Your team name.</span></span>
+        - id: createVideoReviewsBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]'
+          description: <span data-ttu-id="b8f43-323">创建评审 API 的正文</span><span class="sxs-lookup"><span data-stu-id="b8f43-323">Body for create reviews API</span></span>
+        - id: options
+          type:
+            - Models.ReviewsCreateVideoReviewsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsCreateVideoReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews_2'
+    name: 'createVideoReviews(string, string, CreateVideoReviewsBodyItem[], ReviewsCreateVideoReviewsOptionalParams, ServiceCallback<string[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], options: ReviewsCreateVideoReviewsOptionalParams, callback: ServiceCallback<string[]>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-324">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-324">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-325">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-325">Your team name.</span></span>
+        - id: createVideoReviewsBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]'
+          description: <span data-ttu-id="b8f43-326">创建评审 API 的正文</span><span class="sxs-lookup"><span data-stu-id="b8f43-326">Body for create reviews API</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsCreateVideoReviewsOptionalParams'
+          description: <span data-ttu-id="b8f43-327">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-327">The optional parameters</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<string[]>'
+          description: |
+            <span data-ttu-id="b8f43-328">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-328">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateVideoReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.createVideoReviews_1'
+    name: 'createVideoReviews(string, string, CreateVideoReviewsBodyItem[], ServiceCallback<string[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], callback: ServiceCallback<string[]>)'
+      parameters:
+        - id: contentType
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-329">内容类型。</span><span class="sxs-lookup"><span data-stu-id="b8f43-329">The content type.</span></span>
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-330">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-330">Your team name.</span></span>
+        - id: createVideoReviewsBody
+          type:
+            - '@azure/cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]'
+          description: <span data-ttu-id="b8f43-331">创建评审 API 的正文</span><span class="sxs-lookup"><span data-stu-id="b8f43-331">Body for create reviews API</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<string[]>'
+          description: |
+            <span data-ttu-id="b8f43-332">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-332">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsCreateVideoReviewsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails'
+    name: 'getJobDetails(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b8f43-333">获取作业详细信息的作业 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-333">Get the Job Details for a Job Id.</span></span>
+    syntax:
+      content: 'function getJobDetails(teamName: string, jobId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-334">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-334">Your Team Name.</span></span>
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-335">作业的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-335">Id of the job.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsGetJobDetailsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails_2'
+    name: 'getJobDetails(string, string, RequestOptionsBase, ServiceCallback<Job>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getJobDetails(teamName: string, jobId: string, options: RequestOptionsBase, callback: ServiceCallback<Job>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-336">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-336">Your Team Name.</span></span>
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-337">作业的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-337">Id of the job.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b8f43-338">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-338">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Job>
+          description: |
+            <span data-ttu-id="b8f43-339">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-339">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetJobDetailsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getJobDetails_1'
+    name: 'getJobDetails(string, string, ServiceCallback<Job>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getJobDetails(teamName: string, jobId: string, callback: ServiceCallback<Job>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-340">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-340">Your Team Name.</span></span>
+        - id: jobId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-341">作业的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-341">Id of the job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Job>
+          description: |
+            <span data-ttu-id="b8f43-342">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-342">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetJobDetailsResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getReview'
+    name: 'getReview(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b8f43-343">返回检查的评审 Id 传递的详细信息。</span><span class="sxs-lookup"><span data-stu-id="b8f43-343">Returns review details for the review Id passed.</span></span>
+    syntax:
+      content: 'function getReview(teamName: string, reviewId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-344">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-344">Your Team Name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-345">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-345">Id of the review.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsGetReviewResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getReview_2'
+    name: 'getReview(string, string, RequestOptionsBase, ServiceCallback<Review>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getReview(teamName: string, reviewId: string, options: RequestOptionsBase, callback: ServiceCallback<Review>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-346">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-346">Your Team Name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-347">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-347">Id of the review.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b8f43-348">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-348">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Review>
+          description: |
+            <span data-ttu-id="b8f43-349">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-349">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetReviewResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getReview_1'
+    name: 'getReview(string, string, ServiceCallback<Review>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getReview(teamName: string, reviewId: string, callback: ServiceCallback<Review>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-350">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-350">Your Team Name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-351">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-351">Id of the review.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Review>
+          description: |
+            <span data-ttu-id="b8f43-352">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-352">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetReviewResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames'
+    name: 'getVideoFrames(string, string, Models.ReviewsGetVideoFramesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="b8f43-353">创建评审会显示为审阅者在你的团队。</span><span class="sxs-lookup"><span data-stu-id="b8f43-353">The reviews created would show up for Reviewers on your team.</span></span> <span data-ttu-id="b8f43-354">为审阅者已完成审阅，评审结果会发布 (即 HTTP POST) 上指定 CallBackEndpoint。</span><span class="sxs-lookup"><span data-stu-id="b8f43-354">As Reviewers complete reviewing, results of the Review would be POSTED (i.e. HTTP POST) on the specified CallBackEndpoint.</span></span>
+      <h3><span data-ttu-id="b8f43-355">回调架构</span><span class="sxs-lookup"><span data-stu-id="b8f43-355">CallBack Schemas</span></span> </h3>
+      <h4><span data-ttu-id="b8f43-356">评审完成回调示例</span><span class="sxs-lookup"><span data-stu-id="b8f43-356">Review Completion CallBack Sample</span></span></h4>
+      <p>
+      <span data-ttu-id="b8f43-357">{</span><span class="sxs-lookup"><span data-stu-id="b8f43-357">{</span></span><br/>
+      <span data-ttu-id="b8f43-358">"ReviewId": "<Review Id>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-358">"ReviewId": "<Review Id>",</span></span><br/>
+      <span data-ttu-id="b8f43-359">"ModifiedOn":"2016-10-11T22:36:32.9934851Z",</span><span class="sxs-lookup"><span data-stu-id="b8f43-359">"ModifiedOn": "2016-10-11T22:36:32.9934851Z",</span></span><br/>
+      <span data-ttu-id="b8f43-360">"ModifiedBy": "<Name of the Reviewer>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-360">"ModifiedBy": "<Name of the Reviewer>",</span></span><br/>
+      <span data-ttu-id="b8f43-361">"CallBackType":"评论"，</span><span class="sxs-lookup"><span data-stu-id="b8f43-361">"CallBackType": "Review",</span></span><br/>
+      <span data-ttu-id="b8f43-362">"ContentId": "<The ContentId that was specified input>",</span><span class="sxs-lookup"><span data-stu-id="b8f43-362">"ContentId": "<The ContentId that was specified input>",</span></span><br/>
+      <span data-ttu-id="b8f43-363">"元数据": {</span><span class="sxs-lookup"><span data-stu-id="b8f43-363">"Metadata": {</span></span><br/>
+      <span data-ttu-id="b8f43-364">"adultscore":"0.xxx",</span><span class="sxs-lookup"><span data-stu-id="b8f43-364">"adultscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="b8f43-365">"a":"False",</span><span class="sxs-lookup"><span data-stu-id="b8f43-365">"a": "False",</span></span><br/>
+      <span data-ttu-id="b8f43-366">"racyscore":"0.xxx",</span><span class="sxs-lookup"><span data-stu-id="b8f43-366">"racyscore": "0.xxx",</span></span><br/>
+      <span data-ttu-id="b8f43-367">"r":"True"</span><span class="sxs-lookup"><span data-stu-id="b8f43-367">"r": "True"</span></span><br/>
+      <span data-ttu-id="b8f43-368">},</span><span class="sxs-lookup"><span data-stu-id="b8f43-368">},</span></span><br/>
+      <span data-ttu-id="b8f43-369">"ReviewerResultTags": {</span><span class="sxs-lookup"><span data-stu-id="b8f43-369">"ReviewerResultTags": {</span></span><br/>
+      <span data-ttu-id="b8f43-370">"a":"False",</span><span class="sxs-lookup"><span data-stu-id="b8f43-370">"a": "False",</span></span><br/>
+      <span data-ttu-id="b8f43-371">"r":"True"</span><span class="sxs-lookup"><span data-stu-id="b8f43-371">"r": "True"</span></span><br/>
+      <span data-ttu-id="b8f43-372">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-372">}</span></span><br/>
+      <span data-ttu-id="b8f43-373">}</span><span class="sxs-lookup"><span data-stu-id="b8f43-373">}</span></span><br/>
+
+      </p><span data-ttu-id="b8f43-374">.</span><span class="sxs-lookup"><span data-stu-id="b8f43-374">.</span></span>
+    syntax:
+      content: 'function getVideoFrames(teamName: string, reviewId: string, options?: Models.ReviewsGetVideoFramesOptionalParams)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-375">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-375">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-376">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-376">Id of the review.</span></span>
+        - id: options
+          type:
+            - Models.ReviewsGetVideoFramesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReviewsGetVideoFramesResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames_2'
+    name: 'getVideoFrames(string, string, ReviewsGetVideoFramesOptionalParams, ServiceCallback<Frames>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getVideoFrames(teamName: string, reviewId: string, options: ReviewsGetVideoFramesOptionalParams, callback: ServiceCallback<Frames>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-377">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-377">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-378">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-378">Id of the review.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ReviewsGetVideoFramesOptionalParams'
+          description: <span data-ttu-id="b8f43-379">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-379">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Frames>
+          description: |
+            <span data-ttu-id="b8f43-380">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-380">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetVideoFramesResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.getVideoFrames_1'
+    name: 'getVideoFrames(string, string, ServiceCallback<Frames>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getVideoFrames(teamName: string, reviewId: string, callback: ServiceCallback<Frames>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-381">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-381">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-382">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-382">Id of the review.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Frames>
+          description: |
+            <span data-ttu-id="b8f43-383">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-383">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ReviewsGetVideoFramesResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview'
+    name: 'publishVideoReview(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b8f43-384">发布视频的检查，以使其可供查看。</span><span class="sxs-lookup"><span data-stu-id="b8f43-384">Publish video review to make it available for review.</span></span>
+    syntax:
+      content: 'function publishVideoReview(teamName: string, reviewId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-385">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-385">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-386">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-386">Id of the review.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview_2'
+    name: 'publishVideoReview(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function publishVideoReview(teamName: string, reviewId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-387">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-387">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-388">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-388">Id of the review.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b8f43-389">可选参数</span><span class="sxs-lookup"><span data-stu-id="b8f43-389">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-390">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-390">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.publishVideoReview_1'
+    name: 'publishVideoReview(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function publishVideoReview(teamName: string, reviewId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: teamName
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-391">你的团队名称。</span><span class="sxs-lookup"><span data-stu-id="b8f43-391">Your team name.</span></span>
+        - id: reviewId
+          type:
+            - string
+          description: <span data-ttu-id="b8f43-392">此评审的 id。</span><span class="sxs-lookup"><span data-stu-id="b8f43-392">Id of the review.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b8f43-393">回调</span><span class="sxs-lookup"><span data-stu-id="b8f43-393">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.Reviews.constructor'
+    name: Reviews(ContentModeratorClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b8f43-394">创建评审。</span><span class="sxs-lookup"><span data-stu-id="b8f43-394">Create a Reviews.</span></span>
+    syntax:
+      content: 'new Reviews(client: ContentModeratorClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ContentModeratorClientContext'
+          description: |
+            <span data-ttu-id="b8f43-395">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="b8f43-395">Reference to the service client.</span></span>
+    package: '@azure/cognitiveservices-contentmoderator'
+references:
+  - uid: '@azure/cognitiveservices-contentmoderator.ContentModeratorClientContext'
+    name: ContentModeratorClientContext
+    spec.typeScript:
+      - name: ContentModeratorClientContext
+        fullName: ContentModeratorClientContext
+        uid: '@azure/cognitiveservices-contentmoderator.ContentModeratorClientContext'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameOptionalParams'
+    name: ReviewsAddVideoFrameOptionalParams
+    spec.typeScript:
+      - name: ReviewsAddVideoFrameOptionalParams
+        fullName: ReviewsAddVideoFrameOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameOptionalParams'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameStreamOptionalParams'
+    name: ReviewsAddVideoFrameStreamOptionalParams
+    spec.typeScript:
+      - name: ReviewsAddVideoFrameStreamOptionalParams
+        fullName: ReviewsAddVideoFrameStreamOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameStreamOptionalParams'
+  - uid: '@azure/cognitiveservices-contentmoderator.VideoFrameBodyItem[]'
+    name: 'VideoFrameBodyItem[]'
+    spec.typeScript:
+      - name: VideoFrameBodyItem
+        fullName: VideoFrameBodyItem
+        uid: '@azure/cognitiveservices-contentmoderator.VideoFrameBodyItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameUrlOptionalParams'
+    name: ReviewsAddVideoFrameUrlOptionalParams
+    spec.typeScript:
+      - name: ReviewsAddVideoFrameUrlOptionalParams
+        fullName: ReviewsAddVideoFrameUrlOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsAddVideoFrameUrlOptionalParams'
+  - uid: '@azure/cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]'
+    name: 'TranscriptModerationBodyItem[]'
+    spec.typeScript:
+      - name: TranscriptModerationBodyItem
+        fullName: TranscriptModerationBodyItem
+        uid: '@azure/cognitiveservices-contentmoderator.TranscriptModerationBodyItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/cognitiveservices-contentmoderator.Content'
+    name: Content
+    spec.typeScript:
+      - name: Content
+        fullName: Content
+        uid: '@azure/cognitiveservices-contentmoderator.Content'
+  - uid: ServiceCallback<@azure/cognitiveservices-contentmoderator.JobId>
+    name: JobId>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobId
+        fullName: JobId
+        uid: '@azure/cognitiveservices-contentmoderator.JobId'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateJobOptionalParams'
+    name: ReviewsCreateJobOptionalParams
+    spec.typeScript:
+      - name: ReviewsCreateJobOptionalParams
+        fullName: ReviewsCreateJobOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateJobOptionalParams'
+  - uid: '@azure/cognitiveservices-contentmoderator.CreateReviewBodyItem[]'
+    name: 'CreateReviewBodyItem[]'
+    spec.typeScript:
+      - name: CreateReviewBodyItem
+        fullName: CreateReviewBodyItem
+        uid: '@azure/cognitiveservices-contentmoderator.CreateReviewBodyItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateReviewsOptionalParams'
+    name: ReviewsCreateReviewsOptionalParams
+    spec.typeScript:
+      - name: ReviewsCreateReviewsOptionalParams
+        fullName: ReviewsCreateReviewsOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateReviewsOptionalParams'
+  - uid: '@azure/cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]'
+    name: 'CreateVideoReviewsBodyItem[]'
+    spec.typeScript:
+      - name: CreateVideoReviewsBodyItem
+        fullName: CreateVideoReviewsBodyItem
+        uid: '@azure/cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateVideoReviewsOptionalParams'
+    name: ReviewsCreateVideoReviewsOptionalParams
+    spec.typeScript:
+      - name: ReviewsCreateVideoReviewsOptionalParams
+        fullName: ReviewsCreateVideoReviewsOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsCreateVideoReviewsOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-contentmoderator.Job>
+    name: Job>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Job
+        fullName: Job
+        uid: '@azure/cognitiveservices-contentmoderator.Job'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-contentmoderator.Review>
+    name: Review>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Review
+        fullName: Review
+        uid: '@azure/cognitiveservices-contentmoderator.Review'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-contentmoderator.Frames>
+    name: Frames>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Frames
+        fullName: Frames
+        uid: '@azure/cognitiveservices-contentmoderator.Frames'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-contentmoderator.ReviewsGetVideoFramesOptionalParams'
+    name: ReviewsGetVideoFramesOptionalParams
+    spec.typeScript:
+      - name: ReviewsGetVideoFramesOptionalParams
+        fullName: ReviewsGetVideoFramesOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.ReviewsGetVideoFramesOptionalParams'

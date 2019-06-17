@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - '@azure/batch.NetworkConfiguration.dynamicVNetAssignmentScope'
+      - '@azure/batch.NetworkConfiguration.endpointConfiguration'
+      - '@azure/batch.NetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="72b4d-101">池网络配置。</span><span class="sxs-lookup"><span data-stu-id="72b4d-101">The network configuration for a pool.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.dynamicVNetAssignmentScope'
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="72b4d-102">动态 vnet 分配的范围。</span><span class="sxs-lookup"><span data-stu-id="72b4d-102">The scope of dynamic vnet assignment.</span></span> <span data-ttu-id="72b4d-103">可能的值包括: none、 作业</span><span class="sxs-lookup"><span data-stu-id="72b4d-103">Possible values include: ''none'', ''job''</span></span>'
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: DynamicVNetAssignmentScope'
+      return:
+        type:
+          - '@azure/batch.DynamicVNetAssignmentScope'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.endpointConfiguration'
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="72b4d-104">上的终结点的配置中的计算节点的 Batch 池。</span><span class="sxs-lookup"><span data-stu-id="72b4d-104">The configuration for endpoints on compute nodes in the Batch pool.</span></span> <span data-ttu-id="72b4d-105">具有 virtualMachineConfiguration 属性的池才支持池终结点配置。</span><span class="sxs-lookup"><span data-stu-id="72b4d-105">Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.</span></span>
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - '@azure/batch.PoolEndpointConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="72b4d-106">ARM 资源池的计算节点将加入其中的虚拟网络子网的标识符。</span><span class="sxs-lookup"><span data-stu-id="72b4d-106">The ARM resource identifier of the virtual network subnet which the compute nodes of the pool will join.</span></span> <span data-ttu-id="72b4d-107">这是窗体 /subscriptions/ {订阅} /resourceGroups/ {组} /providers/ {provider} /virtualNetworks/ {network} /subnets/ {子网}。</span><span class="sxs-lookup"><span data-stu-id="72b4d-107">This is of the form /subscriptions/{subscription}/resourceGroups/{group}/providers/{provider}/virtualNetworks/{network}/subnets/{subnet}.</span></span>
+      <span data-ttu-id="72b4d-108">虚拟网络必须是同一区域和订阅与 Azure Batch 帐户中。</span><span class="sxs-lookup"><span data-stu-id="72b4d-108">The virtual network must be in the same region and subscription as the Azure Batch account.</span></span>
+      <span data-ttu-id="72b4d-109">指定的子网应有足够可用的 IP 地址来应对池中的节点数。</span><span class="sxs-lookup"><span data-stu-id="72b4d-109">The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool.</span></span> <span data-ttu-id="72b4d-110">如果子网没有足够的可用 IP 地址，池将部分分配计算节点，并且会调整大小错误。</span><span class="sxs-lookup"><span data-stu-id="72b4d-110">If the subnet doesn't have enough free IP addresses, the pool will partially allocate compute nodes, and a resize error will occur.</span></span> <span data-ttu-id="72b4d-111">对于使用 virtualMachineConfiguration 创建的池仅 ARM 支持虚拟网络 (microsoft.network/virtualnetworks)，但对于使用 cloudServiceConfiguration 创建 ARM 和经典虚拟网络支持。</span><span class="sxs-lookup"><span data-stu-id="72b4d-111">For pools created with virtualMachineConfiguration only ARM virtual networks ('Microsoft.Network/virtualNetworks') are supported, but for pools created with cloudServiceConfiguration both ARM and classic virtual networks are supported.</span></span> <span data-ttu-id="72b4d-112">有关更多详细信息，请参阅： https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span><span class="sxs-lookup"><span data-stu-id="72b4d-112">For more details, see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span></span>
+    optional: true
+    syntax:
+      content: 'subnetId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DynamicVNetAssignmentScope'
+    name: DynamicVNetAssignmentScope
+    spec.typeScript:
+      - name: DynamicVNetAssignmentScope
+        fullName: DynamicVNetAssignmentScope
+        uid: '@azure/batch.DynamicVNetAssignmentScope'
+  - uid: '@azure/batch.PoolEndpointConfiguration'
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: '@azure/batch.PoolEndpointConfiguration'

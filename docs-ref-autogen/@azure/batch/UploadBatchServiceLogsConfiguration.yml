@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+    name: UploadBatchServiceLogsConfiguration
+    fullName: UploadBatchServiceLogsConfiguration
+    children:
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 UploadBatchServiceLogsConfiguration 的接口。
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要将 Batch 服务日志文件上传到 Azure Blob 存储中容器的 URL。 URL 必须包含共享访问签名 (SAS) 授予对容器的写权限。 SAS 持续时间必须提供足够的时间才能完成的上载。 SAS 的开始时间为可选，建议不能指定。
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 从其上传 Batch 服务日志文件的时间范围的末尾。 包含一条日志消息在时间范围内的任何日志文件将上传。 这意味着该操作可能会检索由于始终上载整个日志文件，但该操作应检索所需较少的日志所需的更多日志。 如果省略，默认值是在 startTime 之后上传可用的所有日志。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 从其上传 Batch 服务日志文件的时间范围的开始。 包含一条日志消息在时间范围内的任何日志文件将上传。 这意味着该操作可能会检索由于始终上载整个日志文件，但该操作应检索所需较少的日志所需的更多日志。
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'

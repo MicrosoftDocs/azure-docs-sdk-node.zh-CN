@@ -13,6 +13,7 @@ items:
       - '@azure/arm-network.ApplicationGatewayProbe.name'
       - '@azure/arm-network.ApplicationGatewayProbe.path'
       - '@azure/arm-network.ApplicationGatewayProbe.pickHostNameFromBackendHttpSettings'
+      - '@azure/arm-network.ApplicationGatewayProbe.port'
       - '@azure/arm-network.ApplicationGatewayProbe.protocol'
       - '@azure/arm-network.ApplicationGatewayProbe.provisioningState'
       - '@azure/arm-network.ApplicationGatewayProbe.timeout'
@@ -21,7 +22,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="7a8d7-101">探测的应用程序网关。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-101">Probe of the application gateway.</span></span>
+    summary: <span data-ttu-id="ff625-101">探测的应用程序网关。</span><span class="sxs-lookup"><span data-stu-id="ff625-101">Probe of the application gateway.</span></span>
     extends:
       name: '@azure/arm-network.SubResource'
     package: '@azure/arm-network'
@@ -32,7 +33,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7a8d7-102">一个唯一只读的字符串，每当更新资源更改。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-102">A unique read-only string that changes whenever the resource is updated.</span></span>
+    summary: <span data-ttu-id="ff625-102">一个唯一只读的字符串，每当更新资源更改。</span><span class="sxs-lookup"><span data-stu-id="ff625-102">A unique read-only string that changes whenever the resource is updated.</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -47,7 +48,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7a8d7-103">若要发送到探测的主机名。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-103">Host name to send the probe to.</span></span>
+    summary: <span data-ttu-id="ff625-103">若要发送到探测的主机名。</span><span class="sxs-lookup"><span data-stu-id="ff625-103">Host name to send the probe to.</span></span>
     optional: true
     syntax:
       content: 'host?: undefined | string'
@@ -62,7 +63,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7a8d7-104">资源 ID。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-104">Resource ID.</span></span>
+    summary: <span data-ttu-id="ff625-104">资源 ID。</span><span class="sxs-lookup"><span data-stu-id="ff625-104">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -78,8 +79,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="7a8d7-105">探测间隔 （秒）。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-105">The probing interval in seconds.</span></span> <span data-ttu-id="7a8d7-106">这是每两次连续探测之间的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-106">This is the time interval between two consecutive probes.</span></span>
-      <span data-ttu-id="7a8d7-107">可接受的值为 1 秒到 86400 秒。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-107">Acceptable values are from 1 second to 86400 seconds.</span></span>
+      <span data-ttu-id="ff625-105">探测间隔 （秒）。</span><span class="sxs-lookup"><span data-stu-id="ff625-105">The probing interval in seconds.</span></span> <span data-ttu-id="ff625-106">这是每两次连续探测之间的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="ff625-106">This is the time interval between two consecutive probes.</span></span>
+      <span data-ttu-id="ff625-107">可接受的值为 1 秒到 86400 秒。</span><span class="sxs-lookup"><span data-stu-id="ff625-107">Acceptable values are from 1 second to 86400 seconds.</span></span>
     optional: true
     syntax:
       content: 'interval?: undefined | number'
@@ -94,7 +95,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7a8d7-108">用于进行分类的正常运行的探测响应的条件。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-108">Criterion for classifying a healthy probe response.</span></span>
+    summary: <span data-ttu-id="ff625-108">用于进行分类的正常运行的探测响应的条件。</span><span class="sxs-lookup"><span data-stu-id="ff625-108">Criterion for classifying a healthy probe response.</span></span>
     optional: true
     syntax:
       content: 'match?: ApplicationGatewayProbeHealthResponseMatch'
@@ -109,7 +110,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7a8d7-109">最少始终标记为正常运行的服务器数量。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-109">Minimum number of servers that are always marked healthy.</span></span> <span data-ttu-id="7a8d7-110">默认值为 0。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-110">Default value is 0.</span></span>
+    summary: <span data-ttu-id="ff625-109">最少始终标记为正常运行的服务器数量。</span><span class="sxs-lookup"><span data-stu-id="ff625-109">Minimum number of servers that are always marked healthy.</span></span> <span data-ttu-id="ff625-110">默认值为 0。</span><span class="sxs-lookup"><span data-stu-id="ff625-110">Default value is 0.</span></span>
     optional: true
     syntax:
       content: 'minServers?: undefined | number'
@@ -124,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7a8d7-111">在应用程序网关中是唯一的探测的名称。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-111">Name of the probe that is unique within an Application Gateway.</span></span>
+    summary: <span data-ttu-id="ff625-111">在应用程序网关中是唯一的探测的名称。</span><span class="sxs-lookup"><span data-stu-id="ff625-111">Name of the probe that is unique within an Application Gateway.</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -139,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="7a8d7-112">探测的相对路径。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-112">Relative path of probe.</span></span> <span data-ttu-id="7a8d7-113">从有效路径以 /。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-113">Valid path starts from ''/''.</span></span> <span data-ttu-id="7a8d7-114">探测发送到<Protocol>://<host>:<port><path></span><span class="sxs-lookup"><span data-stu-id="7a8d7-114">Probe is sent to <Protocol>://<host>:<port><path></span></span>'
+    summary: '<span data-ttu-id="ff625-112">探测的相对路径。</span><span class="sxs-lookup"><span data-stu-id="ff625-112">Relative path of probe.</span></span> <span data-ttu-id="ff625-113">从有效路径以 /。</span><span class="sxs-lookup"><span data-stu-id="ff625-113">Valid path starts from ''/''.</span></span> <span data-ttu-id="ff625-114">探测发送到<Protocol>://<host>:<port><path>。</span><span class="sxs-lookup"><span data-stu-id="ff625-114">Probe is sent to <Protocol>://<host>:<port><path>.</span></span>'
     optional: true
     syntax:
       content: 'path?: undefined | string'
@@ -154,13 +155,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7a8d7-115">是否应从后端 http 设置中选取的主机标头。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-115">Whether the host header should be picked from the backend http settings.</span></span> <span data-ttu-id="7a8d7-116">默认值为 false。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-116">Default value is false.</span></span>
+    summary: <span data-ttu-id="ff625-115">是否应从后端 http 设置中选取的主机标头。</span><span class="sxs-lookup"><span data-stu-id="ff625-115">Whether the host header should be picked from the backend http settings.</span></span> <span data-ttu-id="ff625-116">默认值为 false。</span><span class="sxs-lookup"><span data-stu-id="ff625-116">Default value is false.</span></span>
     optional: true
     syntax:
       content: 'pickHostNameFromBackendHttpSettings?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayProbe.port'
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ff625-117">自定义端口将用于探测后端服务器。</span><span class="sxs-lookup"><span data-stu-id="ff625-117">Custom port which will be used for probing the backend servers.</span></span> <span data-ttu-id="ff625-118">有效的值范围从 1 到 65535 之间。</span><span class="sxs-lookup"><span data-stu-id="ff625-118">The valid value ranges from 1 to 65535.</span></span> <span data-ttu-id="ff625-119">在未设置，从 http 端口的情况下将使用设置。</span><span class="sxs-lookup"><span data-stu-id="ff625-119">In case not set, port from http settings will be used.</span></span> <span data-ttu-id="ff625-120">此属性仅对 Standard_v2 和 WAF_v2 有效。</span><span class="sxs-lookup"><span data-stu-id="ff625-120">This property is valid for Standard_v2 and WAF_v2 only.</span></span>'
+    optional: true
+    syntax:
+      content: 'port?: undefined | number'
+      return:
+        type:
+          - undefined | number
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayProbe.protocol'
     name: protocol
@@ -169,7 +185,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="7a8d7-117">用于探测协议。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-117">The protocol used for the probe.</span></span> <span data-ttu-id="7a8d7-118">可能的值包括：Http，Https</span><span class="sxs-lookup"><span data-stu-id="7a8d7-118">Possible values include: ''Http'', ''Https''</span></span>'
+    summary: '<span data-ttu-id="ff625-121">用于探测协议。</span><span class="sxs-lookup"><span data-stu-id="ff625-121">The protocol used for the probe.</span></span> <span data-ttu-id="ff625-122">可能的值包括：Http，Https</span><span class="sxs-lookup"><span data-stu-id="ff625-122">Possible values include: ''Http'', ''Https''</span></span>'
     optional: true
     syntax:
       content: 'protocol?: ApplicationGatewayProtocol'
@@ -184,7 +200,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="7a8d7-119">预配后端 http 设置资源的状态。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-119">Provisioning state of the backend http settings resource.</span></span> <span data-ttu-id="7a8d7-120">可能的值包括：更新、 删除和失败。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-120">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
+    summary: '<span data-ttu-id="ff625-123">预配后端 http 设置资源的状态。</span><span class="sxs-lookup"><span data-stu-id="ff625-123">Provisioning state of the backend http settings resource.</span></span> <span data-ttu-id="ff625-124">可能的值包括：更新、 删除和失败。</span><span class="sxs-lookup"><span data-stu-id="ff625-124">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
@@ -199,7 +215,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7a8d7-121">探测超时 （秒）。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-121">The probe timeout in seconds.</span></span> <span data-ttu-id="7a8d7-122">探测标记为未使用此超时周期未收到有效响应。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-122">Probe marked as failed if valid response is not received with this timeout period.</span></span> <span data-ttu-id="7a8d7-123">可接受的值为 1 秒到 86400 秒。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-123">Acceptable values are from 1 second to 86400 seconds.</span></span>
+    summary: <span data-ttu-id="ff625-125">探测超时 （秒）。</span><span class="sxs-lookup"><span data-stu-id="ff625-125">The probe timeout in seconds.</span></span> <span data-ttu-id="ff625-126">探测标记为未使用此超时周期未收到有效响应。</span><span class="sxs-lookup"><span data-stu-id="ff625-126">Probe marked as failed if valid response is not received with this timeout period.</span></span> <span data-ttu-id="ff625-127">可接受的值为 1 秒到 86400 秒。</span><span class="sxs-lookup"><span data-stu-id="ff625-127">Acceptable values are from 1 second to 86400 seconds.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -214,7 +230,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7a8d7-124">资源的类型。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-124">Type of the resource.</span></span>
+    summary: <span data-ttu-id="ff625-128">资源的类型。</span><span class="sxs-lookup"><span data-stu-id="ff625-128">Type of the resource.</span></span>
     optional: true
     syntax:
       content: 'type?: undefined | string'
@@ -229,7 +245,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7a8d7-125">探测重试计数。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-125">The probe retry count.</span></span> <span data-ttu-id="7a8d7-126">后端服务器标记为连续探测失败计数达到 UnhealthyThreshold 后故障。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-126">Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold.</span></span> <span data-ttu-id="7a8d7-127">可接受的值为 20 是从 1 秒。</span><span class="sxs-lookup"><span data-stu-id="7a8d7-127">Acceptable values are from 1 second to 20.</span></span>
+    summary: <span data-ttu-id="ff625-129">探测重试计数。</span><span class="sxs-lookup"><span data-stu-id="ff625-129">The probe retry count.</span></span> <span data-ttu-id="ff625-130">后端服务器标记为连续探测失败计数达到 UnhealthyThreshold 后故障。</span><span class="sxs-lookup"><span data-stu-id="ff625-130">Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold.</span></span> <span data-ttu-id="ff625-131">可接受的值为 20 是从 1 秒。</span><span class="sxs-lookup"><span data-stu-id="ff625-131">Acceptable values are from 1 second to 20.</span></span>
     optional: true
     syntax:
       content: 'unhealthyThreshold?: undefined | number'

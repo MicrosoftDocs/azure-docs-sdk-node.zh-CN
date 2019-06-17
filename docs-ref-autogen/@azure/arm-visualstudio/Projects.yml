@@ -1,0 +1,569 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-visualstudio.Projects'
+    name: Projects
+    fullName: Projects
+    children:
+      - '@azure/arm-visualstudio.Projects.beginCreate'
+      - '@azure/arm-visualstudio.Projects.create'
+      - '@azure/arm-visualstudio.Projects.get'
+      - '@azure/arm-visualstudio.Projects.get_2'
+      - '@azure/arm-visualstudio.Projects.get_1'
+      - '@azure/arm-visualstudio.Projects.getJobStatus'
+      - '@azure/arm-visualstudio.Projects.getJobStatus_2'
+      - '@azure/arm-visualstudio.Projects.getJobStatus_1'
+      - '@azure/arm-visualstudio.Projects.listByResourceGroup'
+      - '@azure/arm-visualstudio.Projects.listByResourceGroup_2'
+      - '@azure/arm-visualstudio.Projects.listByResourceGroup_1'
+      - '@azure/arm-visualstudio.Projects.constructor'
+      - '@azure/arm-visualstudio.Projects.update'
+      - '@azure/arm-visualstudio.Projects.update_2'
+      - '@azure/arm-visualstudio.Projects.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="a434a-101">表示项目的类。</span><span class="sxs-lookup"><span data-stu-id="a434a-101">Class representing a Projects.</span></span>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.beginCreate'
+    name: 'beginCreate(ProjectResource, string, string, string, Models.ProjectsBeginCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="a434a-102">创建 Team Services 项目中具有指定名称的集合。</span><span class="sxs-lookup"><span data-stu-id="a434a-102">Creates a Team Services project in the collection with the specified name.</span></span>
+      <span data-ttu-id="a434a-103">资源属性中，必须指定 VersionControlOption 和 ProcessTemplateId。</span><span class="sxs-lookup"><span data-stu-id="a434a-103">'VersionControlOption' and 'ProcessTemplateId' must be specified in the resource properties.</span></span>
+      <span data-ttu-id="a434a-104">VersionControlOption 的有效值：Git、 Tfvc。</span><span class="sxs-lookup"><span data-stu-id="a434a-104">Valid values for VersionControlOption: Git, Tfvc.</span></span> <span data-ttu-id="a434a-105">ProcessTemplateId 的有效值：6B724908-EF14-45CF-84F8-768B5384DA45、 ADCC42AB-9882-485E-A3ED-7678F01F66BC，27450541-8E31-4150-9947-DC59F998FC01 （这些 Id 对应于 Scrum、 敏捷和 CMMI 过程模板）。</span><span class="sxs-lookup"><span data-stu-id="a434a-105">Valid values for ProcessTemplateId: 6B724908-EF14-45CF-84F8-768B5384DA45, ADCC42AB-9882-485E-A3ED-7678F01F66BC, 27450541-8E31-4150-9947-DC59F998FC01 (these IDs correspond to Scrum, Agile, and CMMI process templates).</span></span>
+    syntax:
+      content: 'function beginCreate(body: ProjectResource, resourceGroupName: string, rootResourceName: string, resourceName: string, options?: Models.ProjectsBeginCreateOptionalParams)'
+      parameters:
+        - id: body
+          type:
+            - '@azure/arm-visualstudio.ProjectResource'
+          description: <span data-ttu-id="a434a-106">请求数据。</span><span class="sxs-lookup"><span data-stu-id="a434a-106">The request data.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-107">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-107">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-108">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-108">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-109">Team Services 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-109">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - Models.ProjectsBeginCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.create'
+    name: 'create(ProjectResource, string, string, string, Models.ProjectsCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="a434a-110">创建 Team Services 项目中具有指定名称的集合。</span><span class="sxs-lookup"><span data-stu-id="a434a-110">Creates a Team Services project in the collection with the specified name.</span></span>
+      <span data-ttu-id="a434a-111">资源属性中，必须指定 VersionControlOption 和 ProcessTemplateId。</span><span class="sxs-lookup"><span data-stu-id="a434a-111">'VersionControlOption' and 'ProcessTemplateId' must be specified in the resource properties.</span></span>
+      <span data-ttu-id="a434a-112">VersionControlOption 的有效值：Git、 Tfvc。</span><span class="sxs-lookup"><span data-stu-id="a434a-112">Valid values for VersionControlOption: Git, Tfvc.</span></span> <span data-ttu-id="a434a-113">ProcessTemplateId 的有效值：6B724908-EF14-45CF-84F8-768B5384DA45、 ADCC42AB-9882-485E-A3ED-7678F01F66BC，27450541-8E31-4150-9947-DC59F998FC01 （这些 Id 对应于 Scrum、 敏捷和 CMMI 过程模板）。</span><span class="sxs-lookup"><span data-stu-id="a434a-113">Valid values for ProcessTemplateId: 6B724908-EF14-45CF-84F8-768B5384DA45, ADCC42AB-9882-485E-A3ED-7678F01F66BC, 27450541-8E31-4150-9947-DC59F998FC01 (these IDs correspond to Scrum, Agile, and CMMI process templates).</span></span>
+    syntax:
+      content: 'function create(body: ProjectResource, resourceGroupName: string, rootResourceName: string, resourceName: string, options?: Models.ProjectsCreateOptionalParams)'
+      parameters:
+        - id: body
+          type:
+            - '@azure/arm-visualstudio.ProjectResource'
+          description: <span data-ttu-id="a434a-114">请求数据。</span><span class="sxs-lookup"><span data-stu-id="a434a-114">The request data.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-115">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-115">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-116">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-116">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-117">Team Services 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-117">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - Models.ProjectsCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProjectsCreateResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a434a-118">获取 Team Services 项目资源的详细信息。</span><span class="sxs-lookup"><span data-stu-id="a434a-118">Gets the details of a Team Services project resource.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, rootResourceName: string, resourceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-119">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-119">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-120">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-120">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-121">Team Services 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-121">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProjectsGetResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, rootResourceName: string, resourceName: string, options: RequestOptionsBase, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-122">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-122">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-123">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-123">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-124">Team Services 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-124">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a434a-125">可选参数</span><span class="sxs-lookup"><span data-stu-id="a434a-125">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="a434a-126">回调</span><span class="sxs-lookup"><span data-stu-id="a434a-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsGetResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.get_1'
+    name: 'get(string, string, string, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, rootResourceName: string, resourceName: string, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-127">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-127">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-128">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-128">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-129">Team Services 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-129">Name of the Team Services project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="a434a-130">回调</span><span class="sxs-lookup"><span data-stu-id="a434a-130">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsGetResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.getJobStatus'
+    name: 'getJobStatus(string, string, string, string, string, Models.ProjectsGetJobStatusOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a434a-131">获取项目资源创建作业的状态。</span><span class="sxs-lookup"><span data-stu-id="a434a-131">Gets the status of the project resource creation job.</span></span>
+    syntax:
+      content: 'function getJobStatus(resourceGroupName: string, rootResourceName: string, resourceName: string, subContainerName: string, operation: string, options?: Models.ProjectsGetJobStatusOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-132">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-132">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-133">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-133">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-134">Team Services 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-134">Name of the Team Services project.</span></span>
+        - id: subContainerName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-135">此参数应设置为资源名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-135">This parameter should be set to the resourceName.</span></span>
+        - id: operation
+          type:
+            - string
+          description: <span data-ttu-id="a434a-136">操作类型。</span><span class="sxs-lookup"><span data-stu-id="a434a-136">The operation type.</span></span> <span data-ttu-id="a434a-137">唯一支持的值是 put。</span><span class="sxs-lookup"><span data-stu-id="a434a-137">The only supported value is 'put'.</span></span>
+        - id: options
+          type:
+            - Models.ProjectsGetJobStatusOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProjectsGetJobStatusResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.getJobStatus_2'
+    name: 'getJobStatus(string, string, string, string, string, ProjectsGetJobStatusOptionalParams, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getJobStatus(resourceGroupName: string, rootResourceName: string, resourceName: string, subContainerName: string, operation: string, options: ProjectsGetJobStatusOptionalParams, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-138">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-138">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-139">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-139">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-140">Team Services 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-140">Name of the Team Services project.</span></span>
+        - id: subContainerName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-141">此参数应设置为资源名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-141">This parameter should be set to the resourceName.</span></span>
+        - id: operation
+          type:
+            - string
+          description: <span data-ttu-id="a434a-142">操作类型。</span><span class="sxs-lookup"><span data-stu-id="a434a-142">The operation type.</span></span> <span data-ttu-id="a434a-143">唯一支持的值是 put。</span><span class="sxs-lookup"><span data-stu-id="a434a-143">The only supported value is 'put'.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-visualstudio.ProjectsGetJobStatusOptionalParams'
+          description: <span data-ttu-id="a434a-144">可选参数</span><span class="sxs-lookup"><span data-stu-id="a434a-144">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="a434a-145">回调</span><span class="sxs-lookup"><span data-stu-id="a434a-145">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsGetJobStatusResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.getJobStatus_1'
+    name: 'getJobStatus(string, string, string, string, string, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getJobStatus(resourceGroupName: string, rootResourceName: string, resourceName: string, subContainerName: string, operation: string, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-146">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-146">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-147">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-147">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-148">Team Services 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-148">Name of the Team Services project.</span></span>
+        - id: subContainerName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-149">此参数应设置为资源名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-149">This parameter should be set to the resourceName.</span></span>
+        - id: operation
+          type:
+            - string
+          description: <span data-ttu-id="a434a-150">操作类型。</span><span class="sxs-lookup"><span data-stu-id="a434a-150">The operation type.</span></span> <span data-ttu-id="a434a-151">唯一支持的值是 put。</span><span class="sxs-lookup"><span data-stu-id="a434a-151">The only supported value is 'put'.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="a434a-152">回调</span><span class="sxs-lookup"><span data-stu-id="a434a-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsGetJobStatusResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.listByResourceGroup'
+    name: 'listByResourceGroup(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a434a-153">获取指定的 Team Services 帐户中创建的所有 Visual Studio Team Services 项目资源。</span><span class="sxs-lookup"><span data-stu-id="a434a-153">Gets all Visual Studio Team Services project resources created in the specified Team Services account.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, rootResourceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-154">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-154">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-155">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-155">Name of the Team Services account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProjectsListByResourceGroupResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, string, RequestOptionsBase, ServiceCallback<ProjectResourceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, rootResourceName: string, options: RequestOptionsBase, callback: ServiceCallback<ProjectResourceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-156">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-156">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-157">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-157">Name of the Team Services account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a434a-158">可选参数</span><span class="sxs-lookup"><span data-stu-id="a434a-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResourceListResult>
+          description: |
+            <span data-ttu-id="a434a-159">回调</span><span class="sxs-lookup"><span data-stu-id="a434a-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsListByResourceGroupResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, string, ServiceCallback<ProjectResourceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, rootResourceName: string, callback: ServiceCallback<ProjectResourceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-160">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-160">Name of the resource group within the Azure subscription.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-161">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-161">Name of the Team Services account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResourceListResult>
+          description: |
+            <span data-ttu-id="a434a-162">回调</span><span class="sxs-lookup"><span data-stu-id="a434a-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsListByResourceGroupResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.constructor'
+    name: Projects(VisualStudioResourceProviderClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a434a-163">创建项目。</span><span class="sxs-lookup"><span data-stu-id="a434a-163">Create a Projects.</span></span>
+    syntax:
+      content: 'new Projects(client: VisualStudioResourceProviderClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-visualstudio.VisualStudioResourceProviderClientContext'
+          description: |
+            <span data-ttu-id="a434a-164">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="a434a-164">Reference to the service client.</span></span>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.update'
+    name: 'update(string, ProjectResource, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="a434a-165">更新指定的 Team Services 项目的标记。</span><span class="sxs-lookup"><span data-stu-id="a434a-165">Updates the tags of the specified Team Services project.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, body: ProjectResource, rootResourceName: string, resourceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-166">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-166">Name of the resource group within the Azure subscription.</span></span>
+        - id: body
+          type:
+            - '@azure/arm-visualstudio.ProjectResource'
+          description: <span data-ttu-id="a434a-167">请求数据。</span><span class="sxs-lookup"><span data-stu-id="a434a-167">The request data.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-168">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-168">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-169">Team Services 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-169">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProjectsUpdateResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.update_2'
+    name: 'update(string, ProjectResource, string, string, RequestOptionsBase, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, body: ProjectResource, rootResourceName: string, resourceName: string, options: RequestOptionsBase, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-170">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-170">Name of the resource group within the Azure subscription.</span></span>
+        - id: body
+          type:
+            - '@azure/arm-visualstudio.ProjectResource'
+          description: <span data-ttu-id="a434a-171">请求数据。</span><span class="sxs-lookup"><span data-stu-id="a434a-171">The request data.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-172">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-172">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-173">Team Services 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-173">Name of the Team Services project.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="a434a-174">可选参数</span><span class="sxs-lookup"><span data-stu-id="a434a-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="a434a-175">回调</span><span class="sxs-lookup"><span data-stu-id="a434a-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsUpdateResponse>
+    package: '@azure/arm-visualstudio'
+  - uid: '@azure/arm-visualstudio.Projects.update_1'
+    name: 'update(string, ProjectResource, string, string, ServiceCallback<ProjectResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, body: ProjectResource, rootResourceName: string, resourceName: string, callback: ServiceCallback<ProjectResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-176">在 Azure 订阅中的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-176">Name of the resource group within the Azure subscription.</span></span>
+        - id: body
+          type:
+            - '@azure/arm-visualstudio.ProjectResource'
+          description: <span data-ttu-id="a434a-177">请求数据。</span><span class="sxs-lookup"><span data-stu-id="a434a-177">The request data.</span></span>
+        - id: rootResourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-178">Team Services 帐户的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-178">Name of the Team Services account.</span></span>
+        - id: resourceName
+          type:
+            - string
+          description: <span data-ttu-id="a434a-179">Team Services 项目的名称。</span><span class="sxs-lookup"><span data-stu-id="a434a-179">Name of the Team Services project.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+          description: |
+            <span data-ttu-id="a434a-180">回调</span><span class="sxs-lookup"><span data-stu-id="a434a-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ProjectsUpdateResponse>
+    package: '@azure/arm-visualstudio'
+references:
+  - uid: '@azure/arm-visualstudio.VisualStudioResourceProviderClientContext'
+    name: VisualStudioResourceProviderClientContext
+    spec.typeScript:
+      - name: VisualStudioResourceProviderClientContext
+        fullName: VisualStudioResourceProviderClientContext
+        uid: '@azure/arm-visualstudio.VisualStudioResourceProviderClientContext'
+  - uid: '@azure/arm-visualstudio.ProjectResource'
+    name: ProjectResource
+    spec.typeScript:
+      - name: ProjectResource
+        fullName: ProjectResource
+        uid: '@azure/arm-visualstudio.ProjectResource'
+  - uid: ServiceCallback<@azure/arm-visualstudio.ProjectResource>
+    name: ProjectResource>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ProjectResource
+        fullName: ProjectResource
+        uid: '@azure/arm-visualstudio.ProjectResource'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-visualstudio.ProjectsGetJobStatusOptionalParams'
+    name: ProjectsGetJobStatusOptionalParams
+    spec.typeScript:
+      - name: ProjectsGetJobStatusOptionalParams
+        fullName: ProjectsGetJobStatusOptionalParams
+        uid: '@azure/arm-visualstudio.ProjectsGetJobStatusOptionalParams'
+  - uid: ServiceCallback<@azure/arm-visualstudio.ProjectResourceListResult>
+    name: ProjectResourceListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ProjectResourceListResult
+        fullName: ProjectResourceListResult
+        uid: '@azure/arm-visualstudio.ProjectResourceListResult'
+      - name: '>'
+        fullName: '>'

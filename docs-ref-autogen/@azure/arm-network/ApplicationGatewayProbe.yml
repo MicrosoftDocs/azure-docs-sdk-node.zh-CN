@@ -13,6 +13,7 @@ items:
       - '@azure/arm-network.ApplicationGatewayProbe.name'
       - '@azure/arm-network.ApplicationGatewayProbe.path'
       - '@azure/arm-network.ApplicationGatewayProbe.pickHostNameFromBackendHttpSettings'
+      - '@azure/arm-network.ApplicationGatewayProbe.port'
       - '@azure/arm-network.ApplicationGatewayProbe.protocol'
       - '@azure/arm-network.ApplicationGatewayProbe.provisioningState'
       - '@azure/arm-network.ApplicationGatewayProbe.timeout'
@@ -139,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '探测的相对路径。 从有效路径以 /。 探测发送到<Protocol>://<host>:<port><path>'
+    summary: '探测的相对路径。 从有效路径以 /。 探测发送到<Protocol>://<host>:<port><path>。'
     optional: true
     syntax:
       content: 'path?: undefined | string'
@@ -161,6 +162,21 @@ items:
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayProbe.port'
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 自定义端口将用于探测后端服务器。 有效的值范围从 1 到 65535 之间。 在未设置，从 http 端口的情况下将使用设置。 此属性仅对 Standard_v2 和 WAF_v2 有效。
+    optional: true
+    syntax:
+      content: 'port?: undefined | number'
+      return:
+        type:
+          - undefined | number
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayProbe.protocol'
     name: protocol

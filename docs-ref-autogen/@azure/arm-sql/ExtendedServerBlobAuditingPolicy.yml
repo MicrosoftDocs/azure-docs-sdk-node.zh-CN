@@ -1,0 +1,255 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy'
+    name: ExtendedServerBlobAuditingPolicy
+    fullName: ExtendedServerBlobAuditingPolicy
+    children:
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.auditActionsAndGroups'
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.id'
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.isAzureMonitorTargetEnabled'
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.isStorageSecondaryKeyInUse'
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.name'
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.predicateExpression'
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.retentionDays'
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.state'
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountAccessKey'
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountSubscriptionId'
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.storageEndpoint'
+      - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: 扩展的服务器 blob 审核策略。
+    extends:
+      name: '@azure/arm-sql.ProxyResource'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.auditActionsAndGroups'
+    name: auditActionsAndGroups
+    fullName: auditActionsAndGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      指定要审核操作组和操作。
+      一组建议的操作组，使用以下组合-这将审核所有查询和执行针对数据库，以及成功和失败的登录名的存储的过程：
+
+      BATCH_COMPLETED_GROUP，SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP，FAILED_DATABASE_AUTHENTICATION_GROUP。
+
+      上面的组合也是启用审核从 Azure 门户时，默认情况下配置的集。
+
+      若要审核的支持的操作组 (请注意： 选择包含您的审核需要的仅在特定组。 使用不必要的组可能会导致大量审核记录）：
+
+      APPLICATION_ROLE_CHANGE_PASSWORD_GROUP BACKUP_RESTORE_GROUP DATABASE_LOGOUT_GROUP DATABASE_OBJECT_CHANGE_GROUP DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP DATABASE_OBJECT_PERMISSION_CHANGE_GROUP DATABASE_OPERATION_GROUP DATABASE_PERMISSION_CHANGE_GROUP DATABASE_PRINCIPAL_CHANGE_GROUP DATABASE_PRINCIPAL_IMPERSONATION_GROUP DATABASE_ROLE_MEMBER_CHANGE_GROUP FAILED_DATABASE_AUTHENTICATION_GROUP SCHEMA_OBJECT_ACCESS_GROUP SCHEMA_OBJECT_CHANGE_GROUP SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP USER_CHANGE_PASSWORD_GROUP BATCH_STARTED_GROUP BATCH_COMPLETED_GROUP
+
+      这是包含所有 sql 语句的组和存储的过程对数据库执行，因为这会导致重复的审核日志不应与其他组结合使用。
+
+      有关详细信息，请参阅[数据库级别审核操作组](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups)。
+
+      对于数据库审核策略，特定操作也可以是指定 （请注意，不能为服务器审核策略指定的操作）。 若要审核的受支持的操作包括：选择更新插入删除执行接收引用
+
+      用于定义要审核的操作的一般形式为: {action} ON {对象} 的 {主体}
+
+      请注意，<object>采用上述格式可以指像表、 视图或存储的过程或整个数据库或架构的对象。 对于后一种情况下，窗体数据库:: {db_name} 和架构:: {schema_name}，分别使用。
+
+      例如：选择上 dbo.myTable 公共 select 上 DATABASE::myDatabase 上由公共 SCHEMA::mySchema 公共 select
+
+      有关详细信息，请参阅[数据库级别审核操作](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
+    optional: true
+    syntax:
+      content: 'auditActionsAndGroups?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      资源 ID。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.isAzureMonitorTargetEnabled'
+    name: isAzureMonitorTargetEnabled
+    fullName: isAzureMonitorTargetEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      指定是否将审核事件发送到 Azure Monitor。
+      若要将事件发送到 Azure Monitor 中，为已启用或 IsAzureMonitorTargetEnabled 为 true，则指定省/直辖市。
+      在使用 REST API 配置审核，应该还创建与在数据库上的 SQLSecurityAuditEvents 诊断日志类别的诊断设置。
+      请注意，对于服务器级别审核，应使用作为 {databaseName} 的 'master' 数据库。
+
+      设置诊断设置 URI 的格式：PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+
+      有关详细信息，请参阅[诊断设置 REST API](https://go.microsoft.com/fwlink/?linkid=2033207)或[诊断设置 PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
+    optional: true
+    syntax:
+      content: 'isAzureMonitorTargetEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.isStorageSecondaryKeyInUse'
+    name: isStorageSecondaryKeyInUse
+    fullName: isStorageSecondaryKeyInUse
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定 storageAccountAccessKey 值是否是存储的辅助密钥。
+    optional: true
+    syntax:
+      content: 'isStorageSecondaryKeyInUse?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      资源名称。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.predicateExpression'
+    name: predicateExpression
+    fullName: predicateExpression
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定条件的 where 子句时创建审核。
+    optional: true
+    syntax:
+      content: 'predicateExpression?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.retentionDays'
+    name: retentionDays
+    fullName: retentionDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的天数保留审核中记录的存储帐户中。
+    optional: true
+    syntax:
+      content: 'retentionDays?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定策略的状态。 如果启用状态，则 storageEndpoint 或 isAzureMonitorTargetEnabled 所需。 可能的值包括：' Enabled'，'Disabled'
+    syntax:
+      content: 'state: BlobAuditingPolicyState'
+      return:
+        type:
+          - '@azure/arm-sql.BlobAuditingPolicyState'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountAccessKey'
+    name: storageAccountAccessKey
+    fullName: storageAccountAccessKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定审核存储帐户的标识符键。 如果启用状态，并且指定 storageEndpoint，则需要 storageAccountAccessKey。
+    optional: true
+    syntax:
+      content: 'storageAccountAccessKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.storageAccountSubscriptionId'
+    name: storageAccountSubscriptionId
+    fullName: storageAccountSubscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的 blob 存储订阅 id。
+    optional: true
+    syntax:
+      content: 'storageAccountSubscriptionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.storageEndpoint'
+    name: storageEndpoint
+    fullName: storageEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '指定 blob 存储终结点 (例如 https://MyAccount.blob.core.windows.net) 。 如果启用了状态，则需要 storageEndpoint。'
+    optional: true
+    syntax:
+      content: 'storageEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ExtendedServerBlobAuditingPolicy.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      资源类型。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.ProxyResource'
+    name: ProxyResource
+    spec.typeScript:
+      - name: ProxyResource
+        fullName: ProxyResource
+        uid: '@azure/arm-sql.ProxyResource'
+  - uid: '@azure/arm-sql.BlobAuditingPolicyState'
+    name: BlobAuditingPolicyState
+    spec.typeScript:
+      - name: BlobAuditingPolicyState
+        fullName: BlobAuditingPolicyState
+        uid: '@azure/arm-sql.BlobAuditingPolicyState'

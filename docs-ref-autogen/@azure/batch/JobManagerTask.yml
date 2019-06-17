@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    fullName: JobManagerTask
+    children:
+      - '@azure/batch.JobManagerTask.allowLowPriorityNode'
+      - '@azure/batch.JobManagerTask.applicationPackageReferences'
+      - '@azure/batch.JobManagerTask.authenticationTokenSettings'
+      - '@azure/batch.JobManagerTask.commandLine'
+      - '@azure/batch.JobManagerTask.constraints'
+      - '@azure/batch.JobManagerTask.containerSettings'
+      - '@azure/batch.JobManagerTask.displayName'
+      - '@azure/batch.JobManagerTask.environmentSettings'
+      - '@azure/batch.JobManagerTask.id'
+      - '@azure/batch.JobManagerTask.killJobOnCompletion'
+      - '@azure/batch.JobManagerTask.outputFiles'
+      - '@azure/batch.JobManagerTask.resourceFiles'
+      - '@azure/batch.JobManagerTask.runExclusive'
+      - '@azure/batch.JobManagerTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: '创建作业时，会自动启动的作业管理器任务。 Batch 服务尝试计划作业中的任何其他任务之前在作业管理器任务。 在收缩池，Batch 服务会尝试保留尽可能 （即之前正在运行的作业管理器任务的节点, 删除正在运行 normal 的任务的节点） 长时间运行作业管理器任务的计算节点。 当作业管理器任务失败并需要重新启动时，系统尝试计划的最高优先级。 如果没有可用的空闲节点，系统可能会终止池中正在运行的任务之一，并将其返回到队列，以便为要重新启动的作业管理器任务留出空间。 请注意，一个作业中的作业管理器任务不会不优先级高于其他作业中的任务。 在作业，观察到只有作业的优先级别。 例如，如果作业管理器的优先级为 0 作业中，需要重新启动，它将不显示优先级为 1 的作业的任务。 在计算节点上触发恢复操作时，batch 将重试任务。 恢复操作的示例包括 （但不限于） 时重启不正常的计算节点或计算节点因主机故障消失。 由于恢复操作是独立的不会根据 maxTaskRetryCount 计数会重试。 即使 maxTaskRetryCount 为 0，恢复操作由于内部重试可能会发生。 因此，所有任务应都是幂等。 这意味着任务需要允许正在中断并重新启动而不会导致任何损坏或重复的数据。 最佳实践长时间运行的任务是使用某种形式的检查点。'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.allowLowPriorityNode'
+    name: allowLowPriorityNode
+    fullName: allowLowPriorityNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 是否在作业管理器任务可能在低优先级计算节点上运行。 默认值为 true。
+    optional: true
+    syntax:
+      content: 'allowLowPriorityNode?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Batch 服务会将部署到计算节点运行命令行之前的应用程序包的列表。 应用程序包下载并部署到共享目录，不工作目录的任务。 因此，如果引用的包已在计算节点上，并且是最新，然后不重新下载;使用计算节点上的现有副本。 如果引用的应用程序无法安装包，例如因为包已被删除或下载失败，因为该任务将失败。
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.authenticationTokenSettings'
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 该任务可以使用来执行批处理服务操作的身份验证令牌的设置。 如果设置此属性，Batch 服务提供了用于批处理服务操作不需要帐户访问密钥进行身份验证的身份验证令牌的任务。 通过 AZ_BATCH_AUTHENTICATION_TOKEN 环境变量提供的标记。 该任务可使用该令牌在执行的操作取决于设置。 例如，任务可以请求以便将其他任务添加到作业，或检查状态的作业或作业下的其他任务的作业权限。
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - '@azure/batch.AuthenticationTokenSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '作业管理器任务的命令行。 命令行不会在 shell 下运行，并因此不能充分利用 shell 功能，例如环境变量扩展。 如果你想要利用此类功能，您应中调用 shell 命令行中，例如使用"cmd /c MyCommand"在 Windows 中或"/ bin/sh-c MyCommand"在 Linux 中。 如果命令行所引用的文件路径，它应使用相对路径 （相对于任务工作目录），或使用批处理提供的环境变量 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 将应用到作业管理器任务的约束。
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作业管理器任务运行的容器设置。 如果将运行此任务的池没有设置 containerConfiguration，则必须也设置。 如果将运行此任务的池没有设置 containerConfiguration，这不能设置。 当指定此选项时，如下 AZ_BATCH_NODE_ROOT_DIR （在节点上的 Azure Batch 目录的根） 的所有目录以递归方式都映射到容器、 所有任务的环境变量都都映射到容器中，和是任务命令行在容器中执行。
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作业管理器任务的显示名称。 它不需要具有唯一性，并且可以包含最大长度为 1024年的任何 Unicode 字符。
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作业管理器任务的环境变量设置的列表。
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一个字符串，唯一标识作业中的作业管理器任务。 ID 可以包含字母数字字符，包括连字符和下划线的任意组合，并且不能包含超过 64 个字符。
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.killJobOnCompletion'
+    name: killJobOnCompletion
+    fullName: killJobOnCompletion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 是否完成的作业管理器任务表示整个作业的完成。 如果为 true，作业管理器任务完成后，批处理服务标记为作业完成着。 如果任何任务仍在运行 （而不是作业发布） 这一次，这些任务都将终止。 如果为 false，在完成作业管理器任务不会影响作业状态。 在这种情况下，应使用 onAllTasksComplete 属性可终止该作业，或具有客户端或用户显式终止作业。 此示例是如果作业管理器会创建一组任务，但然后在其执行过程中，将没有进一步的角色。 默认值为 true。 如果使用到控制作业生命周期和仅使用作业管理器任务创建的任务 （不用于监视进度） 的作业的 onAllTasksComplete 和 onTaskFailure 属性，然后务必 killJobOnCompletion 设置为 false。
+    optional: true
+    syntax:
+      content: 'killJobOnCompletion?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 批处理服务将上传从计算节点运行命令行后的文件的列表。 对于多实例任务，才会在其执行的主要任务的计算节点从上载文件。
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/batch.OutputFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Batch 服务会将下载到计算节点上，运行命令行之前的文件的列表。 列出此元素下的文件位于任务的工作目录中。
+      没有资源文件的列表的最大大小。  当超过最大大小时，则请求将失败，并且响应错误代码将是 RequestEntityTooLarge。 如果发生这种情况，必须在大小减少的 ResourceFiles 集合。 这可以实现使用.zip 文件、 应用程序包或 Docker 容器。
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.runExclusive'
+    name: runExclusive
+    fullName: runExclusive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      作业管理器任务是否需要独占使用它在其中运行的计算节点。 如果为 true，只要运行作业管理器，将在同一计算节点上为不运行任何其他任务。 如果为 false，其他任务可以同时运行的作业管理器在计算节点上。
+      作业管理器任务通常根据限制进行计数该节点的并发任务，因此，这是仅适用于此节点允许多个并发任务。 默认值为 true。
+    optional: true
+    syntax:
+      content: 'runExclusive?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作业管理器任务运行的用户标识。 如果省略，该任务运行作为唯一的非管理用户的任务。
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AuthenticationTokenSettings'
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: '@azure/batch.AuthenticationTokenSettings'
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/batch.OutputFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'

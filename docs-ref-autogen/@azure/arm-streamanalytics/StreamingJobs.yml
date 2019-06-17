@@ -1,0 +1,803 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-streamanalytics.StreamingJobs'
+    name: StreamingJobs
+    fullName: StreamingJobs
+    children:
+      - '@azure/arm-streamanalytics.StreamingJobs.beginCreateOrReplace'
+      - '@azure/arm-streamanalytics.StreamingJobs.beginDeleteMethod'
+      - '@azure/arm-streamanalytics.StreamingJobs.beginStart'
+      - '@azure/arm-streamanalytics.StreamingJobs.beginStop'
+      - '@azure/arm-streamanalytics.StreamingJobs.createOrReplace'
+      - '@azure/arm-streamanalytics.StreamingJobs.deleteMethod'
+      - '@azure/arm-streamanalytics.StreamingJobs.get'
+      - '@azure/arm-streamanalytics.StreamingJobs.get_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.get_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.list'
+      - '@azure/arm-streamanalytics.StreamingJobs.list_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.list_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.listNext'
+      - '@azure/arm-streamanalytics.StreamingJobs.listNext_2'
+      - '@azure/arm-streamanalytics.StreamingJobs.listNext_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.start'
+      - '@azure/arm-streamanalytics.StreamingJobs.stop'
+      - '@azure/arm-streamanalytics.StreamingJobs.constructor'
+      - '@azure/arm-streamanalytics.StreamingJobs.update'
+      - '@azure/arm-streamanalytics.StreamingJobs.update_1'
+      - '@azure/arm-streamanalytics.StreamingJobs.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示 StreamingJobs 的类。
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginCreateOrReplace'
+    name: 'beginCreateOrReplace(StreamingJob, string, string, Models.StreamingJobsBeginCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建流式处理作业或替换现有的流式处理作业。
+    syntax:
+      content: 'function beginCreateOrReplace(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options?: Models.StreamingJobsBeginCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: 将用于创建新的流式处理作业或替换现有的流式处理作业的定义。
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - Models.StreamingJobsBeginCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除流式处理作业。
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginStart'
+    name: 'beginStart(string, string, Models.StreamingJobsBeginStartOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 启动流式处理作业。 启动作业后它将开始处理输入的事件，并生成输出。
+    syntax:
+      content: 'function beginStart(resourceGroupName: string, jobName: string, options?: Models.StreamingJobsBeginStartOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - Models.StreamingJobsBeginStartOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.beginStop'
+    name: 'beginStop(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 停止正在运行的流式处理作业。 这会导致正在运行的流式处理作业停止处理输入的事件并生成输出。
+    syntax:
+      content: 'function beginStop(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.createOrReplace'
+    name: 'createOrReplace(StreamingJob, string, string, Models.StreamingJobsCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建流式处理作业或替换现有的流式处理作业。
+    syntax:
+      content: 'function createOrReplace(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options?: Models.StreamingJobsCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: 将用于创建新的流式处理作业或替换现有的流式处理作业的定义。
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - Models.StreamingJobsCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除流式处理作业。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.get'
+    name: 'get(string, string, Models.StreamingJobsGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取指定流式处理作业的详细信息。
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, options?: Models.StreamingJobsGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - Models.StreamingJobsGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.get_1'
+    name: 'get(string, string, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.get_2'
+    name: 'get(string, string, StreamingJobsGetOptionalParams, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, options: StreamingJobsGetOptionalParams, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsGetOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.list'
+    name: list(Models.StreamingJobsListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有给定订阅中的流式处理作业。
+    syntax:
+      content: 'function list(options?: Models.StreamingJobsListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.StreamingJobsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.list_1'
+    name: list(ServiceCallback<StreamingJobListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsListResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.list_2'
+    name: 'list(StreamingJobsListOptionalParams, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: StreamingJobsListOptionalParams, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsListOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsListResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup'
+    name: 'listByResourceGroup(string, Models.StreamingJobsListByResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有指定的资源组中的流式处理作业。
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: Models.StreamingJobsListByResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: options
+          type:
+            - Models.StreamingJobsListByResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, StreamingJobsListByResourceGroupOptionalParams, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: StreamingJobsListByResourceGroupOptionalParams, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsListByResourceGroupOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有指定的资源组中的流式处理作业。
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsListByResourceGroupNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出所有给定订阅中的流式处理作业。
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsListNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsListNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.listNext_1'
+    name: 'listNext(string, ServiceCallback<StreamingJobListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<StreamingJobListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsListNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.start'
+    name: 'start(string, string, Models.StreamingJobsStartOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 启动流式处理作业。 启动作业后它将开始处理输入的事件，并生成输出。
+    syntax:
+      content: 'function start(resourceGroupName: string, jobName: string, options?: Models.StreamingJobsStartOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - Models.StreamingJobsStartOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.stop'
+    name: 'stop(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 停止正在运行的流式处理作业。 这会导致正在运行的流式处理作业停止处理输入的事件并生成输出。
+    syntax:
+      content: 'function stop(resourceGroupName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.constructor'
+    name: StreamingJobs(StreamAnalyticsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建 StreamingJobs。
+    syntax:
+      content: 'new StreamingJobs(client: StreamAnalyticsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.update'
+    name: 'update(StreamingJob, string, string, Models.StreamingJobsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新现有的流式处理作业。 这可用于部分更新 （即。 更新一个或两个属性） 而不会影响其他作业定义流式处理作业。
+    syntax:
+      content: 'function update(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options?: Models.StreamingJobsUpdateOptionalParams)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: |-
+            流式处理的作业对象。 此处指定的属性将覆盖现有流式处理作业 （即中的相应属性这些属性将会更新）。
+            为 null，此处设置任何属性将意味着现有输入中的对应属性将保持不变并不会因此修补程序操作而更改。
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - Models.StreamingJobsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StreamingJobsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.update_1'
+    name: 'update(StreamingJob, string, string, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: |-
+            流式处理的作业对象。 此处指定的属性将覆盖现有流式处理作业 （即中的相应属性这些属性将会更新）。
+            为 null，此处设置任何属性将意味着现有输入中的对应属性将保持不变并不会因此修补程序操作而更改。
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.StreamingJobs.update_2'
+    name: 'update(StreamingJob, string, string, StreamingJobsUpdateOptionalParams, ServiceCallback<StreamingJob>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(streamingJob: StreamingJob, resourceGroupName: string, jobName: string, options: StreamingJobsUpdateOptionalParams, callback: ServiceCallback<StreamingJob>)'
+      parameters:
+        - id: streamingJob
+          type:
+            - '@azure/arm-streamanalytics.StreamingJob'
+          description: |-
+            流式处理的作业对象。 此处指定的属性将覆盖现有流式处理作业 （即中的相应属性这些属性将会更新）。
+            为 null，此处设置任何属性将意味着现有输入中的对应属性将保持不变并不会因此修补程序操作而更改。
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: jobName
+          type:
+            - string
+          description: 流式处理作业的名称。
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.StreamingJobsUpdateOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.StreamingJobsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+references:
+  - uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+    name: StreamAnalyticsManagementClientContext
+    spec.typeScript:
+      - name: StreamAnalyticsManagementClientContext
+        fullName: StreamAnalyticsManagementClientContext
+        uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+  - uid: '@azure/arm-streamanalytics.StreamingJob'
+    name: StreamingJob
+    spec.typeScript:
+      - name: StreamingJob
+        fullName: StreamingJob
+        uid: '@azure/arm-streamanalytics.StreamingJob'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.StreamingJob>
+    name: StreamingJob>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StreamingJob
+        fullName: StreamingJob
+        uid: '@azure/arm-streamanalytics.StreamingJob'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsGetOptionalParams'
+    name: StreamingJobsGetOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsGetOptionalParams
+        fullName: StreamingJobsGetOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.StreamingJobListResult>
+    name: StreamingJobListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StreamingJobListResult
+        fullName: StreamingJobListResult
+        uid: '@azure/arm-streamanalytics.StreamingJobListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsListOptionalParams'
+    name: StreamingJobsListOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsListOptionalParams
+        fullName: StreamingJobsListOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsListOptionalParams'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsListByResourceGroupOptionalParams'
+    name: StreamingJobsListByResourceGroupOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsListByResourceGroupOptionalParams
+        fullName: StreamingJobsListByResourceGroupOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsListByResourceGroupOptionalParams'
+  - uid: '@azure/arm-streamanalytics.StreamingJobsUpdateOptionalParams'
+    name: StreamingJobsUpdateOptionalParams
+    spec.typeScript:
+      - name: StreamingJobsUpdateOptionalParams
+        fullName: StreamingJobsUpdateOptionalParams
+        uid: '@azure/arm-streamanalytics.StreamingJobsUpdateOptionalParams'

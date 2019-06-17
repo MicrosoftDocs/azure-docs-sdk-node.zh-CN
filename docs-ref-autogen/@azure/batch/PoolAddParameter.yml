@@ -1,0 +1,414 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolAddParameter'
+    name: PoolAddParameter
+    fullName: PoolAddParameter
+    children:
+      - '@azure/batch.PoolAddParameter.applicationLicenses'
+      - '@azure/batch.PoolAddParameter.applicationPackageReferences'
+      - '@azure/batch.PoolAddParameter.autoScaleEvaluationInterval'
+      - '@azure/batch.PoolAddParameter.autoScaleFormula'
+      - '@azure/batch.PoolAddParameter.certificateReferences'
+      - '@azure/batch.PoolAddParameter.cloudServiceConfiguration'
+      - '@azure/batch.PoolAddParameter.displayName'
+      - '@azure/batch.PoolAddParameter.enableAutoScale'
+      - '@azure/batch.PoolAddParameter.enableInterNodeCommunication'
+      - '@azure/batch.PoolAddParameter.id'
+      - '@azure/batch.PoolAddParameter.maxTasksPerNode'
+      - '@azure/batch.PoolAddParameter.metadata'
+      - '@azure/batch.PoolAddParameter.networkConfiguration'
+      - '@azure/batch.PoolAddParameter.resizeTimeout'
+      - '@azure/batch.PoolAddParameter.startTask'
+      - '@azure/batch.PoolAddParameter.targetDedicatedNodes'
+      - '@azure/batch.PoolAddParameter.targetLowPriorityNodes'
+      - '@azure/batch.PoolAddParameter.taskSchedulingPolicy'
+      - '@azure/batch.PoolAddParameter.userAccounts'
+      - '@azure/batch.PoolAddParameter.virtualMachineConfiguration'
+      - '@azure/batch.PoolAddParameter.vmSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 PoolAddParameter 的接口。
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.applicationLicenses'
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 应用程序的列表许可证服务将使在池中每个计算节点可用的批处理。 应用程序许可证的列表必须是批处理服务应用程序的可用许可证的子集。 如果许可证请求不受支持，则池创建将失败。
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 若要在池中每个计算节点上安装的应用程序包的列表。 对应用程序的包引用的更改会影响所有新的计算节点加入池，但不是会影响已处于该池，直到它们被重新启动或重置映像的计算节点。 没有最多 10 个任何给定的池上的应用程序包引用。
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 遵循自动调整根据自动缩放公式的池大小的时间间隔。 默认值为 15 分钟。 最小值和最大值分别为 5 分钟和 168 小时。 如果您指定的值小于 5 分钟或大于 168 小时，批处理服务将返回错误。如果你正在直接调用 REST API，HTTP 状态代码为 400 （错误请求）。
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '用于所需的池中的计算节点数的公式。 此属性不能指定是否 enableAutoScale 设置为 false。 它是必需的如果 enableAutoScale 设置为 true。 之前创建该池将检查该公式的有效性。 如果公式无效，Batch 服务将拒绝该请求与详细的错误信息。 有关指定此公式的详细信息，请参阅自动缩放在 Azure Batch 池计算节点 (https://azure.microsoft.com/documentation/articles/batch-automatic-scaling/)。'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '要在池中每个计算节点上安装的证书列表。 对于 Windows 计算节点，Batch 服务将安装到指定的证书存储区和位置的证书。 对于 Linux 计算节点，这些证书将存储在任务工作目录和环境变量 AZ_BATCH_CERTIFICATES_DIR 提供给任务来查询此位置的一个目录中。 对于具有可见性 remoteUser 的证书，证书目录中创建用户的主目录 (例如，/home/ {用户名} / 证书) 和证书放置在该目录中。'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.cloudServiceConfiguration'
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 池的云服务配置。 此属性与 virtualMachineConfiguration 互相排斥，并且必须指定一个属性。 不能为此属性指定是否创建 Batch 帐户时其 poolAllocationMode 属性设置为 UserSubscription。
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - '@azure/batch.CloudServiceConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 池的显示名称。 显示名称不需要是唯一，并且可以包含最大长度为 1024年的任何 Unicode 字符。
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.enableAutoScale'
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 是否将池大小应随着时间的推移自动调整。 如果为 false，必须指定至少一个 targetDedicateNodes 和 targetLowPriorityNodes。 如果为 true，autoScaleFormula 属性是必需的并根据该公式自动调整大小的池。 默认值为 false。
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.enableInterNodeCommunication'
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      是否在池中允许节点之间进行直接通信。 启用节点间通信限制由于部署限制在节点上的池的池的最大大小。
+      这可能会导致池达不到所需的大小。 默认值为 false。
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 唯一地标识帐户中的池的字符串。 ID 可以包含字母数字字符，包括连字符和下划线的任意组合，并且不能包含超过 64 个字符。 该 ID 是保留大小写，不区分大小写 （即，您可能没有帐户中仅大小写不同的两个池 Id）。
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.maxTasksPerNode'
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      可在池中单个计算节点上并发运行的任务的最大数目。
+      默认值为 1。 最大值为较小的池的 vmSize 的核心数的 4 倍或 256。
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 与作为元数据池相关联的名称-值对的列表。 Batch 服务不会对元数据; 分配任何含义它是仅用于用户代码。
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 池的网络配置。
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.NetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 分配给池的计算节点的超时。 此超时仅适用于手动缩放;它不起作用时 enableAutoScale 设置为 true。 默认值为 15 分钟。 最小值为 5 分钟。 如果指定的值小于 5 分钟，批处理服务将返回错误。如果你正在直接调用 REST API，HTTP 状态代码为 400 （错误请求）。
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定要加入池，每个计算节点上运行的任务。 在任务运行时将节点添加到池或重新启动节点。
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.targetDedicatedNodes'
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 所需的专用数在计算节点池。 此属性不能指定是否 enableAutoScale 设置为 true。 如果 enableAutoScale 设置为 false，则必须设置 targetDedicatedNodes、 targetLowPriorityNodes，或这两者。
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.targetLowPriorityNodes'
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 所需的池中的低优先级计算节点数。 此属性不能指定是否 enableAutoScale 设置为 true。 如果 enableAutoScale 设置为 false，则必须设置 targetDedicatedNodes、 targetLowPriorityNodes，或这两者。
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.taskSchedulingPolicy'
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如何跨池中的计算节点进行分布任务。 如果未指定，默认值分布。
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - '@azure/batch.TaskSchedulingPolicy'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.userAccounts'
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要在池中每个节点上创建用户帐户的列表。
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - '@azure/batch.UserAccount[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.virtualMachineConfiguration'
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 池的虚拟机配置。 此属性与 cloudServiceConfiguration 互相排斥，并且必须指定一个属性。
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - '@azure/batch.VirtualMachineConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.vmSize'
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      在池中虚拟机的大小。 池中所有虚拟机的大小相同。
+      有关可用大小的虚拟机的云服务的信息，以及池 （使用 cloudServiceConfiguration 创建的池），请参阅大小为云服务 (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/)。 Batch 支持特小型、 A1V2 和 A2V2 以外的所有云服务 VM 大小。 有关可用的虚拟机大小为使用虚拟机 Marketplace （使用 virtualMachineConfiguration 创建的池） 中的映像的池，请参阅大小的虚拟机 (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/)或虚拟机 (Windows) 的大小 (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch 支持 STANDARD_A0 和高级存储 （STANDARD_GS、 STANDARD_DS 和 STANDARD_DSV2 系列） 以外的所有 Azure VM 大小。
+    syntax:
+      content: 'vmSize: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CloudServiceConfiguration'
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: '@azure/batch.CloudServiceConfiguration'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: '@azure/batch.NetworkConfiguration'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
+  - uid: '@azure/batch.TaskSchedulingPolicy'
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: '@azure/batch.TaskSchedulingPolicy'
+  - uid: '@azure/batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: '@azure/batch.UserAccount'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.VirtualMachineConfiguration'
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: '@azure/batch.VirtualMachineConfiguration'

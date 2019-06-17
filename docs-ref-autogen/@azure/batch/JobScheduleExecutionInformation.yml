@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobScheduleExecutionInformation'
+    name: JobScheduleExecutionInformation
+    fullName: JobScheduleExecutionInformation
+    children:
+      - '@azure/batch.JobScheduleExecutionInformation.endTime'
+      - '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+      - '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 JobScheduleExecutionInformation 的接口。
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 计划结束的时间。 仅当作业计划处于已完成状态时，才设置此属性。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+    name: nextRunTime
+    fullName: nextRunTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此时将此计划下创建一个作业下一次。 此属性才有意义的仅当计划在的时机成熟时处于活动状态。 例如，如果禁用该计划，没有将创建作业在 nextRunTime 除非前启用作业。
+    optional: true
+    syntax:
+      content: 'nextRunTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    name: recentJob
+    fullName: recentJob
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在作业计划下的最新作业有关的信息。 仅当至少一个作业已运行计划下存在此属性。
+    optional: true
+    syntax:
+      content: 'recentJob?: RecentJob'
+      return:
+        type:
+          - '@azure/batch.RecentJob'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.RecentJob'
+    name: RecentJob
+    spec.typeScript:
+      - name: RecentJob
+        fullName: RecentJob
+        uid: '@azure/batch.RecentJob'

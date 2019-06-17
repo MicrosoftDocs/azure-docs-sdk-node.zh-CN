@@ -1,0 +1,93 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ImageReference'
+    name: ImageReference
+    fullName: ImageReference
+    children:
+      - '@azure/batch.ImageReference.offer'
+      - '@azure/batch.ImageReference.publisher'
+      - '@azure/batch.ImageReference.sku'
+      - '@azure/batch.ImageReference.version'
+      - '@azure/batch.ImageReference.virtualMachineImageId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 ImageReference 的接口。
+    package: '@azure/batch'
+  - uid: '@azure/batch.ImageReference.offer'
+    name: offer
+    fullName: offer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Azure 虚拟机 Marketplace 映像的产品/服务类型。 例如，UbuntuServer 或 windows Server。
+    optional: true
+    syntax:
+      content: 'offer?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ImageReference.publisher'
+    name: publisher
+    fullName: publisher
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Azure 虚拟机 Marketplace 映像的发布服务器。 例如，Canonical 或 MicrosoftWindowsServer。
+    optional: true
+    syntax:
+      content: 'publisher?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ImageReference.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Azure 虚拟机 Marketplace 映像的 SKU。 例如，14.04.0-LTS 或 2012 R2 Datacenter。
+    optional: true
+    syntax:
+      content: 'sku?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ImageReference.version'
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Azure 虚拟机 Marketplace 映像的版本。 选择图像的最新版本，可以指定最新值。 如果省略，默认值为 latest。
+    optional: true
+    syntax:
+      content: 'version?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ImageReference.virtualMachineImageId'
+    name: virtualMachineImageId
+    fullName: virtualMachineImageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      虚拟机映像的 ARM 资源标识符。 计算将使用此自定义映像创建池的节点。 这是窗体 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}。
+      此属性是与其他 ImageReference 属性互斥。 虚拟机映像必须位于相同区域和订阅与 Azure Batch 帐户。 有关更多详细信息，请参阅https://docs.microsoft.com/azure/batch/batch-custom-images。
+    optional: true
+    syntax:
+      content: 'virtualMachineImageId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

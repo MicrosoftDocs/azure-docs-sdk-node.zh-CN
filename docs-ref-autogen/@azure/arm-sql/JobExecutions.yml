@@ -1,0 +1,831 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.JobExecutions'
+    name: JobExecutions
+    fullName: JobExecutions
+    children:
+      - '@azure/arm-sql.JobExecutions.beginCreate'
+      - '@azure/arm-sql.JobExecutions.beginCreateOrUpdate'
+      - '@azure/arm-sql.JobExecutions.cancel'
+      - '@azure/arm-sql.JobExecutions.cancel_2'
+      - '@azure/arm-sql.JobExecutions.cancel_1'
+      - '@azure/arm-sql.JobExecutions.create'
+      - '@azure/arm-sql.JobExecutions.createOrUpdate'
+      - '@azure/arm-sql.JobExecutions.get'
+      - '@azure/arm-sql.JobExecutions.get_2'
+      - '@azure/arm-sql.JobExecutions.get_1'
+      - '@azure/arm-sql.JobExecutions.constructor'
+      - '@azure/arm-sql.JobExecutions.listByAgent_2'
+      - '@azure/arm-sql.JobExecutions.listByAgent'
+      - '@azure/arm-sql.JobExecutions.listByAgent_1'
+      - '@azure/arm-sql.JobExecutions.listByAgentNext'
+      - '@azure/arm-sql.JobExecutions.listByAgentNext_2'
+      - '@azure/arm-sql.JobExecutions.listByAgentNext_1'
+      - '@azure/arm-sql.JobExecutions.listByJob_2'
+      - '@azure/arm-sql.JobExecutions.listByJob'
+      - '@azure/arm-sql.JobExecutions.listByJob_1'
+      - '@azure/arm-sql.JobExecutions.listByJobNext'
+      - '@azure/arm-sql.JobExecutions.listByJobNext_2'
+      - '@azure/arm-sql.JobExecutions.listByJobNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="58aff-101">表示 JobExecutions 类。</span><span class="sxs-lookup"><span data-stu-id="58aff-101">Class representing a JobExecutions.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.beginCreate'
+    name: 'beginCreate(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="58aff-102">启动弹性作业执行。</span><span class="sxs-lookup"><span data-stu-id="58aff-102">Starts an elastic job execution.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-103">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-104">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-105">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-105">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-106">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-106">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-107">若要获取作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-107">The name of the job to get.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="58aff-108">创建或更新作业执行。</span><span class="sxs-lookup"><span data-stu-id="58aff-108">Creates or updates a job execution.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-109">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-110">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-111">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-111">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-112">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-112">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-113">若要获取作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-113">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="58aff-114">要创建下的作业执行的作业执行 id。</span><span class="sxs-lookup"><span data-stu-id="58aff-114">The job execution id to create the job execution under.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.cancel'
+    name: 'cancel(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="58aff-115">请求取消的作业执行。</span><span class="sxs-lookup"><span data-stu-id="58aff-115">Requests cancellation of a job execution.</span></span>
+    syntax:
+      content: 'function cancel(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-116">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-116">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-117">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-117">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-118">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-118">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-119">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-119">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-120">作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-120">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="58aff-121">若要取消的作业执行 id。</span><span class="sxs-lookup"><span data-stu-id="58aff-121">The id of the job execution to cancel.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.cancel_2'
+    name: 'cancel(string, string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-122">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-122">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-123">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-123">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-124">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-124">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-125">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-125">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-126">作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-126">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="58aff-127">若要取消的作业执行 id。</span><span class="sxs-lookup"><span data-stu-id="58aff-127">The id of the job execution to cancel.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="58aff-128">可选参数</span><span class="sxs-lookup"><span data-stu-id="58aff-128">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="58aff-129">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-129">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.cancel_1'
+    name: 'cancel(string, string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-130">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-130">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-131">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-131">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-132">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-132">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-133">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-133">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-134">作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-134">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="58aff-135">若要取消的作业执行 id。</span><span class="sxs-lookup"><span data-stu-id="58aff-135">The id of the job execution to cancel.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="58aff-136">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-136">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.create'
+    name: 'create(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="58aff-137">启动弹性作业执行。</span><span class="sxs-lookup"><span data-stu-id="58aff-137">Starts an elastic job execution.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-138">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-138">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-139">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-139">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-140">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-140">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-141">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-141">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-142">若要获取作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-142">The name of the job to get.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsCreateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="58aff-143">创建或更新作业执行。</span><span class="sxs-lookup"><span data-stu-id="58aff-143">Creates or updates a job execution.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-144">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-144">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-145">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-145">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-146">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-146">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-147">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-147">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-148">若要获取作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-148">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="58aff-149">要创建下的作业执行的作业执行 id。</span><span class="sxs-lookup"><span data-stu-id="58aff-149">The job execution id to create the job execution under.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.get'
+    name: 'get(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="58aff-150">获取作业执行。</span><span class="sxs-lookup"><span data-stu-id="58aff-150">Gets a job execution.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-151">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-151">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-152">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-152">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-153">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-153">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-154">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-154">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-155">作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-155">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="58aff-156">执行作业的 id</span><span class="sxs-lookup"><span data-stu-id="58aff-156">The id of the job execution</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.get_2'
+    name: 'get(string, string, string, string, string, RequestOptionsBase, ServiceCallback<JobExecution>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options: RequestOptionsBase, callback: ServiceCallback<JobExecution>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-157">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-157">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-158">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-158">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-159">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-159">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-160">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-160">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-161">作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-161">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="58aff-162">执行作业的 id</span><span class="sxs-lookup"><span data-stu-id="58aff-162">The id of the job execution</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="58aff-163">可选参数</span><span class="sxs-lookup"><span data-stu-id="58aff-163">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecution>
+          description: |
+            <span data-ttu-id="58aff-164">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-164">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.get_1'
+    name: 'get(string, string, string, string, string, ServiceCallback<JobExecution>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, callback: ServiceCallback<JobExecution>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-165">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-165">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-166">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-166">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-167">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-167">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-168">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-168">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-169">作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-169">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="58aff-170">执行作业的 id</span><span class="sxs-lookup"><span data-stu-id="58aff-170">The id of the job execution</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecution>
+          description: |
+            <span data-ttu-id="58aff-171">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-171">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.constructor'
+    name: JobExecutions(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="58aff-172">创建 JobExecutions。</span><span class="sxs-lookup"><span data-stu-id="58aff-172">Create a JobExecutions.</span></span>
+    syntax:
+      content: 'new JobExecutions(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="58aff-173">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="58aff-173">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgent_2'
+    name: 'listByAgent(string, string, string, JobExecutionsListByAgentOptionalParams, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAgent(resourceGroupName: string, serverName: string, jobAgentName: string, options: JobExecutionsListByAgentOptionalParams, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-174">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-174">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-175">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-175">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-176">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-176">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-177">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-177">The name of the job agent.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-sql.JobExecutionsListByAgentOptionalParams'
+          description: <span data-ttu-id="58aff-178">可选参数</span><span class="sxs-lookup"><span data-stu-id="58aff-178">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="58aff-179">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-179">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgent'
+    name: 'listByAgent(string, string, string, Models.JobExecutionsListByAgentOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="58aff-180">列出所有作业代理中的执行。</span><span class="sxs-lookup"><span data-stu-id="58aff-180">Lists all executions in a job agent.</span></span>
+    syntax:
+      content: 'function listByAgent(resourceGroupName: string, serverName: string, jobAgentName: string, options?: Models.JobExecutionsListByAgentOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-181">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-181">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-182">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-182">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-183">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-183">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-184">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-184">The name of the job agent.</span></span>
+        - id: options
+          type:
+            - Models.JobExecutionsListByAgentOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgent_1'
+    name: 'listByAgent(string, string, string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAgent(resourceGroupName: string, serverName: string, jobAgentName: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-185">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-185">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-186">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-186">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-187">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-187">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-188">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-188">The name of the job agent.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="58aff-189">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgentNext'
+    name: 'listByAgentNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="58aff-190">列出所有作业代理中的执行。</span><span class="sxs-lookup"><span data-stu-id="58aff-190">Lists all executions in a job agent.</span></span>
+    syntax:
+      content: 'function listByAgentNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="58aff-191">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="58aff-191">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgentNext_2'
+    name: 'listByAgentNext(string, RequestOptionsBase, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAgentNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="58aff-192">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="58aff-192">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="58aff-193">可选参数</span><span class="sxs-lookup"><span data-stu-id="58aff-193">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="58aff-194">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-194">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgentNext_1'
+    name: 'listByAgentNext(string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAgentNext(nextPageLink: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="58aff-195">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="58aff-195">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="58aff-196">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-196">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJob_2'
+    name: 'listByJob(string, string, string, string, JobExecutionsListByJobOptionalParams, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJob(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, options: JobExecutionsListByJobOptionalParams, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-197">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-197">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-198">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-198">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-199">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-199">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-200">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-200">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-201">若要获取作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-201">The name of the job to get.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-sql.JobExecutionsListByJobOptionalParams'
+          description: <span data-ttu-id="58aff-202">可选参数</span><span class="sxs-lookup"><span data-stu-id="58aff-202">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="58aff-203">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJob'
+    name: 'listByJob(string, string, string, string, Models.JobExecutionsListByJobOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="58aff-204">列出作业的执行。</span><span class="sxs-lookup"><span data-stu-id="58aff-204">Lists a job's executions.</span></span>
+    syntax:
+      content: 'function listByJob(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, options?: Models.JobExecutionsListByJobOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-205">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-205">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-206">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-206">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-207">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-207">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-208">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-208">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-209">若要获取作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-209">The name of the job to get.</span></span>
+        - id: options
+          type:
+            - Models.JobExecutionsListByJobOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJob_1'
+    name: 'listByJob(string, string, string, string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJob(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-210">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-210">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="58aff-211">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="58aff-211">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-212">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-212">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-213">作业代理的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-213">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="58aff-214">若要获取作业的名称。</span><span class="sxs-lookup"><span data-stu-id="58aff-214">The name of the job to get.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="58aff-215">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-215">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJobNext'
+    name: 'listByJobNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="58aff-216">列出作业的执行。</span><span class="sxs-lookup"><span data-stu-id="58aff-216">Lists a job's executions.</span></span>
+    syntax:
+      content: 'function listByJobNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="58aff-217">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="58aff-217">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJobNext_2'
+    name: 'listByJobNext(string, RequestOptionsBase, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="58aff-218">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="58aff-218">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="58aff-219">可选参数</span><span class="sxs-lookup"><span data-stu-id="58aff-219">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="58aff-220">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-220">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJobNext_1'
+    name: 'listByJobNext(string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobNext(nextPageLink: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="58aff-221">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="58aff-221">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="58aff-222">回调</span><span class="sxs-lookup"><span data-stu-id="58aff-222">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobNextResponse>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-sql.JobExecution>
+    name: JobExecution>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobExecution
+        fullName: JobExecution
+        uid: '@azure/arm-sql.JobExecution'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+    name: JobExecutionListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobExecutionListResult
+        fullName: JobExecutionListResult
+        uid: '@azure/arm-sql.JobExecutionListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-sql.JobExecutionsListByAgentOptionalParams'
+    name: JobExecutionsListByAgentOptionalParams
+    spec.typeScript:
+      - name: JobExecutionsListByAgentOptionalParams
+        fullName: JobExecutionsListByAgentOptionalParams
+        uid: '@azure/arm-sql.JobExecutionsListByAgentOptionalParams'
+  - uid: '@azure/arm-sql.JobExecutionsListByJobOptionalParams'
+    name: JobExecutionsListByJobOptionalParams
+    spec.typeScript:
+      - name: JobExecutionsListByJobOptionalParams
+        fullName: JobExecutionsListByJobOptionalParams
+        uid: '@azure/arm-sql.JobExecutionsListByJobOptionalParams'

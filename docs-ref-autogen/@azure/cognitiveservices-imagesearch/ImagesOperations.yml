@@ -1,0 +1,299 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesOperations'
+    name: ImagesOperations
+    fullName: ImagesOperations
+    children:
+      - '@azure/cognitiveservices-imagesearch.ImagesOperations.details_2'
+      - '@azure/cognitiveservices-imagesearch.ImagesOperations.details'
+      - '@azure/cognitiveservices-imagesearch.ImagesOperations.details_1'
+      - '@azure/cognitiveservices-imagesearch.ImagesOperations.constructor'
+      - '@azure/cognitiveservices-imagesearch.ImagesOperations.search_2'
+      - '@azure/cognitiveservices-imagesearch.ImagesOperations.search'
+      - '@azure/cognitiveservices-imagesearch.ImagesOperations.search_1'
+      - '@azure/cognitiveservices-imagesearch.ImagesOperations.trending_2'
+      - '@azure/cognitiveservices-imagesearch.ImagesOperations.trending'
+      - '@azure/cognitiveservices-imagesearch.ImagesOperations.trending_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="230f3-101">表示 ImagesOperations 类。</span><span class="sxs-lookup"><span data-stu-id="230f3-101">Class representing a ImagesOperations.</span></span>
+    package: '@azure/cognitiveservices-imagesearch'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesOperations.details_2'
+    name: 'details(string, ImagesDetailsOptionalParams, ServiceCallback<ImageInsights>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function details(query: string, options: ImagesDetailsOptionalParams, callback: ServiceCallback<ImageInsights>)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: '<span data-ttu-id="230f3-102">用户的搜索查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-102">The user''s search query term.</span></span> <span data-ttu-id="230f3-103">术语不能为空。</span><span class="sxs-lookup"><span data-stu-id="230f3-103">The term cannot be empty.</span></span> <span data-ttu-id="230f3-104">术语可能包含[必应高级操作员](http://msdn.microsoft.com/library/ff795620.aspx)。</span><span class="sxs-lookup"><span data-stu-id="230f3-104">The term may contain [Bing Advanced Operators](http://msdn.microsoft.com/library/ff795620.aspx).</span></span> <span data-ttu-id="230f3-105">例如，若要限制到特定域的映像，请使用[站点：](http://msdn.microsoft.com/library/ff795613.aspx)运算符。</span><span class="sxs-lookup"><span data-stu-id="230f3-105">For example, to limit images to a specific domain, use the [site:](http://msdn.microsoft.com/library/ff795613.aspx) operator.</span></span> <span data-ttu-id="230f3-106">若要帮助提高 insights 查询的相关性 (请参阅[insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken))，应始终包含用户的查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-106">To help improve relevance of an insights query (see [insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken)), you should always include the user''s query term.</span></span> <span data-ttu-id="230f3-107">将此参数仅用于图像搜索 API。调用灸手可热映像 API 时，不要指定此参数。</span><span class="sxs-lookup"><span data-stu-id="230f3-107">Use this parameter only with the Image Search API.Do not specify this parameter when calling the Trending Images API.</span></span>'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-imagesearch.ImagesDetailsOptionalParams'
+          description: <span data-ttu-id="230f3-108">可选参数</span><span class="sxs-lookup"><span data-stu-id="230f3-108">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-imagesearch.ImageInsights>
+          description: |
+            <span data-ttu-id="230f3-109">回调</span><span class="sxs-lookup"><span data-stu-id="230f3-109">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ImagesDetailsResponse>
+    package: '@azure/cognitiveservices-imagesearch'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesOperations.details'
+    name: 'details(string, Models.ImagesDetailsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function details(query: string, options?: Models.ImagesDetailsOptionalParams)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: '<span data-ttu-id="230f3-110">用户的搜索查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-110">The user''s search query term.</span></span> <span data-ttu-id="230f3-111">术语不能为空。</span><span class="sxs-lookup"><span data-stu-id="230f3-111">The term cannot be empty.</span></span> <span data-ttu-id="230f3-112">术语可能包含[必应高级操作员](http://msdn.microsoft.com/library/ff795620.aspx)。</span><span class="sxs-lookup"><span data-stu-id="230f3-112">The term may contain [Bing Advanced Operators](http://msdn.microsoft.com/library/ff795620.aspx).</span></span> <span data-ttu-id="230f3-113">例如，若要限制到特定域的映像，请使用[站点：](http://msdn.microsoft.com/library/ff795613.aspx)运算符。</span><span class="sxs-lookup"><span data-stu-id="230f3-113">For example, to limit images to a specific domain, use the [site:](http://msdn.microsoft.com/library/ff795613.aspx) operator.</span></span> <span data-ttu-id="230f3-114">若要帮助提高 insights 查询的相关性 (请参阅[insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken))，应始终包含用户的查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-114">To help improve relevance of an insights query (see [insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken)), you should always include the user''s query term.</span></span> <span data-ttu-id="230f3-115">将此参数仅用于图像搜索 API。调用灸手可热映像 API 时，不要指定此参数。</span><span class="sxs-lookup"><span data-stu-id="230f3-115">Use this parameter only with the Image Search API.Do not specify this parameter when calling the Trending Images API.</span></span>'
+        - id: options
+          type:
+            - Models.ImagesDetailsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ImagesDetailsResponse>
+    package: '@azure/cognitiveservices-imagesearch'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesOperations.details_1'
+    name: 'details(string, ServiceCallback<ImageInsights>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function details(query: string, callback: ServiceCallback<ImageInsights>)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: '<span data-ttu-id="230f3-116">用户的搜索查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-116">The user''s search query term.</span></span> <span data-ttu-id="230f3-117">术语不能为空。</span><span class="sxs-lookup"><span data-stu-id="230f3-117">The term cannot be empty.</span></span> <span data-ttu-id="230f3-118">术语可能包含[必应高级操作员](http://msdn.microsoft.com/library/ff795620.aspx)。</span><span class="sxs-lookup"><span data-stu-id="230f3-118">The term may contain [Bing Advanced Operators](http://msdn.microsoft.com/library/ff795620.aspx).</span></span> <span data-ttu-id="230f3-119">例如，若要限制到特定域的映像，请使用[站点：](http://msdn.microsoft.com/library/ff795613.aspx)运算符。</span><span class="sxs-lookup"><span data-stu-id="230f3-119">For example, to limit images to a specific domain, use the [site:](http://msdn.microsoft.com/library/ff795613.aspx) operator.</span></span> <span data-ttu-id="230f3-120">若要帮助提高 insights 查询的相关性 (请参阅[insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken))，应始终包含用户的查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-120">To help improve relevance of an insights query (see [insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken)), you should always include the user''s query term.</span></span> <span data-ttu-id="230f3-121">将此参数仅用于图像搜索 API。调用灸手可热映像 API 时，不要指定此参数。</span><span class="sxs-lookup"><span data-stu-id="230f3-121">Use this parameter only with the Image Search API.Do not specify this parameter when calling the Trending Images API.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-imagesearch.ImageInsights>
+          description: |
+            <span data-ttu-id="230f3-122">回调</span><span class="sxs-lookup"><span data-stu-id="230f3-122">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ImagesDetailsResponse>
+    package: '@azure/cognitiveservices-imagesearch'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesOperations.constructor'
+    name: ImagesOperations(ImageSearchClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="230f3-123">创建 ImagesOperations。</span><span class="sxs-lookup"><span data-stu-id="230f3-123">Create a ImagesOperations.</span></span>
+    syntax:
+      content: 'new ImagesOperations(client: ImageSearchClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-imagesearch.ImageSearchClientContext'
+          description: |
+            <span data-ttu-id="230f3-124">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="230f3-124">Reference to the service client.</span></span>
+    package: '@azure/cognitiveservices-imagesearch'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesOperations.search_2'
+    name: 'search(string, ImagesSearchOptionalParams, ServiceCallback<Images>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function search(query: string, options: ImagesSearchOptionalParams, callback: ServiceCallback<Images>)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: '<span data-ttu-id="230f3-125">用户的搜索查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-125">The user''s search query term.</span></span> <span data-ttu-id="230f3-126">术语不能为空。</span><span class="sxs-lookup"><span data-stu-id="230f3-126">The term cannot be empty.</span></span> <span data-ttu-id="230f3-127">术语可能包含[必应高级操作员](http://msdn.microsoft.com/library/ff795620.aspx)。</span><span class="sxs-lookup"><span data-stu-id="230f3-127">The term may contain [Bing Advanced Operators](http://msdn.microsoft.com/library/ff795620.aspx).</span></span> <span data-ttu-id="230f3-128">例如，若要限制到特定域的映像，请使用[站点：](http://msdn.microsoft.com/library/ff795613.aspx)运算符。</span><span class="sxs-lookup"><span data-stu-id="230f3-128">For example, to limit images to a specific domain, use the [site:](http://msdn.microsoft.com/library/ff795613.aspx) operator.</span></span> <span data-ttu-id="230f3-129">若要帮助提高 insights 查询的相关性 (请参阅[insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken))，应始终包含用户的查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-129">To help improve relevance of an insights query (see [insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken)), you should always include the user''s query term.</span></span> <span data-ttu-id="230f3-130">将此参数仅用于图像搜索 API。调用灸手可热映像 API 时，不要指定此参数。</span><span class="sxs-lookup"><span data-stu-id="230f3-130">Use this parameter only with the Image Search API.Do not specify this parameter when calling the Trending Images API.</span></span>'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-imagesearch.ImagesSearchOptionalParams'
+          description: <span data-ttu-id="230f3-131">可选参数</span><span class="sxs-lookup"><span data-stu-id="230f3-131">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-imagesearch.Images>
+          description: |
+            <span data-ttu-id="230f3-132">回调</span><span class="sxs-lookup"><span data-stu-id="230f3-132">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ImagesSearchResponse>
+    package: '@azure/cognitiveservices-imagesearch'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesOperations.search'
+    name: 'search(string, Models.ImagesSearchOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function search(query: string, options?: Models.ImagesSearchOptionalParams)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: '<span data-ttu-id="230f3-133">用户的搜索查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-133">The user''s search query term.</span></span> <span data-ttu-id="230f3-134">术语不能为空。</span><span class="sxs-lookup"><span data-stu-id="230f3-134">The term cannot be empty.</span></span> <span data-ttu-id="230f3-135">术语可能包含[必应高级操作员](http://msdn.microsoft.com/library/ff795620.aspx)。</span><span class="sxs-lookup"><span data-stu-id="230f3-135">The term may contain [Bing Advanced Operators](http://msdn.microsoft.com/library/ff795620.aspx).</span></span> <span data-ttu-id="230f3-136">例如，若要限制到特定域的映像，请使用[站点：](http://msdn.microsoft.com/library/ff795613.aspx)运算符。</span><span class="sxs-lookup"><span data-stu-id="230f3-136">For example, to limit images to a specific domain, use the [site:](http://msdn.microsoft.com/library/ff795613.aspx) operator.</span></span> <span data-ttu-id="230f3-137">若要帮助提高 insights 查询的相关性 (请参阅[insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken))，应始终包含用户的查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-137">To help improve relevance of an insights query (see [insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken)), you should always include the user''s query term.</span></span> <span data-ttu-id="230f3-138">将此参数仅用于图像搜索 API。调用灸手可热映像 API 时，不要指定此参数。</span><span class="sxs-lookup"><span data-stu-id="230f3-138">Use this parameter only with the Image Search API.Do not specify this parameter when calling the Trending Images API.</span></span>'
+        - id: options
+          type:
+            - Models.ImagesSearchOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ImagesSearchResponse>
+    package: '@azure/cognitiveservices-imagesearch'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesOperations.search_1'
+    name: 'search(string, ServiceCallback<Images>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function search(query: string, callback: ServiceCallback<Images>)'
+      parameters:
+        - id: query
+          type:
+            - string
+          description: '<span data-ttu-id="230f3-139">用户的搜索查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-139">The user''s search query term.</span></span> <span data-ttu-id="230f3-140">术语不能为空。</span><span class="sxs-lookup"><span data-stu-id="230f3-140">The term cannot be empty.</span></span> <span data-ttu-id="230f3-141">术语可能包含[必应高级操作员](http://msdn.microsoft.com/library/ff795620.aspx)。</span><span class="sxs-lookup"><span data-stu-id="230f3-141">The term may contain [Bing Advanced Operators](http://msdn.microsoft.com/library/ff795620.aspx).</span></span> <span data-ttu-id="230f3-142">例如，若要限制到特定域的映像，请使用[站点：](http://msdn.microsoft.com/library/ff795613.aspx)运算符。</span><span class="sxs-lookup"><span data-stu-id="230f3-142">For example, to limit images to a specific domain, use the [site:](http://msdn.microsoft.com/library/ff795613.aspx) operator.</span></span> <span data-ttu-id="230f3-143">若要帮助提高 insights 查询的相关性 (请参阅[insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken))，应始终包含用户的查询词。</span><span class="sxs-lookup"><span data-stu-id="230f3-143">To help improve relevance of an insights query (see [insightsToken](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-images-api-v7-reference#insightstoken)), you should always include the user''s query term.</span></span> <span data-ttu-id="230f3-144">将此参数仅用于图像搜索 API。调用灸手可热映像 API 时，不要指定此参数。</span><span class="sxs-lookup"><span data-stu-id="230f3-144">Use this parameter only with the Image Search API.Do not specify this parameter when calling the Trending Images API.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-imagesearch.Images>
+          description: |
+            <span data-ttu-id="230f3-145">回调</span><span class="sxs-lookup"><span data-stu-id="230f3-145">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ImagesSearchResponse>
+    package: '@azure/cognitiveservices-imagesearch'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesOperations.trending_2'
+    name: 'trending(ImagesTrendingOptionalParams, ServiceCallback<TrendingImages>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function trending(options: ImagesTrendingOptionalParams, callback: ServiceCallback<TrendingImages>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/cognitiveservices-imagesearch.ImagesTrendingOptionalParams'
+          description: <span data-ttu-id="230f3-146">可选参数</span><span class="sxs-lookup"><span data-stu-id="230f3-146">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-imagesearch.TrendingImages>
+          description: |
+            <span data-ttu-id="230f3-147">回调</span><span class="sxs-lookup"><span data-stu-id="230f3-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ImagesTrendingResponse>
+    package: '@azure/cognitiveservices-imagesearch'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesOperations.trending'
+    name: trending(Models.ImagesTrendingOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function trending(options?: Models.ImagesTrendingOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.ImagesTrendingOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ImagesTrendingResponse>
+    package: '@azure/cognitiveservices-imagesearch'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesOperations.trending_1'
+    name: trending(ServiceCallback<TrendingImages>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function trending(callback: ServiceCallback<TrendingImages>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-imagesearch.TrendingImages>
+          description: |
+            <span data-ttu-id="230f3-148">回调</span><span class="sxs-lookup"><span data-stu-id="230f3-148">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ImagesTrendingResponse>
+    package: '@azure/cognitiveservices-imagesearch'
+references:
+  - uid: '@azure/cognitiveservices-imagesearch.ImageSearchClientContext'
+    name: ImageSearchClientContext
+    spec.typeScript:
+      - name: ImageSearchClientContext
+        fullName: ImageSearchClientContext
+        uid: '@azure/cognitiveservices-imagesearch.ImageSearchClientContext'
+  - uid: ServiceCallback<@azure/cognitiveservices-imagesearch.ImageInsights>
+    name: ImageInsights>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ImageInsights
+        fullName: ImageInsights
+        uid: '@azure/cognitiveservices-imagesearch.ImageInsights'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesDetailsOptionalParams'
+    name: ImagesDetailsOptionalParams
+    spec.typeScript:
+      - name: ImagesDetailsOptionalParams
+        fullName: ImagesDetailsOptionalParams
+        uid: '@azure/cognitiveservices-imagesearch.ImagesDetailsOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-imagesearch.Images>
+    name: Images>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Images
+        fullName: Images
+        uid: '@azure/cognitiveservices-imagesearch.Images'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesSearchOptionalParams'
+    name: ImagesSearchOptionalParams
+    spec.typeScript:
+      - name: ImagesSearchOptionalParams
+        fullName: ImagesSearchOptionalParams
+        uid: '@azure/cognitiveservices-imagesearch.ImagesSearchOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-imagesearch.TrendingImages>
+    name: TrendingImages>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: TrendingImages
+        fullName: TrendingImages
+        uid: '@azure/cognitiveservices-imagesearch.TrendingImages'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-imagesearch.ImagesTrendingOptionalParams'
+    name: ImagesTrendingOptionalParams
+    spec.typeScript:
+      - name: ImagesTrendingOptionalParams
+        fullName: ImagesTrendingOptionalParams
+        uid: '@azure/cognitiveservices-imagesearch.ImagesTrendingOptionalParams'

@@ -1,0 +1,837 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-streamanalytics.Functions'
+    name: Functions
+    fullName: Functions
+    children:
+      - '@azure/arm-streamanalytics.Functions.beginTest'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace_2'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace_1'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod_2'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod_1'
+      - '@azure/arm-streamanalytics.Functions.constructor'
+      - '@azure/arm-streamanalytics.Functions.get'
+      - '@azure/arm-streamanalytics.Functions.get_2'
+      - '@azure/arm-streamanalytics.Functions.get_1'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob_2'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob_1'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_2'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_1'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_2'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_1'
+      - '@azure/arm-streamanalytics.Functions.test'
+      - '@azure/arm-streamanalytics.Functions.update_2'
+      - '@azure/arm-streamanalytics.Functions.update'
+      - '@azure/arm-streamanalytics.Functions.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="54554-101">表示函数的类。</span><span class="sxs-lookup"><span data-stu-id="54554-101">Class representing a Functions.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.beginTest'
+    name: 'beginTest(string, string, string, Models.FunctionsBeginTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="54554-102">测试是否为有效的函数提供的信息。</span><span class="sxs-lookup"><span data-stu-id="54554-102">Tests if the information provided for a function is valid.</span></span> <span data-ttu-id="54554-103">这可以包括测试与该函数后的基础 web 服务的连接，或确保提供的函数代码的语法正确无误。</span><span class="sxs-lookup"><span data-stu-id="54554-103">This can range from testing the connection to the underlying web service behind the function or making sure the function code provided is syntactically correct.</span></span>
+    syntax:
+      content: 'function beginTest(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsBeginTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-104">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-104">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-105">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-106">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-106">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-107">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-107">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsBeginTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace_2'
+    name: 'createOrReplace(FunctionModel, string, string, string, FunctionsCreateOrReplaceOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options: FunctionsCreateOrReplaceOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="54554-108">将用于创建新的函数或替换现有流式处理作业下的函数的定义。</span><span class="sxs-lookup"><span data-stu-id="54554-108">The definition of the function that will be used to create a new function or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-109">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-110">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-111">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-111">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-112">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-112">The name of the function.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+          description: <span data-ttu-id="54554-113">可选参数</span><span class="sxs-lookup"><span data-stu-id="54554-113">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="54554-114">回调</span><span class="sxs-lookup"><span data-stu-id="54554-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace'
+    name: 'createOrReplace(FunctionModel, string, string, string, Models.FunctionsCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="54554-115">创建一个函数或替换现有函数在现有的流式处理作业。</span><span class="sxs-lookup"><span data-stu-id="54554-115">Creates a function or replaces an already existing function under an existing streaming job.</span></span>
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="54554-116">将用于创建新的函数或替换现有流式处理作业下的函数的定义。</span><span class="sxs-lookup"><span data-stu-id="54554-116">The definition of the function that will be used to create a new function or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-117">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-117">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-118">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-118">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-119">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-119">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-120">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-120">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace_1'
+    name: 'createOrReplace(FunctionModel, string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="54554-121">将用于创建新的函数或替换现有流式处理作业下的函数的定义。</span><span class="sxs-lookup"><span data-stu-id="54554-121">The definition of the function that will be used to create a new function or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-122">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-122">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-123">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-123">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-124">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-124">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-125">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-125">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="54554-126">回调</span><span class="sxs-lookup"><span data-stu-id="54554-126">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="54554-127">从流式处理作业中删除一个函数。</span><span class="sxs-lookup"><span data-stu-id="54554-127">Deletes a function from the streaming job.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-128">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-128">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-129">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-129">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-130">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-130">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-131">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-131">The name of the function.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-132">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-132">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-133">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-133">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-134">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-134">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-135">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-135">The name of the function.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="54554-136">可选参数</span><span class="sxs-lookup"><span data-stu-id="54554-136">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="54554-137">回调</span><span class="sxs-lookup"><span data-stu-id="54554-137">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-138">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-138">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-139">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-139">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-140">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-140">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-141">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-141">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="54554-142">回调</span><span class="sxs-lookup"><span data-stu-id="54554-142">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.constructor'
+    name: Functions(StreamAnalyticsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="54554-143">创建函数。</span><span class="sxs-lookup"><span data-stu-id="54554-143">Create a Functions.</span></span>
+    syntax:
+      content: 'new Functions(client: StreamAnalyticsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+          description: |
+            <span data-ttu-id="54554-144">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="54554-144">Reference to the service client.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="54554-145">获取有关指定的函数的详细信息。</span><span class="sxs-lookup"><span data-stu-id="54554-145">Gets details about the specified function.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-146">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-146">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-147">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-147">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-148">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-148">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-149">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-149">The name of the function.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, options: RequestOptionsBase, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-150">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-150">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-151">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-151">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-152">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-152">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-153">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-153">The name of the function.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="54554-154">可选参数</span><span class="sxs-lookup"><span data-stu-id="54554-154">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="54554-155">回调</span><span class="sxs-lookup"><span data-stu-id="54554-155">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get_1'
+    name: 'get(string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-156">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-156">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-157">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-157">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-158">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-158">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-159">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-159">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="54554-160">回调</span><span class="sxs-lookup"><span data-stu-id="54554-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob_2'
+    name: 'listByStreamingJob(string, string, FunctionsListByStreamingJobOptionalParams, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options: FunctionsListByStreamingJobOptionalParams, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-161">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-161">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-162">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-162">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-163">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-163">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+          description: <span data-ttu-id="54554-164">可选参数</span><span class="sxs-lookup"><span data-stu-id="54554-164">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="54554-165">回调</span><span class="sxs-lookup"><span data-stu-id="54554-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob'
+    name: 'listByStreamingJob(string, string, Models.FunctionsListByStreamingJobOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="54554-166">列出所有下指定流式处理作业的函数。</span><span class="sxs-lookup"><span data-stu-id="54554-166">Lists all of the functions under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options?: Models.FunctionsListByStreamingJobOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-167">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-167">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-168">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-168">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-169">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-169">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsListByStreamingJobOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob_1'
+    name: 'listByStreamingJob(string, string, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-170">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-170">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-171">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-171">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-172">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-172">The name of the streaming job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="54554-173">回调</span><span class="sxs-lookup"><span data-stu-id="54554-173">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext'
+    name: 'listByStreamingJobNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="54554-174">列出所有下指定流式处理作业的函数。</span><span class="sxs-lookup"><span data-stu-id="54554-174">Lists all of the functions under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="54554-175">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="54554-175">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_2'
+    name: 'listByStreamingJobNext(string, RequestOptionsBase, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="54554-176">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="54554-176">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="54554-177">可选参数</span><span class="sxs-lookup"><span data-stu-id="54554-177">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="54554-178">回调</span><span class="sxs-lookup"><span data-stu-id="54554-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_1'
+    name: 'listByStreamingJobNext(string, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="54554-179">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="54554-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            <span data-ttu-id="54554-180">回调</span><span class="sxs-lookup"><span data-stu-id="54554-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_2'
+    name: 'retrieveDefaultDefinition(string, string, string, FunctionsRetrieveDefaultDefinitionOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, options: FunctionsRetrieveDefaultDefinitionOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-181">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-181">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-182">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-182">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-183">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-183">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-184">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-184">The name of the function.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+          description: <span data-ttu-id="54554-185">可选参数</span><span class="sxs-lookup"><span data-stu-id="54554-185">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="54554-186">回调</span><span class="sxs-lookup"><span data-stu-id="54554-186">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition'
+    name: 'retrieveDefaultDefinition(string, string, string, Models.FunctionsRetrieveDefaultDefinitionOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="54554-187">检索基于指定的参数的函数的默认定义。</span><span class="sxs-lookup"><span data-stu-id="54554-187">Retrieves the default definition of a function based on the parameters specified.</span></span>
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsRetrieveDefaultDefinitionOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-188">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-188">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-189">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-189">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-190">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-190">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-191">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-191">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsRetrieveDefaultDefinitionOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_1'
+    name: 'retrieveDefaultDefinition(string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-192">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-192">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-193">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-193">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-194">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-194">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-195">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-195">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="54554-196">回调</span><span class="sxs-lookup"><span data-stu-id="54554-196">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.test'
+    name: 'test(string, string, string, Models.FunctionsTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="54554-197">测试是否为有效的函数提供的信息。</span><span class="sxs-lookup"><span data-stu-id="54554-197">Tests if the information provided for a function is valid.</span></span> <span data-ttu-id="54554-198">这可以包括测试与该函数后的基础 web 服务的连接，或确保提供的函数代码的语法正确无误。</span><span class="sxs-lookup"><span data-stu-id="54554-198">This can range from testing the connection to the underlying web service behind the function or making sure the function code provided is syntactically correct.</span></span>
+    syntax:
+      content: 'function test(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-199">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-199">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-200">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-200">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-201">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-201">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-202">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-202">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsTestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update_2'
+    name: 'update(FunctionModel, string, string, string, FunctionsUpdateOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options: FunctionsUpdateOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="54554-203">一个函数对象。</span><span class="sxs-lookup"><span data-stu-id="54554-203">A function object.</span></span> <span data-ttu-id="54554-204">此处指定的属性将覆盖现有的函数 （例如中的相应属性这些属性将会更新）。</span><span class="sxs-lookup"><span data-stu-id="54554-204">The properties specified here will overwrite the corresponding properties in the existing function (ie. Those properties will be updated).</span></span> <span data-ttu-id="54554-205">为 null，此处设置任何属性将意味着现有函数中的对应属性将保持不变并不会因此修补程序操作而更改。</span><span class="sxs-lookup"><span data-stu-id="54554-205">Any properties that are set to null here will mean that the corresponding property in the existing function will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-206">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-206">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-207">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-207">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-208">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-208">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-209">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-209">The name of the function.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'
+          description: <span data-ttu-id="54554-210">可选参数</span><span class="sxs-lookup"><span data-stu-id="54554-210">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="54554-211">回调</span><span class="sxs-lookup"><span data-stu-id="54554-211">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update'
+    name: 'update(FunctionModel, string, string, string, Models.FunctionsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="54554-212">更新现有的函数在现有的流式处理作业。</span><span class="sxs-lookup"><span data-stu-id="54554-212">Updates an existing function under an existing streaming job.</span></span> <span data-ttu-id="54554-213">这可用于部分更新 （即。</span><span class="sxs-lookup"><span data-stu-id="54554-213">This can be used to partially update (ie.</span></span> <span data-ttu-id="54554-214">更新一个或两个属性） 而不会影响其他作业或函数定义的函数。</span><span class="sxs-lookup"><span data-stu-id="54554-214">update one or two properties) a function without affecting the rest the job or function definition.</span></span>
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsUpdateOptionalParams)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="54554-215">一个函数对象。</span><span class="sxs-lookup"><span data-stu-id="54554-215">A function object.</span></span> <span data-ttu-id="54554-216">此处指定的属性将覆盖现有的函数 （例如中的相应属性这些属性将会更新）。</span><span class="sxs-lookup"><span data-stu-id="54554-216">The properties specified here will overwrite the corresponding properties in the existing function (ie. Those properties will be updated).</span></span> <span data-ttu-id="54554-217">为 null，此处设置任何属性将意味着现有函数中的对应属性将保持不变并不会因此修补程序操作而更改。</span><span class="sxs-lookup"><span data-stu-id="54554-217">Any properties that are set to null here will mean that the corresponding property in the existing function will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-218">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-218">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-219">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-219">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-220">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-220">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-221">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-221">The name of the function.</span></span>
+        - id: options
+          type:
+            - Models.FunctionsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update_1'
+    name: 'update(FunctionModel, string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: <span data-ttu-id="54554-222">一个函数对象。</span><span class="sxs-lookup"><span data-stu-id="54554-222">A function object.</span></span> <span data-ttu-id="54554-223">此处指定的属性将覆盖现有的函数 （例如中的相应属性这些属性将会更新）。</span><span class="sxs-lookup"><span data-stu-id="54554-223">The properties specified here will overwrite the corresponding properties in the existing function (ie. Those properties will be updated).</span></span> <span data-ttu-id="54554-224">为 null，此处设置任何属性将意味着现有函数中的对应属性将保持不变并不会因此修补程序操作而更改。</span><span class="sxs-lookup"><span data-stu-id="54554-224">Any properties that are set to null here will mean that the corresponding property in the existing function will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="54554-225">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="54554-225">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="54554-226">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="54554-226">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="54554-227">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-227">The name of the streaming job.</span></span>
+        - id: functionName
+          type:
+            - string
+          description: <span data-ttu-id="54554-228">函数的名称。</span><span class="sxs-lookup"><span data-stu-id="54554-228">The name of the function.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            <span data-ttu-id="54554-229">回调</span><span class="sxs-lookup"><span data-stu-id="54554-229">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+references:
+  - uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+    name: StreamAnalyticsManagementClientContext
+    spec.typeScript:
+      - name: StreamAnalyticsManagementClientContext
+        fullName: StreamAnalyticsManagementClientContext
+        uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+  - uid: '@azure/arm-streamanalytics.FunctionModel'
+    name: FunctionModel
+    spec.typeScript:
+      - name: FunctionModel
+        fullName: FunctionModel
+        uid: '@azure/arm-streamanalytics.FunctionModel'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+    name: FunctionModel>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FunctionModel
+        fullName: FunctionModel
+        uid: '@azure/arm-streamanalytics.FunctionModel'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+    name: FunctionsCreateOrReplaceOptionalParams
+    spec.typeScript:
+      - name: FunctionsCreateOrReplaceOptionalParams
+        fullName: FunctionsCreateOrReplaceOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+    name: FunctionListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FunctionListResult
+        fullName: FunctionListResult
+        uid: '@azure/arm-streamanalytics.FunctionListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+    name: FunctionsListByStreamingJobOptionalParams
+    spec.typeScript:
+      - name: FunctionsListByStreamingJobOptionalParams
+        fullName: FunctionsListByStreamingJobOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+  - uid: '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+    name: FunctionsRetrieveDefaultDefinitionOptionalParams
+    spec.typeScript:
+      - name: FunctionsRetrieveDefaultDefinitionOptionalParams
+        fullName: FunctionsRetrieveDefaultDefinitionOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+  - uid: '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'
+    name: FunctionsUpdateOptionalParams
+    spec.typeScript:
+      - name: FunctionsUpdateOptionalParams
+        fullName: FunctionsUpdateOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'

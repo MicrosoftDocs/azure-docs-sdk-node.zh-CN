@@ -1,0 +1,731 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-streamanalytics.Inputs'
+    name: Inputs
+    fullName: Inputs
+    children:
+      - '@azure/arm-streamanalytics.Inputs.beginTest'
+      - '@azure/arm-streamanalytics.Inputs.createOrReplace_2'
+      - '@azure/arm-streamanalytics.Inputs.createOrReplace'
+      - '@azure/arm-streamanalytics.Inputs.createOrReplace_1'
+      - '@azure/arm-streamanalytics.Inputs.deleteMethod'
+      - '@azure/arm-streamanalytics.Inputs.deleteMethod_2'
+      - '@azure/arm-streamanalytics.Inputs.deleteMethod_1'
+      - '@azure/arm-streamanalytics.Inputs.get'
+      - '@azure/arm-streamanalytics.Inputs.get_2'
+      - '@azure/arm-streamanalytics.Inputs.get_1'
+      - '@azure/arm-streamanalytics.Inputs.constructor'
+      - '@azure/arm-streamanalytics.Inputs.listByStreamingJob_2'
+      - '@azure/arm-streamanalytics.Inputs.listByStreamingJob'
+      - '@azure/arm-streamanalytics.Inputs.listByStreamingJob_1'
+      - '@azure/arm-streamanalytics.Inputs.listByStreamingJobNext'
+      - '@azure/arm-streamanalytics.Inputs.listByStreamingJobNext_2'
+      - '@azure/arm-streamanalytics.Inputs.listByStreamingJobNext_1'
+      - '@azure/arm-streamanalytics.Inputs.test'
+      - '@azure/arm-streamanalytics.Inputs.update_2'
+      - '@azure/arm-streamanalytics.Inputs.update'
+      - '@azure/arm-streamanalytics.Inputs.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="b5fe3-101">类表示的输入。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-101">Class representing a Inputs.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.beginTest'
+    name: 'beginTest(string, string, string, Models.InputsBeginTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fe3-102">测试的输入数据源是否可访问，并且可供 Azure Stream Analytics 服务。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-102">Tests whether an input’s datasource is reachable and usable by the Azure Stream Analytics service.</span></span>
+    syntax:
+      content: 'function beginTest(resourceGroupName: string, jobName: string, inputName: string, options?: Models.InputsBeginTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-103">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-104">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-105">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-105">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-106">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-106">The name of the input.</span></span>
+        - id: options
+          type:
+            - Models.InputsBeginTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.createOrReplace_2'
+    name: 'createOrReplace(Input, string, string, string, InputsCreateOrReplaceOptionalParams, ServiceCallback<Input>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(input: Input, resourceGroupName: string, jobName: string, inputName: string, options: InputsCreateOrReplaceOptionalParams, callback: ServiceCallback<Input>)'
+      parameters:
+        - id: input
+          type:
+            - '@azure/arm-streamanalytics.Input'
+          description: <span data-ttu-id="b5fe3-107">将用于创建新的输入或替换现有流式处理作业下的输入的定义。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-107">The definition of the input that will be used to create a new input or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-108">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-108">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-109">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-109">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-110">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-110">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-111">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-111">The name of the input.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.InputsCreateOrReplaceOptionalParams'
+          description: <span data-ttu-id="b5fe3-112">可选参数</span><span class="sxs-lookup"><span data-stu-id="b5fe3-112">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Input>
+          description: |
+            <span data-ttu-id="b5fe3-113">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-113">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InputsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.createOrReplace'
+    name: 'createOrReplace(Input, string, string, string, Models.InputsCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fe3-114">创建一个输入或替换现有的流式处理作业下的现有输入。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-114">Creates an input or replaces an already existing input under an existing streaming job.</span></span>
+    syntax:
+      content: 'function createOrReplace(input: Input, resourceGroupName: string, jobName: string, inputName: string, options?: Models.InputsCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: input
+          type:
+            - '@azure/arm-streamanalytics.Input'
+          description: <span data-ttu-id="b5fe3-115">将用于创建新的输入或替换现有流式处理作业下的输入的定义。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-115">The definition of the input that will be used to create a new input or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-116">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-116">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-117">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-117">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-118">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-118">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-119">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-119">The name of the input.</span></span>
+        - id: options
+          type:
+            - Models.InputsCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InputsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.createOrReplace_1'
+    name: 'createOrReplace(Input, string, string, string, ServiceCallback<Input>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(input: Input, resourceGroupName: string, jobName: string, inputName: string, callback: ServiceCallback<Input>)'
+      parameters:
+        - id: input
+          type:
+            - '@azure/arm-streamanalytics.Input'
+          description: <span data-ttu-id="b5fe3-120">将用于创建新的输入或替换现有流式处理作业下的输入的定义。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-120">The definition of the input that will be used to create a new input or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-121">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-121">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-122">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-122">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-123">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-123">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-124">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-124">The name of the input.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Input>
+          description: |
+            <span data-ttu-id="b5fe3-125">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-125">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InputsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fe3-126">从流式处理作业中删除输入。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-126">Deletes an input from the streaming job.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, inputName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-127">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-127">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-128">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-128">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-129">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-129">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-130">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-130">The name of the input.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, inputName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-131">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-131">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-132">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-132">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-133">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-133">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-134">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-134">The name of the input.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b5fe3-135">可选参数</span><span class="sxs-lookup"><span data-stu-id="b5fe3-135">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b5fe3-136">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-136">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, inputName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-137">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-137">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-138">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-138">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-139">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-139">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-140">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-140">The name of the input.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="b5fe3-141">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-141">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fe3-142">获取有关指定输入的详细信息。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-142">Gets details about the specified input.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, inputName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-143">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-143">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-144">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-144">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-145">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-145">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-146">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-146">The name of the input.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InputsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Input>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, inputName: string, options: RequestOptionsBase, callback: ServiceCallback<Input>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-147">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-147">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-148">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-148">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-149">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-149">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-150">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-150">The name of the input.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b5fe3-151">可选参数</span><span class="sxs-lookup"><span data-stu-id="b5fe3-151">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Input>
+          description: |
+            <span data-ttu-id="b5fe3-152">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InputsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.get_1'
+    name: 'get(string, string, string, ServiceCallback<Input>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, inputName: string, callback: ServiceCallback<Input>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-153">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-153">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-154">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-154">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-155">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-155">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-156">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-156">The name of the input.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Input>
+          description: |
+            <span data-ttu-id="b5fe3-157">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InputsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.constructor'
+    name: Inputs(StreamAnalyticsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fe3-158">创建输入。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-158">Create a Inputs.</span></span>
+    syntax:
+      content: 'new Inputs(client: StreamAnalyticsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+          description: |
+            <span data-ttu-id="b5fe3-159">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-159">Reference to the service client.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.listByStreamingJob_2'
+    name: 'listByStreamingJob(string, string, InputsListByStreamingJobOptionalParams, ServiceCallback<InputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options: InputsListByStreamingJobOptionalParams, callback: ServiceCallback<InputListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-160">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-160">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-161">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-161">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-162">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-162">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.InputsListByStreamingJobOptionalParams'
+          description: <span data-ttu-id="b5fe3-163">可选参数</span><span class="sxs-lookup"><span data-stu-id="b5fe3-163">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.InputListResult>
+          description: |
+            <span data-ttu-id="b5fe3-164">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-164">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InputsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.listByStreamingJob'
+    name: 'listByStreamingJob(string, string, Models.InputsListByStreamingJobOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fe3-165">列出所有下指定流式处理作业的输入。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-165">Lists all of the inputs under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options?: Models.InputsListByStreamingJobOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-166">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-166">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-167">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-167">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-168">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-168">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.InputsListByStreamingJobOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InputsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.listByStreamingJob_1'
+    name: 'listByStreamingJob(string, string, ServiceCallback<InputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, callback: ServiceCallback<InputListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-169">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-169">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-170">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-170">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-171">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-171">The name of the streaming job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.InputListResult>
+          description: |
+            <span data-ttu-id="b5fe3-172">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-172">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InputsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.listByStreamingJobNext'
+    name: 'listByStreamingJobNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fe3-173">列出所有下指定流式处理作业的输入。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-173">Lists all of the inputs under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-174">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-174">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InputsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.listByStreamingJobNext_2'
+    name: 'listByStreamingJobNext(string, RequestOptionsBase, ServiceCallback<InputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<InputListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-175">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-175">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="b5fe3-176">可选参数</span><span class="sxs-lookup"><span data-stu-id="b5fe3-176">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.InputListResult>
+          description: |
+            <span data-ttu-id="b5fe3-177">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InputsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.listByStreamingJobNext_1'
+    name: 'listByStreamingJobNext(string, ServiceCallback<InputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, callback: ServiceCallback<InputListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-178">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-178">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.InputListResult>
+          description: |
+            <span data-ttu-id="b5fe3-179">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-179">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InputsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.test'
+    name: 'test(string, string, string, Models.InputsTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fe3-180">测试的输入数据源是否可访问，并且可供 Azure Stream Analytics 服务。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-180">Tests whether an input’s datasource is reachable and usable by the Azure Stream Analytics service.</span></span>
+    syntax:
+      content: 'function test(resourceGroupName: string, jobName: string, inputName: string, options?: Models.InputsTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-181">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-181">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-182">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-182">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-183">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-183">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-184">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-184">The name of the input.</span></span>
+        - id: options
+          type:
+            - Models.InputsTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InputsTestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.update_2'
+    name: 'update(Input, string, string, string, InputsUpdateOptionalParams, ServiceCallback<Input>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(input: Input, resourceGroupName: string, jobName: string, inputName: string, options: InputsUpdateOptionalParams, callback: ServiceCallback<Input>)'
+      parameters:
+        - id: input
+          type:
+            - '@azure/arm-streamanalytics.Input'
+          description: <span data-ttu-id="b5fe3-185">一个输入对象。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-185">An Input object.</span></span> <span data-ttu-id="b5fe3-186">此处指定的属性将覆盖现有的输入 （即中的相应属性这些属性将会更新）。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-186">The properties specified here will overwrite the corresponding properties in the existing input (ie. Those properties will be updated).</span></span> <span data-ttu-id="b5fe3-187">为 null，此处设置任何属性将意味着现有输入中的对应属性将保持不变并不会因此修补程序操作而更改。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-187">Any properties that are set to null here will mean that the corresponding property in the existing input will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-188">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-188">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-189">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-189">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-190">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-190">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-191">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-191">The name of the input.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.InputsUpdateOptionalParams'
+          description: <span data-ttu-id="b5fe3-192">可选参数</span><span class="sxs-lookup"><span data-stu-id="b5fe3-192">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Input>
+          description: |
+            <span data-ttu-id="b5fe3-193">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-193">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InputsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.update'
+    name: 'update(Input, string, string, string, Models.InputsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="b5fe3-194">更新在现有的流式处理作业的现有输入。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-194">Updates an existing input under an existing streaming job.</span></span> <span data-ttu-id="b5fe3-195">这可用于部分更新 （即。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-195">This can be used to partially update (ie.</span></span> <span data-ttu-id="b5fe3-196">更新一个或两个属性） 而不会影响其他作业或输入定义的输入。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-196">update one or two properties) an input without affecting the rest the job or input definition.</span></span>
+    syntax:
+      content: 'function update(input: Input, resourceGroupName: string, jobName: string, inputName: string, options?: Models.InputsUpdateOptionalParams)'
+      parameters:
+        - id: input
+          type:
+            - '@azure/arm-streamanalytics.Input'
+          description: <span data-ttu-id="b5fe3-197">一个输入对象。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-197">An Input object.</span></span> <span data-ttu-id="b5fe3-198">此处指定的属性将覆盖现有的输入 （即中的相应属性这些属性将会更新）。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-198">The properties specified here will overwrite the corresponding properties in the existing input (ie. Those properties will be updated).</span></span> <span data-ttu-id="b5fe3-199">为 null，此处设置任何属性将意味着现有输入中的对应属性将保持不变并不会因此修补程序操作而更改。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-199">Any properties that are set to null here will mean that the corresponding property in the existing input will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-200">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-200">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-201">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-201">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-202">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-202">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-203">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-203">The name of the input.</span></span>
+        - id: options
+          type:
+            - Models.InputsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InputsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Inputs.update_1'
+    name: 'update(Input, string, string, string, ServiceCallback<Input>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(input: Input, resourceGroupName: string, jobName: string, inputName: string, callback: ServiceCallback<Input>)'
+      parameters:
+        - id: input
+          type:
+            - '@azure/arm-streamanalytics.Input'
+          description: <span data-ttu-id="b5fe3-204">一个输入对象。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-204">An Input object.</span></span> <span data-ttu-id="b5fe3-205">此处指定的属性将覆盖现有的输入 （即中的相应属性这些属性将会更新）。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-205">The properties specified here will overwrite the corresponding properties in the existing input (ie. Those properties will be updated).</span></span> <span data-ttu-id="b5fe3-206">为 null，此处设置任何属性将意味着现有输入中的对应属性将保持不变并不会因此修补程序操作而更改。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-206">Any properties that are set to null here will mean that the corresponding property in the existing input will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-207">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-207">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="b5fe3-208">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-208">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-209">流式处理作业的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-209">The name of the streaming job.</span></span>
+        - id: inputName
+          type:
+            - string
+          description: <span data-ttu-id="b5fe3-210">输入的名称。</span><span class="sxs-lookup"><span data-stu-id="b5fe3-210">The name of the input.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Input>
+          description: |
+            <span data-ttu-id="b5fe3-211">回调</span><span class="sxs-lookup"><span data-stu-id="b5fe3-211">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InputsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+references:
+  - uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+    name: StreamAnalyticsManagementClientContext
+    spec.typeScript:
+      - name: StreamAnalyticsManagementClientContext
+        fullName: StreamAnalyticsManagementClientContext
+        uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+  - uid: '@azure/arm-streamanalytics.Input'
+    name: Input
+    spec.typeScript:
+      - name: Input
+        fullName: Input
+        uid: '@azure/arm-streamanalytics.Input'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.Input>
+    name: Input>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Input
+        fullName: Input
+        uid: '@azure/arm-streamanalytics.Input'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.InputsCreateOrReplaceOptionalParams'
+    name: InputsCreateOrReplaceOptionalParams
+    spec.typeScript:
+      - name: InputsCreateOrReplaceOptionalParams
+        fullName: InputsCreateOrReplaceOptionalParams
+        uid: '@azure/arm-streamanalytics.InputsCreateOrReplaceOptionalParams'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.InputListResult>
+    name: InputListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: InputListResult
+        fullName: InputListResult
+        uid: '@azure/arm-streamanalytics.InputListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.InputsListByStreamingJobOptionalParams'
+    name: InputsListByStreamingJobOptionalParams
+    spec.typeScript:
+      - name: InputsListByStreamingJobOptionalParams
+        fullName: InputsListByStreamingJobOptionalParams
+        uid: '@azure/arm-streamanalytics.InputsListByStreamingJobOptionalParams'
+  - uid: '@azure/arm-streamanalytics.InputsUpdateOptionalParams'
+    name: InputsUpdateOptionalParams
+    spec.typeScript:
+      - name: InputsUpdateOptionalParams
+        fullName: InputsUpdateOptionalParams
+        uid: '@azure/arm-streamanalytics.InputsUpdateOptionalParams'

@@ -1,0 +1,239 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/eventgrid.EventGridClientContext'
+    name: EventGridClientContext
+    fullName: EventGridClientContext
+    children:
+      - '@azure/eventgrid.EventGridClientContext.acceptLanguage'
+      - '@azure/eventgrid.EventGridClientContext.apiVersion'
+      - '@azure/eventgrid.EventGridClientContext.beginLongRunningRequest'
+      - '@azure/eventgrid.EventGridClientContext.credentials'
+      - '@azure/eventgrid.EventGridClientContext.constructor'
+      - '@azure/eventgrid.EventGridClientContext.longRunningOperationRetryTimeout'
+      - '@azure/eventgrid.EventGridClientContext.restoreLROPoller'
+      - '@azure/eventgrid.EventGridClientContext.sendLongRunningRequest'
+      - '@azure/eventgrid.EventGridClientContext.sendLRORequest'
+      - '@azure/eventgrid.EventGridClientContext.sendOperationRequest'
+      - '@azure/eventgrid.EventGridClientContext.sendRequest'
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: AzureServiceClient
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClientContext.acceptLanguage'
+    name: acceptLanguage
+    fullName: acceptLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'acceptLanguage: string'
+      return:
+        type:
+          - string
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClientContext.apiVersion'
+    name: apiVersion
+    fullName: apiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'apiVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClientContext.beginLongRunningRequest'
+    name: 'beginLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f12fc-101">发送 （长时间运行的操作） 进行 lro 操作的初始请求并取回 HttpLongRunningOperationResponse 轮询进行 lro 操作和检查是否完成进行 lro 操作提供的方法。</span><span class="sxs-lookup"><span data-stu-id="f12fc-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    syntax:
+      content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
+      parameters:
+        - id: request
+          type:
+            - RequestPrepareOptions | WebResource
+          description: <span data-ttu-id="f12fc-102">请求对象</span><span class="sxs-lookup"><span data-stu-id="f12fc-102">The request object</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClientContext.credentials'
+    name: credentials
+    fullName: credentials
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'credentials: ServiceClientCredentials'
+      return:
+        type:
+          - ServiceClientCredentials
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClientContext.constructor'
+    name: 'EventGridClientContext(ServiceClientCredentials, msRestAzure.AzureServiceClientOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f12fc-103">初始化 EventGridClient 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="f12fc-103">Initializes a new instance of the EventGridClient class.</span></span>
+    syntax:
+      content: 'new EventGridClientContext(credentials: ServiceClientCredentials, options?: msRestAzure.AzureServiceClientOptions)'
+      parameters:
+        - id: credentials
+          type:
+            - ServiceClientCredentials
+          description: <span data-ttu-id="f12fc-104">客户端连接到 Azure 所需的凭据。</span><span class="sxs-lookup"><span data-stu-id="f12fc-104">Credentials needed for the client to connect to Azure.</span></span>
+        - id: options
+          type:
+            - msRestAzure.AzureServiceClientOptions
+          description: ''
+          optional: true
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClientContext.longRunningOperationRetryTimeout'
+    name: longRunningOperationRetryTimeout
+    fullName: longRunningOperationRetryTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f12fc-105">重试超时秒数的长时间运行操作。</span><span class="sxs-lookup"><span data-stu-id="f12fc-105">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="f12fc-106">默认值为 30。</span><span class="sxs-lookup"><span data-stu-id="f12fc-106">Default value is 30.</span></span>
+    optional: true
+    syntax:
+      content: 'longRunningOperationRetryTimeout?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClientContext.restoreLROPoller'
+    name: restoreLROPoller(LROPollState)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f12fc-107">从提供 LROPollState 还原 LROPoller。</span><span class="sxs-lookup"><span data-stu-id="f12fc-107">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="f12fc-108">此方法可用于重新创建不同的进程或计算机上 LROPoller。</span><span class="sxs-lookup"><span data-stu-id="f12fc-108">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
+    syntax:
+      content: 'function restoreLROPoller(lroPollState: LROPollState)'
+      parameters:
+        - id: lroPollState
+          type:
+            - LROPollState
+          description: ''
+      return:
+        type:
+          - LROPoller
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClientContext.sendLongRunningRequest'
+    name: 'sendLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f12fc-109">提供了一种机制来发出请求，将轮询，并提供最终的结果。</span><span class="sxs-lookup"><span data-stu-id="f12fc-109">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
+    syntax:
+      content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
+      parameters:
+        - id: request
+          type:
+            - RequestPrepareOptions | WebResource
+          description: <span data-ttu-id="f12fc-110">请求对象</span><span class="sxs-lookup"><span data-stu-id="f12fc-110">The request object</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClientContext.sendLRORequest'
+    name: 'sendLRORequest(OperationArguments, OperationSpec, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f12fc-111">发送 （长时间运行的操作） 进行 lro 操作的初始请求并取回 LROPoller 轮询进行 lro 操作和检查是否完成进行 lro 操作提供的方法。</span><span class="sxs-lookup"><span data-stu-id="f12fc-111">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    syntax:
+      content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: <span data-ttu-id="f12fc-112">操作的参数。</span><span class="sxs-lookup"><span data-stu-id="f12fc-112">The arguments to the operation.</span></span>
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: <span data-ttu-id="f12fc-113">操作规范。</span><span class="sxs-lookup"><span data-stu-id="f12fc-113">The specification for the operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f12fc-114">发出请求时发送的其他选项。</span><span class="sxs-lookup"><span data-stu-id="f12fc-114">Additional options to be sent while making the request.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClientContext.sendOperationRequest'
+    name: 'sendOperationRequest(OperationArguments, OperationSpec, ServiceCallback<any>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f12fc-115">发送 HTTP 请求提供的 OperationSpec 填充。</span><span class="sxs-lookup"><span data-stu-id="f12fc-115">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    syntax:
+      content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: <span data-ttu-id="f12fc-116">HTTP 请求的模板化值将填充从自变量。</span><span class="sxs-lookup"><span data-stu-id="f12fc-116">The arguments that the HTTP request's templated values will be populated from.</span></span>
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: <span data-ttu-id="f12fc-117">用于填充 httpRequest OperationSpec。</span><span class="sxs-lookup"><span data-stu-id="f12fc-117">The OperationSpec to use to populate the httpRequest.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<any>
+          description: |
+            <span data-ttu-id="f12fc-118">要接收到响应时调用的回调。</span><span class="sxs-lookup"><span data-stu-id="f12fc-118">The callback to call when the response is received.</span></span>
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/eventgrid'
+  - uid: '@azure/eventgrid.EventGridClientContext.sendRequest'
+    name: sendRequest(RequestPrepareOptions | WebResource)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f12fc-119">发送提供的 httpRequest。</span><span class="sxs-lookup"><span data-stu-id="f12fc-119">Send the provided httpRequest.</span></span>
+    syntax:
+      content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
+      parameters:
+        - id: options
+          type:
+            - RequestPrepareOptions | WebResource
+          description: ''
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/eventgrid'

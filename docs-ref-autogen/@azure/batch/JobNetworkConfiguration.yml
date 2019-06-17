@@ -1,0 +1,29 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - '@azure/batch.JobNetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 JobNetworkConfiguration 的接口。
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobNetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      从作业任务运行的节点的虚拟网络子网的 ARM 资源标识符将加入的任务的持续时间。 仅支持此功能为 VirtualMachineConfiguration 池上运行的作业。 这是窗体 /subscriptions/ {订阅} /resourceGroups/ {组} /providers/ {provider} /virtualNetworks/ {network} /subnets/ {子网}。
+      虚拟网络必须是同一区域和订阅与 Azure Batch 帐户中。
+      指定的子网应有足够可用的 IP 地址来应对节点将从作业运行的任务数。 有关更多详细信息，请参阅https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration。
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'

@@ -1,0 +1,399 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints'
+    name: RecoveryPoints
+    fullName: RecoveryPoints
+    children:
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.get'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.get_2'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.get_1'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.list'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.list_2'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.list_1'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext_2'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext_1'
+      - '@azure/arm-recoveryservicesbackup.RecoveryPoints.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="cc7de-101">表示 RecoveryPoints 类。</span><span class="sxs-lookup"><span data-stu-id="cc7de-101">Class representing a RecoveryPoints.</span></span>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.get'
+    name: 'get(string, string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="cc7de-102">提供使用 RecoveryPointID 标识的备份数据的信息。</span><span class="sxs-lookup"><span data-stu-id="cc7de-102">Provides the information of the backed up data identified using RecoveryPointID.</span></span> <span data-ttu-id="cc7de-103">这是一个异步操作。</span><span class="sxs-lookup"><span data-stu-id="cc7de-103">This is an asynchronous operation.</span></span>
+      <span data-ttu-id="cc7de-104">若要了解操作的状态，调用 GetProtectedItemOperationResult API。</span><span class="sxs-lookup"><span data-stu-id="cc7de-104">To know the status of the operation, call the GetProtectedItemOperationResult API.</span></span>
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-105">恢复服务保管库的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-105">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-106">存在其中恢复服务保管库的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-106">The name of the resource group where the recovery services vault is present.</span></span>
+        - id: fabricName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-107">结构名称与备份项。</span><span class="sxs-lookup"><span data-stu-id="cc7de-107">Fabric name associated with backed up item.</span></span>
+        - id: containerName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-108">备份项与相关联的容器名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-108">Container name associated with backed up item.</span></span>
+        - id: protectedItemName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-109">备份的备份数据需要获取的项名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-109">Backed up item name whose backup data needs to be fetched.</span></span>
+        - id: recoveryPointId
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-110">RecoveryPointID 表示要提取的数据的备份。</span><span class="sxs-lookup"><span data-stu-id="cc7de-110">RecoveryPointID represents the backed up data to be fetched.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecoveryPointsGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.get_2'
+    name: 'get(string, string, string, string, string, string, RequestOptionsBase, ServiceCallback<RecoveryPointResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options: RequestOptionsBase, callback: ServiceCallback<RecoveryPointResource>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-111">恢复服务保管库的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-111">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-112">存在其中恢复服务保管库的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-112">The name of the resource group where the recovery services vault is present.</span></span>
+        - id: fabricName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-113">结构名称与备份项。</span><span class="sxs-lookup"><span data-stu-id="cc7de-113">Fabric name associated with backed up item.</span></span>
+        - id: containerName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-114">备份项与相关联的容器名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-114">Container name associated with backed up item.</span></span>
+        - id: protectedItemName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-115">备份的备份数据需要获取的项名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-115">Backed up item name whose backup data needs to be fetched.</span></span>
+        - id: recoveryPointId
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-116">RecoveryPointID 表示要提取的数据的备份。</span><span class="sxs-lookup"><span data-stu-id="cc7de-116">RecoveryPointID represents the backed up data to be fetched.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="cc7de-117">可选参数</span><span class="sxs-lookup"><span data-stu-id="cc7de-117">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResource>
+          description: |
+            <span data-ttu-id="cc7de-118">回调</span><span class="sxs-lookup"><span data-stu-id="cc7de-118">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecoveryPointsGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.get_1'
+    name: 'get(string, string, string, string, string, string, ServiceCallback<RecoveryPointResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, callback: ServiceCallback<RecoveryPointResource>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-119">恢复服务保管库的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-119">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-120">存在其中恢复服务保管库的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-120">The name of the resource group where the recovery services vault is present.</span></span>
+        - id: fabricName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-121">结构名称与备份项。</span><span class="sxs-lookup"><span data-stu-id="cc7de-121">Fabric name associated with backed up item.</span></span>
+        - id: containerName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-122">备份项与相关联的容器名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-122">Container name associated with backed up item.</span></span>
+        - id: protectedItemName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-123">备份的备份数据需要获取的项名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-123">Backed up item name whose backup data needs to be fetched.</span></span>
+        - id: recoveryPointId
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-124">RecoveryPointID 表示要提取的数据的备份。</span><span class="sxs-lookup"><span data-stu-id="cc7de-124">RecoveryPointID represents the backed up data to be fetched.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResource>
+          description: |
+            <span data-ttu-id="cc7de-125">回调</span><span class="sxs-lookup"><span data-stu-id="cc7de-125">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecoveryPointsGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.list'
+    name: 'list(string, string, string, string, string, Models.RecoveryPointsListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cc7de-126">列出备份项的备份副本。</span><span class="sxs-lookup"><span data-stu-id="cc7de-126">Lists the backup copies for the backed up item.</span></span>
+    syntax:
+      content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: Models.RecoveryPointsListOptionalParams)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-127">恢复服务保管库的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-127">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-128">存在其中恢复服务保管库的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-128">The name of the resource group where the recovery services vault is present.</span></span>
+        - id: fabricName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-129">结构名称与备份项相关联。</span><span class="sxs-lookup"><span data-stu-id="cc7de-129">Fabric name associated with the backed up item.</span></span>
+        - id: containerName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-130">与备份项关联的容器名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-130">Container name associated with the backed up item.</span></span>
+        - id: protectedItemName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-131">备份的备份副本是要提取的项。</span><span class="sxs-lookup"><span data-stu-id="cc7de-131">Backed up item whose backup copies are to be fetched.</span></span>
+        - id: options
+          type:
+            - Models.RecoveryPointsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.list_2'
+    name: 'list(string, string, string, string, string, RecoveryPointsListOptionalParams, ServiceCallback<RecoveryPointResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options: RecoveryPointsListOptionalParams, callback: ServiceCallback<RecoveryPointResourceList>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-132">恢复服务保管库的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-132">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-133">存在其中恢复服务保管库的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-133">The name of the resource group where the recovery services vault is present.</span></span>
+        - id: fabricName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-134">结构名称与备份项相关联。</span><span class="sxs-lookup"><span data-stu-id="cc7de-134">Fabric name associated with the backed up item.</span></span>
+        - id: containerName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-135">与备份项关联的容器名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-135">Container name associated with the backed up item.</span></span>
+        - id: protectedItemName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-136">备份的备份副本是要提取的项。</span><span class="sxs-lookup"><span data-stu-id="cc7de-136">Backed up item whose backup copies are to be fetched.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryPointsListOptionalParams'
+          description: <span data-ttu-id="cc7de-137">可选参数</span><span class="sxs-lookup"><span data-stu-id="cc7de-137">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResourceList>
+          description: |
+            <span data-ttu-id="cc7de-138">回调</span><span class="sxs-lookup"><span data-stu-id="cc7de-138">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.list_1'
+    name: 'list(string, string, string, string, string, ServiceCallback<RecoveryPointResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, callback: ServiceCallback<RecoveryPointResourceList>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-139">恢复服务保管库的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-139">The name of the recovery services vault.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-140">存在其中恢复服务保管库的资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-140">The name of the resource group where the recovery services vault is present.</span></span>
+        - id: fabricName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-141">结构名称与备份项相关联。</span><span class="sxs-lookup"><span data-stu-id="cc7de-141">Fabric name associated with the backed up item.</span></span>
+        - id: containerName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-142">与备份项关联的容器名称。</span><span class="sxs-lookup"><span data-stu-id="cc7de-142">Container name associated with the backed up item.</span></span>
+        - id: protectedItemName
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-143">备份的备份副本是要提取的项。</span><span class="sxs-lookup"><span data-stu-id="cc7de-143">Backed up item whose backup copies are to be fetched.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResourceList>
+          description: |
+            <span data-ttu-id="cc7de-144">回调</span><span class="sxs-lookup"><span data-stu-id="cc7de-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cc7de-145">列出备份项的备份副本。</span><span class="sxs-lookup"><span data-stu-id="cc7de-145">Lists the backup copies for the backed up item.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-146">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="cc7de-146">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListNextResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<RecoveryPointResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecoveryPointResourceList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-147">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="cc7de-147">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="cc7de-148">可选参数</span><span class="sxs-lookup"><span data-stu-id="cc7de-148">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResourceList>
+          description: |
+            <span data-ttu-id="cc7de-149">回调</span><span class="sxs-lookup"><span data-stu-id="cc7de-149">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListNextResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.listNext_1'
+    name: 'listNext(string, ServiceCallback<RecoveryPointResourceList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<RecoveryPointResourceList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="cc7de-150">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="cc7de-150">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResourceList>
+          description: |
+            <span data-ttu-id="cc7de-151">回调</span><span class="sxs-lookup"><span data-stu-id="cc7de-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RecoveryPointsListNextResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPoints.constructor'
+    name: RecoveryPoints(RecoveryServicesBackupClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="cc7de-152">创建 RecoveryPoints。</span><span class="sxs-lookup"><span data-stu-id="cc7de-152">Create a RecoveryPoints.</span></span>
+    syntax:
+      content: 'new RecoveryPoints(client: RecoveryServicesBackupClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+          description: |
+            <span data-ttu-id="cc7de-153">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="cc7de-153">Reference to the service client.</span></span>
+    package: '@azure/arm-recoveryservicesbackup'
+references:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+    name: RecoveryServicesBackupClientContext
+    spec.typeScript:
+      - name: RecoveryServicesBackupClientContext
+        fullName: RecoveryServicesBackupClientContext
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+  - uid: ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResource>
+    name: RecoveryPointResource>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecoveryPointResource
+        fullName: RecoveryPointResource
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryPointResource'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-recoveryservicesbackup.RecoveryPointResourceList>
+    name: RecoveryPointResourceList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecoveryPointResourceList
+        fullName: RecoveryPointResourceList
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryPointResourceList'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryPointsListOptionalParams'
+    name: RecoveryPointsListOptionalParams
+    spec.typeScript:
+      - name: RecoveryPointsListOptionalParams
+        fullName: RecoveryPointsListOptionalParams
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryPointsListOptionalParams'

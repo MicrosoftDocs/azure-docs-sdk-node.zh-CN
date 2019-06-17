@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.Sku'
+    name: Sku
+    fullName: Sku
+    children:
+      - '@azure/arm-sql.Sku.capacity'
+      - '@azure/arm-sql.Sku.family'
+      - '@azure/arm-sql.Sku.name'
+      - '@azure/arm-sql.Sku.size'
+      - '@azure/arm-sql.Sku.tier'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="006b4-101">资源模型定义表示 SKU</span><span class="sxs-lookup"><span data-stu-id="006b4-101">The resource model definition representing SKU</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Sku.capacity'
+    name: capacity
+    fullName: capacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="006b4-102">如果支持扩展/缩减规模，SKU 容量的整数应包含。</span><span class="sxs-lookup"><span data-stu-id="006b4-102">If the SKU supports scale out/in then the capacity integer should be included.</span></span> <span data-ttu-id="006b4-103">如果扩大 / 缩小不可能的资源可以忽略此项。</span><span class="sxs-lookup"><span data-stu-id="006b4-103">If scale out/in is not possible for the resource this may be omitted.</span></span>
+    optional: true
+    syntax:
+      content: 'capacity?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Sku.family'
+    name: family
+    fullName: family
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="006b4-104">如果该服务具有不同代的硬件、 相同的 sku，然后，可以捕获此处。</span><span class="sxs-lookup"><span data-stu-id="006b4-104">If the service has different generations of hardware, for the same SKU, then that can be captured here.</span></span>'
+    optional: true
+    syntax:
+      content: 'family?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Sku.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="006b4-105">SKU 的名称。</span><span class="sxs-lookup"><span data-stu-id="006b4-105">The name of the SKU.</span></span> <span data-ttu-id="006b4-106">Ex - P3.</span><span class="sxs-lookup"><span data-stu-id="006b4-106">Ex - P3.</span></span> <span data-ttu-id="006b4-107">它通常为字母 + 数字代码</span><span class="sxs-lookup"><span data-stu-id="006b4-107">It is typically a letter+number code</span></span>
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Sku.size'
+    name: size
+    fullName: size
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="006b4-108">SKU 大小。</span><span class="sxs-lookup"><span data-stu-id="006b4-108">The SKU size.</span></span> <span data-ttu-id="006b4-109">当名称字段是层和一些其他值的组合时，这将是独立的代码。</span><span class="sxs-lookup"><span data-stu-id="006b4-109">When the name field is the combination of tier and some other value, this would be the standalone code.</span></span>'
+    optional: true
+    syntax:
+      content: 'size?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Sku.tier'
+    name: tier
+    fullName: tier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="006b4-110">此字段是必需的如果服务具有多个层，但 PUT 上不需要由资源提供程序实现的。</span><span class="sxs-lookup"><span data-stu-id="006b4-110">This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.</span></span>'
+    optional: true
+    syntax:
+      content: 'tier?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'

@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest'
+    name: ApplySnapshotRequest
+    fullName: ApplySnapshotRequest
+    children:
+      - '@azure/cognitiveservices-face.ApplySnapshotRequest.mode'
+      - '@azure/cognitiveservices-face.ApplySnapshotRequest.objectId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="f6f48-101">请求正文以应用快照操作。</span><span class="sxs-lookup"><span data-stu-id="f6f48-101">Request body for applying snapshot operation.</span></span>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest.mode'
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f6f48-102">快照应用模式。</span><span class="sxs-lookup"><span data-stu-id="f6f48-102">Snapshot applying mode.</span></span> <span data-ttu-id="f6f48-103">支持目前仅 CreateNew，这意味着如果目标订阅已包含的相同的类型和使用相同的 objectId 对象应用操作将失败。</span><span class="sxs-lookup"><span data-stu-id="f6f48-103">Currently only CreateNew is supported, which means the apply operation will fail if target subscription already contains an object of same type and using the same objectId.</span></span> <span data-ttu-id="f6f48-104">若要避免此类冲突的请求正文中，用户可以指定"objectId"。</span><span class="sxs-lookup"><span data-stu-id="f6f48-104">Users can specify the "objectId" in request body to avoid such conflicts.</span></span> <span data-ttu-id="f6f48-105">可能的值包括：CreateNew。</span><span class="sxs-lookup"><span data-stu-id="f6f48-105">Possible values include: ''CreateNew''.</span></span> <span data-ttu-id="f6f48-106">默认值：CreateNew。</span><span class="sxs-lookup"><span data-stu-id="f6f48-106">Default value: ''CreateNew''.</span></span>'
+    optional: true
+    syntax:
+      content: 'mode?: SnapshotApplyMode'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.SnapshotApplyMode'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest.objectId'
+    name: objectId
+    fullName: objectId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f6f48-107">用户指定要从快照创建的目标对象 id。</span><span class="sxs-lookup"><span data-stu-id="f6f48-107">User specified target object id to be created from the snapshot.</span></span>
+    syntax:
+      content: 'objectId: string'
+      return:
+        type:
+          - string
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.SnapshotApplyMode'
+    name: SnapshotApplyMode
+    spec.typeScript:
+      - name: SnapshotApplyMode
+        fullName: SnapshotApplyMode
+        uid: '@azure/cognitiveservices-face.SnapshotApplyMode'

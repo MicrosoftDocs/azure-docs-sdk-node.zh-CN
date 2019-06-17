@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset'
+    name: FaceDetectorPreset
+    fullName: FaceDetectorPreset
+    children:
+      - '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+      - '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    langs:
+      - typeScript
+    type: interface
+    summary: 描述所有以便能够检测到存在的所有人脸分析视频时要使用的设置。
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.FaceDetectorPreset"'
+      return:
+        type:
+          - '"#Microsoft.Media.FaceDetectorPreset"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    name: resolution
+    fullName: resolution
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      指定的分析你的视频的最大分辨率。 默认行为是"SourceResolution，"将保持其原始分辨率时分析视频输入。
+      使用"StandardDefinition"将调整输入时保存相应的纵横比标准清晰视频的大小。 如果视频是较高的分辨率，仅将调整此大小。 例如，将到 640x360 处理前缩放 1920x1080 输入。 切换到"StandardDefinition"会减少所需的时间进程高分辨率视频。 这也会减少使用此组件的成本 (请参阅 https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics 有关详细信息)。
+      但是，最终会成为太小的调整后的视频的人脸可能无法检测。 可能的值包括：SourceResolution'，'StandardDefinition
+    optional: true
+    syntax:
+      content: 'resolution?: AnalysisResolution'
+      return:
+        type:
+          - '@azure/arm-mediaservices.AnalysisResolution'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.AnalysisResolution'
+    name: AnalysisResolution
+    spec.typeScript:
+      - name: AnalysisResolution
+        fullName: AnalysisResolution
+        uid: '@azure/arm-mediaservices.AnalysisResolution'

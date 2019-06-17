@@ -1,0 +1,253 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy'
+    name: DatabaseSecurityAlertPolicy
+    fullName: DatabaseSecurityAlertPolicy
+    children:
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.disabledAlerts'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.emailAccountAdmins'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.emailAddresses'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.id'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.kind'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.location'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.name'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.retentionDays'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.state'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.storageAccountAccessKey'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.storageEndpoint'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.type'
+      - '@azure/arm-sql.DatabaseSecurityAlertPolicy.useServerDefault'
+    langs:
+      - typeScript
+    type: interface
+    summary: 包含有关数据库威胁检测策略的信息。
+    extends:
+      name: '@azure/arm-sql.ProxyResource'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.disabledAlerts'
+    name: disabledAlerts
+    fullName: disabledAlerts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定将被禁用，或空字符串禁用任何警报的警报的以分号分隔列表。 可能的值：Sql_Injection;Sql_Injection_Vulnerability;Access_Anomaly;Data_Exfiltration;Unsafe_Action。
+    optional: true
+    syntax:
+      content: 'disabledAlerts?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.emailAccountAdmins'
+    name: emailAccountAdmins
+    fullName: emailAccountAdmins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定向帐户管理员发送警报。 可能的值包括：' Enabled'，'Disabled'
+    optional: true
+    syntax:
+      content: 'emailAccountAdmins?: SecurityAlertPolicyEmailAccountAdmins'
+      return:
+        type:
+          - '@azure/arm-sql.SecurityAlertPolicyEmailAccountAdmins'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.emailAddresses'
+    name: emailAddresses
+    fullName: emailAddresses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定向其发送警报的电子邮件地址之间用分号分隔列表。
+    optional: true
+    syntax:
+      content: 'emailAddresses?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      资源 ID。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      资源类型。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'kind?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 资源所在的地理位置
+    optional: true
+    syntax:
+      content: 'location?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      资源名称。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.retentionDays'
+    name: retentionDays
+    fullName: retentionDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的威胁检测审核日志中保留的天数。
+    optional: true
+    syntax:
+      content: 'retentionDays?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定策略的状态。 如果启用状态，则需要 storageEndpoint 和 storageAccountAccessKey。 可能的值包括：New，' Enabled'，'已禁用
+    syntax:
+      content: 'state: SecurityAlertPolicyState'
+      return:
+        type:
+          - '@azure/arm-sql.SecurityAlertPolicyState'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.storageAccountAccessKey'
+    name: storageAccountAccessKey
+    fullName: storageAccountAccessKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定的威胁检测审核存储帐户的标识符键。 如果启用了状态，则需要 storageAccountAccessKey。
+    optional: true
+    syntax:
+      content: 'storageAccountAccessKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.storageEndpoint'
+    name: storageEndpoint
+    fullName: storageEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '指定 blob 存储终结点 (例如 https://MyAccount.blob.core.windows.net) 。 此 blob 存储将保存所有威胁检测审核日志。 如果启用了状态，则需要 storageEndpoint。'
+    optional: true
+    syntax:
+      content: 'storageEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      资源类型。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseSecurityAlertPolicy.useServerDefault'
+    name: useServerDefault
+    fullName: useServerDefault
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指定是否使用默认服务器策略。 可能的值包括：' Enabled'，'Disabled'
+    optional: true
+    syntax:
+      content: 'useServerDefault?: SecurityAlertPolicyUseServerDefault'
+      return:
+        type:
+          - '@azure/arm-sql.SecurityAlertPolicyUseServerDefault'
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.ProxyResource'
+    name: ProxyResource
+    spec.typeScript:
+      - name: ProxyResource
+        fullName: ProxyResource
+        uid: '@azure/arm-sql.ProxyResource'
+  - uid: '@azure/arm-sql.SecurityAlertPolicyEmailAccountAdmins'
+    name: SecurityAlertPolicyEmailAccountAdmins
+    spec.typeScript:
+      - name: SecurityAlertPolicyEmailAccountAdmins
+        fullName: SecurityAlertPolicyEmailAccountAdmins
+        uid: '@azure/arm-sql.SecurityAlertPolicyEmailAccountAdmins'
+  - uid: '@azure/arm-sql.SecurityAlertPolicyState'
+    name: SecurityAlertPolicyState
+    spec.typeScript:
+      - name: SecurityAlertPolicyState
+        fullName: SecurityAlertPolicyState
+        uid: '@azure/arm-sql.SecurityAlertPolicyState'
+  - uid: '@azure/arm-sql.SecurityAlertPolicyUseServerDefault'
+    name: SecurityAlertPolicyUseServerDefault
+    spec.typeScript:
+      - name: SecurityAlertPolicyUseServerDefault
+        fullName: SecurityAlertPolicyUseServerDefault
+        uid: '@azure/arm-sql.SecurityAlertPolicyUseServerDefault'

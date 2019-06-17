@@ -10,6 +10,7 @@ items:
       - '@azure/arm-network.ResourceNavigationLink.linkedResourceType'
       - '@azure/arm-network.ResourceNavigationLink.name'
       - '@azure/arm-network.ResourceNavigationLink.provisioningState'
+      - '@azure/arm-network.ResourceNavigationLink.type'
     langs:
       - typeScript
     type: interface
@@ -56,7 +57,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: 链接到外部资源
+    summary: 链接到外部资源。
     optional: true
     syntax:
       content: 'link?: undefined | string'
@@ -107,6 +108,23 @@ items:
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ResourceNavigationLink.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      资源类型。
+      **注意：此属性将不序列化。它仅可以由服务器填充。**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
       return:
         type:
           - undefined | string

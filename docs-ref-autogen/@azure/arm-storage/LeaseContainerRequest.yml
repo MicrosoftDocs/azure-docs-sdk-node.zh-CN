@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.LeaseContainerRequest'
+    name: LeaseContainerRequest
+    fullName: LeaseContainerRequest
+    children:
+      - '@azure/arm-storage.LeaseContainerRequest.action'
+      - '@azure/arm-storage.LeaseContainerRequest.breakPeriod'
+      - '@azure/arm-storage.LeaseContainerRequest.leaseDuration'
+      - '@azure/arm-storage.LeaseContainerRequest.leaseId'
+      - '@azure/arm-storage.LeaseContainerRequest.proposedLeaseId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="5ee20-101">租用容器请求架构。</span><span class="sxs-lookup"><span data-stu-id="5ee20-101">Lease Container request schema.</span></span>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LeaseContainerRequest.action'
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee20-102">指定的租约操作。</span><span class="sxs-lookup"><span data-stu-id="5ee20-102">Specifies the lease action.</span></span> <span data-ttu-id="5ee20-103">可以是一个可用的操作。</span><span class="sxs-lookup"><span data-stu-id="5ee20-103">Can be one of the available actions.</span></span> <span data-ttu-id="5ee20-104">可能的值包括：获取、 续订、 更改、 发行、 Break</span><span class="sxs-lookup"><span data-stu-id="5ee20-104">Possible values include: ''Acquire'', ''Renew'', ''Change'', ''Release'', ''Break''</span></span>'
+    syntax:
+      content: 'action: Action1'
+      return:
+        type:
+          - '@azure/arm-storage.Action1'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LeaseContainerRequest.breakPeriod'
+    name: breakPeriod
+    fullName: breakPeriod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee20-105">可选。</span><span class="sxs-lookup"><span data-stu-id="5ee20-105">Optional.</span></span> <span data-ttu-id="5ee20-106">对于中断操作，建议的持续时间租约在中断，以秒为单位，介于 0 和 60 之间之前应继续。</span><span class="sxs-lookup"><span data-stu-id="5ee20-106">For a break action, proposed duration the lease should continue before it is broken, in seconds, between 0 and 60.</span></span>'
+    optional: true
+    syntax:
+      content: 'breakPeriod?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LeaseContainerRequest.leaseDuration'
+    name: leaseDuration
+    fullName: leaseDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee20-107">对于获取必需。</span><span class="sxs-lookup"><span data-stu-id="5ee20-107">Required for acquire.</span></span> <span data-ttu-id="5ee20-108">指定租约的持续时间以秒为单位，则为负一 (-1) 表示永不过期的租约。</span><span class="sxs-lookup"><span data-stu-id="5ee20-108">Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires.</span></span>'
+    optional: true
+    syntax:
+      content: 'leaseDuration?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LeaseContainerRequest.leaseId'
+    name: leaseId
+    fullName: leaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5ee20-109">标识该租约。</span><span class="sxs-lookup"><span data-stu-id="5ee20-109">Identifies the lease.</span></span> <span data-ttu-id="5ee20-110">可以指定任何有效的 GUID 字符串格式。</span><span class="sxs-lookup"><span data-stu-id="5ee20-110">Can be specified in any valid GUID string format.</span></span>
+    optional: true
+    syntax:
+      content: 'leaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LeaseContainerRequest.proposedLeaseId'
+    name: proposedLeaseId
+    fullName: proposedLeaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5ee20-111">可选的采集，所需的更改。</span><span class="sxs-lookup"><span data-stu-id="5ee20-111">Optional for acquire, required for change.</span></span> <span data-ttu-id="5ee20-112">建议的租约 ID，采用 GUID 字符串格式。</span><span class="sxs-lookup"><span data-stu-id="5ee20-112">Proposed lease ID, in a GUID string format.</span></span>'
+    optional: true
+    syntax:
+      content: 'proposedLeaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.Action1'
+    name: Action1
+    spec.typeScript:
+      - name: Action1
+        fullName: Action1
+        uid: '@azure/arm-storage.Action1'

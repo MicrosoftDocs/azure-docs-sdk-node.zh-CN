@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - '@azure/batch.TaskConstraints.maxTaskRetryCount'
+      - '@azure/batch.TaskConstraints.maxWallClockTime'
+      - '@azure/batch.TaskConstraints.retentionTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 TaskConstraints 的接口。
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 可以重试任务的最大次数。 批处理服务在其退出代码非零时重试任务。 请注意，此值专门用于控制任务由于非零退出代码可执行文件的重试次数。 批处理服务将尝试任务一次，然后重试，直至达到此上限为止。 例如，如果最大重试次数为 3，Batch 会尝试任务 4 次 （一个初始尝试和试 3 次）。 如果最大重试计数为 0，Batch 服务不重试该任务后第一次尝试。 如果最大重试计数为-1，批处理服务重试次数没有限制的任务。
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 从任务启动的时间算起的任务可能会运行，最大运行时间。 如果任务未完成的时间限制内，Batch 服务将终止它。 如果不指定此选项，则没有时间限制上任务可能会运行多长时间。
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.retentionTime'
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '用于保留其运行的位置，从它完成执行的时间在计算节点上的任务目录的最小时间。 在这一次之后, 批处理服务可以删除的任务目录及其所有内容。 默认值为 7 天，即任务目录将保留 7 天除非删除计算节点或删除该作业。'
+    optional: true
+    syntax:
+      content: 'retentionTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

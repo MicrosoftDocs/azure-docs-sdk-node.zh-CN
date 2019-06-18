@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolUpdatePropertiesParameter'
+    name: PoolUpdatePropertiesParameter
+    fullName: PoolUpdatePropertiesParameter
+    children:
+      - '@azure/batch.PoolUpdatePropertiesParameter.applicationPackageReferences'
+      - '@azure/batch.PoolUpdatePropertiesParameter.certificateReferences'
+      - '@azure/batch.PoolUpdatePropertiesParameter.metadata'
+      - '@azure/batch.PoolUpdatePropertiesParameter.startTask'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 PoolUpdatePropertiesParameter 的接口。
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolUpdatePropertiesParameter.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 若要在池中每个计算节点上安装的应用程序包的列表。 列表将替换在池上的任何现有应用程序包引用。 对应用程序的包引用的更改会影响所有新的计算节点加入池，但不是会影响已处于该池，直到它们被重新启动或重置映像的计算节点。 没有最多 10 个任何给定的池上的应用程序包引用。 如果省略，或指定一个空集合，将从池中删除任何现有的应用程序的包引用。
+    syntax:
+      content: 'applicationPackageReferences: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolUpdatePropertiesParameter.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '要在池中每个计算节点上安装的证书列表。 此列表替换在池上配置的任何现有证书引用。 如果指定一个空集合时，将从池中删除任何现有的证书引用。 对于 Windows 计算节点，Batch 服务将安装到指定的证书存储区和位置的证书。 对于 Linux 计算节点，这些证书将存储在任务工作目录和环境变量 AZ_BATCH_CERTIFICATES_DIR 提供给任务来查询此位置的一个目录中。 对于具有可见性 remoteUser 的证书，证书目录中创建用户的主目录 (例如，/home/ {用户名} / 证书) 和证书放置在该目录中。'
+    syntax:
+      content: 'certificateReferences: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolUpdatePropertiesParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 与作为元数据池相关联的名称-值对的列表。 此列表将替换任何现有的元数据，对池配置。 如果省略，或指定一个空集合，从池中删除任何现有的元数据。
+    syntax:
+      content: 'metadata: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolUpdatePropertiesParameter.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要加入池，每个计算节点上运行的任务。 在任务运行时将节点添加到池或重新启动节点。 如果存在此元素，则它将覆盖任何现有的启动任务。 如果省略，则是从池中删除任何现有的启动任务。
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'

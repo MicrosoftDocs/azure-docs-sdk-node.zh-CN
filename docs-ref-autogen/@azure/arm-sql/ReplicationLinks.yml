@@ -1,0 +1,523 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ReplicationLinks'
+    name: ReplicationLinks
+    fullName: ReplicationLinks
+    children:
+      - '@azure/arm-sql.ReplicationLinks.beginFailover'
+      - '@azure/arm-sql.ReplicationLinks.beginFailoverAllowDataLoss'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod_2'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod_1'
+      - '@azure/arm-sql.ReplicationLinks.failover'
+      - '@azure/arm-sql.ReplicationLinks.failoverAllowDataLoss'
+      - '@azure/arm-sql.ReplicationLinks.get'
+      - '@azure/arm-sql.ReplicationLinks.get_2'
+      - '@azure/arm-sql.ReplicationLinks.get_1'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase_2'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase_1'
+      - '@azure/arm-sql.ReplicationLinks.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示 ReplicationLinks 类。
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.beginFailover'
+    name: 'beginFailover(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 通过来自当前主要副本数据库的故障转移设置副本数据库。
+    syntax:
+      content: 'function beginFailover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 具有要进行故障转移的复制链接的数据库的名称。
+        - id: linkId
+          type:
+            - string
+          description: 要进行故障转移的复制链接的 ID。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.beginFailoverAllowDataLoss'
+    name: 'beginFailoverAllowDataLoss(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 通过来自当前主要副本数据库的故障转移设置副本数据库。 此操作可能导致数据丢失。
+    syntax:
+      content: 'function beginFailoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 具有要进行故障转移的复制链接的数据库的名称。
+        - id: linkId
+          type:
+            - string
+          description: 要进行故障转移的复制链接的 ID。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除数据库复制链接。 无法在故障转移过程中完成。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 具有要删除的复制链接的数据库的名称。
+        - id: linkId
+          type:
+            - string
+          description: 要删除的复制链接的 ID。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 具有要删除的复制链接的数据库的名称。
+        - id: linkId
+          type:
+            - string
+          description: 要删除的复制链接的 ID。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 具有要删除的复制链接的数据库的名称。
+        - id: linkId
+          type:
+            - string
+          description: 要删除的复制链接的 ID。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.failover'
+    name: 'failover(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 通过来自当前主要副本数据库的故障转移设置副本数据库。
+    syntax:
+      content: 'function failover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 具有要进行故障转移的复制链接的数据库的名称。
+        - id: linkId
+          type:
+            - string
+          description: 要进行故障转移的复制链接的 ID。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.failoverAllowDataLoss'
+    name: 'failoverAllowDataLoss(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 通过来自当前主要副本数据库的故障转移设置副本数据库。 此操作可能导致数据丢失。
+    syntax:
+      content: 'function failoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 具有要进行故障转移的复制链接的数据库的名称。
+        - id: linkId
+          type:
+            - string
+          description: 要进行故障转移的复制链接的 ID。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取数据库复制链接。
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 若要获取有关链接的数据库的名称。
+        - id: linkId
+          type:
+            - string
+          description: 要检索的复制链接 ID。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<ReplicationLink>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: RequestOptionsBase, callback: ServiceCallback<ReplicationLink>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 若要获取有关链接的数据库的名称。
+        - id: linkId
+          type:
+            - string
+          description: 要检索的复制链接 ID。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLink>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<ReplicationLink>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<ReplicationLink>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 若要获取有关链接的数据库的名称。
+        - id: linkId
+          type:
+            - string
+          description: 要检索的复制链接 ID。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLink>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase'
+    name: 'listByDatabase(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出数据库的复制链接。
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 要检索的链接的数据库的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase_2'
+    name: 'listByDatabase(string, string, string, RequestOptionsBase, ServiceCallback<ReplicationLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options: RequestOptionsBase, callback: ServiceCallback<ReplicationLinkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 要检索的链接的数据库的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase_1'
+    name: 'listByDatabase(string, string, string, ServiceCallback<ReplicationLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<ReplicationLinkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含该资源的资源组名称。 您可以从 Azure 资源管理器 API 或门户获取此值。
+        - id: serverName
+          type:
+            - string
+          description: 服务器的名称。
+        - id: databaseName
+          type:
+            - string
+          description: 要检索的链接的数据库的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.constructor'
+    name: ReplicationLinks(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建 ReplicationLinks。
+    syntax:
+      content: 'new ReplicationLinks(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-sql.ReplicationLink>
+    name: ReplicationLink>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ReplicationLink
+        fullName: ReplicationLink
+        uid: '@azure/arm-sql.ReplicationLink'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+    name: ReplicationLinkListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ReplicationLinkListResult
+        fullName: ReplicationLinkListResult
+        uid: '@azure/arm-sql.ReplicationLinkListResult'
+      - name: '>'
+        fullName: '>'

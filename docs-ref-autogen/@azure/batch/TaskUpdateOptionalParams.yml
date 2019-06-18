@@ -1,0 +1,140 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskUpdateOptionalParams'
+    name: TaskUpdateOptionalParams
+    fullName: TaskUpdateOptionalParams
+    children:
+      - '@azure/batch.TaskUpdateOptionalParams.abortSignal'
+      - '@azure/batch.TaskUpdateOptionalParams.constraints'
+      - '@azure/batch.TaskUpdateOptionalParams.customHeaders'
+      - '@azure/batch.TaskUpdateOptionalParams.onDownloadProgress'
+      - '@azure/batch.TaskUpdateOptionalParams.onUploadProgress'
+      - '@azure/batch.TaskUpdateOptionalParams.taskUpdateOptions'
+      - '@azure/batch.TaskUpdateOptionalParams.timeout'
+    langs:
+      - typeScript
+    type: interface
+    summary: 可选参数。
+    extends:
+      name: RequestOptionsBase
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.abortSignal'
+    name: abortSignal
+    fullName: abortSignal
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用于中止的信号请求。
+    optional: true
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        type:
+          - AbortSignalLike
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      将应用到此任务的约束。 如果省略，该任务提供的默认约束。
+      对于多实例任务，更新的保留时间仅适用于主要任务和不子任务。
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.customHeaders'
+    name: customHeaders
+    fullName: customHeaders
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{object}[customHeaders]用户定义的自定义请求标头将发送请求之前应用。'
+    optional: true
+    syntax:
+      content: 'customHeaders?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.onDownloadProgress'
+    name: onDownloadProgress
+    fullName: onDownloadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在下载进度时触发的回调。
+    optional: true
+    syntax:
+      content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - 'undefined | (progress: TransferProgressEvent) => void'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.onUploadProgress'
+    name: onUploadProgress
+    fullName: onUploadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在上传进度时触发的回调。
+    optional: true
+    syntax:
+      content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - 'undefined | (progress: TransferProgressEvent) => void'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.taskUpdateOptions'
+    name: taskUpdateOptions
+    fullName: taskUpdateOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 操作的其他参数
+    optional: true
+    syntax:
+      content: 'taskUpdateOptions?: TaskUpdateOptions'
+      return:
+        type:
+          - '@azure/batch.TaskUpdateOptions'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.timeout'
+    name: timeout
+    fullName: timeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一个请求可以获取自动终止之前的毫秒数。
+    optional: true
+    syntax:
+      content: 'timeout?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskUpdateOptions'
+    name: TaskUpdateOptions
+    spec.typeScript:
+      - name: TaskUpdateOptions
+        fullName: TaskUpdateOptions
+        uid: '@azure/batch.TaskUpdateOptions'

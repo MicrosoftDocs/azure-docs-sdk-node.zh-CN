@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint'
+    name: InstanceFailoverGroupReadWriteEndpoint
+    fullName: InstanceFailoverGroupReadWriteEndpoint
+    children:
+      - '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverPolicy'
+      - '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverWithDataLossGracePeriodMinutes'
+    langs:
+      - typeScript
+    type: interface
+    summary: 读写故障转移组实例的终结点。
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverPolicy'
+    name: failoverPolicy
+    fullName: failoverPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 故障转移组读写终结点的故障转移策略。 如果为自动了将 failoverPolicy failoverWithDataLossGracePeriodMinutes 是必需的。 可能的值包括：手动，自动
+    syntax:
+      content: 'failoverPolicy: ReadWriteEndpointFailoverPolicy'
+      return:
+        type:
+          - '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint.failoverWithDataLossGracePeriodMinutes'
+    name: failoverWithDataLossGracePeriodMinutes
+    fullName: failoverWithDataLossGracePeriodMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 宽限期内具有数据丢失的故障转移之前尝试为读写终结点。 如果为自动了将 failoverPolicy failoverWithDataLossGracePeriodMinutes 是必需的。
+    optional: true
+    syntax:
+      content: 'failoverWithDataLossGracePeriodMinutes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
+    name: ReadWriteEndpointFailoverPolicy
+    spec.typeScript:
+      - name: ReadWriteEndpointFailoverPolicy
+        fullName: ReadWriteEndpointFailoverPolicy
+        uid: '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'

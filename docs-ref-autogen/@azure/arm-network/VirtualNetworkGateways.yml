@@ -9,6 +9,7 @@ items:
       - '@azure/arm-network.VirtualNetworkGateways.beginGetAdvertisedRoutes'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetBgpPeerStatus'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetLearnedRoutes'
+      - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientConnectionHealth'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientIpsecParameters'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnProfilePackageUrl'
       - '@azure/arm-network.VirtualNetworkGateways.beginReset'
@@ -29,6 +30,7 @@ items:
       - '@azure/arm-network.VirtualNetworkGateways.getAdvertisedRoutes'
       - '@azure/arm-network.VirtualNetworkGateways.getBgpPeerStatus'
       - '@azure/arm-network.VirtualNetworkGateways.getLearnedRoutes'
+      - '@azure/arm-network.VirtualNetworkGateways.getVpnclientConnectionHealth'
       - '@azure/arm-network.VirtualNetworkGateways.getVpnclientIpsecParameters'
       - '@azure/arm-network.VirtualNetworkGateways.getVpnProfilePackageUrl'
       - '@azure/arm-network.VirtualNetworkGateways.list'
@@ -138,7 +140,7 @@ items:
         - id: peer
           type:
             - string
-          description: 对等节点 IP 地址
+          description: 对等 IP 地址。
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -184,6 +186,33 @@ items:
     summary: 此操作检索的虚拟网络网关已了解的路由列表，包括路由从 BGP 对等节点获知。
     syntax:
       content: 'function beginGetLearnedRoutes(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: 虚拟网络网关的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientConnectionHealth'
+    name: 'beginGetVpnclientConnectionHealth(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取 VPN 客户端连接运行状况详细信息的每个指定的资源组中的虚拟网络网关的 P2S 客户端连接。
+    syntax:
+      content: 'function beginGetVpnclientConnectionHealth(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
@@ -730,7 +759,7 @@ items:
         - id: peer
           type:
             - string
-          description: 对等节点 IP 地址
+          description: 对等 IP 地址。
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -793,6 +822,33 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetLearnedRoutesResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.getVpnclientConnectionHealth'
+    name: 'getVpnclientConnectionHealth(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取 VPN 客户端连接运行状况详细信息的每个指定的资源组中的虚拟网络网关的 P2S 客户端连接。
+    syntax:
+      content: 'function getVpnclientConnectionHealth(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: 虚拟网络网关的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworkGatewaysGetVpnclientConnectionHealthResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.getVpnclientIpsecParameters'
     name: 'getVpnclientIpsecParameters(string, string, msRest.RequestOptionsBase)'

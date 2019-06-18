@@ -1,0 +1,1095 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-policy.PolicyAssignments'
+    name: PolicyAssignments
+    fullName: PolicyAssignments
+    children:
+      - '@azure/arm-policy.PolicyAssignments.create'
+      - '@azure/arm-policy.PolicyAssignments.create_2'
+      - '@azure/arm-policy.PolicyAssignments.create_1'
+      - '@azure/arm-policy.PolicyAssignments.createById'
+      - '@azure/arm-policy.PolicyAssignments.createById_2'
+      - '@azure/arm-policy.PolicyAssignments.createById_1'
+      - '@azure/arm-policy.PolicyAssignments.deleteById'
+      - '@azure/arm-policy.PolicyAssignments.deleteById_2'
+      - '@azure/arm-policy.PolicyAssignments.deleteById_1'
+      - '@azure/arm-policy.PolicyAssignments.deleteMethod'
+      - '@azure/arm-policy.PolicyAssignments.deleteMethod_2'
+      - '@azure/arm-policy.PolicyAssignments.deleteMethod_1'
+      - '@azure/arm-policy.PolicyAssignments.get'
+      - '@azure/arm-policy.PolicyAssignments.get_2'
+      - '@azure/arm-policy.PolicyAssignments.get_1'
+      - '@azure/arm-policy.PolicyAssignments.getById'
+      - '@azure/arm-policy.PolicyAssignments.getById_2'
+      - '@azure/arm-policy.PolicyAssignments.getById_1'
+      - '@azure/arm-policy.PolicyAssignments.list'
+      - '@azure/arm-policy.PolicyAssignments.list_2'
+      - '@azure/arm-policy.PolicyAssignments.list_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResource'
+      - '@azure/arm-policy.PolicyAssignments.listForResource_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResource_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroup'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroup_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroup_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceNext'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceNext_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceNext_1'
+      - '@azure/arm-policy.PolicyAssignments.listNext'
+      - '@azure/arm-policy.PolicyAssignments.listNext_2'
+      - '@azure/arm-policy.PolicyAssignments.listNext_1'
+      - '@azure/arm-policy.PolicyAssignments.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示 PolicyAssignments 类。
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.create'
+    name: 'create(string, string, PolicyAssignment, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 此操作使用创建或更新策略分配的给定作用域和名称。 策略分配适用于包含其作用域内的所有资源。 例如，分配资源组范围内的策略后，该策略应用于组中的所有资源。
+    syntax:
+      content: 'function create(scope: string, policyAssignmentName: string, parameters: PolicyAssignment, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '策略分配的范围。 有效范围是： 管理组 (格式: / providers/Microsoft.Management/managementGroups/{managementGroup})，订阅 (格式: / {subscriptionId})，资源组 (格式: / {subscriptionId} /resourceGroups / {resourceGroupName}，或资源 (格式: / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: 策略分配的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: 策略分配的参数。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.create_2'
+    name: 'create(string, string, PolicyAssignment, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(scope: string, policyAssignmentName: string, parameters: PolicyAssignment, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '策略分配的范围。 有效范围是： 管理组 (格式: / providers/Microsoft.Management/managementGroups/{managementGroup})，订阅 (格式: / {subscriptionId})，资源组 (格式: / {subscriptionId} /resourceGroups / {resourceGroupName}，或资源 (格式: / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: 策略分配的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: 策略分配的参数。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.create_1'
+    name: 'create(string, string, PolicyAssignment, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(scope: string, policyAssignmentName: string, parameters: PolicyAssignment, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '策略分配的范围。 有效范围是： 管理组 (格式: / providers/Microsoft.Management/managementGroups/{managementGroup})，订阅 (格式: / {subscriptionId})，资源组 (格式: / {subscriptionId} /resourceGroups / {resourceGroupName}，或资源 (格式: / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: 策略分配的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: 策略分配的参数。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.createById'
+    name: 'createById(string, PolicyAssignment, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '此操作创建或更新与给定 ID 的策略分配 在作用域上进行的策略分配适用于包含在该范围内的所有资源。 例如，当您将策略分配给资源组的策略适用于组中的所有资源。 策略分配 Id 具有以下格式: {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。 有效范围是： 管理组 (格式: / providers/Microsoft.Management/managementGroups/{managementGroup})，订阅 (格式: / {subscriptionId})，资源组 (格式: / {subscriptionId} /resourceGroups / {resourceGroupName}，或资源 (格式: / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}。'
+    syntax:
+      content: 'function createById(policyAssignmentId: string, parameters: PolicyAssignment, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '若要创建的策略分配 ID。 使用格式 {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。'
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: 策略分配的参数。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.createById_2'
+    name: 'createById(string, PolicyAssignment, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createById(policyAssignmentId: string, parameters: PolicyAssignment, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '若要创建的策略分配 ID。 使用格式 {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。'
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: 策略分配的参数。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.createById_1'
+    name: 'createById(string, PolicyAssignment, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createById(policyAssignmentId: string, parameters: PolicyAssignment, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '若要创建的策略分配 ID。 使用格式 {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。'
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: 策略分配的参数。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteById'
+    name: 'deleteById(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '此操作将删除具有给定 ID 的策略 策略分配 Id 具有以下格式: {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。 {Scope} 的有效格式是: / providers/Microsoft.Management/managementGroups/{managementGroup} （管理组），/ {subscriptionId} （订阅） / {subscriptionId} /resourceGroups/ {resourceGroupName} （资源组） 或 / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName} （资源）。'
+    syntax:
+      content: 'function deleteById(policyAssignmentId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '若要删除的策略分配 ID。 使用格式 {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteById_2'
+    name: 'deleteById(string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteById(policyAssignmentId: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '若要删除的策略分配 ID。 使用格式 {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteById_1'
+    name: 'deleteById(string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteById(policyAssignmentId: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '若要删除的策略分配 ID。 使用格式 {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '此操作将删除策略分配，在给定其名称和在其中创建它的作用域。 策略分配的范围是其 ID 前面的部分 / providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。'
+    syntax:
+      content: 'function deleteMethod(scope: string, policyAssignmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '策略分配的范围。 有效范围是： 管理组 (格式: / providers/Microsoft.Management/managementGroups/{managementGroup})，订阅 (格式: / {subscriptionId})，资源组 (格式: / {subscriptionId} /resourceGroups / {resourceGroupName}，或资源 (格式: / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: 若要删除的策略分配名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteMethodResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(scope: string, policyAssignmentName: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '策略分配的范围。 有效范围是： 管理组 (格式: / providers/Microsoft.Management/managementGroups/{managementGroup})，订阅 (格式: / {subscriptionId})，资源组 (格式: / {subscriptionId} /resourceGroups / {resourceGroupName}，或资源 (格式: / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: 若要删除的策略分配名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteMethodResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(scope: string, policyAssignmentName: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '策略分配的范围。 有效范围是： 管理组 (格式: / providers/Microsoft.Management/managementGroups/{managementGroup})，订阅 (格式: / {subscriptionId})，资源组 (格式: / {subscriptionId} /resourceGroups / {resourceGroupName}，或资源 (格式: / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: 若要删除的策略分配名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteMethodResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 此操作可检索给定其名称和在创建它的作用域的单个策略分配。
+    syntax:
+      content: 'function get(scope: string, policyAssignmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '策略分配的范围。 有效范围是： 管理组 (格式: / providers/Microsoft.Management/managementGroups/{managementGroup})，订阅 (格式: / {subscriptionId})，资源组 (格式: / {subscriptionId} /resourceGroups / {resourceGroupName}，或资源 (格式: / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: 若要获取策略分配的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(scope: string, policyAssignmentName: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '策略分配的范围。 有效范围是： 管理组 (格式: / providers/Microsoft.Management/managementGroups/{managementGroup})，订阅 (格式: / {subscriptionId})，资源组 (格式: / {subscriptionId} /resourceGroups / {resourceGroupName}，或资源 (格式: / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: 若要获取策略分配的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.get_1'
+    name: 'get(string, string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(scope: string, policyAssignmentName: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: '策略分配的范围。 有效范围是： 管理组 (格式: / providers/Microsoft.Management/managementGroups/{managementGroup})，订阅 (格式: / {subscriptionId})，资源组 (格式: / {subscriptionId} /resourceGroups / {resourceGroupName}，或资源 (格式: / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'
+        - id: policyAssignmentName
+          type:
+            - string
+          description: 若要获取策略分配的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.getById'
+    name: 'getById(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      该操作将检索具有给定 ID 的策略分配 策略分配 Id 具有以下格式: {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。
+      有效范围是： 管理组 (格式: / providers/Microsoft.Management/managementGroups/{managementGroup})，订阅 (格式: / {subscriptionId})，资源组 (格式: / {subscriptionId} /resourceGroups / {resourceGroupName}，或资源 (格式: / {subscriptionId} /resourceGroups/ {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}。
+    syntax:
+      content: 'function getById(policyAssignmentId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '要获取策略分配的 ID。 使用格式 {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.getById_2'
+    name: 'getById(string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getById(policyAssignmentId: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '要获取策略分配的 ID。 使用格式 {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.getById_1'
+    name: 'getById(string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getById(policyAssignmentId: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: '要获取策略分配的 ID。 使用格式 {scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}。'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.list'
+    name: list(Models.PolicyAssignmentsListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '此操作检索所有策略分配与给定订阅关联的匹配给定 $filter 可选的列表。 有效值为 $filter: atscope （) 或 policyDefinitionId eq '' {value} ''。 如果未提供 $filter，未筛选的列表包括与该订阅，包括那些直接应用相关联的所有策略分配或管理组中包含给定的订阅，作为对中包含的对象以及任何应用订阅。 如果提供 $filter=atScope()，则返回的列表包含将应用于订阅，这是除应用于订阅中包含的对象未筛选的列表中的所有内容的所有策略分配。 如果 $filter = policyDefinitionId eq ''{value} 提供，返回的列表将包含仅应用到的订阅并将其 id 是 {value} 的策略定义分配策略分配。'
+    syntax:
+      content: 'function list(options?: Models.PolicyAssignmentsListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PolicyAssignmentsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.list_2'
+    name: 'list(PolicyAssignmentsListOptionalParams, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: PolicyAssignmentsListOptionalParams, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-policy.PolicyAssignmentsListOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.list_1'
+    name: list(ServiceCallback<PolicyAssignmentListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResource'
+    name: 'listForResource(string, string, string, string, string, Models.PolicyAssignmentsListForResourceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      此操作检索所有策略分配与给定的资源组和订阅中指定的资源相关联，匹配可选给定 $filter 的列表。
+      有效值为 $filter: atscope （) 或 policyDefinitionId eq ' {value} '。 如果未提供 $filter，未筛选的列表将包含与该资源，包括那些直接应用或从所有包含的作用域，作为对该资源中包含的资源以及任何应用关联的所有策略分配。 如果提供 $filter=atScope()，则返回的列表包含将应用到资源，这是除应用于该资源中包含的资源未筛选的列表中的所有内容的所有策略分配。 如果 $filter = policyDefinitionId eq '{value} 提供，返回的列表将包含仅应用到资源并将其 id 是 {value} 的策略定义分配策略分配。
+      三个参数以及资源名称用于标识特定资源。 如果资源不是父资源 （更常见的案例） 的一部分，不应提供父资源路径 (或提供作为 ')。 例如，web 应用可以指定为 ({resourceProviderNamespace} = = Microsoft.Web，{parentResourcePath} = = '，{resourceType} = = 站点，{resourceName} = = MyWebApp)。 如果资源是父资源的一部分，则应提供所有参数。 例如，虚拟机 DNS 名称可以指定为 ({resourceProviderNamespace} = = Microsoft.Compute，{parentResourcePath} = = virtualMachines/MyVirtualMachine，{resourceType} = = domainNames，{resourceName} = = MyComputerName)。 单独提供的命名空间和类型名称的一个便捷替代方式是提供 {resourceType} 参数中，设置的格式: ({resourceProviderNamespace} = = '，{parentResourcePath} = = '，{resourceType} = = microsoft.web/sites，{resourceName} = = MyWebApp)。
+    syntax:
+      content: 'function listForResource(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, options?: Models.PolicyAssignmentsListForResourceOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含资源的资源组的名称。
+        - id: resourceProviderNamespace
+          type:
+            - string
+          description: 资源提供程序的命名空间。 例如，虚拟机的命名空间是 Microsoft.Compute （从 microsoft.compute/virtualmachines)
+        - id: parentResourcePath
+          type:
+            - string
+          description: 父资源路径。 如果不存在，请使用空字符串。
+        - id: resourceType
+          type:
+            - string
+          description: 资源类型名称。 例如 web 应用的类型名称为站点 （从 microsoft.web/sites)。
+        - id: resourceName
+          type:
+            - string
+          description: 资源的名称。
+        - id: options
+          type:
+            - Models.PolicyAssignmentsListForResourceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResource_2'
+    name: 'listForResource(string, string, string, string, string, PolicyAssignmentsListForResourceOptionalParams, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResource(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, options: PolicyAssignmentsListForResourceOptionalParams, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含资源的资源组的名称。
+        - id: resourceProviderNamespace
+          type:
+            - string
+          description: 资源提供程序的命名空间。 例如，虚拟机的命名空间是 Microsoft.Compute （从 microsoft.compute/virtualmachines)
+        - id: parentResourcePath
+          type:
+            - string
+          description: 父资源路径。 如果不存在，请使用空字符串。
+        - id: resourceType
+          type:
+            - string
+          description: 资源类型名称。 例如 web 应用的类型名称为站点 （从 microsoft.web/sites)。
+        - id: resourceName
+          type:
+            - string
+          description: 资源的名称。
+        - id: options
+          type:
+            - '@azure/arm-policy.PolicyAssignmentsListForResourceOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResource_1'
+    name: 'listForResource(string, string, string, string, string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResource(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含资源的资源组的名称。
+        - id: resourceProviderNamespace
+          type:
+            - string
+          description: 资源提供程序的命名空间。 例如，虚拟机的命名空间是 Microsoft.Compute （从 microsoft.compute/virtualmachines)
+        - id: parentResourcePath
+          type:
+            - string
+          description: 父资源路径。 如果不存在，请使用空字符串。
+        - id: resourceType
+          type:
+            - string
+          description: 资源类型名称。 例如 web 应用的类型名称为站点 （从 microsoft.web/sites)。
+        - id: resourceName
+          type:
+            - string
+          description: 资源的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroup'
+    name: 'listForResourceGroup(string, Models.PolicyAssignmentsListForResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '此操作检索所有策略分配与给定订阅中的给定的资源组相关联，匹配可选给定 $filter 的列表。 有效值为 $filter: atscope （) 或 policyDefinitionId eq '' {value} ''。 如果未提供 $filter，未筛选的列表将包括与资源组，包括那些直接应用或从包含作用域，以及任何应用到资源组中包含的资源与应用关联的所有策略分配。 如果提供 $filter=atScope()，则返回的列表包括适用于除应用到资源组中包含的资源未筛选的列表中的所有内容的资源组的所有策略分配。 如果 $filter = policyDefinitionId eq ''{value} 提供，返回的列表将包含仅应用于该资源组并分配策略定义其 id 是 {value} 策略分配。'
+    syntax:
+      content: 'function listForResourceGroup(resourceGroupName: string, options?: Models.PolicyAssignmentsListForResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含策略分配的资源组的名称。
+        - id: options
+          type:
+            - Models.PolicyAssignmentsListForResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroup_2'
+    name: 'listForResourceGroup(string, PolicyAssignmentsListForResourceGroupOptionalParams, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroup(resourceGroupName: string, options: PolicyAssignmentsListForResourceGroupOptionalParams, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含策略分配的资源组的名称。
+        - id: options
+          type:
+            - '@azure/arm-policy.PolicyAssignmentsListForResourceGroupOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroup_1'
+    name: 'listForResourceGroup(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroup(resourceGroupName: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 包含策略分配的资源组的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext'
+    name: 'listForResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '此操作检索所有策略分配与给定订阅中的给定的资源组相关联，匹配可选给定 $filter 的列表。 有效值为 $filter: atscope （) 或 policyDefinitionId eq '' {value} ''。 如果未提供 $filter，未筛选的列表将包括与资源组，包括那些直接应用或从包含作用域，以及任何应用到资源组中包含的资源与应用关联的所有策略分配。 如果提供 $filter=atScope()，则返回的列表包括适用于除应用到资源组中包含的资源未筛选的列表中的所有内容的资源组的所有策略分配。 如果 $filter = policyDefinitionId eq ''{value} 提供，返回的列表将包含仅应用于该资源组并分配策略定义其 id 是 {value} 策略分配。'
+    syntax:
+      content: 'function listForResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_2'
+    name: 'listForResourceGroupNext(string, RequestOptionsBase, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_1'
+    name: 'listForResourceGroupNext(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroupNext(nextPageLink: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceNext'
+    name: 'listForResourceNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      此操作检索所有策略分配与给定的资源组和订阅中指定的资源相关联，匹配可选给定 $filter 的列表。
+      有效值为 $filter: atscope （) 或 policyDefinitionId eq ' {value} '。 如果未提供 $filter，未筛选的列表将包含与该资源，包括那些直接应用或从所有包含的作用域，作为对该资源中包含的资源以及任何应用关联的所有策略分配。 如果提供 $filter=atScope()，则返回的列表包含将应用到资源，这是除应用于该资源中包含的资源未筛选的列表中的所有内容的所有策略分配。 如果 $filter = policyDefinitionId eq '{value} 提供，返回的列表将包含仅应用到资源并将其 id 是 {value} 的策略定义分配策略分配。
+      三个参数以及资源名称用于标识特定资源。 如果资源不是父资源 （更常见的案例） 的一部分，不应提供父资源路径 (或提供作为 ')。 例如，web 应用可以指定为 ({resourceProviderNamespace} = = Microsoft.Web，{parentResourcePath} = = '，{resourceType} = = 站点，{resourceName} = = MyWebApp)。 如果资源是父资源的一部分，则应提供所有参数。 例如，虚拟机 DNS 名称可以指定为 ({resourceProviderNamespace} = = Microsoft.Compute，{parentResourcePath} = = virtualMachines/MyVirtualMachine，{resourceType} = = domainNames，{resourceName} = = MyComputerName)。 单独提供的命名空间和类型名称的一个便捷替代方式是提供 {resourceType} 参数中，设置的格式: ({resourceProviderNamespace} = = '，{parentResourcePath} = = '，{resourceType} = = microsoft.web/sites，{resourceName} = = MyWebApp)。
+    syntax:
+      content: 'function listForResourceNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceNext_2'
+    name: 'listForResourceNext(string, RequestOptionsBase, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceNext_1'
+    name: 'listForResourceNext(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceNext(nextPageLink: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '此操作检索所有策略分配与给定订阅关联的匹配给定 $filter 可选的列表。 有效值为 $filter: atscope （) 或 policyDefinitionId eq '' {value} ''。 如果未提供 $filter，未筛选的列表包括与该订阅，包括那些直接应用相关联的所有策略分配或管理组中包含给定的订阅，作为对中包含的对象以及任何应用订阅。 如果提供 $filter=atScope()，则返回的列表包含将应用于订阅，这是除应用于订阅中包含的对象未筛选的列表中的所有内容的所有策略分配。 如果 $filter = policyDefinitionId eq ''{value} 提供，返回的列表将包含仅应用到的订阅并将其 id 是 {value} 的策略定义分配策略分配。'
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listNext_1'
+    name: 'listNext(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.constructor'
+    name: PolicyAssignments(PolicyClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建 PolicyAssignments。
+    syntax:
+      content: 'new PolicyAssignments(client: PolicyClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-policy.PolicyClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-policy'
+references:
+  - uid: '@azure/arm-policy.PolicyClientContext'
+    name: PolicyClientContext
+    spec.typeScript:
+      - name: PolicyClientContext
+        fullName: PolicyClientContext
+        uid: '@azure/arm-policy.PolicyClientContext'
+  - uid: '@azure/arm-policy.PolicyAssignment'
+    name: PolicyAssignment
+    spec.typeScript:
+      - name: PolicyAssignment
+        fullName: PolicyAssignment
+        uid: '@azure/arm-policy.PolicyAssignment'
+  - uid: ServiceCallback<@azure/arm-policy.PolicyAssignment>
+    name: PolicyAssignment>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PolicyAssignment
+        fullName: PolicyAssignment
+        uid: '@azure/arm-policy.PolicyAssignment'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+    name: PolicyAssignmentListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PolicyAssignmentListResult
+        fullName: PolicyAssignmentListResult
+        uid: '@azure/arm-policy.PolicyAssignmentListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-policy.PolicyAssignmentsListOptionalParams'
+    name: PolicyAssignmentsListOptionalParams
+    spec.typeScript:
+      - name: PolicyAssignmentsListOptionalParams
+        fullName: PolicyAssignmentsListOptionalParams
+        uid: '@azure/arm-policy.PolicyAssignmentsListOptionalParams'
+  - uid: '@azure/arm-policy.PolicyAssignmentsListForResourceOptionalParams'
+    name: PolicyAssignmentsListForResourceOptionalParams
+    spec.typeScript:
+      - name: PolicyAssignmentsListForResourceOptionalParams
+        fullName: PolicyAssignmentsListForResourceOptionalParams
+        uid: '@azure/arm-policy.PolicyAssignmentsListForResourceOptionalParams'
+  - uid: '@azure/arm-policy.PolicyAssignmentsListForResourceGroupOptionalParams'
+    name: PolicyAssignmentsListForResourceGroupOptionalParams
+    spec.typeScript:
+      - name: PolicyAssignmentsListForResourceGroupOptionalParams
+        fullName: PolicyAssignmentsListForResourceGroupOptionalParams
+        uid: '@azure/arm-policy.PolicyAssignmentsListForResourceGroupOptionalParams'

@@ -1,0 +1,903 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-privatedns.RecordSets'
+    name: RecordSets
+    fullName: RecordSets
+    children:
+      - '@azure/arm-privatedns.RecordSets.createOrUpdate'
+      - '@azure/arm-privatedns.RecordSets.createOrUpdate_2'
+      - '@azure/arm-privatedns.RecordSets.createOrUpdate_1'
+      - '@azure/arm-privatedns.RecordSets.deleteMethod'
+      - '@azure/arm-privatedns.RecordSets.deleteMethod_2'
+      - '@azure/arm-privatedns.RecordSets.deleteMethod_1'
+      - '@azure/arm-privatedns.RecordSets.get'
+      - '@azure/arm-privatedns.RecordSets.get_2'
+      - '@azure/arm-privatedns.RecordSets.get_1'
+      - '@azure/arm-privatedns.RecordSets.list'
+      - '@azure/arm-privatedns.RecordSets.list_2'
+      - '@azure/arm-privatedns.RecordSets.list_1'
+      - '@azure/arm-privatedns.RecordSets.listByType'
+      - '@azure/arm-privatedns.RecordSets.listByType_2'
+      - '@azure/arm-privatedns.RecordSets.listByType_1'
+      - '@azure/arm-privatedns.RecordSets.listByTypeNext'
+      - '@azure/arm-privatedns.RecordSets.listByTypeNext_2'
+      - '@azure/arm-privatedns.RecordSets.listByTypeNext_1'
+      - '@azure/arm-privatedns.RecordSets.listNext'
+      - '@azure/arm-privatedns.RecordSets.listNext_2'
+      - '@azure/arm-privatedns.RecordSets.listNext_1'
+      - '@azure/arm-privatedns.RecordSets.constructor'
+      - '@azure/arm-privatedns.RecordSets.update'
+      - '@azure/arm-privatedns.RecordSets.update_2'
+      - '@azure/arm-privatedns.RecordSets.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 表示记录集的类。
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.createOrUpdate'
+    name: 'createOrUpdate(string, string, Models.RecordType, string, RecordSet, Models.RecordSetsCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 创建或更新的记录集内的专用 DNS 区域。
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options?: Models.RecordSetsCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 记录的类型 SOA 可以更新但未创建的集 （它们创建时创建专用 DNS 区域）。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: 提供给 CreateOrUpdate 操作的参数。
+        - id: options
+          type:
+            - Models.RecordSetsCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, Models.RecordType, string, RecordSet, RecordSetsCreateOrUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options: RecordSetsCreateOrUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 记录的类型 SOA 可以更新但未创建的集 （它们创建时创建专用 DNS 区域）。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: 提供给 CreateOrUpdate 操作的参数。
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsCreateOrUpdateOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, Models.RecordType, string, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 记录的类型 SOA 可以更新但未创建的集 （它们创建时创建专用 DNS 区域）。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: 提供给 CreateOrUpdate 操作的参数。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.deleteMethod'
+    name: 'deleteMethod(string, string, Models.RecordType, string, Models.RecordSetsDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 删除的记录集从专用 DNS 区域。 此操作不可撤消。
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options?: Models.RecordSetsDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 记录集不能删除 SOA 类型 （它们会删除时删除专用 DNS 区域）。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: options
+          type:
+            - Models.RecordSetsDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.deleteMethod_2'
+    name: 'deleteMethod(string, string, Models.RecordType, string, RecordSetsDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options: RecordSetsDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 记录集不能删除 SOA 类型 （它们会删除时删除专用 DNS 区域）。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsDeleteMethodOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.deleteMethod_1'
+    name: 'deleteMethod(string, string, Models.RecordType, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 记录集不能删除 SOA 类型 （它们会删除时删除专用 DNS 区域）。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.get'
+    name: 'get(string, string, Models.RecordType, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 获取记录集。
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.get_2'
+    name: 'get(string, string, Models.RecordType, string, RequestOptionsBase, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.get_1'
+    name: 'get(string, string, Models.RecordType, string, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.list'
+    name: 'list(string, string, Models.RecordSetsListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出专用 DNS 区域中的所有记录集。
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, options?: Models.RecordSetsListOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: options
+          type:
+            - Models.RecordSetsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.list_2'
+    name: 'list(string, string, RecordSetsListOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, options: RecordSetsListOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsListOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.list_1'
+    name: 'list(string, string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByType'
+    name: 'listByType(string, string, Models.RecordType, Models.RecordSetsListByTypeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出专用 DNS 区域中的指定类型的记录集。
+    syntax:
+      content: 'function listByType(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, options?: Models.RecordSetsListByTypeOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 若要枚举的记录集的类型。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: options
+          type:
+            - Models.RecordSetsListByTypeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByType_2'
+    name: 'listByType(string, string, Models.RecordType, RecordSetsListByTypeOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, options: RecordSetsListByTypeOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 若要枚举的记录集的类型。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsListByTypeOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByType_1'
+    name: 'listByType(string, string, Models.RecordType, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 若要枚举的记录集的类型。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByTypeNext'
+    name: 'listByTypeNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出专用 DNS 区域中的指定类型的记录集。
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByTypeNext_2'
+    name: 'listByTypeNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listByTypeNext_1'
+    name: 'listByTypeNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 列出专用 DNS 区域中的所有记录集。
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.listNext_1'
+    name: 'listNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: 从上一个成功调用 List 操作 NextLink。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.constructor'
+    name: RecordSets(PrivateDnsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建记录集。
+    syntax:
+      content: 'new RecordSets(client: PrivateDnsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.update'
+    name: 'update(string, string, Models.RecordType, string, RecordSet, Models.RecordSetsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新的记录集内的专用 DNS 区域。
+    syntax:
+      content: 'function update(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options?: Models.RecordSetsUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: 为更新操作提供的参数。
+        - id: options
+          type:
+            - Models.RecordSetsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.update_2'
+    name: 'update(string, string, Models.RecordType, string, RecordSet, RecordSetsUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, options: RecordSetsUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: 为更新操作提供的参数。
+        - id: options
+          type:
+            - '@azure/arm-privatedns.RecordSetsUpdateOptionalParams'
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.RecordSets.update_1'
+    name: 'update(string, string, Models.RecordType, string, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, privateZoneName: string, recordType: Models.RecordType, relativeRecordSetName: string, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 资源组的名称。
+        - id: privateZoneName
+          type:
+            - string
+          description: （不带终止点） 的专用 DNS 区域的名称。
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: 在此记录集的 DNS 记录的类型。 可能的值包括：A、 AAAA、 CNAME、 MX、 PTR、 SOA、 SRV、 TXT
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 设置记录的名称，相对于区域的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.RecordSet'
+          description: 为更新操作提供的参数。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.RecordSet>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-privatedns'
+references:
+  - uid: '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+    name: PrivateDnsManagementClientContext
+    spec.typeScript:
+      - name: PrivateDnsManagementClientContext
+        fullName: PrivateDnsManagementClientContext
+        uid: '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+  - uid: '@azure/arm-privatedns.RecordSet'
+    name: RecordSet
+    spec.typeScript:
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-privatedns.RecordSet'
+  - uid: ServiceCallback<@azure/arm-privatedns.RecordSet>
+    name: RecordSet>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-privatedns.RecordSet'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-privatedns.RecordSetsCreateOrUpdateOptionalParams'
+    name: RecordSetsCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsCreateOrUpdateOptionalParams
+        fullName: RecordSetsCreateOrUpdateOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsCreateOrUpdateOptionalParams'
+  - uid: '@azure/arm-privatedns.RecordSetsDeleteMethodOptionalParams'
+    name: RecordSetsDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: RecordSetsDeleteMethodOptionalParams
+        fullName: RecordSetsDeleteMethodOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsDeleteMethodOptionalParams'
+  - uid: ServiceCallback<@azure/arm-privatedns.RecordSetListResult>
+    name: RecordSetListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSetListResult
+        fullName: RecordSetListResult
+        uid: '@azure/arm-privatedns.RecordSetListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-privatedns.RecordSetsListOptionalParams'
+    name: RecordSetsListOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListOptionalParams
+        fullName: RecordSetsListOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsListOptionalParams'
+  - uid: '@azure/arm-privatedns.RecordSetsListByTypeOptionalParams'
+    name: RecordSetsListByTypeOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListByTypeOptionalParams
+        fullName: RecordSetsListByTypeOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsListByTypeOptionalParams'
+  - uid: '@azure/arm-privatedns.RecordSetsUpdateOptionalParams'
+    name: RecordSetsUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsUpdateOptionalParams
+        fullName: RecordSetsUpdateOptionalParams
+        uid: '@azure/arm-privatedns.RecordSetsUpdateOptionalParams'

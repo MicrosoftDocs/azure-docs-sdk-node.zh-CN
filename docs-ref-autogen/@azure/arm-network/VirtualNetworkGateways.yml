@@ -9,6 +9,7 @@ items:
       - '@azure/arm-network.VirtualNetworkGateways.beginGetAdvertisedRoutes'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetBgpPeerStatus'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetLearnedRoutes'
+      - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientConnectionHealth'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientIpsecParameters'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnProfilePackageUrl'
       - '@azure/arm-network.VirtualNetworkGateways.beginReset'
@@ -29,6 +30,7 @@ items:
       - '@azure/arm-network.VirtualNetworkGateways.getAdvertisedRoutes'
       - '@azure/arm-network.VirtualNetworkGateways.getBgpPeerStatus'
       - '@azure/arm-network.VirtualNetworkGateways.getLearnedRoutes'
+      - '@azure/arm-network.VirtualNetworkGateways.getVpnclientConnectionHealth'
       - '@azure/arm-network.VirtualNetworkGateways.getVpnclientIpsecParameters'
       - '@azure/arm-network.VirtualNetworkGateways.getVpnProfilePackageUrl'
       - '@azure/arm-network.VirtualNetworkGateways.list'
@@ -57,7 +59,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="83e9e-101">表示 VirtualNetworkGateways 类。</span><span class="sxs-lookup"><span data-stu-id="83e9e-101">Class representing a VirtualNetworkGateways.</span></span>
+    summary: <span data-ttu-id="747a8-101">表示 VirtualNetworkGateways 类。</span><span class="sxs-lookup"><span data-stu-id="747a8-101">Class representing a VirtualNetworkGateways.</span></span>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginCreateOrUpdate'
     name: 'beginCreateOrUpdate(string, string, VirtualNetworkGateway, msRest.RequestOptionsBase)'
@@ -65,22 +67,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-102">创建或更新指定的资源组中的虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="83e9e-102">Creates or updates a virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="747a8-102">创建或更新指定的资源组中的虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="747a8-102">Creates or updates a virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function beginCreateOrUpdate(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: VirtualNetworkGateway, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-103">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-103">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-103">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-103">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-104">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-104">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-104">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-104">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VirtualNetworkGateway'
-          description: <span data-ttu-id="83e9e-105">提供要创建或更新虚拟网络网关操作的参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-105">Parameters supplied to create or update virtual network gateway operation.</span></span>
+          description: <span data-ttu-id="747a8-105">提供要创建或更新虚拟网络网关操作的参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-105">Parameters supplied to create or update virtual network gateway operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -96,18 +98,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-106">删除指定的虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="83e9e-106">Deletes the specified virtual network gateway.</span></span>
+    summary: <span data-ttu-id="747a8-106">删除指定的虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="747a8-106">Deletes the specified virtual network gateway.</span></span>
     syntax:
       content: 'function beginDeleteMethod(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-107">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-107">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-107">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-107">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-108">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-108">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-108">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-108">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -123,22 +125,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-109">此操作检索虚拟网络网关播发到指定的对等路由的列表。</span><span class="sxs-lookup"><span data-stu-id="83e9e-109">This operation retrieves a list of routes the virtual network gateway is advertising to the specified peer.</span></span>
+    summary: <span data-ttu-id="747a8-109">此操作检索虚拟网络网关播发到指定的对等路由的列表。</span><span class="sxs-lookup"><span data-stu-id="747a8-109">This operation retrieves a list of routes the virtual network gateway is advertising to the specified peer.</span></span>
     syntax:
       content: 'function beginGetAdvertisedRoutes(resourceGroupName: string, virtualNetworkGatewayName: string, peer: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-110">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-110">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-110">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-110">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-111">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-111">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-111">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-111">The name of the virtual network gateway.</span></span>
         - id: peer
           type:
             - string
-          description: <span data-ttu-id="83e9e-112">对等节点 IP 地址</span><span class="sxs-lookup"><span data-stu-id="83e9e-112">The IP address of the peer</span></span>
+          description: <span data-ttu-id="747a8-112">对等 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="747a8-112">The IP address of the peer.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -154,18 +156,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-113">GetBgpPeerStatus 操作可检索所有 BGP 对等节点的状态。</span><span class="sxs-lookup"><span data-stu-id="83e9e-113">The GetBgpPeerStatus operation retrieves the status of all BGP peers.</span></span>
+    summary: <span data-ttu-id="747a8-113">GetBgpPeerStatus 操作可检索所有 BGP 对等节点的状态。</span><span class="sxs-lookup"><span data-stu-id="747a8-113">The GetBgpPeerStatus operation retrieves the status of all BGP peers.</span></span>
     syntax:
       content: 'function beginGetBgpPeerStatus(resourceGroupName: string, virtualNetworkGatewayName: string, options?: Models.VirtualNetworkGatewaysBeginGetBgpPeerStatusOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-114">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-114">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-114">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-114">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-115">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-115">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-115">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-115">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - Models.VirtualNetworkGatewaysBeginGetBgpPeerStatusOptionalParams
@@ -181,18 +183,45 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="83e9e-116">此操作检索的虚拟网络网关已了解的路由列表，包括路由从 BGP 对等节点获知。</span><span class="sxs-lookup"><span data-stu-id="83e9e-116">This operation retrieves a list of routes the virtual network gateway has learned, including routes learned from BGP peers.</span></span>'
+    summary: '<span data-ttu-id="747a8-116">此操作检索的虚拟网络网关已了解的路由列表，包括路由从 BGP 对等节点获知。</span><span class="sxs-lookup"><span data-stu-id="747a8-116">This operation retrieves a list of routes the virtual network gateway has learned, including routes learned from BGP peers.</span></span>'
     syntax:
       content: 'function beginGetLearnedRoutes(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-117">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-117">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-117">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-117">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-118">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-118">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-118">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-118">The name of the virtual network gateway.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientConnectionHealth'
+    name: 'beginGetVpnclientConnectionHealth(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="747a8-119">获取 VPN 客户端连接运行状况详细信息的每个指定的资源组中的虚拟网络网关的 P2S 客户端连接。</span><span class="sxs-lookup"><span data-stu-id="747a8-119">Get VPN client connection health detail per P2S client connection of the virtual network gateway in the specified resource group.</span></span>
+    syntax:
+      content: 'function beginGetVpnclientConnectionHealth(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="747a8-120">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-120">The name of the resource group.</span></span>
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: <span data-ttu-id="747a8-121">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-121">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -208,18 +237,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-119">获取 VpnclientIpsecParameters 操作检索有关 P2S 客户端的 vpnclient ipsec 策略的网络资源提供程序通过指定的资源组中的虚拟网络网关的信息。</span><span class="sxs-lookup"><span data-stu-id="83e9e-119">The Get VpnclientIpsecParameters operation retrieves information about the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
+    summary: <span data-ttu-id="747a8-122">获取 VpnclientIpsecParameters 操作检索有关 P2S 客户端的 vpnclient ipsec 策略的网络资源提供程序通过指定的资源组中的虚拟网络网关的信息。</span><span class="sxs-lookup"><span data-stu-id="747a8-122">The Get VpnclientIpsecParameters operation retrieves information about the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
     syntax:
       content: 'function beginGetVpnclientIpsecParameters(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-120">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-120">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-123">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-123">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-121">虚拟网络网关名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-121">The virtual network gateway name.</span></span>
+          description: <span data-ttu-id="747a8-124">虚拟网络网关名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-124">The virtual network gateway name.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -235,18 +264,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-122">获取预生成 P2S 客户端指定的资源组中的虚拟网络网关的 VPN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="83e9e-122">Gets pre-generated VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="83e9e-123">该配置文件需要为其生成第一种使用 generateVpnProfile。</span><span class="sxs-lookup"><span data-stu-id="83e9e-123">The profile needs to be generated first using generateVpnProfile.</span></span>
+    summary: <span data-ttu-id="747a8-125">获取预生成 P2S 客户端指定的资源组中的虚拟网络网关的 VPN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="747a8-125">Gets pre-generated VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="747a8-126">该配置文件需要为其生成第一种使用 generateVpnProfile。</span><span class="sxs-lookup"><span data-stu-id="747a8-126">The profile needs to be generated first using generateVpnProfile.</span></span>
     syntax:
       content: 'function beginGetVpnProfilePackageUrl(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-124">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-124">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-127">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-127">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-125">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-125">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-128">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-128">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -262,18 +291,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-126">重置指定的资源组中的虚拟网络网关的主数据库。</span><span class="sxs-lookup"><span data-stu-id="83e9e-126">Resets the primary of the virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="747a8-129">重置指定的资源组中的虚拟网络网关的主数据库。</span><span class="sxs-lookup"><span data-stu-id="747a8-129">Resets the primary of the virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function beginReset(resourceGroupName: string, virtualNetworkGatewayName: string, options?: Models.VirtualNetworkGatewaysBeginResetOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-127">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-127">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-130">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-130">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-128">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-128">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-131">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-131">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - Models.VirtualNetworkGatewaysBeginResetOptionalParams
@@ -289,18 +318,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-129">重置指定的资源组中的虚拟网络网关的 VPN 客户端共享的密钥。</span><span class="sxs-lookup"><span data-stu-id="83e9e-129">Resets the VPN client shared key of the virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="747a8-132">重置指定的资源组中的虚拟网络网关的 VPN 客户端共享的密钥。</span><span class="sxs-lookup"><span data-stu-id="747a8-132">Resets the VPN client shared key of the virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function beginResetVpnClientSharedKey(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-130">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-130">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-133">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-133">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-131">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-131">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-134">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-134">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -316,22 +345,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-132">设置 VpnclientIpsecParameters 操作设置网络资源提供程序通过指定的资源组中的虚拟网络网关的 P2S 客户端的 vpnclient ipsec 策略。</span><span class="sxs-lookup"><span data-stu-id="83e9e-132">The Set VpnclientIpsecParameters operation sets the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
+    summary: <span data-ttu-id="747a8-135">设置 VpnclientIpsecParameters 操作设置网络资源提供程序通过指定的资源组中的虚拟网络网关的 P2S 客户端的 vpnclient ipsec 策略。</span><span class="sxs-lookup"><span data-stu-id="747a8-135">The Set VpnclientIpsecParameters operation sets the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
     syntax:
       content: 'function beginSetVpnclientIpsecParameters(resourceGroupName: string, virtualNetworkGatewayName: string, vpnclientIpsecParams: VpnClientIPsecParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-133">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-133">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-136">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-136">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-134">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-134">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-137">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-137">The name of the virtual network gateway.</span></span>
         - id: vpnclientIpsecParams
           type:
             - '@azure/arm-network.VpnClientIPsecParameters'
-          description: <span data-ttu-id="83e9e-135">提供给开始设置 vpnclient ipsec 参数通过网络资源提供程序的虚拟网络网关 P2S 客户端操作的参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-135">Parameters supplied to the Begin Set vpnclient ipsec parameters of Virtual Network Gateway P2S client operation through Network resource provider.</span></span>
+          description: <span data-ttu-id="747a8-138">提供给开始设置 vpnclient ipsec 参数通过网络资源提供程序的虚拟网络网关 P2S 客户端操作的参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-138">Parameters supplied to the Begin Set vpnclient ipsec parameters of Virtual Network Gateway P2S client operation through Network resource provider.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -347,22 +376,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-136">更新虚拟网络网关标记。</span><span class="sxs-lookup"><span data-stu-id="83e9e-136">Updates a virtual network gateway tags.</span></span>
+    summary: <span data-ttu-id="747a8-139">更新虚拟网络网关标记。</span><span class="sxs-lookup"><span data-stu-id="747a8-139">Updates a virtual network gateway tags.</span></span>
     syntax:
       content: 'function beginUpdateTags(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: TagsObject, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-137">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-137">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-140">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-140">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-138">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-138">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-141">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-141">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.TagsObject'
-          description: <span data-ttu-id="83e9e-139">提供要更新虚拟网络网关标记的参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-139">Parameters supplied to update virtual network gateway tags.</span></span>
+          description: <span data-ttu-id="747a8-142">提供要更新虚拟网络网关标记的参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-142">Parameters supplied to update virtual network gateway tags.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -378,22 +407,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-140">创建或更新指定的资源组中的虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="83e9e-140">Creates or updates a virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="747a8-143">创建或更新指定的资源组中的虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="747a8-143">Creates or updates a virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function createOrUpdate(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: VirtualNetworkGateway, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-141">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-141">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-144">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-144">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-142">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-142">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-145">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-145">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VirtualNetworkGateway'
-          description: <span data-ttu-id="83e9e-143">提供要创建或更新虚拟网络网关操作的参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-143">Parameters supplied to create or update virtual network gateway operation.</span></span>
+          description: <span data-ttu-id="747a8-146">提供要创建或更新虚拟网络网关操作的参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-146">Parameters supplied to create or update virtual network gateway operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -409,18 +438,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-144">删除指定的虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="83e9e-144">Deletes the specified virtual network gateway.</span></span>
+    summary: <span data-ttu-id="747a8-147">删除指定的虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="747a8-147">Deletes the specified virtual network gateway.</span></span>
     syntax:
       content: 'function deleteMethod(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-145">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-145">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-148">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-148">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-146">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-146">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-149">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-149">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -436,22 +465,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-147">指定的资源组中生成 P2S 客户端的虚拟网络网关的 VPN 客户端包。</span><span class="sxs-lookup"><span data-stu-id="83e9e-147">Generates VPN client package for P2S client of the virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="747a8-150">指定的资源组中生成 P2S 客户端的虚拟网络网关的 VPN 客户端包。</span><span class="sxs-lookup"><span data-stu-id="747a8-150">Generates VPN client package for P2S client of the virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function generatevpnclientpackage(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: VpnClientParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-148">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-148">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-151">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-151">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-149">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-149">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-152">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-152">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="83e9e-150">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-150">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="747a8-153">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-153">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -474,24 +503,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-151">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-151">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-154">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-154">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-152">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-152">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-155">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-155">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="83e9e-153">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-153">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="747a8-156">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-156">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="83e9e-154">可选参数</span><span class="sxs-lookup"><span data-stu-id="83e9e-154">The optional parameters</span></span>
+          description: <span data-ttu-id="747a8-157">可选参数</span><span class="sxs-lookup"><span data-stu-id="747a8-157">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="83e9e-155">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-155">The callback</span></span>
+            <span data-ttu-id="747a8-158">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-158">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGeneratevpnclientpackageResponse>
@@ -509,20 +538,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-156">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-156">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-159">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-159">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-157">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-157">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-160">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-160">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="83e9e-158">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-158">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="747a8-161">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-161">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="83e9e-159">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-159">The callback</span></span>
+            <span data-ttu-id="747a8-162">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-162">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGeneratevpnclientpackageResponse>
@@ -533,22 +562,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-160">指定的资源组中生成 P2S 客户端的虚拟网络网关的 VPN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="83e9e-160">Generates VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="83e9e-161">用于基于 IKEV2 和 radius 身份验证。</span><span class="sxs-lookup"><span data-stu-id="83e9e-161">Used for IKEV2 and radius based authentication.</span></span>
+    summary: <span data-ttu-id="747a8-163">指定的资源组中生成 P2S 客户端的虚拟网络网关的 VPN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="747a8-163">Generates VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="747a8-164">用于基于 IKEV2 和 radius 身份验证。</span><span class="sxs-lookup"><span data-stu-id="747a8-164">Used for IKEV2 and radius based authentication.</span></span>
     syntax:
       content: 'function generateVpnProfile(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: VpnClientParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-162">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-162">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-165">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-165">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-163">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-163">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-166">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-166">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="83e9e-164">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-164">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="747a8-167">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-167">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -571,24 +600,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-165">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-165">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-168">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-168">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-166">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-166">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-169">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-169">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="83e9e-167">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-167">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="747a8-170">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-170">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="83e9e-168">可选参数</span><span class="sxs-lookup"><span data-stu-id="83e9e-168">The optional parameters</span></span>
+          description: <span data-ttu-id="747a8-171">可选参数</span><span class="sxs-lookup"><span data-stu-id="747a8-171">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="83e9e-169">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-169">The callback</span></span>
+            <span data-ttu-id="747a8-172">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-172">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGenerateVpnProfileResponse>
@@ -606,20 +635,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-170">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-170">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-173">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-173">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-171">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-171">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-174">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-174">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="83e9e-172">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-172">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="747a8-175">提供给生成虚拟网络网关 VPN 客户端包操作参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-175">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="83e9e-173">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-173">The callback</span></span>
+            <span data-ttu-id="747a8-176">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-176">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGenerateVpnProfileResponse>
@@ -630,18 +659,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-174">获取指定的虚拟网络网关的资源组。</span><span class="sxs-lookup"><span data-stu-id="83e9e-174">Gets the specified virtual network gateway by resource group.</span></span>
+    summary: <span data-ttu-id="747a8-177">获取指定的虚拟网络网关的资源组。</span><span class="sxs-lookup"><span data-stu-id="747a8-177">Gets the specified virtual network gateway by resource group.</span></span>
     syntax:
       content: 'function get(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-175">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-175">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-178">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-178">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-176">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-176">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-179">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-179">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -664,20 +693,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-177">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-177">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-180">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-180">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-178">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-178">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-181">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-181">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="83e9e-179">可选参数</span><span class="sxs-lookup"><span data-stu-id="83e9e-179">The optional parameters</span></span>
+          description: <span data-ttu-id="747a8-182">可选参数</span><span class="sxs-lookup"><span data-stu-id="747a8-182">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGateway>
           description: |
-            <span data-ttu-id="83e9e-180">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-180">The callback</span></span>
+            <span data-ttu-id="747a8-183">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-183">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetResponse>
@@ -695,16 +724,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-181">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-181">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-184">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-184">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-182">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-182">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-185">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-185">The name of the virtual network gateway.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGateway>
           description: |
-            <span data-ttu-id="83e9e-183">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-183">The callback</span></span>
+            <span data-ttu-id="747a8-186">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-186">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetResponse>
@@ -715,22 +744,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-184">此操作检索虚拟网络网关播发到指定的对等路由的列表。</span><span class="sxs-lookup"><span data-stu-id="83e9e-184">This operation retrieves a list of routes the virtual network gateway is advertising to the specified peer.</span></span>
+    summary: <span data-ttu-id="747a8-187">此操作检索虚拟网络网关播发到指定的对等路由的列表。</span><span class="sxs-lookup"><span data-stu-id="747a8-187">This operation retrieves a list of routes the virtual network gateway is advertising to the specified peer.</span></span>
     syntax:
       content: 'function getAdvertisedRoutes(resourceGroupName: string, virtualNetworkGatewayName: string, peer: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-185">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-185">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-188">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-188">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-186">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-186">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-189">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-189">The name of the virtual network gateway.</span></span>
         - id: peer
           type:
             - string
-          description: <span data-ttu-id="83e9e-187">对等节点 IP 地址</span><span class="sxs-lookup"><span data-stu-id="83e9e-187">The IP address of the peer</span></span>
+          description: <span data-ttu-id="747a8-190">对等 IP 地址。</span><span class="sxs-lookup"><span data-stu-id="747a8-190">The IP address of the peer.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -746,18 +775,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-188">GetBgpPeerStatus 操作可检索所有 BGP 对等节点的状态。</span><span class="sxs-lookup"><span data-stu-id="83e9e-188">The GetBgpPeerStatus operation retrieves the status of all BGP peers.</span></span>
+    summary: <span data-ttu-id="747a8-191">GetBgpPeerStatus 操作可检索所有 BGP 对等节点的状态。</span><span class="sxs-lookup"><span data-stu-id="747a8-191">The GetBgpPeerStatus operation retrieves the status of all BGP peers.</span></span>
     syntax:
       content: 'function getBgpPeerStatus(resourceGroupName: string, virtualNetworkGatewayName: string, options?: Models.VirtualNetworkGatewaysGetBgpPeerStatusOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-189">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-189">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-192">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-192">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-190">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-190">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-193">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-193">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - Models.VirtualNetworkGatewaysGetBgpPeerStatusOptionalParams
@@ -773,18 +802,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="83e9e-191">此操作检索的虚拟网络网关已了解的路由列表，包括路由从 BGP 对等节点获知。</span><span class="sxs-lookup"><span data-stu-id="83e9e-191">This operation retrieves a list of routes the virtual network gateway has learned, including routes learned from BGP peers.</span></span>'
+    summary: '<span data-ttu-id="747a8-194">此操作检索的虚拟网络网关已了解的路由列表，包括路由从 BGP 对等节点获知。</span><span class="sxs-lookup"><span data-stu-id="747a8-194">This operation retrieves a list of routes the virtual network gateway has learned, including routes learned from BGP peers.</span></span>'
     syntax:
       content: 'function getLearnedRoutes(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-192">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-192">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-195">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-195">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-193">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-193">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-196">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-196">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -794,24 +823,51 @@ items:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetLearnedRoutesResponse>
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.getVpnclientConnectionHealth'
+    name: 'getVpnclientConnectionHealth(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="747a8-197">获取 VPN 客户端连接运行状况详细信息的每个指定的资源组中的虚拟网络网关的 P2S 客户端连接。</span><span class="sxs-lookup"><span data-stu-id="747a8-197">Get VPN client connection health detail per P2S client connection of the virtual network gateway in the specified resource group.</span></span>
+    syntax:
+      content: 'function getVpnclientConnectionHealth(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="747a8-198">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-198">The name of the resource group.</span></span>
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: <span data-ttu-id="747a8-199">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-199">The name of the virtual network gateway.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworkGatewaysGetVpnclientConnectionHealthResponse>
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.getVpnclientIpsecParameters'
     name: 'getVpnclientIpsecParameters(string, string, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-194">获取 VpnclientIpsecParameters 操作检索有关 P2S 客户端的 vpnclient ipsec 策略的网络资源提供程序通过指定的资源组中的虚拟网络网关的信息。</span><span class="sxs-lookup"><span data-stu-id="83e9e-194">The Get VpnclientIpsecParameters operation retrieves information about the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
+    summary: <span data-ttu-id="747a8-200">获取 VpnclientIpsecParameters 操作检索有关 P2S 客户端的 vpnclient ipsec 策略的网络资源提供程序通过指定的资源组中的虚拟网络网关的信息。</span><span class="sxs-lookup"><span data-stu-id="747a8-200">The Get VpnclientIpsecParameters operation retrieves information about the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
     syntax:
       content: 'function getVpnclientIpsecParameters(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-195">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-195">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-201">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-201">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-196">虚拟网络网关名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-196">The virtual network gateway name.</span></span>
+          description: <span data-ttu-id="747a8-202">虚拟网络网关名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-202">The virtual network gateway name.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -827,18 +883,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-197">获取预生成 P2S 客户端指定的资源组中的虚拟网络网关的 VPN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="83e9e-197">Gets pre-generated VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="83e9e-198">该配置文件需要为其生成第一种使用 generateVpnProfile。</span><span class="sxs-lookup"><span data-stu-id="83e9e-198">The profile needs to be generated first using generateVpnProfile.</span></span>
+    summary: <span data-ttu-id="747a8-203">获取预生成 P2S 客户端指定的资源组中的虚拟网络网关的 VPN 配置文件。</span><span class="sxs-lookup"><span data-stu-id="747a8-203">Gets pre-generated VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="747a8-204">该配置文件需要为其生成第一种使用 generateVpnProfile。</span><span class="sxs-lookup"><span data-stu-id="747a8-204">The profile needs to be generated first using generateVpnProfile.</span></span>
     syntax:
       content: 'function getVpnProfilePackageUrl(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-199">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-199">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-205">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-205">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-200">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-200">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-206">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-206">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -854,14 +910,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-201">获取按资源组的所有虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="83e9e-201">Gets all virtual network gateways by resource group.</span></span>
+    summary: <span data-ttu-id="747a8-207">获取按资源组的所有虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="747a8-207">Gets all virtual network gateways by resource group.</span></span>
     syntax:
       content: 'function list(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-202">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-202">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-208">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-208">The name of the resource group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -884,16 +940,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-203">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-203">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-209">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-209">The name of the resource group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="83e9e-204">可选参数</span><span class="sxs-lookup"><span data-stu-id="83e9e-204">The optional parameters</span></span>
+          description: <span data-ttu-id="747a8-210">可选参数</span><span class="sxs-lookup"><span data-stu-id="747a8-210">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
-            <span data-ttu-id="83e9e-205">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-205">The callback</span></span>
+            <span data-ttu-id="747a8-211">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-211">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListResponse>
@@ -911,12 +967,12 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-206">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-206">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-212">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-212">The name of the resource group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
-            <span data-ttu-id="83e9e-207">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-207">The callback</span></span>
+            <span data-ttu-id="747a8-213">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-213">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListResponse>
@@ -927,18 +983,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-208">获取在虚拟网络网关的所有连接。</span><span class="sxs-lookup"><span data-stu-id="83e9e-208">Gets all the connections in a virtual network gateway.</span></span>
+    summary: <span data-ttu-id="747a8-214">获取在虚拟网络网关的所有连接。</span><span class="sxs-lookup"><span data-stu-id="747a8-214">Gets all the connections in a virtual network gateway.</span></span>
     syntax:
       content: 'function listConnections(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-209">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-209">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-215">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-215">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-210">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-210">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-216">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-216">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -961,20 +1017,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-211">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-211">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-217">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-217">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-212">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-212">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-218">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-218">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="83e9e-213">可选参数</span><span class="sxs-lookup"><span data-stu-id="83e9e-213">The optional parameters</span></span>
+          description: <span data-ttu-id="747a8-219">可选参数</span><span class="sxs-lookup"><span data-stu-id="747a8-219">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
-            <span data-ttu-id="83e9e-214">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-214">The callback</span></span>
+            <span data-ttu-id="747a8-220">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-220">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListConnectionsResponse>
@@ -992,16 +1048,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-215">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-215">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-221">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-221">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-216">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-216">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-222">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-222">The name of the virtual network gateway.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
-            <span data-ttu-id="83e9e-217">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-217">The callback</span></span>
+            <span data-ttu-id="747a8-223">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-223">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListConnectionsResponse>
@@ -1012,14 +1068,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-218">获取在虚拟网络网关的所有连接。</span><span class="sxs-lookup"><span data-stu-id="83e9e-218">Gets all the connections in a virtual network gateway.</span></span>
+    summary: <span data-ttu-id="747a8-224">获取在虚拟网络网关的所有连接。</span><span class="sxs-lookup"><span data-stu-id="747a8-224">Gets all the connections in a virtual network gateway.</span></span>
     syntax:
       content: 'function listConnectionsNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="83e9e-219">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="83e9e-219">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="747a8-225">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="747a8-225">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1042,16 +1098,16 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="83e9e-220">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="83e9e-220">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="747a8-226">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="747a8-226">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="83e9e-221">可选参数</span><span class="sxs-lookup"><span data-stu-id="83e9e-221">The optional parameters</span></span>
+          description: <span data-ttu-id="747a8-227">可选参数</span><span class="sxs-lookup"><span data-stu-id="747a8-227">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
-            <span data-ttu-id="83e9e-222">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-222">The callback</span></span>
+            <span data-ttu-id="747a8-228">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-228">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListConnectionsNextResponse>
@@ -1069,12 +1125,12 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="83e9e-223">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="83e9e-223">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="747a8-229">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="747a8-229">The NextLink from the previous successful call to List operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
-            <span data-ttu-id="83e9e-224">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-224">The callback</span></span>
+            <span data-ttu-id="747a8-230">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-230">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListConnectionsNextResponse>
@@ -1085,14 +1141,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-225">获取按资源组的所有虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="83e9e-225">Gets all virtual network gateways by resource group.</span></span>
+    summary: <span data-ttu-id="747a8-231">获取按资源组的所有虚拟网络网关。</span><span class="sxs-lookup"><span data-stu-id="747a8-231">Gets all virtual network gateways by resource group.</span></span>
     syntax:
       content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="83e9e-226">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="83e9e-226">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="747a8-232">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="747a8-232">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1115,16 +1171,16 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="83e9e-227">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="83e9e-227">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="747a8-233">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="747a8-233">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="83e9e-228">可选参数</span><span class="sxs-lookup"><span data-stu-id="83e9e-228">The optional parameters</span></span>
+          description: <span data-ttu-id="747a8-234">可选参数</span><span class="sxs-lookup"><span data-stu-id="747a8-234">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
-            <span data-ttu-id="83e9e-229">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-229">The callback</span></span>
+            <span data-ttu-id="747a8-235">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-235">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListNextResponse>
@@ -1142,12 +1198,12 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="83e9e-230">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="83e9e-230">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="747a8-236">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="747a8-236">The NextLink from the previous successful call to List operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
-            <span data-ttu-id="83e9e-231">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-231">The callback</span></span>
+            <span data-ttu-id="747a8-237">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-237">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListNextResponse>
@@ -1158,18 +1214,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-232">重置指定的资源组中的虚拟网络网关的主数据库。</span><span class="sxs-lookup"><span data-stu-id="83e9e-232">Resets the primary of the virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="747a8-238">重置指定的资源组中的虚拟网络网关的主数据库。</span><span class="sxs-lookup"><span data-stu-id="747a8-238">Resets the primary of the virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function reset(resourceGroupName: string, virtualNetworkGatewayName: string, options?: Models.VirtualNetworkGatewaysResetOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-233">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-233">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-239">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-239">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-234">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-234">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-240">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-240">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - Models.VirtualNetworkGatewaysResetOptionalParams
@@ -1185,18 +1241,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-235">重置指定的资源组中的虚拟网络网关的 VPN 客户端共享的密钥。</span><span class="sxs-lookup"><span data-stu-id="83e9e-235">Resets the VPN client shared key of the virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="747a8-241">重置指定的资源组中的虚拟网络网关的 VPN 客户端共享的密钥。</span><span class="sxs-lookup"><span data-stu-id="747a8-241">Resets the VPN client shared key of the virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function resetVpnClientSharedKey(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-236">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-236">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-242">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-242">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-237">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-237">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-243">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-243">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1212,22 +1268,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-238">设置 VpnclientIpsecParameters 操作设置网络资源提供程序通过指定的资源组中的虚拟网络网关的 P2S 客户端的 vpnclient ipsec 策略。</span><span class="sxs-lookup"><span data-stu-id="83e9e-238">The Set VpnclientIpsecParameters operation sets the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
+    summary: <span data-ttu-id="747a8-244">设置 VpnclientIpsecParameters 操作设置网络资源提供程序通过指定的资源组中的虚拟网络网关的 P2S 客户端的 vpnclient ipsec 策略。</span><span class="sxs-lookup"><span data-stu-id="747a8-244">The Set VpnclientIpsecParameters operation sets the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
     syntax:
       content: 'function setVpnclientIpsecParameters(resourceGroupName: string, virtualNetworkGatewayName: string, vpnclientIpsecParams: VpnClientIPsecParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-239">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-239">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-245">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-245">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-240">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-240">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-246">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-246">The name of the virtual network gateway.</span></span>
         - id: vpnclientIpsecParams
           type:
             - '@azure/arm-network.VpnClientIPsecParameters'
-          description: <span data-ttu-id="83e9e-241">提供给开始设置 vpnclient ipsec 参数通过网络资源提供程序的虚拟网络网关 P2S 客户端操作的参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-241">Parameters supplied to the Begin Set vpnclient ipsec parameters of Virtual Network Gateway P2S client operation through Network resource provider.</span></span>
+          description: <span data-ttu-id="747a8-247">提供给开始设置 vpnclient ipsec 参数通过网络资源提供程序的虚拟网络网关 P2S 客户端操作的参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-247">Parameters supplied to the Begin Set vpnclient ipsec parameters of Virtual Network Gateway P2S client operation through Network resource provider.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1243,18 +1299,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-242">获取受支持的 vpn 设备的 xml 格式表示形式。</span><span class="sxs-lookup"><span data-stu-id="83e9e-242">Gets a xml format representation for supported vpn devices.</span></span>
+    summary: <span data-ttu-id="747a8-248">获取受支持的 vpn 设备的 xml 格式表示形式。</span><span class="sxs-lookup"><span data-stu-id="747a8-248">Gets a xml format representation for supported vpn devices.</span></span>
     syntax:
       content: 'function supportedVpnDevices(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-243">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-243">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-249">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-249">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-244">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-244">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-250">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-250">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1277,20 +1333,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-245">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-245">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-251">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-251">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-246">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-246">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-252">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-252">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="83e9e-247">可选参数</span><span class="sxs-lookup"><span data-stu-id="83e9e-247">The optional parameters</span></span>
+          description: <span data-ttu-id="747a8-253">可选参数</span><span class="sxs-lookup"><span data-stu-id="747a8-253">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="83e9e-248">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-248">The callback</span></span>
+            <span data-ttu-id="747a8-254">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-254">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysSupportedVpnDevicesResponse>
@@ -1308,16 +1364,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-249">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-249">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-255">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-255">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-250">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-250">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-256">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-256">The name of the virtual network gateway.</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="83e9e-251">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-251">The callback</span></span>
+            <span data-ttu-id="747a8-257">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-257">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysSupportedVpnDevicesResponse>
@@ -1328,22 +1384,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-252">更新虚拟网络网关标记。</span><span class="sxs-lookup"><span data-stu-id="83e9e-252">Updates a virtual network gateway tags.</span></span>
+    summary: <span data-ttu-id="747a8-258">更新虚拟网络网关标记。</span><span class="sxs-lookup"><span data-stu-id="747a8-258">Updates a virtual network gateway tags.</span></span>
     syntax:
       content: 'function updateTags(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: TagsObject, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-253">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-253">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-259">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-259">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="83e9e-254">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-254">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="747a8-260">虚拟网络网关的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-260">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.TagsObject'
-          description: <span data-ttu-id="83e9e-255">提供要更新虚拟网络网关标记的参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-255">Parameters supplied to update virtual network gateway tags.</span></span>
+          description: <span data-ttu-id="747a8-261">提供要更新虚拟网络网关标记的参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-261">Parameters supplied to update virtual network gateway tags.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1359,7 +1415,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-256">创建 VirtualNetworkGateways。</span><span class="sxs-lookup"><span data-stu-id="83e9e-256">Create a VirtualNetworkGateways.</span></span>
+    summary: <span data-ttu-id="747a8-262">创建 VirtualNetworkGateways。</span><span class="sxs-lookup"><span data-stu-id="747a8-262">Create a VirtualNetworkGateways.</span></span>
     syntax:
       content: 'new VirtualNetworkGateways(client: NetworkManagementClientContext)'
       parameters:
@@ -1367,7 +1423,7 @@ items:
           type:
             - '@azure/arm-network.NetworkManagementClientContext'
           description: |
-            <span data-ttu-id="83e9e-257">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="83e9e-257">Reference to the service client.</span></span>
+            <span data-ttu-id="747a8-263">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="747a8-263">Reference to the service client.</span></span>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.vpnDeviceConfigurationScript'
     name: 'vpnDeviceConfigurationScript(string, string, VpnDeviceScriptParameters, msRest.RequestOptionsBase)'
@@ -1375,22 +1431,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="83e9e-258">获取 vpn 设备配置脚本的 xml 格式表示形式。</span><span class="sxs-lookup"><span data-stu-id="83e9e-258">Gets a xml format representation for vpn device configuration script.</span></span>
+    summary: <span data-ttu-id="747a8-264">获取 vpn 设备配置脚本的 xml 格式表示形式。</span><span class="sxs-lookup"><span data-stu-id="747a8-264">Gets a xml format representation for vpn device configuration script.</span></span>
     syntax:
       content: 'function vpnDeviceConfigurationScript(resourceGroupName: string, virtualNetworkGatewayConnectionName: string, parameters: VpnDeviceScriptParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-259">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-259">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-265">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-265">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayConnectionName
           type:
             - string
-          description: <span data-ttu-id="83e9e-260">为其生成配置脚本的虚拟网络网关连接的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-260">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
+          description: <span data-ttu-id="747a8-266">为其生成配置脚本的虚拟网络网关连接的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-266">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnDeviceScriptParameters'
-          description: <span data-ttu-id="83e9e-261">提供给生成 vpn 设备脚本操作的参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-261">Parameters supplied to the generate vpn device script operation.</span></span>
+          description: <span data-ttu-id="747a8-267">提供给生成 vpn 设备脚本操作的参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-267">Parameters supplied to the generate vpn device script operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1413,24 +1469,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-262">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-262">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-268">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-268">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayConnectionName
           type:
             - string
-          description: <span data-ttu-id="83e9e-263">为其生成配置脚本的虚拟网络网关连接的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-263">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
+          description: <span data-ttu-id="747a8-269">为其生成配置脚本的虚拟网络网关连接的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-269">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnDeviceScriptParameters'
-          description: <span data-ttu-id="83e9e-264">提供给生成 vpn 设备脚本操作的参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-264">Parameters supplied to the generate vpn device script operation.</span></span>
+          description: <span data-ttu-id="747a8-270">提供给生成 vpn 设备脚本操作的参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-270">Parameters supplied to the generate vpn device script operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="83e9e-265">可选参数</span><span class="sxs-lookup"><span data-stu-id="83e9e-265">The optional parameters</span></span>
+          description: <span data-ttu-id="747a8-271">可选参数</span><span class="sxs-lookup"><span data-stu-id="747a8-271">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="83e9e-266">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-266">The callback</span></span>
+            <span data-ttu-id="747a8-272">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-272">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysVpnDeviceConfigurationScriptResponse>
@@ -1448,20 +1504,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="83e9e-267">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-267">The name of the resource group.</span></span>
+          description: <span data-ttu-id="747a8-273">资源组的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-273">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayConnectionName
           type:
             - string
-          description: <span data-ttu-id="83e9e-268">为其生成配置脚本的虚拟网络网关连接的名称。</span><span class="sxs-lookup"><span data-stu-id="83e9e-268">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
+          description: <span data-ttu-id="747a8-274">为其生成配置脚本的虚拟网络网关连接的名称。</span><span class="sxs-lookup"><span data-stu-id="747a8-274">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnDeviceScriptParameters'
-          description: <span data-ttu-id="83e9e-269">提供给生成 vpn 设备脚本操作的参数。</span><span class="sxs-lookup"><span data-stu-id="83e9e-269">Parameters supplied to the generate vpn device script operation.</span></span>
+          description: <span data-ttu-id="747a8-275">提供给生成 vpn 设备脚本操作的参数。</span><span class="sxs-lookup"><span data-stu-id="747a8-275">Parameters supplied to the generate vpn device script operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="83e9e-270">回调</span><span class="sxs-lookup"><span data-stu-id="83e9e-270">The callback</span></span>
+            <span data-ttu-id="747a8-276">回调</span><span class="sxs-lookup"><span data-stu-id="747a8-276">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysVpnDeviceConfigurationScriptResponse>

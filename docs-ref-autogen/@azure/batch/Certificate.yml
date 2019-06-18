@@ -1,0 +1,168 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Certificate'
+    name: Certificate
+    fullName: Certificate
+    children:
+      - '@azure/batch.Certificate.deleteCertificateError'
+      - '@azure/batch.Certificate.previousState'
+      - '@azure/batch.Certificate.previousStateTransitionTime'
+      - '@azure/batch.Certificate.publicData'
+      - '@azure/batch.Certificate.state'
+      - '@azure/batch.Certificate.stateTransitionTime'
+      - '@azure/batch.Certificate.thumbprint'
+      - '@azure/batch.Certificate.thumbprintAlgorithm'
+      - '@azure/batch.Certificate.url'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="68fe0-101">证书可以安装在计算节点，并可用于进行身份验证计算机上的操作。</span><span class="sxs-lookup"><span data-stu-id="68fe0-101">A certificate that can be installed on compute nodes and can be used to authenticate operations on the machine.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Certificate.deleteCertificateError'
+    name: deleteCertificateError
+    fullName: deleteCertificateError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="68fe0-102">上次尝试以删除此证书发生的错误。</span><span class="sxs-lookup"><span data-stu-id="68fe0-102">The error that occurred on the last attempt to delete this certificate.</span></span> <span data-ttu-id="68fe0-103">仅当证书位于 DeleteFailed 状态时，才设置此属性。</span><span class="sxs-lookup"><span data-stu-id="68fe0-103">This property is set only if the certificate is in the DeleteFailed state.</span></span>
+    optional: true
+    syntax:
+      content: 'deleteCertificateError?: DeleteCertificateError'
+      return:
+        type:
+          - '@azure/batch.DeleteCertificateError'
+    package: '@azure/batch'
+  - uid: '@azure/batch.Certificate.previousState'
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="68fe0-104">证书的以前的状态。</span><span class="sxs-lookup"><span data-stu-id="68fe0-104">The previous state of the certificate.</span></span> <span data-ttu-id="68fe0-105">如果证书位于其初始活动状态，则不设置此属性。</span><span class="sxs-lookup"><span data-stu-id="68fe0-105">This property is not set if the certificate is in its initial active state.</span></span> <span data-ttu-id="68fe0-106">可能的值包括: ''active''、 ''删除''，''deleteFailed</span><span class="sxs-lookup"><span data-stu-id="68fe0-106">Possible values include: ''active'', ''deleting'', ''deleteFailed''</span></span>'
+    optional: true
+    syntax:
+      content: 'previousState?: CertificateState'
+      return:
+        type:
+          - '@azure/batch.CertificateState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.Certificate.previousStateTransitionTime'
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="68fe0-107">证书进入其以前的状态的时间。</span><span class="sxs-lookup"><span data-stu-id="68fe0-107">The time at which the certificate entered its previous state.</span></span> <span data-ttu-id="68fe0-108">如果证书位于其初始活动状态，则不设置此属性。</span><span class="sxs-lookup"><span data-stu-id="68fe0-108">This property is not set if the certificate is in its initial Active state.</span></span>
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Certificate.publicData'
+    name: publicData
+    fullName: publicData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="68fe0-109">Base-64 编码的.cer 文件作为证书的公共部分。</span><span class="sxs-lookup"><span data-stu-id="68fe0-109">The public part of the certificate as a base-64 encoded .cer file.</span></span>
+    optional: true
+    syntax:
+      content: 'publicData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.Certificate.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="68fe0-110">证书的当前状态。</span><span class="sxs-lookup"><span data-stu-id="68fe0-110">The current state of the certificate.</span></span> <span data-ttu-id="68fe0-111">可能的值包括: ''active''、 ''删除''，''deleteFailed</span><span class="sxs-lookup"><span data-stu-id="68fe0-111">Possible values include: ''active'', ''deleting'', ''deleteFailed''</span></span>'
+    optional: true
+    syntax:
+      content: 'state?: CertificateState'
+      return:
+        type:
+          - '@azure/batch.CertificateState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.Certificate.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="68fe0-112">证书进入其当前状态的时间。</span><span class="sxs-lookup"><span data-stu-id="68fe0-112">The time at which the certificate entered its current state.</span></span>
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Certificate.thumbprint'
+    name: thumbprint
+    fullName: thumbprint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="68fe0-113">X.509 证书的指纹。</span><span class="sxs-lookup"><span data-stu-id="68fe0-113">The X.509 thumbprint of the certificate.</span></span> <span data-ttu-id="68fe0-114">这是最多 40 个十六进制数字的序列。</span><span class="sxs-lookup"><span data-stu-id="68fe0-114">This is a sequence of up to 40 hex digits.</span></span>
+    optional: true
+    syntax:
+      content: 'thumbprint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.Certificate.thumbprintAlgorithm'
+    name: thumbprintAlgorithm
+    fullName: thumbprintAlgorithm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="68fe0-115">用于派生指纹的算法。</span><span class="sxs-lookup"><span data-stu-id="68fe0-115">The algorithm used to derive the thumbprint.</span></span>
+    optional: true
+    syntax:
+      content: 'thumbprintAlgorithm?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.Certificate.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="68fe0-116">证书的 URL。</span><span class="sxs-lookup"><span data-stu-id="68fe0-116">The URL of the certificate.</span></span>
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DeleteCertificateError'
+    name: DeleteCertificateError
+    spec.typeScript:
+      - name: DeleteCertificateError
+        fullName: DeleteCertificateError
+        uid: '@azure/batch.DeleteCertificateError'
+  - uid: '@azure/batch.CertificateState'
+    name: CertificateState
+    spec.typeScript:
+      - name: CertificateState
+        fullName: CertificateState
+        uid: '@azure/batch.CertificateState'

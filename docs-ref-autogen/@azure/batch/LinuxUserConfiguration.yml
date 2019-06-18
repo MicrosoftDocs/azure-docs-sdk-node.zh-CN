@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.LinuxUserConfiguration'
+    name: LinuxUserConfiguration
+    fullName: LinuxUserConfiguration
+    children:
+      - '@azure/batch.LinuxUserConfiguration.gid'
+      - '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+      - '@azure/batch.LinuxUserConfiguration.uid'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="e54e5-101">表示 LinuxUserConfiguration 的接口。</span><span class="sxs-lookup"><span data-stu-id="e54e5-101">An interface representing LinuxUserConfiguration.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.gid'
+    name: gid
+    fullName: gid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e54e5-102">用户帐户的组 ID。</span><span class="sxs-lookup"><span data-stu-id="e54e5-102">The group ID for the user account.</span></span> <span data-ttu-id="e54e5-103">在一起或根本不是，必须指定 uid 和 gid 属性。</span><span class="sxs-lookup"><span data-stu-id="e54e5-103">The uid and gid properties must be specified together or not at all.</span></span> <span data-ttu-id="e54e5-104">如果未指定的基础操作系统系统会选取 gid。</span><span class="sxs-lookup"><span data-stu-id="e54e5-104">If not specified the underlying operating system picks the gid.</span></span>
+    optional: true
+    syntax:
+      content: 'gid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+    name: sshPrivateKey
+    fullName: sshPrivateKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e54e5-105">SSH 私钥的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="e54e5-105">The SSH private key for the user account.</span></span> <span data-ttu-id="e54e5-106">私钥不能受密码保护。</span><span class="sxs-lookup"><span data-stu-id="e54e5-106">The private key must not be password protected.</span></span> <span data-ttu-id="e54e5-107">私钥用于自动配置非对称密钥基于的身份验证的 SSH Linux 池时该池的 enableInterNodeCommunication 属性为 true （它忽略如果 enableInterNodeCommunication 为 false） 中的节点之间。</span><span class="sxs-lookup"><span data-stu-id="e54e5-107">The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool''s enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false).</span></span> <span data-ttu-id="e54e5-108">通过在用户的.ssh 目录中放置的密钥对来执行此操作。</span><span class="sxs-lookup"><span data-stu-id="e54e5-108">It does this by placing the key pair into the user''s .ssh directory.</span></span> <span data-ttu-id="e54e5-109">如果未指定，则无密码 SSH 未配置 （完成无需修改的用户的.ssh 目录） 的节点之间。</span><span class="sxs-lookup"><span data-stu-id="e54e5-109">If not specified, password-less SSH is not configured between nodes (no modification of the user''s .ssh directory is done).</span></span>'
+    optional: true
+    syntax:
+      content: 'sshPrivateKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.uid'
+    name: uid
+    fullName: uid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e54e5-110">用户帐户的用户 ID。</span><span class="sxs-lookup"><span data-stu-id="e54e5-110">The user ID of the user account.</span></span> <span data-ttu-id="e54e5-111">在一起或根本不是，必须指定 uid 和 gid 属性。</span><span class="sxs-lookup"><span data-stu-id="e54e5-111">The uid and gid properties must be specified together or not at all.</span></span> <span data-ttu-id="e54e5-112">如果未指定的基础操作系统系统会选取 uid。</span><span class="sxs-lookup"><span data-stu-id="e54e5-112">If not specified the underlying operating system picks the uid.</span></span>
+    optional: true
+    syntax:
+      content: 'uid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'

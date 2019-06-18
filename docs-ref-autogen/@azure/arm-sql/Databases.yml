@@ -1,0 +1,1483 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.Databases'
+    name: Databases
+    fullName: Databases
+    children:
+      - '@azure/arm-sql.Databases.beginCreateImportOperation'
+      - '@azure/arm-sql.Databases.beginCreateOrUpdate'
+      - '@azure/arm-sql.Databases.beginDeleteMethod'
+      - '@azure/arm-sql.Databases.beginExportMethod'
+      - '@azure/arm-sql.Databases.beginImportMethod'
+      - '@azure/arm-sql.Databases.beginPause'
+      - '@azure/arm-sql.Databases.beginResume'
+      - '@azure/arm-sql.Databases.beginUpdate'
+      - '@azure/arm-sql.Databases.beginUpgradeDataWarehouse'
+      - '@azure/arm-sql.Databases.createImportOperation'
+      - '@azure/arm-sql.Databases.createOrUpdate'
+      - '@azure/arm-sql.Databases.constructor'
+      - '@azure/arm-sql.Databases.deleteMethod'
+      - '@azure/arm-sql.Databases.exportMethod'
+      - '@azure/arm-sql.Databases.get'
+      - '@azure/arm-sql.Databases.get_2'
+      - '@azure/arm-sql.Databases.get_1'
+      - '@azure/arm-sql.Databases.importMethod'
+      - '@azure/arm-sql.Databases.listByElasticPool'
+      - '@azure/arm-sql.Databases.listByElasticPool_2'
+      - '@azure/arm-sql.Databases.listByElasticPool_1'
+      - '@azure/arm-sql.Databases.listByElasticPoolNext'
+      - '@azure/arm-sql.Databases.listByElasticPoolNext_2'
+      - '@azure/arm-sql.Databases.listByElasticPoolNext_1'
+      - '@azure/arm-sql.Databases.listByServer'
+      - '@azure/arm-sql.Databases.listByServer_2'
+      - '@azure/arm-sql.Databases.listByServer_1'
+      - '@azure/arm-sql.Databases.listByServerNext'
+      - '@azure/arm-sql.Databases.listByServerNext_2'
+      - '@azure/arm-sql.Databases.listByServerNext_1'
+      - '@azure/arm-sql.Databases.listMetricDefinitions'
+      - '@azure/arm-sql.Databases.listMetricDefinitions_2'
+      - '@azure/arm-sql.Databases.listMetricDefinitions_1'
+      - '@azure/arm-sql.Databases.listMetrics'
+      - '@azure/arm-sql.Databases.listMetrics_2'
+      - '@azure/arm-sql.Databases.listMetrics_1'
+      - '@azure/arm-sql.Databases.pause'
+      - '@azure/arm-sql.Databases.rename'
+      - '@azure/arm-sql.Databases.rename_2'
+      - '@azure/arm-sql.Databases.rename_1'
+      - '@azure/arm-sql.Databases.resume'
+      - '@azure/arm-sql.Databases.update'
+      - '@azure/arm-sql.Databases.upgradeDataWarehouse'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="46c35-101">表示数据库的类。</span><span class="sxs-lookup"><span data-stu-id="46c35-101">Class representing a Databases.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.beginCreateImportOperation'
+    name: 'beginCreateImportOperation(string, string, string, ImportExtensionRequest, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-102">创建将 bacpac 导入到现有数据库的导入操作。</span><span class="sxs-lookup"><span data-stu-id="46c35-102">Creates an import operation that imports a bacpac into an existing database.</span></span> <span data-ttu-id="46c35-103">现有的数据库必须为空。</span><span class="sxs-lookup"><span data-stu-id="46c35-103">The existing database must be empty.</span></span>
+    syntax:
+      content: 'function beginCreateImportOperation(resourceGroupName: string, serverName: string, databaseName: string, parameters: ImportExtensionRequest, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-104">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-104">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-105">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-106">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-106">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-107">要导入到数据库的名称</span><span class="sxs-lookup"><span data-stu-id="46c35-107">The name of the database to import into</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ImportExtensionRequest'
+          description: <span data-ttu-id="46c35-108">有关将 Bacpac 导入到数据库所需的参数。</span><span class="sxs-lookup"><span data-stu-id="46c35-108">The required parameters for importing a Bacpac into a database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, Database, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-109">创建新数据库或更新现有数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-109">Creates a new database or updates an existing database.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, serverName: string, databaseName: string, parameters: Database, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-110">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-110">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-111">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-111">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-112">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-112">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-113">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-113">The name of the database.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.Database'
+          description: <span data-ttu-id="46c35-114">请求的数据库资源的状态。</span><span class="sxs-lookup"><span data-stu-id="46c35-114">The requested database resource state.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-115">删除数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-115">Deletes the database.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-116">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-116">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-117">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-117">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-118">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-118">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-119">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-119">The name of the database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.beginExportMethod'
+    name: 'beginExportMethod(string, string, string, ExportRequest, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-120">将数据库导出到 bacpac。</span><span class="sxs-lookup"><span data-stu-id="46c35-120">Exports a database to a bacpac.</span></span>
+    syntax:
+      content: 'function beginExportMethod(resourceGroupName: string, serverName: string, databaseName: string, parameters: ExportRequest, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-121">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-121">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-122">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-122">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-123">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-123">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-124">要导出的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-124">The name of the database to be exported.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ExportRequest'
+          description: <span data-ttu-id="46c35-125">有关将数据库导出所需的参数。</span><span class="sxs-lookup"><span data-stu-id="46c35-125">The required parameters for exporting a database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.beginImportMethod'
+    name: 'beginImportMethod(string, string, ImportRequest, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-126">将 bacpac 导入到新的数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-126">Imports a bacpac into a new database.</span></span>
+    syntax:
+      content: 'function beginImportMethod(resourceGroupName: string, serverName: string, parameters: ImportRequest, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-127">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-127">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-128">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-128">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-129">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-129">The name of the server.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ImportRequest'
+          description: <span data-ttu-id="46c35-130">有关将 Bacpac 导入到数据库所需的参数。</span><span class="sxs-lookup"><span data-stu-id="46c35-130">The required parameters for importing a Bacpac into a database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.beginPause'
+    name: 'beginPause(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-131">暂停数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-131">Pauses a database.</span></span>
+    syntax:
+      content: 'function beginPause(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-132">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-132">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-133">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-133">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-134">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-134">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-135">若要暂停的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-135">The name of the database to be paused.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.beginResume'
+    name: 'beginResume(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-136">恢复数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-136">Resumes a database.</span></span>
+    syntax:
+      content: 'function beginResume(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-137">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-137">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-138">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-138">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-139">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-139">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-140">要恢复的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-140">The name of the database to be resumed.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.beginUpdate'
+    name: 'beginUpdate(string, string, string, DatabaseUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-141">更新现有的数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-141">Updates an existing database.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, serverName: string, databaseName: string, parameters: DatabaseUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-142">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-142">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-143">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-143">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-144">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-144">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-145">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-145">The name of the database.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.DatabaseUpdate'
+          description: <span data-ttu-id="46c35-146">请求的数据库资源的状态。</span><span class="sxs-lookup"><span data-stu-id="46c35-146">The requested database resource state.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.beginUpgradeDataWarehouse'
+    name: 'beginUpgradeDataWarehouse(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-147">升级数据仓库。</span><span class="sxs-lookup"><span data-stu-id="46c35-147">Upgrades a data warehouse.</span></span>
+    syntax:
+      content: 'function beginUpgradeDataWarehouse(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-148">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-148">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-149">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-149">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-150">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-150">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-151">要升级的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-151">The name of the database to be upgraded.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.createImportOperation'
+    name: 'createImportOperation(string, string, string, ImportExtensionRequest, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-152">创建将 bacpac 导入到现有数据库的导入操作。</span><span class="sxs-lookup"><span data-stu-id="46c35-152">Creates an import operation that imports a bacpac into an existing database.</span></span> <span data-ttu-id="46c35-153">现有的数据库必须为空。</span><span class="sxs-lookup"><span data-stu-id="46c35-153">The existing database must be empty.</span></span>
+    syntax:
+      content: 'function createImportOperation(resourceGroupName: string, serverName: string, databaseName: string, parameters: ImportExtensionRequest, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-154">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-154">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-155">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-155">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-156">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-156">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-157">要导入到数据库的名称</span><span class="sxs-lookup"><span data-stu-id="46c35-157">The name of the database to import into</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ImportExtensionRequest'
+          description: <span data-ttu-id="46c35-158">有关将 Bacpac 导入到数据库所需的参数。</span><span class="sxs-lookup"><span data-stu-id="46c35-158">The required parameters for importing a Bacpac into a database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesCreateImportOperationResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, Database, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-159">创建新数据库或更新现有数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-159">Creates a new database or updates an existing database.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serverName: string, databaseName: string, parameters: Database, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-160">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-160">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-161">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-161">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-162">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-162">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-163">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-163">The name of the database.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.Database'
+          description: <span data-ttu-id="46c35-164">请求的数据库资源的状态。</span><span class="sxs-lookup"><span data-stu-id="46c35-164">The requested database resource state.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.constructor'
+    name: Databases(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-165">创建数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-165">Create a Databases.</span></span>
+    syntax:
+      content: 'new Databases(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="46c35-166">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="46c35-166">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-167">删除数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-167">Deletes the database.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-168">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-168">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-169">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-169">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-170">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-170">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-171">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-171">The name of the database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.exportMethod'
+    name: 'exportMethod(string, string, string, ExportRequest, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-172">将数据库导出到 bacpac。</span><span class="sxs-lookup"><span data-stu-id="46c35-172">Exports a database to a bacpac.</span></span>
+    syntax:
+      content: 'function exportMethod(resourceGroupName: string, serverName: string, databaseName: string, parameters: ExportRequest, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-173">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-173">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-174">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-174">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-175">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-175">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-176">要导出的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-176">The name of the database to be exported.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ExportRequest'
+          description: <span data-ttu-id="46c35-177">有关将数据库导出所需的参数。</span><span class="sxs-lookup"><span data-stu-id="46c35-177">The required parameters for exporting a database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesExportMethodResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-178">获取数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-178">Gets a database.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-179">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-179">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-180">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-180">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-181">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-181">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-182">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-182">The name of the database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Database>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, options: RequestOptionsBase, callback: ServiceCallback<Database>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-183">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-183">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-184">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-184">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-185">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-185">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-186">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-186">The name of the database.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="46c35-187">可选参数</span><span class="sxs-lookup"><span data-stu-id="46c35-187">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.Database>
+          description: |
+            <span data-ttu-id="46c35-188">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.get_1'
+    name: 'get(string, string, string, ServiceCallback<Database>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<Database>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-189">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-189">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-190">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-190">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-191">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-191">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-192">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-192">The name of the database.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.Database>
+          description: |
+            <span data-ttu-id="46c35-193">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-193">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.importMethod'
+    name: 'importMethod(string, string, ImportRequest, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-194">将 bacpac 导入到新的数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-194">Imports a bacpac into a new database.</span></span>
+    syntax:
+      content: 'function importMethod(resourceGroupName: string, serverName: string, parameters: ImportRequest, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-195">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-195">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-196">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-196">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-197">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-197">The name of the server.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ImportRequest'
+          description: <span data-ttu-id="46c35-198">有关将 Bacpac 导入到数据库所需的参数。</span><span class="sxs-lookup"><span data-stu-id="46c35-198">The required parameters for importing a Bacpac into a database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesImportMethodResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByElasticPool'
+    name: 'listByElasticPool(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-199">获取在弹性池中的数据库的列表。</span><span class="sxs-lookup"><span data-stu-id="46c35-199">Gets a list of databases in an elastic pool.</span></span>
+    syntax:
+      content: 'function listByElasticPool(resourceGroupName: string, serverName: string, elasticPoolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-200">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-200">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-201">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-201">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-202">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-202">The name of the server.</span></span>
+        - id: elasticPoolName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-203">弹性池的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-203">The name of the elastic pool.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesListByElasticPoolResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByElasticPool_2'
+    name: 'listByElasticPool(string, string, string, RequestOptionsBase, ServiceCallback<DatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByElasticPool(resourceGroupName: string, serverName: string, elasticPoolName: string, options: RequestOptionsBase, callback: ServiceCallback<DatabaseListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-204">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-204">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-205">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-205">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-206">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-206">The name of the server.</span></span>
+        - id: elasticPoolName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-207">弹性池的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-207">The name of the elastic pool.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="46c35-208">可选参数</span><span class="sxs-lookup"><span data-stu-id="46c35-208">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.DatabaseListResult>
+          description: |
+            <span data-ttu-id="46c35-209">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-209">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListByElasticPoolResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByElasticPool_1'
+    name: 'listByElasticPool(string, string, string, ServiceCallback<DatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByElasticPool(resourceGroupName: string, serverName: string, elasticPoolName: string, callback: ServiceCallback<DatabaseListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-210">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-210">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-211">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-211">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-212">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-212">The name of the server.</span></span>
+        - id: elasticPoolName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-213">弹性池的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-213">The name of the elastic pool.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.DatabaseListResult>
+          description: |
+            <span data-ttu-id="46c35-214">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-214">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListByElasticPoolResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByElasticPoolNext'
+    name: 'listByElasticPoolNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-215">获取在弹性池中的数据库的列表。</span><span class="sxs-lookup"><span data-stu-id="46c35-215">Gets a list of databases in an elastic pool.</span></span>
+    syntax:
+      content: 'function listByElasticPoolNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="46c35-216">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="46c35-216">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesListByElasticPoolNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByElasticPoolNext_2'
+    name: 'listByElasticPoolNext(string, RequestOptionsBase, ServiceCallback<DatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByElasticPoolNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<DatabaseListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="46c35-217">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="46c35-217">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="46c35-218">可选参数</span><span class="sxs-lookup"><span data-stu-id="46c35-218">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.DatabaseListResult>
+          description: |
+            <span data-ttu-id="46c35-219">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-219">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListByElasticPoolNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByElasticPoolNext_1'
+    name: 'listByElasticPoolNext(string, ServiceCallback<DatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByElasticPoolNext(nextPageLink: string, callback: ServiceCallback<DatabaseListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="46c35-220">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="46c35-220">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.DatabaseListResult>
+          description: |
+            <span data-ttu-id="46c35-221">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-221">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListByElasticPoolNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByServer'
+    name: 'listByServer(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-222">获取数据库的列表。</span><span class="sxs-lookup"><span data-stu-id="46c35-222">Gets a list of databases.</span></span>
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-223">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-223">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-224">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-224">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-225">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-225">The name of the server.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByServer_2'
+    name: 'listByServer(string, string, RequestOptionsBase, ServiceCallback<DatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, options: RequestOptionsBase, callback: ServiceCallback<DatabaseListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-226">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-226">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-227">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-227">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-228">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-228">The name of the server.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="46c35-229">可选参数</span><span class="sxs-lookup"><span data-stu-id="46c35-229">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.DatabaseListResult>
+          description: |
+            <span data-ttu-id="46c35-230">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-230">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByServer_1'
+    name: 'listByServer(string, string, ServiceCallback<DatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<DatabaseListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-231">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-231">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-232">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-232">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-233">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-233">The name of the server.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.DatabaseListResult>
+          description: |
+            <span data-ttu-id="46c35-234">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-234">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListByServerResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByServerNext'
+    name: 'listByServerNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-235">获取数据库的列表。</span><span class="sxs-lookup"><span data-stu-id="46c35-235">Gets a list of databases.</span></span>
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="46c35-236">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="46c35-236">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByServerNext_2'
+    name: 'listByServerNext(string, RequestOptionsBase, ServiceCallback<DatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<DatabaseListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="46c35-237">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="46c35-237">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="46c35-238">可选参数</span><span class="sxs-lookup"><span data-stu-id="46c35-238">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.DatabaseListResult>
+          description: |
+            <span data-ttu-id="46c35-239">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-239">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listByServerNext_1'
+    name: 'listByServerNext(string, ServiceCallback<DatabaseListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByServerNext(nextPageLink: string, callback: ServiceCallback<DatabaseListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="46c35-240">从上一个成功调用 List 操作 NextLink。</span><span class="sxs-lookup"><span data-stu-id="46c35-240">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.DatabaseListResult>
+          description: |
+            <span data-ttu-id="46c35-241">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-241">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListByServerNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listMetricDefinitions'
+    name: 'listMetricDefinitions(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-242">返回数据库的指标定义。</span><span class="sxs-lookup"><span data-stu-id="46c35-242">Returns database metric definitions.</span></span>
+    syntax:
+      content: 'function listMetricDefinitions(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-243">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-243">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-244">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-244">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-245">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-245">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-246">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-246">The name of the database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesListMetricDefinitionsResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listMetricDefinitions_2'
+    name: 'listMetricDefinitions(string, string, string, RequestOptionsBase, ServiceCallback<MetricDefinitionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetricDefinitions(resourceGroupName: string, serverName: string, databaseName: string, options: RequestOptionsBase, callback: ServiceCallback<MetricDefinitionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-247">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-247">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-248">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-248">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-249">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-249">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-250">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-250">The name of the database.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="46c35-251">可选参数</span><span class="sxs-lookup"><span data-stu-id="46c35-251">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.MetricDefinitionListResult>
+          description: |
+            <span data-ttu-id="46c35-252">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-252">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListMetricDefinitionsResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listMetricDefinitions_1'
+    name: 'listMetricDefinitions(string, string, string, ServiceCallback<MetricDefinitionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetricDefinitions(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<MetricDefinitionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-253">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-253">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-254">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-254">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-255">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-255">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-256">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-256">The name of the database.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.MetricDefinitionListResult>
+          description: |
+            <span data-ttu-id="46c35-257">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-257">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListMetricDefinitionsResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listMetrics'
+    name: 'listMetrics(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-258">返回数据库度量值。</span><span class="sxs-lookup"><span data-stu-id="46c35-258">Returns database metrics.</span></span>
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, serverName: string, databaseName: string, filter: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-259">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-259">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-260">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-260">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-261">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-261">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-262">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-262">The name of the database.</span></span>
+        - id: filter
+          type:
+            - string
+          description: <span data-ttu-id="46c35-263">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="46c35-263">An OData filter expression that describes a subset of metrics to return.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesListMetricsResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listMetrics_2'
+    name: 'listMetrics(string, string, string, string, RequestOptionsBase, ServiceCallback<MetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, serverName: string, databaseName: string, filter: string, options: RequestOptionsBase, callback: ServiceCallback<MetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-264">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-264">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-265">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-265">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-266">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-266">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-267">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-267">The name of the database.</span></span>
+        - id: filter
+          type:
+            - string
+          description: <span data-ttu-id="46c35-268">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="46c35-268">An OData filter expression that describes a subset of metrics to return.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="46c35-269">可选参数</span><span class="sxs-lookup"><span data-stu-id="46c35-269">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.MetricListResult>
+          description: |
+            <span data-ttu-id="46c35-270">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-270">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListMetricsResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.listMetrics_1'
+    name: 'listMetrics(string, string, string, string, ServiceCallback<MetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, serverName: string, databaseName: string, filter: string, callback: ServiceCallback<MetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-271">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-271">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-272">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-272">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-273">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-273">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-274">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-274">The name of the database.</span></span>
+        - id: filter
+          type:
+            - string
+          description: <span data-ttu-id="46c35-275">OData 筛选器表达式，描述要返回度量值的子集。</span><span class="sxs-lookup"><span data-stu-id="46c35-275">An OData filter expression that describes a subset of metrics to return.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.MetricListResult>
+          description: |
+            <span data-ttu-id="46c35-276">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-276">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.DatabasesListMetricsResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.pause'
+    name: 'pause(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-277">暂停数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-277">Pauses a database.</span></span>
+    syntax:
+      content: 'function pause(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-278">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-278">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-279">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-279">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-280">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-280">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-281">若要暂停的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-281">The name of the database to be paused.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesPauseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.rename'
+    name: 'rename(string, string, string, ResourceMoveDefinition, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-282">重命名数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-282">Renames a database.</span></span>
+    syntax:
+      content: 'function rename(resourceGroupName: string, serverName: string, databaseName: string, parameters: ResourceMoveDefinition, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-283">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-283">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-284">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-284">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-285">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-285">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-286">若要重命名的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-286">The name of the database to rename.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ResourceMoveDefinition'
+          description: <span data-ttu-id="46c35-287">重命名此数据库定义的资源移动。</span><span class="sxs-lookup"><span data-stu-id="46c35-287">The resource move definition for renaming this database.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.rename_2'
+    name: 'rename(string, string, string, ResourceMoveDefinition, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function rename(resourceGroupName: string, serverName: string, databaseName: string, parameters: ResourceMoveDefinition, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-288">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-288">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-289">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-289">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-290">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-290">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-291">若要重命名的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-291">The name of the database to rename.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ResourceMoveDefinition'
+          description: <span data-ttu-id="46c35-292">重命名此数据库定义的资源移动。</span><span class="sxs-lookup"><span data-stu-id="46c35-292">The resource move definition for renaming this database.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="46c35-293">可选参数</span><span class="sxs-lookup"><span data-stu-id="46c35-293">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="46c35-294">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-294">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.rename_1'
+    name: 'rename(string, string, string, ResourceMoveDefinition, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function rename(resourceGroupName: string, serverName: string, databaseName: string, parameters: ResourceMoveDefinition, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-295">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-295">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-296">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-296">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-297">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-297">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-298">若要重命名的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-298">The name of the database to rename.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.ResourceMoveDefinition'
+          description: <span data-ttu-id="46c35-299">重命名此数据库定义的资源移动。</span><span class="sxs-lookup"><span data-stu-id="46c35-299">The resource move definition for renaming this database.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="46c35-300">回调</span><span class="sxs-lookup"><span data-stu-id="46c35-300">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.resume'
+    name: 'resume(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-301">恢复数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-301">Resumes a database.</span></span>
+    syntax:
+      content: 'function resume(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-302">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-302">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-303">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-303">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-304">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-304">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-305">要恢复的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-305">The name of the database to be resumed.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesResumeResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.update'
+    name: 'update(string, string, string, DatabaseUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-306">更新现有的数据库。</span><span class="sxs-lookup"><span data-stu-id="46c35-306">Updates an existing database.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, serverName: string, databaseName: string, parameters: DatabaseUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-307">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-307">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-308">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-308">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-309">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-309">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-310">数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-310">The name of the database.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.DatabaseUpdate'
+          description: <span data-ttu-id="46c35-311">请求的数据库资源的状态。</span><span class="sxs-lookup"><span data-stu-id="46c35-311">The requested database resource state.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabasesUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.Databases.upgradeDataWarehouse'
+    name: 'upgradeDataWarehouse(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="46c35-312">升级数据仓库。</span><span class="sxs-lookup"><span data-stu-id="46c35-312">Upgrades a data warehouse.</span></span>
+    syntax:
+      content: 'function upgradeDataWarehouse(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-313">包含该资源的资源组名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-313">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="46c35-314">您可以从 Azure 资源管理器 API 或门户获取此值。</span><span class="sxs-lookup"><span data-stu-id="46c35-314">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-315">服务器的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-315">The name of the server.</span></span>
+        - id: databaseName
+          type:
+            - string
+          description: <span data-ttu-id="46c35-316">要升级的数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="46c35-316">The name of the database to be upgraded.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: '@azure/arm-sql.ImportExtensionRequest'
+    name: ImportExtensionRequest
+    spec.typeScript:
+      - name: ImportExtensionRequest
+        fullName: ImportExtensionRequest
+        uid: '@azure/arm-sql.ImportExtensionRequest'
+  - uid: '@azure/arm-sql.Database'
+    name: Database
+    spec.typeScript:
+      - name: Database
+        fullName: Database
+        uid: '@azure/arm-sql.Database'
+  - uid: '@azure/arm-sql.ExportRequest'
+    name: ExportRequest
+    spec.typeScript:
+      - name: ExportRequest
+        fullName: ExportRequest
+        uid: '@azure/arm-sql.ExportRequest'
+  - uid: '@azure/arm-sql.ImportRequest'
+    name: ImportRequest
+    spec.typeScript:
+      - name: ImportRequest
+        fullName: ImportRequest
+        uid: '@azure/arm-sql.ImportRequest'
+  - uid: '@azure/arm-sql.DatabaseUpdate'
+    name: DatabaseUpdate
+    spec.typeScript:
+      - name: DatabaseUpdate
+        fullName: DatabaseUpdate
+        uid: '@azure/arm-sql.DatabaseUpdate'
+  - uid: ServiceCallback<@azure/arm-sql.Database>
+    name: Database>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Database
+        fullName: Database
+        uid: '@azure/arm-sql.Database'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.DatabaseListResult>
+    name: DatabaseListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DatabaseListResult
+        fullName: DatabaseListResult
+        uid: '@azure/arm-sql.DatabaseListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.MetricDefinitionListResult>
+    name: MetricDefinitionListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: MetricDefinitionListResult
+        fullName: MetricDefinitionListResult
+        uid: '@azure/arm-sql.MetricDefinitionListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.MetricListResult>
+    name: MetricListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: MetricListResult
+        fullName: MetricListResult
+        uid: '@azure/arm-sql.MetricListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-sql.ResourceMoveDefinition'
+    name: ResourceMoveDefinition
+    spec.typeScript:
+      - name: ResourceMoveDefinition
+        fullName: ResourceMoveDefinition
+        uid: '@azure/arm-sql.ResourceMoveDefinition'

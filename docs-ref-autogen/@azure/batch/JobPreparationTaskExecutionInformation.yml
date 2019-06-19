@@ -1,0 +1,209 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation'
+    name: JobPreparationTaskExecutionInformation
+    fullName: JobPreparationTaskExecutionInformation
+    children:
+      - '@azure/batch.JobPreparationTaskExecutionInformation.containerInfo'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.endTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.exitCode'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.failureInfo'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.lastRetryTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.result'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.retryCount'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.startTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.state'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectory'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示 JobPreparationTaskExecutionInformation 的接口。
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 有关在其下执行该任务的容器的信息。 只有在容器上下文中运行的任务，设置此属性。
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作业准备任务完成时间。 仅当任务处于已完成状态时，才设置此属性。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在任务命令行上指定的程序退出代码。 仅当任务处于已完成状态，则返回此参数。 进程的退出代码反映了由该进程的应用程序开发人员实现的特定约定。 如果使用退出代码值来决定在代码中，请务必了解使用应用程序进程的退出代码约定。 请注意，在退出代码，也可能会通过计算节点的操作系统，如进程被强行终止生成。
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 描述任务失败，如果任何信息。 此属性仅当任务处于已完成状态设置并遇到失败。
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.lastRetryTime'
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 最近的时间重试作业准备任务开始运行。 仅当任务重试了设置此属性 （即 retryCount 为非零值）。 如果存在，这通常是与 startTime，相同，但如果任务已重新启动而原因并非重试; 可能不同例如，如果在重试期间重新启动计算节点，然后更新 startTime 但 lastRetryTime 不是。
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '任务执行的结果。 如果值为失败，然后可以 failureInfo 属性中找到失败的详细信息。 可能的值包括: 成功、 故障'
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.retryCount'
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 批处理服务重试任务的次数。 任务应用程序失败 （非零退出代码） 时重试，预处理的错误 （无法运行任务） 和文件上传错误不会重试。 批处理服务将重试任务，直到达到指定的约束的限制。 任务应用程序失败 （非零退出代码） 时重试，预处理的错误 （无法运行任务） 和文件上传错误不会重试。 批处理服务将重试任务，直到达到指定的约束的限制。
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务开始运行的时间。 如果任务已重启或重试，该时间是任务开始运行的最近时间。
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '作业准备任务在计算节点上的当前状态。 可能的值包括: 正在运行、 已完成'
+    syntax:
+      content: 'state: JobPreparationTaskState'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectory'
+    name: taskRootDirectory
+    fullName: taskRootDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 作业准备任务在计算节点上的根目录。 可以使用此路径来检索任务，如日志文件创建的文件。
+    optional: true
+    syntax:
+      content: 'taskRootDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl'
+    name: taskRootDirectoryUrl
+    fullName: taskRootDirectoryUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 为作业准备任务在计算节点上的根目录 URL。
+    optional: true
+    syntax:
+      content: 'taskRootDirectoryUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
+  - uid: '@azure/batch.JobPreparationTaskState'
+    name: JobPreparationTaskState
+    spec.typeScript:
+      - name: JobPreparationTaskState
+        fullName: JobPreparationTaskState
+        uid: '@azure/batch.JobPreparationTaskState'

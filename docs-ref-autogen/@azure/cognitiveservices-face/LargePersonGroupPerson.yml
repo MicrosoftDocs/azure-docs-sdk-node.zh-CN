@@ -81,7 +81,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 将具有代表性的人脸添加到一个人的标识。 输入的人脸被指定为具有 targetFace 矩形的映像。
+    summary: |-
+      将人脸到人员添加到人脸识别或验证的大型用户组。 图像处理包含多个的人脸，输入的人脸可以指定为具有 targetFace 矩形的映像。 它将返回表示已添加人脸 persistedFaceId。 将存储中没有图像。 仅提取人脸功能将存储在之前的服务器上[大型人物组 PersonFace-删除](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3)，[大型人物组人员-删除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)或[大型人物组-Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)调用。
+      <br /> 请注意 persistedFaceId 是不同于生成的 faceId[人脸-检测](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
+      * 人脸图像质量更高意味着更好地识别精度。 请考虑高质量的人脸： 正面、 clear 和人脸大小为 200 x 200 像素 （100 个像素之间的眼睛） 或更大。
+      * 每个人员条目可容纳最多包含 248 人脸。
+      * 支持 JPEG、 PNG、 GIF （第一个帧） 和 BMP 格式。 允许的图像文件大小是从 1 KB 到 6 MB。
+      * "targetFace"矩形应包含一个人脸。 零个或多个个人脸均被视为错误。 如果未从返回提供"targetFace"矩形[人脸-检测](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，则不能保证以检测并已成功添加人脸。
+      * 可检测的面部大小 (36 x 36 4096 x 4096 像素)，从大型头部姿势或大型 occlusions 会导致失败。
+      * 将按顺序处理添加/删除人脸与同一个人。 添加/删除人脸与不同人员并行处理。
+      * 最小可检测的面部大小为 36x36 像素中不能大于 1920 x 1080 像素的图像。
+      具有维度大于 1920 x 1080 像素的图像将需要按比例较大的最小的人脸大小。
+      * 可以提供不同的 detectionModel 值。 若要使用并比较了不同检测模型，请参阅[如何指定检测模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建议使用-case(s) |
+      | ---------- | -------- |
+      | detection_01: | 默认检测模型 [大型人物组人员-添加
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42). 建议的正面人脸检测附近。 对于特别大角度 （头部姿势） 的人脸、 封闭的人脸或错误的图像方向的情况，可能检测这种情况下中的人脸。 | |detection_02: |2019 年发布的检测模型可能，尤其是在小型、 侧和模糊的人脸上的改进准确度。 |
     syntax:
       content: 'function addFaceFromStream(largePersonGroupId: string, personId: string, image: msRest.HttpRequestBody, options?: Models.LargePersonGroupPersonAddFaceFromStreamOptionalParams)'
       parameters:
@@ -178,7 +193,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 将具有代表性的人脸添加到一个人的标识。 输入的人脸被指定为具有 targetFace 矩形的映像。
+    summary: |-
+      将人脸到人员添加到人脸识别或验证的大型用户组。 图像处理包含多个的人脸，输入的人脸可以指定为具有 targetFace 矩形的映像。 它将返回表示已添加人脸 persistedFaceId。 将存储中没有图像。 仅提取人脸功能将存储在之前的服务器上[大型人物组 PersonFace-删除](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3)，[大型人物组人员-删除](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)或[大型人物组-Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)调用。
+      <br /> 请注意 persistedFaceId 是不同于生成的 faceId[人脸-检测](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
+      * 人脸图像质量更高意味着更好地识别精度。 请考虑高质量的人脸： 正面、 clear 和人脸大小为 200 x 200 像素 （100 个像素之间的眼睛） 或更大。
+      * 每个人员条目可容纳最多包含 248 人脸。
+      * 支持 JPEG、 PNG、 GIF （第一个帧） 和 BMP 格式。 允许的图像文件大小是从 1 KB 到 6 MB。
+      * "targetFace"矩形应包含一个人脸。 零个或多个个人脸均被视为错误。 如果未从返回提供"targetFace"矩形[人脸-检测](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，则不能保证以检测并已成功添加人脸。
+      * 可检测的面部大小 (36 x 36 4096 x 4096 像素)，从大型头部姿势或大型 occlusions 会导致失败。
+      * 将按顺序处理添加/删除人脸与同一个人。 添加/删除人脸与不同人员并行处理。
+      * 最小可检测的面部大小为 36x36 像素中不能大于 1920 x 1080 像素的图像。
+      具有维度大于 1920 x 1080 像素的图像将需要按比例较大的最小的人脸大小。
+      * 可以提供不同的 detectionModel 值。 若要使用并比较了不同检测模型，请参阅[如何指定检测模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建议使用-case(s) |
+      | ---------- | -------- |
+      | detection_01: | 默认检测模型 [大型人物组人员-添加
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42). 建议的正面人脸检测附近。 对于特别大角度 （头部姿势） 的人脸、 封闭的人脸或错误的图像方向的情况，可能检测这种情况下中的人脸。 | |detection_02: |2019 年发布的检测模型可能，尤其是在小型、 侧和模糊的人脸上的改进准确度。 |
     syntax:
       content: 'function addFaceFromUrl(largePersonGroupId: string, personId: string, url: string, options?: Models.LargePersonGroupPersonAddFaceFromUrlOptionalParams)'
       parameters:
@@ -313,7 +343,10 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 从用户中删除人脸。 持久化的人脸的相对特征也将被删除。
+    summary: |-
+      通过指定的 largePersonGroupId、 personId 和 persistedFaceId 从大型人员组中的用户删除人脸。
+      <br /> 将按顺序处理添加/删除人脸与同一个人。
+      添加/删除人脸与不同人员并行处理。
     syntax:
       content: 'function deleteFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -410,7 +443,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 从大型人员组中删除现有人员。 所有存储个人数据，并将删除此人的项中的人脸特征。
+    summary: 从大型人员组中删除现有人员。 PersistedFaceId、 userData，此人的项中的人名称和人脸功能将全部被删除。
     syntax:
       content: 'function deleteMethod(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -495,7 +528,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 检索一个人的信息，包括已注册的持久性人脸、 名称和 userData。
+    summary: 检索一个人的名称和用户数据，以及持久化的 faceIds 表示已注册的人员人脸功能。
     syntax:
       content: 'function get(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:

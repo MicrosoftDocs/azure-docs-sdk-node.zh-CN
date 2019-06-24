@@ -64,7 +64,28 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 检测人脸在图像并返回的人脸位置，和 （可选） 使用 faceIds、 界标、 和属性。
+    summary: |-
+      检测图像中的人脸，返回人脸矩形以及可选的 faceId、地标和属性。<br />
+      * 将存储中没有图像。 仅提取人脸功能将存储在服务器上。 FaceId 是人脸功能的标识符和将用于[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [人脸
+      - 查找 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。
+      存储的人脸功能将过期，删除原始检测调用之后的 24 小时。
+      * 可选参数包括 faceId、 界标、 和属性。 属性包括年龄、 性别、 headPose、 微笑、 facialHair、 眼镜、 情感、 头发、 构成、 封闭、 附件、 模糊、 曝光和降噪。 一些特定属性返回的结果可能不是非常准确。
+      * 支持 JPEG、 PNG、 GIF （第一个帧） 和 BMP 格式。 允许的图像文件大小是从 1 KB 到 6 MB。
+      * 最多 100 人脸可返回图像。 人脸是按从大到小的人脸矩形大小排序。
+      * 为了获得最佳结果，查询时[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [人脸
+      - 查找的 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) （returnFaceId 为 true），请使用人脸的： 正面、 明确且具有的最小大小为 200 x 200 像素 （100 个像素之间的眼睛）。
+      * 最小可检测的面部大小为 36x36 像素中不能大于 1920 x 1080 像素的图像。
+      具有维度大于 1920 x 1080 像素的图像将需要按比例较大的最小的人脸大小。
+      * 可以提供不同的 detectionModel 值。 若要使用并比较了不同检测模型，请参阅[如何指定检测模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建议使用-case(s) |
+      | ---------- | -------- |
+      | detection_01: | [人脸-默认检测模型
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。 建议的正面人脸检测附近。 对于特别大角度 （头部姿势） 的人脸、 封闭的人脸或错误的图像方向的情况，可能检测这种情况下中的人脸。 | |detection_02: |2019 年发布的检测模型可能，尤其是在小型、 侧和模糊的人脸上的改进准确度。 |
+      * 提供了不同 recognitionModel 值。 如果等跟进操作的验证，标识，查找类似需要，请使用 recognitionModel 参数指定的识别模型。 默认值为 recognitionModel 是 recognition_01，如果最新模型需要请显式指定所需的模型中此参数。 指定后，检测到的 faceIds 将与指定的识别模型相关联。 更多详细信息，请参阅[如何指定一个认证模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | 模型 | 建议使用-case(s) |
+      | ---------- | -------- |
+      | recognition_01: | [人脸-默认识别模型
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。 所有这些 faceIds 2019 年 3 月之前创建的是与此识别模型绑定。 | |recognition_02: |识别在 2019 年 3 月发布模型。 建议 recognition_02，因为其总体准确性得到了改进与 recognition_01 相比。 |
     syntax:
       content: 'function detectWithStream(image: msRest.HttpRequestBody, options?: Models.FaceDetectWithStreamOptionalParams)'
       parameters:
@@ -139,16 +160,26 @@ items:
       - typeScript
     summary: |-
       检测图像中的人脸，返回人脸矩形以及可选的 faceId、地标和属性。<br />
-      * 可选参数包括 faceId、 界标、 和属性。 属性包括年龄、 性别、 headPose、 微笑、 facialHair、 眼镜、 情感、 头发、 构成、 封闭、 附件、 模糊、 曝光和降噪。
-      * 提取的人脸功能，而不是实际的图像，将存储在服务器上。 FaceId 是人脸功能的标识符和将用于[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [人脸
-      - 查找 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。 到期时间检测调用之后的 24 小时。
-      * 人脸图像质量更高意味着更好的检测和识别精度。 请考虑高质量的人脸： 正面、 clear 和人脸大小为 200 x 200 像素 （100 个像素之间的眼睛） 或更大。
+      * 将存储中没有图像。 仅提取人脸功能将存储在服务器上。 FaceId 是人脸功能的标识符和将用于[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [人脸
+      - 查找 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。
+      存储的人脸功能将过期，删除原始检测调用之后的 24 小时。
+      * 可选参数包括 faceId、 界标、 和属性。 属性包括年龄、 性别、 headPose、 微笑、 facialHair、 眼镜、 情感、 头发、 构成、 封闭、 附件、 模糊、 曝光和降噪。 一些特定属性返回的结果可能不是非常准确。
       * 支持 JPEG、 PNG、 GIF （第一个帧） 和 BMP 格式。 允许的图像文件大小是从 1 KB 到 6 MB。
-      * 其大小为 36x36 到 4096x4096 像素时可检测的人脸。 如果需要检测非常小的但清除人脸，请尝试放大输入的图像。
-      * 最多 64 张脸可返回图像。 人脸是按从大到小的人脸矩形大小排序。
-      * 面部检测器倾向于使用正面和接近正面的人脸。 有些人脸可能无法检测到，例如非常大的面部角度 （头部姿势） 或正在封闭的像素，或错误的图像方向的情况。
-      * 属性 （年龄、 性别、 headPose、 微笑、 facialHair、 眼镜、 情感、 头发、 构成、 封闭、 附件、 模糊、 曝光和降噪） 可能不完全准确。 HeadPose 的 pitch 值是保留的字段，并且将始终返回 0。
+      * 最多 100 人脸可返回图像。 人脸是按从大到小的人脸矩形大小排序。
+      * 为了获得最佳结果，查询时[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [人脸
+      - 查找的 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) （returnFaceId 为 true），请使用人脸的： 正面、 明确且具有的最小大小为 200 x 200 像素 （100 个像素之间的眼睛）。
+      * 最小可检测的面部大小为 36x36 像素中不能大于 1920 x 1080 像素的图像。
+      具有维度大于 1920 x 1080 像素的图像将需要按比例较大的最小的人脸大小。
+      * 可以提供不同的 detectionModel 值。 若要使用并比较了不同检测模型，请参阅[如何指定检测模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建议使用-case(s) |
+      | ---------- | -------- |
+      | detection_01: | [人脸-默认检测模型
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。 建议的正面人脸检测附近。 对于特别大角度 （头部姿势） 的人脸、 封闭的人脸或错误的图像方向的情况，可能检测这种情况下中的人脸。 | |detection_02: |2019 年发布的检测模型可能，尤其是在小型、 侧和模糊的人脸上的改进准确度。 |
       * 提供了不同 recognitionModel 值。 如果等跟进操作的验证，标识，查找类似需要，请使用 recognitionModel 参数指定的识别模型。 默认值为 recognitionModel 是 recognition_01，如果最新模型需要请显式指定所需的模型中此参数。 指定后，检测到的 faceIds 将与指定的识别模型相关联。 更多详细信息，请参阅[如何指定一个认证模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | 模型 | 建议使用-case(s) |
+      | ---------- | -------- |
+      | recognition_01: | [人脸-默认识别模型
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。 所有这些 faceIds 2019 年 3 月之前创建的是与此识别模型绑定。 | |recognition_02: |识别在 2019 年 3 月发布模型。 建议 recognition_02，因为其总体准确性得到了改进与 recognition_01 相比。 |
     syntax:
       content: 'function detectWithUrl(url: string, options?: Models.FaceDetectWithUrlOptionalParams)'
       parameters:

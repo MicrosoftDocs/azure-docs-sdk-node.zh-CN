@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.StartTask
+    name: StartTask
+    fullName: StartTask
+    children:
+      - azure-batch.StartTask.commandLine
+      - azure-batch.StartTask.containerSettings
+      - azure-batch.StartTask.environmentSettings
+      - azure-batch.StartTask.maxTaskRetryCount
+      - azure-batch.StartTask.resourceFiles
+      - azure-batch.StartTask.userIdentity
+      - azure-batch.StartTask.waitForSuccess
+    langs:
+      - typeScript
+    type: interface
+    summary: 在节点上触发恢复操作时，batch 将重试任务。 恢复操作的示例包括 （但不限于） 时重启不正常的节点或计算节点因主机故障消失。 由于恢复操作是独立的不会根据 maxTaskRetryCount 计数会重试。 即使 maxTaskRetryCount 为 0，恢复操作由于内部重试可能会发生。 因此，所有任务应都是幂等。 这意味着任务需要允许正在中断并重新启动而不会导致任何损坏或重复的数据。 最佳实践长时间运行的任务是使用某种形式的检查点。 在某些情况下启动任务可能会重新运行即使没有重新启动计算节点。 特殊应格外小心避免创建分离的任务处理的开始或安装/启动服务启动任务工作目录，因为它会批处理无法重新运行启动任务。
+    package: azure-batch
+  - uid: azure-batch.StartTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '命令行不会在 shell 下运行，并因此不能充分利用 shell 功能，例如环境变量扩展。 如果你想要利用此类功能，您应中调用 shell 命令行中，例如使用"cmd /c MyCommand"在 Windows 中或"/ bin/sh-c MyCommand"在 Linux 中。 如果命令行所引用的文件路径，它应使用相对路径 （相对于任务工作目录），或使用批处理提供的环境变量 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.StartTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 当指定此选项时，如下 AZ_BATCH_NODE_ROOT_DIR （在节点上的 Azure Batch 目录的根） 的所有目录以递归方式都映射到容器、 所有任务的环境变量都都映射到容器中，和是任务命令行在容器中执行。 外部 AZ_BATCH_NODE_ROOT_DIR 容器中生成的文件可能不会反映到主机的磁盘，这意味着 Api 的批处理文件将无法再访问这些文件。
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.StartTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果其退出代码为非零值，则批处理服务重试任务。 请注意，此值专门用于控制重试的次数。 批处理服务将尝试任务一次，，然后重试，直至达到此限制。 例如，如果最大重试计数最多为 3，批次尝试任务 4 次 （一个初始尝试和试 3 次）。 如果最大重试计数为 0，Batch 服务不重试该任务。 如果最大重试计数为-1，Batch 服务会无限制任务重试。
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.StartTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 列出此元素下的文件位于任务的工作目录中。
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果省略，该任务运行作为唯一的非管理用户的任务。
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+  - uid: azure-batch.StartTask.waitForSuccess
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果 true，并且启动任务将某个节点上失败，批处理服务重试次数不超过其最大重试计数 (maxTaskRetryCount) 启动任务。 如果任务必须仍不已成功完成后所有重试，则批处理服务标记的节点不可用，并且将不计划任务到它。 通过计算节点状态和失败信息详细信息，可以检测到这种情况。 如果为 false，Batch 服务不会等待启动任务完成。 在这种情况下，其他任务可以开始时启动任务仍在运行; 在计算节点上执行即使开始任务失败，新任务将继续计算节点上计划。 默认值为 false。
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

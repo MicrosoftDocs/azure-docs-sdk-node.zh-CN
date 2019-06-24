@@ -39,16 +39,16 @@ items:
       - typeScript
     summary: |-
       使用指定的 personGroupId、 名称、 用户提供的 userData 和 recognitionModel 创建新的人员组。
-      <br /> 人员组是上传的个人数据，包括人脸图像和人脸识别功能的容器。
+      <br /> 人员组是上传的个人数据，包括人脸识别功能的容器。
       <br /> 在创建后，使用[person Group 人员-创建](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c)以将人员添加到组，然后调用[person Group-Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249)若要获取此组供[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)。
-      <br /> 联系人的人脸、 图像和用户数据都将 [person Group 人员之前中存储在服务器上
-      - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) 或[person Group-删除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245)调用。
-      <br />
+      <br /> 将存储中没有图像。 仅该人员的已提取的人脸特征和用户数据将存储在之前的服务器上[person Group 人员-删除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d)或[person Group-删除](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245)调用。
+      <br/>应该指定 recognitionModel，以将与此人员组相关联。 默认值为 recognitionModel 是 recognition_01，如果最新的模型需要请显式指定所需的模型中此参数。 新的人脸添加到现有的人员组将使用已具有与集合关联的识别模型。 在人员组中的现有人脸特征无法更新为识别模型的另一个版本中提取的功能。
+      * recognition_01:默认识别模型[person Group-创建](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244)。 2019 年 3 月之前创建的所有这些人员组是与此识别模型绑定。
+      * recognition_02:识别在 2019 年 3 月发布模型。 建议 recognition_02，因为其总体准确性得到了改进与 recognition_01 相比。
+      人员组配额：
       * 免费层订阅配额：1000 人组。 每个保留最多 1,000 个人员。
       * S0 层订阅配额：1,000,000 人员组。 每个保留最多 10,000 个人员。
       * 若要处理更大的缩放人脸识别问题，请考虑使用[大型人物组](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)。
-      <br />
-      应该指定 recognitionModel，以将与此人员组相关联。 默认值为 recognitionModel 是 recognition_01，如果最新的模型需要请显式指定所需的模型中此参数。 新的人脸添加到现有的人员组将使用已具有与集合关联的识别模型。 在人员组中的现有人脸特征无法更新为识别模型的另一个版本中提取的功能。
     syntax:
       content: 'function create(personGroupId: string, options?: Models.PersonGroupCreateOptionalParams)'
       parameters:

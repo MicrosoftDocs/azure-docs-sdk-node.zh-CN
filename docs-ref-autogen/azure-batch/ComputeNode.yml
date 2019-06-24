@@ -1,0 +1,398 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.ComputeNode
+    name: ComputeNode
+    fullName: ComputeNode
+    children:
+      - azure-batch.ComputeNode.affinityId
+      - azure-batch.ComputeNode.allocationTime
+      - azure-batch.ComputeNode.certificateReferences
+      - azure-batch.ComputeNode.endpointConfiguration
+      - azure-batch.ComputeNode.errors
+      - azure-batch.ComputeNode.id
+      - azure-batch.ComputeNode.ipAddress
+      - azure-batch.ComputeNode.isDedicated
+      - azure-batch.ComputeNode.lastBootTime
+      - azure-batch.ComputeNode.nodeAgentInfo
+      - azure-batch.ComputeNode.recentTasks
+      - azure-batch.ComputeNode.runningTasksCount
+      - azure-batch.ComputeNode.schedulingState
+      - azure-batch.ComputeNode.startTask
+      - azure-batch.ComputeNode.startTaskInfo
+      - azure-batch.ComputeNode.state
+      - azure-batch.ComputeNode.stateTransitionTime
+      - azure-batch.ComputeNode.totalTasksRun
+      - azure-batch.ComputeNode.totalTasksSucceeded
+      - azure-batch.ComputeNode.url
+      - azure-batch.ComputeNode.vmSize
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.affinityId
+    name: affinityId
+    fullName: affinityId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 请注意，这只是软关联。 如果目标计算节点正忙或不可用时计划任务，然后将其他位置计划任务。
+    optional: true
+    syntax:
+      content: 'affinityId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.allocationTime
+    name: allocationTime
+    fullName: allocationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 这是计算节点的初始分配，并且不会更改一次设置的时间。 不更新计算节点时服务修复或被抢占。
+    optional: true
+    syntax:
+      content: 'allocationTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.certificateReferences
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '对于 Windows 节点，Batch 服务将安装证书的指定的证书存储区和位置。 对于 Linux 计算节点，这些证书将存储在任务工作目录和 AZ_BATCH_CERTIFICATES_DIR 提供给任务来查询此位置的环境变量内的目录中。 对于具有可见性 remoteUser 的证书，证书目录中创建用户的主目录 (例如，/home/ {用户名} / 证书) 和证书放置在该目录中。'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - 'azure-batch.CertificateReference[]'
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.endpointConfiguration
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: ComputeNodeEndpointConfiguration'
+      return:
+        type:
+          - azure-batch.ComputeNodeEndpointConfiguration
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.errors
+    name: errors
+    fullName: errors
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'errors?: ComputeNodeError[]'
+      return:
+        type:
+          - 'azure-batch.ComputeNodeError[]'
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 添加到池中的每个计算节点分配唯一 id。 每当从池中删除计算节点，所有本地文件被删除，并且该 ID 将被回收，可重用于新计算节点。
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.ipAddress
+    name: ipAddress
+    fullName: ipAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      添加到池中的每个计算节点分配唯一的 IP 地址。
+      每当从池中删除计算节点，所有本地文件被删除，并且 IP 地址将被回收，可重用于新计算节点。
+    optional: true
+    syntax:
+      content: 'ipAddress?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.isDedicated
+    name: isDedicated
+    fullName: isDedicated
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'isDedicated?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.lastBootTime
+    name: lastBootTime
+    fullName: lastBootTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此属性可能为计算节点状态为不可用时存在。
+    optional: true
+    syntax:
+      content: 'lastBootTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.nodeAgentInfo
+    name: nodeAgentInfo
+    fullName: nodeAgentInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'nodeAgentInfo?: NodeAgentInformation'
+      return:
+        type:
+          - azure-batch.NodeAgentInformation
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.recentTasks
+    name: recentTasks
+    fullName: recentTasks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仅当至少一个任务已在此计算节点上运行，因为它已分配到池时，才存在此属性。
+    optional: true
+    syntax:
+      content: 'recentTasks?: TaskInformation[]'
+      return:
+        type:
+          - 'azure-batch.TaskInformation[]'
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.runningTasksCount
+    name: runningTasksCount
+    fullName: runningTasksCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'runningTasksCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.schedulingState
+    name: schedulingState
+    fullName: schedulingState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '可能的值包括: ''enabled''、 ''disabled'''
+    optional: true
+    syntax:
+      content: 'schedulingState?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-batch.StartTask
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.startTaskInfo
+    name: startTaskInfo
+    fullName: startTaskInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'startTaskInfo?: StartTaskInformation'
+      return:
+        type:
+          - azure-batch.StartTaskInformation
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '低优先级计算节点已被占用。 另一个计算节点变得可用时，将重新安排时被抢占计算节点运行的任务。 可能的值包括: 空闲、 重新启动操作，重置映像，正在运行，不可用、 创建、 启动、 waitingForStartTask、 startTaskFailed、 未知、 leavingPool，脱机，抢占'
+    optional: true
+    syntax:
+      content: 'state?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.stateTransitionTime
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.totalTasksRun
+    name: totalTasksRun
+    fullName: totalTasksRun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'totalTasksRun?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.totalTasksSucceeded
+    name: totalTasksSucceeded
+    fullName: totalTasksSucceeded
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'totalTasksSucceeded?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'url?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.vmSize
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '在池中的虚拟机的可用大小的信息，请参阅在 Azure Batch 池中计算节点选择 VM 大小 (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes)。'
+    optional: true
+    syntax:
+      content: 'vmSize?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: 'azure-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.ComputeNodeEndpointConfiguration
+    name: ComputeNodeEndpointConfiguration
+    spec.typeScript:
+      - name: ComputeNodeEndpointConfiguration
+        fullName: ComputeNodeEndpointConfiguration
+        uid: azure-batch.ComputeNodeEndpointConfiguration
+  - uid: 'azure-batch.ComputeNodeError[]'
+    name: 'ComputeNodeError[]'
+    spec.typeScript:
+      - name: ComputeNodeError
+        fullName: ComputeNodeError
+        uid: azure-batch.ComputeNodeError
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.NodeAgentInformation
+    name: NodeAgentInformation
+    spec.typeScript:
+      - name: NodeAgentInformation
+        fullName: NodeAgentInformation
+        uid: azure-batch.NodeAgentInformation
+  - uid: 'azure-batch.TaskInformation[]'
+    name: 'TaskInformation[]'
+    spec.typeScript:
+      - name: TaskInformation
+        fullName: TaskInformation
+        uid: azure-batch.TaskInformation
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-batch.StartTask
+  - uid: azure-batch.StartTaskInformation
+    name: StartTaskInformation
+    spec.typeScript:
+      - name: StartTaskInformation
+        fullName: StartTaskInformation
+        uid: azure-batch.StartTaskInformation

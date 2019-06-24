@@ -1,0 +1,170 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobReleaseTask
+    name: JobReleaseTask
+    fullName: JobReleaseTask
+    children:
+      - azure-batch.JobReleaseTask.commandLine
+      - azure-batch.JobReleaseTask.containerSettings
+      - azure-batch.JobReleaseTask.environmentSettings
+      - azure-batch.JobReleaseTask.id
+      - azure-batch.JobReleaseTask.maxWallClockTime
+      - azure-batch.JobReleaseTask.resourceFiles
+      - azure-batch.JobReleaseTask.retentionTime
+      - azure-batch.JobReleaseTask.userIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      作业结束时，以下几种原因，在运行作业释放任务：在用户调用终止作业 API 或删除作业 API 作业仍处于活动状态、 达到作业的最大墙时钟时间的约束，并且作业仍处于活动状态，或作业的作业管理器任务完成，和作业配置为终止时作业管理用户完成了。
+      在其中运行作业的任务和作业准备任务运行并完成每个节点上运行作业释放任务。 如果它已运行作业准备任务，并在作业结束，而该节点上运行的作业的任何其他任务不 （并因此作业准备任务不会重新运行） 之后, 重置映像节点然后计算节点上不运行作业释放任务。
+      如果某个节点重新启动作业释放任务仍在运行时，作业释放任务再次运行时计算节点启动。 所有作业释放任务都完成之前，作业未标记为已完成。 在后台运行作业释放任务。 它不会不会占用一个计划的槽;也就是说，它不会计入指定在池上的 maxTasksPerNode 限制。
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '命令行不会在 shell 下运行，并因此不能充分利用 shell 功能，例如环境变量扩展。 如果你想要利用此类功能，您应中调用 shell 命令行中，例如使用"cmd /c MyCommand"在 Windows 中或"/ bin/sh-c MyCommand"在 Linux 中。 如果命令行所引用的文件路径，它应使用相对路径 （相对于任务工作目录），或使用批处理提供的环境变量 (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)。'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 当指定此选项时，如下 AZ_BATCH_NODE_ROOT_DIR （在节点上的 Azure Batch 目录的根） 的所有目录以递归方式都映射到容器、 所有任务的环境变量都都映射到容器中，和是任务命令行在容器中执行。 外部 AZ_BATCH_NODE_ROOT_DIR 容器中生成的文件可能不会反映到主机的磁盘，这意味着 Api 的批处理文件将无法再访问这些文件。
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID 可以包含字母数字字符，包括连字符和下划线的任意组合，并且不能包含超过 64 个字符。 如果未指定此属性，Batch 服务将分配默认值为 jobrelease。 作业中的任何其他任务不可以与作业释放任务相同的 ID。 如果你尝试提交具有同一 id 的任务，Batch 服务将拒绝请求，错误代码 TaskIdSameAsJobReleaseTask;如果你正在直接调用 REST API，HTTP 状态代码将为 409 （冲突）。
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 列出此元素下的文件位于任务的工作目录中。
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 默认值为 7 天，即任务目录将保留 7 天除非删除计算节点或删除该作业。
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果省略，该任务运行作为唯一的非管理用户的任务。
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

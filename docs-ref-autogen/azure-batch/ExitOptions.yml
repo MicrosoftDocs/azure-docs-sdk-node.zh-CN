@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.ExitOptions
+    name: ExitOptions
+    fullName: ExitOptions
+    children:
+      - azure-batch.ExitOptions.dependencyAction
+      - azure-batch.ExitOptions.jobAction
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.ExitOptions.dependencyAction
+    name: dependencyAction
+    fullName: dependencyAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '默认值为符合的退出代码 0，并对所有其他退出条件的 '' block''。 如果作业的 usesTaskDependencies 属性设置为 false，然后指定 dependencyAction 属性将返回错误和添加任务的请求失败，出现无效的属性值错误。如果你正在直接调用 REST API，HTTP 状态代码为 400 （错误请求）。 可能的值包括: 满足''、 ''block'''
+    optional: true
+    syntax:
+      content: 'dependencyAction?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ExitOptions.jobAction
+    name: jobAction
+    fullName: jobAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      默认值为 none 的退出代码 0，并终止所有其他退出条件。
+      如果作业的 onTaskFailed 属性为 noaction，然后指定此属性将返回错误，并添加任务的请求失败，出现无效的属性值错误。如果你正在直接调用 REST API，HTTP 状态代码为 400 （错误请求）。 可能的值包括: none、 禁用、 terminate
+    optional: true
+    syntax:
+      content: 'jobAction?: string'
+      return:
+        type:
+          - string
+    package: azure-batch

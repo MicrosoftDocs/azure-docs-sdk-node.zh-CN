@@ -86,7 +86,24 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 将人脸添加到大型人脸列表。 输入的人脸被指定为具有 targetFace 矩形的映像。 它将返回表示已添加人脸，persistedFaceId 和 persistedFaceId 将不会过期。
+    summary: |-
+      将最多 1,000,000 张人脸添加到指定的大型人脸列表。
+      <br /> 图像处理包含多个的人脸，输入的人脸可以指定为具有 targetFace 矩形的映像。 它将返回表示已添加人脸 persistedFaceId。 将存储中没有图像。 仅提取人脸功能将存储在之前的服务器上[人脸大型人脸列表-删除](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4)或[大型人脸列表-删除](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)调用。
+      <br /> 请注意 persistedFaceId 是不同于生成的 faceId[人脸-检测](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
+      * 人脸图像质量更高意味着更好地识别精度。 请考虑高质量的人脸： 正面、 clear 和人脸大小为 200 x 200 像素 （100 个像素之间的眼睛） 或更大。
+      * 支持 JPEG、 PNG、 GIF （第一个帧） 和 BMP 格式。 允许的图像文件大小是从 1 KB 到 6 MB。
+      * "targetFace"矩形应包含一个人脸。 零个或多个个人脸均被视为错误。 如果未从返回提供"targetFace"矩形[人脸-检测](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，则不能保证以检测并已成功添加人脸。
+      * 可检测的面部大小 (36 x 36 4096 x 4096 像素)，从大型头部姿势或大型 occlusions 会导致失败。
+      * 按顺序处理与相同的人脸列表添加/删除人脸并与不同的人脸列表是并行。
+      * 最小可检测的面部大小为 36x36 像素中不能大于 1920 x 1080 像素的图像。
+      具有维度大于 1920 x 1080 像素的图像将需要按比例较大的最小的人脸大小。
+      * 可以提供不同的 detectionModel 值。 若要使用并比较了不同检测模型，请参阅[如何指定检测模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建议使用-case(s) |
+      | ---------- | -------- |
+      | detection_01: | 默认检测模型 [大型人脸列表-添加
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3). 建议的正面人脸检测附近。 对于特别大角度 （头部姿势） 的人脸、 封闭的人脸或错误的图像方向的情况，可能检测这种情况下中的人脸。 | |detection_02: |2019 年发布的检测模型可能，尤其是在小型、 侧和模糊的人脸上的改进准确度。 |配额：
+      * 免费层订阅配额：每个大型人脸列表 1,000 人脸。
+      * S0 层订阅配额：每个大型人脸列表 1,000,000 人脸。
     syntax:
       content: 'function addFaceFromStream(largeFaceListId: string, image: msRest.HttpRequestBody, options?: Models.LargeFaceListAddFaceFromStreamOptionalParams)'
       parameters:
@@ -171,7 +188,24 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 将人脸添加到大型人脸列表。 输入的人脸被指定为具有 targetFace 矩形的映像。 它将返回表示已添加人脸，persistedFaceId 和 persistedFaceId 将不会过期。
+    summary: |-
+      将最多 1,000,000 张人脸添加到指定的大型人脸列表。
+      <br /> 图像处理包含多个的人脸，输入的人脸可以指定为具有 targetFace 矩形的映像。 它将返回表示已添加人脸 persistedFaceId。 将存储中没有图像。 仅提取人脸功能将存储在之前的服务器上[人脸大型人脸列表-删除](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4)或[大型人脸列表-删除](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)调用。
+      <br /> 请注意 persistedFaceId 是不同于生成的 faceId[人脸-检测](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
+      * 人脸图像质量更高意味着更好地识别精度。 请考虑高质量的人脸： 正面、 clear 和人脸大小为 200 x 200 像素 （100 个像素之间的眼睛） 或更大。
+      * 支持 JPEG、 PNG、 GIF （第一个帧） 和 BMP 格式。 允许的图像文件大小是从 1 KB 到 6 MB。
+      * "targetFace"矩形应包含一个人脸。 零个或多个个人脸均被视为错误。 如果未从返回提供"targetFace"矩形[人脸-检测](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，则不能保证以检测并已成功添加人脸。
+      * 可检测的面部大小 (36 x 36 4096 x 4096 像素)，从大型头部姿势或大型 occlusions 会导致失败。
+      * 按顺序处理与相同的人脸列表添加/删除人脸并与不同的人脸列表是并行。
+      * 最小可检测的面部大小为 36x36 像素中不能大于 1920 x 1080 像素的图像。
+      具有维度大于 1920 x 1080 像素的图像将需要按比例较大的最小的人脸大小。
+      * 可以提供不同的 detectionModel 值。 若要使用并比较了不同检测模型，请参阅[如何指定检测模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | 模型 | 建议使用-case(s) |
+      | ---------- | -------- |
+      | detection_01: | 默认检测模型 [大型人脸列表-添加
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3). 建议的正面人脸检测附近。 对于特别大角度 （头部姿势） 的人脸、 封闭的人脸或错误的图像方向的情况，可能检测这种情况下中的人脸。 | |detection_02: |2019 年发布的检测模型可能，尤其是在小型、 侧和模糊的人脸上的改进准确度。 |配额：
+      * 免费层订阅配额：每个大型人脸列表 1,000 人脸。
+      * S0 层订阅配额：每个大型人脸列表 1,000,000 人脸。
     syntax:
       content: 'function addFaceFromUrl(largeFaceListId: string, url: string, options?: Models.LargeFaceListAddFaceFromUrlOptionalParams)'
       parameters:
@@ -255,14 +289,15 @@ items:
     summary: |-
       使用用户指定 largeFaceListId、 名称、 可选 userData 和 recognitionModel 创建空的大型人脸列表。
       <br /> 大型人脸列表是一系列人脸，最多 1,000,000 人脸，并由[人脸-查找相似](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。
-      <br /> 创建后，用户应使用[人脸大型人脸列表-添加](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3)导入的人脸并[大型人脸列表-训练](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1)以使其可供[人脸-FindSimilar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。 之前的服务器上存储的人脸[大型人脸列表-删除](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)调用。
+      <br /> 在创建后，用户应使用[人脸大型人脸列表-添加](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3)导入的人脸并[大型人脸列表-训练](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1)以使其可供[人脸-查找相似](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。 将存储中没有图像。 之前的服务器上存储仅提取人脸特征[大型人脸列表-删除](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)调用。
       <br /> 找到类似用于方案，例如查找类似于名人的人脸，相似的人脸筛选，或作为一个指示灯方式人脸识别。 但是，如果实际用途是标识用户，请使用[person Group](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
       [大型人物组](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)并[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)。
-      <br />
+      <br/>应该指定 recognitionModel，以将与此大型人脸列表相关联。 默认值为 recognitionModel 是 recognition_01，如果最新的模型需要请显式指定所需的模型中此参数。 新的人脸添加到现有的大型人脸列表将使用已具有与集合关联的识别模型。 现有的人脸功能的大型人脸列表无法更新为识别模型的另一个版本中提取的功能。
+      * recognition_01:默认识别模型[大型人脸列表-创建](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc)。 与此识别模型绑定是在 2019 年 3 月之前创建的所有这些大型人脸列表。
+      * recognition_02:识别在 2019 年 3 月发布模型。 建议 recognition_02，因为其总体准确性得到了改进与 recognition_01 相比。
+      大型人脸列表配额：
       * 免费层订阅配额：64 大型人脸列表。
       * S0 层订阅配额：1,000,000 大型人脸列表。
-      <br />
-      应该指定 recognitionModel，以将与此大型人脸列表相关联。 默认值为 recognitionModel 是 recognition_01，如果最新的模型需要请显式指定所需的模型中此参数。 新的人脸添加到现有的大型人脸列表将使用已具有与集合关联的识别模型。 现有的人脸功能的大型人脸列表无法更新为识别模型的另一个版本中提取的功能。
     syntax:
       content: 'function create(largeFaceListId: string, options?: Models.LargeFaceListCreateOptionalParams)'
       parameters:
@@ -308,7 +343,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 从大型人脸列表 （和给出 persistedFaceId largeFaceListId） 中删除现有的人脸。 与将人脸相关的持久化的图像也将被删除。
+    summary: |-
+      通过指定的 largeFaceListId 和 persistedFaceId 大型人脸列表从删除人脸。
+      <br /> 按顺序和与其他大型人脸列表是并行处理到/从同一个大型人脸列表添加/删除人脸。
     syntax:
       content: 'function deleteFace(largeFaceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -393,7 +430,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 删除现有 faceListId 根据大型人脸列表。 保存人脸大型人脸列表中的图像也将被删除。
+    summary: 删除指定的大型人脸列表。
     syntax:
       content: 'function deleteMethod(largeFaceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:

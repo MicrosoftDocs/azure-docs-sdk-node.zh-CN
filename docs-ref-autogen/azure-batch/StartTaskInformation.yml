@@ -1,0 +1,167 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.StartTaskInformation
+    name: StartTaskInformation
+    fullName: StartTaskInformation
+    children:
+      - azure-batch.StartTaskInformation.containerInfo
+      - azure-batch.StartTaskInformation.endTime
+      - azure-batch.StartTaskInformation.exitCode
+      - azure-batch.StartTaskInformation.failureInfo
+      - azure-batch.StartTaskInformation.lastRetryTime
+      - azure-batch.StartTaskInformation.result
+      - azure-batch.StartTaskInformation.retryCount
+      - azure-batch.StartTaskInformation.startTime
+      - azure-batch.StartTaskInformation.state
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.StartTaskInformation.containerInfo
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 只有在容器上下文中运行的任务，设置此属性。
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - azure-batch.TaskContainerExecutionInformation
+    package: azure-batch
+  - uid: azure-batch.StartTaskInformation.endTime
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 这是最新的结束时间运行的启动任务中，如果运行的已完成 （即使运行失败的和正在等待重试）。 此元素不存在，如果启动任务当前正在运行。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.StartTaskInformation.exitCode
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      开始任务处于已完成状态时才设置此属性。 一般情况下，进程的退出代码反映了由该进程的应用程序开发人员实现的特定约定。 如果使用退出代码值来决定在代码中，请务必了解使用应用程序进程的退出代码约定。
+      但是，如果批处理服务将终止 （由于超时或通过 API 的用户终止） 启动任务可能会看到操作系统定义的退出代码。
+    optional: true
+    syntax:
+      content: 'exitCode?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.StartTaskInformation.failureInfo
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此属性仅当任务处于已完成状态设置并遇到失败。
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - azure-batch.TaskFailureInformation
+    package: azure-batch
+  - uid: azure-batch.StartTaskInformation.lastRetryTime
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此元素才会显示已重试任务 （即 retryCount 为非零值）。 如果存在，这通常是与 startTime，相同，但如果任务已重新启动而原因并非重试; 可能不同例如，如果在重试期间重新启动计算节点，然后更新 startTime 但 lastRetryTime 不是。
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.StartTaskInformation.result
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '如果值为失败，然后可以 failureInfo 属性中找到失败的详细信息。 可能的值包括: 成功、 故障'
+    optional: true
+    syntax:
+      content: 'result?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.StartTaskInformation.retryCount
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 任务应用程序失败 （非零退出代码） 时重试，预处理的错误 （无法运行任务） 和文件上传错误不会重试。 批处理服务将重试任务，直到达到指定的约束的限制。
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.StartTaskInformation.startTime
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 每次重新启动或重试该任务时，会重置此值 （即，这是最开始任务开始运行的最新时间）。
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.StartTaskInformation.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '可能的值包括: 正在运行、 已完成'
+    syntax:
+      content: 'state: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerExecutionInformation
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: azure-batch.TaskContainerExecutionInformation
+  - uid: azure-batch.TaskFailureInformation
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: azure-batch.TaskFailureInformation

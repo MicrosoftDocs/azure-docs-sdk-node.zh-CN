@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.MultiInstanceSettings
+    name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    children:
+      - azure-batch.MultiInstanceSettings.commonResourceFiles
+      - azure-batch.MultiInstanceSettings.coordinationCommandLine
+      - azure-batch.MultiInstanceSettings.numberOfInstances
+    langs:
+      - typeScript
+    type: interface
+    summary: 多实例任务通常用于支持 MPI 任务。 MPI 情况下，如果任何子任务失败 （例如由于以非零退出代码退出） 整个多实例任务失败。 多实例任务是终止，然后重试，直至达到其重试限制。
+    package: azure-batch
+  - uid: azure-batch.MultiInstanceSettings.commonResourceFiles
+    name: commonResourceFiles
+    fullName: commonResourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 通用资源文件和任务资源文件之间的区别是通用资源文件为所有子任务，包括主要副本，下载，而仅用于主下载任务资源文件。 此外请注意，这些资源文件未下载到任务工作目录，但会将其下载到任务根目录 （已完成的工作目录的上一个目录）。  没有资源文件的列表的最大大小。  当超过最大大小时，则请求将失败，并且响应错误代码将是 RequestEntityTooLarge。 如果发生这种情况，必须在大小减少的 ResourceFiles 集合。 这可以实现使用.zip 文件、 应用程序包或 Docker 容器。
+    optional: true
+    syntax:
+      content: 'commonResourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.MultiInstanceSettings.coordinationCommandLine
+    name: coordinationCommandLine
+    fullName: coordinationCommandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 典型的协调命令行启动后台服务，并验证服务已准备好处理节点间消息。
+    syntax:
+      content: 'coordinationCommandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.MultiInstanceSettings.numberOfInstances
+    name: numberOfInstances
+    fullName: numberOfInstances
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果省略，默认值为 1。
+    optional: true
+    syntax:
+      content: 'numberOfInstances?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+references:
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'

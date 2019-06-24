@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobExecutionInformation
+    name: JobExecutionInformation
+    fullName: JobExecutionInformation
+    children:
+      - azure-batch.JobExecutionInformation.endTime
+      - azure-batch.JobExecutionInformation.poolId
+      - azure-batch.JobExecutionInformation.schedulingError
+      - azure-batch.JobExecutionInformation.startTime
+      - azure-batch.JobExecutionInformation.terminateReason
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobExecutionInformation.endTime
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仅当作业处于完成状态时，才设置此属性。
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.JobExecutionInformation.poolId
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此元素包含作业已分配的实际池。 当从服务的详细信息获取作业时，其中也包含 poolInfo 元素，它包含从池配置数据时添加或更新作业。 该 poolInfo 元素还可能包含池 Id 元素。 如果是这样，两个 Id 都相同。 如果未显示，则表示在自动池上运行作业和此属性包含该自动池的 ID。
+    optional: true
+    syntax:
+      content: 'poolId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobExecutionInformation.schedulingError
+    name: schedulingError
+    fullName: schedulingError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果没有启动作业时没有出错，未设置此属性。
+    optional: true
+    syntax:
+      content: 'schedulingError?: JobSchedulingError'
+      return:
+        type:
+          - azure-batch.JobSchedulingError
+    package: azure-batch
+  - uid: azure-batch.JobExecutionInformation.startTime
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 这是在其中创建作业的时间。
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.JobExecutionInformation.terminateReason
+    name: terminateReason
+    fullName: terminateReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 仅当作业处于完成状态时，才设置此属性。 如果 Batch 服务将终止该作业，它按如下所示设置的原因：JMComplete-作业管理器任务完成，并且 killJobOnCompletion 已设置为 true。 MaxWallClockTimeExpiry-作业已达到其 maxWallClockTime 约束。 TerminateJobSchedule-作为计划的一部分运行的作业和计划终止。 AllTasksComplete-作业的 onAllTasksComplete 属性设置为 terminatejob，以及作业中的所有任务已完成。 TaskFailed-作业的 onTaskFailure 属性设置为 performExitOptionsJobAction 和中的退出条件指定 terminatejob jobAction 失败作业的任务。 任何其他字符串是对终止作业操作的调用中指定的用户定义的原因。
+    optional: true
+    syntax:
+      content: 'terminateReason?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.JobSchedulingError
+    name: JobSchedulingError
+    spec.typeScript:
+      - name: JobSchedulingError
+        fullName: JobSchedulingError
+        uid: azure-batch.JobSchedulingError

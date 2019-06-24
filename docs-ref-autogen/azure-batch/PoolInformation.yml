@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    fullName: PoolInformation
+    children:
+      - azure-batch.PoolInformation.autoPoolSpecification
+      - azure-batch.PoolInformation.poolId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolInformation.autoPoolSpecification
+    name: autoPoolSpecification
+    fullName: autoPoolSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果自动池创建失败，批处理服务将作业移动到已完成的状态，并在作业的计划错误属性中设置池创建错误。 Batch 服务管理的生存期 (这两种创建和指定保持连接，除非删除) 的自动池。 作业处于活动状态时，会影响自动池生存期的任何用户操作将导致意外行为。 必须指定池 ID 或自动池规范，但不可同时使用两者。
+    optional: true
+    syntax:
+      content: 'autoPoolSpecification?: AutoPoolSpecification'
+      return:
+        type:
+          - azure-batch.AutoPoolSpecification
+    package: azure-batch
+  - uid: azure-batch.PoolInformation.poolId
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 您必须确保此属性所引用的池存在。 如果池不存在在 Batch 服务会尝试计划作业时，会一直具有该 id 创建池不运行作业的任何任务。请注意，批处理服务将拒绝作业请求;它将只需运行任务之前存在该池。 必须指定池 ID 或自动池规范，但不可同时使用两者。
+    optional: true
+    syntax:
+      content: 'poolId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.AutoPoolSpecification
+    name: AutoPoolSpecification
+    spec.typeScript:
+      - name: AutoPoolSpecification
+        fullName: AutoPoolSpecification
+        uid: azure-batch.AutoPoolSpecification

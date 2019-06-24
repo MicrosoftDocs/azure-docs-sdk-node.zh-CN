@@ -9,6 +9,8 @@ items:
       - '@azure/event-hubs.ConnectionContextOptions.managementSessionAudience'
       - '@azure/event-hubs.ConnectionContextOptions.tokenProvider'
       - '@azure/event-hubs.ConnectionContextOptions.userAgent'
+      - '@azure/event-hubs.ConnectionContextOptions.webSocket'
+      - '@azure/event-hubs.ConnectionContextOptions.webSocketConstructorOptions'
     langs:
       - typeScript
     type: interface
@@ -41,10 +43,10 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'managementSessionAddress?: string'
+      content: 'managementSessionAddress?: undefined | string'
       return:
         type:
-          - string
+          - undefined | string
     package: '@azure/event-hubs'
   - uid: '@azure/event-hubs.ConnectionContextOptions.managementSessionAudience'
     name: managementSessionAudience
@@ -56,10 +58,10 @@ items:
     summary: ''
     optional: true
     syntax:
-      content: 'managementSessionAudience?: string'
+      content: 'managementSessionAudience?: undefined | string'
       return:
         type:
-          - string
+          - undefined | string
     package: '@azure/event-hubs'
   - uid: '@azure/event-hubs.ConnectionContextOptions.tokenProvider'
     name: tokenProvider
@@ -88,10 +90,45 @@ items:
     summary: '{string}[userAgent]用户代理需要追加到内置用户代理字符串。'
     optional: true
     syntax:
-      content: 'userAgent?: string'
+      content: 'userAgent?: undefined | string'
       return:
         type:
-          - string
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ConnectionContextOptions.webSocket'
+    name: webSocket
+    fullName: webSocket
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      用于创建通过 WebSocket 的 AMQP 连接 WebSocket 构造函数。
+      此选项应提供在以下情况下
+      - 你的环境中阻止了 TCP 端口 5671，这是使用的与事件中心的 AMQP 连接。
+      - 你的应用程序需要代理服务器后面运行
+      - 你的应用程序需要在浏览器中运行，并且你想要提供自己的 Websocket 实现，而不是在浏览器中内置的 WebSocket 的选项。
+    optional: true
+    syntax:
+      content: 'webSocket?: WebSocketImpl'
+      return:
+        type:
+          - WebSocketImpl
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ConnectionContextOptions.webSocketConstructorOptions'
+    name: webSocketConstructorOptions
+    fullName: webSocketConstructorOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{webSocketConstructorOptions} 的选项将传递给 WebSocket 构造函数'
+    optional: true
+    syntax:
+      content: 'webSocketConstructorOptions?: any'
+      return:
+        type:
+          - any
     package: '@azure/event-hubs'
 references:
   - uid: '@azure/event-hubs.ClientOptions'

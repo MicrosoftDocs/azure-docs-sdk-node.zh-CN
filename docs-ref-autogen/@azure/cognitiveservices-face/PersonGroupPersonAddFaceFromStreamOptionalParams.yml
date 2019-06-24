@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromStreamOptionalParams.abortSignal'
       - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromStreamOptionalParams.customHeaders'
+      - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromStreamOptionalParams.detectionModel'
       - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromStreamOptionalParams.onDownloadProgress'
       - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromStreamOptionalParams.onUploadProgress'
       - '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromStreamOptionalParams.targetFace'
@@ -47,6 +48,21 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromStreamOptionalParams.detectionModel'
+    name: detectionModel
+    fullName: detectionModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '检测模型的名称。 检测模型用于在已提交的图像中检测人脸。 可以提供检测模型名称，当执行人脸-检测或 （大） FaceList-添加人脸或 （大） person Group-添加人脸。 如果需要请显式指定另一个模型，默认值是 detection_01。 可能的值包括: detection_01''，''detection_02。 默认值: detection_01。'
+    optional: true
+    syntax:
+      content: 'detectionModel?: DetectionModel'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.DetectionModel'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.PersonGroupPersonAddFaceFromStreamOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -123,3 +139,10 @@ items:
         type:
           - undefined | string
     package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.DetectionModel'
+    name: DetectionModel
+    spec.typeScript:
+      - name: DetectionModel
+        fullName: DetectionModel
+        uid: '@azure/cognitiveservices-face.DetectionModel'

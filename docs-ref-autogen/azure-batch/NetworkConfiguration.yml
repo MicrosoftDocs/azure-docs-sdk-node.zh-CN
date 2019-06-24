@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+      - azure-batch.NetworkConfiguration.endpointConfiguration
+      - azure-batch.NetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: 池网络配置。
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '可能的值包括: none、 作业'
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.endpointConfiguration
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 池终结点配置仅支持在池上具有 virtualMachineConfiguration 属性。
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - azure-batch.PoolEndpointConfiguration
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '虚拟网络必须是同一区域和订阅与 Azure Batch 帐户中。 指定的子网应有足够可用的 IP 地址来应对池中计算节点数。 如果子网没有足够的可用 IP 地址，池将部分分配节点，并将发生调整大小错误。 为指定的 VNet，MicrosoftAzureBatch 服务主体必须具有经典虚拟机参与者基于角色的访问控制 (RBAC) 角色。 指定的子网必须允许来自 Azure Batch 服务能够计划任务的节点上的通信。 这可以通过检查是否指定的 VNet 具有任何关联的网络安全组 (NSG) 来进行验证。 如果 nsg 拒绝指定的子网中的节点通信，然后 Batch 服务将设置计算节点的状态为不可用。 对于使用 virtualMachineConfiguration 创建的池仅 ARM 支持虚拟网络 (microsoft.network/virtualnetworks)，但对于使用 cloudServiceConfiguration 创建 ARM 和经典虚拟网络支持。 如果指定的 VNet 存在关联的网络安全组 (NSG)，则必须为入站通信启用数个保留的系统端口。 使用创建的池虚拟机配置，启用端口 29876 和 29877，以及适用于 Linux 和端口 3389 的 Windows 端口 22。 对于使用云服务配置创建池，启用端口 10100、 20100 和 30100。 此外启用出站连接到端口 443 上的 Azure 存储。 有关更多详细信息，请参阅： https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration'
+    optional: true
+    syntax:
+      content: 'subnetId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolEndpointConfiguration
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: azure-batch.PoolEndpointConfiguration

@@ -5,9 +5,9 @@ items:
     fullName: StorageAccount
     children:
       - '@azure/arm-storage.StorageAccount.accessTier'
+      - '@azure/arm-storage.StorageAccount.azureFilesIdentityBasedAuthentication'
       - '@azure/arm-storage.StorageAccount.creationTime'
       - '@azure/arm-storage.StorageAccount.customDomain'
-      - '@azure/arm-storage.StorageAccount.enableAzureFilesAadIntegration'
       - '@azure/arm-storage.StorageAccount.enableHttpsTrafficOnly'
       - '@azure/arm-storage.StorageAccount.encryption'
       - '@azure/arm-storage.StorageAccount.failoverInProgress'
@@ -33,7 +33,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="cb7d5-101">存储帐户。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-101">The storage account.</span></span>
+    summary: <span data-ttu-id="595d4-101">存储帐户。</span><span class="sxs-lookup"><span data-stu-id="595d4-101">The storage account.</span></span>
     extends:
       name: '@azure/arm-storage.TrackedResource'
     package: '@azure/arm-storage'
@@ -45,14 +45,29 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-102">所需的存储帐户，其中 kind = BlobStorage。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-102">Required for storage accounts where kind = BlobStorage.</span></span> <span data-ttu-id="cb7d5-103">使用进行计费的访问级别。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-103">The access tier used for billing.</span></span>
-      <span data-ttu-id="cb7d5-104">可能的值包括：热、 冷**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-104">Possible values include: 'Hot', 'Cool' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-102">所需的存储帐户，其中 kind = BlobStorage。</span><span class="sxs-lookup"><span data-stu-id="595d4-102">Required for storage accounts where kind = BlobStorage.</span></span> <span data-ttu-id="595d4-103">使用进行计费的访问级别。</span><span class="sxs-lookup"><span data-stu-id="595d4-103">The access tier used for billing.</span></span>
+      <span data-ttu-id="595d4-104">可能的值包括：热、 冷**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-104">Possible values include: 'Hot', 'Cool' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'accessTier?: AccessTier'
       return:
         type:
           - '@azure/arm-storage.AccessTier'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccount.azureFilesIdentityBasedAuthentication'
+    name: azureFilesIdentityBasedAuthentication
+    fullName: azureFilesIdentityBasedAuthentication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="595d4-105">提供了 Azure 文件的标识基于身份验证设置。</span><span class="sxs-lookup"><span data-stu-id="595d4-105">Provides the identity based authentication settings for Azure Files.</span></span>
+    optional: true
+    syntax:
+      content: 'azureFilesIdentityBasedAuthentication?: AzureFilesIdentityBasedAuthentication'
+      return:
+        type:
+          - '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.creationTime'
     name: creationTime
@@ -62,8 +77,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-105">获取在 UTC 中的创建日期和时间的存储帐户。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-105">Gets the creation date and time of the storage account in UTC.</span></span>
-      <span data-ttu-id="cb7d5-106">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-106">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-106">获取在 UTC 中的创建日期和时间的存储帐户。</span><span class="sxs-lookup"><span data-stu-id="595d4-106">Gets the creation date and time of the storage account in UTC.</span></span>
+      <span data-ttu-id="595d4-107">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'creationTime?: Date'
@@ -79,29 +94,14 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-107">获取自定义域分配给此存储帐户的用户。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-107">Gets the custom domain the user assigned to this storage account.</span></span>
-      <span data-ttu-id="cb7d5-108">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-108">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-108">获取自定义域分配给此存储帐户的用户。</span><span class="sxs-lookup"><span data-stu-id="595d4-108">Gets the custom domain the user assigned to this storage account.</span></span>
+      <span data-ttu-id="595d4-109">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'customDomain?: CustomDomain'
       return:
         type:
           - '@azure/arm-storage.CustomDomain'
-    package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.StorageAccount.enableAzureFilesAadIntegration'
-    name: enableAzureFilesAadIntegration
-    fullName: enableAzureFilesAadIntegration
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: <span data-ttu-id="cb7d5-109">如果为 SMB 启用 Azure 文件 AAD 集成设置为 true。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-109">Enables Azure Files AAD Integration for SMB if sets to true.</span></span>
-    optional: true
-    syntax:
-      content: 'enableAzureFilesAadIntegration?: undefined | false | true'
-      return:
-        type:
-          - undefined | false | true
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccount.enableHttpsTrafficOnly'
     name: enableHttpsTrafficOnly
@@ -110,7 +110,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="cb7d5-110">如果允许 https 流量仅向存储服务设置为 true。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-110">Allows https traffic only to storage service if sets to true.</span></span>
+    summary: <span data-ttu-id="595d4-110">如果允许 https 流量仅向存储服务设置为 true。</span><span class="sxs-lookup"><span data-stu-id="595d4-110">Allows https traffic only to storage service if sets to true.</span></span>
     optional: true
     syntax:
       content: 'enableHttpsTrafficOnly?: undefined | false | true'
@@ -126,8 +126,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-111">获取该帐户上的加密设置。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-111">Gets the encryption settings on the account.</span></span> <span data-ttu-id="cb7d5-112">如果未指定，该帐户是未加密。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-112">If unspecified, the account is unencrypted.</span></span>
-      <span data-ttu-id="cb7d5-113">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-113">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-111">获取该帐户上的加密设置。</span><span class="sxs-lookup"><span data-stu-id="595d4-111">Gets the encryption settings on the account.</span></span> <span data-ttu-id="595d4-112">如果未指定，该帐户是未加密。</span><span class="sxs-lookup"><span data-stu-id="595d4-112">If unspecified, the account is unencrypted.</span></span>
+      <span data-ttu-id="595d4-113">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-113">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'encryption?: Encryption'
@@ -143,8 +143,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-114">如果正在故障转移，则值将为 true，否则，它将为 null。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-114">If the failover is in progress, the value will be true, otherwise, it will be null.</span></span>
-      <span data-ttu-id="cb7d5-115">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-115">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-114">如果正在故障转移，则值将为 true，否则，它将为 null。</span><span class="sxs-lookup"><span data-stu-id="595d4-114">If the failover is in progress, the value will be true, otherwise, it will be null.</span></span>
+      <span data-ttu-id="595d4-115">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-115">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'failoverInProgress?: undefined | false | true'
@@ -159,7 +159,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="cb7d5-116">地域复制统计信息**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-116">Geo Replication Stats **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: '<span data-ttu-id="595d4-116">地域复制统计信息**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-116">Geo Replication Stats **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
     optional: true
     syntax:
       content: 'geoReplicationStats?: GeoReplicationStats'
@@ -174,7 +174,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="cb7d5-117">资源的完全限定的资源的 Id。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-117">Fully qualified resource Id for the resource.</span></span> <span data-ttu-id="cb7d5-118">Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName} **NOTE:此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-118">Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName} **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: '<span data-ttu-id="595d4-117">资源的完全限定的资源的 Id。</span><span class="sxs-lookup"><span data-stu-id="595d4-117">Fully qualified resource Id for the resource.</span></span> <span data-ttu-id="595d4-118">Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName} **NOTE:此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-118">Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName} **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -189,7 +189,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="cb7d5-119">资源的标识。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-119">The identity of the resource.</span></span>
+    summary: <span data-ttu-id="595d4-119">资源的标识。</span><span class="sxs-lookup"><span data-stu-id="595d4-119">The identity of the resource.</span></span>
     optional: true
     syntax:
       content: 'identity?: Identity'
@@ -204,7 +204,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="cb7d5-120">如果启用帐户 HierarchicalNamespace 设置为 true。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-120">Account HierarchicalNamespace enabled if sets to true.</span></span>
+    summary: <span data-ttu-id="595d4-120">如果启用帐户 HierarchicalNamespace 设置为 true。</span><span class="sxs-lookup"><span data-stu-id="595d4-120">Account HierarchicalNamespace enabled if sets to true.</span></span>
     optional: true
     syntax:
       content: 'isHnsEnabled?: undefined | false | true'
@@ -219,7 +219,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="cb7d5-121">获取类型。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-121">Gets the Kind.</span></span> <span data-ttu-id="cb7d5-122">可能的值包括：''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage'' **NOTE:此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-122">Possible values include: ''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: '<span data-ttu-id="595d4-121">获取类型。</span><span class="sxs-lookup"><span data-stu-id="595d4-121">Gets the Kind.</span></span> <span data-ttu-id="595d4-122">可能的值包括：''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage'' **NOTE:此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-122">Possible values include: ''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
     optional: true
     syntax:
       content: 'kind?: Kind'
@@ -235,8 +235,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-123">获取最新的实例的故障转移到辅助位置的时间戳。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-123">Gets the timestamp of the most recent instance of a failover to the secondary location.</span></span> <span data-ttu-id="cb7d5-124">仅最新时间戳会保留。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-124">Only the most recent timestamp is retained.</span></span> <span data-ttu-id="cb7d5-125">如果已永远不会故障转移实例，则不返回此元素。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-125">This element is not returned if there has never been a failover instance.</span></span> <span data-ttu-id="cb7d5-126">AccountType 为 Standard_GRS 或 Standard_RAGRS 时才可用。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-126">Only available if the accountType is Standard_GRS or Standard_RAGRS.</span></span>
-      <span data-ttu-id="cb7d5-127">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-127">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-123">获取最新的实例的故障转移到辅助位置的时间戳。</span><span class="sxs-lookup"><span data-stu-id="595d4-123">Gets the timestamp of the most recent instance of a failover to the secondary location.</span></span> <span data-ttu-id="595d4-124">仅最新时间戳会保留。</span><span class="sxs-lookup"><span data-stu-id="595d4-124">Only the most recent timestamp is retained.</span></span> <span data-ttu-id="595d4-125">如果已永远不会故障转移实例，则不返回此元素。</span><span class="sxs-lookup"><span data-stu-id="595d4-125">This element is not returned if there has never been a failover instance.</span></span> <span data-ttu-id="595d4-126">AccountType 为 Standard_GRS 或 Standard_RAGRS 时才可用。</span><span class="sxs-lookup"><span data-stu-id="595d4-126">Only available if the accountType is Standard_GRS or Standard_RAGRS.</span></span>
+      <span data-ttu-id="595d4-127">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-127">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'lastGeoFailoverTime?: Date'
@@ -251,7 +251,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="cb7d5-128">资源所在的地理位置</span><span class="sxs-lookup"><span data-stu-id="cb7d5-128">The geo-location where the resource lives</span></span>
+    summary: <span data-ttu-id="595d4-128">资源所在的地理位置</span><span class="sxs-lookup"><span data-stu-id="595d4-128">The geo-location where the resource lives</span></span>
     syntax:
       content: 'location: string'
       return:
@@ -265,7 +265,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="cb7d5-129">资源的名称**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-129">The name of the resource **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: '<span data-ttu-id="595d4-129">资源的名称**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-129">The name of the resource **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -280,7 +280,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="cb7d5-130">网络规则集**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-130">Network rule set **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: '<span data-ttu-id="595d4-130">网络规则集**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-130">Network rule set **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
     optional: true
     syntax:
       content: 'networkRuleSet?: NetworkRuleSet'
@@ -296,9 +296,9 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-131">获取用于检索公共 blob、 队列或表对象的 Url。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-131">Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object.</span></span>
-      <span data-ttu-id="cb7d5-132">请注意 Standard_ZRS 和 Premium_LRS 帐户只返回 blob 终结点。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-132">Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.</span></span>
-      <span data-ttu-id="cb7d5-133">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-133">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-131">获取用于检索公共 blob、 队列或表对象的 Url。</span><span class="sxs-lookup"><span data-stu-id="595d4-131">Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object.</span></span>
+      <span data-ttu-id="595d4-132">请注意 Standard_ZRS 和 Premium_LRS 帐户只返回 blob 终结点。</span><span class="sxs-lookup"><span data-stu-id="595d4-132">Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.</span></span>
+      <span data-ttu-id="595d4-133">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-133">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'primaryEndpoints?: Endpoints'
@@ -314,8 +314,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-134">获取存储帐户的主数据中心位置。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-134">Gets the location of the primary data center for the storage account.</span></span>
-      <span data-ttu-id="cb7d5-135">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-135">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-134">获取存储帐户的主数据中心位置。</span><span class="sxs-lookup"><span data-stu-id="595d4-134">Gets the location of the primary data center for the storage account.</span></span>
+      <span data-ttu-id="595d4-135">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-135">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'primaryLocation?: undefined | string'
@@ -330,7 +330,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="cb7d5-136">在调用该操作时的时间获取的存储帐户的状态。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-136">Gets the status of the storage account at the time the operation was called.</span></span> <span data-ttu-id="cb7d5-137">可能的值包括：创建，ResolvingDNS，已成功**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-137">Possible values include: ''Creating'', ''ResolvingDNS'', ''Succeeded'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: '<span data-ttu-id="595d4-136">在调用该操作时的时间获取的存储帐户的状态。</span><span class="sxs-lookup"><span data-stu-id="595d4-136">Gets the status of the storage account at the time the operation was called.</span></span> <span data-ttu-id="595d4-137">可能的值包括：创建，ResolvingDNS，已成功**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-137">Possible values include: ''Creating'', ''ResolvingDNS'', ''Succeeded'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
     optional: true
     syntax:
       content: 'provisioningState?: ProvisioningState'
@@ -346,8 +346,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-138">获取用于从存储帐户的辅助位置执行检索公共 blob、 队列或表对象的 Url。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-138">Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account.</span></span> <span data-ttu-id="cb7d5-139">SKU 名称为 Standard_RAGRS 时才可用。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-139">Only available if the SKU name is Standard_RAGRS.</span></span>
-      <span data-ttu-id="cb7d5-140">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-140">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-138">获取用于从存储帐户的辅助位置执行检索公共 blob、 队列或表对象的 Url。</span><span class="sxs-lookup"><span data-stu-id="595d4-138">Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account.</span></span> <span data-ttu-id="595d4-139">SKU 名称为 Standard_RAGRS 时才可用。</span><span class="sxs-lookup"><span data-stu-id="595d4-139">Only available if the SKU name is Standard_RAGRS.</span></span>
+      <span data-ttu-id="595d4-140">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-140">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'secondaryEndpoints?: Endpoints'
@@ -363,8 +363,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-141">获取存储帐户的异地复制的辅助数据库的位置。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-141">Gets the location of the geo-replicated secondary for the storage account.</span></span> <span data-ttu-id="cb7d5-142">AccountType 为 Standard_GRS 或 Standard_RAGRS 时才可用。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-142">Only available if the accountType is Standard_GRS or Standard_RAGRS.</span></span>
-      <span data-ttu-id="cb7d5-143">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-143">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-141">获取存储帐户的异地复制的辅助数据库的位置。</span><span class="sxs-lookup"><span data-stu-id="595d4-141">Gets the location of the geo-replicated secondary for the storage account.</span></span> <span data-ttu-id="595d4-142">AccountType 为 Standard_GRS 或 Standard_RAGRS 时才可用。</span><span class="sxs-lookup"><span data-stu-id="595d4-142">Only available if the accountType is Standard_GRS or Standard_RAGRS.</span></span>
+      <span data-ttu-id="595d4-143">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-143">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'secondaryLocation?: undefined | string'
@@ -380,8 +380,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-144">获取 SKU。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-144">Gets the SKU.</span></span>
-      <span data-ttu-id="cb7d5-145">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-145">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-144">获取 SKU。</span><span class="sxs-lookup"><span data-stu-id="595d4-144">Gets the SKU.</span></span>
+      <span data-ttu-id="595d4-145">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-145">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'sku?: Sku'
@@ -396,7 +396,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="cb7d5-146">获取指示存储帐户的主位置是否可用或不可用状态。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-146">Gets the status indicating whether the primary location of the storage account is available or unavailable.</span></span> <span data-ttu-id="cb7d5-147">可能的值包括: 可用、 不可用**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-147">Possible values include: ''available'', ''unavailable'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: '<span data-ttu-id="595d4-146">获取指示存储帐户的主位置是否可用或不可用状态。</span><span class="sxs-lookup"><span data-stu-id="595d4-146">Gets the status indicating whether the primary location of the storage account is available or unavailable.</span></span> <span data-ttu-id="595d4-147">可能的值包括: 可用、 不可用**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-147">Possible values include: ''available'', ''unavailable'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
     optional: true
     syntax:
       content: 'statusOfPrimary?: AccountStatus'
@@ -411,7 +411,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="cb7d5-148">获取指示辅助位置的存储帐户是否可用或不可用状态。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-148">Gets the status indicating whether the secondary location of the storage account is available or unavailable.</span></span> <span data-ttu-id="cb7d5-149">仅当 SKU 名称为 Standard_GRS 或 Standard_RAGRS 才可用。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-149">Only available if the SKU name is Standard_GRS or Standard_RAGRS.</span></span> <span data-ttu-id="cb7d5-150">可能的值包括: 可用、 不可用**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-150">Possible values include: ''available'', ''unavailable'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: '<span data-ttu-id="595d4-148">获取指示辅助位置的存储帐户是否可用或不可用状态。</span><span class="sxs-lookup"><span data-stu-id="595d4-148">Gets the status indicating whether the secondary location of the storage account is available or unavailable.</span></span> <span data-ttu-id="595d4-149">仅当 SKU 名称为 Standard_GRS 或 Standard_RAGRS 才可用。</span><span class="sxs-lookup"><span data-stu-id="595d4-149">Only available if the SKU name is Standard_GRS or Standard_RAGRS.</span></span> <span data-ttu-id="595d4-150">可能的值包括: 可用、 不可用**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-150">Possible values include: ''available'', ''unavailable'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
     optional: true
     syntax:
       content: 'statusOfSecondary?: AccountStatus'
@@ -426,7 +426,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="cb7d5-151">资源标记。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-151">Resource tags.</span></span>
+    summary: <span data-ttu-id="595d4-151">资源标记。</span><span class="sxs-lookup"><span data-stu-id="595d4-151">Resource tags.</span></span>
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
@@ -442,8 +442,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="cb7d5-152">资源的类型。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-152">The type of the resource.</span></span> <span data-ttu-id="cb7d5-153">例如-microsoft.compute/virtualmachines 或 microsoft.storage/storageaccounts。</span><span class="sxs-lookup"><span data-stu-id="cb7d5-153">Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.</span></span>
-      <span data-ttu-id="cb7d5-154">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="cb7d5-154">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="595d4-152">资源的类型。</span><span class="sxs-lookup"><span data-stu-id="595d4-152">The type of the resource.</span></span> <span data-ttu-id="595d4-153">例如-microsoft.compute/virtualmachines 或 microsoft.storage/storageaccounts。</span><span class="sxs-lookup"><span data-stu-id="595d4-153">Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.</span></span>
+      <span data-ttu-id="595d4-154">**注意：此属性将不序列化。它仅可以由服务器填充。**</span><span class="sxs-lookup"><span data-stu-id="595d4-154">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'type?: undefined | string'
@@ -464,6 +464,12 @@ references:
       - name: AccessTier
         fullName: AccessTier
         uid: '@azure/arm-storage.AccessTier'
+  - uid: '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
+    name: AzureFilesIdentityBasedAuthentication
+    spec.typeScript:
+      - name: AzureFilesIdentityBasedAuthentication
+        fullName: AzureFilesIdentityBasedAuthentication
+        uid: '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
   - uid: '@azure/arm-storage.CustomDomain'
     name: CustomDomain
     spec.typeScript:

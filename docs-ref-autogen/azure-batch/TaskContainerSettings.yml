@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    children:
+      - azure-batch.TaskContainerSettings.containerRunOptions
+      - azure-batch.TaskContainerSettings.imageName
+      - azure-batch.TaskContainerSettings.registry
+      - azure-batch.TaskContainerSettings.workingDirectory
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.containerRunOptions
+    name: containerRunOptions
+    fullName: containerRunOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="61b16-101">这些附加选项作为"docker create"命令，除了那些由 Batch 服务的自变量提供。</span><span class="sxs-lookup"><span data-stu-id="61b16-101">These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerRunOptions?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.imageName
+    name: imageName
+    fullName: imageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="61b16-102">这是完整的映像引用，将指定进行"docker 拉取"。</span><span class="sxs-lookup"><span data-stu-id="61b16-102">This is the full Image reference, as would be specified to "docker pull".</span></span> <span data-ttu-id="61b16-103">如果作为映像名称，该标记的一部分提供任何标记": 最新"用作默认值。</span><span class="sxs-lookup"><span data-stu-id="61b16-103">If no tag is provided as part of the Image name, the tag ":latest" is used as a default.</span></span>'
+    syntax:
+      content: 'imageName: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.registry
+    name: registry
+    fullName: registry
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="61b16-104">如果已提供在创建池时，则可以省略此设置。</span><span class="sxs-lookup"><span data-stu-id="61b16-104">This setting can be omitted if was already provided at Pool creation.</span></span>
+    optional: true
+    syntax:
+      content: 'registry?: ContainerRegistry'
+      return:
+        type:
+          - azure-batch.ContainerRegistry
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.workingDirectory
+    name: workingDirectory
+    fullName: workingDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="61b16-105">默认值为 taskWorkingDirectory。</span><span class="sxs-lookup"><span data-stu-id="61b16-105">The default is ''taskWorkingDirectory''.</span></span> <span data-ttu-id="61b16-106">可能的值包括: taskWorkingDirectory''，''containerImageDefault</span><span class="sxs-lookup"><span data-stu-id="61b16-106">Possible values include: ''taskWorkingDirectory'', ''containerImageDefault''</span></span>'
+    optional: true
+    syntax:
+      content: 'workingDirectory?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.ContainerRegistry
+    name: ContainerRegistry
+    spec.typeScript:
+      - name: ContainerRegistry
+        fullName: ContainerRegistry
+        uid: azure-batch.ContainerRegistry

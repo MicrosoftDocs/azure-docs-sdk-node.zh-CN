@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - azure-batch.JobConstraints.maxTaskRetryCount
+      - azure-batch.JobConstraints.maxWallClockTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobConstraints.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="852fd-101">请注意，此值专门用于控制重试的次数。</span><span class="sxs-lookup"><span data-stu-id="852fd-101">Note that this value specifically controls the number of retries.</span></span> <span data-ttu-id="852fd-102">批处理服务将尝试一次，每个任务，然后重试，直至达到此限制。</span><span class="sxs-lookup"><span data-stu-id="852fd-102">The Batch service will try each Task once, and may then retry up to this limit.</span></span> <span data-ttu-id="852fd-103">例如，如果最大重试计数最多为 3，批次尝试任务 4 次 （一个初始尝试和试 3 次）。</span><span class="sxs-lookup"><span data-stu-id="852fd-103">For example, if the maximum retry count is 3, Batch tries a Task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="852fd-104">如果最大重试计数为 0，Batch 服务不重试任务。</span><span class="sxs-lookup"><span data-stu-id="852fd-104">If the maximum retry count is 0, the Batch service does not retry Tasks.</span></span> <span data-ttu-id="852fd-105">如果最大重试计数为-1，Batch 服务会无限制重试任务。</span><span class="sxs-lookup"><span data-stu-id="852fd-105">If the maximum retry count is -1, the Batch service retries Tasks without limit.</span></span> <span data-ttu-id="852fd-106">默认值为 0（不重试）。</span><span class="sxs-lookup"><span data-stu-id="852fd-106">The default value is 0 (no retries).</span></span>'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.JobConstraints.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="852fd-107">如果作业未完成的时间限制内，Batch 服务将终止它和仍在运行任何任务。</span><span class="sxs-lookup"><span data-stu-id="852fd-107">If the Job does not complete within the time limit, the Batch service terminates it and any Tasks that are still running.</span></span> <span data-ttu-id="852fd-108">在这种情况下，终止的原因为 MaxWallClockTimeExpiry。</span><span class="sxs-lookup"><span data-stu-id="852fd-108">In this case, the termination reason will be MaxWallClockTimeExpiry.</span></span> <span data-ttu-id="852fd-109">如果未指定此属性，则没有时间限制上对作业可能运行多长时间。</span><span class="sxs-lookup"><span data-stu-id="852fd-109">If this property is not specified, there is no time limit on how long the Job may run.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

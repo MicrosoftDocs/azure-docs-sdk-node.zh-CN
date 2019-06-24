@@ -1,0 +1,134 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-hubs.ReceiveOptions'
+    name: ReceiveOptions
+    fullName: ReceiveOptions
+    children:
+      - '@azure/event-hubs.ReceiveOptions.consumerGroup'
+      - '@azure/event-hubs.ReceiveOptions.enableReceiverRuntimeMetric'
+      - '@azure/event-hubs.ReceiveOptions.epoch'
+      - '@azure/event-hubs.ReceiveOptions.eventPosition'
+      - '@azure/event-hubs.ReceiveOptions.identifier'
+      - '@azure/event-hubs.ReceiveOptions.name'
+      - '@azure/event-hubs.ReceiveOptions.prefetchCount'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="d1dd2-101">描述一个可以接收消息时设置的选项。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-101">Describes the options that one can set while receiving messages.</span></span>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.consumerGroup'
+    name: consumerGroup
+    fullName: consumerGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="d1dd2-102">{string}[consumerGroup]接收方想要连接到使用者组。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-102">{string} [consumerGroup] The consumer group to which the receiver wants to connect to.</span></span>
+      <span data-ttu-id="d1dd2-103">如果未提供，则它将连接到"$default"使用者组。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-103">If not provided then it will be connected to "$default" consumer group.</span></span>
+    optional: true
+    syntax:
+      content: 'consumerGroup?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.enableReceiverRuntimeMetric'
+    name: enableReceiverRuntimeMetric
+    fullName: enableReceiverRuntimeMetric
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d1dd2-104">{布尔值}[enableReceiverRuntimeMetric]指示是否启用的接收方运行时指标的值。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-104">{boolean} [enableReceiverRuntimeMetric] A value indicating whether the runtime metric of a receiver is enabled.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableReceiverRuntimeMetric?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.epoch'
+    name: epoch
+    fullName: epoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d1dd2-105">{number}[epoch]此接收方当前正在使用分区所有权 epoch 值。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-105">{number} [epoch] The epoch value that this receiver is currently using for partition ownership.</span></span>'
+    optional: true
+    syntax:
+      content: 'epoch?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.eventPosition'
+    name: eventPosition
+    fullName: eventPosition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="d1dd2-106">{object}[eventPosition]要开始接收消息的事件起始位置。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-106">{object} [eventPosition] The starting event position at which to start receiving messages.</span></span>
+      <span data-ttu-id="d1dd2-107">这用于筛选的事件中心接收方的消息。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-107">This is used to filter messages for the EventHub Receiver.</span></span>
+    optional: true
+    syntax:
+      content: 'eventPosition?: EventPosition'
+      return:
+        type:
+          - '@azure/event-hubs.EventPosition'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.identifier'
+    name: identifier
+    fullName: identifier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d1dd2-108">{string}[identifier]接收方标识符该 uniqely 标识接收方。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-108">{string} [identifier] The receiver identifier that uniqely identifies the receiver.</span></span>'
+    optional: true
+    syntax:
+      content: 'identifier?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d1dd2-109">{string}[名称]接收方的名称。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-109">{string} [name] The name of the receiver.</span></span> <span data-ttu-id="d1dd2-110">如果未提供，则默认情况下我们将设置一个 GUID。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-110">If not provided then we will set a GUID by default.</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ReceiveOptions.prefetchCount'
+    name: prefetchCount
+    fullName: prefetchCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d1dd2-111">{number}[prefetchCount]事件的上限此接收方将主动接收而不考虑是否接收操作处于挂起状态。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-111">{number} [prefetchCount] The upper limit of events this receiver will actively receive regardless of whether a receive operation is pending.</span></span> <span data-ttu-id="d1dd2-112">默认值为 1000年。</span><span class="sxs-lookup"><span data-stu-id="d1dd2-112">Defaults to 1000.</span></span>'
+    optional: true
+    syntax:
+      content: 'prefetchCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-hubs'
+references:
+  - uid: '@azure/event-hubs.EventPosition'
+    name: EventPosition
+    spec.typeScript:
+      - name: EventPosition
+        fullName: EventPosition
+        uid: '@azure/event-hubs.EventPosition'

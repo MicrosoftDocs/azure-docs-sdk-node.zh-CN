@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkSecurityGroupRule
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - azure-batch.NetworkSecurityGroupRule.access
+      - azure-batch.NetworkSecurityGroupRule.priority
+      - azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+      - azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.access
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6afde-101">可能的值包括: 允许、 拒绝</span><span class="sxs-lookup"><span data-stu-id="6afde-101">Possible values include: ''allow'', ''deny''</span></span>'
+    syntax:
+      content: 'access: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="6afde-102">池内的优先级必须是唯一的并按优先级顺序进行计算。</span><span class="sxs-lookup"><span data-stu-id="6afde-102">Priorities within a Pool must be unique and are evaluated in order of priority.</span></span>
+      <span data-ttu-id="6afde-103">编号越低，优先级越高。</span><span class="sxs-lookup"><span data-stu-id="6afde-103">The lower the number the higher the priority.</span></span> <span data-ttu-id="6afde-104">例如，规则可以指定使用序号 150、 250 和 350。</span><span class="sxs-lookup"><span data-stu-id="6afde-104">For example, rules could be specified with order numbers of 150, 250, and 350.</span></span> <span data-ttu-id="6afde-105">具有 150 的订单号的规则优先于序号为 250 的规则。</span><span class="sxs-lookup"><span data-stu-id="6afde-105">The rule with the order number of 150 takes precedence over the rule that has an order of 250.</span></span> <span data-ttu-id="6afde-106">允许的优先级为 150 到 3500。</span><span class="sxs-lookup"><span data-stu-id="6afde-106">Allowed priorities are 150 to 3500.</span></span> <span data-ttu-id="6afde-107">如果请求失败，出现 HTTP 状态代码 400 提供任何保留的或重复值。</span><span class="sxs-lookup"><span data-stu-id="6afde-107">If any reserved or duplicate values are provided the request fails with HTTP status code 400.</span></span>
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6afde-108">有效值为单个 IP 地址 (例如 10.10.10.10)、ip)、 IP 子网 (即 192.168.1.0/24)、 默认标记或 \* （表示所有地址）。</span><span class="sxs-lookup"><span data-stu-id="6afde-108">Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or \* (for all addresses).</span></span>  <span data-ttu-id="6afde-109">如果任何其他请求失败，出现 HTTP 状态代码 400 提供值。</span><span class="sxs-lookup"><span data-stu-id="6afde-109">If any other values are provided the request fails with HTTP status code 400.</span></span>'
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    name: sourcePortRanges
+    fullName: sourcePortRanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6afde-110">有效值为 *(针对所有端口 0-65535)、 特定端口 (即 22) 或端口范围 (即 100-200)。端口必须在 0 到 65535 的范围内。在此集合中的每个条目不得重叠任何其他项 （一个范围或单个端口）。如果任何其他请求失败，出现 HTTP 状态代码 400 提供值。默认值是*。</span><span class="sxs-lookup"><span data-stu-id="6afde-110">Valid values are ''*'' (for all ports 0 - 65535), a specific port (i.e. 22), or a port range (i.e. 100-200). The ports must be in the range of 0 to 65535. Each entry in this collection must not overlap any other entry (either a range or an individual port). If any other values are provided the request fails with HTTP status code 400. The default value is ''*''.</span></span>'
+    optional: true
+    syntax:
+      content: 'sourcePortRanges?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch

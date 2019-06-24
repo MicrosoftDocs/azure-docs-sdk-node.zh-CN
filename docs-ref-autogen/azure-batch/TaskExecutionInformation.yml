@@ -1,0 +1,182 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskExecutionInformation
+    name: TaskExecutionInformation
+    fullName: TaskExecutionInformation
+    children:
+      - azure-batch.TaskExecutionInformation.containerInfo
+      - azure-batch.TaskExecutionInformation.endTime
+      - azure-batch.TaskExecutionInformation.exitCode
+      - azure-batch.TaskExecutionInformation.failureInfo
+      - azure-batch.TaskExecutionInformation.lastRequeueTime
+      - azure-batch.TaskExecutionInformation.lastRetryTime
+      - azure-batch.TaskExecutionInformation.requeueCount
+      - azure-batch.TaskExecutionInformation.result
+      - azure-batch.TaskExecutionInformation.retryCount
+      - azure-batch.TaskExecutionInformation.startTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.containerInfo
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6d94e-101">只有在容器上下文中运行的任务，设置此属性。</span><span class="sxs-lookup"><span data-stu-id="6d94e-101">This property is set only if the Task runs in a container context.</span></span>
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - azure-batch.TaskContainerExecutionInformation
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.endTime
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6d94e-102">仅当任务处于已完成状态时，才设置此属性。</span><span class="sxs-lookup"><span data-stu-id="6d94e-102">This property is set only if the Task is in the Completed state.</span></span>
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.exitCode
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6d94e-103">仅当任务处于已完成状态时，才设置此属性。</span><span class="sxs-lookup"><span data-stu-id="6d94e-103">This property is set only if the Task is in the completed state.</span></span> <span data-ttu-id="6d94e-104">一般情况下，进程的退出代码反映了由该进程的应用程序开发人员实现的特定约定。</span><span class="sxs-lookup"><span data-stu-id="6d94e-104">In general, the exit code for a process reflects the specific convention implemented by the application developer for that process.</span></span> <span data-ttu-id="6d94e-105">如果使用退出代码值来决定在代码中，请务必了解使用应用程序进程的退出代码约定。</span><span class="sxs-lookup"><span data-stu-id="6d94e-105">If you use the exit code value to make decisions in your code, be sure that you know the exit code convention used by the application process.</span></span> <span data-ttu-id="6d94e-106">但是，如果批处理服务将终止 （由于超时或通过 API 的用户终止） 任务可能会看到操作系统定义的退出代码。</span><span class="sxs-lookup"><span data-stu-id="6d94e-106">However, if the Batch service terminates the Task (due to timeout, or user termination via the API) you may see an operating system-defined exit code.</span></span>'
+    optional: true
+    syntax:
+      content: 'exitCode?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.failureInfo
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6d94e-107">此属性仅当任务处于已完成状态设置并遇到失败。</span><span class="sxs-lookup"><span data-stu-id="6d94e-107">This property is set only if the Task is in the completed state and encountered a failure.</span></span>
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - azure-batch.TaskFailureInformation
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.lastRequeueTime
+    name: lastRequeueTime
+    fullName: lastRequeueTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6d94e-108">仅当 requeueCount 不为零，设置此属性。</span><span class="sxs-lookup"><span data-stu-id="6d94e-108">This property is set only if the requeueCount is nonzero.</span></span>
+    optional: true
+    syntax:
+      content: 'lastRequeueTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.lastRetryTime
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6d94e-109">此元素才会显示已重试任务 （即 retryCount 为非零值）。</span><span class="sxs-lookup"><span data-stu-id="6d94e-109">This element is present only if the Task was retried (i.e. retryCount is nonzero).</span></span> <span data-ttu-id="6d94e-110">如果存在，这通常是与 startTime，相同，但如果任务已重新启动而原因并非重试; 可能不同例如，如果在重试期间重新启动计算节点，然后更新 startTime 但 lastRetryTime 不是。</span><span class="sxs-lookup"><span data-stu-id="6d94e-110">If present, this is typically the same as startTime, but may be different if the Task has been restarted for reasons other than retry; for example, if the Compute Node was rebooted during a retry, then the startTime is updated but the lastRetryTime is not.</span></span>'
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.requeueCount
+    name: requeueCount
+    fullName: requeueCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6d94e-111">当用户 （通过调整/收缩池） 从池中删除计算节点或已禁用的作业时，用户可以指定运行任务的计算节点上重新排队等待执行。</span><span class="sxs-lookup"><span data-stu-id="6d94e-111">When the user removes Compute Nodes from a Pool (by resizing/shrinking the pool) or when the Job is being disabled, the user can specify that running Tasks on the Compute Nodes be requeued for execution.</span></span> <span data-ttu-id="6d94e-112">此计数跟踪由于这些原因被重新排队任务的多少次。</span><span class="sxs-lookup"><span data-stu-id="6d94e-112">This count tracks how many times the Task has been requeued for these reasons.</span></span>'
+    syntax:
+      content: 'requeueCount: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.result
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6d94e-113">如果值为失败，然后可以 failureInfo 属性中找到失败的详细信息。</span><span class="sxs-lookup"><span data-stu-id="6d94e-113">If the value is ''failed'', then the details of the failure can be found in the failureInfo property.</span></span> <span data-ttu-id="6d94e-114">可能的值包括: 成功、 故障</span><span class="sxs-lookup"><span data-stu-id="6d94e-114">Possible values include: ''success'', ''failure''</span></span>'
+    optional: true
+    syntax:
+      content: 'result?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.retryCount
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6d94e-115">任务应用程序失败 （非零退出代码） 时重试，预处理的错误 （无法运行任务） 和文件上传错误不会重试。</span><span class="sxs-lookup"><span data-stu-id="6d94e-115">Task application failures (non-zero exit code) are retried, pre-processing errors (the Task could not be run) and file upload errors are not retried.</span></span> <span data-ttu-id="6d94e-116">批处理服务将重试任务，直到达到指定的约束的限制。</span><span class="sxs-lookup"><span data-stu-id="6d94e-116">The Batch service will retry the Task up to the limit specified by the constraints.</span></span>'
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.startTime
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6d94e-117">正在运行对应于正在运行状态，因此如果任务指定资源文件或包，然后开始时间反映了下载或部署这些任务启动的时间。</span><span class="sxs-lookup"><span data-stu-id="6d94e-117">''Running'' corresponds to the running state, so if the Task specifies resource files or Packages, then the start time reflects the time at which the Task started downloading or deploying these.</span></span> <span data-ttu-id="6d94e-118">如果已重新启动或重试该任务，这是任务开始运行的最新时间。</span><span class="sxs-lookup"><span data-stu-id="6d94e-118">If the Task has been restarted or retried, this is the most recent time at which the Task started running.</span></span> <span data-ttu-id="6d94e-119">此属性是存在仅对处于正在运行或已完成状态的任务。</span><span class="sxs-lookup"><span data-stu-id="6d94e-119">This property is present only for Tasks that are in the running or completed state.</span></span>'
+    optional: true
+    syntax:
+      content: 'startTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerExecutionInformation
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: azure-batch.TaskContainerExecutionInformation
+  - uid: azure-batch.TaskFailureInformation
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: azure-batch.TaskFailureInformation

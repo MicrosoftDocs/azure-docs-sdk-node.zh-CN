@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.AutoPoolSpecification
+    name: AutoPoolSpecification
+    fullName: AutoPoolSpecification
+    children:
+      - azure-batch.AutoPoolSpecification.autoPoolIdPrefix
+      - azure-batch.AutoPoolSpecification.keepAlive
+      - azure-batch.AutoPoolSpecification.pool
+      - azure-batch.AutoPoolSpecification.poolLifetimeOption
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.autoPoolIdPrefix
+    name: autoPoolIdPrefix
+    fullName: autoPoolIdPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1b86b-101">每个批处理服务将每个自动池上创建的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="1b86b-101">The Batch service assigns each auto Pool a unique identifier on creation.</span></span> <span data-ttu-id="1b86b-102">若要区分针对不同目的创建的池，可以指定此元素将前缀添加到分配的 ID。</span><span class="sxs-lookup"><span data-stu-id="1b86b-102">To distinguish between Pools created for different purposes, you can specify this element to add a prefix to the ID that is assigned.</span></span> <span data-ttu-id="1b86b-103">前缀可以最多 20 个字符。</span><span class="sxs-lookup"><span data-stu-id="1b86b-103">The prefix can be up to 20 characters long.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoPoolIdPrefix?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.keepAlive
+    name: keepAlive
+    fullName: keepAlive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1b86b-104">如果为 false，Batch 服务删除池后 （这是由 poolLifetimeOption 设置） 其生存时间过期;也就是说，当作业计划的作业完成时。</span><span class="sxs-lookup"><span data-stu-id="1b86b-104">If false, the Batch service deletes the Pool once its lifetime (as determined by the poolLifetimeOption setting) expires; that is, when the Job or Job Schedule completes.</span></span> <span data-ttu-id="1b86b-105">如果为 true，Batch 服务不会自动删除该池。</span><span class="sxs-lookup"><span data-stu-id="1b86b-105">If true, the Batch service does not delete the Pool automatically.</span></span> <span data-ttu-id="1b86b-106">最多是要删除自动池的用户使用此选项创建。</span><span class="sxs-lookup"><span data-stu-id="1b86b-106">It is up to the user to delete auto Pools created with this option.</span></span>'
+    optional: true
+    syntax:
+      content: 'keepAlive?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.pool
+    name: pool
+    fullName: pool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'pool?: PoolSpecification'
+      return:
+        type:
+          - azure-batch.PoolSpecification
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.poolLifetimeOption
+    name: poolLifetimeOption
+    fullName: poolLifetimeOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1b86b-107">可能的值包括: jobSchedule，作业</span><span class="sxs-lookup"><span data-stu-id="1b86b-107">Possible values include: ''jobSchedule'', ''job''</span></span>'
+    syntax:
+      content: 'poolLifetimeOption: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolSpecification
+    name: PoolSpecification
+    spec.typeScript:
+      - name: PoolSpecification
+        fullName: PoolSpecification
+        uid: azure-batch.PoolSpecification

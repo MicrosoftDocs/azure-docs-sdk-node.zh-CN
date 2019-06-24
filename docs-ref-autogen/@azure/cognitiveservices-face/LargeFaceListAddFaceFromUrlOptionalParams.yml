@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.abortSignal'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.customHeaders'
+      - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.detectionModel'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onDownloadProgress'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onUploadProgress'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.targetFace'
@@ -14,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="b3b21-101">可选参数。</span><span class="sxs-lookup"><span data-stu-id="b3b21-101">Optional Parameters.</span></span>
+    summary: <span data-ttu-id="55ca7-101">可选参数。</span><span class="sxs-lookup"><span data-stu-id="55ca7-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/cognitiveservices-face'
@@ -25,7 +26,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="b3b21-102">用于中止的信号请求。</span><span class="sxs-lookup"><span data-stu-id="b3b21-102">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="55ca7-102">用于中止的信号请求。</span><span class="sxs-lookup"><span data-stu-id="55ca7-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -40,13 +41,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="b3b21-103">{object}[customHeaders]用户定义的自定义请求标头将发送请求之前应用。</span><span class="sxs-lookup"><span data-stu-id="b3b21-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="55ca7-103">{object}[customHeaders]用户定义的自定义请求标头将发送请求之前应用。</span><span class="sxs-lookup"><span data-stu-id="55ca7-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.detectionModel'
+    name: detectionModel
+    fullName: detectionModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="55ca7-104">检测模型的名称。</span><span class="sxs-lookup"><span data-stu-id="55ca7-104">Name of detection model.</span></span> <span data-ttu-id="55ca7-105">检测模型用于在已提交的图像中检测人脸。</span><span class="sxs-lookup"><span data-stu-id="55ca7-105">Detection model is used to detect faces in the submitted image.</span></span> <span data-ttu-id="55ca7-106">可以提供检测模型名称，当执行人脸-检测或 （大） FaceList-添加人脸或 （大） person Group-添加人脸。</span><span class="sxs-lookup"><span data-stu-id="55ca7-106">A detection model name can be provided when performing Face - Detect or (Large)FaceList - Add Face or (Large)PersonGroup - Add Face.</span></span> <span data-ttu-id="55ca7-107">如果需要请显式指定另一个模型，默认值是 detection_01。</span><span class="sxs-lookup"><span data-stu-id="55ca7-107">The default value is ''detection_01'', if another model is needed, please explicitly specify it.</span></span> <span data-ttu-id="55ca7-108">可能的值包括: detection_01''，''detection_02。</span><span class="sxs-lookup"><span data-stu-id="55ca7-108">Possible values include: ''detection_01'', ''detection_02''.</span></span> <span data-ttu-id="55ca7-109">默认值: detection_01。</span><span class="sxs-lookup"><span data-stu-id="55ca7-109">Default value: ''detection_01''.</span></span>'
+    optional: true
+    syntax:
+      content: 'detectionModel?: DetectionModel'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.DetectionModel'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -55,7 +71,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="b3b21-104">在下载进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="b3b21-104">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="55ca7-110">在下载进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="55ca7-110">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -70,7 +86,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="b3b21-105">在上传进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="b3b21-105">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="55ca7-111">在上传进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="55ca7-111">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -85,7 +101,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="b3b21-106">要指定目标人脸添加到的格式中的人员的人脸矩形"targetFace = 左侧、 顶部、 宽度、 高度"。</span><span class="sxs-lookup"><span data-stu-id="b3b21-106">A face rectangle to specify the target face to be added to a person in the format of "targetFace=left,top,width,height".</span></span> <span data-ttu-id="b3b21-107">例如</span><span class="sxs-lookup"><span data-stu-id="b3b21-107">E.g.</span></span> <span data-ttu-id="b3b21-108">"targetFace=10,10,100,100".</span><span class="sxs-lookup"><span data-stu-id="b3b21-108">"targetFace=10,10,100,100".</span></span> <span data-ttu-id="b3b21-109">如果映像中有多个人脸，targetFace 时需要指定要添加的人脸。</span><span class="sxs-lookup"><span data-stu-id="b3b21-109">If there is more than one face in the image, targetFace is required to specify which face to add.</span></span> <span data-ttu-id="b3b21-110">没有 targetFace 意味着只有一个在整个图像中检测到的人脸。</span><span class="sxs-lookup"><span data-stu-id="b3b21-110">No targetFace means there is only one face detected in the entire image.</span></span>'
+    summary: '<span data-ttu-id="55ca7-112">要指定目标人脸添加到的格式中的人员的人脸矩形"targetFace = 左侧、 顶部、 宽度、 高度"。</span><span class="sxs-lookup"><span data-stu-id="55ca7-112">A face rectangle to specify the target face to be added to a person in the format of "targetFace=left,top,width,height".</span></span> <span data-ttu-id="55ca7-113">例如</span><span class="sxs-lookup"><span data-stu-id="55ca7-113">E.g.</span></span> <span data-ttu-id="55ca7-114">"targetFace=10,10,100,100".</span><span class="sxs-lookup"><span data-stu-id="55ca7-114">"targetFace=10,10,100,100".</span></span> <span data-ttu-id="55ca7-115">如果映像中有多个人脸，targetFace 时需要指定要添加的人脸。</span><span class="sxs-lookup"><span data-stu-id="55ca7-115">If there is more than one face in the image, targetFace is required to specify which face to add.</span></span> <span data-ttu-id="55ca7-116">没有 targetFace 意味着只有一个在整个图像中检测到的人脸。</span><span class="sxs-lookup"><span data-stu-id="55ca7-116">No targetFace means there is only one face detected in the entire image.</span></span>'
     optional: true
     syntax:
       content: 'targetFace?: number[]'
@@ -100,7 +116,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="b3b21-111">一个请求可以获取自动终止之前的毫秒数。</span><span class="sxs-lookup"><span data-stu-id="b3b21-111">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="55ca7-117">一个请求可以获取自动终止之前的毫秒数。</span><span class="sxs-lookup"><span data-stu-id="55ca7-117">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -115,7 +131,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="b3b21-112">有关出于任何目的人脸用户指定的数据。</span><span class="sxs-lookup"><span data-stu-id="b3b21-112">User-specified data about the face for any purpose.</span></span> <span data-ttu-id="b3b21-113">最大长度为 1 KB。</span><span class="sxs-lookup"><span data-stu-id="b3b21-113">The maximum length is 1KB.</span></span>
+    summary: <span data-ttu-id="55ca7-118">有关出于任何目的人脸用户指定的数据。</span><span class="sxs-lookup"><span data-stu-id="55ca7-118">User-specified data about the face for any purpose.</span></span> <span data-ttu-id="55ca7-119">最大长度为 1 KB。</span><span class="sxs-lookup"><span data-stu-id="55ca7-119">The maximum length is 1KB.</span></span>
     optional: true
     syntax:
       content: 'userData?: undefined | string'
@@ -123,3 +139,10 @@ items:
         type:
           - undefined | string
     package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.DetectionModel'
+    name: DetectionModel
+    spec.typeScript:
+      - name: DetectionModel
+        fullName: DetectionModel
+        uid: '@azure/cognitiveservices-face.DetectionModel'

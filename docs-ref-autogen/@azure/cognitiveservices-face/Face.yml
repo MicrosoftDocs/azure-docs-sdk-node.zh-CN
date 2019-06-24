@@ -29,7 +29,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="0a6d0-101">表示人脸的类。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-101">Class representing a Face.</span></span>
+    summary: <span data-ttu-id="cbadf-101">表示人脸的类。</span><span class="sxs-lookup"><span data-stu-id="cbadf-101">Class representing a Face.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.Face.detectWithStream_2'
     name: 'detectWithStream(msRest.HttpRequestBody, FaceDetectWithStreamOptionalParams, ServiceCallback<DetectedFace[]>)'
@@ -44,16 +44,16 @@ items:
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="0a6d0-102">图像流。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-102">An image stream.</span></span>
+          description: <span data-ttu-id="cbadf-102">图像流。</span><span class="sxs-lookup"><span data-stu-id="cbadf-102">An image stream.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams'
-          description: <span data-ttu-id="0a6d0-103">可选参数</span><span class="sxs-lookup"><span data-stu-id="0a6d0-103">The optional parameters</span></span>
+          description: <span data-ttu-id="cbadf-103">可选参数</span><span class="sxs-lookup"><span data-stu-id="cbadf-103">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
           description: |
-            <span data-ttu-id="0a6d0-104">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-104">The callback</span></span>
+            <span data-ttu-id="cbadf-104">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-104">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceDetectWithStreamResponse>
@@ -64,14 +64,35 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="0a6d0-105">检测人脸在图像并返回的人脸位置，和 （可选） 使用 faceIds、 界标、 和属性。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-105">Detect human faces in an image and returns face locations, and optionally with faceIds, landmarks, and attributes.</span></span>'
+    summary: |-
+      <span data-ttu-id="cbadf-105">检测图像中的人脸，返回人脸矩形以及可选的 faceId、地标和属性。</span><span class="sxs-lookup"><span data-stu-id="cbadf-105">Detect human faces in an image, return face rectangles, and optionally with faceIds, landmarks, and attributes.</span></span><br />
+      * <span data-ttu-id="cbadf-106">将存储中没有图像。</span><span class="sxs-lookup"><span data-stu-id="cbadf-106">No image will be stored.</span></span> <span data-ttu-id="cbadf-107">仅提取人脸功能将存储在服务器上。</span><span class="sxs-lookup"><span data-stu-id="cbadf-107">Only the extracted face feature will be stored on server.</span></span> <span data-ttu-id="cbadf-108">FaceId 是人脸功能的标识符和将用于[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [人脸</span><span class="sxs-lookup"><span data-stu-id="cbadf-108">The faceId is an identifier of the face feature and will be used in [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), and [Face</span></span>
+      - <span data-ttu-id="cbadf-109">查找 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。</span><span class="sxs-lookup"><span data-stu-id="cbadf-109">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>
+      <span data-ttu-id="cbadf-110">存储的人脸功能将过期，删除原始检测调用之后的 24 小时。</span><span class="sxs-lookup"><span data-stu-id="cbadf-110">The stored face feature(s) will expire and be deleted 24 hours after the original detection call.</span></span>
+      * <span data-ttu-id="cbadf-111">可选参数包括 faceId、 界标、 和属性。</span><span class="sxs-lookup"><span data-stu-id="cbadf-111">Optional parameters include faceId, landmarks, and attributes.</span></span> <span data-ttu-id="cbadf-112">属性包括年龄、 性别、 headPose、 微笑、 facialHair、 眼镜、 情感、 头发、 构成、 封闭、 附件、 模糊、 曝光和降噪。</span><span class="sxs-lookup"><span data-stu-id="cbadf-112">Attributes include age, gender, headPose, smile, facialHair, glasses, emotion, hair, makeup, occlusion, accessories, blur, exposure and noise.</span></span> <span data-ttu-id="cbadf-113">一些特定属性返回的结果可能不是非常准确。</span><span class="sxs-lookup"><span data-stu-id="cbadf-113">Some of the results returned for specific attributes may not be highly accurate.</span></span>
+      * <span data-ttu-id="cbadf-114">支持 JPEG、 PNG、 GIF （第一个帧） 和 BMP 格式。</span><span class="sxs-lookup"><span data-stu-id="cbadf-114">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="cbadf-115">允许的图像文件大小是从 1 KB 到 6 MB。</span><span class="sxs-lookup"><span data-stu-id="cbadf-115">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="cbadf-116">最多 100 人脸可返回图像。</span><span class="sxs-lookup"><span data-stu-id="cbadf-116">Up to 100 faces can be returned for an image.</span></span> <span data-ttu-id="cbadf-117">人脸是按从大到小的人脸矩形大小排序。</span><span class="sxs-lookup"><span data-stu-id="cbadf-117">Faces are ranked by face rectangle size from large to small.</span></span>
+      * <span data-ttu-id="cbadf-118">为了获得最佳结果，查询时[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [人脸</span><span class="sxs-lookup"><span data-stu-id="cbadf-118">For optimal results when querying [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), and [Face</span></span>
+      - <span data-ttu-id="cbadf-119">查找的 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) （returnFaceId 为 true），请使用人脸的： 正面、 明确且具有的最小大小为 200 x 200 像素 （100 个像素之间的眼睛）。</span><span class="sxs-lookup"><span data-stu-id="cbadf-119">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' is true), please use faces that are: frontal, clear, and with a minimum size of 200x200 pixels (100 pixels between eyes).</span></span>
+      * <span data-ttu-id="cbadf-120">最小可检测的面部大小为 36x36 像素中不能大于 1920 x 1080 像素的图像。</span><span class="sxs-lookup"><span data-stu-id="cbadf-120">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="cbadf-121">具有维度大于 1920 x 1080 像素的图像将需要按比例较大的最小的人脸大小。</span><span class="sxs-lookup"><span data-stu-id="cbadf-121">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="cbadf-122">可以提供不同的 detectionModel 值。</span><span class="sxs-lookup"><span data-stu-id="cbadf-122">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="cbadf-123">若要使用并比较了不同检测模型，请参阅[如何指定检测模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="cbadf-123">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="cbadf-124">模型</span><span class="sxs-lookup"><span data-stu-id="cbadf-124">Model</span></span> | <span data-ttu-id="cbadf-125">建议使用-case(s)</span><span class="sxs-lookup"><span data-stu-id="cbadf-125">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="cbadf-126">detection_01:</span><span class="sxs-lookup"><span data-stu-id="cbadf-126">'detection_01':</span></span> | <span data-ttu-id="cbadf-127">[人脸-默认检测模型</span><span class="sxs-lookup"><span data-stu-id="cbadf-127">The default detection model for [Face -</span></span>
+      <span data-ttu-id="cbadf-128">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。</span><span class="sxs-lookup"><span data-stu-id="cbadf-128">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span> <span data-ttu-id="cbadf-129">建议的正面人脸检测附近。</span><span class="sxs-lookup"><span data-stu-id="cbadf-129">Recommend for near frontal face detection.</span></span> <span data-ttu-id="cbadf-130">对于特别大角度 （头部姿势） 的人脸、 封闭的人脸或错误的图像方向的情况，可能检测这种情况下中的人脸。</span><span class="sxs-lookup"><span data-stu-id="cbadf-130">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="cbadf-131">| |detection_02: |2019 年发布的检测模型可能，尤其是在小型、 侧和模糊的人脸上的改进准确度。</span><span class="sxs-lookup"><span data-stu-id="cbadf-131">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
+      * <span data-ttu-id="cbadf-132">提供了不同 recognitionModel 值。</span><span class="sxs-lookup"><span data-stu-id="cbadf-132">Different 'recognitionModel' values are provided.</span></span> <span data-ttu-id="cbadf-133">如果等跟进操作的验证，标识，查找类似需要，请使用 recognitionModel 参数指定的识别模型。</span><span class="sxs-lookup"><span data-stu-id="cbadf-133">If follow-up operations like Verify, Identify, Find Similar are needed, please specify the recognition model with 'recognitionModel' parameter.</span></span> <span data-ttu-id="cbadf-134">默认值为 recognitionModel 是 recognition_01，如果最新模型需要请显式指定所需的模型中此参数。</span><span class="sxs-lookup"><span data-stu-id="cbadf-134">The default value for 'recognitionModel' is 'recognition_01', if latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="cbadf-135">指定后，检测到的 faceIds 将与指定的识别模型相关联。</span><span class="sxs-lookup"><span data-stu-id="cbadf-135">Once specified, the detected faceIds will be associated with the specified recognition model.</span></span> <span data-ttu-id="cbadf-136">更多详细信息，请参阅[如何指定一个认证模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span><span class="sxs-lookup"><span data-stu-id="cbadf-136">More details, please refer to [How to specify a recognition model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span></span>
+      | <span data-ttu-id="cbadf-137">模型</span><span class="sxs-lookup"><span data-stu-id="cbadf-137">Model</span></span> | <span data-ttu-id="cbadf-138">建议使用-case(s)</span><span class="sxs-lookup"><span data-stu-id="cbadf-138">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="cbadf-139">recognition_01:</span><span class="sxs-lookup"><span data-stu-id="cbadf-139">'recognition_01':</span></span> | <span data-ttu-id="cbadf-140">[人脸-默认识别模型</span><span class="sxs-lookup"><span data-stu-id="cbadf-140">The default recognition model for [Face -</span></span>
+      <span data-ttu-id="cbadf-141">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。</span><span class="sxs-lookup"><span data-stu-id="cbadf-141">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span> <span data-ttu-id="cbadf-142">所有这些 faceIds 2019 年 3 月之前创建的是与此识别模型绑定。</span><span class="sxs-lookup"><span data-stu-id="cbadf-142">All those faceIds created before 2019 March are bonded with this recognition model.</span></span> <span data-ttu-id="cbadf-143">| |recognition_02: |识别在 2019 年 3 月发布模型。</span><span class="sxs-lookup"><span data-stu-id="cbadf-143">| | 'recognition_02': | Recognition model released in 2019 March.</span></span> <span data-ttu-id="cbadf-144">建议 recognition_02，因为其总体准确性得到了改进与 recognition_01 相比。</span><span class="sxs-lookup"><span data-stu-id="cbadf-144">'recognition_02' is recommended since its overall accuracy is improved compared with 'recognition_01'.</span></span> |
     syntax:
       content: 'function detectWithStream(image: msRest.HttpRequestBody, options?: Models.FaceDetectWithStreamOptionalParams)'
       parameters:
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="0a6d0-106">图像流。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-106">An image stream.</span></span>
+          description: <span data-ttu-id="cbadf-145">图像流。</span><span class="sxs-lookup"><span data-stu-id="cbadf-145">An image stream.</span></span>
         - id: options
           type:
             - Models.FaceDetectWithStreamOptionalParams
@@ -94,12 +115,12 @@ items:
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="0a6d0-107">图像流。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-107">An image stream.</span></span>
+          description: <span data-ttu-id="cbadf-146">图像流。</span><span class="sxs-lookup"><span data-stu-id="cbadf-146">An image stream.</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
           description: |
-            <span data-ttu-id="0a6d0-108">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-108">The callback</span></span>
+            <span data-ttu-id="cbadf-147">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-147">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceDetectWithStreamResponse>
@@ -117,16 +138,16 @@ items:
         - id: url
           type:
             - string
-          description: <span data-ttu-id="0a6d0-109">可公开访问的图像的 URL</span><span class="sxs-lookup"><span data-stu-id="0a6d0-109">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="cbadf-148">可公开访问的图像的 URL</span><span class="sxs-lookup"><span data-stu-id="cbadf-148">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams'
-          description: <span data-ttu-id="0a6d0-110">可选参数</span><span class="sxs-lookup"><span data-stu-id="0a6d0-110">The optional parameters</span></span>
+          description: <span data-ttu-id="cbadf-149">可选参数</span><span class="sxs-lookup"><span data-stu-id="cbadf-149">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
           description: |
-            <span data-ttu-id="0a6d0-111">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-111">The callback</span></span>
+            <span data-ttu-id="cbadf-150">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-150">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceDetectWithUrlResponse>
@@ -138,24 +159,34 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="0a6d0-112">检测图像中的人脸，返回人脸矩形以及可选的 faceId、地标和属性。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-112">Detect human faces in an image, return face rectangles, and optionally with faceIds, landmarks, and attributes.</span></span><br />
-      * <span data-ttu-id="0a6d0-113">可选参数包括 faceId、 界标、 和属性。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-113">Optional parameters including faceId, landmarks, and attributes.</span></span> <span data-ttu-id="0a6d0-114">属性包括年龄、 性别、 headPose、 微笑、 facialHair、 眼镜、 情感、 头发、 构成、 封闭、 附件、 模糊、 曝光和降噪。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-114">Attributes include age, gender, headPose, smile, facialHair, glasses, emotion, hair, makeup, occlusion, accessories, blur, exposure and noise.</span></span>
-      * <span data-ttu-id="0a6d0-115">提取的人脸功能，而不是实际的图像，将存储在服务器上。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-115">The extracted face feature, instead of the actual image, will be stored on server.</span></span> <span data-ttu-id="0a6d0-116">FaceId 是人脸功能的标识符和将用于[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [人脸</span><span class="sxs-lookup"><span data-stu-id="0a6d0-116">The faceId is an identifier of the face feature and will be used in [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), and [Face</span></span>
-      - <span data-ttu-id="0a6d0-117">查找 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-117">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span> <span data-ttu-id="0a6d0-118">到期时间检测调用之后的 24 小时。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-118">It will expire 24 hours after the detection call.</span></span>
-      * <span data-ttu-id="0a6d0-119">人脸图像质量更高意味着更好的检测和识别精度。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-119">Higher face image quality means better detection and recognition precision.</span></span> <span data-ttu-id="0a6d0-120">请考虑高质量的人脸： 正面、 clear 和人脸大小为 200 x 200 像素 （100 个像素之间的眼睛） 或更大。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-120">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
-      * <span data-ttu-id="0a6d0-121">支持 JPEG、 PNG、 GIF （第一个帧） 和 BMP 格式。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-121">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="0a6d0-122">允许的图像文件大小是从 1 KB 到 6 MB。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-122">The allowed image file size is from 1KB to 6MB.</span></span>
-      * <span data-ttu-id="0a6d0-123">其大小为 36x36 到 4096x4096 像素时可检测的人脸。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-123">Faces are detectable when its size is 36x36 to 4096x4096 pixels.</span></span> <span data-ttu-id="0a6d0-124">如果需要检测非常小的但清除人脸，请尝试放大输入的图像。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-124">If need to detect very small but clear faces, please try to enlarge the input image.</span></span>
-      * <span data-ttu-id="0a6d0-125">最多 64 张脸可返回图像。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-125">Up to 64 faces can be returned for an image.</span></span> <span data-ttu-id="0a6d0-126">人脸是按从大到小的人脸矩形大小排序。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-126">Faces are ranked by face rectangle size from large to small.</span></span>
-      * <span data-ttu-id="0a6d0-127">面部检测器倾向于使用正面和接近正面的人脸。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-127">Face detector prefer frontal and near-frontal faces.</span></span> <span data-ttu-id="0a6d0-128">有些人脸可能无法检测到，例如非常大的面部角度 （头部姿势） 或正在封闭的像素，或错误的图像方向的情况。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-128">There are cases that faces may not be detected, e.g. exceptionally large face angles (head-pose) or being occluded, or wrong image orientation.</span></span>
-      * <span data-ttu-id="0a6d0-129">属性 （年龄、 性别、 headPose、 微笑、 facialHair、 眼镜、 情感、 头发、 构成、 封闭、 附件、 模糊、 曝光和降噪） 可能不完全准确。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-129">Attributes (age, gender, headPose, smile, facialHair, glasses, emotion, hair, makeup, occlusion, accessories, blur, exposure and noise) may not be perfectly accurate.</span></span> <span data-ttu-id="0a6d0-130">HeadPose 的 pitch 值是保留的字段，并且将始终返回 0。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-130">HeadPose's pitch value is a reserved field and will always return 0.</span></span>
-      * <span data-ttu-id="0a6d0-131">提供了不同 recognitionModel 值。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-131">Different 'recognitionModel' values are provided.</span></span> <span data-ttu-id="0a6d0-132">如果等跟进操作的验证，标识，查找类似需要，请使用 recognitionModel 参数指定的识别模型。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-132">If follow-up operations like Verify, Identify, Find Similar are needed, please specify the recognition model with 'recognitionModel' parameter.</span></span> <span data-ttu-id="0a6d0-133">默认值为 recognitionModel 是 recognition_01，如果最新模型需要请显式指定所需的模型中此参数。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-133">The default value for 'recognitionModel' is 'recognition_01', if latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="0a6d0-134">指定后，检测到的 faceIds 将与指定的识别模型相关联。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-134">Once specified, the detected faceIds will be associated with the specified recognition model.</span></span> <span data-ttu-id="0a6d0-135">更多详细信息，请参阅[如何指定一个认证模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span><span class="sxs-lookup"><span data-stu-id="0a6d0-135">More details, please refer to [How to specify a recognition model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span></span>
+      <span data-ttu-id="cbadf-151">检测图像中的人脸，返回人脸矩形以及可选的 faceId、地标和属性。</span><span class="sxs-lookup"><span data-stu-id="cbadf-151">Detect human faces in an image, return face rectangles, and optionally with faceIds, landmarks, and attributes.</span></span><br />
+      * <span data-ttu-id="cbadf-152">将存储中没有图像。</span><span class="sxs-lookup"><span data-stu-id="cbadf-152">No image will be stored.</span></span> <span data-ttu-id="cbadf-153">仅提取人脸功能将存储在服务器上。</span><span class="sxs-lookup"><span data-stu-id="cbadf-153">Only the extracted face feature will be stored on server.</span></span> <span data-ttu-id="cbadf-154">FaceId 是人脸功能的标识符和将用于[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [人脸</span><span class="sxs-lookup"><span data-stu-id="cbadf-154">The faceId is an identifier of the face feature and will be used in [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), and [Face</span></span>
+      - <span data-ttu-id="cbadf-155">查找 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)。</span><span class="sxs-lookup"><span data-stu-id="cbadf-155">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>
+      <span data-ttu-id="cbadf-156">存储的人脸功能将过期，删除原始检测调用之后的 24 小时。</span><span class="sxs-lookup"><span data-stu-id="cbadf-156">The stored face feature(s) will expire and be deleted 24 hours after the original detection call.</span></span>
+      * <span data-ttu-id="cbadf-157">可选参数包括 faceId、 界标、 和属性。</span><span class="sxs-lookup"><span data-stu-id="cbadf-157">Optional parameters include faceId, landmarks, and attributes.</span></span> <span data-ttu-id="cbadf-158">属性包括年龄、 性别、 headPose、 微笑、 facialHair、 眼镜、 情感、 头发、 构成、 封闭、 附件、 模糊、 曝光和降噪。</span><span class="sxs-lookup"><span data-stu-id="cbadf-158">Attributes include age, gender, headPose, smile, facialHair, glasses, emotion, hair, makeup, occlusion, accessories, blur, exposure and noise.</span></span> <span data-ttu-id="cbadf-159">一些特定属性返回的结果可能不是非常准确。</span><span class="sxs-lookup"><span data-stu-id="cbadf-159">Some of the results returned for specific attributes may not be highly accurate.</span></span>
+      * <span data-ttu-id="cbadf-160">支持 JPEG、 PNG、 GIF （第一个帧） 和 BMP 格式。</span><span class="sxs-lookup"><span data-stu-id="cbadf-160">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="cbadf-161">允许的图像文件大小是从 1 KB 到 6 MB。</span><span class="sxs-lookup"><span data-stu-id="cbadf-161">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="cbadf-162">最多 100 人脸可返回图像。</span><span class="sxs-lookup"><span data-stu-id="cbadf-162">Up to 100 faces can be returned for an image.</span></span> <span data-ttu-id="cbadf-163">人脸是按从大到小的人脸矩形大小排序。</span><span class="sxs-lookup"><span data-stu-id="cbadf-163">Faces are ranked by face rectangle size from large to small.</span></span>
+      * <span data-ttu-id="cbadf-164">为了获得最佳结果，查询时[人脸-识别](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239)，[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)，和 [人脸</span><span class="sxs-lookup"><span data-stu-id="cbadf-164">For optimal results when querying [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), and [Face</span></span>
+      - <span data-ttu-id="cbadf-165">查找的 Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) （returnFaceId 为 true），请使用人脸的： 正面、 明确且具有的最小大小为 200 x 200 像素 （100 个像素之间的眼睛）。</span><span class="sxs-lookup"><span data-stu-id="cbadf-165">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' is true), please use faces that are: frontal, clear, and with a minimum size of 200x200 pixels (100 pixels between eyes).</span></span>
+      * <span data-ttu-id="cbadf-166">最小可检测的面部大小为 36x36 像素中不能大于 1920 x 1080 像素的图像。</span><span class="sxs-lookup"><span data-stu-id="cbadf-166">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="cbadf-167">具有维度大于 1920 x 1080 像素的图像将需要按比例较大的最小的人脸大小。</span><span class="sxs-lookup"><span data-stu-id="cbadf-167">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="cbadf-168">可以提供不同的 detectionModel 值。</span><span class="sxs-lookup"><span data-stu-id="cbadf-168">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="cbadf-169">若要使用并比较了不同检测模型，请参阅[如何指定检测模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="cbadf-169">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="cbadf-170">模型</span><span class="sxs-lookup"><span data-stu-id="cbadf-170">Model</span></span> | <span data-ttu-id="cbadf-171">建议使用-case(s)</span><span class="sxs-lookup"><span data-stu-id="cbadf-171">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="cbadf-172">detection_01:</span><span class="sxs-lookup"><span data-stu-id="cbadf-172">'detection_01':</span></span> | <span data-ttu-id="cbadf-173">[人脸-默认检测模型</span><span class="sxs-lookup"><span data-stu-id="cbadf-173">The default detection model for [Face -</span></span>
+      <span data-ttu-id="cbadf-174">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。</span><span class="sxs-lookup"><span data-stu-id="cbadf-174">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span> <span data-ttu-id="cbadf-175">建议的正面人脸检测附近。</span><span class="sxs-lookup"><span data-stu-id="cbadf-175">Recommend for near frontal face detection.</span></span> <span data-ttu-id="cbadf-176">对于特别大角度 （头部姿势） 的人脸、 封闭的人脸或错误的图像方向的情况，可能检测这种情况下中的人脸。</span><span class="sxs-lookup"><span data-stu-id="cbadf-176">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="cbadf-177">| |detection_02: |2019 年发布的检测模型可能，尤其是在小型、 侧和模糊的人脸上的改进准确度。</span><span class="sxs-lookup"><span data-stu-id="cbadf-177">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
+      * <span data-ttu-id="cbadf-178">提供了不同 recognitionModel 值。</span><span class="sxs-lookup"><span data-stu-id="cbadf-178">Different 'recognitionModel' values are provided.</span></span> <span data-ttu-id="cbadf-179">如果等跟进操作的验证，标识，查找类似需要，请使用 recognitionModel 参数指定的识别模型。</span><span class="sxs-lookup"><span data-stu-id="cbadf-179">If follow-up operations like Verify, Identify, Find Similar are needed, please specify the recognition model with 'recognitionModel' parameter.</span></span> <span data-ttu-id="cbadf-180">默认值为 recognitionModel 是 recognition_01，如果最新模型需要请显式指定所需的模型中此参数。</span><span class="sxs-lookup"><span data-stu-id="cbadf-180">The default value for 'recognitionModel' is 'recognition_01', if latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="cbadf-181">指定后，检测到的 faceIds 将与指定的识别模型相关联。</span><span class="sxs-lookup"><span data-stu-id="cbadf-181">Once specified, the detected faceIds will be associated with the specified recognition model.</span></span> <span data-ttu-id="cbadf-182">更多详细信息，请参阅[如何指定一个认证模型](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span><span class="sxs-lookup"><span data-stu-id="cbadf-182">More details, please refer to [How to specify a recognition model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span></span>
+      | <span data-ttu-id="cbadf-183">模型</span><span class="sxs-lookup"><span data-stu-id="cbadf-183">Model</span></span> | <span data-ttu-id="cbadf-184">建议使用-case(s)</span><span class="sxs-lookup"><span data-stu-id="cbadf-184">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="cbadf-185">recognition_01:</span><span class="sxs-lookup"><span data-stu-id="cbadf-185">'recognition_01':</span></span> | <span data-ttu-id="cbadf-186">[人脸-默认识别模型</span><span class="sxs-lookup"><span data-stu-id="cbadf-186">The default recognition model for [Face -</span></span>
+      <span data-ttu-id="cbadf-187">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。</span><span class="sxs-lookup"><span data-stu-id="cbadf-187">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span> <span data-ttu-id="cbadf-188">所有这些 faceIds 2019 年 3 月之前创建的是与此识别模型绑定。</span><span class="sxs-lookup"><span data-stu-id="cbadf-188">All those faceIds created before 2019 March are bonded with this recognition model.</span></span> <span data-ttu-id="cbadf-189">| |recognition_02: |识别在 2019 年 3 月发布模型。</span><span class="sxs-lookup"><span data-stu-id="cbadf-189">| | 'recognition_02': | Recognition model released in 2019 March.</span></span> <span data-ttu-id="cbadf-190">建议 recognition_02，因为其总体准确性得到了改进与 recognition_01 相比。</span><span class="sxs-lookup"><span data-stu-id="cbadf-190">'recognition_02' is recommended since its overall accuracy is improved compared with 'recognition_01'.</span></span> |
     syntax:
       content: 'function detectWithUrl(url: string, options?: Models.FaceDetectWithUrlOptionalParams)'
       parameters:
         - id: url
           type:
             - string
-          description: <span data-ttu-id="0a6d0-136">可公开访问的图像的 URL</span><span class="sxs-lookup"><span data-stu-id="0a6d0-136">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="cbadf-191">可公开访问的图像的 URL</span><span class="sxs-lookup"><span data-stu-id="cbadf-191">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - Models.FaceDetectWithUrlOptionalParams
@@ -178,12 +209,12 @@ items:
         - id: url
           type:
             - string
-          description: <span data-ttu-id="0a6d0-137">可公开访问的图像的 URL</span><span class="sxs-lookup"><span data-stu-id="0a6d0-137">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="cbadf-192">可公开访问的图像的 URL</span><span class="sxs-lookup"><span data-stu-id="cbadf-192">Publicly reachable URL of an image</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
           description: |
-            <span data-ttu-id="0a6d0-138">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-138">The callback</span></span>
+            <span data-ttu-id="cbadf-193">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-193">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceDetectWithUrlResponse>
@@ -194,7 +225,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="0a6d0-139">创建人脸。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-139">Create a Face.</span></span>
+    summary: <span data-ttu-id="cbadf-194">创建人脸。</span><span class="sxs-lookup"><span data-stu-id="cbadf-194">Create a Face.</span></span>
     syntax:
       content: 'new Face(client: FaceClientContext)'
       parameters:
@@ -202,7 +233,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="0a6d0-140">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-140">Reference to the service client.</span></span>
+            <span data-ttu-id="cbadf-195">对服务客户端的引用。</span><span class="sxs-lookup"><span data-stu-id="cbadf-195">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.Face.findSimilar_2'
     name: 'findSimilar(string, FaceFindSimilarOptionalParams, ServiceCallback<SimilarFace[]>)'
@@ -217,16 +248,16 @@ items:
         - id: faceId
           type:
             - string
-          description: <span data-ttu-id="0a6d0-141">其 FaceId 的查询人脸。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-141">FaceId of the query face.</span></span> <span data-ttu-id="0a6d0-142">用户需要调用人脸-检测第一个要获取有效 faceId。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-142">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="0a6d0-143">请注意，此 faceId 不会持久保留，并将在过期之后检测调用 24 小时</span><span class="sxs-lookup"><span data-stu-id="0a6d0-143">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
+          description: <span data-ttu-id="cbadf-196">其 FaceId 的查询人脸。</span><span class="sxs-lookup"><span data-stu-id="cbadf-196">FaceId of the query face.</span></span> <span data-ttu-id="cbadf-197">用户需要调用人脸-检测第一个要获取有效 faceId。</span><span class="sxs-lookup"><span data-stu-id="cbadf-197">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="cbadf-198">请注意，此 faceId 不会持久保留，并将在过期之后检测调用 24 小时</span><span class="sxs-lookup"><span data-stu-id="cbadf-198">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceFindSimilarOptionalParams'
-          description: <span data-ttu-id="0a6d0-144">可选参数</span><span class="sxs-lookup"><span data-stu-id="0a6d0-144">The optional parameters</span></span>
+          description: <span data-ttu-id="cbadf-199">可选参数</span><span class="sxs-lookup"><span data-stu-id="cbadf-199">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.SimilarFace[]>'
           description: |
-            <span data-ttu-id="0a6d0-145">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-145">The callback</span></span>
+            <span data-ttu-id="cbadf-200">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-200">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceFindSimilarResponse>
@@ -238,16 +269,16 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="0a6d0-146">给定查询人脸的 faceId，用于在 faceId 数组、人脸列表或大型人脸列表中搜索类似的人脸。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-146">Given query face's faceId, to search the similar-looking faces from a faceId array, a face list or a large face list.</span></span> <span data-ttu-id="0a6d0-147">faceId 数组包含创建的人脸[人脸-检测](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，这将过期创建后的 24 小时。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-147">faceId array contains the faces created by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), which will expire 24 hours after creation.</span></span> <span data-ttu-id="0a6d0-148">"FaceListId"创建由[FaceList-创建](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b)包含 persistedFaceIds 将不会过期。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-148">A "faceListId" is created by [FaceList - Create](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b) containing persistedFaceIds that will not expire.</span></span> <span data-ttu-id="0a6d0-149">和"largeFaceListId"创建由[大型人脸列表-创建](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc)包含 persistedFaceIds 将也不会过期。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-149">And a "largeFaceListId" is created by [LargeFaceList - Create](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) containing persistedFaceIds that will also not expire.</span></span> <span data-ttu-id="0a6d0-150">根据输入返回相似的人脸列表包含 faceIds 或 persistedFaceIds 按相似性排名。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-150">Depending on the input the returned similar faces list contains faceIds or persistedFaceIds ranked by similarity.</span></span>
-      <br/><span data-ttu-id="0a6d0-151">查找类似具有两种工作模式、"matchPerson"和"matchFace"。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-151">Find similar has two working modes, "matchPerson" and "matchFace".</span></span> <span data-ttu-id="0a6d0-152">"matchPerson"是默认模式，它将尝试查找人脸的同一个人尽可能使用内部同人阈值。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-152">"matchPerson" is the default mode that it tries to find faces of the same person as possible by using internal same-person thresholds.</span></span> <span data-ttu-id="0a6d0-153">它可用于查找其他人的照片的一个已知。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-153">It is useful to find a known person's other photos.</span></span> <span data-ttu-id="0a6d0-154">请注意，如果没有人脸都通过了内部阈值，将返回一个空列表。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-154">Note that an empty list will be returned if no faces pass the internal thresholds.</span></span> <span data-ttu-id="0a6d0-155">"matchFace"模式忽略同人阈值，并返回仍要排名相似的人脸，甚至相似性较低。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-155">"matchFace" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low.</span></span> <span data-ttu-id="0a6d0-156">它可以在类似于搜索名人的人脸的情况下使用。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-156">It can be used in the cases like searching celebrity-looking faces.</span></span>
-      <br/><span data-ttu-id="0a6d0-157">RecognitionModel' 与查询人脸的 faceId 关联应为 recognitionModel 目标 faceId 数组、 人脸列表或大型人脸列表使用的相同。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-157">The 'recognitionModel' associated with the query face's faceId should be the same as the 'recognitionModel' used by the target faceId array, face list or large face list.</span></span>
+      <span data-ttu-id="cbadf-201">给定查询人脸的 faceId，用于在 faceId 数组、人脸列表或大型人脸列表中搜索类似的人脸。</span><span class="sxs-lookup"><span data-stu-id="cbadf-201">Given query face's faceId, to search the similar-looking faces from a faceId array, a face list or a large face list.</span></span> <span data-ttu-id="cbadf-202">faceId 数组包含创建的人脸[人脸-检测](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)，这将过期创建后的 24 小时。</span><span class="sxs-lookup"><span data-stu-id="cbadf-202">faceId array contains the faces created by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), which will expire 24 hours after creation.</span></span> <span data-ttu-id="cbadf-203">"FaceListId"创建由[FaceList-创建](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b)包含 persistedFaceIds 将不会过期。</span><span class="sxs-lookup"><span data-stu-id="cbadf-203">A "faceListId" is created by [FaceList - Create](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b) containing persistedFaceIds that will not expire.</span></span> <span data-ttu-id="cbadf-204">和"largeFaceListId"创建由[大型人脸列表-创建](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc)包含 persistedFaceIds 将也不会过期。</span><span class="sxs-lookup"><span data-stu-id="cbadf-204">And a "largeFaceListId" is created by [LargeFaceList - Create](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) containing persistedFaceIds that will also not expire.</span></span> <span data-ttu-id="cbadf-205">根据输入返回相似的人脸列表包含 faceIds 或 persistedFaceIds 按相似性排名。</span><span class="sxs-lookup"><span data-stu-id="cbadf-205">Depending on the input the returned similar faces list contains faceIds or persistedFaceIds ranked by similarity.</span></span>
+      <br/><span data-ttu-id="cbadf-206">查找类似具有两种工作模式、"matchPerson"和"matchFace"。</span><span class="sxs-lookup"><span data-stu-id="cbadf-206">Find similar has two working modes, "matchPerson" and "matchFace".</span></span> <span data-ttu-id="cbadf-207">"matchPerson"是默认模式，它将尝试查找人脸的同一个人尽可能使用内部同人阈值。</span><span class="sxs-lookup"><span data-stu-id="cbadf-207">"matchPerson" is the default mode that it tries to find faces of the same person as possible by using internal same-person thresholds.</span></span> <span data-ttu-id="cbadf-208">它可用于查找其他人的照片的一个已知。</span><span class="sxs-lookup"><span data-stu-id="cbadf-208">It is useful to find a known person's other photos.</span></span> <span data-ttu-id="cbadf-209">请注意，如果没有人脸都通过了内部阈值，将返回一个空列表。</span><span class="sxs-lookup"><span data-stu-id="cbadf-209">Note that an empty list will be returned if no faces pass the internal thresholds.</span></span> <span data-ttu-id="cbadf-210">"matchFace"模式忽略同人阈值，并返回仍要排名相似的人脸，甚至相似性较低。</span><span class="sxs-lookup"><span data-stu-id="cbadf-210">"matchFace" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low.</span></span> <span data-ttu-id="cbadf-211">它可以在类似于搜索名人的人脸的情况下使用。</span><span class="sxs-lookup"><span data-stu-id="cbadf-211">It can be used in the cases like searching celebrity-looking faces.</span></span>
+      <br/><span data-ttu-id="cbadf-212">RecognitionModel' 与查询人脸的 faceId 关联应为 recognitionModel 目标 faceId 数组、 人脸列表或大型人脸列表使用的相同。</span><span class="sxs-lookup"><span data-stu-id="cbadf-212">The 'recognitionModel' associated with the query face's faceId should be the same as the 'recognitionModel' used by the target faceId array, face list or large face list.</span></span>
     syntax:
       content: 'function findSimilar(faceId: string, options?: Models.FaceFindSimilarOptionalParams)'
       parameters:
         - id: faceId
           type:
             - string
-          description: <span data-ttu-id="0a6d0-158">其 FaceId 的查询人脸。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-158">FaceId of the query face.</span></span> <span data-ttu-id="0a6d0-159">用户需要调用人脸-检测第一个要获取有效 faceId。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-159">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="0a6d0-160">请注意，此 faceId 不会持久保留，并将在过期之后检测调用 24 小时</span><span class="sxs-lookup"><span data-stu-id="0a6d0-160">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
+          description: <span data-ttu-id="cbadf-213">其 FaceId 的查询人脸。</span><span class="sxs-lookup"><span data-stu-id="cbadf-213">FaceId of the query face.</span></span> <span data-ttu-id="cbadf-214">用户需要调用人脸-检测第一个要获取有效 faceId。</span><span class="sxs-lookup"><span data-stu-id="cbadf-214">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="cbadf-215">请注意，此 faceId 不会持久保留，并将在过期之后检测调用 24 小时</span><span class="sxs-lookup"><span data-stu-id="cbadf-215">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
         - id: options
           type:
             - Models.FaceFindSimilarOptionalParams
@@ -270,12 +301,12 @@ items:
         - id: faceId
           type:
             - string
-          description: <span data-ttu-id="0a6d0-161">其 FaceId 的查询人脸。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-161">FaceId of the query face.</span></span> <span data-ttu-id="0a6d0-162">用户需要调用人脸-检测第一个要获取有效 faceId。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-162">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="0a6d0-163">请注意，此 faceId 不会持久保留，并将在过期之后检测调用 24 小时</span><span class="sxs-lookup"><span data-stu-id="0a6d0-163">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
+          description: <span data-ttu-id="cbadf-216">其 FaceId 的查询人脸。</span><span class="sxs-lookup"><span data-stu-id="cbadf-216">FaceId of the query face.</span></span> <span data-ttu-id="cbadf-217">用户需要调用人脸-检测第一个要获取有效 faceId。</span><span class="sxs-lookup"><span data-stu-id="cbadf-217">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="cbadf-218">请注意，此 faceId 不会持久保留，并将在过期之后检测调用 24 小时</span><span class="sxs-lookup"><span data-stu-id="cbadf-218">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.SimilarFace[]>'
           description: |
-            <span data-ttu-id="0a6d0-164">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-164">The callback</span></span>
+            <span data-ttu-id="cbadf-219">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-219">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceFindSimilarResponse>
@@ -287,18 +318,18 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="0a6d0-165">根据人脸相似性将候选人脸划分为组。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-165">Divide candidate faces into groups based on face similarity.</span></span><br />
-      * <span data-ttu-id="0a6d0-166">输出是一个或多个不相互连接的人脸组和 messyGroup。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-166">The output is one or more disjointed face groups and a messyGroup.</span></span> <span data-ttu-id="0a6d0-167">人脸组包含具有类似查找，通常的同一个人的人脸。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-167">A face group contains faces that have similar looking, often of the same person.</span></span> <span data-ttu-id="0a6d0-168">人脸组按组大小，即，人脸的数量进行排名。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-168">Face groups are ranked by group size, i.e. number of faces.</span></span> <span data-ttu-id="0a6d0-169">请注意，人脸属于同一人可能会拆分成若干个组的结果。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-169">Notice that faces belonging to a same person might be split into several groups in the result.</span></span>
-      * <span data-ttu-id="0a6d0-170">MessyGroup 是包含找不到任何类似的与人脸，从原始的人脸的人脸的特殊的人脸组。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-170">MessyGroup is a special face group containing faces that cannot find any similar counterpart face from original faces.</span></span> <span data-ttu-id="0a6d0-171">如果所有人脸找到它们的对应项，messyGroup 不会出现在结果。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-171">The messyGroup will not appear in the result if all faces found their counterparts.</span></span>
-      * <span data-ttu-id="0a6d0-172">组 API 最多需要至少 2 个候选人脸和 1000 之间。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-172">Group API needs at least 2 candidate faces and 1000 at most.</span></span> <span data-ttu-id="0a6d0-173">我们建议尝试[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)只能有 2 个候选人脸。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-173">We suggest to try [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a) when you only have 2 candidate faces.</span></span>
-      * <span data-ttu-id="0a6d0-174">与查询人脸的 faceIds recognitionModel 应是相同的。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-174">The 'recognitionModel' associated with the query faces' faceIds should be the same.</span></span>
+      <span data-ttu-id="cbadf-220">根据人脸相似性将候选人脸划分为组。</span><span class="sxs-lookup"><span data-stu-id="cbadf-220">Divide candidate faces into groups based on face similarity.</span></span><br />
+      * <span data-ttu-id="cbadf-221">输出是一个或多个不相互连接的人脸组和 messyGroup。</span><span class="sxs-lookup"><span data-stu-id="cbadf-221">The output is one or more disjointed face groups and a messyGroup.</span></span> <span data-ttu-id="cbadf-222">人脸组包含具有类似查找，通常的同一个人的人脸。</span><span class="sxs-lookup"><span data-stu-id="cbadf-222">A face group contains faces that have similar looking, often of the same person.</span></span> <span data-ttu-id="cbadf-223">人脸组按组大小，即，人脸的数量进行排名。</span><span class="sxs-lookup"><span data-stu-id="cbadf-223">Face groups are ranked by group size, i.e. number of faces.</span></span> <span data-ttu-id="cbadf-224">请注意，人脸属于同一人可能会拆分成若干个组的结果。</span><span class="sxs-lookup"><span data-stu-id="cbadf-224">Notice that faces belonging to a same person might be split into several groups in the result.</span></span>
+      * <span data-ttu-id="cbadf-225">MessyGroup 是包含找不到任何类似的与人脸，从原始的人脸的人脸的特殊的人脸组。</span><span class="sxs-lookup"><span data-stu-id="cbadf-225">MessyGroup is a special face group containing faces that cannot find any similar counterpart face from original faces.</span></span> <span data-ttu-id="cbadf-226">如果所有人脸找到它们的对应项，messyGroup 不会出现在结果。</span><span class="sxs-lookup"><span data-stu-id="cbadf-226">The messyGroup will not appear in the result if all faces found their counterparts.</span></span>
+      * <span data-ttu-id="cbadf-227">组 API 最多需要至少 2 个候选人脸和 1000 之间。</span><span class="sxs-lookup"><span data-stu-id="cbadf-227">Group API needs at least 2 candidate faces and 1000 at most.</span></span> <span data-ttu-id="cbadf-228">我们建议尝试[人脸-验证](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)只能有 2 个候选人脸。</span><span class="sxs-lookup"><span data-stu-id="cbadf-228">We suggest to try [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a) when you only have 2 candidate faces.</span></span>
+      * <span data-ttu-id="cbadf-229">与查询人脸的 faceIds recognitionModel 应是相同的。</span><span class="sxs-lookup"><span data-stu-id="cbadf-229">The 'recognitionModel' associated with the query faces' faceIds should be the same.</span></span>
     syntax:
       content: 'function group(faceIds: string[], options?: msRest.RequestOptionsBase)'
       parameters:
         - id: faceIds
           type:
             - 'string[]'
-          description: <span data-ttu-id="0a6d0-175">候选 faceId 的数组创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-175">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="0a6d0-176">最大值是 1000年张人脸</span><span class="sxs-lookup"><span data-stu-id="0a6d0-176">The maximum is 1000 faces</span></span>
+          description: <span data-ttu-id="cbadf-230">候选 faceId 的数组创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="cbadf-230">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="cbadf-231">最大值是 1000年张人脸</span><span class="sxs-lookup"><span data-stu-id="cbadf-231">The maximum is 1000 faces</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -321,16 +352,16 @@ items:
         - id: faceIds
           type:
             - 'string[]'
-          description: <span data-ttu-id="0a6d0-177">候选 faceId 的数组创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-177">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="0a6d0-178">最大值是 1000年张人脸</span><span class="sxs-lookup"><span data-stu-id="0a6d0-178">The maximum is 1000 faces</span></span>
+          description: <span data-ttu-id="cbadf-232">候选 faceId 的数组创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="cbadf-232">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="cbadf-233">最大值是 1000年张人脸</span><span class="sxs-lookup"><span data-stu-id="cbadf-233">The maximum is 1000 faces</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="0a6d0-179">可选参数</span><span class="sxs-lookup"><span data-stu-id="0a6d0-179">The optional parameters</span></span>
+          description: <span data-ttu-id="cbadf-234">可选参数</span><span class="sxs-lookup"><span data-stu-id="cbadf-234">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.GroupResult>
           description: |
-            <span data-ttu-id="0a6d0-180">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-180">The callback</span></span>
+            <span data-ttu-id="cbadf-235">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-235">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceGroupResponse>
@@ -348,12 +379,12 @@ items:
         - id: faceIds
           type:
             - 'string[]'
-          description: <span data-ttu-id="0a6d0-181">候选 faceId 的数组创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-181">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="0a6d0-182">最大值是 1000年张人脸</span><span class="sxs-lookup"><span data-stu-id="0a6d0-182">The maximum is 1000 faces</span></span>
+          description: <span data-ttu-id="cbadf-236">候选 faceId 的数组创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="cbadf-236">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="cbadf-237">最大值是 1000年张人脸</span><span class="sxs-lookup"><span data-stu-id="cbadf-237">The maximum is 1000 faces</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.GroupResult>
           description: |
-            <span data-ttu-id="0a6d0-183">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-183">The callback</span></span>
+            <span data-ttu-id="cbadf-238">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-238">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceGroupResponse>
@@ -371,16 +402,16 @@ items:
         - id: faceIds
           type:
             - 'string[]'
-          description: '<span data-ttu-id="0a6d0-184">查询的数组的人脸 faceIds，创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-184">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="0a6d0-185">人脸的每个单独进行标识。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-185">Each of the faces are identified independently.</span></span> <span data-ttu-id="0a6d0-186">有效的 faceIds 数之间是 [1，10]。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-186">The valid number of faceIds is between [1, 10].</span></span>'
+          description: '<span data-ttu-id="cbadf-239">查询的数组的人脸 faceIds，创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="cbadf-239">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="cbadf-240">人脸的每个单独进行标识。</span><span class="sxs-lookup"><span data-stu-id="cbadf-240">Each of the faces are identified independently.</span></span> <span data-ttu-id="cbadf-241">有效的 faceIds 数之间是 [1，10]。</span><span class="sxs-lookup"><span data-stu-id="cbadf-241">The valid number of faceIds is between [1, 10].</span></span>'
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceIdentifyOptionalParams'
-          description: <span data-ttu-id="0a6d0-187">可选参数</span><span class="sxs-lookup"><span data-stu-id="0a6d0-187">The optional parameters</span></span>
+          description: <span data-ttu-id="cbadf-242">可选参数</span><span class="sxs-lookup"><span data-stu-id="cbadf-242">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.IdentifyResult[]>'
           description: |
-            <span data-ttu-id="0a6d0-188">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-188">The callback</span></span>
+            <span data-ttu-id="cbadf-243">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-243">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceIdentifyResponse>
@@ -392,23 +423,23 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="0a6d0-189">一对多的识别，用于在人员组或大型人员组中查找与特定查询人脸最接近的匹配项。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-189">1-to-many identification to find the closest matches of the specific query person face from a person group or large person group.</span></span>
-      <br/> <span data-ttu-id="0a6d0-190">FaceIds 数组中的每张人脸，人脸识别将计算查询人脸和人员组 （如果有通过 personGroupId） 中的所有人脸之间的相似之处或大型用户组 （由 largePersonGroupId 给定），并返回候选项排名该人脸的人员通过相似性置信度。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-190">For each face in the faceIds array, Face Identify will compute similarities between the query face and all the faces in the person group (given by personGroupId) or large person group (given by largePersonGroupId), and return candidate person(s) for that face ranked by similarity confidence.</span></span> <span data-ttu-id="0a6d0-191">应培训人员大型组/用户组，以使其准备好进行标识。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-191">The person group/large person group should be trained to make it ready for identification.</span></span> <span data-ttu-id="0a6d0-192">请参阅中的详细信息[person Group-Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249)并[大型人物组-训练](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4)。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-192">See more in [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) and [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4).</span></span>
+      <span data-ttu-id="cbadf-244">一对多的识别，用于在人员组或大型人员组中查找与特定查询人脸最接近的匹配项。</span><span class="sxs-lookup"><span data-stu-id="cbadf-244">1-to-many identification to find the closest matches of the specific query person face from a person group or large person group.</span></span>
+      <br/> <span data-ttu-id="cbadf-245">FaceIds 数组中的每张人脸，人脸识别将计算查询人脸和人员组 （如果有通过 personGroupId） 中的所有人脸之间的相似之处或大型用户组 （由 largePersonGroupId 给定），并返回候选项排名该人脸的人员通过相似性置信度。</span><span class="sxs-lookup"><span data-stu-id="cbadf-245">For each face in the faceIds array, Face Identify will compute similarities between the query face and all the faces in the person group (given by personGroupId) or large person group (given by largePersonGroupId), and return candidate person(s) for that face ranked by similarity confidence.</span></span> <span data-ttu-id="cbadf-246">应培训人员大型组/用户组，以使其准备好进行标识。</span><span class="sxs-lookup"><span data-stu-id="cbadf-246">The person group/large person group should be trained to make it ready for identification.</span></span> <span data-ttu-id="cbadf-247">请参阅中的详细信息[person Group-Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249)并[大型人物组-训练](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4)。</span><span class="sxs-lookup"><span data-stu-id="cbadf-247">See more in [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) and [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4).</span></span>
       <br/>
-      <span data-ttu-id="0a6d0-193">备注：</span><span class="sxs-lookup"><span data-stu-id="0a6d0-193">Remarks:</span></span><br />
-      * <span data-ttu-id="0a6d0-194">该算法允许多个人脸，若要在同一个请求时，独立标识但不是超过 10 人脸。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-194">The algorithm allows more than one face to be identified independently at the same request, but no more than 10 faces.</span></span>
-      * <span data-ttu-id="0a6d0-195">在人员组/大型用户组中的每个人都可以有多个人脸，但不是能超过 248 人脸。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-195">Each person in the person group/large person group could have more than one face, but no more than 248 faces.</span></span>
-      * <span data-ttu-id="0a6d0-196">人脸图像质量更高意味着更好地标识精度。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-196">Higher face image quality means better identification precision.</span></span> <span data-ttu-id="0a6d0-197">请考虑高质量的人脸： 正面、 clear 和人脸大小为 200 x 200 像素 （100 个像素之间的眼睛） 或更大。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-197">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
-      * <span data-ttu-id="0a6d0-198">返回的候选项的数目受到限制，maxNumOfCandidatesReturned 和 confidenceThreshold。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-198">Number of candidates returned is restricted by maxNumOfCandidatesReturned and confidenceThreshold.</span></span> <span data-ttu-id="0a6d0-199">如果确定没有人，返回的候选项将是空数组。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-199">If no person is identified, the returned candidates will be an empty array.</span></span>
-      * <span data-ttu-id="0a6d0-200">请尝试[人脸-查找相似](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)何时需要查找相似人脸从人脸列表/大型人脸列表而不是人员大型组/用户组。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-200">Try [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) when you need to find similar faces from a face list/large face list instead of a person group/large person group.</span></span>
-      * <span data-ttu-id="0a6d0-201">RecognitionModel' 与查询人脸的 faceIds 关联应为 recognitionModel 目标人员组或大型用户组使用的相同。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-201">The 'recognitionModel' associated with the query faces' faceIds should be the same as the 'recognitionModel' used by the target person group or large person group.</span></span>
+      <span data-ttu-id="cbadf-248">备注：</span><span class="sxs-lookup"><span data-stu-id="cbadf-248">Remarks:</span></span><br />
+      * <span data-ttu-id="cbadf-249">该算法允许多个人脸，若要在同一个请求时，独立标识但不是超过 10 人脸。</span><span class="sxs-lookup"><span data-stu-id="cbadf-249">The algorithm allows more than one face to be identified independently at the same request, but no more than 10 faces.</span></span>
+      * <span data-ttu-id="cbadf-250">在人员组/大型用户组中的每个人都可以有多个人脸，但不是能超过 248 人脸。</span><span class="sxs-lookup"><span data-stu-id="cbadf-250">Each person in the person group/large person group could have more than one face, but no more than 248 faces.</span></span>
+      * <span data-ttu-id="cbadf-251">人脸图像质量更高意味着更好地标识精度。</span><span class="sxs-lookup"><span data-stu-id="cbadf-251">Higher face image quality means better identification precision.</span></span> <span data-ttu-id="cbadf-252">请考虑高质量的人脸： 正面、 clear 和人脸大小为 200 x 200 像素 （100 个像素之间的眼睛） 或更大。</span><span class="sxs-lookup"><span data-stu-id="cbadf-252">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="cbadf-253">返回的候选项的数目受到限制，maxNumOfCandidatesReturned 和 confidenceThreshold。</span><span class="sxs-lookup"><span data-stu-id="cbadf-253">Number of candidates returned is restricted by maxNumOfCandidatesReturned and confidenceThreshold.</span></span> <span data-ttu-id="cbadf-254">如果确定没有人，返回的候选项将是空数组。</span><span class="sxs-lookup"><span data-stu-id="cbadf-254">If no person is identified, the returned candidates will be an empty array.</span></span>
+      * <span data-ttu-id="cbadf-255">请尝试[人脸-查找相似](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237)何时需要查找相似人脸从人脸列表/大型人脸列表而不是人员大型组/用户组。</span><span class="sxs-lookup"><span data-stu-id="cbadf-255">Try [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) when you need to find similar faces from a face list/large face list instead of a person group/large person group.</span></span>
+      * <span data-ttu-id="cbadf-256">RecognitionModel' 与查询人脸的 faceIds 关联应为 recognitionModel 目标人员组或大型用户组使用的相同。</span><span class="sxs-lookup"><span data-stu-id="cbadf-256">The 'recognitionModel' associated with the query faces' faceIds should be the same as the 'recognitionModel' used by the target person group or large person group.</span></span>
     syntax:
       content: 'function identify(faceIds: string[], options?: Models.FaceIdentifyOptionalParams)'
       parameters:
         - id: faceIds
           type:
             - 'string[]'
-          description: '<span data-ttu-id="0a6d0-202">查询的数组的人脸 faceIds，创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-202">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="0a6d0-203">人脸的每个单独进行标识。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-203">Each of the faces are identified independently.</span></span> <span data-ttu-id="0a6d0-204">有效的 faceIds 数之间是 [1，10]。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-204">The valid number of faceIds is between [1, 10].</span></span>'
+          description: '<span data-ttu-id="cbadf-257">查询的数组的人脸 faceIds，创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="cbadf-257">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="cbadf-258">人脸的每个单独进行标识。</span><span class="sxs-lookup"><span data-stu-id="cbadf-258">Each of the faces are identified independently.</span></span> <span data-ttu-id="cbadf-259">有效的 faceIds 数之间是 [1，10]。</span><span class="sxs-lookup"><span data-stu-id="cbadf-259">The valid number of faceIds is between [1, 10].</span></span>'
         - id: options
           type:
             - Models.FaceIdentifyOptionalParams
@@ -431,12 +462,12 @@ items:
         - id: faceIds
           type:
             - 'string[]'
-          description: '<span data-ttu-id="0a6d0-205">查询的数组的人脸 faceIds，创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-205">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="0a6d0-206">人脸的每个单独进行标识。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-206">Each of the faces are identified independently.</span></span> <span data-ttu-id="0a6d0-207">有效的 faceIds 数之间是 [1，10]。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-207">The valid number of faceIds is between [1, 10].</span></span>'
+          description: '<span data-ttu-id="cbadf-260">查询的数组的人脸 faceIds，创建的人脸-检测。</span><span class="sxs-lookup"><span data-stu-id="cbadf-260">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="cbadf-261">人脸的每个单独进行标识。</span><span class="sxs-lookup"><span data-stu-id="cbadf-261">Each of the faces are identified independently.</span></span> <span data-ttu-id="cbadf-262">有效的 faceIds 数之间是 [1，10]。</span><span class="sxs-lookup"><span data-stu-id="cbadf-262">The valid number of faceIds is between [1, 10].</span></span>'
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.IdentifyResult[]>'
           description: |
-            <span data-ttu-id="0a6d0-208">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-208">The callback</span></span>
+            <span data-ttu-id="cbadf-263">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-263">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceIdentifyResponse>
@@ -448,23 +479,23 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="0a6d0-209">验证两张人脸是否属于同一个人，或者一张人脸是否属于某一个人。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-209">Verify whether two faces belong to a same person or whether one face belongs to a person.</span></span>
+      <span data-ttu-id="cbadf-264">验证两张人脸是否属于同一个人，或者一张人脸是否属于某一个人。</span><span class="sxs-lookup"><span data-stu-id="cbadf-264">Verify whether two faces belong to a same person or whether one face belongs to a person.</span></span>
       <br/>
-      <span data-ttu-id="0a6d0-210">备注：</span><span class="sxs-lookup"><span data-stu-id="0a6d0-210">Remarks:</span></span><br />
-      * <span data-ttu-id="0a6d0-211">人脸图像质量更高意味着更好地标识精度。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-211">Higher face image quality means better identification precision.</span></span> <span data-ttu-id="0a6d0-212">请考虑高质量的人脸： 正面、 clear 和人脸大小为 200 x 200 像素 （100 个像素之间的眼睛） 或更大。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-212">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
-      * <span data-ttu-id="0a6d0-213">准确性对敏感的方案，请您自己的判断。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-213">For the scenarios that are sensitive to accuracy please make your own judgment.</span></span>
-      * <span data-ttu-id="0a6d0-214">与查询人脸的 faceIds recognitionModel 应与目标人脸、 人员组或大型用户组使用的 recognitionModel 相同。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-214">The 'recognitionModel' associated with the query faces' faceIds should be the same as the 'recognitionModel' used by the target face, person group or large person group.</span></span>
+      <span data-ttu-id="cbadf-265">备注：</span><span class="sxs-lookup"><span data-stu-id="cbadf-265">Remarks:</span></span><br />
+      * <span data-ttu-id="cbadf-266">人脸图像质量更高意味着更好地标识精度。</span><span class="sxs-lookup"><span data-stu-id="cbadf-266">Higher face image quality means better identification precision.</span></span> <span data-ttu-id="cbadf-267">请考虑高质量的人脸： 正面、 clear 和人脸大小为 200 x 200 像素 （100 个像素之间的眼睛） 或更大。</span><span class="sxs-lookup"><span data-stu-id="cbadf-267">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="cbadf-268">准确性对敏感的方案，请您自己的判断。</span><span class="sxs-lookup"><span data-stu-id="cbadf-268">For the scenarios that are sensitive to accuracy please make your own judgment.</span></span>
+      * <span data-ttu-id="cbadf-269">与查询人脸的 faceIds recognitionModel 应与目标人脸、 人员组或大型用户组使用的 recognitionModel 相同。</span><span class="sxs-lookup"><span data-stu-id="cbadf-269">The 'recognitionModel' associated with the query faces' faceIds should be the same as the 'recognitionModel' used by the target face, person group or large person group.</span></span>
     syntax:
       content: 'function verifyFaceToFace(faceId1: string, faceId2: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: faceId1
           type:
             - string
-          description: '<span data-ttu-id="0a6d0-215">第一个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="0a6d0-215">FaceId of the first face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="cbadf-270">第一个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="cbadf-270">FaceId of the first face, comes from Face - Detect</span></span>'
         - id: faceId2
           type:
             - string
-          description: '<span data-ttu-id="0a6d0-216">第二个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="0a6d0-216">FaceId of the second face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="cbadf-271">第二个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="cbadf-271">FaceId of the second face, comes from Face - Detect</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -487,20 +518,20 @@ items:
         - id: faceId1
           type:
             - string
-          description: '<span data-ttu-id="0a6d0-217">第一个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="0a6d0-217">FaceId of the first face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="cbadf-272">第一个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="cbadf-272">FaceId of the first face, comes from Face - Detect</span></span>'
         - id: faceId2
           type:
             - string
-          description: '<span data-ttu-id="0a6d0-218">第二个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="0a6d0-218">FaceId of the second face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="cbadf-273">第二个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="cbadf-273">FaceId of the second face, comes from Face - Detect</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="0a6d0-219">可选参数</span><span class="sxs-lookup"><span data-stu-id="0a6d0-219">The optional parameters</span></span>
+          description: <span data-ttu-id="cbadf-274">可选参数</span><span class="sxs-lookup"><span data-stu-id="cbadf-274">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
           description: |
-            <span data-ttu-id="0a6d0-220">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-220">The callback</span></span>
+            <span data-ttu-id="cbadf-275">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-275">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceVerifyFaceToFaceResponse>
@@ -518,16 +549,16 @@ items:
         - id: faceId1
           type:
             - string
-          description: '<span data-ttu-id="0a6d0-221">第一个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="0a6d0-221">FaceId of the first face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="cbadf-276">第一个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="cbadf-276">FaceId of the first face, comes from Face - Detect</span></span>'
         - id: faceId2
           type:
             - string
-          description: '<span data-ttu-id="0a6d0-222">第二个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="0a6d0-222">FaceId of the second face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="cbadf-277">第二个人脸，faceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="cbadf-277">FaceId of the second face, comes from Face - Detect</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
           description: |
-            <span data-ttu-id="0a6d0-223">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-223">The callback</span></span>
+            <span data-ttu-id="cbadf-278">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-278">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceVerifyFaceToFaceResponse>
@@ -545,20 +576,20 @@ items:
         - id: faceId
           type:
             - string
-          description: '<span data-ttu-id="0a6d0-224">人脸，FaceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="0a6d0-224">FaceId of the face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="cbadf-279">人脸，FaceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="cbadf-279">FaceId of the face, comes from Face - Detect</span></span>'
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="0a6d0-225">人员组或大型用户组中指定了某个人。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-225">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="0a6d0-226">personId 创建亲自 person Group-创建或大型人物组人员-创建。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-226">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
+          description: <span data-ttu-id="cbadf-280">人员组或大型用户组中指定了某个人。</span><span class="sxs-lookup"><span data-stu-id="cbadf-280">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="cbadf-281">personId 创建亲自 person Group-创建或大型人物组人员-创建。</span><span class="sxs-lookup"><span data-stu-id="cbadf-281">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceVerifyFaceToPersonOptionalParams'
-          description: <span data-ttu-id="0a6d0-227">可选参数</span><span class="sxs-lookup"><span data-stu-id="0a6d0-227">The optional parameters</span></span>
+          description: <span data-ttu-id="cbadf-282">可选参数</span><span class="sxs-lookup"><span data-stu-id="cbadf-282">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
           description: |
-            <span data-ttu-id="0a6d0-228">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-228">The callback</span></span>
+            <span data-ttu-id="cbadf-283">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-283">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceVerifyFaceToPersonResponse>
@@ -569,18 +600,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="0a6d0-229">验证两张脸是否属于同一个人。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-229">Verify whether two faces belong to a same person.</span></span> <span data-ttu-id="0a6d0-230">将人脸 Id 人员 Id 进行比较</span><span class="sxs-lookup"><span data-stu-id="0a6d0-230">Compares a face Id with a Person Id</span></span>
+    summary: <span data-ttu-id="cbadf-284">验证两张脸是否属于同一个人。</span><span class="sxs-lookup"><span data-stu-id="cbadf-284">Verify whether two faces belong to a same person.</span></span> <span data-ttu-id="cbadf-285">将人脸 Id 人员 Id 进行比较</span><span class="sxs-lookup"><span data-stu-id="cbadf-285">Compares a face Id with a Person Id</span></span>
     syntax:
       content: 'function verifyFaceToPerson(faceId: string, personId: string, options?: Models.FaceVerifyFaceToPersonOptionalParams)'
       parameters:
         - id: faceId
           type:
             - string
-          description: '<span data-ttu-id="0a6d0-231">人脸，FaceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="0a6d0-231">FaceId of the face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="cbadf-286">人脸，FaceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="cbadf-286">FaceId of the face, comes from Face - Detect</span></span>'
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="0a6d0-232">人员组或大型用户组中指定了某个人。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-232">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="0a6d0-233">personId 创建亲自 person Group-创建或大型人物组人员-创建。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-233">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
+          description: <span data-ttu-id="cbadf-287">人员组或大型用户组中指定了某个人。</span><span class="sxs-lookup"><span data-stu-id="cbadf-287">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="cbadf-288">personId 创建亲自 person Group-创建或大型人物组人员-创建。</span><span class="sxs-lookup"><span data-stu-id="cbadf-288">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
         - id: options
           type:
             - Models.FaceVerifyFaceToPersonOptionalParams
@@ -603,16 +634,16 @@ items:
         - id: faceId
           type:
             - string
-          description: '<span data-ttu-id="0a6d0-234">人脸，FaceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="0a6d0-234">FaceId of the face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="cbadf-289">人脸，FaceId 来自人脸-检测</span><span class="sxs-lookup"><span data-stu-id="cbadf-289">FaceId of the face, comes from Face - Detect</span></span>'
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="0a6d0-235">人员组或大型用户组中指定了某个人。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-235">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="0a6d0-236">personId 创建亲自 person Group-创建或大型人物组人员-创建。</span><span class="sxs-lookup"><span data-stu-id="0a6d0-236">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
+          description: <span data-ttu-id="cbadf-290">人员组或大型用户组中指定了某个人。</span><span class="sxs-lookup"><span data-stu-id="cbadf-290">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="cbadf-291">personId 创建亲自 person Group-创建或大型人物组人员-创建。</span><span class="sxs-lookup"><span data-stu-id="cbadf-291">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
           description: |
-            <span data-ttu-id="0a6d0-237">回调</span><span class="sxs-lookup"><span data-stu-id="0a6d0-237">The callback</span></span>
+            <span data-ttu-id="cbadf-292">回调</span><span class="sxs-lookup"><span data-stu-id="cbadf-292">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceVerifyFaceToPersonResponse>

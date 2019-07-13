@@ -1,0 +1,40 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.HealthStatistics'
+    name: HealthStatistics
+    fullName: HealthStatistics
+    children:
+      - '@azure/servicefabric.HealthStatistics.healthStateCountList'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      在查询说明配置为包括统计信息时，运行状况查询结果的一部分返回的实体的运行状况统计信息。
+      统计信息包括当前实体的所有子级类型的运行状况状态计数。
+      例如，对于群集，运行状况统计信息包括节点、 应用程序、 服务、 分区、 副本、 部署的应用程序和已部署的服务包的运行状况状态计数。
+      对于分区，运行状况统计信息包括副本的运行状况计数。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthStatistics.healthStateCountList'
+    name: healthStateCountList
+    fullName: healthStateCountList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 运行状况状态的列表计算每个实体类型，它记录了查询实体的多少个子级都处于正常、 警告和错误状态。
+    optional: true
+    syntax:
+      content: 'healthStateCountList?: EntityKindHealthStateCount[]'
+      return:
+        type:
+          - '@azure/servicefabric.EntityKindHealthStateCount[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityKindHealthStateCount[]'
+    name: 'EntityKindHealthStateCount[]'
+    spec.typeScript:
+      - name: EntityKindHealthStateCount
+        fullName: EntityKindHealthStateCount
+        uid: '@azure/servicefabric.EntityKindHealthStateCount'
+      - name: '[]'
+        fullName: '[]'

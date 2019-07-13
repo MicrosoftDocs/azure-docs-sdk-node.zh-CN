@@ -1,0 +1,271 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.HealthEvent'
+    name: HealthEvent
+    fullName: HealthEvent
+    children:
+      - '@azure/servicefabric.HealthEvent.description'
+      - '@azure/servicefabric.HealthEvent.healthState'
+      - '@azure/servicefabric.HealthEvent.isExpired'
+      - '@azure/servicefabric.HealthEvent.lastErrorTransitionAt'
+      - '@azure/servicefabric.HealthEvent.lastModifiedUtcTimestamp'
+      - '@azure/servicefabric.HealthEvent.lastOkTransitionAt'
+      - '@azure/servicefabric.HealthEvent.lastWarningTransitionAt'
+      - '@azure/servicefabric.HealthEvent.property'
+      - '@azure/servicefabric.HealthEvent.removeWhenExpired'
+      - '@azure/servicefabric.HealthEvent.sequenceNumber'
+      - '@azure/servicefabric.HealthEvent.sourceId'
+      - '@azure/servicefabric.HealthEvent.sourceUtcTimestamp'
+      - '@azure/servicefabric.HealthEvent.timeToLiveInMilliSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="b645e-101">表示报告运行状况实体，例如群集、 应用程序或节点中，添加通过运行状况管理器中的其他元数据的运行状况信息。</span><span class="sxs-lookup"><span data-stu-id="b645e-101">Represents health information reported on a health entity, such as cluster, application or node, with additional metadata added by the Health Manager.</span></span>'
+    extends:
+      name: '@azure/servicefabric.HealthInformation'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b645e-102">运行状况信息的说明。</span><span class="sxs-lookup"><span data-stu-id="b645e-102">The description of the health information.</span></span> <span data-ttu-id="b645e-103">它表示用于添加有关该报告的用户可读信息的自定义文本。</span><span class="sxs-lookup"><span data-stu-id="b645e-103">It represents free text used to add human readable information about the report.</span></span>
+      <span data-ttu-id="b645e-104">该说明的最大字符串长度为 4096 个字符。</span><span class="sxs-lookup"><span data-stu-id="b645e-104">The maximum string length for the description is 4096 characters.</span></span>
+      <span data-ttu-id="b645e-105">如果所提供字符串的长度大于该值，它将被自动截断。</span><span class="sxs-lookup"><span data-stu-id="b645e-105">If the provided string is longer, it will be automatically truncated.</span></span>
+      <span data-ttu-id="b645e-106">截断时，该说明的末尾字符包含一个标记“[Truncated]”，并且总字符串大小为 4096 个字符。</span><span class="sxs-lookup"><span data-stu-id="b645e-106">When truncated, the last characters of the description contain a marker "[Truncated]", and total string size is 4096 characters.</span></span>
+      <span data-ttu-id="b645e-107">该标记的存在向用户指示截断已发生。</span><span class="sxs-lookup"><span data-stu-id="b645e-107">The presence of the marker indicates to users that truncation occurred.</span></span>
+      <span data-ttu-id="b645e-108">请注意，当截断时，该说明包含来自原始字符串的 4096 个以内的字符。</span><span class="sxs-lookup"><span data-stu-id="b645e-108">Note that when truncated, the description has less than 4096 characters from the original string.</span></span>
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b645e-109">例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown</span><span class="sxs-lookup"><span data-stu-id="b645e-109">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    syntax:
+      content: 'healthState: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.isExpired'
+    name: isExpired
+    fullName: isExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b645e-110">如果运行状况事件已过期，否则为 false，则返回 true。</span><span class="sxs-lookup"><span data-stu-id="b645e-110">Returns true if the health event is expired, otherwise false.</span></span>'
+    optional: true
+    syntax:
+      content: 'isExpired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastErrorTransitionAt'
+    name: lastErrorTransitionAt
+    fullName: lastErrorTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="b645e-111">如果当前的运行状况状态为 Error，此属性返回的运行状况报表第一次使用错误报告的时间。</span><span class="sxs-lookup"><span data-stu-id="b645e-111">If the current health state is 'Error', this property returns the time at which the health report was first reported with 'Error'.</span></span> <span data-ttu-id="b645e-112">针对定期报告具有相同状态的多个报表可能生成的但是，此属性返回的日期和时间接收运行状况报表的第一个错误。</span><span class="sxs-lookup"><span data-stu-id="b645e-112">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Error' health report was received.</span></span>
+      <span data-ttu-id="b645e-113">如果当前的运行状况状态为确定或警告，将返回的日期和时间的运行状况状态在错误，最后一个之前转换到不同的状态。</span><span class="sxs-lookup"><span data-stu-id="b645e-113">If the current health state is 'Ok' or 'Warning', returns the date and time at which the health state was last in 'Error', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="b645e-114">如果运行状况状态永远不会为 Error，值将是零个日期时间。</span><span class="sxs-lookup"><span data-stu-id="b645e-114">If the health state was never 'Error', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastErrorTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastModifiedUtcTimestamp'
+    name: lastModifiedUtcTimestamp
+    fullName: lastModifiedUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b645e-115">日期和时间的运行状况报告上次修改时由运行状况存储中。</span><span class="sxs-lookup"><span data-stu-id="b645e-115">The date and time when the health report was last modified by the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'lastModifiedUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastOkTransitionAt'
+    name: lastOkTransitionAt
+    fullName: lastOkTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="b645e-116">如果当前的运行状况状态为确定，此属性返回的运行状况报告被首先报告正常的时间。</span><span class="sxs-lookup"><span data-stu-id="b645e-116">If the current health state is 'Ok', this property returns the time at which the health report was first reported with 'Ok'.</span></span>
+      <span data-ttu-id="b645e-117">针对定期报告具有相同状态的多个报表可能生成。</span><span class="sxs-lookup"><span data-stu-id="b645e-117">For periodic reporting, many reports with the same state may have been generated.</span></span>
+      <span data-ttu-id="b645e-118">此属性返回的日期和时间收到第一个确定运行状况报告。</span><span class="sxs-lookup"><span data-stu-id="b645e-118">This property returns the date and time when the first 'Ok' health report was received.</span></span>
+      <span data-ttu-id="b645e-119">如果当前的运行状况状态为 Error 或警告，将返回的日期和时间的运行状况状态上次之前转换到不同的状态确定。</span><span class="sxs-lookup"><span data-stu-id="b645e-119">If the current health state is 'Error' or 'Warning', returns the date and time at which the health state was last in 'Ok', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="b645e-120">如果运行状况状态为永远不会确定，值将是零个日期时间。</span><span class="sxs-lookup"><span data-stu-id="b645e-120">If the health state was never 'Ok', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastOkTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastWarningTransitionAt'
+    name: lastWarningTransitionAt
+    fullName: lastWarningTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="b645e-121">如果当前的运行状况状态为警告，此属性返回的运行状况报告被首先报告警告的时间。</span><span class="sxs-lookup"><span data-stu-id="b645e-121">If the current health state is 'Warning', this property returns the time at which the health report was first reported with 'Warning'.</span></span> <span data-ttu-id="b645e-122">针对定期报告具有相同状态的多个报表可能生成的但是，此属性返回收到的日期和时间的第一个警告运行状况报告。</span><span class="sxs-lookup"><span data-stu-id="b645e-122">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Warning' health report was received.</span></span>
+      <span data-ttu-id="b645e-123">如果当前的运行状况状态为确定或错误，将返回的日期和时间的运行状况状态上次警告之前转换到不同的状态。</span><span class="sxs-lookup"><span data-stu-id="b645e-123">If the current health state is 'Ok' or 'Error', returns the date and time at which the health state was last in 'Warning', before transitioning to a different state.</span></span>
+
+      <span data-ttu-id="b645e-124">如果运行状况状态已永远不会警告，值将为零的日期时间。</span><span class="sxs-lookup"><span data-stu-id="b645e-124">If the health state was never 'Warning', the value will be zero date-time.</span></span>
+    optional: true
+    syntax:
+      content: 'lastWarningTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.property'
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="b645e-125">运行状况信息的属性。</span><span class="sxs-lookup"><span data-stu-id="b645e-125">The property of the health information.</span></span> <span data-ttu-id="b645e-126">一个实体可以有不同属性的运行状况报告。</span><span class="sxs-lookup"><span data-stu-id="b645e-126">An entity can have health reports for different properties.</span></span>
+      <span data-ttu-id="b645e-127">该属性是一个字符串，不是固定的枚举，因此可使报告器灵活地对触发报告的状态条件进行分类。</span><span class="sxs-lookup"><span data-stu-id="b645e-127">The property is a string and not a fixed enumeration to allow the reporter flexibility to categorize the state condition that triggers the report.</span></span>
+      <span data-ttu-id="b645e-128">例如，SourceId 为“LocalWatchdog”的报告器可以监视节点上的可用磁盘的状态，因此它可以报告该节点的“AvailableDisk”属性。</span><span class="sxs-lookup"><span data-stu-id="b645e-128">For example, a reporter with SourceId "LocalWatchdog" can monitor the state of the available disk on a node, so it can report "AvailableDisk" property on that node.</span></span>
+      <span data-ttu-id="b645e-129">同一报告器可以监视节点连接，因此它可以报告同一节点的“Connectivity”属性。</span><span class="sxs-lookup"><span data-stu-id="b645e-129">The same reporter can monitor the node connectivity, so it can report a property "Connectivity" on the same node.</span></span>
+      <span data-ttu-id="b645e-130">在运行状况存储中，这些报告均被视为指定节点的单独运行状况事件。</span><span class="sxs-lookup"><span data-stu-id="b645e-130">In the health store, these reports are treated as separate health events for the specified node.</span></span>
+      <span data-ttu-id="b645e-131">与 SourceId 一起，该属性唯一地标识运行状况信息。</span><span class="sxs-lookup"><span data-stu-id="b645e-131">Together with the SourceId, the property uniquely identifies the health information.</span></span>
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.removeWhenExpired'
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b645e-132">该值指示是否在报告过期时从运行状况存储删除该报告。</span><span class="sxs-lookup"><span data-stu-id="b645e-132">Value that indicates whether the report is removed from health store when it expires.</span></span>
+      <span data-ttu-id="b645e-133">如果设置为 true，报告在过期后将从运行状况存储中删除。</span><span class="sxs-lookup"><span data-stu-id="b645e-133">If set to true, the report is removed from the health store after it expires.</span></span>
+      <span data-ttu-id="b645e-134">如果设置为 false，报告在过期时将被视为错误。</span><span class="sxs-lookup"><span data-stu-id="b645e-134">If set to false, the report is treated as an error when expired.</span></span> <span data-ttu-id="b645e-135">此属性的值在默认情况下为 false。</span><span class="sxs-lookup"><span data-stu-id="b645e-135">The value of this property is false by default.</span></span>
+      <span data-ttu-id="b645e-136">当客户端定期报告时，它们应将 RemoveWhenExpired 设置为 false（默认值）。</span><span class="sxs-lookup"><span data-stu-id="b645e-136">When clients report periodically, they should set RemoveWhenExpired false (default).</span></span>
+      <span data-ttu-id="b645e-137">这样一来，如果报告器有问题 （例如死锁），并且不能报告，是错误地评估实体运行状况报告过期时。</span><span class="sxs-lookup"><span data-stu-id="b645e-137">This way, if the reporter has issues (e.g. deadlock) and can't report, the entity is evaluated at error when the health report expires.</span></span>
+      <span data-ttu-id="b645e-138">这会将该实体标记为处于“Error”运行状况状态。</span><span class="sxs-lookup"><span data-stu-id="b645e-138">This flags the entity as being in Error health state.</span></span>
+    optional: true
+    syntax:
+      content: 'removeWhenExpired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b645e-139">此运行状况报告的序列号（采用数字字符串形式）。</span><span class="sxs-lookup"><span data-stu-id="b645e-139">The sequence number for this health report as a numeric string.</span></span>
+      <span data-ttu-id="b645e-140">报告序列号由运行状况存储用来检测过时的报告。</span><span class="sxs-lookup"><span data-stu-id="b645e-140">The report sequence number is used by the health store to detect stale reports.</span></span>
+      <span data-ttu-id="b645e-141">如果未指定，序列号将在报告被添加时由运行状况客户端自动生成。</span><span class="sxs-lookup"><span data-stu-id="b645e-141">If not specified, a sequence number is auto-generated by the health client when a report is added.</span></span>
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sourceId'
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b645e-142">标识已生成运行状况信息的客户端/监视程序/系统组件的源名称。</span><span class="sxs-lookup"><span data-stu-id="b645e-142">The source name that identifies the client/watchdog/system component that generated the health information.</span></span>
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sourceUtcTimestamp'
+    name: sourceUtcTimestamp
+    fullName: sourceUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b645e-143">日期和时间时由源发送运行状况报告。</span><span class="sxs-lookup"><span data-stu-id="b645e-143">The date and time when the health report was sent by the source.</span></span>
+    optional: true
+    syntax:
+      content: 'sourceUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.timeToLiveInMilliSeconds'
+    name: timeToLiveInMilliSeconds
+    fullName: timeToLiveInMilliSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="b645e-144">此运行状况报告保持有效的持续时间。</span><span class="sxs-lookup"><span data-stu-id="b645e-144">The duration for which this health report is valid.</span></span> <span data-ttu-id="b645e-145">此字段将 ISO8601 格式用于指定该持续时间。</span><span class="sxs-lookup"><span data-stu-id="b645e-145">This field uses ISO8601 format for specifying the duration.</span></span>
+      <span data-ttu-id="b645e-146">当客户端定期报告时，它们应以高于生存时间的频率发送报告。</span><span class="sxs-lookup"><span data-stu-id="b645e-146">When clients report periodically, they should send reports with higher frequency than time to live.</span></span>
+      <span data-ttu-id="b645e-147">如果客户端以非定期的方式报告，它们可以将生存时间设置为无限。</span><span class="sxs-lookup"><span data-stu-id="b645e-147">If clients report on transition, they can set the time to live to infinite.</span></span>
+      <span data-ttu-id="b645e-148">生存时间过期时，包含运行状况信息的运行状况事件将从运行状况存储中删除（如果 RemoveWhenExpired 为 true），或者将会评估为处于错误状态（如果 RemoveWhenExpired 为 false）。</span><span class="sxs-lookup"><span data-stu-id="b645e-148">When time to live expires, the health event that contains the health information is either removed from health store, if RemoveWhenExpired is true, or evaluated at error, if RemoveWhenExpired false.</span></span>
+      <span data-ttu-id="b645e-149">如果未指定，生存时间将默认为无限值。</span><span class="sxs-lookup"><span data-stu-id="b645e-149">If not specified, time to live defaults to infinite value.</span></span>
+    optional: true
+    syntax:
+      content: 'timeToLiveInMilliSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthInformation'
+    name: HealthInformation
+    spec.typeScript:
+      - name: HealthInformation
+        fullName: HealthInformation
+        uid: '@azure/servicefabric.HealthInformation'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

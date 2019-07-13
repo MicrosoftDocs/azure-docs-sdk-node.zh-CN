@@ -1,0 +1,685 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/keyvault-keys.KeysClient'
+    name: KeysClient
+    fullName: KeysClient
+    children:
+      - '@azure/keyvault-keys.KeysClient.backupKey'
+      - '@azure/keyvault-keys.KeysClient.createEcKey'
+      - '@azure/keyvault-keys.KeysClient.createKey'
+      - '@azure/keyvault-keys.KeysClient.createRsaKey'
+      - '@azure/keyvault-keys.KeysClient.deleteKey'
+      - '@azure/keyvault-keys.KeysClient.getDefaultPipeline'
+      - '@azure/keyvault-keys.KeysClient.getDeletedKey'
+      - '@azure/keyvault-keys.KeysClient.getKey'
+      - '@azure/keyvault-keys.KeysClient.importKey'
+      - '@azure/keyvault-keys.KeysClient.constructor'
+      - '@azure/keyvault-keys.KeysClient.listDeletedKeys'
+      - '@azure/keyvault-keys.KeysClient.listKeys'
+      - '@azure/keyvault-keys.KeysClient.listKeyVersions'
+      - '@azure/keyvault-keys.KeysClient.pipeline'
+      - '@azure/keyvault-keys.KeysClient.purgeDeletedKey'
+      - '@azure/keyvault-keys.KeysClient.recoverDeletedKey'
+      - '@azure/keyvault-keys.KeysClient.restoreKey'
+      - '@azure/keyvault-keys.KeysClient.updateKey'
+      - '@azure/keyvault-keys.KeysClient.vaultBaseUrl'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="8c7b5-101">客户端与密钥保管库密钥功能进行交互</span><span class="sxs-lookup"><span data-stu-id="8c7b5-101">The client to interact with the KeyVault keys functionality</span></span>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.backupKey'
+    name: 'backupKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-102">指定的密钥的备份将下载到客户端的请求。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-102">Requests that a backup of the specified key be downloaded to the client.</span></span> <span data-ttu-id="8c7b5-103">将下载所有版本的密钥。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-103">All versions of the key will be downloaded.</span></span> <span data-ttu-id="8c7b5-104">此操作需要 keys/backup 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-104">This operation requires the keys/backup permission.</span></span>
+      <span data-ttu-id="8c7b5-105">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-105">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let backupContents = await client.backupKey("MyKey");
+      ```
+    syntax:
+      content: 'function backupKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-106">密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-106">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Uint8Array | undefined>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.createEcKey'
+    name: 'createEcKey(string, CreateEcKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-107">创建密钥操作可用于在 Azure 密钥保管库中创建的任何密钥类型。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-107">The create key operation can be used to create any key type in Azure Key Vault.</span></span> <span data-ttu-id="8c7b5-108">如果已命名的密钥已存在，Azure 密钥保管库创建密钥的新版本。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-108">If the named key already exists, Azure Key Vault creates a new version of the key.</span></span> <span data-ttu-id="8c7b5-109">需要 keys/create 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-109">It requires the keys/create permission.</span></span>
+      <span data-ttu-id="8c7b5-110">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-110">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let result = await client.createEcKey("MyKey", { curve: "P-256" });
+      ```
+    syntax:
+      content: 'function createEcKey(name: string, options?: CreateEcKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-111">密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-111">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.CreateEcKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.createKey'
+    name: 'createKey(string, JsonWebKeyType, CreateKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-112">创建密钥操作可用于在 Azure 密钥保管库中创建的任何密钥类型。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-112">The create key operation can be used to create any key type in Azure Key Vault.</span></span> <span data-ttu-id="8c7b5-113">如果已命名的密钥已存在，Azure 密钥保管库创建密钥的新版本。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-113">If the named key already exists, Azure Key Vault creates a new version of the key.</span></span> <span data-ttu-id="8c7b5-114">需要 keys/create 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-114">It requires the keys/create permission.</span></span>
+      <span data-ttu-id="8c7b5-115">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-115">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      // Create an elliptic-curve key:
+      let result = await client.createKey("MyKey", "EC");
+      ```
+    syntax:
+      content: 'function createKey(name: string, keyType: JsonWebKeyType, options?: CreateKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-116">密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-116">The name of the key.</span></span>
+        - id: keyType
+          type:
+            - '@azure/keyvault-keys.JsonWebKeyType'
+          description: <span data-ttu-id="8c7b5-117">键的类型。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-117">The type of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.CreateKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.createRsaKey'
+    name: 'createRsaKey(string, CreateRsaKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-118">创建密钥操作可用于在 Azure 密钥保管库中创建的任何密钥类型。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-118">The create key operation can be used to create any key type in Azure Key Vault.</span></span> <span data-ttu-id="8c7b5-119">如果已命名的密钥已存在，Azure 密钥保管库创建密钥的新版本。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-119">If the named key already exists, Azure Key Vault creates a new version of the key.</span></span> <span data-ttu-id="8c7b5-120">需要 keys/create 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-120">It requires the keys/create permission.</span></span>
+      <span data-ttu-id="8c7b5-121">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-121">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let result = await client.createRsaKey("MyKey", { keySize: 2048 });
+      ```
+    syntax:
+      content: 'function createRsaKey(name: string, options?: CreateRsaKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-122">密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-122">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.CreateRsaKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.deleteKey'
+    name: 'deleteKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-123">删除操作适用于 Azure 密钥保管库中存储任何密钥。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-123">The DELETE operation applies to any key stored in Azure Key Vault.</span></span> <span data-ttu-id="8c7b5-124">删除不能应用于密钥的单个版本。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-124">DELETE cannot be applied to an individual version of a key.</span></span> <span data-ttu-id="8c7b5-125">此操作需要 keys/delete 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-125">This operation requires the keys/delete permission.</span></span>
+      <span data-ttu-id="8c7b5-126">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-126">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let result = await client.deleteKey("MyKey");
+      ```
+    syntax:
+      content: 'function deleteKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-127">密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-127">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.DeletedKey>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.getDefaultPipeline'
+    name: 'getDefaultPipeline(ServiceClientCredentials | TokenCredential, NewPipelineOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="8c7b5-128">用于使用所提供的凭据创建一个新的管道对象的静态方法。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-128">A static method used to create a new Pipeline object with the provided Credential.</span></span>
+    syntax:
+      content: 'static function getDefaultPipeline(credential: ServiceClientCredentials | TokenCredential, pipelineOptions?: NewPipelineOptions)'
+      parameters:
+        - id: credential
+          type:
+            - ServiceClientCredentials | TokenCredential
+          description: ''
+        - id: pipelineOptions
+          type:
+            - '@azure/keyvault-keys.NewPipelineOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - ServiceClientOptions
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.getDeletedKey'
+    name: 'getDeletedKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-129">获取已删除的密钥操作将返回指定的已删除的密钥以及其属性。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-129">The Get Deleted Key operation returns the specified deleted key along with its attributes.</span></span>
+      <span data-ttu-id="8c7b5-130">此操作需要 keys/get 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-130">This operation requires the keys/get permission.</span></span>
+      <span data-ttu-id="8c7b5-131">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-131">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let key = await client.getDeletedKey("MyDeletedKey");
+      ```
+    syntax:
+      content: 'function getDeletedKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-132">密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-132">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.DeletedKey>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.getKey'
+    name: 'getKey(string, GetKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-133">获取操作也适用于 Azure 密钥保管库中存储任何密钥。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-133">The GET operation is applicable to any key stored in Azure Key Vault.</span></span> <span data-ttu-id="8c7b5-134">此操作需要 keys/get 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-134">This operation requires the keys/get permission.</span></span>
+      <span data-ttu-id="8c7b5-135">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-135">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let key = await client.getKey("MyKey");
+      ```
+    syntax:
+      content: 'function getKey(name: string, options?: GetKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-136">密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-136">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.importKey'
+    name: 'importKey(string, JsonWebKey, ImportKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-137">导入密钥操作可能会用于导入 Azure 密钥保管库的任何密钥类型。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-137">The import key operation may be used to import any key type into an Azure Key Vault.</span></span> <span data-ttu-id="8c7b5-138">如果已命名的密钥已存在，Azure 密钥保管库创建密钥的新版本。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-138">If the named key already exists, Azure Key Vault creates a new version of the key.</span></span> <span data-ttu-id="8c7b5-139">此操作需要 keys/import 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-139">This operation requires the keys/import permission.</span></span>
+      <span data-ttu-id="8c7b5-140">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-140">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      // Key contents in myKeyContents
+      let result = await client.importKey("MyKey", myKeyContents);
+      ```
+    syntax:
+      content: 'function importKey(name: string, key: JsonWebKey, options?: ImportKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-141">导入的密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-141">Name for the imported key.</span></span>
+        - id: key
+          type:
+            - '@azure/keyvault-keys.JsonWebKey'
+          description: <span data-ttu-id="8c7b5-142">Json web 密钥</span><span class="sxs-lookup"><span data-stu-id="8c7b5-142">The Json web key</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.ImportKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.constructor'
+    name: 'KeysClient(string, ServiceClientCredentials | TokenCredential, ServiceClientOptions | NewPipelineOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-143">创建 KeysClient 的实例。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-143">Creates an instance of KeysClient.</span></span>
+      <span data-ttu-id="8c7b5-144">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-144">Example usage:</span></span>
+      ```ts
+      import { KeysClient } from "@azure/keyvault-keys";
+      import { EnvironmentCredential } from "@azure/identity";
+
+      let url = `https://<MY KEYVAULT HERE>.vault.azure.net`;
+      let credentials = new EnvironmentCredential();
+
+      let client = new KeysClient(url, credentials);
+      ```
+    syntax:
+      content: 'new KeysClient(url: string, credential: ServiceClientCredentials | TokenCredential, pipelineOrOptions?: ServiceClientOptions | NewPipelineOptions)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-145">指向密钥保管库的基 url。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-145">the base url to the key vault.</span></span>
+        - id: credential
+          type:
+            - ServiceClientCredentials | TokenCredential
+          description: ''
+        - id: pipelineOrOptions
+          type:
+            - ServiceClientOptions | @azure/keyvault-keys.NewPipelineOptions
+          description: ''
+          optional: true
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.listDeletedKeys'
+    name: listDeletedKeys(GetKeysOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-146">循环访问已删除的密钥保管库中。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-146">Iterates the deleted keys in the vault.</span></span>  <span data-ttu-id="8c7b5-147">在响应中提供了完整密钥标识符和属性。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-147">The full key identifier and attributes are provided in the response.</span></span> <span data-ttu-id="8c7b5-148">通过为各个键不返回任何值。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-148">No values are returned for the keys.</span></span> <span data-ttu-id="8c7b5-149">此操作需要 keys/list 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-149">This operations requires the keys/list permission.</span></span>
+      <span data-ttu-id="8c7b5-150">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-150">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      for await (const keyAttr of client.listDeletedKeys()) {
+        const deletedKey = await client.getKey(keyAttr.name);
+        console.log("deleted key: ", deletedKey);
+      }
+      ```
+    syntax:
+      content: 'function listDeletedKeys(options?: GetKeysOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeysOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.listKeys'
+    name: listKeys(GetKeysOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-151">循环访问所有密钥保管库中的最新版本。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-151">Iterates the latest version of all keys in the vault.</span></span>  <span data-ttu-id="8c7b5-152">在响应中提供了完整密钥标识符和属性。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-152">The full key identifier and attributes are provided in the response.</span></span> <span data-ttu-id="8c7b5-153">通过为各个键不返回任何值。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-153">No values are returned for the keys.</span></span> <span data-ttu-id="8c7b5-154">此操作需要 keys/list 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-154">This operations requires the keys/list permission.</span></span>
+      <span data-ttu-id="8c7b5-155">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-155">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      for await (const keyAttr of client.listKeys()) {
+        const key = await client.getKey(keyAttr.name);
+        console.log("key: ", key);
+      }
+      ```
+    syntax:
+      content: 'function listKeys(options?: GetKeysOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeysOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.listKeyVersions'
+    name: 'listKeyVersions(string, GetKeysOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-156">循环访问所有版本的保管库中给定的键。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-156">Iterates all versions of the given key in the vault.</span></span> <span data-ttu-id="8c7b5-157">在响应中提供了完整密钥标识符、 属性和标记。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-157">The full key identifier, attributes, and tags are provided in the response.</span></span> <span data-ttu-id="8c7b5-158">此操作需要 keys/list 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-158">This operation requires the keys/list permission.</span></span>
+      <span data-ttu-id="8c7b5-159">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-159">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      for await (const keyAttr of client.listKeyVersions("MyKey")) {
+        const key = await client.getKey(keyAttr.name);
+        console.log("key version: ", key);
+      }
+      ```
+    syntax:
+      content: 'function listKeyVersions(name: string, options?: GetKeysOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-160">要提取的版本的密钥的名称</span><span class="sxs-lookup"><span data-stu-id="8c7b5-160">Name of the key to fetch versions for</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeysOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.pipeline'
+    name: pipeline
+    fullName: pipeline
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8c7b5-161">要创建与服务连接的选项</span><span class="sxs-lookup"><span data-stu-id="8c7b5-161">The options to create the connection to the service</span></span>
+    syntax:
+      content: 'pipeline: ServiceClientOptions'
+      return:
+        type:
+          - ServiceClientOptions
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.purgeDeletedKey'
+    name: 'purgeDeletedKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-162">清除已删除的密钥操作而无需恢复的可能性中永久删除密钥。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-162">The purge deleted key operation removes the key permanently, without the possibility of recovery.</span></span> <span data-ttu-id="8c7b5-163">此操作仅启用了软删除启用了保管库上。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-163">This operation can only be enabled on a soft-delete enabled vault.</span></span> <span data-ttu-id="8c7b5-164">此操作需要密钥/清除权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-164">This operation requires the keys/purge permission.</span></span>
+      <span data-ttu-id="8c7b5-165">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-165">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      await client.deleteKey("MyKey");
+      // ...
+      await client.purgeDeletedKey("MyKey");
+      ```
+    syntax:
+      content: 'function purgeDeletedKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-166">密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-166">The name of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.recoverDeletedKey'
+    name: 'recoverDeletedKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-167">恢复已删除的密钥中指定的保管库。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-167">Recovers the deleted key in the specified vault.</span></span> <span data-ttu-id="8c7b5-168">仅在软删除启用了保管库上执行此操作。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-168">This operation can only be performed on a soft-delete enabled vault.</span></span> <span data-ttu-id="8c7b5-169">此操作需要密钥/恢复权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-169">This operation requires the keys/recover permission.</span></span>
+      <span data-ttu-id="8c7b5-170">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-170">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      await client.deleteKey("MyKey");
+      // ...
+      await client.recoverDeletedKey("MyKey");
+      ```
+    syntax:
+      content: 'function recoverDeletedKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-171">已删除的密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-171">The name of the deleted key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.restoreKey'
+    name: 'restoreKey(Uint8Array, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-172">将备份的密钥及其所有版本，还原到一个保管库。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-172">Restores a backed up key, and all its versions, to a vault.</span></span> <span data-ttu-id="8c7b5-173">此操作需要 keys/restore 权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-173">This operation requires the keys/restore permission.</span></span>
+      <span data-ttu-id="8c7b5-174">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-174">Example usage:</span></span>
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let backupContents = await client.backupKey("MyKey");
+      // ...
+      let key = await client.restoreKey(backupContents);
+      ```
+    syntax:
+      content: 'function restoreKey(backup: Uint8Array, options?: RequestOptions)'
+      parameters:
+        - id: backup
+          type:
+            - Uint8Array
+          description: <span data-ttu-id="8c7b5-175">与密钥的捆绑包关联的备份 blob。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-175">The backup blob associated with a key bundle.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.updateKey'
+    name: 'updateKey(string, string, UpdateKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="8c7b5-176">更新操作会更改现有的存储密钥的指定的属性。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-176">The UPDATE operation changes specified attributes of an existing stored key.</span></span> <span data-ttu-id="8c7b5-177">未在请求中指定的属性保持不变。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-177">Attributes that are not specified in the request are left unchanged.</span></span> <span data-ttu-id="8c7b5-178">不能更改密钥本身的值。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-178">The value of a key itself cannot be changed.</span></span> <span data-ttu-id="8c7b5-179">此操作需要密钥/设置的权限。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-179">This operation requires the keys/set permission.</span></span>
+      <span data-ttu-id="8c7b5-180">用法示例：</span><span class="sxs-lookup"><span data-stu-id="8c7b5-180">Example usage:</span></span>
+      ```ts
+      let keyName = "MyKey";
+      let client = new KeysClient(url, credentials);
+      let key = await client.getKey(keyName);
+      let result = await client.updateKey(keyName, key.version, { enabled: false });
+      ```
+    syntax:
+      content: 'function updateKey(name: string, keyVersion: string, options?: UpdateKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-181">密钥的名称。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-181">The name of the key.</span></span>
+        - id: keyVersion
+          type:
+            - string
+          description: <span data-ttu-id="8c7b5-182">密钥的版本。</span><span class="sxs-lookup"><span data-stu-id="8c7b5-182">The version of the key.</span></span>
+        - id: options
+          type:
+            - '@azure/keyvault-keys.UpdateKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.vaultBaseUrl'
+    name: vaultBaseUrl
+    fullName: vaultBaseUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8c7b5-183">指向在保管库的基 URL</span><span class="sxs-lookup"><span data-stu-id="8c7b5-183">The base URL to the vault</span></span>
+    syntax:
+      content: 'vaultBaseUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/keyvault-keys'
+references:
+  - uid: ServiceClientOptions | @azure/keyvault-keys.NewPipelineOptions
+    name: NewPipelineOptions
+    spec.typeScript:
+      - name: 'ServiceClientOptions | '
+        fullName: 'ServiceClientOptions | '
+      - name: NewPipelineOptions
+        fullName: NewPipelineOptions
+        uid: '@azure/keyvault-keys.NewPipelineOptions'
+  - uid: '@azure/keyvault-keys.RequestOptions'
+    name: RequestOptions
+    spec.typeScript:
+      - name: RequestOptions
+        fullName: RequestOptions
+        uid: '@azure/keyvault-keys.RequestOptions'
+  - uid: '@azure/keyvault-keys.CreateEcKeyOptions'
+    name: CreateEcKeyOptions
+    spec.typeScript:
+      - name: CreateEcKeyOptions
+        fullName: CreateEcKeyOptions
+        uid: '@azure/keyvault-keys.CreateEcKeyOptions'
+  - uid: Promise<@azure/keyvault-keys.Key>
+    name: Key>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Key
+        fullName: Key
+        uid: '@azure/keyvault-keys.Key'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/keyvault-keys.JsonWebKeyType'
+    name: JsonWebKeyType
+    spec.typeScript:
+      - name: JsonWebKeyType
+        fullName: JsonWebKeyType
+        uid: '@azure/keyvault-keys.JsonWebKeyType'
+  - uid: '@azure/keyvault-keys.CreateKeyOptions'
+    name: CreateKeyOptions
+    spec.typeScript:
+      - name: CreateKeyOptions
+        fullName: CreateKeyOptions
+        uid: '@azure/keyvault-keys.CreateKeyOptions'
+  - uid: '@azure/keyvault-keys.CreateRsaKeyOptions'
+    name: CreateRsaKeyOptions
+    spec.typeScript:
+      - name: CreateRsaKeyOptions
+        fullName: CreateRsaKeyOptions
+        uid: '@azure/keyvault-keys.CreateRsaKeyOptions'
+  - uid: Promise<@azure/keyvault-keys.DeletedKey>
+    name: DeletedKey>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: DeletedKey
+        fullName: DeletedKey
+        uid: '@azure/keyvault-keys.DeletedKey'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/keyvault-keys.GetKeyOptions'
+    name: GetKeyOptions
+    spec.typeScript:
+      - name: GetKeyOptions
+        fullName: GetKeyOptions
+        uid: '@azure/keyvault-keys.GetKeyOptions'
+  - uid: '@azure/keyvault-keys.JsonWebKey'
+    name: JsonWebKey
+    spec.typeScript:
+      - name: JsonWebKey
+        fullName: JsonWebKey
+        uid: '@azure/keyvault-keys.JsonWebKey'
+  - uid: '@azure/keyvault-keys.ImportKeyOptions'
+    name: ImportKeyOptions
+    spec.typeScript:
+      - name: ImportKeyOptions
+        fullName: ImportKeyOptions
+        uid: '@azure/keyvault-keys.ImportKeyOptions'
+  - uid: '@azure/keyvault-keys.GetKeysOptions'
+    name: GetKeysOptions
+    spec.typeScript:
+      - name: GetKeysOptions
+        fullName: GetKeysOptions
+        uid: '@azure/keyvault-keys.GetKeysOptions'
+  - uid: 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    name: 'KeyAttributes[]>'
+    spec.typeScript:
+      - name: PagedAsyncIterableIterator<
+        fullName: PagedAsyncIterableIterator<
+      - name: KeyAttributes
+        fullName: KeyAttributes
+        uid: '@azure/keyvault-keys.KeyAttributes'
+      - name: ', '
+        fullName: ', '
+      - name: KeyAttributes
+        fullName: KeyAttributes
+        uid: '@azure/keyvault-keys.KeyAttributes'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/keyvault-keys.UpdateKeyOptions'
+    name: UpdateKeyOptions
+    spec.typeScript:
+      - name: UpdateKeyOptions
+        fullName: UpdateKeyOptions
+        uid: '@azure/keyvault-keys.UpdateKeyOptions'
+  - uid: '@azure/keyvault-keys.NewPipelineOptions'
+    name: NewPipelineOptions
+    spec.typeScript:
+      - name: NewPipelineOptions
+        fullName: NewPipelineOptions
+        uid: '@azure/keyvault-keys.NewPipelineOptions'

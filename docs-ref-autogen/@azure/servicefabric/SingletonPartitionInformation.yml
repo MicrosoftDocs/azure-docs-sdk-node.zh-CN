@@ -1,0 +1,42 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.SingletonPartitionInformation'
+    name: SingletonPartitionInformation
+    fullName: SingletonPartitionInformation
+    children:
+      - '@azure/servicefabric.SingletonPartitionInformation.id'
+      - '@azure/servicefabric.SingletonPartitionInformation.servicePartitionKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="bfaa2-101">在单独的分区有关的信息。</span><span class="sxs-lookup"><span data-stu-id="bfaa2-101">Information about a partition that is singleton.</span></span> <span data-ttu-id="bfaa2-102">使用单一实例分区方案的服务是有效地非分区。</span><span class="sxs-lookup"><span data-stu-id="bfaa2-102">The services with singleton partitioning scheme are effectively non-partitioned.</span></span> <span data-ttu-id="bfaa2-103">它们只能有一个分区。</span><span class="sxs-lookup"><span data-stu-id="bfaa2-103">They only have one partition.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SingletonPartitionInformation.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bfaa2-104">Service Fabric 用于唯一标识分区的内部 ID。</span><span class="sxs-lookup"><span data-stu-id="bfaa2-104">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="bfaa2-105">创建服务时，这是随机生成的 GUID。</span><span class="sxs-lookup"><span data-stu-id="bfaa2-105">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="bfaa2-106">分区 ID 是唯一的而不会更改该服务的生存期内。</span><span class="sxs-lookup"><span data-stu-id="bfaa2-106">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="bfaa2-107">如果在同一个服务已被删除并重新创建其分区的 Id 会有所不同。</span><span class="sxs-lookup"><span data-stu-id="bfaa2-107">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SingletonPartitionInformation.servicePartitionKind'
+    name: servicePartitionKind
+    fullName: servicePartitionKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="bfaa2-108">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="bfaa2-108">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'servicePartitionKind: "Singleton"'
+      return:
+        type:
+          - '"Singleton"'
+    package: '@azure/servicefabric'

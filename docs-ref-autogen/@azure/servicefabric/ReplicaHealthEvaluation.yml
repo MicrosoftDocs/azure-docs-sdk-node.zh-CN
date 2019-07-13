@@ -1,0 +1,123 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReplicaHealthEvaluation'
+    name: ReplicaHealthEvaluation
+    fullName: ReplicaHealthEvaluation
+    children:
+      - '@azure/servicefabric.ReplicaHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.ReplicaHealthEvaluation.description'
+      - '@azure/servicefabric.ReplicaHealthEvaluation.kind'
+      - '@azure/servicefabric.ReplicaHealthEvaluation.partitionId'
+      - '@azure/servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId'
+      - '@azure/servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="f2612-101">表示运行状况评估副本，其中包含有关数据和运行状况存储用于评估运行状况的算法的信息。</span><span class="sxs-lookup"><span data-stu-id="f2612-101">Represents health evaluation for a replica, containing information about the data and the algorithm used by health store to evaluate health.</span></span> <span data-ttu-id="f2612-102">仅当聚合运行状况状态为错误或警告时，才返回计算。</span><span class="sxs-lookup"><span data-stu-id="f2612-102">The evaluation is returned only when the aggregated health state is either Error or Warning.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2612-103">例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown</span><span class="sxs-lookup"><span data-stu-id="f2612-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2612-104">运行状况评估，表示评估过程的摘要说明。</span><span class="sxs-lookup"><span data-stu-id="f2612-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f2612-105">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="f2612-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "Replica"'
+      return:
+        type:
+          - '"Replica"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthEvaluation.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f2612-106">副本所属的分区的 id。</span><span class="sxs-lookup"><span data-stu-id="f2612-106">Id of the partition to which the replica belongs.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId'
+    name: replicaOrInstanceId
+    fullName: replicaOrInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f2612-107">有状态服务副本或无状态服务实例的 id。</span><span class="sxs-lookup"><span data-stu-id="f2612-107">Id of a stateful service replica or a stateless service instance.</span></span> <span data-ttu-id="f2612-108">适用于有状态和无状态服务的查询中使用此 ID。</span><span class="sxs-lookup"><span data-stu-id="f2612-108">This ID is used in the queries that apply to both stateful and stateless services.</span></span> <span data-ttu-id="f2612-109">Service Fabric 使用它来唯一标识分区的有状态服务或无状态服务分区的实例的副本。</span><span class="sxs-lookup"><span data-stu-id="f2612-109">It is used by Service Fabric to uniquely identify a replica of a partition of a stateful service or an instance of a stateless service partition.</span></span> <span data-ttu-id="f2612-110">它是唯一在分区中并不会更改的副本或实例的生存期内。</span><span class="sxs-lookup"><span data-stu-id="f2612-110">It is unique within a partition and does not change for the lifetime of the replica or the instance.</span></span> <span data-ttu-id="f2612-111">如果有状态副本获取删除，并且在同一个分区在同一节点上创建另一个副本，它将获取不同的值的 id。</span><span class="sxs-lookup"><span data-stu-id="f2612-111">If a stateful replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the ID.</span></span> <span data-ttu-id="f2612-112">如果无状态实例故障转移的相同或不同节点 id，它将获取不同的值</span><span class="sxs-lookup"><span data-stu-id="f2612-112">If a stateless instance is failed over on the same or different node it will get a different value for the ID.</span></span>'
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f2612-113">副本的当前聚合运行状况状态导致的不正常评估的列表。</span><span class="sxs-lookup"><span data-stu-id="f2612-113">List of unhealthy evaluations that led to the current aggregated health state of the replica.</span></span>
+      <span data-ttu-id="f2612-114">不正常评估的类型可以是 EventHealthEvaluation。</span><span class="sxs-lookup"><span data-stu-id="f2612-114">The types of the unhealthy evaluations can be EventHealthEvaluation.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

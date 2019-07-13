@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription'
+    name: ServicePlacementPreferPrimaryDomainPolicyDescription
+    fullName: ServicePlacementPreferPrimaryDomainPolicyDescription
+    children:
+      - '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName'
+      - '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      <span data-ttu-id="eae4c-101">描述要用于 Service Fabric 服务的放置服务的主副本应以最佳方式放置在特定域中的策略。</span><span class="sxs-lookup"><span data-stu-id="eae4c-101">Describes the policy to be used for placement of a Service Fabric service where the service's Primary replicas should optimally be placed in a particular domain.</span></span>
+      <span data-ttu-id="eae4c-102">此放置策略通常用于其中就可指示服务的主副本应位于特定的容错域，地理上分散的 Service Fabric 群集方案中的容错域在地理上分散方案通常与区域或数据中心边界对齐。</span><span class="sxs-lookup"><span data-stu-id="eae4c-102">This placement policy is usually used with fault domains in scenarios where the Service Fabric cluster is geographically distributed in order to indicate that a service's primary replica should be located in a particular fault domain, which in geo-distributed scenarios usually aligns with regional or datacenter boundaries.</span></span> <span data-ttu-id="eae4c-103">请注意，由于这是一种优化可能，主副本不会由于故障、 容量限制或其他约束此域中。</span><span class="sxs-lookup"><span data-stu-id="eae4c-103">Note that since this is an optimization it is possible that the Primary replica may not end up located in this domain due to failures, capacity limits, or other constraints.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName'
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="eae4c-104">应使用此策略根据要放置的域的名称。</span><span class="sxs-lookup"><span data-stu-id="eae4c-104">The name of the domain that should used for placement as per this policy.</span></span>
+    optional: true
+    syntax:
+      content: 'domainName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="eae4c-105">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="eae4c-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'type: "PreferPrimaryDomain"'
+      return:
+        type:
+          - '"PreferPrimaryDomain"'
+    package: '@azure/servicefabric'

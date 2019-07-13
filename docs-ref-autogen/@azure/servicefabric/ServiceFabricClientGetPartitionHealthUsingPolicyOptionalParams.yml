@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="fac32-101">可选参数。</span><span class="sxs-lookup"><span data-stu-id="fac32-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -28,7 +28,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="53253-101">用于中止的信号请求。</span><span class="sxs-lookup"><span data-stu-id="53253-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="fac32-102">用于中止的信号请求。</span><span class="sxs-lookup"><span data-stu-id="fac32-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -43,7 +43,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="fac32-103">介绍用于评估应用程序或它的一个子级的运行状况的运行状况策略。</span><span class="sxs-lookup"><span data-stu-id="fac32-103">Describes the health policies used to evaluate the health of an application or one of its children.</span></span>
+      <span data-ttu-id="fac32-104">如果不存在，运行状况评估使用的运行状况策略与应用程序清单或默认运行状况策略。</span><span class="sxs-lookup"><span data-stu-id="fac32-104">If not present, the health evaluation uses the health policy from application manifest or the default health policy.</span></span>
     optional: true
     syntax:
       content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
@@ -58,7 +60,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="53253-102">{object}[customHeaders]用户定义的自定义请求标头将发送请求之前应用。</span><span class="sxs-lookup"><span data-stu-id="53253-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="fac32-105">{object}[customHeaders]用户定义的自定义请求标头将发送请求之前应用。</span><span class="sxs-lookup"><span data-stu-id="fac32-105">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -73,7 +75,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="fac32-106">用于根据运行状况筛选返回的 HealthEvent 对象集合。</span><span class="sxs-lookup"><span data-stu-id="fac32-106">Allows filtering the collection of HealthEvent objects returned based on health state.</span></span>
+      <span data-ttu-id="fac32-107">此参数的可能值包括以下运行状态之一的整数值。</span><span class="sxs-lookup"><span data-stu-id="fac32-107">The possible values for this parameter include integer value of one of the following health states.</span></span>
+      <span data-ttu-id="fac32-108">仅返回与筛选器匹配的事件。</span><span class="sxs-lookup"><span data-stu-id="fac32-108">Only events that match the filter are returned.</span></span> <span data-ttu-id="fac32-109">所有事件用于评估聚合运行状态。</span><span class="sxs-lookup"><span data-stu-id="fac32-109">All events are used to evaluate the aggregated health state.</span></span>
+      <span data-ttu-id="fac32-110">如果未指定，则返回所有项。</span><span class="sxs-lookup"><span data-stu-id="fac32-110">If not specified, all entries are returned.</span></span> <span data-ttu-id="fac32-111">状态值为基于标志的枚举，因此该值可以是使用按位“OR”运算符获取的值的组合。</span><span class="sxs-lookup"><span data-stu-id="fac32-111">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using the bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="fac32-112">例如，如果提供的值为 6，则返回 HealthState 值为 OK (2) 和 Warning (4) 的所有事件。</span><span class="sxs-lookup"><span data-stu-id="fac32-112">For example, If the provided value is 6 then all of the events with HealthState value of OK (2) and Warning (4) are returned.</span></span>
+      - <span data-ttu-id="fac32-113">Default-默认值。</span><span class="sxs-lookup"><span data-stu-id="fac32-113">Default - Default value.</span></span> <span data-ttu-id="fac32-114">匹配任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="fac32-114">Matches any HealthState.</span></span> <span data-ttu-id="fac32-115">值为 0。</span><span class="sxs-lookup"><span data-stu-id="fac32-115">The value is zero.</span></span>
+      - <span data-ttu-id="fac32-116">无-不与任何 HealthState 值匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="fac32-116">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="fac32-117">未返回有关给定状态集合的结果时使用。</span><span class="sxs-lookup"><span data-stu-id="fac32-117">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="fac32-118">值为 1。</span><span class="sxs-lookup"><span data-stu-id="fac32-118">The value is 1.</span></span>
+      - <span data-ttu-id="fac32-119">Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。</span><span class="sxs-lookup"><span data-stu-id="fac32-119">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="fac32-120">值为 2。</span><span class="sxs-lookup"><span data-stu-id="fac32-120">The value is 2.</span></span>
+      - <span data-ttu-id="fac32-121">警告-筛选器的输入匹配与 HealthState 值为 Warning。</span><span class="sxs-lookup"><span data-stu-id="fac32-121">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="fac32-122">值为 4。</span><span class="sxs-lookup"><span data-stu-id="fac32-122">The value is 4.</span></span>
+      - <span data-ttu-id="fac32-123">Error-与 HealthState 值为 Error 的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="fac32-123">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="fac32-124">值为 8。</span><span class="sxs-lookup"><span data-stu-id="fac32-124">The value is 8.</span></span>
+      - <span data-ttu-id="fac32-125">All-与具有任意 HealthState 值的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="fac32-125">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="fac32-126">值为 65535。</span><span class="sxs-lookup"><span data-stu-id="fac32-126">The value is 65535.</span></span> <span data-ttu-id="fac32-127">默认值：0.</span><span class="sxs-lookup"><span data-stu-id="fac32-127">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -88,7 +101,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="fac32-128">指示运行状况统计数据是否应作为查询结果的一部分返回。</span><span class="sxs-lookup"><span data-stu-id="fac32-128">Indicates whether the health statistics should be returned as part of the query result.</span></span> <span data-ttu-id="fac32-129">默认值为 False。</span><span class="sxs-lookup"><span data-stu-id="fac32-129">False by default.</span></span>
+      <span data-ttu-id="fac32-130">统计信息显示处于 Ok、Warning 和 Error 运行状况的子实体数。</span><span class="sxs-lookup"><span data-stu-id="fac32-130">The statistics show the number of children entities in health state Ok, Warning, and Error.</span></span>
+      <span data-ttu-id="fac32-131">默认值： false。</span><span class="sxs-lookup"><span data-stu-id="fac32-131">Default value: false.</span></span>
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -103,7 +119,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="53253-103">在下载进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="53253-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="fac32-132">在下载进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="fac32-132">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -118,7 +134,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="53253-104">在上传进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="53253-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="fac32-133">在上传进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="fac32-133">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -133,7 +149,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="fac32-134">用于筛选分区中 ReplicaHealthState 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="fac32-134">Allows filtering the collection of ReplicaHealthState objects on the partition.</span></span> <span data-ttu-id="fac32-135">可从位运算的成员或 HealthStateFilter 的成员获取该值。</span><span class="sxs-lookup"><span data-stu-id="fac32-135">The value can be obtained from members or bitwise operations on members of HealthStateFilter.</span></span> <span data-ttu-id="fac32-136">只会返回与筛选器匹配的副本。</span><span class="sxs-lookup"><span data-stu-id="fac32-136">Only replicas that match the filter will be returned.</span></span> <span data-ttu-id="fac32-137">所有副本都会用于评估聚合运行状态。</span><span class="sxs-lookup"><span data-stu-id="fac32-137">All replicas will be used to evaluate the aggregated health state.</span></span> <span data-ttu-id="fac32-138">如果未指定，将返回所有条目。状态值为基于标志的枚举，因此该值可以是使用按位“OR”运算符获取的值的组合。</span><span class="sxs-lookup"><span data-stu-id="fac32-138">If not specified, all entries will be returned.The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span> <span data-ttu-id="fac32-139">例如，如果提供的值为 6，则会返回 HealthState 值为 OK (2) 和 Warning (4) 的所有事件。</span><span class="sxs-lookup"><span data-stu-id="fac32-139">For example, If the provided value is 6 then all of the events with HealthState value of OK (2) and Warning (4) will be returned.</span></span> <span data-ttu-id="fac32-140">此参数的可能值包括以下运行状态之一的整数值。</span><span class="sxs-lookup"><span data-stu-id="fac32-140">The possible values for this parameter include integer value of one of the following health states.</span></span>
+      - <span data-ttu-id="fac32-141">Default-默认值。</span><span class="sxs-lookup"><span data-stu-id="fac32-141">Default - Default value.</span></span> <span data-ttu-id="fac32-142">匹配任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="fac32-142">Matches any HealthState.</span></span> <span data-ttu-id="fac32-143">值为 0。</span><span class="sxs-lookup"><span data-stu-id="fac32-143">The value is zero.</span></span>
+      - <span data-ttu-id="fac32-144">无-不与任何 HealthState 值匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="fac32-144">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="fac32-145">未返回有关给定状态集合的结果时使用。</span><span class="sxs-lookup"><span data-stu-id="fac32-145">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="fac32-146">值为 1。</span><span class="sxs-lookup"><span data-stu-id="fac32-146">The value is 1.</span></span>
+      - <span data-ttu-id="fac32-147">Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。</span><span class="sxs-lookup"><span data-stu-id="fac32-147">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="fac32-148">值为 2。</span><span class="sxs-lookup"><span data-stu-id="fac32-148">The value is 2.</span></span>
+      - <span data-ttu-id="fac32-149">警告-筛选器的输入匹配与 HealthState 值为 Warning。</span><span class="sxs-lookup"><span data-stu-id="fac32-149">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="fac32-150">值为 4。</span><span class="sxs-lookup"><span data-stu-id="fac32-150">The value is 4.</span></span>
+      - <span data-ttu-id="fac32-151">Error-与 HealthState 值为 Error 的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="fac32-151">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="fac32-152">值为 8。</span><span class="sxs-lookup"><span data-stu-id="fac32-152">The value is 8.</span></span>
+      - <span data-ttu-id="fac32-153">All-与具有任意 HealthState 值的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="fac32-153">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="fac32-154">值为 65535。</span><span class="sxs-lookup"><span data-stu-id="fac32-154">The value is 65535.</span></span> <span data-ttu-id="fac32-155">默认值：0.</span><span class="sxs-lookup"><span data-stu-id="fac32-155">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'replicasHealthStateFilter?: undefined | number'
@@ -148,7 +171,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="53253-105">一个请求可以获取自动终止之前的毫秒数。</span><span class="sxs-lookup"><span data-stu-id="53253-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="fac32-156">一个请求可以获取自动终止之前的毫秒数。</span><span class="sxs-lookup"><span data-stu-id="fac32-156">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -163,7 +186,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="fac32-157">在数秒内执行该操作的服务器超时。</span><span class="sxs-lookup"><span data-stu-id="fac32-157">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="fac32-158">此超时指定客户端是愿意等待的请求的操作完成的持续时间。</span><span class="sxs-lookup"><span data-stu-id="fac32-158">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="fac32-159">此参数的默认值为 60 秒。</span><span class="sxs-lookup"><span data-stu-id="fac32-159">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="fac32-160">默认值：60.</span><span class="sxs-lookup"><span data-stu-id="fac32-160">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

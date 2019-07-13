@@ -1,0 +1,390 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo'
+    name: ComposeDeploymentUpgradeProgressInfo
+    fullName: ComposeDeploymentUpgradeProgressInfo
+    children:
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationHealthPolicy'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationName'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationUnhealthyEvaluations'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationUpgradeStatusDetails'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.currentUpgradeDomainDuration'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.currentUpgradeDomainProgress'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.deploymentName'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.failureReason'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.failureTimestampUtc'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.forceRestart'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.monitoringPolicy'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.rollingUpgradeMode'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.startTimestampUtc'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.targetApplicationTypeVersion'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeDomainProgressAtFailure'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeDuration'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeKind'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeReplicaSetCheckTimeoutInSeconds'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeState'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeStatusDetails'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="12db1-101">介绍 compose 部署升级的参数。</span><span class="sxs-lookup"><span data-stu-id="12db1-101">Describes the parameters for a compose deployment upgrade.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationHealthPolicy'
+    name: applicationHealthPolicy
+    fullName: applicationHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="12db1-102">定义用于评估应用程序或其中一个及其子实体的运行状况的运行状况策略。</span><span class="sxs-lookup"><span data-stu-id="12db1-102">Defines a health policy used to evaluate the health of an application or one of its children entities.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="12db1-103">目标应用程序的名称包括 fabric:全名。</span><span class="sxs-lookup"><span data-stu-id="12db1-103">The name of the target application, including the ''fabric:'' URI scheme.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationUnhealthyEvaluations'
+    name: applicationUnhealthyEvaluations
+    fullName: applicationUnhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="12db1-104">导致当前的聚合运行状况状态的运行状况评估的列表。</span><span class="sxs-lookup"><span data-stu-id="12db1-104">List of health evaluations that resulted in the current aggregated health state.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationUnhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.applicationUpgradeStatusDetails'
+    name: applicationUpgradeStatusDetails
+    fullName: applicationUpgradeStatusDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="12db1-105">包括失败消息的应用程序升级的其他详细信息。</span><span class="sxs-lookup"><span data-stu-id="12db1-105">Additional details of application upgrade including failure message.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationUpgradeStatusDetails?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.currentUpgradeDomainDuration'
+    name: currentUpgradeDomainDuration
+    fullName: currentUpgradeDomainDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="12db1-106">估计花费的时间处理当前升级域。</span><span class="sxs-lookup"><span data-stu-id="12db1-106">The estimated amount of time spent processing current Upgrade Domain.</span></span> <span data-ttu-id="12db1-107">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="12db1-107">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="12db1-108">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="12db1-108">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>'
+    optional: true
+    syntax:
+      content: 'currentUpgradeDomainDuration?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.currentUpgradeDomainProgress'
+    name: currentUpgradeDomainProgress
+    fullName: currentUpgradeDomainProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="12db1-109">有关当前正在升级域的信息。</span><span class="sxs-lookup"><span data-stu-id="12db1-109">Information about the current in-progress upgrade domain.</span></span>
+    optional: true
+    syntax:
+      content: 'currentUpgradeDomainProgress?: CurrentUpgradeDomainProgressInfo'
+      return:
+        type:
+          - '@azure/servicefabric.CurrentUpgradeDomainProgressInfo'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.deploymentName'
+    name: deploymentName
+    fullName: deploymentName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="12db1-110">目标部署的名称。</span><span class="sxs-lookup"><span data-stu-id="12db1-110">The name of the target deployment.</span></span>
+    optional: true
+    syntax:
+      content: 'deploymentName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.failureReason'
+    name: failureReason
+    fullName: failureReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="12db1-111">导致 FailureAction 正在执行的升级失败的原因。</span><span class="sxs-lookup"><span data-stu-id="12db1-111">The cause of an upgrade failure that resulted in FailureAction being executed.</span></span> <span data-ttu-id="12db1-112">可能的值包括：None、 中断，运行状况检查，UpgradeDomainTimeout''，''OverallUpgradeTimeout</span><span class="sxs-lookup"><span data-stu-id="12db1-112">Possible values include: ''None'', ''Interrupted'', ''HealthCheck'', ''UpgradeDomainTimeout'', ''OverallUpgradeTimeout''</span></span>'
+    optional: true
+    syntax:
+      content: 'failureReason?: FailureReason'
+      return:
+        type:
+          - '@azure/servicefabric.FailureReason'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.failureTimestampUtc'
+    name: failureTimestampUtc
+    fullName: failureTimestampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="12db1-113">估计的 UTC 日期时间时，升级失败和 FailureAction 已执行。</span><span class="sxs-lookup"><span data-stu-id="12db1-113">The estimated UTC datetime when the upgrade failed and FailureAction was executed.</span></span>
+    optional: true
+    syntax:
+      content: 'failureTimestampUtc?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.forceRestart'
+    name: forceRestart
+    fullName: forceRestart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="12db1-114">如果为 true，然后强制重启进程在升级期间即使代码版本没有改变 （升级仅更改配置或数据）。</span><span class="sxs-lookup"><span data-stu-id="12db1-114">If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).</span></span>'
+    optional: true
+    syntax:
+      content: 'forceRestart?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.monitoringPolicy'
+    name: monitoringPolicy
+    fullName: monitoringPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="12db1-115">介绍用于监视以监视模式升级的参数。</span><span class="sxs-lookup"><span data-stu-id="12db1-115">Describes the parameters for monitoring an upgrade in Monitored mode.</span></span>
+    optional: true
+    syntax:
+      content: 'monitoringPolicy?: MonitoringPolicyDescription'
+      return:
+        type:
+          - '@azure/servicefabric.MonitoringPolicyDescription'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.rollingUpgradeMode'
+    name: rollingUpgradeMode
+    fullName: rollingUpgradeMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="12db1-116">在滚动升级期间用于监视运行状况的模式。</span><span class="sxs-lookup"><span data-stu-id="12db1-116">The mode used to monitor health during a rolling upgrade.</span></span> <span data-ttu-id="12db1-117">值是 UnmonitoredAuto、 UnmonitoredManual，和 Monitored。</span><span class="sxs-lookup"><span data-stu-id="12db1-117">The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.</span></span> <span data-ttu-id="12db1-118">可能的值包括：Invalid、 UnmonitoredAuto、 UnmonitoredManual、 监视。</span><span class="sxs-lookup"><span data-stu-id="12db1-118">Possible values include: ''Invalid'', ''UnmonitoredAuto'', ''UnmonitoredManual'', ''Monitored''.</span></span> <span data-ttu-id="12db1-119">默认值：UnmonitoredAuto。</span><span class="sxs-lookup"><span data-stu-id="12db1-119">Default value: ''UnmonitoredAuto''.</span></span>'
+    optional: true
+    syntax:
+      content: 'rollingUpgradeMode?: UpgradeMode'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.startTimestampUtc'
+    name: startTimestampUtc
+    fullName: startTimestampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="12db1-120">估计的 UTC 日期时间开始升级。</span><span class="sxs-lookup"><span data-stu-id="12db1-120">The estimated UTC datetime when the upgrade started.</span></span>
+    optional: true
+    syntax:
+      content: 'startTimestampUtc?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.targetApplicationTypeVersion'
+    name: targetApplicationTypeVersion
+    fullName: targetApplicationTypeVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="12db1-121">应用程序升级的目标应用程序类型版本（在应用程序清单中找到）。</span><span class="sxs-lookup"><span data-stu-id="12db1-121">The target application type version (found in the application manifest) for the application upgrade.</span></span>
+    optional: true
+    syntax:
+      content: 'targetApplicationTypeVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeDomainProgressAtFailure'
+    name: upgradeDomainProgressAtFailure
+    fullName: upgradeDomainProgressAtFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="12db1-122">在升级失败时的升级域进度的信息。</span><span class="sxs-lookup"><span data-stu-id="12db1-122">Information about the upgrade domain progress at the time of upgrade failure.</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeDomainProgressAtFailure?: FailureUpgradeDomainProgressInfo'
+      return:
+        type:
+          - '@azure/servicefabric.FailureUpgradeDomainProgressInfo'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeDuration'
+    name: upgradeDuration
+    fullName: upgradeDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="12db1-123">整个升级所经过的时间估计的量。</span><span class="sxs-lookup"><span data-stu-id="12db1-123">The estimated amount of time that the overall upgrade elapsed.</span></span> <span data-ttu-id="12db1-124">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="12db1-124">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="12db1-125">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="12db1-125">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>'
+    optional: true
+    syntax:
+      content: 'upgradeDuration?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeKind'
+    name: upgradeKind
+    fullName: upgradeKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="12db1-126">升级以下可能值的类型。</span><span class="sxs-lookup"><span data-stu-id="12db1-126">The kind of upgrade out of the following possible values.</span></span> <span data-ttu-id="12db1-127">可能的值包括：Invalid、 滚动。</span><span class="sxs-lookup"><span data-stu-id="12db1-127">Possible values include: ''Invalid'', ''Rolling''.</span></span> <span data-ttu-id="12db1-128">默认值：滚动。</span><span class="sxs-lookup"><span data-stu-id="12db1-128">Default value: ''Rolling''.</span></span>'
+    optional: true
+    syntax:
+      content: 'upgradeKind?: UpgradeKind'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeKind'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeReplicaSetCheckTimeoutInSeconds'
+    name: upgradeReplicaSetCheckTimeoutInSeconds
+    fullName: upgradeReplicaSetCheckTimeoutInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="12db1-129">出现意外问题时，阻止处理升级域并防止可用性丢失的最大时长。</span><span class="sxs-lookup"><span data-stu-id="12db1-129">The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues.</span></span> <span data-ttu-id="12db1-130">当此超时到期时，无论是否存在可用性丢失问题，都将继续处理升级域。</span><span class="sxs-lookup"><span data-stu-id="12db1-130">When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues.</span></span> <span data-ttu-id="12db1-131">每个升级域启动时重置超时。</span><span class="sxs-lookup"><span data-stu-id="12db1-131">The timeout is reset at the start of each upgrade domain.</span></span> <span data-ttu-id="12db1-132">有效值介于 0 和 42949672925（含）之间。</span><span class="sxs-lookup"><span data-stu-id="12db1-132">Valid values are between 0 and 42949672925 inclusive.</span></span>
+      <span data-ttu-id="12db1-133">（无符号的 32 位整数）。</span><span class="sxs-lookup"><span data-stu-id="12db1-133">(unsigned 32-bit integer).</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeReplicaSetCheckTimeoutInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeState'
+    name: upgradeState
+    fullName: upgradeState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="12db1-134">Compose 部署升级状态。</span><span class="sxs-lookup"><span data-stu-id="12db1-134">The state of the compose deployment upgrade.</span></span> <span data-ttu-id="12db1-135">可能的值包括：Invalid、 ProvisioningTarget、 RollingForwardInProgress、 RollingForwardPending、 UnprovisioningCurrent、 RollingForwardCompleted、 RollingBackInProgress、 UnprovisioningTarget、 RollingBackCompleted，失败</span><span class="sxs-lookup"><span data-stu-id="12db1-135">Possible values include: ''Invalid'', ''ProvisioningTarget'', ''RollingForwardInProgress'', ''RollingForwardPending'', ''UnprovisioningCurrent'', ''RollingForwardCompleted'', ''RollingBackInProgress'', ''UnprovisioningTarget'', ''RollingBackCompleted'', ''Failed''</span></span>'
+    optional: true
+    syntax:
+      content: 'upgradeState?: ComposeDeploymentUpgradeState'
+      return:
+        type:
+          - '@azure/servicefabric.ComposeDeploymentUpgradeState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo.upgradeStatusDetails'
+    name: upgradeStatusDetails
+    fullName: upgradeStatusDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="12db1-136">其他的详细的信息状态正在进行升级。</span><span class="sxs-lookup"><span data-stu-id="12db1-136">Additional detailed information about the status of the pending upgrade.</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeStatusDetails?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy'
+    name: ApplicationHealthPolicy
+    spec.typeScript:
+      - name: ApplicationHealthPolicy
+        fullName: ApplicationHealthPolicy
+        uid: '@azure/servicefabric.ApplicationHealthPolicy'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.CurrentUpgradeDomainProgressInfo'
+    name: CurrentUpgradeDomainProgressInfo
+    spec.typeScript:
+      - name: CurrentUpgradeDomainProgressInfo
+        fullName: CurrentUpgradeDomainProgressInfo
+        uid: '@azure/servicefabric.CurrentUpgradeDomainProgressInfo'
+  - uid: '@azure/servicefabric.FailureReason'
+    name: FailureReason
+    spec.typeScript:
+      - name: FailureReason
+        fullName: FailureReason
+        uid: '@azure/servicefabric.FailureReason'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription'
+    name: MonitoringPolicyDescription
+    spec.typeScript:
+      - name: MonitoringPolicyDescription
+        fullName: MonitoringPolicyDescription
+        uid: '@azure/servicefabric.MonitoringPolicyDescription'
+  - uid: '@azure/servicefabric.UpgradeMode'
+    name: UpgradeMode
+    spec.typeScript:
+      - name: UpgradeMode
+        fullName: UpgradeMode
+        uid: '@azure/servicefabric.UpgradeMode'
+  - uid: '@azure/servicefabric.FailureUpgradeDomainProgressInfo'
+    name: FailureUpgradeDomainProgressInfo
+    spec.typeScript:
+      - name: FailureUpgradeDomainProgressInfo
+        fullName: FailureUpgradeDomainProgressInfo
+        uid: '@azure/servicefabric.FailureUpgradeDomainProgressInfo'
+  - uid: '@azure/servicefabric.UpgradeKind'
+    name: UpgradeKind
+    spec.typeScript:
+      - name: UpgradeKind
+        fullName: UpgradeKind
+        uid: '@azure/servicefabric.UpgradeKind'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeState'
+    name: ComposeDeploymentUpgradeState
+    spec.typeScript:
+      - name: ComposeDeploymentUpgradeState
+        fullName: ComposeDeploymentUpgradeState
+        uid: '@azure/servicefabric.ComposeDeploymentUpgradeState'

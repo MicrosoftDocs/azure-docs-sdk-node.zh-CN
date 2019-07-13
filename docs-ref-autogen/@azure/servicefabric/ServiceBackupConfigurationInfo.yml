@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceBackupConfigurationInfo'
+    name: ServiceBackupConfigurationInfo
+    fullName: ServiceBackupConfigurationInfo
+    children:
+      - '@azure/servicefabric.ServiceBackupConfigurationInfo.kind'
+      - '@azure/servicefabric.ServiceBackupConfigurationInfo.policyInheritedFrom'
+      - '@azure/servicefabric.ServiceBackupConfigurationInfo.policyName'
+      - '@azure/servicefabric.ServiceBackupConfigurationInfo.serviceName'
+      - '@azure/servicefabric.ServiceBackupConfigurationInfo.suspensionInfo'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="3b5c6-101">指定哪些备份策略的特定 Service Fabric 服务的备份配置信息应用，并且挂起说明。</span><span class="sxs-lookup"><span data-stu-id="3b5c6-101">Backup configuration information for a specific Service Fabric service specifying what backup policy is being applied and suspend description, if any.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceBackupConfigurationInfo.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3b5c6-102">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="3b5c6-102">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "Service"'
+      return:
+        type:
+          - '"Service"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceBackupConfigurationInfo.policyInheritedFrom'
+    name: policyInheritedFrom
+    fullName: policyInheritedFrom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3b5c6-103">指定的应用的备份策略的范围。</span><span class="sxs-lookup"><span data-stu-id="3b5c6-103">Specifies the scope at which the backup policy is applied.</span></span> <span data-ttu-id="3b5c6-104">可能的值包括：Invalid、 分区、 服务、 应用程序</span><span class="sxs-lookup"><span data-stu-id="3b5c6-104">Possible values include: ''Invalid'', ''Partition'', ''Service'', ''Application''</span></span>'
+    optional: true
+    syntax:
+      content: 'policyInheritedFrom?: BackupPolicyScope'
+      return:
+        type:
+          - '@azure/servicefabric.BackupPolicyScope'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceBackupConfigurationInfo.policyName'
+    name: policyName
+    fullName: policyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3b5c6-105">这适用于此 Service Fabric 应用程序或服务或分区的备份策略的名称。</span><span class="sxs-lookup"><span data-stu-id="3b5c6-105">The name of the backup policy which is applicable to this Service Fabric application or service or partition.</span></span>
+    optional: true
+    syntax:
+      content: 'policyName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceBackupConfigurationInfo.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3b5c6-106">与服务的完整名称 fabric:全名。</span><span class="sxs-lookup"><span data-stu-id="3b5c6-106">The full name of the service with ''fabric:'' URI scheme.</span></span>'
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceBackupConfigurationInfo.suspensionInfo'
+    name: suspensionInfo
+    fullName: suspensionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3b5c6-107">备份挂起详细介绍。</span><span class="sxs-lookup"><span data-stu-id="3b5c6-107">Describes the backup suspension details.</span></span>
+    optional: true
+    syntax:
+      content: 'suspensionInfo?: BackupSuspensionInfo'
+      return:
+        type:
+          - '@azure/servicefabric.BackupSuspensionInfo'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.BackupPolicyScope'
+    name: BackupPolicyScope
+    spec.typeScript:
+      - name: BackupPolicyScope
+        fullName: BackupPolicyScope
+        uid: '@azure/servicefabric.BackupPolicyScope'
+  - uid: '@azure/servicefabric.BackupSuspensionInfo'
+    name: BackupSuspensionInfo
+    spec.typeScript:
+      - name: BackupSuspensionInfo
+        fullName: BackupSuspensionInfo
+        uid: '@azure/servicefabric.BackupSuspensionInfo'

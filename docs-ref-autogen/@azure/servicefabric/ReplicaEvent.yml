@@ -1,0 +1,118 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReplicaEvent'
+    name: ReplicaEvent
+    fullName: ReplicaEvent
+    children:
+      - '@azure/servicefabric.ReplicaEvent.category'
+      - '@azure/servicefabric.ReplicaEvent.eventInstanceId'
+      - '@azure/servicefabric.ReplicaEvent.hasCorrelatedEvents'
+      - '@azure/servicefabric.ReplicaEvent.kind'
+      - '@azure/servicefabric.ReplicaEvent.partitionId'
+      - '@azure/servicefabric.ReplicaEvent.replicaId'
+      - '@azure/servicefabric.ReplicaEvent.timeStamp'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="0b3b1-101">所有副本事件都表示的基础。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-101">Represents the base for all Replica Events.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.category'
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0b3b1-102">事件的类别。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-102">The category of event.</span></span>
+    optional: true
+    syntax:
+      content: 'category?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.eventInstanceId'
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0b3b1-103">FabricEvent 实例的标识符。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-103">The identifier for the FabricEvent instance.</span></span>
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.hasCorrelatedEvents'
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0b3b1-104">显示存在可用的相关的事件。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-104">Shows there is existing related events available.</span></span>
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0b3b1-105">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="0b3b1-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "ReplicaEvent"'
+      return:
+        type:
+          - '"ReplicaEvent"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0b3b1-106">Service Fabric 用于唯一标识分区的内部 ID。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-106">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="0b3b1-107">创建服务时，这是随机生成的 GUID。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-107">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="0b3b1-108">分区 ID 是唯一的而不会更改该服务的生存期内。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-108">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="0b3b1-109">如果在同一个服务已被删除并重新创建其分区的 Id 会有所不同。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-109">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.replicaId'
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0b3b1-110">有状态服务副本的 id。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-110">Id of a stateful service replica.</span></span> <span data-ttu-id="0b3b1-111">Service Fabric 使用 ReplicaId 来唯一标识分区的副本。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-111">ReplicaId is used by Service Fabric to uniquely identify a replica of a partition.</span></span> <span data-ttu-id="0b3b1-112">它是唯一在分区中并不会更改副本的生存期内。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-112">It is unique within a partition and does not change for the lifetime of the replica.</span></span> <span data-ttu-id="0b3b1-113">如果删除副本和在同一个分区在同一节点上创建另一个副本，它将为 id 来获取不同的值。有时无状态服务实例的 id 也被称为副本 id。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-113">If a replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the id. Sometimes the id of a stateless service instance is also referred as a replica id.</span></span>'
+    syntax:
+      content: 'replicaId: number'
+      return:
+        type:
+          - number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.timeStamp'
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0b3b1-114">记录时间事件。</span><span class="sxs-lookup"><span data-stu-id="0b3b1-114">The time event was logged.</span></span>
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'

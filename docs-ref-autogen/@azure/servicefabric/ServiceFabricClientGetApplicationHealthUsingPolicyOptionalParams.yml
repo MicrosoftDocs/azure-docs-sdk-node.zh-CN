@@ -18,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="a1ac5-101">可选参数。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -29,7 +29,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="9afc5-101">用于中止的信号请求。</span><span class="sxs-lookup"><span data-stu-id="9afc5-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="a1ac5-102">用于中止的信号请求。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -44,7 +44,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="a1ac5-103">介绍用于评估应用程序或它的一个子级的运行状况的运行状况策略。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-103">Describes the health policies used to evaluate the health of an application or one of its children.</span></span>
+      <span data-ttu-id="a1ac5-104">如果不存在，运行状况评估使用的运行状况策略与应用程序清单或默认运行状况策略。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-104">If not present, the health evaluation uses the health policy from application manifest or the default health policy.</span></span>
     optional: true
     syntax:
       content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
@@ -59,7 +61,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="9afc5-102">{object}[customHeaders]用户定义的自定义请求标头将发送请求之前应用。</span><span class="sxs-lookup"><span data-stu-id="9afc5-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="a1ac5-105">{object}[customHeaders]用户定义的自定义请求标头将发送请求之前应用。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-105">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -74,7 +76,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="a1ac5-106">用于根据运行状况筛选应用程序运行状况查询结果中返回的已部署应用程序运行状况对象。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-106">Allows filtering of the deployed applications health state objects returned in the result of application health query based on their health state.</span></span>
+      <span data-ttu-id="a1ac5-107">此参数的可能值包括以下运行状态之一的整数值。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-107">The possible values for this parameter include integer value of one of the following health states.</span></span> <span data-ttu-id="a1ac5-108">仅返回与筛选器匹配的已部署应用程序。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-108">Only deployed applications that match the filter will be returned.</span></span>
+      <span data-ttu-id="a1ac5-109">所有已部署应用程序都用于评估聚合运行状况。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-109">All deployed applications are used to evaluate the aggregated health state.</span></span> <span data-ttu-id="a1ac5-110">如果未指定，则返回所有项。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-110">If not specified, all entries are returned.</span></span>
+      <span data-ttu-id="a1ac5-111">状态值为基于标志的枚举，因此该值可以是使用按位“OR”运算符获取的值的组合。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-111">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="a1ac5-112">例如，如果提供的值为 6，则返回 HealthState 值为 OK (2) 和 Warning (4) 的已部署应用程序的运行状况。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-112">For example, if the provided value is 6 then health state of deployed applications with HealthState value of OK (2) and Warning (4) are returned.</span></span>
+      - <span data-ttu-id="a1ac5-113">Default-默认值。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-113">Default - Default value.</span></span> <span data-ttu-id="a1ac5-114">匹配任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-114">Matches any HealthState.</span></span> <span data-ttu-id="a1ac5-115">值为 0。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-115">The value is zero.</span></span>
+      - <span data-ttu-id="a1ac5-116">无-不与任何 HealthState 值匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-116">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="a1ac5-117">未返回有关给定状态集合的结果时使用。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-117">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="a1ac5-118">值为 1。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-118">The value is 1.</span></span>
+      - <span data-ttu-id="a1ac5-119">Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-119">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="a1ac5-120">值为 2。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-120">The value is 2.</span></span>
+      - <span data-ttu-id="a1ac5-121">警告-筛选器的输入匹配与 HealthState 值为 Warning。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-121">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="a1ac5-122">值为 4。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-122">The value is 4.</span></span>
+      - <span data-ttu-id="a1ac5-123">Error-与 HealthState 值为 Error 的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-123">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="a1ac5-124">值为 8。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-124">The value is 8.</span></span>
+      - <span data-ttu-id="a1ac5-125">All-与具有任意 HealthState 值的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-125">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="a1ac5-126">值为 65535。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-126">The value is 65535.</span></span> <span data-ttu-id="a1ac5-127">默认值：0.</span><span class="sxs-lookup"><span data-stu-id="a1ac5-127">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'deployedApplicationsHealthStateFilter?: undefined | number'
@@ -89,7 +102,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="a1ac5-128">用于根据运行状况筛选返回的 HealthEvent 对象集合。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-128">Allows filtering the collection of HealthEvent objects returned based on health state.</span></span>
+      <span data-ttu-id="a1ac5-129">此参数的可能值包括以下运行状态之一的整数值。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-129">The possible values for this parameter include integer value of one of the following health states.</span></span>
+      <span data-ttu-id="a1ac5-130">仅返回与筛选器匹配的事件。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-130">Only events that match the filter are returned.</span></span> <span data-ttu-id="a1ac5-131">所有事件用于评估聚合运行状态。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-131">All events are used to evaluate the aggregated health state.</span></span>
+      <span data-ttu-id="a1ac5-132">如果未指定，则返回所有项。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-132">If not specified, all entries are returned.</span></span> <span data-ttu-id="a1ac5-133">状态值为基于标志的枚举，因此该值可以是使用按位“OR”运算符获取的值的组合。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-133">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using the bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="a1ac5-134">例如，如果提供的值为 6，则返回 HealthState 值为 OK (2) 和 Warning (4) 的所有事件。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-134">For example, If the provided value is 6 then all of the events with HealthState value of OK (2) and Warning (4) are returned.</span></span>
+      - <span data-ttu-id="a1ac5-135">Default-默认值。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-135">Default - Default value.</span></span> <span data-ttu-id="a1ac5-136">匹配任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-136">Matches any HealthState.</span></span> <span data-ttu-id="a1ac5-137">值为 0。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-137">The value is zero.</span></span>
+      - <span data-ttu-id="a1ac5-138">无-不与任何 HealthState 值匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-138">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="a1ac5-139">未返回有关给定状态集合的结果时使用。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-139">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="a1ac5-140">值为 1。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-140">The value is 1.</span></span>
+      - <span data-ttu-id="a1ac5-141">Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-141">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="a1ac5-142">值为 2。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-142">The value is 2.</span></span>
+      - <span data-ttu-id="a1ac5-143">警告-筛选器的输入匹配与 HealthState 值为 Warning。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-143">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="a1ac5-144">值为 4。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-144">The value is 4.</span></span>
+      - <span data-ttu-id="a1ac5-145">Error-与 HealthState 值为 Error 的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-145">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="a1ac5-146">值为 8。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-146">The value is 8.</span></span>
+      - <span data-ttu-id="a1ac5-147">All-与具有任意 HealthState 值的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-147">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="a1ac5-148">值为 65535。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-148">The value is 65535.</span></span> <span data-ttu-id="a1ac5-149">默认值：0.</span><span class="sxs-lookup"><span data-stu-id="a1ac5-149">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -104,7 +128,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="a1ac5-150">指示运行状况统计数据是否应作为查询结果的一部分返回。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-150">Indicates whether the health statistics should be returned as part of the query result.</span></span> <span data-ttu-id="a1ac5-151">默认值为 False。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-151">False by default.</span></span>
+      <span data-ttu-id="a1ac5-152">统计信息显示处于 Ok、Warning 和 Error 运行状况的子实体数。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-152">The statistics show the number of children entities in health state Ok, Warning, and Error.</span></span>
+      <span data-ttu-id="a1ac5-153">默认值： false。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-153">Default value: false.</span></span>
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -119,7 +146,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="9afc5-103">在下载进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="9afc5-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="a1ac5-154">在下载进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-154">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -134,7 +161,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="9afc5-104">在上传进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="9afc5-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="a1ac5-155">在上传进度时触发的回调。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-155">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -149,7 +176,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      <span data-ttu-id="a1ac5-156">用于根据运行状况筛选服务运行状况查询结果中返回的服务运行状况对象。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-156">Allows filtering of the services health state objects returned in the result of services health query based on their health state.</span></span>
+      <span data-ttu-id="a1ac5-157">此参数的可能值包括以下运行状态之一的整数值。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-157">The possible values for this parameter include integer value of one of the following health states.</span></span>
+      <span data-ttu-id="a1ac5-158">仅返回与筛选器匹配的服务。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-158">Only services that match the filter are returned.</span></span> <span data-ttu-id="a1ac5-159">所有服务都用于评估聚合运行状况。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-159">All services are used to evaluate the aggregated health state.</span></span>
+      <span data-ttu-id="a1ac5-160">如果未指定，则返回所有项。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-160">If not specified, all entries are returned.</span></span> <span data-ttu-id="a1ac5-161">状态值为基于标志的枚举，因此该值可以是使用按位“OR”运算符获取的值的组合。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-161">The state values are flag-based enumeration, so the value could be a combination of these values, obtained using bitwise 'OR' operator.</span></span> <span data-ttu-id="a1ac5-162">例如，如果提供的值为“6”，则返回 HealthState 值为 OK (2) 和 Warning (4) 的服务的运行状况。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-162">For example, if the provided value is 6 then health state of services with HealthState value of OK (2) and Warning (4) will be returned.</span></span>
+      - <span data-ttu-id="a1ac5-163">Default-默认值。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-163">Default - Default value.</span></span> <span data-ttu-id="a1ac5-164">匹配任何 HealthState。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-164">Matches any HealthState.</span></span> <span data-ttu-id="a1ac5-165">值为 0。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-165">The value is zero.</span></span>
+      - <span data-ttu-id="a1ac5-166">无-不与任何 HealthState 值匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-166">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="a1ac5-167">未返回有关给定状态集合的结果时使用。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-167">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="a1ac5-168">值为 1。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-168">The value is 1.</span></span>
+      - <span data-ttu-id="a1ac5-169">Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-169">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="a1ac5-170">值为 2。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-170">The value is 2.</span></span>
+      - <span data-ttu-id="a1ac5-171">警告-筛选器的输入匹配与 HealthState 值为 Warning。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-171">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="a1ac5-172">值为 4。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-172">The value is 4.</span></span>
+      - <span data-ttu-id="a1ac5-173">Error-与 HealthState 值为 Error 的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-173">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="a1ac5-174">值为 8。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-174">The value is 8.</span></span>
+      - <span data-ttu-id="a1ac5-175">All-与具有任意 HealthState 值的输入匹配的筛选器。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-175">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="a1ac5-176">值为 65535。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-176">The value is 65535.</span></span> <span data-ttu-id="a1ac5-177">默认值：0.</span><span class="sxs-lookup"><span data-stu-id="a1ac5-177">Default value: 0.</span></span>
     optional: true
     syntax:
       content: 'servicesHealthStateFilter?: undefined | number'
@@ -164,7 +201,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="9afc5-105">一个请求可以获取自动终止之前的毫秒数。</span><span class="sxs-lookup"><span data-stu-id="9afc5-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="a1ac5-178">一个请求可以获取自动终止之前的毫秒数。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-178">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -179,7 +216,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="a1ac5-179">在数秒内执行该操作的服务器超时。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-179">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="a1ac5-180">此超时指定客户端是愿意等待的请求的操作完成的持续时间。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-180">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="a1ac5-181">此参数的默认值为 60 秒。</span><span class="sxs-lookup"><span data-stu-id="a1ac5-181">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="a1ac5-182">默认值：60.</span><span class="sxs-lookup"><span data-stu-id="a1ac5-182">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

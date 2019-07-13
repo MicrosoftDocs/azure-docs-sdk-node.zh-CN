@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    fullName: ClusterHealthPolicy
+    children:
+      - '@azure/servicefabric.ClusterHealthPolicy.applicationTypeHealthPolicyMap'
+      - '@azure/servicefabric.ClusterHealthPolicy.considerWarningAsError'
+      - '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyApplications'
+      - '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyNodes'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="e1b6e-101">定义用于评估群集或群集节点的运行状况的运行状况策略。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-101">Defines a health policy used to evaluate the health of the cluster or of a cluster node.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.applicationTypeHealthPolicyMap'
+    name: applicationTypeHealthPolicyMap
+    fullName: applicationTypeHealthPolicyMap
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="e1b6e-102">定义包含特定应用程序类型的最大不正常应用程序百分比的映射。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-102">Defines a map with max percentage unhealthy applications for specific application types.</span></span>
+      <span data-ttu-id="e1b6e-103">每个项以键的形式指定应用程序类型名称，以值的形式指定一个整数，该整数表示用于评估指定应用程序类型的应用程序的 MaxPercentUnhealthyApplications 百分比。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-103">Each entry specifies as key the application type name and as value an integer that represents the MaxPercentUnhealthyApplications percentage used to evaluate the applications of the specified application type.</span></span>
+      <span data-ttu-id="e1b6e-104">应用程序类型的运行状况策略对应可以在群集运行状况评估期间，用于描述特殊的应用程序类型。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-104">The application type health policy map can be used during cluster health evaluation to describe special application types.</span></span>
+      <span data-ttu-id="e1b6e-105">映射中包含的应用程序类型根据映射中指定的百分比，而不是群集运行状况策略中定义的全局 MaxPercentUnhealthyApplications 进行评估。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-105">The application types included in the map are evaluated against the percentage specified in the map, and not with the global MaxPercentUnhealthyApplications defined in the cluster health policy.</span></span>
+      <span data-ttu-id="e1b6e-106">映射中指定的应用程序类型不会计入全局应用程序池。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-106">The applications of application types specified in the map are not counted against the global pool of applications.</span></span>
+      <span data-ttu-id="e1b6e-107">例如，如果某种类型的应用程序至关重要，群集管理员可以将条目添加到该应用程序类型的映射，并将其分配值为 0%（即，不容忍任何失败）。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-107">For example, if some applications of a type are critical, the cluster administrator can add an entry to the map for that application type and assign it a value of 0% (that is, do not tolerate any failures).</span></span>
+      <span data-ttu-id="e1b6e-108">可以使用设置为 20% 容忍数千个应用程序实例外的一些故障 MaxPercentUnhealthyApplications 计算所有其他应用程序。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-108">All other applications can be evaluated with MaxPercentUnhealthyApplications set to 20% to tolerate some failures out of the thousands of application instances.</span></span>
+      <span data-ttu-id="e1b6e-109">仅当群集清单启用应用程序类型运行状况评估的配置条目用于 HealthManager/EnableApplicationTypeHealthEvaluation 使用应用程序类型运行状况策略映射。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-109">The application type health policy map is used only if the cluster manifest enables application type health evaluation using the configuration entry for HealthManager/EnableApplicationTypeHealthEvaluation.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationTypeHealthPolicyMap?: ApplicationTypeHealthPolicyMapItem[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.considerWarningAsError'
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e1b6e-110">指示是否将警告的严重性视为与错误相同。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-110">Indicates whether warnings are treated with the same severity as errors.</span></span> <span data-ttu-id="e1b6e-111">默认值： false。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-111">Default value: false.</span></span>'
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyApplications'
+    name: maxPercentUnhealthyApplications
+    fullName: maxPercentUnhealthyApplications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="e1b6e-112">报告错误之前允许的最大不正常应用程序百分比。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-112">The maximum allowed percentage of unhealthy applications before reporting an error.</span></span> <span data-ttu-id="e1b6e-113">例如，若要允许 10% 的应用程序处于不正常状态，此值为 10。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-113">For example, to allow 10% of applications to be unhealthy, this value would be 10.</span></span>
+      <span data-ttu-id="e1b6e-114">该百分比表示在将群集视为出错之前可处于不正常状态的应用程序的最大容许百分比。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-114">The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.</span></span>
+      <span data-ttu-id="e1b6e-115">如果未超过该百分比，但至少存在一个不正常的应用程序，则将运行状况评估为 Warning。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-115">If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="e1b6e-116">该百分比的计算方式是将不正常的应用程序数除以群集中的应用程序实例总数，不包括 ApplicationTypeHealthPolicyMap 中包含的应用程序类型的应用程序。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-116">This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.</span></span>
+      <span data-ttu-id="e1b6e-117">计算结果调高为整数，以便容忍少量应用程序出现一次失败。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-117">The computation rounds up to tolerate one failure on small numbers of applications.</span></span> <span data-ttu-id="e1b6e-118">默认百分比为零。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-118">Default percentage is zero.</span></span> <span data-ttu-id="e1b6e-119">默认值：0.</span><span class="sxs-lookup"><span data-stu-id="e1b6e-119">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyApplications?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyNodes'
+    name: maxPercentUnhealthyNodes
+    fullName: maxPercentUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="e1b6e-120">报告错误之前允许的最大不正常节点百分比。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-120">The maximum allowed percentage of unhealthy nodes before reporting an error.</span></span> <span data-ttu-id="e1b6e-121">例如，若要允许 10% 的节点处于不正常状态，此值为 10。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-121">For example, to allow 10% of nodes to be unhealthy, this value would be 10.</span></span>
+      <span data-ttu-id="e1b6e-122">该百分比表示在将群集视为出错之前可处于不正常状态的节点的最大容许百分比。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-122">The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.</span></span>
+      <span data-ttu-id="e1b6e-123">如果未超过该百分比，但至少存在一个不正常的节点，则将运行状况评估为警告。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-123">If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="e1b6e-124">该百分比的计算方式是将不正常的节点数除以群集中的节点总数。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-124">The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.</span></span>
+      <span data-ttu-id="e1b6e-125">计算结果调高为整数，以便容忍少量节点上出现一次失败。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-125">The computation rounds up to tolerate one failure on small numbers of nodes.</span></span> <span data-ttu-id="e1b6e-126">默认百分比为零。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-126">Default percentage is zero.</span></span>
+
+      <span data-ttu-id="e1b6e-127">在大型群集中，始终会有一些要关闭或需要修复的节点，因此应配置此百分比以便容忍这种情况。</span><span class="sxs-lookup"><span data-stu-id="e1b6e-127">In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.</span></span> <span data-ttu-id="e1b6e-128">默认值：0.</span><span class="sxs-lookup"><span data-stu-id="e1b6e-128">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem[]'
+    name: 'ApplicationTypeHealthPolicyMapItem[]'
+    spec.typeScript:
+      - name: ApplicationTypeHealthPolicyMapItem
+        fullName: ApplicationTypeHealthPolicyMapItem
+        uid: '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem'
+      - name: '[]'
+        fullName: '[]'

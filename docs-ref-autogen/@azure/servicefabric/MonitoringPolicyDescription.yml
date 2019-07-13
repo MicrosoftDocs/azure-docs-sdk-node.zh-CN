@@ -1,0 +1,119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription'
+    name: MonitoringPolicyDescription
+    fullName: MonitoringPolicyDescription
+    children:
+      - '@azure/servicefabric.MonitoringPolicyDescription.failureAction'
+      - '@azure/servicefabric.MonitoringPolicyDescription.healthCheckRetryTimeoutInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.healthCheckStableDurationInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.healthCheckWaitDurationInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.upgradeDomainTimeoutInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.upgradeTimeoutInMilliseconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="8e909-101">介绍用于监视以监视模式升级的参数。</span><span class="sxs-lookup"><span data-stu-id="8e909-101">Describes the parameters for monitoring an upgrade in Monitored mode.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.failureAction'
+    name: failureAction
+    fullName: failureAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8e909-102">要监视的升级违反监视策略或健康策略时执行的补偿操作。</span><span class="sxs-lookup"><span data-stu-id="8e909-102">The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations.</span></span>
+      <span data-ttu-id="8e909-103">无效指示失败操作无效。</span><span class="sxs-lookup"><span data-stu-id="8e909-103">Invalid indicates the failure action is invalid.</span></span> <span data-ttu-id="8e909-104">回滚指定升级将启动自动回滚。</span><span class="sxs-lookup"><span data-stu-id="8e909-104">Rollback specifies that the upgrade will start rolling back automatically.</span></span>
+      <span data-ttu-id="8e909-105">手动指示升级将切换到 UnmonitoredManual 升级模式。</span><span class="sxs-lookup"><span data-stu-id="8e909-105">Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode.</span></span> <span data-ttu-id="8e909-106">可能的值包括：Invalid、 Rollback 和手动</span><span class="sxs-lookup"><span data-stu-id="8e909-106">Possible values include: 'Invalid', 'Rollback', 'Manual'</span></span>
+    optional: true
+    syntax:
+      content: 'failureAction?: FailureAction'
+      return:
+        type:
+          - '@azure/servicefabric.FailureAction'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.healthCheckRetryTimeoutInMilliseconds'
+    name: healthCheckRetryTimeoutInMilliseconds
+    fullName: healthCheckRetryTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8e909-107">若要重试运行状况评估，当执行 FailureAction 前，应用程序或群集不正常时的时间量。</span><span class="sxs-lookup"><span data-stu-id="8e909-107">The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed.</span></span> <span data-ttu-id="8e909-108">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="8e909-108">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="8e909-109">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="8e909-109">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>'
+    optional: true
+    syntax:
+      content: 'healthCheckRetryTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.healthCheckStableDurationInMilliseconds'
+    name: healthCheckStableDurationInMilliseconds
+    fullName: healthCheckStableDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8e909-110">升级继续到下一升级域之前，应用程序或群集必须保持正常的时长。</span><span class="sxs-lookup"><span data-stu-id="8e909-110">The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain.</span></span> <span data-ttu-id="8e909-111">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="8e909-111">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="8e909-112">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="8e909-112">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>'
+    optional: true
+    syntax:
+      content: 'healthCheckStableDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.healthCheckWaitDurationInMilliseconds'
+    name: healthCheckWaitDurationInMilliseconds
+    fullName: healthCheckWaitDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8e909-113">应用运行状况策略之前，完成升级域后等待的时间长度。</span><span class="sxs-lookup"><span data-stu-id="8e909-113">The amount of time to wait after completing an upgrade domain before applying health policies.</span></span>
+      <span data-ttu-id="8e909-114">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="8e909-114">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="8e909-115">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="8e909-115">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>
+    optional: true
+    syntax:
+      content: 'healthCheckWaitDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.upgradeDomainTimeoutInMilliseconds'
+    name: upgradeDomainTimeoutInMilliseconds
+    fullName: upgradeDomainTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8e909-116">执行 FailureAction 前，每个升级域需等待的时长。</span><span class="sxs-lookup"><span data-stu-id="8e909-116">The amount of time each upgrade domain has to complete before FailureAction is executed.</span></span> <span data-ttu-id="8e909-117">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="8e909-117">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="8e909-118">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="8e909-118">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>'
+    optional: true
+    syntax:
+      content: 'upgradeDomainTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.upgradeTimeoutInMilliseconds'
+    name: upgradeTimeoutInMilliseconds
+    fullName: upgradeTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8e909-119">执行 FailureAction 前，完成整个升级需等待的时长。</span><span class="sxs-lookup"><span data-stu-id="8e909-119">The amount of time the overall upgrade has to complete before FailureAction is executed.</span></span> <span data-ttu-id="8e909-120">首先，会将其解释为表示 ISO 8601 持续时间的一个字符串。</span><span class="sxs-lookup"><span data-stu-id="8e909-120">It is first interpreted as a string representing an ISO 8601 duration.</span></span> <span data-ttu-id="8e909-121">如果那失败，则会将其解释为表示总毫秒数的一个数字。</span><span class="sxs-lookup"><span data-stu-id="8e909-121">If that fails, then it is interpreted as a number representing the total number of milliseconds.</span></span>'
+    optional: true
+    syntax:
+      content: 'upgradeTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.FailureAction'
+    name: FailureAction
+    spec.typeScript:
+      - name: FailureAction
+        fullName: FailureAction
+        uid: '@azure/servicefabric.FailureAction'

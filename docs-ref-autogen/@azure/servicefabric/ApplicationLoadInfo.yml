@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationLoadInfo'
+    name: ApplicationLoadInfo
+    fullName: ApplicationLoadInfo
+    children:
+      - '@azure/servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation'
+      - '@azure/servicefabric.ApplicationLoadInfo.id'
+      - '@azure/servicefabric.ApplicationLoadInfo.maximumNodes'
+      - '@azure/servicefabric.ApplicationLoadInfo.minimumNodes'
+      - '@azure/servicefabric.ApplicationLoadInfo.nodeCount'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="40f48-101">加载有关 Service Fabric 应用程序的信息。</span><span class="sxs-lookup"><span data-stu-id="40f48-101">Load Information about a Service Fabric application.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation'
+    name: applicationLoadMetricInformation
+    fullName: applicationLoadMetricInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="40f48-102">应用程序容量指标说明的列表。</span><span class="sxs-lookup"><span data-stu-id="40f48-102">List of application capacity metric description.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationLoadMetricInformation?: ApplicationMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="40f48-103">应用程序的标识。</span><span class="sxs-lookup"><span data-stu-id="40f48-103">The identity of the application.</span></span> <span data-ttu-id="40f48-104">这是应用程序名称的编码表示形式。</span><span class="sxs-lookup"><span data-stu-id="40f48-104">This is an encoded representation of the application name.</span></span>
+      <span data-ttu-id="40f48-105">这用于在 REST Api 中标识应用程序资源。</span><span class="sxs-lookup"><span data-stu-id="40f48-105">This is used in the REST APIs to identify the application resource.</span></span>
+      <span data-ttu-id="40f48-106">从版本 6.0 开始，分层名称以与"\~"字符。</span><span class="sxs-lookup"><span data-stu-id="40f48-106">Starting in version 6.0, hierarchical names are delimited with the "\~" character.</span></span> <span data-ttu-id="40f48-107">例如，如果应用程序名称为"fabric: / myapp/app1"，应用程序标识为"myapp\~app1"6.0 + 和"myapp/app1"在以前版本中。</span><span class="sxs-lookup"><span data-stu-id="40f48-107">For example, if the application name is "fabric:/myapp/app1", the application identity would be "myapp\~app1" in 6.0+ and "myapp/app1" in previous versions.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.maximumNodes'
+    name: maximumNodes
+    fullName: maximumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="40f48-108">最大可以实例化此应用程序的节点数。</span><span class="sxs-lookup"><span data-stu-id="40f48-108">The maximum number of nodes where this application can be instantiated.</span></span>
+      <span data-ttu-id="40f48-109">它是允许此应用程序跨越的节点数。</span><span class="sxs-lookup"><span data-stu-id="40f48-109">It is the number of nodes this application is allowed to span.</span></span>
+      <span data-ttu-id="40f48-110">没有定义应用程序容量的应用程序的此值将为零。</span><span class="sxs-lookup"><span data-stu-id="40f48-110">For applications that do not have application capacity defined this value will be zero.</span></span>
+    optional: true
+    syntax:
+      content: 'maximumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.minimumNodes'
+    name: minimumNodes
+    fullName: minimumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="40f48-111">最小为此应用程序的节点数。</span><span class="sxs-lookup"><span data-stu-id="40f48-111">The minimum number of nodes for this application.</span></span>
+      <span data-ttu-id="40f48-112">是，Service Fabric 将保留容量等于 ReservedLoad 到群集中的节点数 \* MinimumNodes 为此应用程序实例。</span><span class="sxs-lookup"><span data-stu-id="40f48-112">It is the number of nodes where Service Fabric will reserve Capacity in the cluster which equals to ReservedLoad \* MinimumNodes for this Application instance.</span></span>
+      <span data-ttu-id="40f48-113">没有定义应用程序容量的应用程序的此值将为零。</span><span class="sxs-lookup"><span data-stu-id="40f48-113">For applications that do not have application capacity defined this value will be zero.</span></span>
+    optional: true
+    syntax:
+      content: 'minimumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.nodeCount'
+    name: nodeCount
+    fullName: nodeCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="40f48-114">在其实例化此应用程序的节点数。</span><span class="sxs-lookup"><span data-stu-id="40f48-114">The number of nodes on which this application is instantiated.</span></span>
+      <span data-ttu-id="40f48-115">没有定义应用程序容量的应用程序的此值将为零。</span><span class="sxs-lookup"><span data-stu-id="40f48-115">For applications that do not have application capacity defined this value will be zero.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationMetricDescription[]'
+    name: 'ApplicationMetricDescription[]'
+    spec.typeScript:
+      - name: ApplicationMetricDescription
+        fullName: ApplicationMetricDescription
+        uid: '@azure/servicefabric.ApplicationMetricDescription'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,228 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.BackupInfo'
+    name: BackupInfo
+    fullName: BackupInfo
+    children:
+      - '@azure/servicefabric.BackupInfo.applicationName'
+      - '@azure/servicefabric.BackupInfo.backupChainId'
+      - '@azure/servicefabric.BackupInfo.backupId'
+      - '@azure/servicefabric.BackupInfo.backupLocation'
+      - '@azure/servicefabric.BackupInfo.backupType'
+      - '@azure/servicefabric.BackupInfo.creationTimeUtc'
+      - '@azure/servicefabric.BackupInfo.epochOfLastBackupRecord'
+      - '@azure/servicefabric.BackupInfo.failureError'
+      - '@azure/servicefabric.BackupInfo.lsnOfLastBackupRecord'
+      - '@azure/servicefabric.BackupInfo.partitionInformation'
+      - '@azure/servicefabric.BackupInfo.serviceManifestVersion'
+      - '@azure/servicefabric.BackupInfo.serviceName'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="5993e-101">表示可用于触发还原的备份点。</span><span class="sxs-lookup"><span data-stu-id="5993e-101">Represents a backup point which can be used to trigger a restore.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5993e-102">此分区备份属于 Service Fabric 应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="5993e-102">Name of the Service Fabric application this partition backup belongs to.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.backupChainId'
+    name: backupChainId
+    fullName: backupChainId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5993e-103">唯一的备份链 id。</span><span class="sxs-lookup"><span data-stu-id="5993e-103">Unique backup chain ID.</span></span> <span data-ttu-id="5993e-104">所有备份属于相同链都具有相同的备份链 id。备份链被包含 1 次完整备份和多个增量备份。</span><span class="sxs-lookup"><span data-stu-id="5993e-104">All backups part of the same chain has the same backup chain id. A backup chain is comprised of 1 full backup and multiple incremental backups.</span></span>
+    optional: true
+    syntax:
+      content: 'backupChainId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.backupId'
+    name: backupId
+    fullName: backupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5993e-105">备份的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="5993e-105">Unique backup ID .</span></span>
+    optional: true
+    syntax:
+      content: 'backupId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.backupLocation'
+    name: backupLocation
+    fullName: backupLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5993e-106">相对于备份存储的备份的位置。</span><span class="sxs-lookup"><span data-stu-id="5993e-106">Location of the backup, relative to the backup store.</span></span>'
+    optional: true
+    syntax:
+      content: 'backupLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.backupType'
+    name: backupType
+    fullName: backupType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5993e-107">是否描述类型的备份，其完整或增量。</span><span class="sxs-lookup"><span data-stu-id="5993e-107">Describes the type of backup, whether its full or incremental.</span></span> <span data-ttu-id="5993e-108">可能的值包括：Invalid、 完整、 增量</span><span class="sxs-lookup"><span data-stu-id="5993e-108">Possible values include: ''Invalid'', ''Full'', ''Incremental''</span></span>'
+    optional: true
+    syntax:
+      content: 'backupType?: BackupType'
+      return:
+        type:
+          - '@azure/servicefabric.BackupType'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.creationTimeUtc'
+    name: creationTimeUtc
+    fullName: creationTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5993e-109">创建此备份日期时间。</span><span class="sxs-lookup"><span data-stu-id="5993e-109">The date time when this backup was taken.</span></span>
+    optional: true
+    syntax:
+      content: 'creationTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.epochOfLastBackupRecord'
+    name: epochOfLastBackupRecord
+    fullName: epochOfLastBackupRecord
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5993e-110">在此备份中的最后一个记录历元。</span><span class="sxs-lookup"><span data-stu-id="5993e-110">Epoch of the last record in this backup.</span></span>
+    optional: true
+    syntax:
+      content: 'epochOfLastBackupRecord?: Epoch'
+      return:
+        type:
+          - '@azure/servicefabric.Epoch'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.failureError'
+    name: failureError
+    fullName: failureError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5993e-111">表示获取备份点的信息失败。</span><span class="sxs-lookup"><span data-stu-id="5993e-111">Denotes the failure encountered in getting backup point information.</span></span>
+    optional: true
+    syntax:
+      content: 'failureError?: FabricErrorError'
+      return:
+        type:
+          - '@azure/servicefabric.FabricErrorError'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.lsnOfLastBackupRecord'
+    name: lsnOfLastBackupRecord
+    fullName: lsnOfLastBackupRecord
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5993e-112">在此备份中的最后一个记录的 LSN。</span><span class="sxs-lookup"><span data-stu-id="5993e-112">LSN of the last record in this backup.</span></span>
+    optional: true
+    syntax:
+      content: 'lsnOfLastBackupRecord?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.partitionInformation'
+    name: partitionInformation
+    fullName: partitionInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5993e-113">有关此备份所属的分区的信息</span><span class="sxs-lookup"><span data-stu-id="5993e-113">Information about the partition to which this backup belongs to</span></span>
+    optional: true
+    syntax:
+      content: 'partitionInformation?: PartitionInformationUnion'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionInformationUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.serviceManifestVersion'
+    name: serviceManifestVersion
+    fullName: serviceManifestVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5993e-114">清单此分区备份所属的服务版本。</span><span class="sxs-lookup"><span data-stu-id="5993e-114">Manifest Version of the service this partition backup belongs to.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceManifestVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupInfo.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5993e-115">此分区备份所属的 Service Fabric 服务的名称。</span><span class="sxs-lookup"><span data-stu-id="5993e-115">Name of the Service Fabric service this partition backup belongs to.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.BackupType'
+    name: BackupType
+    spec.typeScript:
+      - name: BackupType
+        fullName: BackupType
+        uid: '@azure/servicefabric.BackupType'
+  - uid: '@azure/servicefabric.Epoch'
+    name: Epoch
+    spec.typeScript:
+      - name: Epoch
+        fullName: Epoch
+        uid: '@azure/servicefabric.Epoch'
+  - uid: '@azure/servicefabric.FabricErrorError'
+    name: FabricErrorError
+    spec.typeScript:
+      - name: FabricErrorError
+        fullName: FabricErrorError
+        uid: '@azure/servicefabric.FabricErrorError'
+  - uid: '@azure/servicefabric.PartitionInformationUnion'
+    name: PartitionInformationUnion
+    spec.typeScript:
+      - name: PartitionInformationUnion
+        fullName: PartitionInformationUnion
+        uid: '@azure/servicefabric.PartitionInformationUnion'

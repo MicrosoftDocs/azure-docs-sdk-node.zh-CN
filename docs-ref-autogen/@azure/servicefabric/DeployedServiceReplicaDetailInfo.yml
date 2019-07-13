@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo'
+    name: DeployedServiceReplicaDetailInfo
+    fullName: DeployedServiceReplicaDetailInfo
+    children:
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.currentServiceOperation'
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.currentServiceOperationStartTimeUtc'
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.partitionId'
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.reportedLoad'
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.serviceKind'
+      - '@azure/servicefabric.DeployedServiceReplicaDetailInfo.serviceName'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="d968a-101">有关 Service Fabric 服务副本的节点上部署的信息。</span><span class="sxs-lookup"><span data-stu-id="d968a-101">Information about a Service Fabric service replica deployed on a node.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.currentServiceOperation'
+    name: currentServiceOperation
+    fullName: currentServiceOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d968a-102">指定有状态服务副本或无状态服务实例上当前活动的生命周期操作。</span><span class="sxs-lookup"><span data-stu-id="d968a-102">Specifies the current active life-cycle operation on a stateful service replica or stateless service instance.</span></span> <span data-ttu-id="d968a-103">可能的值包括：未知，None、 打开，ChangeRole，关闭、 中止</span><span class="sxs-lookup"><span data-stu-id="d968a-103">Possible values include: ''Unknown'', ''None'', ''Open'', ''ChangeRole'', ''Close'', ''Abort''</span></span>'
+    optional: true
+    syntax:
+      content: 'currentServiceOperation?: ServiceOperationName'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceOperationName'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.currentServiceOperationStartTimeUtc'
+    name: currentServiceOperationStartTimeUtc
+    fullName: currentServiceOperationStartTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d968a-104">以 UTC 格式的当前服务操作的开始时间。</span><span class="sxs-lookup"><span data-stu-id="d968a-104">The start time of the current service operation in UTC format.</span></span>
+    optional: true
+    syntax:
+      content: 'currentServiceOperationStartTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d968a-105">Service Fabric 用于唯一标识分区的内部 ID。</span><span class="sxs-lookup"><span data-stu-id="d968a-105">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="d968a-106">创建服务时，这是随机生成的 GUID。</span><span class="sxs-lookup"><span data-stu-id="d968a-106">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="d968a-107">分区 ID 是唯一的而不会更改该服务的生存期内。</span><span class="sxs-lookup"><span data-stu-id="d968a-107">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="d968a-108">如果在同一个服务已被删除并重新创建其分区的 Id 会有所不同。</span><span class="sxs-lookup"><span data-stu-id="d968a-108">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.reportedLoad'
+    name: reportedLoad
+    fullName: reportedLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d968a-109">由副本报告负载的列表。</span><span class="sxs-lookup"><span data-stu-id="d968a-109">List of load reported by replica.</span></span>
+    optional: true
+    syntax:
+      content: 'reportedLoad?: LoadMetricReportInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReportInfo[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d968a-110">多态鉴别器</span><span class="sxs-lookup"><span data-stu-id="d968a-110">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: "DeployedServiceReplicaDetailInfo"'
+      return:
+        type:
+          - '"DeployedServiceReplicaDetailInfo"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaDetailInfo.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d968a-111">完整的层次结构中的 URI 格式开头的服务名称`fabric:`。</span><span class="sxs-lookup"><span data-stu-id="d968a-111">Full hierarchical name of the service in URI format starting with `fabric:`.</span></span>'
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceOperationName'
+    name: ServiceOperationName
+    spec.typeScript:
+      - name: ServiceOperationName
+        fullName: ServiceOperationName
+        uid: '@azure/servicefabric.ServiceOperationName'
+  - uid: '@azure/servicefabric.LoadMetricReportInfo[]'
+    name: 'LoadMetricReportInfo[]'
+    spec.typeScript:
+      - name: LoadMetricReportInfo
+        fullName: LoadMetricReportInfo
+        uid: '@azure/servicefabric.LoadMetricReportInfo'
+      - name: '[]'
+        fullName: '[]'

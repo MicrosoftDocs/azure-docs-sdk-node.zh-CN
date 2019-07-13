@@ -1,0 +1,58 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosTargetFilter'
+    name: ChaosTargetFilter
+    fullName: ChaosTargetFilter
+    children:
+      - '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+      - '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="b6f5f-101">定义所有筛选的器目标混沌错误，例如，出错仅特定节点类型或出错仅某些应用程序。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-101">Defines all filters for targeted Chaos faults, for example, faulting only certain node types or faulting only certain applications.</span></span>
+      <span data-ttu-id="b6f5f-102">如未使用 ChaosTargetFilter，混沌测试会使所有群集实体故障。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-102">If ChaosTargetFilter is not used, Chaos faults all cluster entities.</span></span> <span data-ttu-id="b6f5f-103">如果使用 ChaosTargetFilter，混沌测试仅使满足 ChaosTargetFilter 规定的实体故障。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-103">If ChaosTargetFilter is used, Chaos faults only the entities that meet the ChaosTargetFilter specification.</span></span> <span data-ttu-id="b6f5f-104">NodeTypeInclusionList 和 ApplicationInclusionList 仅允许联合语义。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-104">NodeTypeInclusionList and ApplicationInclusionList allow a union semantics only.</span></span>
+      <span data-ttu-id="b6f5f-105">不可指定 NodeTypeInclusionList 和 ApplicationInclusionList 的交集。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-105">It is not possible to specify an intersection of NodeTypeInclusionList and ApplicationInclusionList.</span></span> <span data-ttu-id="b6f5f-106">例如，不可指定“仅当此应用程序在该节点类型上时使其故障”。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-106">For example, it is not possible to specify "fault this application only when it is on that node type."</span></span>
+      <span data-ttu-id="b6f5f-107">一旦实体包含在 NodeTypeInclusionList 或 ApplicationInclusionList 中，便不能使用 ChaosTargetFilter 排除该实体。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-107">Once an entity is included in either NodeTypeInclusionList or ApplicationInclusionList, that entity cannot be excluded using ChaosTargetFilter.</span></span> <span data-ttu-id="b6f5f-108">即使 applicationX 未出现在 ApplicationInclusionList 中，在一些混沌测试迭代中，也可使 applicationX 故障，因为它恰好在 NodeTypeInclusionList 中的 nodeTypeY 的节点上。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-108">Even if applicationX does not appear in ApplicationInclusionList, in some Chaos iteration applicationX can be faulted because it happens to be on a node of nodeTypeY that is included in NodeTypeInclusionList.</span></span> <span data-ttu-id="b6f5f-109">如果 NodeTypeInclusionList 和 ApplicationInclusionList 都为 null 或者为空，则会引发 ArgumentException。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-109">If both NodeTypeInclusionList and ApplicationInclusionList are null or empty, an ArgumentException is thrown.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+    name: applicationInclusionList
+    fullName: applicationInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b6f5f-110">包含在混沌测试故障中的应用程序 URI 列表。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-110">A list of application URIs to include in Chaos faults.</span></span>
+      <span data-ttu-id="b6f5f-111">所有属于这些应用程序服务的副本服从混沌测试的副本故障（重启副本、删除副本、移动主副本和移动辅助副本）。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-111">All replicas belonging to services of these applications are amenable to replica faults (restart replica, remove replica, move primary, and move secondary) by Chaos.</span></span>
+      <span data-ttu-id="b6f5f-112">仅在代码包仅托管这些应用程序的副本时，混沌测试可重启代码包。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-112">Chaos may restart a code package only if the code package hosts replicas of these applications only.</span></span>
+      <span data-ttu-id="b6f5f-113">如果应用程序未出现在此列表中，那么还是可以在某些混沌测试迭代中使它故障，条件是应用程序最终位于 NodeTypeInclusionList 中的节点类型的节点上。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-113">If an application does not appear in this list, it can still be faulted in some Chaos iteration if the application ends up on a node of a node type that is included in NodeTypeInclusionList.</span></span>
+      <span data-ttu-id="b6f5f-114">但是，如果 applicationx 通过放置约束和使 applicationX 不存在从 ApplicationInclusionList 和同时 nodeTypeY 不存在从 NodeTypeInclusionList 中，然后使 applicationX 将永远不会出错。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-114">However, if applicationX is tied to nodeTypeY through placement constraints and applicationX is absent from ApplicationInclusionList and nodeTypeY is absent from NodeTypeInclusionList, then applicationX will never be faulted.</span></span>
+      <span data-ttu-id="b6f5f-115">此列表最多可以包含 1000 个应用程序名称，若要增加，MaxNumberOfApplicationsInChaosEntityFilter 配置需要升级。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-115">At most 1000 application names can be included in this list, to increase this number, a config upgrade is required for MaxNumberOfApplicationsInChaosEntityFilter configuration.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    name: nodeTypeInclusionList
+    fullName: nodeTypeInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="b6f5f-116">包括在混沌测试故障中的节点类型列表。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-116">A list of node types to include in Chaos faults.</span></span>
+      <span data-ttu-id="b6f5f-117">所有类型故障（重启节点、重启代码包、删除副本、重启副本、移动主副本和移动辅助副本）均为这些节点类型的节点启用。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-117">All types of faults (restart node, restart code package, remove replica, restart replica, move primary, and move secondary) are enabled for the nodes of these node types.</span></span>
+      <span data-ttu-id="b6f5f-118">如果节点类型 （比如 NodeTypeX） 不会出现在 NodeTypeInclusionList 中，则节点级别故障 （比如 NodeRestart) 将永远不会启用的节点，但代码包和副本故障如果中的应用程序仍可为 NodeTypeX 启用ApplicationInclusionList。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-118">If a node type (say NodeTypeX) does not appear in the NodeTypeInclusionList, then node level faults (like NodeRestart) will never be enabled for the nodes of NodeTypeX, but code package and replica faults can still be enabled for NodeTypeX if an application in the ApplicationInclusionList.</span></span>
+      <span data-ttu-id="b6f5f-119">碰巧位于 NodeTypeX 的节点上。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-119">happens to reside on a node of NodeTypeX.</span></span>
+      <span data-ttu-id="b6f5f-120">此列表最多可以包含 100 个节点类型名称，若要增加，MaxNumberOfNodeTypesInChaosEntityFilter 配置需要升级。</span><span class="sxs-lookup"><span data-stu-id="b6f5f-120">At most 100 node type names can be included in this list, to increase this number, a config upgrade is required for MaxNumberOfNodeTypesInChaosEntityFilter configuration.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeTypeInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'

@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy'
+    name: ServiceTypeHealthPolicy
+    fullName: ServiceTypeHealthPolicy
+    children:
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService'
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition'
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="67c2d-101">代表的运行状况策略用于评估属于某个服务类型的服务的运行状况。</span><span class="sxs-lookup"><span data-stu-id="67c2d-101">Represents the health policy used to evaluate the health of services belonging to a service type.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService'
+    name: maxPercentUnhealthyPartitionsPerService
+    fullName: maxPercentUnhealthyPartitionsPerService
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="67c2d-102">允许的最大的每个服务不正常分区的百分比。</span><span class="sxs-lookup"><span data-stu-id="67c2d-102">The maximum allowed percentage of unhealthy partitions per service.</span></span> <span data-ttu-id="67c2d-103">允许的值为字节值从 0 到 100 的百分比表示的最大容忍百分比可以不正常之前该服务的分区被视为错误。</span><span class="sxs-lookup"><span data-stu-id="67c2d-103">Allowed values are Byte values from zero to 100 The percentage represents the maximum tolerated percentage of partitions that can be unhealthy before the service is considered in error.</span></span>
+      <span data-ttu-id="67c2d-104">如果未超过该百分比，但至少一个不正常的分区，则将运行状况评估为 Warning。</span><span class="sxs-lookup"><span data-stu-id="67c2d-104">If the percentage is respected but there is at least one unhealthy partition, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="67c2d-105">百分比的计算方式的不正常分区数除以在服务中的分区总数。</span><span class="sxs-lookup"><span data-stu-id="67c2d-105">The percentage is calculated by dividing the number of unhealthy partitions over the total number of partitions in the service.</span></span>
+      <span data-ttu-id="67c2d-106">计算结果调容忍数量较少的分区上一次失败。</span><span class="sxs-lookup"><span data-stu-id="67c2d-106">The computation rounds up to tolerate one failure on small numbers of partitions.</span></span> <span data-ttu-id="67c2d-107">默认百分比为零。</span><span class="sxs-lookup"><span data-stu-id="67c2d-107">Default percentage is zero.</span></span> <span data-ttu-id="67c2d-108">默认值：0.</span><span class="sxs-lookup"><span data-stu-id="67c2d-108">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyPartitionsPerService?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition'
+    name: maxPercentUnhealthyReplicasPerPartition
+    fullName: maxPercentUnhealthyReplicasPerPartition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="67c2d-109">允许的最大不正常副本的每个分区的百分比。</span><span class="sxs-lookup"><span data-stu-id="67c2d-109">The maximum allowed percentage of unhealthy replicas per partition.</span></span> <span data-ttu-id="67c2d-110">允许的值是从 0 到 100 的字节值。</span><span class="sxs-lookup"><span data-stu-id="67c2d-110">Allowed values are Byte values from zero to 100.</span></span>
+      <span data-ttu-id="67c2d-111">该百分比表示分区视为出错之前可处于不正常状态的副本的最大容忍的的百分比。</span><span class="sxs-lookup"><span data-stu-id="67c2d-111">The percentage represents the maximum tolerated percentage of replicas that can be unhealthy before the partition is considered in error.</span></span>
+      <span data-ttu-id="67c2d-112">如果未超过该百分比，但至少一个不正常的副本，运行状况评估为 Warning。</span><span class="sxs-lookup"><span data-stu-id="67c2d-112">If the percentage is respected but there is at least one unhealthy replica, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="67c2d-113">百分比的计算方式是不正常的副本数除以在分区中副本总数。</span><span class="sxs-lookup"><span data-stu-id="67c2d-113">The percentage is calculated by dividing the number of unhealthy replicas over the total number of replicas in the partition.</span></span>
+      <span data-ttu-id="67c2d-114">计算结果调容忍发生一次故障数量较少的副本。</span><span class="sxs-lookup"><span data-stu-id="67c2d-114">The computation rounds up to tolerate one failure on small numbers of replicas.</span></span> <span data-ttu-id="67c2d-115">默认百分比为零。</span><span class="sxs-lookup"><span data-stu-id="67c2d-115">Default percentage is zero.</span></span> <span data-ttu-id="67c2d-116">默认值：0.</span><span class="sxs-lookup"><span data-stu-id="67c2d-116">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyReplicasPerPartition?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices'
+    name: maxPercentUnhealthyServices
+    fullName: maxPercentUnhealthyServices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="67c2d-117">允许的最大不正常服务数的百分比。</span><span class="sxs-lookup"><span data-stu-id="67c2d-117">The maximum allowed percentage of unhealthy services.</span></span> <span data-ttu-id="67c2d-118">允许的值是从 0 到 100 的字节值。</span><span class="sxs-lookup"><span data-stu-id="67c2d-118">Allowed values are Byte values from zero to 100.</span></span>
+      <span data-ttu-id="67c2d-119">该百分比表示应用程序视为出错之前可处于不正常状态的服务的最大容忍的的百分比。</span><span class="sxs-lookup"><span data-stu-id="67c2d-119">The percentage represents the maximum tolerated percentage of services that can be unhealthy before the application is considered in error.</span></span>
+      <span data-ttu-id="67c2d-120">如果未超过该百分比，但至少一个不正常的服务，运行状况评估为 Warning。</span><span class="sxs-lookup"><span data-stu-id="67c2d-120">If the percentage is respected but there is at least one unhealthy service, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="67c2d-121">这被计算方式的特定服务类型的不正常服务数除以特定服务类型的服务的总数。</span><span class="sxs-lookup"><span data-stu-id="67c2d-121">This is calculated by dividing the number of unhealthy services of the specific service type over the total number of services of the specific service type.</span></span>
+      <span data-ttu-id="67c2d-122">计算结果调容忍少量服务一次失败。</span><span class="sxs-lookup"><span data-stu-id="67c2d-122">The computation rounds up to tolerate one failure on small numbers of services.</span></span> <span data-ttu-id="67c2d-123">默认百分比为零。</span><span class="sxs-lookup"><span data-stu-id="67c2d-123">Default percentage is zero.</span></span> <span data-ttu-id="67c2d-124">默认值：0.</span><span class="sxs-lookup"><span data-stu-id="67c2d-124">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyServices?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'

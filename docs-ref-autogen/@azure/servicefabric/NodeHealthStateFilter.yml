@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.NodeHealthStateFilter'
+    name: NodeHealthStateFilter
+    fullName: NodeHealthStateFilter
+    children:
+      - '@azure/servicefabric.NodeHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.NodeHealthStateFilter.nodeNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      定义匹配条件以确定是否应返回的群集运行状况区块中包含一个节点。
+      一个筛选器可以匹配零个、 一个或多个节点，具体取决于其属性。
+      可以在群集运行状况区块查询说明中指定。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      节点的运行状况状态筛选器。 它允许选择节点，如果它们匹配所需的运行状况状态。
+      可能值包括以下运行状况状态之一的整数值。 仅返回与筛选器匹配的节点。 所有节点都用于评估聚合的群集运行状况状态。
+      如果未指定，默认值的为 None、，除非另有指定的节点名称。 如果筛选器都有默认值并指定节点名称，则返回匹配的节点。
+      状态值为基于标志的枚举，因此该值可是使用按位“OR”运算符获取的值的组合。
+      例如，如果提供的值为 6，它可匹配与 HealthState 值为 OK (2) 和 Warning (4) 的节点。
+      - Default-默认值。 匹配任何 HealthState。 值为 0。
+      - 无-不与任何 HealthState 值匹配的筛选器。 未返回有关给定状态集合的结果时使用。 值为 1。
+      - Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。 值为 2。
+      - 警告-筛选器的输入匹配与 HealthState 值为 Warning。 值为 4。
+      - Error-与 HealthState 值为 Error 的输入匹配的筛选器。 值为 8。
+      - All-与具有任意 HealthState 值的输入匹配的筛选器。 值为 65535。 默认值：0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.NodeHealthStateFilter.nodeNameFilter'
+    name: nodeNameFilter
+    fullName: nodeNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      与筛选器匹配的节点的名称。 筛选器仅应用于指定的节点，如果它存在。
+      如果节点不存在，在群集运行状况区块根据此筛选器中不返回任何节点。
+      如果该节点存在，它包含在群集运行状况区块中，如果运行状况状态与其他筛选器属性相匹配。
+      如果未指定，与父筛选器匹配 （如果有） 的所有节点都纳入考虑范围，并与其他筛选器成员，如运行状况状态筛选器相匹配。
+    optional: true
+    syntax:
+      content: 'nodeNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

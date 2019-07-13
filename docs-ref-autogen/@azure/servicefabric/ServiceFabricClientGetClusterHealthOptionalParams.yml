@@ -18,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 可选参数。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -44,7 +44,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      用于根据运行状态筛选群集运行状况查询结果中返回的应用程序运行状态对象。
+      此参数的可能值包括从成员获取的整数值或对 HealthStateFilter 枚举成员进行位运算获取的整数值。 仅返回与筛选器匹配的应用程序。
+      所有应用程序都用于评估聚合运行状态。 如果未指定，则返回所有项。
+      状态值为基于标志的枚举，因此该值可是使用按位“OR”运算符获取的值的组合。
+      例如，如果提供的值为 6，则返回 HealthState 值为“OK”(2) 和“Warning”(4) 的应用程序的运行状态。
+      - Default-默认值。 匹配任何 HealthState。 值为 0。
+      - 无-不与任何 HealthState 值匹配的筛选器。 未返回有关给定状态集合的结果时使用。 值为 1。
+      - Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。 值为 2。
+      - 警告-筛选器的输入匹配与 HealthState 值为 Warning。 值为 4。
+      - Error-与 HealthState 值为 Error 的输入匹配的筛选器。 值为 8。
+      - All-与具有任意 HealthState 值的输入匹配的筛选器。 值为 65535。 默认值：0.
     optional: true
     syntax:
       content: 'applicationsHealthStateFilter?: undefined | number'
@@ -74,7 +85,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      用于根据运行状况筛选返回的 HealthEvent 对象集合。
+      此参数的可能值包括以下运行状态之一的整数值。
+      仅返回与筛选器匹配的事件。 所有事件用于评估聚合运行状态。
+      如果未指定，则返回所有项。 状态值为基于标志的枚举，因此该值可以是使用按位“OR”运算符获取的值的组合。
+      例如，如果提供的值为 6，则返回 HealthState 值为 OK (2) 和 Warning (4) 的所有事件。
+      - Default-默认值。 匹配任何 HealthState。 值为 0。
+      - 无-不与任何 HealthState 值匹配的筛选器。 未返回有关给定状态集合的结果时使用。 值为 1。
+      - Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。 值为 2。
+      - 警告-筛选器的输入匹配与 HealthState 值为 Warning。 值为 4。
+      - Error-与 HealthState 值为 Error 的输入匹配的筛选器。 值为 8。
+      - All-与具有任意 HealthState 值的输入匹配的筛选器。 值为 65535。 默认值：0.
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -89,7 +111,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      指示运行状况统计数据是否应作为查询结果的一部分返回。 默认值为 False。
+      统计信息显示处于 Ok、Warning 和 Error 运行状况的子实体数。
+      默认值： false。
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -104,7 +129,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      指示运行状况统计信息是否应包括 fabric: / System 应用程序运行状况统计信息。 默认值为 False。
+      如果 IncludeSystemApplicationHealthStatistics 设置为 true，则运行状况统计信息包含属于 fabric: / System 应用程序的实体。
+      否则，查询结果仅包含用户应用程序的运行状况统计信息。
+      应用此参数后，查询结果中必须包含运行状况统计信息。
+      默认值： false。
     optional: true
     syntax:
       content: 'includeSystemApplicationHealthStatistics?: undefined | false | true'
@@ -119,7 +149,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      用于根据运行状态筛选群集运行状况查询结果中返回的节点运行状态对象。 此参数的可能值包括以下运行状态之一的整数值。 仅返回与筛选器匹配的节点。 所有节点用于评估聚合运行状态。
+      如果未指定，则返回所有项。
+      状态值为基于标志的枚举，因此该值可是使用按位“OR”运算符获取的值的组合。
+      例如，如果提供的值为 6，则返回 HealthState 值为 OK (2) 和 Warning (4) 的节点的运行状态。
+      - Default-默认值。 匹配任何 HealthState。 值为 0。
+      - 无-不与任何 HealthState 值匹配的筛选器。 未返回有关给定状态集合的结果时使用。 值为 1。
+      - Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。 值为 2。
+      - 警告-筛选器的输入匹配与 HealthState 值为 Warning。 值为 4。
+      - Error-与 HealthState 值为 Error 的输入匹配的筛选器。 值为 8。
+      - All-与具有任意 HealthState 值的输入匹配的筛选器。 值为 65535。 默认值：0.
     optional: true
     syntax:
       content: 'nodesHealthStateFilter?: undefined | number'
@@ -179,7 +219,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 在数秒内执行该操作的服务器超时。 此超时指定客户端是愿意等待的请求的操作完成的持续时间。 此参数的默认值为 60 秒。 默认值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

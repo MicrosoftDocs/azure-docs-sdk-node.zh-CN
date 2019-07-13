@@ -1,0 +1,163 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo'
+    name: StatefulServicePartitionInfo
+    fullName: StatefulServicePartitionInfo
+    children:
+      - '@azure/servicefabric.StatefulServicePartitionInfo.healthState'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.minReplicaSetSize'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.partitionInformation'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.partitionStatus'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.primaryEpoch'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.serviceKind'
+      - '@azure/servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: 有关分区的有状态 Service Fabric 服务的信息...
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration'
+    name: lastQuorumLossDuration
+    fullName: lastQuorumLossDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 此分区处于仲裁丢失其持续时间。 如果该分区当前处于仲裁丢失，则返回持续时间，因为它已处于该状态。 此字段将 ISO8601 格式用于指定该持续时间。
+    optional: true
+    syntax:
+      content: 'lastQuorumLossDuration?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.minReplicaSetSize'
+    name: minReplicaSetSize
+    fullName: minReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 数字形式的最小副本集大小。
+    optional: true
+    syntax:
+      content: 'minReplicaSetSize?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.partitionInformation'
+    name: partitionInformation
+    fullName: partitionInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 有关分区标识，分区方案和支持它的密钥的信息。
+    optional: true
+    syntax:
+      content: 'partitionInformation?: PartitionInformationUnion'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionInformationUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.partitionStatus'
+    name: partitionStatus
+    fullName: partitionStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service fabric 服务分区的状态。 可能的值包括：Invalid、 就绪、 NotReady、 InQuorumLoss，重新配置，正在删除
+    optional: true
+    syntax:
+      content: 'partitionStatus?: ServicePartitionStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePartitionStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.primaryEpoch'
+    name: primaryEpoch
+    fullName: primaryEpoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Epoch 是作为一个整体为分区配置数字。 当副本的配置设置更改，例如当主副本更改，从新的主副本复制的操作被认为是从由旧的主副本已发送的新 Epoch。
+    optional: true
+    syntax:
+      content: 'primaryEpoch?: Epoch'
+      return:
+        type:
+          - '@azure/servicefabric.Epoch'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize'
+    name: targetReplicaSetSize
+    fullName: targetReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 数字形式的目标副本集大小。
+    optional: true
+    syntax:
+      content: 'targetReplicaSetSize?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.PartitionInformationUnion'
+    name: PartitionInformationUnion
+    spec.typeScript:
+      - name: PartitionInformationUnion
+        fullName: PartitionInformationUnion
+        uid: '@azure/servicefabric.PartitionInformationUnion'
+  - uid: '@azure/servicefabric.ServicePartitionStatus'
+    name: ServicePartitionStatus
+    spec.typeScript:
+      - name: ServicePartitionStatus
+        fullName: ServicePartitionStatus
+        uid: '@azure/servicefabric.ServicePartitionStatus'
+  - uid: '@azure/servicefabric.Epoch'
+    name: Epoch
+    spec.typeScript:
+      - name: Epoch
+        fullName: Epoch
+        uid: '@azure/servicefabric.Epoch'

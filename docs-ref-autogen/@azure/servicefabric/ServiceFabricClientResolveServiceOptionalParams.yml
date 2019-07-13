@@ -16,7 +16,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 可选参数。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -87,7 +87,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      分区的键类型。 如果服务的分区方案为 Int64Range 或 Named，则此参数是必需的。 可能的值如下。
+      - None (1)-指示未指定 PartitionKeyValue 参数。 此值对于分区方案为 Singleton 的分区有效。 这是默认值。 值为 1。
+      - Int64Range (2)-指示 PartitionKeyValue 参数为 int64 分区键。
+      此值对于分区方案为 Int64Range 的分区有效。 值为 2。
+      - 名为 (3)-指示 PartitionKeyValue 参数为分区的名称。 此值对于分区方案为 Named 的分区有效。 值为 3。
     optional: true
     syntax:
       content: 'partitionKeyType?: undefined | number'
@@ -102,7 +107,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      分区键。 如果服务的分区方案为 Int64Range 或 Named，则此参数是必需的。
+      这不是分区 ID，而是整数键值或分区 ID 的名称。
+      例如，如果服务使用从 0 到 10 的范围分区，则其 PartitionKeyValue 会是该范围内的整数。 用于查看范围或名称的查询服务说明。
     optional: true
     syntax:
       content: 'partitionKeyValue?: undefined | string'
@@ -117,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 先前收到的响应的 Version 字段中的值。 如果用户知道先前获取的结果已过时，则此参数是必需的。
     optional: true
     syntax:
       content: 'previousRspVersion?: undefined | string'
@@ -147,7 +155,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 在数秒内执行该操作的服务器超时。 此超时指定客户端是愿意等待的请求的操作完成的持续时间。 此参数的默认值为 60 秒。 默认值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

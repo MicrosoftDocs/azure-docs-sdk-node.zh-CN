@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 可选参数。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -55,7 +55,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      用于根据运行状况筛选返回的 HealthEvent 对象集合。
+      此参数的可能值包括以下运行状态之一的整数值。
+      仅返回与筛选器匹配的事件。 所有事件用于评估聚合运行状态。
+      如果未指定，则返回所有项。 状态值为基于标志的枚举，因此该值可以是使用按位“OR”运算符获取的值的组合。
+      例如，如果提供的值为 6，则返回 HealthState 值为 OK (2) 和 Warning (4) 的所有事件。
+      - Default-默认值。 匹配任何 HealthState。 值为 0。
+      - 无-不与任何 HealthState 值匹配的筛选器。 未返回有关给定状态集合的结果时使用。 值为 1。
+      - Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。 值为 2。
+      - 警告-筛选器的输入匹配与 HealthState 值为 Warning。 值为 4。
+      - Error-与 HealthState 值为 Error 的输入匹配的筛选器。 值为 8。
+      - All-与具有任意 HealthState 值的输入匹配的筛选器。 值为 65535。 默认值：0.
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -115,7 +126,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 在数秒内执行该操作的服务器超时。 此超时指定客户端是愿意等待的请求的操作完成的持续时间。 此参数的默认值为 60 秒。 默认值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

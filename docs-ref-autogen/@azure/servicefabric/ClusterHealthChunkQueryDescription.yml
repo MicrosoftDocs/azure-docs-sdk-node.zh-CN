@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription'
+    name: ClusterHealthChunkQueryDescription
+    fullName: ClusterHealthChunkQueryDescription
+    children:
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationFilters'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationHealthPolicies'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.clusterHealthPolicy'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.nodeFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: 在群集运行状况区块查询说明，可以指定要评估群集运行状况和非常容易表达筛选器，以选择要在响应中包含哪些群集实体的运行状况策略。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationFilters'
+    name: applicationFilters
+    fullName: applicationFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      定义指定要包括在返回的群集运行状况区块的应用程序的筛选器的列表。
+      如果不指定了任何筛选器，则不返回任何应用程序。 所有应用程序都用于评估群集的聚合运行状况状态，而不考虑输入筛选器。
+      群集运行状况区块查询可以指定多个应用程序筛选器。
+      例如，它可以指定一个筛选器以返回具有运行状况状态错误的所有应用程序和另一个筛选器始终包含指定的应用程序类型的应用程序。
+    optional: true
+    syntax:
+      content: 'applicationFilters?: ApplicationHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationHealthPolicies'
+    name: applicationHealthPolicies
+    fullName: applicationHealthPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 定义应用程序运行状况策略映射用于评估应用程序或其中一个及其子实体的运行状况。
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicies?: ApplicationHealthPolicies'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicies'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.clusterHealthPolicy'
+    name: clusterHealthPolicy
+    fullName: clusterHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 定义用于评估群集或群集节点的运行状况的运行状况策略。
+    optional: true
+    syntax:
+      content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ClusterHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.nodeFilters'
+    name: nodeFilters
+    fullName: nodeFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      定义筛选器，指定要包含在返回的群集运行状况区块中的节点的列表。
+      如果未不指定任何筛选器，不返回任何节点。 所有节点都用于评估群集的聚合运行状况状态，而不考虑输入筛选器。
+      群集运行状况区块查询可以指定多个节点筛选器。
+      例如，它可以指定一个筛选器以返回所有节点具有运行状况状态错误和另一个筛选器始终包含由其节点名称标识的节点。
+    optional: true
+    syntax:
+      content: 'nodeFilters?: NodeHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.NodeHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter[]'
+    name: 'ApplicationHealthStateFilter[]'
+    spec.typeScript:
+      - name: ApplicationHealthStateFilter
+        fullName: ApplicationHealthStateFilter
+        uid: '@azure/servicefabric.ApplicationHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicies'
+    name: ApplicationHealthPolicies
+    spec.typeScript:
+      - name: ApplicationHealthPolicies
+        fullName: ApplicationHealthPolicies
+        uid: '@azure/servicefabric.ApplicationHealthPolicies'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    spec.typeScript:
+      - name: ClusterHealthPolicy
+        fullName: ClusterHealthPolicy
+        uid: '@azure/servicefabric.ClusterHealthPolicy'
+  - uid: '@azure/servicefabric.NodeHealthStateFilter[]'
+    name: 'NodeHealthStateFilter[]'
+    spec.typeScript:
+      - name: NodeHealthStateFilter
+        fullName: NodeHealthStateFilter
+        uid: '@azure/servicefabric.NodeHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

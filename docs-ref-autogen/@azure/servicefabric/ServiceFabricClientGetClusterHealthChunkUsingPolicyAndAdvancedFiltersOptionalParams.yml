@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 可选参数。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -40,7 +40,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      介绍用于评估群集运行状况和筛选器以选择要返回哪些群集实体的群集和应用程序运行状况策略。
+      如果存在群集运行状况策略，则它用于评估群集事件和群集节点。 如果不存在，运行状况评估使用群集运行状况策略定义在群集清单或默认群集运行状况策略。
+      默认情况下，每个应用程序使用其特定的应用程序运行状况策略，如果清单中不定义任何策略中应用程序清单中或默认运行状况策略，定义计算。
+      如果指定应用程序运行状况策略映射，并且它具有应用程序条目，指定的应用程序运行状况策略用于评估应用程序运行状况。
+      用户可以指定要选择要在响应中包含哪些群集实体的筛选器非常灵活。 选择可以基于实体运行状况状态完成以及基于层次结构。
+      查询可以返回基于指定的筛选器的实体的多层子项。 例如，它可以返回具有指定名称，并为此应用程序的一个应用程序，则返回错误或警告和所有分区和副本以用于其中一种服务都中的服务。
     optional: true
     syntax:
       content: 'clusterHealthChunkQueryDescription?: ClusterHealthChunkQueryDescription'
@@ -115,7 +121,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 在数秒内执行该操作的服务器超时。 此超时指定客户端是愿意等待的请求的操作完成的持续时间。 此参数的默认值为 60 秒。 默认值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

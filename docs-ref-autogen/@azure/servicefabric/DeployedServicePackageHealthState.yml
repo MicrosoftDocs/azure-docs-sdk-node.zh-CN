@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthState'
+    name: DeployedServicePackageHealthState
+    fullName: DeployedServicePackageHealthState
+    children:
+      - '@azure/servicefabric.DeployedServicePackageHealthState.aggregatedHealthState'
+      - '@azure/servicefabric.DeployedServicePackageHealthState.applicationName'
+      - '@azure/servicefabric.DeployedServicePackageHealthState.nodeName'
+      - '@azure/servicefabric.DeployedServicePackageHealthState.serviceManifestName'
+      - '@azure/servicefabric.DeployedServicePackageHealthState.servicePackageActivationId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示包含实体标识符和聚合运行状况状态的已部署的服务包的运行状况状态。
+    extends:
+      name: '@azure/servicefabric.EntityHealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthState.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthState.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '应用程序名称包括 fabric:全名。'
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthState.nodeName'
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 节点在其部署服务包的名称。
+    optional: true
+    syntax:
+      content: 'nodeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthState.serviceManifestName'
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 描述服务包的清单的名称。
+    optional: true
+    syntax:
+      content: 'serviceManifestName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthState.servicePackageActivationId'
+    name: servicePackageActivationId
+    fullName: servicePackageActivationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 已部署的服务包的 ActivationId。 如果在创建服务时指定 ServicePackageActivationMode 是 SharedProcess （或如果未指定，在这种情况下则默认为 SharedProcess），则 ServicePackageActivationId 值始终是空字符串。
+    optional: true
+    syntax:
+      content: 'servicePackageActivationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealthState'
+    name: EntityHealthState
+    spec.typeScript:
+      - name: EntityHealthState
+        fullName: EntityHealthState
+        uid: '@azure/servicefabric.EntityHealthState'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

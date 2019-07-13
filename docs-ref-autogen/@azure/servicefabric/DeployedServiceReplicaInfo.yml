@@ -1,0 +1,177 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServiceReplicaInfo'
+    name: DeployedServiceReplicaInfo
+    fullName: DeployedServiceReplicaInfo
+    children:
+      - '@azure/servicefabric.DeployedServiceReplicaInfo.address'
+      - '@azure/servicefabric.DeployedServiceReplicaInfo.codePackageName'
+      - '@azure/servicefabric.DeployedServiceReplicaInfo.hostProcessId'
+      - '@azure/servicefabric.DeployedServiceReplicaInfo.partitionId'
+      - '@azure/servicefabric.DeployedServiceReplicaInfo.replicaStatus'
+      - '@azure/servicefabric.DeployedServiceReplicaInfo.serviceKind'
+      - '@azure/servicefabric.DeployedServiceReplicaInfo.serviceManifestName'
+      - '@azure/servicefabric.DeployedServiceReplicaInfo.serviceName'
+      - '@azure/servicefabric.DeployedServiceReplicaInfo.servicePackageActivationId'
+      - '@azure/servicefabric.DeployedServiceReplicaInfo.serviceTypeName'
+    langs:
+      - typeScript
+    type: interface
+    summary: 有关 Service Fabric 服务副本的节点上部署的信息。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaInfo.address'
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 返回处于打开或 ChangeRole 副本的最后一个地址。
+    optional: true
+    syntax:
+      content: 'address?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaInfo.codePackageName'
+    name: codePackageName
+    fullName: codePackageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 承载此副本的代码包的名称。
+    optional: true
+    syntax:
+      content: 'codePackageName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaInfo.hostProcessId'
+    name: hostProcessId
+    fullName: hostProcessId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 将托管该副本的进程的主机进程 ID。 如果副本已关闭，这将为零。 Hyper-v 容器在此主机进程 ID 将从不同的内核。
+    optional: true
+    syntax:
+      content: 'hostProcessId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaInfo.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service Fabric 用于唯一标识分区的内部 ID。 创建服务时，这是随机生成的 GUID。 分区 ID 是唯一的而不会更改该服务的生存期内。 如果在同一个服务已被删除并重新创建其分区的 Id 会有所不同。
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaInfo.replicaStatus'
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 一个服务副本的状态。 可能的值包括：Invalid、 InBuild，备用，就绪，关闭、 删除
+    optional: true
+    syntax:
+      content: 'replicaStatus?: ReplicaStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'serviceKind: "DeployedServiceReplicaInfo"'
+      return:
+        type:
+          - '"DeployedServiceReplicaInfo"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaInfo.serviceManifestName'
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在其中定义此服务类型的服务清单的名称。
+    optional: true
+    syntax:
+      content: 'serviceManifestName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaInfo.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '与服务的完整名称 fabric:全名。'
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaInfo.servicePackageActivationId'
+    name: servicePackageActivationId
+    fullName: servicePackageActivationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 已部署的服务包的 ActivationId。 如果在创建服务时指定 ServicePackageActivationMode 是 SharedProcess （或如果未指定，在这种情况下则默认为 SharedProcess），则 ServicePackageActivationId 值始终是空字符串。
+    optional: true
+    syntax:
+      content: 'servicePackageActivationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServiceReplicaInfo.serviceTypeName'
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 服务清单中指定的服务类型的名称。
+    optional: true
+    syntax:
+      content: 'serviceTypeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicaStatus'
+    name: ReplicaStatus
+    spec.typeScript:
+      - name: ReplicaStatus
+        fullName: ReplicaStatus
+        uid: '@azure/servicefabric.ReplicaStatus'

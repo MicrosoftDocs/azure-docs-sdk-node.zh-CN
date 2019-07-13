@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter'
+    name: ServiceHealthStateFilter
+    fullName: ServiceHealthStateFilter
+    children:
+      - '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+      - '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      定义匹配条件以确定是否应包括作为群集运行状况区块中的应用程序的子服务。
+      如果父应用程序与群集运行状况区块查询说明中指定的筛选器相匹配，仅返回服务。
+      一个筛选器可以匹配零个、 一个或多个服务，具体取决于其属性。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      服务的运行状况状态筛选器。 它允许您选择服务，如果它们匹配所需的运行状况状态。
+      可能值包括以下运行状况状态之一的整数值。 仅返回与筛选器匹配的服务。 所有服务都用于评估聚合的群集运行状况状态。
+      如果未指定，默认值的为 None、，除非另有指定的服务名称。 如果筛选器都有默认值并指定服务名称，则返回匹配的服务。
+      状态值为基于标志的枚举，因此该值可是使用按位“OR”运算符获取的值的组合。
+      例如，如果提供的值为 6，它可匹配与 HealthState 值为 OK (2) 和 Warning (4) 的服务。
+      - Default-默认值。 匹配任何 HealthState。 值为 0。
+      - 无-不与任何 HealthState 值匹配的筛选器。 未返回有关给定状态集合的结果时使用。 值为 1。
+      - Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。 值为 2。
+      - 警告-筛选器的输入匹配与 HealthState 值为 Warning。 值为 4。
+      - Error-与 HealthState 值为 Error 的输入匹配的筛选器。 值为 8。
+      - All-与具有任意 HealthState 值的输入匹配的筛选器。 值为 65535。 默认值：0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+    name: partitionFilters
+    fullName: partitionFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      定义指定要包含在返回的群集运行状况中哪些分区分块作为服务的子级的筛选器的列表。 父服务与筛选器匹配时才返回分区。
+      如果列表为空，则返回不到分区。 所有分区都用于评估的父服务聚合运行状况状态，而不考虑输入筛选器。
+      服务筛选器可以指定多个分区筛选器。
+      例如，它可以指定一个筛选器以返回所有分区具有运行状况状态错误和另一个筛选器始终包含由其分区 ID 标识的分区
+    optional: true
+    syntax:
+      content: 'partitionFilters?: PartitionHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    name: serviceNameFilter
+    fullName: serviceNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      与筛选器匹配的服务的名称。 如果存在，将仅对指定的服务，应用筛选器。
+      如果服务不存在，没有任何服务是在群集运行状况区块根据此筛选器中返回。
+      如果服务存在，它包含作为应用程序的子级是如果运行状况状态与其他筛选器属性相匹配。
+      如果未指定，与父筛选器匹配 （如果有） 的所有服务都纳入考虑范围，并与其他筛选器成员，如运行状况状态筛选器相匹配。
+    optional: true
+    syntax:
+      content: 'serviceNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter[]'
+    name: 'PartitionHealthStateFilter[]'
+    spec.typeScript:
+      - name: PartitionHealthStateFilter
+        fullName: PartitionHealthStateFilter
+        uid: '@azure/servicefabric.PartitionHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

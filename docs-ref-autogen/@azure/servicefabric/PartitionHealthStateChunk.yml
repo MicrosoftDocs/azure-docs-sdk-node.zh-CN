@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionHealthStateChunk'
+    name: PartitionHealthStateChunk
+    fullName: PartitionHealthStateChunk
+    children:
+      - '@azure/servicefabric.PartitionHealthStateChunk.healthState'
+      - '@azure/servicefabric.PartitionHealthStateChunk.partitionId'
+      - '@azure/servicefabric.PartitionHealthStateChunk.replicaHealthStateChunks'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示一个分区，其中包含的分区 ID、 其聚合运行状况状态以及任何群集运行状况区块查询说明中与筛选器的副本的健康状况区块。
+    extends:
+      name: '@azure/servicefabric.EntityHealthStateChunk'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateChunk.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateChunk.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 分区的 Id。
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateChunk.replicaHealthStateChunks'
+    name: replicaHealthStateChunks
+    fullName: replicaHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 列表的副本运行状况区块属于分区与筛选器中的群集运行状况区块查询说明。
+    optional: true
+    syntax:
+      content: 'replicaHealthStateChunks?: ReplicaHealthStateChunkList'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaHealthStateChunkList'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealthStateChunk'
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: '@azure/servicefabric.EntityHealthStateChunk'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ReplicaHealthStateChunkList'
+    name: ReplicaHealthStateChunkList
+    spec.typeScript:
+      - name: ReplicaHealthStateChunkList
+        fullName: ReplicaHealthStateChunkList
+        uid: '@azure/servicefabric.ReplicaHealthStateChunkList'

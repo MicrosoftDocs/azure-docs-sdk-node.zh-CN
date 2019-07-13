@@ -1,0 +1,185 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription'
+    name: ComposeDeploymentUpgradeDescription
+    fullName: ComposeDeploymentUpgradeDescription
+    children:
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.applicationHealthPolicy'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.composeFileContent'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.deploymentName'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.forceRestart'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.monitoringPolicy'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.registryCredential'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.rollingUpgradeMode'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.upgradeKind'
+      - '@azure/servicefabric.ComposeDeploymentUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: 介绍 compose 部署升级的参数。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.applicationHealthPolicy'
+    name: applicationHealthPolicy
+    fullName: applicationHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 定义用于评估应用程序或其中一个及其子实体的运行状况的运行状况策略。
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.composeFileContent'
+    name: composeFileContent
+    fullName: composeFileContent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 用于描述要创建的部署的 compose 文件的内容。
+    syntax:
+      content: 'composeFileContent: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.deploymentName'
+    name: deploymentName
+    fullName: deploymentName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 部署的名称。
+    syntax:
+      content: 'deploymentName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.forceRestart'
+    name: forceRestart
+    fullName: forceRestart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 如果为 true，然后强制重启进程在升级期间即使代码版本没有改变 （升级仅更改配置或数据）。
+    optional: true
+    syntax:
+      content: 'forceRestart?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.monitoringPolicy'
+    name: monitoringPolicy
+    fullName: monitoringPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 介绍用于监视以监视模式升级的参数。
+    optional: true
+    syntax:
+      content: 'monitoringPolicy?: MonitoringPolicyDescription'
+      return:
+        type:
+          - '@azure/servicefabric.MonitoringPolicyDescription'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.registryCredential'
+    name: registryCredential
+    fullName: registryCredential
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 若要连接到容器注册表的凭据信息。
+    optional: true
+    syntax:
+      content: 'registryCredential?: RegistryCredential'
+      return:
+        type:
+          - '@azure/servicefabric.RegistryCredential'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.rollingUpgradeMode'
+    name: rollingUpgradeMode
+    fullName: rollingUpgradeMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 在滚动升级期间用于监视运行状况的模式。 值是 UnmonitoredAuto、 UnmonitoredManual，和 Monitored。 可能的值包括：Invalid、 UnmonitoredAuto、 UnmonitoredManual、 监视。 默认值：UnmonitoredAuto。
+    optional: true
+    syntax:
+      content: 'rollingUpgradeMode?: UpgradeMode'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.upgradeKind'
+    name: upgradeKind
+    fullName: upgradeKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 升级以下可能值的类型。 可能的值包括：Invalid、 滚动。 默认值：滚动。
+    syntax:
+      content: 'upgradeKind: UpgradeKind'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeKind'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ComposeDeploymentUpgradeDescription.upgradeReplicaSetCheckTimeoutInSeconds'
+    name: upgradeReplicaSetCheckTimeoutInSeconds
+    fullName: upgradeReplicaSetCheckTimeoutInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      出现意外问题时，阻止处理升级域并防止可用性丢失的最大时长。 当此超时到期时，无论是否存在可用性丢失问题，都将继续处理升级域。 每个升级域启动时重置超时。 有效值介于 0 和 42949672925（含）之间。
+      （无符号的 32 位整数）。
+    optional: true
+    syntax:
+      content: 'upgradeReplicaSetCheckTimeoutInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy'
+    name: ApplicationHealthPolicy
+    spec.typeScript:
+      - name: ApplicationHealthPolicy
+        fullName: ApplicationHealthPolicy
+        uid: '@azure/servicefabric.ApplicationHealthPolicy'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription'
+    name: MonitoringPolicyDescription
+    spec.typeScript:
+      - name: MonitoringPolicyDescription
+        fullName: MonitoringPolicyDescription
+        uid: '@azure/servicefabric.MonitoringPolicyDescription'
+  - uid: '@azure/servicefabric.RegistryCredential'
+    name: RegistryCredential
+    spec.typeScript:
+      - name: RegistryCredential
+        fullName: RegistryCredential
+        uid: '@azure/servicefabric.RegistryCredential'
+  - uid: '@azure/servicefabric.UpgradeMode'
+    name: UpgradeMode
+    spec.typeScript:
+      - name: UpgradeMode
+        fullName: UpgradeMode
+        uid: '@azure/servicefabric.UpgradeMode'
+  - uid: '@azure/servicefabric.UpgradeKind'
+    name: UpgradeKind
+    spec.typeScript:
+      - name: UpgradeKind
+        fullName: UpgradeKind
+        uid: '@azure/servicefabric.UpgradeKind'

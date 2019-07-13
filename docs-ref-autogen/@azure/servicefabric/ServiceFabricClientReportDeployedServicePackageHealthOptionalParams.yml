@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: 可选参数。
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -55,7 +55,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      一个用于指示是否应立即发送报告的标志。
+      运行状况报告将发送到 Service Fabric 网关应用程序，后者会将其转发到运行状况存储。
+      如果 Immediate 设置为 true，则报告将立即从 HTTP 网关发送至运行状况存储，而无论 HTTP 网关应用程序使用的 Fabric 客户端设置如何。
+      这对于应尽快发送的关键报告十分有用。
+      由于计时和其他情况，发送报告可能仍会失败，例如，在 HTTP 网关已关闭或消息无法到达网关的情况下。
+      如果 Immediate 设置为 false，则报告将基于来自 HTTP 网关的运行状况客户端设置发送。 因此，系统将根据 HealthReportSendInterval 配置对其进行批处理。
+      这是建议的设置，因为它可让运行状况客户端优化发往运行状况存储的运行状况报告消息以及运行状况报告处理。
+      默认情况下，报告不立即发送。 默认值： false。
     optional: true
     syntax:
       content: 'immediate?: undefined | false | true'
@@ -115,7 +123,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 在数秒内执行该操作的服务器超时。 此超时指定客户端是愿意等待的请求的操作完成的持续时间。 此参数的默认值为 60 秒。 默认值：60.
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

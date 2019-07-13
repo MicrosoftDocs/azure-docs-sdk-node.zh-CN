@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.EventHealthEvaluation'
+    name: EventHealthEvaluation
+    fullName: EventHealthEvaluation
+    children:
+      - '@azure/servicefabric.EventHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.EventHealthEvaluation.considerWarningAsError'
+      - '@azure/servicefabric.EventHealthEvaluation.description'
+      - '@azure/servicefabric.EventHealthEvaluation.kind'
+      - '@azure/servicefabric.EventHealthEvaluation.unhealthyEvent'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      表示运行状况评估的报告的实体 HealthEvent。
+      评估实体运行状况会导致错误或警告时，会返回运行状况评估。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.considerWarningAsError'
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 指示是否将警告的严重性视为与错误相同。 用于评估实体运行状况策略中指定字段。
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 运行状况评估，表示评估过程的摘要说明。
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'kind: "Event"'
+      return:
+        type:
+          - '"Event"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.unhealthyEvent'
+    name: unhealthyEvent
+    fullName: unhealthyEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 表示报告运行状况实体，例如群集、 应用程序或节点中，添加通过运行状况管理器中的其他元数据的运行状况信息。
+    optional: true
+    syntax:
+      content: 'unhealthyEvent?: HealthEvent'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvent'
+    name: HealthEvent
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'

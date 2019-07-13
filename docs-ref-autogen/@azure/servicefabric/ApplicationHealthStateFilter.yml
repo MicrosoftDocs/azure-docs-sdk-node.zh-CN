@@ -1,0 +1,138 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter'
+    name: ApplicationHealthStateFilter
+    fullName: ApplicationHealthStateFilter
+    children:
+      - '@azure/servicefabric.ApplicationHealthStateFilter.applicationNameFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.serviceFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      定义匹配条件以确定是否应在群集运行状况区块包含一个应用程序。
+      一个筛选器可以匹配零个、 一个或多个应用程序，具体取决于其属性。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.applicationNameFilter'
+    name: applicationNameFilter
+    fullName: applicationNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      匹配的筛选器，为构造的 uri 的应用程序的名称。 如果存在，将仅对指定的应用程序，应用筛选器。
+      如果应用程序不存在，没有任何应用程序是在群集运行状况区块根据此筛选器中返回。
+      如果应用程序存在，它包含在群集运行状况区块中，如果它尊重其他筛选器属性。
+      如果未指定，与其他筛选器成员，如运行状况状态筛选器匹配的所有应用程序。
+    optional: true
+    syntax:
+      content: 'applicationNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter'
+    name: applicationTypeNameFilter
+    fullName: applicationTypeNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      与筛选器匹配的应用程序类型的名称。
+      如果指定，该筛选器只应用到应用程序的所选应用程序类型，如果存在。
+      如果指定的应用程序类型的任何应用程序不存在，没有任何应用程序是在群集运行状况区块根据此筛选器中返回。
+      如果它尊重其他筛选器属性，指定的应用程序类型的每个应用程序包含在群集运行状况区块。
+      如果未指定，与其他筛选器成员，如运行状况状态筛选器匹配的所有应用程序。
+    optional: true
+    syntax:
+      content: 'applicationTypeNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters'
+    name: deployedApplicationFilters
+    fullName: deployedApplicationFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      定义指定的已部署的应用程序，以包括在返回的群集运行状况区块作为应用程序的子级的筛选器的列表。 父应用程序与筛选器匹配时才返回部署的应用程序。
+      如果列表为空，则不返回任何已部署的应用程序。 所有已部署的应用程序用于评估的父应用程序聚合运行状况状态，而不考虑输入筛选器。
+      应用程序筛选器可以指定多个部署的应用程序筛选器。
+      例如，它可以指定一个筛选器以返回所有已部署应用程序具有运行状况状态错误和另一个筛选器始终包含在指定节点上部署的应用程序。
+    optional: true
+    syntax:
+      content: 'deployedApplicationFilters?: DeployedApplicationHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      应用程序的运行状况状态筛选器。 它允许您选择的应用程序，如果它们匹配所需的运行状况状态。
+      可能值包括以下运行状况状态之一的整数值。 仅返回与筛选器匹配的应用程序。 所有应用程序都用于评估聚合的群集运行状况状态。
+      如果未指定，默认值的为 None、，除非另有指定应用程序名称或应用程序类型名称。 如果筛选器都有默认值并指定应用程序名称，则返回匹配的应用程序。
+      状态值为基于标志的枚举，因此该值可是使用按位“OR”运算符获取的值的组合。
+      例如，如果提供的值为 6，它可匹配与 HealthState 值为 OK (2) 和 Warning (4) 的应用程序。
+      - Default-默认值。 匹配任何 HealthState。 值为 0。
+      - 无-不与任何 HealthState 值匹配的筛选器。 未返回有关给定状态集合的结果时使用。 值为 1。
+      - Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。 值为 2。
+      - 警告-筛选器的输入匹配与 HealthState 值为 Warning。 值为 4。
+      - Error-与 HealthState 值为 Error 的输入匹配的筛选器。 值为 8。
+      - All-与具有任意 HealthState 值的输入匹配的筛选器。 值为 65535。 默认值：0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.serviceFilters'
+    name: serviceFilters
+    fullName: serviceFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      定义指定哪些服务，以包括在返回的群集运行状况区块作为应用程序的子级的筛选器的列表。 父应用程序与筛选器匹配时才返回服务。
+      如果列表为空，则不返回任何服务。 所有服务都用于评估的父应用程序聚合运行状况状态，而不考虑输入筛选器。
+      应用程序筛选器可以指定多个服务筛选器。
+      例如，它可以指定一个筛选器以返回所有服务具有运行状况状态错误和另一个筛选器始终包含由其服务名称标识的服务。
+    optional: true
+    syntax:
+      content: 'serviceFilters?: ServiceHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter[]'
+    name: 'DeployedApplicationHealthStateFilter[]'
+    spec.typeScript:
+      - name: DeployedApplicationHealthStateFilter
+        fullName: DeployedApplicationHealthStateFilter
+        uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter[]'
+    name: 'ServiceHealthStateFilter[]'
+    spec.typeScript:
+      - name: ServiceHealthStateFilter
+        fullName: ServiceHealthStateFilter
+        uid: '@azure/servicefabric.ServiceHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

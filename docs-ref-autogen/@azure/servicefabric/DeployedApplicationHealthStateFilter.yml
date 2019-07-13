@@ -1,0 +1,91 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter'
+    name: DeployedApplicationHealthStateFilter
+    fullName: DeployedApplicationHealthStateFilter
+    children:
+      - '@azure/servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters'
+      - '@azure/servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      定义匹配条件以确定是否已部署的应用程序应包括作为群集运行状况区块中的应用程序的子级。
+      如果父应用程序与群集运行状况区块查询说明中指定的筛选器相匹配，仅返回已部署应用程序。
+      一个筛选器可以匹配零个、 一个或多个部署的应用程序，具体取决于其属性。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters'
+    name: deployedServicePackageFilters
+    fullName: deployedServicePackageFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      定义的已部署的服务包要作为子级的父级已部署应用程序包含在返回的群集运行状况区块中指定的筛选器的列表。 仅当父部署应用程序匹配筛选器返回的已部署的服务包。
+      如果列表为空，则不返回任何已部署的服务包。 所有已部署的服务包都用于评估父部署应用程序聚合运行状况状态，而不考虑输入筛选器。
+      部署的应用程序筛选器可以指定多个已部署的服务包筛选器。
+      例如，它可以指定一个筛选器以返回所有已部署的服务包具有运行状况状态错误和另一个筛选器以始终包括在节点上的已部署的服务包。
+    optional: true
+    syntax:
+      content: 'deployedServicePackageFilters?: DeployedServicePackageHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedServicePackageHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      部署的应用程序的运行状况状态筛选器。 它允许选择已部署应用程序，如果它们匹配所需的运行状况状态。
+      可能值包括以下运行状况状态之一的整数值。 返回仅已部署的应用程序的筛选器匹配。 所有已部署应用程序用于评估聚合的群集运行状况状态。
+      如果未指定，默认值的为 None、，除非另有指定的节点名称。 如果筛选器都有默认值并指定节点名称，则返回匹配的已部署应用程序。
+      状态值为基于标志的枚举，因此该值可是使用按位“OR”运算符获取的值的组合。
+      例如，如果提供的值为 6，它可匹配已部署应用程序与 HealthState 值为 OK (2) 和 Warning (4)。
+      - Default-默认值。 匹配任何 HealthState。 值为 0。
+      - 无-不与任何 HealthState 值匹配的筛选器。 未返回有关给定状态集合的结果时使用。 值为 1。
+      - Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。 值为 2。
+      - 警告-筛选器的输入匹配与 HealthState 值为 Warning。 值为 4。
+      - Error-与 HealthState 值为 Error 的输入匹配的筛选器。 值为 8。
+      - All-与具有任意 HealthState 值的输入匹配的筛选器。 值为 65535。 默认值：0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter'
+    name: nodeNameFilter
+    fullName: nodeNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      部署应用程序是其中，这样的筛选器匹配的节点的名称。
+      如果指定，该筛选器只应用到指定节点上部署的应用程序。
+      如果没有具有指定名称的节点上部署应用程序，没有任何已部署的应用程序返回群集运行状况区块根据此筛选器。
+      否则，部署的应用程序包括在群集运行状况区块，如果它尊重其他筛选器属性。
+      如果未指定，则所有已部署的应用程序与父筛选器匹配 （如果有） 纳入考虑范围，与其他筛选器成员，如运行状况状态筛选器相匹配。
+    optional: true
+    syntax:
+      content: 'nodeNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter[]'
+    name: 'DeployedServicePackageHealthStateFilter[]'
+    spec.typeScript:
+      - name: DeployedServicePackageHealthStateFilter
+        fullName: DeployedServicePackageHealthStateFilter
+        uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

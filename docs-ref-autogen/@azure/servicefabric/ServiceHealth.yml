@@ -1,0 +1,155 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceHealth'
+    name: ServiceHealth
+    fullName: ServiceHealth
+    children:
+      - '@azure/servicefabric.ServiceHealth.aggregatedHealthState'
+      - '@azure/servicefabric.ServiceHealth.healthEvents'
+      - '@azure/servicefabric.ServiceHealth.healthStatistics'
+      - '@azure/servicefabric.ServiceHealth.name'
+      - '@azure/servicefabric.ServiceHealth.partitionHealthStates'
+      - '@azure/servicefabric.ServiceHealth.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: Service Fabric 服务的运行状况的信息。
+    extends:
+      name: '@azure/servicefabric.EntityHealth'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealth.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      表示计算的运行状况管理器中的实体的聚合运行状况状态 HealthState。
+      实体的运行状况评估反映了在实体和 （如果有） 及其子级上报告的所有事件。
+      聚合是通过应用所需的运行状况策略。 可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealth.healthEvents'
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 报告的实体上的运行状况事件的列表。
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealth.healthStatistics'
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 显示所有子级类型的查询的实体的运行状况统计信息。
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - '@azure/servicefabric.HealthStatistics'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealth.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 由此对象描述其运行状况信息的服务的名称。
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealth.partitionHealthStates'
+    name: partitionHealthStates
+    fullName: partitionHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 与服务关联的分区运行状况状态的列表。
+    optional: true
+    syntax:
+      content: 'partitionHealthStates?: PartitionHealthState[]'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionHealthState[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealth.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 显示当前的聚合运行状况状态已返回的运行状况管理器的原因不正常评估。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealth'
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: '@azure/servicefabric.EntityHealth'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthStatistics'
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: '@azure/servicefabric.HealthStatistics'
+  - uid: '@azure/servicefabric.PartitionHealthState[]'
+    name: 'PartitionHealthState[]'
+    spec.typeScript:
+      - name: PartitionHealthState
+        fullName: PartitionHealthState
+        uid: '@azure/servicefabric.PartitionHealthState'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

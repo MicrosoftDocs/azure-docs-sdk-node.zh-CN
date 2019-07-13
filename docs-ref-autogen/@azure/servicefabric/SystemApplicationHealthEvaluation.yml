@@ -1,0 +1,89 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation'
+    name: SystemApplicationHealthEvaluation
+    fullName: SystemApplicationHealthEvaluation
+    children:
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.description'
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.kind'
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: '表示运行状况评估 fabric: / System 应用程序，其中包含的数据以及该算法的信息由运行状况存储用于评估运行状况。 仅当群集的聚合运行状况状态为错误或警告时，被返回计算。'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 运行状况评估，表示评估过程的摘要说明。
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'kind: "SystemApplication"'
+      return:
+        type:
+          - '"SystemApplication"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 导致系统应用程序的当前聚合运行状况状态的不正常评估的列表。 DeployedApplicationsHealthEvaluation、 ServicesHealthEvaluation 或 EventHealthEvaluation，可以是类型的不正常评估。
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter'
+    name: DeployedServicePackageHealthStateFilter
+    fullName: DeployedServicePackageHealthStateFilter
+    children:
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      定义匹配条件以确定是否已部署的服务包应包含为部署的应用程序的群集运行状况区块中的子级。
+      如果父实体匹配群集运行状况区块查询说明中指定的筛选器仅返回已部署的服务包。 父应用程序部署，其父应用程序必须包含在群集运行状况区块。
+      一个筛选器可以匹配零个、 一个或多个已部署服务包，具体取决于其属性。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      已部署的服务包的运行状况状态筛选器。 它允许选择已部署服务包，如果它们匹配所需的运行状况状态。
+      可能值包括以下运行状况状态之一的整数值。 仅返回与筛选器匹配的已部署服务包。 所有已部署的服务包用于评估的父级已部署应用程序聚合运行状况状态。
+      如果未指定，默认值的为 None、，除非另有指定的已部署的服务包 ID。
+      如果筛选器默认值，指定已部署的服务包 ID，则返回匹配的已部署的服务包。
+      状态值为基于标志的枚举，因此该值可是使用按位“OR”运算符获取的值的组合。
+      例如，如果提供的值为 6，它可匹配与 HealthState 值为 OK (2) 和 Warning (4) 的已部署的服务包。
+      - Default-默认值。 匹配任何 HealthState。 值为 0。
+      - 无-不与任何 HealthState 值匹配的筛选器。 未返回有关给定状态集合的结果时使用。 值为 1。
+      - Ok-筛选器的匹配项与 HealthState 值为 Ok 的输入。 值为 2。
+      - 警告-筛选器的输入匹配与 HealthState 值为 Warning。 值为 4。
+      - Error-与 HealthState 值为 Error 的输入匹配的筛选器。 值为 8。
+      - All-与具有任意 HealthState 值的输入匹配的筛选器。 值为 65535。 默认值：0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+    name: serviceManifestNameFilter
+    fullName: serviceManifestNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      用于标识已部署的服务包与筛选器匹配的服务清单的名称。
+      如果指定，该筛选器只应用到指定的已部署的服务包中，如果有的话。
+      如果没有具有指定的清单名称的已部署的服务包存在，未在群集运行状况区块根据此筛选器中返回。
+      如果存在任何已部署的服务包，它们会参与群集运行状况区块，如果它尊重其他筛选器属性。
+      如果未指定，则所有已部署服务包与父筛选器匹配 （如果有） 都纳入考虑范围并与其他筛选器成员，如运行状况状态筛选器相匹配。
+    optional: true
+    syntax:
+      content: 'serviceManifestNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    name: servicePackageActivationIdFilter
+    fullName: servicePackageActivationIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      与筛选器匹配的已部署的服务包激活 ID。
+      如果未指定，该筛选器适用于所有其他参数匹配的已部署的服务包。
+      如果指定，在筛选器匹配已部署的服务包将使用指定的激活 id。
+    optional: true
+    syntax:
+      content: 'servicePackageActivationIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

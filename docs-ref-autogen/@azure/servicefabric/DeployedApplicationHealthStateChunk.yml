@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateChunk'
+    name: DeployedApplicationHealthStateChunk
+    fullName: DeployedApplicationHealthStateChunk
+    children:
+      - '@azure/servicefabric.DeployedApplicationHealthStateChunk.deployedServicePackageHealthStateChunks'
+      - '@azure/servicefabric.DeployedApplicationHealthStateChunk.healthState'
+      - '@azure/servicefabric.DeployedApplicationHealthStateChunk.nodeName'
+    langs:
+      - typeScript
+    type: interface
+    summary: 表示部署的应用程序，其中包含部署应用程序的节点健康状况区块，聚合运行状况状态和任何已部署的服务包与区块查询说明筛选器。
+    extends:
+      name: '@azure/servicefabric.EntityHealthStateChunk'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateChunk.deployedServicePackageHealthStateChunks'
+    name: deployedServicePackageHealthStateChunks
+    fullName: deployedServicePackageHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 列表已部署的服务包运行状况区块属于部署的应用程序与筛选器中的群集运行状况区块查询说明。
+    optional: true
+    syntax:
+      content: 'deployedServicePackageHealthStateChunks?: DeployedServicePackageHealthStateChunkList'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedServicePackageHealthStateChunkList'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateChunk.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateChunk.nodeName'
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 部署应用程序的节点的名称。
+    optional: true
+    syntax:
+      content: 'nodeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealthStateChunk'
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: '@azure/servicefabric.EntityHealthStateChunk'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateChunkList'
+    name: DeployedServicePackageHealthStateChunkList
+    spec.typeScript:
+      - name: DeployedServicePackageHealthStateChunkList
+        fullName: DeployedServicePackageHealthStateChunkList
+        uid: '@azure/servicefabric.DeployedServicePackageHealthStateChunkList'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

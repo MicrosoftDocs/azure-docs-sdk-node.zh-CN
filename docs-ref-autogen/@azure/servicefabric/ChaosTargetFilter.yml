@@ -1,0 +1,58 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosTargetFilter'
+    name: ChaosTargetFilter
+    fullName: ChaosTargetFilter
+    children:
+      - '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+      - '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      定义所有筛选的器目标混沌错误，例如，出错仅特定节点类型或出错仅某些应用程序。
+      如未使用 ChaosTargetFilter，混沌测试会使所有群集实体故障。 如果使用 ChaosTargetFilter，混沌测试仅使满足 ChaosTargetFilter 规定的实体故障。 NodeTypeInclusionList 和 ApplicationInclusionList 仅允许联合语义。
+      不可指定 NodeTypeInclusionList 和 ApplicationInclusionList 的交集。 例如，不可指定“仅当此应用程序在该节点类型上时使其故障”。
+      一旦实体包含在 NodeTypeInclusionList 或 ApplicationInclusionList 中，便不能使用 ChaosTargetFilter 排除该实体。 即使 applicationX 未出现在 ApplicationInclusionList 中，在一些混沌测试迭代中，也可使 applicationX 故障，因为它恰好在 NodeTypeInclusionList 中的 nodeTypeY 的节点上。 如果 NodeTypeInclusionList 和 ApplicationInclusionList 都为 null 或者为空，则会引发 ArgumentException。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.applicationInclusionList'
+    name: applicationInclusionList
+    fullName: applicationInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      包含在混沌测试故障中的应用程序 URI 列表。
+      所有属于这些应用程序服务的副本服从混沌测试的副本故障（重启副本、删除副本、移动主副本和移动辅助副本）。
+      仅在代码包仅托管这些应用程序的副本时，混沌测试可重启代码包。
+      如果应用程序未出现在此列表中，那么还是可以在某些混沌测试迭代中使它故障，条件是应用程序最终位于 NodeTypeInclusionList 中的节点类型的节点上。
+      但是，如果 applicationx 通过放置约束和使 applicationX 不存在从 ApplicationInclusionList 和同时 nodeTypeY 不存在从 NodeTypeInclusionList 中，然后使 applicationX 将永远不会出错。
+      此列表最多可以包含 1000 个应用程序名称，若要增加，MaxNumberOfApplicationsInChaosEntityFilter 配置需要升级。
+    optional: true
+    syntax:
+      content: 'applicationInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosTargetFilter.nodeTypeInclusionList'
+    name: nodeTypeInclusionList
+    fullName: nodeTypeInclusionList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      包括在混沌测试故障中的节点类型列表。
+      所有类型故障（重启节点、重启代码包、删除副本、重启副本、移动主副本和移动辅助副本）均为这些节点类型的节点启用。
+      如果节点类型 （比如 NodeTypeX） 不会出现在 NodeTypeInclusionList 中，则节点级别故障 （比如 NodeRestart) 将永远不会启用的节点，但代码包和副本故障如果中的应用程序仍可为 NodeTypeX 启用ApplicationInclusionList。
+      碰巧位于 NodeTypeX 的节点上。
+      此列表最多可以包含 100 个节点类型名称，若要增加，MaxNumberOfNodeTypesInChaosEntityFilter 配置需要升级。
+    optional: true
+    syntax:
+      content: 'nodeTypeInclusionList?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'

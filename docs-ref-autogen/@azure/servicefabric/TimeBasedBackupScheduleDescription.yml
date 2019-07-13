@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.TimeBasedBackupScheduleDescription'
+    name: TimeBasedBackupScheduleDescription
+    fullName: TimeBasedBackupScheduleDescription
+    children:
+      - '@azure/servicefabric.TimeBasedBackupScheduleDescription.runDays'
+      - '@azure/servicefabric.TimeBasedBackupScheduleDescription.runTimes'
+      - '@azure/servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType'
+      - '@azure/servicefabric.TimeBasedBackupScheduleDescription.scheduleKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: 介绍基于时间的备份计划。
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TimeBasedBackupScheduleDescription.runDays'
+    name: runDays
+    fullName: runDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 要触发定期备份的星期几的列表。 这会有效。 仅当备份计划的频率类型是每周。
+    optional: true
+    syntax:
+      content: 'runDays?: DayOfWeek[]'
+      return:
+        type:
+          - '@azure/servicefabric.DayOfWeek[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TimeBasedBackupScheduleDescription.runTimes'
+    name: runTimes
+    fullName: runTimes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '表示的 ISO8601 格式在一天内的确切时间的列表。 如"19: 00:00 将在一天表示"7 PM"。 除了时间指定的日期将被忽略。'
+    syntax:
+      content: 'runTimes: Date[] | string[]'
+      return:
+        type:
+          - 'Date[] | string[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType'
+    name: scheduleFrequencyType
+    fullName: scheduleFrequencyType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 介绍用来运行基于备份计划执行时间的频率。 可能的值包括：Invalid、 每天、 每周
+    syntax:
+      content: 'scheduleFrequencyType: BackupScheduleFrequencyType'
+      return:
+        type:
+          - '@azure/servicefabric.BackupScheduleFrequencyType'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TimeBasedBackupScheduleDescription.scheduleKind'
+    name: scheduleKind
+    fullName: scheduleKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 多态鉴别器
+    syntax:
+      content: 'scheduleKind: "TimeBased"'
+      return:
+        type:
+          - '"TimeBased"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DayOfWeek[]'
+    name: 'DayOfWeek[]'
+    spec.typeScript:
+      - name: DayOfWeek
+        fullName: DayOfWeek
+        uid: '@azure/servicefabric.DayOfWeek'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.BackupScheduleFrequencyType'
+    name: BackupScheduleFrequencyType
+    spec.typeScript:
+      - name: BackupScheduleFrequencyType
+        fullName: BackupScheduleFrequencyType
+        uid: '@azure/servicefabric.BackupScheduleFrequencyType'

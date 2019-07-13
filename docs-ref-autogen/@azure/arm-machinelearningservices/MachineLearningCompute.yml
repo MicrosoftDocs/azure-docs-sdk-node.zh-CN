@@ -6,7 +6,7 @@ items:
     children:
       - '@azure/arm-machinelearningservices.MachineLearningCompute.beginCreateOrUpdate'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.beginDeleteMethod'
-      - '@azure/arm-machinelearningservices.MachineLearningCompute.beginSystemUpdate'
+      - '@azure/arm-machinelearningservices.MachineLearningCompute.beginUpdate'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.createOrUpdate'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.deleteMethod'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.get'
@@ -21,8 +21,11 @@ items:
       - '@azure/arm-machinelearningservices.MachineLearningCompute.listKeys'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.listKeys_2'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.listKeys_1'
+      - '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes'
+      - '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes_2'
+      - '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes_1'
       - '@azure/arm-machinelearningservices.MachineLearningCompute.constructor'
-      - '@azure/arm-machinelearningservices.MachineLearningCompute.systemUpdate'
+      - '@azure/arm-machinelearningservices.MachineLearningCompute.update'
     langs:
       - typeScript
     type: class
@@ -64,14 +67,14 @@ items:
           - Promise<LROPoller>
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.beginDeleteMethod'
-    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    name: 'beginDeleteMethod(string, string, string, Models.UnderlyingResourceAction, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
     summary: 删除指定的机器学习计算。
     syntax:
-      content: 'function beginDeleteMethod(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
+      content: 'function beginDeleteMethod(resourceGroupName: string, workspaceName: string, computeName: string, underlyingResourceAction: Models.UnderlyingResourceAction, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
@@ -85,6 +88,10 @@ items:
           type:
             - string
           description: Azure 机器学习计算的名称。
+        - id: underlyingResourceAction
+          type:
+            - Models.UnderlyingResourceAction
+          description: 如果基础计算的删除 'Delete'，或如果分离工作区中的基础计算分离。 可能的值包括：'Delete'，分离
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -94,15 +101,15 @@ items:
         type:
           - Promise<LROPoller>
     package: '@azure/arm-machinelearningservices'
-  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.beginSystemUpdate'
-    name: 'beginSystemUpdate(string, string, string, msRest.RequestOptionsBase)'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.beginUpdate'
+    name: 'beginUpdate(string, string, string, ClusterUpdateParameters, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: 系统更新在机器学习计算。
+    summary: 更新计算的属性。 如果它存在，则此调用将覆盖计算。 这是不可恢复的操作。
     syntax:
-      content: 'function beginSystemUpdate(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
+      content: 'function beginUpdate(resourceGroupName: string, workspaceName: string, computeName: string, parameters: ClusterUpdateParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
@@ -116,6 +123,10 @@ items:
           type:
             - string
           description: Azure 机器学习计算的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-machinelearningservices.ClusterUpdateParameters'
+          description: 群集更新的其他参数。
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -161,14 +172,14 @@ items:
           - Promise<Models.MachineLearningComputeCreateOrUpdateResponse>
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.deleteMethod'
-    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    name: 'deleteMethod(string, string, string, Models.UnderlyingResourceAction, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
     summary: 删除指定的机器学习计算。
     syntax:
-      content: 'function deleteMethod(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
+      content: 'function deleteMethod(resourceGroupName: string, workspaceName: string, computeName: string, underlyingResourceAction: Models.UnderlyingResourceAction, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
@@ -182,6 +193,10 @@ items:
           type:
             - string
           description: Azure 机器学习计算的名称。
+        - id: underlyingResourceAction
+          type:
+            - Models.UnderlyingResourceAction
+          description: 如果基础计算的删除 'Delete'，或如果分离工作区中的基础计算分离。 可能的值包括：'Delete'，分离
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -543,31 +558,15 @@ items:
         type:
           - Promise<Models.MachineLearningComputeListKeysResponse>
     package: '@azure/arm-machinelearningservices'
-  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.constructor'
-    name: MachineLearningCompute(AzureMachineLearningWorkspacesContext)
-    children: []
-    type: constructor
-    langs:
-      - typeScript
-    summary: 创建 MachineLearningCompute。
-    syntax:
-      content: 'new MachineLearningCompute(client: AzureMachineLearningWorkspacesContext)'
-      parameters:
-        - id: client
-          type:
-            - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspacesContext'
-          description: |
-            对服务客户端的引用。
-    package: '@azure/arm-machinelearningservices'
-  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.systemUpdate'
-    name: 'systemUpdate(string, string, string, msRest.RequestOptionsBase)'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes'
+    name: 'listNodes(string, string, string, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: 系统更新在机器学习计算。
+    summary: 获取在计算中的所有计算节点的详细信息 （例如 IP 地址、 端口等）。
     syntax:
-      content: 'function systemUpdate(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
+      content: 'function listNodes(resourceGroupName: string, workspaceName: string, computeName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
@@ -588,7 +587,124 @@ items:
           optional: true
       return:
         type:
-          - Promise<Models.MachineLearningComputeSystemUpdateResponse>
+          - Promise<Models.MachineLearningComputeListNodesResponse>
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes_2'
+    name: 'listNodes(string, string, string, RequestOptionsBase, ServiceCallback<AmlComputeNodesInformation>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNodes(resourceGroupName: string, workspaceName: string, computeName: string, options: RequestOptionsBase, callback: ServiceCallback<AmlComputeNodesInformation>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 哪些工作区中的资源组的名称的位置。
+        - id: workspaceName
+          type:
+            - string
+          description: Azure 机器学习工作区的名称。
+        - id: computeName
+          type:
+            - string
+          description: Azure 机器学习计算的名称。
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: 可选参数
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-machinelearningservices.AmlComputeNodesInformation>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.MachineLearningComputeListNodesResponse>
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.listNodes_1'
+    name: 'listNodes(string, string, string, ServiceCallback<AmlComputeNodesInformation>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNodes(resourceGroupName: string, workspaceName: string, computeName: string, callback: ServiceCallback<AmlComputeNodesInformation>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 哪些工作区中的资源组的名称的位置。
+        - id: workspaceName
+          type:
+            - string
+          description: Azure 机器学习工作区的名称。
+        - id: computeName
+          type:
+            - string
+          description: Azure 机器学习计算的名称。
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-machinelearningservices.AmlComputeNodesInformation>
+          description: |
+            回调
+      return:
+        type:
+          - Promise<Models.MachineLearningComputeListNodesResponse>
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.constructor'
+    name: MachineLearningCompute(AzureMachineLearningWorkspacesContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 创建 MachineLearningCompute。
+    syntax:
+      content: 'new MachineLearningCompute(client: AzureMachineLearningWorkspacesContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspacesContext'
+          description: |
+            对服务客户端的引用。
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.MachineLearningCompute.update'
+    name: 'update(string, string, string, ClusterUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 更新计算的属性。 如果它存在，则此调用将覆盖计算。 这是不可恢复的操作。
+    syntax:
+      content: 'function update(resourceGroupName: string, workspaceName: string, computeName: string, parameters: ClusterUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 哪些工作区中的资源组的名称的位置。
+        - id: workspaceName
+          type:
+            - string
+          description: Azure 机器学习工作区的名称。
+        - id: computeName
+          type:
+            - string
+          description: Azure 机器学习计算的名称。
+        - id: parameters
+          type:
+            - '@azure/arm-machinelearningservices.ClusterUpdateParameters'
+          description: 群集更新的其他参数。
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.MachineLearningComputeUpdateResponse>
     package: '@azure/arm-machinelearningservices'
 references:
   - uid: '@azure/arm-machinelearningservices.AzureMachineLearningWorkspacesContext'
@@ -603,6 +719,12 @@ references:
       - name: ComputeResource
         fullName: ComputeResource
         uid: '@azure/arm-machinelearningservices.ComputeResource'
+  - uid: '@azure/arm-machinelearningservices.ClusterUpdateParameters'
+    name: ClusterUpdateParameters
+    spec.typeScript:
+      - name: ClusterUpdateParameters
+        fullName: ClusterUpdateParameters
+        uid: '@azure/arm-machinelearningservices.ClusterUpdateParameters'
   - uid: ServiceCallback<@azure/arm-machinelearningservices.ComputeResource>
     name: ComputeResource>
     spec.typeScript:
@@ -629,3 +751,13 @@ references:
       - name: MachineLearningComputeListByWorkspaceOptionalParams
         fullName: MachineLearningComputeListByWorkspaceOptionalParams
         uid: '@azure/arm-machinelearningservices.MachineLearningComputeListByWorkspaceOptionalParams'
+  - uid: ServiceCallback<@azure/arm-machinelearningservices.AmlComputeNodesInformation>
+    name: AmlComputeNodesInformation>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AmlComputeNodesInformation
+        fullName: AmlComputeNodesInformation
+        uid: '@azure/arm-machinelearningservices.AmlComputeNodesInformation'
+      - name: '>'
+        fullName: '>'

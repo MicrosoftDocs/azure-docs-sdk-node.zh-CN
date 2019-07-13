@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription'
+    name: ApplicationCapacityDescription
+    fullName: ApplicationCapacityDescription
+    children:
+      - '@azure/servicefabric.ApplicationCapacityDescription.applicationMetrics'
+      - '@azure/servicefabric.ApplicationCapacityDescription.maximumNodes'
+      - '@azure/servicefabric.ApplicationCapacityDescription.minimumNodes'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      描述此应用程序的服务的容量信息。 此描述可以用于描述以下。
+      - 保留在节点上的服务的容量
+      - 限制可以运行此应用程序的服务的节点总数
+      - 限制要通过此应用程序的服务限制此指标的总消耗量的自定义容量度量值
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription.applicationMetrics'
+    name: applicationMetrics
+    fullName: applicationMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 应用程序容量指标说明的列表。
+    optional: true
+    syntax:
+      content: 'applicationMetrics?: ApplicationMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription.maximumNodes'
+    name: maximumNodes
+    fullName: maximumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Service Fabric 为此应用程序保留的容量的最大节点数。
+      请注意，这并不表示此应用程序的服务放置在所有这些节点上。 默认情况下，此属性的值为 0，这意味着服务可以放置在任何节点上。 默认值：0.
+    optional: true
+    syntax:
+      content: 'maximumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription.minimumNodes'
+    name: minimumNodes
+    fullName: minimumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Service Fabric 为此应用程序保留的容量的最小节点数。
+      请注意，这并不表示此应用程序的服务放置在所有这些节点上。 如果此属性设置为零，将不保留任何容量。 此属性的值不能为多个 MaximumNodes 属性的值。
+    optional: true
+    syntax:
+      content: 'minimumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationMetricDescription[]'
+    name: 'ApplicationMetricDescription[]'
+    spec.typeScript:
+      - name: ApplicationMetricDescription
+        fullName: ApplicationMetricDescription
+        uid: '@azure/servicefabric.ApplicationMetricDescription'
+      - name: '[]'
+        fullName: '[]'

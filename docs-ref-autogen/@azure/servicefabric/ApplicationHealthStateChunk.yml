@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk'
+    name: ApplicationHealthStateChunk
+    fullName: ApplicationHealthStateChunk
+    children:
+      - '@azure/servicefabric.ApplicationHealthStateChunk.applicationName'
+      - '@azure/servicefabric.ApplicationHealthStateChunk.applicationTypeName'
+      - '@azure/servicefabric.ApplicationHealthStateChunk.deployedApplicationHealthStateChunks'
+      - '@azure/servicefabric.ApplicationHealthStateChunk.healthState'
+      - '@azure/servicefabric.ApplicationHealthStateChunk.serviceHealthStateChunks'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      表示应用程序的健康状况区块。
+      应用程序健康状况区块包含应用程序名称，其聚合运行状况状态和任何子级服务和部署的群集运行状况区块查询说明中与筛选器的应用程序。
+    extends:
+      name: '@azure/servicefabric.EntityHealthStateChunk'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '应用程序名称包括 fabric:全名。'
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk.applicationTypeName'
+    name: applicationTypeName
+    fullName: applicationTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 应用程序清单中定义，应用程序类型的名称。
+    optional: true
+    syntax:
+      content: 'applicationTypeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk.deployedApplicationHealthStateChunks'
+    name: deployedApplicationHealthStateChunks
+    fullName: deployedApplicationHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 部署的应用程序运行状况区块在群集中群集运行状况区块查询说明中与筛选器的列表。
+    optional: true
+    syntax:
+      content: 'deployedApplicationHealthStateChunks?: DeployedApplicationHealthStateChunkList'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationHealthStateChunkList'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 例如群集、 节点、 应用程序、 服务、 分区、 副本等的 Service Fabric 实体运行状况状态。可能的值包括：Invalid、 确定、 警告、 Error、 Unknown
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateChunk.serviceHealthStateChunks'
+    name: serviceHealthStateChunks
+    fullName: serviceHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 群集运行状况区块查询说明中与筛选器在群集中分块服务运行状况状态的列表。
+    optional: true
+    syntax:
+      content: 'serviceHealthStateChunks?: ServiceHealthStateChunkList'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceHealthStateChunkList'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealthStateChunk'
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: '@azure/servicefabric.EntityHealthStateChunk'
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateChunkList'
+    name: DeployedApplicationHealthStateChunkList
+    spec.typeScript:
+      - name: DeployedApplicationHealthStateChunkList
+        fullName: DeployedApplicationHealthStateChunkList
+        uid: '@azure/servicefabric.DeployedApplicationHealthStateChunkList'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ServiceHealthStateChunkList'
+    name: ServiceHealthStateChunkList
+    spec.typeScript:
+      - name: ServiceHealthStateChunkList
+        fullName: ServiceHealthStateChunkList
+        uid: '@azure/servicefabric.ServiceHealthStateChunkList'
